@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Open+Sans+Condensed:300" rel="stylesheet">
+        <style>
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:after {
+    background: #666;
+    content: '';
+    display: block;
+    margin-top: -5px;
+    width: 100%; height: 2px;
+  }
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover {
+    color: #666;
+}
+
+a:active {
+    color: #999;
+}
+            
+body {
+    background: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+#article {
+    margin: 100px;
+}
+
+#article-header {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 4rem;
+}
+
+#article-date {
+    font-size: 1.34rem;
+}
+
+#article-body {
+    color: #333;
+    font-size: 2rem;
+    margin-top: 60px;
+}
+
+#github {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+}
+
+#left-container {
+    line-height: 520px;
+    margin: auto;
+    position: absolute;
+    text-align: right;
+    top: 0px; bottom: 0px; left: 0px;
+    width: 50%; height: 520px;
+}
+
+#linkedin {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#mcm {
+    margin-right: 167px;
+    vertical-align: middle;
+}
+
+#right-container {
+    font-size: 2rem;
+    margin: auto;
+    position: absolute;
+    top: 0px; bottom: 0px; left: 50%;
+    width: 560px; height: 520px;
+}
+
+#twitter {
+    position: absolute;
+    right: -25px;
+    bottom: 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-header {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 4rem;
+}
+        </style>
+        <script src="scripts/jquery-3.1.1.min.js"></script>
+		<!-- Path.js provides path (yeah...) handling to make this behave like an actual web app -->
+		<script src="scripts/path.min.js"></script>
+		<script src="scripts/showdown.min.js"></script>
+		<script type="text/javascript"> 
+var items = [];
+var converter = new showdown.Converter();
+var baseDocumentTitle = "";
+
+Path.map("#/home")
+    .to(function(){
+        $("#article").hide();
+        $("#home").show();
+    })
+    .enter(populateItems);
+        
+function addItem(title, filename, date, hidden = false) {
+    var item = { title: title, filename: filename, date: date, hidden: hidden };
+
+    items.push(item);
+
+    Path.map("#/" + filename)
+        .to(function(){
+            loadItem(filename);
+        })
+        .enter(populateItems);
+}
+
+function entryPoint() {
+    baseDocumentTitle = document.title;
+
+    $("#items").change(function () {
+        window.location.href = window.location.origin + "/#/" + this.value;
+    });
+
+    // At least we need a "home" item to serve as the landing one
+    Path.root("#/home");
+
+    Path.rescue(function () {
+        window.location.href = window.location.origin + "/#/404";
+    });
+        
+    Path.listen();
+}
+
+function loadItem(filename) {
+    var actualPath = "items/" + filename + ".md";
+
+    $.get(actualPath, function (data) {
+        var item = items.find(function(item) { 
+            return item.filename == filename;
+        });
+
+        document.title = item.title + ' - ' + baseDocumentTitle;
+
+        $("#article-header").html(item.title);
+        $("#article-date").html(item.date);
+
+        var body = converter.makeHtml(data);
+
+        $("#article-body").html(body);
+
+        $("#home").hide();
+        $("#article").show();
+
+        window.scrollTo(0, 0);
+    });
+}
+
+function populateItems()
+{
+    $("#items").empty();
+
+    //if (items.length == 0 ||
+    //	(items.length == 1 && items[0].filename == "home")) {
+    //	$("#items").append("<li><i>Nothing currently</i></li>");
+    //
+    //	return;
+    //}
+
+    $("#items").append("<option>Blog...</option>");
+
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+
+        if (item.hidden)
+            continue;
+
+        var html = '<option value="' + item.filename + '">' + 
+                item.title + ' - ' + item.date + 
+            '</option>';
+
+        $("#items").append(html);
+    }
+}
+		</script>
+		<script src="items/items.js"></script>
+    </head>
+    <body onload='entryPoint()'>
+<div id="home">
+    <div id="left-container">
+        <img id="mcm" src="Images/mcm.png" title="m c m (not 'u' ;-)" />
+    </div>
+    <div id="right-container">
+        <span class="text-header">
+            Marcos Cobeña Morián
+        </span>
+        <p>
+            Vocational Software Engineer studying Graphic Design. Focused in mobile apps for the first, attending <a href="https://calarts.edu/">CalArts</a> on-line for the second. This is <a href="/#/my-story">my story</a>.
+        </p>
+        <div class="text-center">
+            <select id="items" class="text-center"></select>
+        </div>
+        <p class="text-center">
+            <a href="mailto:hello@marcoscobena.com">hello@marcoscobena.com</a>
+        </p>
+        <a href="https://es.linkedin.com/in/MarcosCobena">
+            <img id="linkedin" src="Images/LinkedIn.png" title="My LinkedIn" />
+        </a>
+        <a href="https://github.com/MarcosCobena">
+            <img id="github" src="Images/GitHub.png" title="My GitHub" />
+        </a>
+        <a href="https://twitter.com/MarcosCobena_">
+            <img id="twitter" src="Images/Twitter.png" title="My Twitter" />
+        </a>
+    </div>
+</div>
+
+<div id="article" style="display: none">
+    <span id="article-header"></span>
+    <br />
+    <span id="article-date" title="day/month"></span>
+    <div id="article-body"></div>
+</div>
+    </body>
+</html>
