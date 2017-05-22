@@ -59,53 +59,114 @@ body {
     margin-top: 60px;
 }
 
-#github {
-    position: absolute;
-    right: 0;
-    bottom: 25px;
+@media (max-width: 1279px) {
+    #left-container {
+        margin: auto;
+        position: absolute;
+        text-align: center;
+        top: 0px; left: 0px; right: 0px;
+        width: 100%; height: 33%;
+    }
+
+    #right-container {
+        font-size: 1.734rem;
+        margin: auto;
+        bottom: 0px; left: 0px; right: 0px;
+        position: absolute;
+        text-align: justify;
+        width: 402px; height: 67%;
+    }
+
+    #mcm {
+        bottom: 0px; left: 50%;
+        margin-left: -98px;
+        position: absolute;
+        width: 196px; height: 245px;
+    }
+
+    #social {
+        text-align: center;
+    }
+
+    #social a {
+        text-decoration: none;
+    }
+
+    #social a::after {
+        background: transparent;
+    }
+
+    #twitter {
+        width: 39px;
+    }
+
+    #github {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 39px;
+    }
+
+    #linkedin {
+        width: 39px;
+    }
+
+    .text-header {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 3rem;
+        margin-top: 65px;
+        text-align: center;
+    }
 }
 
-#left-container {
-    line-height: 520px;
-    margin: auto;
-    position: absolute;
-    text-align: right;
-    top: 0px; bottom: 0px; left: 0px;
-    width: 50%; height: 520px;
-}
+@media (min-width: 1280px) {
+    #left-container {
+        line-height: 520px;
+        margin: auto;
+        position: absolute;
+        text-align: right;
+        top: 0px; bottom: 0px; left: 0px;
+        width: 50%; height: 520px;
+    }
 
-#linkedin {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
+    #right-container {
+        font-size: 2rem;
+        margin: auto;
+        position: absolute;
+        top: 0px; bottom: 0px; left: 50%;
+        width: 560px; height: 520px;
+    }
 
-#mcm {
-    margin-right: 167px;
-    vertical-align: middle;
-}
+    #mcm {
+        margin-right: 167px;
+        vertical-align: middle;
+    }
 
-#right-container {
-    font-size: 2rem;
-    margin: auto;
-    position: absolute;
-    top: 0px; bottom: 0px; left: 50%;
-    width: 560px; height: 520px;
-}
+    #linkedin {
+        position: absolute;
+        right: 0; bottom: 0;
+        width: 25px;
+    }
 
-#twitter {
-    position: absolute;
-    right: -25px;
-    bottom: 50px;
+    #github {
+        position: absolute;
+        right: 0; bottom: 25px;
+        width: 25px;
+    }
+
+    #twitter {
+        position: absolute;
+        right: -25px; bottom: 50px;
+        width: 25px;
+    }
+
+    .text-header {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 4rem;
+    }
 }
 
 .text-center {
     text-align: center;
-}
-
-.text-header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 4rem;
 }
         </style>
         <script src="scripts/jquery-3.1.1.min.js"></script>
@@ -212,11 +273,11 @@ function populateItems()
         <img id="mcm" src="images/mcm.png" title="m c m (not 'u' ;-)" />
     </div>
     <div id="right-container">
-        <span class="text-header">
+        <div class="text-header">
             Marcos Cobeña Morián
-        </span>
+        </div>
         <p>
-            Vocational Software Engineer studying Graphic Design. Focused in mobile apps for the first, attending <a href="https://calarts.edu/">CalArts</a> on-line for the second. This is <a href="/#/my-story">my story</a>.
+            <a href="https://www.xamarin.com/">Xamarin</a> Software Engineer focused in iOS and Android. Graphic Designer in a near future (currently attending <a href="https://calarts.edu/">CalArts</a> on-line). This is <a href="/#/my-story">my story</a>.
         </p>
         <div class="text-center">
             <select id="items" class="text-center"></select>
@@ -224,15 +285,17 @@ function populateItems()
         <p class="text-center">
             <a href="mailto:hello@marcoscobena.com">hello@marcoscobena.com</a>
         </p>
-        <a href="https://es.linkedin.com/in/MarcosCobena">
-            <img id="linkedin" src="images/LinkedIn.png" title="My LinkedIn" />
-        </a>
-        <a href="https://github.com/MarcosCobena">
-            <img id="github" src="images/GitHub.png" title="My GitHub" />
-        </a>
-        <a href="https://twitter.com/MarcosCobena_">
-            <img id="twitter" src="images/Twitter.png" title="My Twitter" />
-        </a>
+        <div id="social">
+            <a href="https://twitter.com/MarcosCobena_">
+                <img id="twitter" src="images/TwitterBig.png" title="My Twitter" />
+            </a>
+            <a href="https://github.com/MarcosCobena">
+                <img id="github" src="images/GitHubBig.png" title="My GitHub" />
+            </a>
+            <a href="https://es.linkedin.com/in/MarcosCobena">
+                <img id="linkedin" src="images/LinkedInBig.png" title="My LinkedIn" />
+            </a>
+        </div>
     </div>
 </div>
 
