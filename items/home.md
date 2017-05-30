@@ -1,38 +1,34 @@
-This’ a Vocational Computer Engineer, nowadays making mobile apps -iOS mostly-
-at [DevsDNA](http://devsdna.com); minimalist, looking for happiness and
-self-realisation.
+(*Pst! Más abajo en español*.)
 
-You can find what I’m involved in [now](http://marcoscobena.com/#/now).
+Thanks for dropping by!
 
-There’s a feed for anything I write here ([RSS](feed.xml)), or just those
-related with Xamarin ([RSS](feed-xamarin.xml)).
+During mornings and afternoons I’m a Software Engineer specialized in mobile
+apps with [Xamarin](https://www.xamarin.com/). [¡Buenos
+días!](https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro)
 
-A few “social” networks I’m in (if you want to contact me *please* see Contact
-below, I don’t use to access so frequently to these ones):
+On nights I’m becoming a Graphic Designer.
 
--   <https://twitter.com/MarcosCobena_>: I use to share what I publish on this
-    site
+You’d expect this web to be truly beautiful knowing that last; however, I wanted
+it to be the most simple possible, improving in time with me.
 
--   <https://github.com/MarcosCobena>: among bits I write, this web runs there
+You can reach me at [hello@marcoscobena.com](mailto:hello@marcoscobena.com).
 
--   <https://es.linkedin.com/in/MarcosCobena>: the closest to my CV currently
+/
 
-Until December 2016 I used to write [here](http://marcoscobena.wordpress.com).
+¡Gracias por pasarte!
 
-Reflexiones 🇪🇸
-----------------
+[Mi padre](https://joseantoniocobena.com/) también tiene una web muy
+interesante, por cierto.
 
-A veces me gusta escribir sobre pensamientos que tengo, motivados en su mayoría
-por cómo desenvolverse mejor en la vida. Cada vez que escriba uno (cada mes
-aprox.) te lo enviaré a tu correo electrónico, personalmente; solo déjame tu
-dirección (no la compartiré con nadie, lo prometo):
+Por las mañanas y tardes soy Ingeniero de Software especializado en apps para
+móvil con [Xamarin](https://www.xamarin.com/). [¡Buenos
+días!](https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro)
 
--   [Suscribirme](mailto:marcoscm.digital@gmail.com?subject=Suscribirme+a+Reflexiones)
-    (o envíame un correo con título “Suscribirme a Reflexiones” a la dirección
-    personal de más abajo)
+Por las noches me estoy haciendo Diseñador Gráfico.
 
-Contact
--------
+Seguro que esperabas que esta web fuera súper bonita sabiendo éso; en cambio,
+quería que fuera lo más simple posible, mejorando en el tiempo junto a mí.
 
-Send me an e-mail to my personal <marcoscm.digital@gmail.com> or professional
-<marcos@devsdna.com> address.
+Me puedes encontrar en [hola@marcoscobena.com](mailto:hola@marcoscobena.com).
+
+ 
