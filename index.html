@@ -1,333 +1,147 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Marcos Cobeña Morián</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Open+Sans+Condensed:300" rel="stylesheet">
-        <style>
-a {
-    display: inline-block;
-    text-decoration: none;
-}
+﻿<html>
+	<head>
+		<title>Marcos Cobeña Morián</title>
 
-a:after {
-    background: #666;
-    content: '';
-    display: block;
-    margin-top: -5px;
-    width: 100%; height: 2px;
-  }
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+		
+		<style type="text/css">
+			body {
+				color: #000;
+				font-family: serif;
+                font-size: 24px;
+                line-height: 2em;
+				margin: 0px auto;
+                margin-top: 100px; margin-bottom: 100px;
+				padding: 8;
+    			width: 1160px;
+			}
 
-a:link {
-    color: #000;
-}
+			.center {
+				text-align: center;
+			}
 
-a:visited {
-    color: #333;
-}
+            #signature {
+                text-align: right;
+			}
 
-a:hover {
-    color: #666;
-}
+            #title {
+                margin: 0px 0px 100px 0px;
+				text-transform: lowercase;
+			}
+		</style>
+		
+		<script src="scripts/jquery-3.1.1.min.js"></script>
 
-a:active {
-    color: #999;
-}
-            
-body {
-    background: #fafafa;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-}
-
-/* STARTS MOBILE VERSION */
-@media (max-width: 1279px) {
-    #article {
-        margin: 50px;
-    }
-
-    #article-header {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 3rem;
-    }
-
-    #article-date {
-        font-size: 1.3rem;
-    }
-
-    #article-body {
-        color: #333;
-        font-size: 1.5rem;
-        margin-top: 33px;
-        text-align: justify;
-    }
-
-    #left-container {
-        margin: auto;
-        position: absolute;
-        text-align: center;
-        top: 0px; left: 0px; right: 0px;
-        width: 100%; height: 33%;
-    }
-
-    #right-container {
-        font-size: 1.734rem;
-        margin: auto;
-        bottom: 0px; left: 0px; right: 0px;
-        position: absolute;
-        text-align: justify;
-        width: 402px; height: 67%;
-    }
-
-    #mcm {
-        bottom: 0px; left: 50%;
-        margin-left: -98px;
-        position: absolute;
-        width: 196px; height: 245px;
-    }
-
-    #social {
-        text-align: center;
-    }
-
-    #social a {
-        text-decoration: none;
-    }
-
-    #social a::after {
-        background: transparent;
-    }
-
-    #twitter {
-        width: 39px;
-    }
-
-    #github {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 39px;
-    }
-
-    #linkedin {
-        width: 39px;
-    }
-
-    .text-header {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 3rem;
-        margin-top: 65px;
-        text-align: center;
-    }
-}
-/* ENDS MOBILE VERSION */
-
-/* STARTS DESKTOP VERSION */
-@media (min-width: 1280px) {
-    #article {
-        margin: 100px;
-    }
-
-    #article-header {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 4rem;
-    }
-
-    #article-date {
-        font-size: 1.34rem;
-    }
-
-    #article-body {
-        color: #333;
-        font-size: 2rem;
-        margin-top: 60px;
-    }
-
-    #left-container {
-        line-height: 520px;
-        margin: auto;
-        position: absolute;
-        text-align: right;
-        top: 0px; bottom: 0px; left: 0px;
-        width: 50%; height: 520px;
-    }
-
-    #right-container {
-        font-size: 2rem;
-        margin: auto;
-        position: absolute;
-        top: 0px; bottom: 0px; left: 50%;
-        width: 560px; height: 520px;
-    }
-
-    #mcm {
-        margin-right: 167px;
-        vertical-align: middle;
-    }
-
-    #linkedin {
-        position: absolute;
-        right: 0; bottom: 0;
-        width: 25px;
-    }
-
-    #github {
-        position: absolute;
-        right: 0; bottom: 25px;
-        width: 25px;
-    }
-
-    #twitter {
-        position: absolute;
-        right: -25px; bottom: 50px;
-        width: 25px;
-    }
-
-    .text-header {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 4rem;
-    }
-}
-/* ENDS DESKTOP VERSION */
-
-.text-center {
-    text-align: center;
-}
-        </style>
-        <script src="scripts/jquery-3.1.1.min.js"></script>
 		<!-- Path.js provides path (yeah...) handling to make this behave like an actual web app -->
 		<script src="scripts/path.min.js"></script>
+
 		<script src="scripts/showdown.min.js"></script>
+		
 		<script type="text/javascript"> 
-var items = [];
-var converter = new showdown.Converter();
-var baseDocumentTitle = "";
+			var items = [];
+			var converter = new showdown.Converter();
+			var baseDocumentTitle = "";
+					
+			function addItem(title, filename, date, hidden = false) {
+				var item = { title: title, filename: filename, date: date, hidden: hidden };
 
-Path.map("#/home")
-    .to(function(){
-        $("#article").hide();
-        $("#home").show();
-    })
-    .enter(populateItems);
-        
-function addItem(title, filename, date, hidden = false) {
-    var item = { title: title, filename: filename, date: date, hidden: hidden };
+				items.push(item);
 
-    items.push(item);
+				Path.map("#/" + filename)
+					.to(function(){
+					    loadItem(filename);
+					})
+					.enter(populateItems);
+			}
 
-    Path.map("#/" + filename)
-        .to(function(){
-            loadItem(filename);
-        })
-        .enter(populateItems);
-}
+			function entryPoint() {
+				baseDocumentTitle = document.title;
 
-function entryPoint() {
-    baseDocumentTitle = document.title;
+				$("#items").change(function () {
+					window.location.href = window.location.origin + "/#/" + this.value;
+				});
+			
+				// At least we need a "home" item to serve as the landing one
+				Path.root("#/home");
 
-    $("#items").change(function () {
-        window.location.href = window.location.origin + "/#/" + this.value;
-    });
+				Path.rescue(function () {
+				    window.location.href = window.location.origin + "/#/404";
+				});
+					
+				Path.listen();
+			}
+			
+			function loadItem(filename) {
+				var actualPath = "items/" + filename + ".md";
+			
+				$.get(actualPath, function (data) {
+					var item = items.find(function(item) { 
+						return item.filename == filename;
+					});
 
-    // At least we need a "home" item to serve as the landing one
-    Path.root("#/home");
+					document.title = item.title + ' - ' + baseDocumentTitle;
+		
+					$("#title").html(item.title);
+			
+    				var body = converter.makeHtml(data);
 
-    Path.rescue(function () {
-        window.location.href = window.location.origin + "/#/404";
-    });
-        
-    Path.listen();
-}
+					$("#actualBody").html(body);
 
-function loadItem(filename) {
-    var actualPath = "items/" + filename + ".md";
+                    var signature = '-Marcos<br />Anywhere at Internet, ' + item.date;
 
-    $.get(actualPath, function (data) {
-        var item = items.find(function(item) { 
-            return item.filename == filename;
-        });
+                    $("#signature").html(signature);
 
-        document.title = item.title + ' - ' + baseDocumentTitle;
+					window.scrollTo(0, 0);
+				});
+			}
 
-        $("#article-header").html(item.title);
-        $("#article-date").html(item.date);
+			function populateItems()
+			{
+				$("#items").empty();
+			
+				//if (items.length == 0 ||
+				//	(items.length == 1 && items[0].filename == "home")) {
+				//	$("#items").append("<li><i>Nothing currently</i></li>");
+				//
+				//	return;
+				//}
 
-        var body = converter.makeHtml(data);
+				$("#items").append("<option>Choose an article...</option>");
+			
+				for (var i = 0; i < items.length; i++) {
+					var item = items[i];
 
-        $("#article-body").html(body);
-
-        $("#home").hide();
-        $("#article").show();
-
-        window.scrollTo(0, 0);
-    });
-}
-
-function populateItems()
-{
-    $("#items").empty();
-
-    //if (items.length == 0 ||
-    //	(items.length == 1 && items[0].filename == "home")) {
-    //	$("#items").append("<li><i>Nothing currently</i></li>");
-    //
-    //	return;
-    //}
-
-    $("#items").append("<option>Blog...</option>");
-
-    for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-
-        if (item.hidden)
-            continue;
-
-        var html = '<option value="' + item.filename + '">' + 
-                item.title + ' - ' + item.date + 
-            '</option>';
-
-        $("#items").append(html);
-    }
-}
+					if (item.hidden)
+						continue;
+			
+					var html = '<option value="' + item.filename + '">' + 
+							item.title + ' - ' + item.date + 
+						'</option>';
+			
+					$("#items").append(html);
+				}
+			}
 		</script>
-		<script src="items/items.js"></script>
-    </head>
-    <body onload='entryPoint()'>
-<div id="home">
-    <div id="left-container">
-        <img id="mcm" src="images/mcm.png" title="m c m (not 'u' ;-)" />
-    </div>
-    <div id="right-container">
-        <div class="text-header">
-            Marcos Cobeña Morián
-        </div>
-        <p>
-            <a href="https://www.xamarin.com/">Xamarin</a> Software Engineer focused in iOS and Android. Graphic Designer in a near future (currently attending <a href="https://calarts.edu/">CalArts</a> on-line). This is <a href="/#/my-story">my story</a>.
-        </p>
-        <div class="text-center">
-            <select id="items" class="text-center"></select>
-        </div>
-        <p class="text-center">
-            <a href="mailto:hello@marcoscobena.com">hello@marcoscobena.com</a>
-        </p>
-        <div id="social">
-            <a href="https://twitter.com/MarcosCobena_">
-                <img id="twitter" src="images/TwitterBig.png" title="My Twitter" />
-            </a>
-            <a href="https://github.com/MarcosCobena">
-                <img id="github" src="images/GitHubBig.png" title="My GitHub" />
-            </a>
-            <a href="https://es.linkedin.com/in/MarcosCobena">
-                <img id="linkedin" src="images/LinkedInBig.png" title="My LinkedIn" />
-            </a>
-        </div>
-    </div>
-</div>
 
-<div id="article" style="display: none">
-    <span id="article-header"></span>
-    <br />
-    <span id="article-date" title="day/month"></span>
-    <div id="article-body"></div>
-</div>
-    </body>
+		<script src="items/items.js"></script>
+	</head>
+	<body onload='entryPoint()'>
+		<div id="title" class="center">
+		</div>
+		
+		<div id="actualBody">
+		</div>
+
+        <div id="signature">
+		</div>
+
+		<div class="center">
+			<p>
+				~
+			</p>
+
+			<select id="items">
+			</select>
+		</div>
+	</body>
 </html>
