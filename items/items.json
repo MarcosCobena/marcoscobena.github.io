@@ -1,0 +1,12 @@
+﻿[
+    { "title" : "Hi!", "filename" : "home", "date" : "30/5/2017", "hidden" : true },
+    { "title" : "404", "filename" : "404", "date" : "29/1/2017", "hidden" : true },
+
+    { "title" : "This web", "filename" : "this-web", "date" : "12/1/2017" },
+    { "title" : "Now", "filename" : "now", "date" : "17/1/2017" },
+    { "title" : "Decidir con el corazón", "filename" : "decidir-con-el-corazon", "date" : "19/1/2017" },
+    { "title" : "Last week: Xamarin and HoloLens", "filename" : "last-week-xamarin-hololens", "date" : "25/1/2017" },
+    { "title" : "Last week: Dynamic cell's height", "filename" : "last-week-dynamic-cells-height", "date" : "1/2/2017" },
+    { "title" : "En el otro lado", "filename" : "en-el-otro-lado", "date" : "15/2/2017" },
+    { "title" : "App screen creation template", "filename" : "app-screen-creation-template", "date" : "17/2/2017" }
+]

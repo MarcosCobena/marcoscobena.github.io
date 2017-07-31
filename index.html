@@ -42,6 +42,12 @@
 			var converter = new showdown.Converter();
 			var baseDocumentTitle = "";
 					
+			// addItem(
+			// 	   title, <- Here goes the user-friendly title you want to show
+			// 	   filename, <- Item's filename without .md extension, at the same level of this current one
+			// 	   date <- Date, as is, i.e. will be rendered without conversion
+			//     hidden <- Optional: whether you want it to not appear listed at home
+			// );
 			function addItem(title, filename, date, hidden = false) {
 				var item = { title: title, filename: filename, date: date, hidden: hidden };
 
@@ -55,27 +61,33 @@
 			}
 
 			function entryPoint() {
-				baseDocumentTitle = document.title;
+				$.getJSON("items/items.json", function (data) {
+					$.each(data, function (key, val) {
+						addItem(val.title, val.filename, val.date, val.hidden);
+					});
 
-				$("#items").change(function () {
-					window.location.href = window.location.origin + "/#/" + this.value;
-				});
-			
-				// At least we need a "home" item to serve as the landing one
-				Path.root("#/home");
+					baseDocumentTitle = document.title;
 
-				Path.rescue(function () {
-				    window.location.href = window.location.origin + "/#/404";
+					$("#items").change(function () {
+						window.location.href = window.location.origin + "/#/" + this.value;
+					});
+				
+					// At least we need a "home" item to serve as the landing one
+					Path.root("#/home");
+
+					Path.rescue(function () {
+						window.location.href = window.location.origin + "/#/404";
+					});
+						
+					Path.listen();
 				});
-					
-				Path.listen();
 			}
 			
 			function loadItem(filename) {
 				var actualPath = "items/" + filename + ".md";
 			
 				$.get(actualPath, function (data) {
-					var item = items.find(function(item) { 
+					var item = items.find(function (item) { 
 						return item.filename == filename;
 					});
 
@@ -122,8 +134,6 @@
 				}
 			}
 		</script>
-
-		<script src="items/items.js"></script>
 	</head>
 	<body onload='entryPoint()'>
 		<div id="title" class="center">
