@@ -2,31 +2,50 @@
 	<head>
 		<title>Marcos Cobeña Morián</title>
 
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+		
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 		
 		<style type="text/css">
 			body {
-				color: #000;
-				font-family: serif;
-                font-size: 24px;
-                line-height: 2em;
-				margin: 0px auto;
-                margin-top: 100px; margin-bottom: 100px;
-				padding: 8;
-    			width: 1160px;
+				font-family: 'EB Garamond', serif;
+                font-size: 16px;
+				margin: 0px;
+				min-width: 546px;
 			}
 
-			.center {
-				text-align: center;
+			select {
+				width: 100px;
 			}
 
-            #signature {
-                text-align: right;
+			.float-right {
+				float: right; 
 			}
 
-            #title {
-                margin: 0px 0px 100px 0px;
-				text-transform: lowercase;
+			.hidden {
+				display: none;
+			}
+
+			#home {
+				border-radius: 273px; -moz-border-radius: 273px; -webkit-border-radius: 273px;
+				background-color: white;
+				display: table;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+				width: 546px; height: 546px;
+			}
+
+			#home-inner {
+				display: table-cell;
+				line-height: 1.25em;
+				padding: 80px;
+				vertical-align: middle;
+			}
+
+			#home-outter {
+				background-color: black;
+				width: 100%; height: 100%;
 			}
 		</style>
 		
@@ -41,34 +60,53 @@
 			var items = [];
 			var converter = new showdown.Converter();
 			var baseDocumentTitle = "";
+			var selects = [];
 					
 			// addItem(
 			// 	   title, <- Here goes the user-friendly title you want to show
 			// 	   filename, <- Item's filename without .md extension, at the same level of this current one
 			// 	   date <- Date, as is, i.e. will be rendered without conversion
-			//     hidden <- Optional: whether you want it to not appear listed at home
+			//     category <- Optional: predefined ones: "default", self-explanatory; "hidden", also self-explanatory
 			// );
-			function addItem(title, filename, date, hidden = false) {
-				var item = { title: title, filename: filename, date: date, hidden: hidden };
+			function addItem(title, filename, date, category = "default") {
+				var item = { title: title, filename: filename, date: date, category: category };
 
 				items.push(item);
 
 				Path.map("#/" + filename)
-					.to(function(){
+					.to(function () {
+						if (filename == "home") {
+							document.title = baseDocumentTitle;
+							$("#article").hide();
+							$("#home-outter").show();
+
+							return;
+						}
+
+						$("#home-outter").hide();
+						$("#article").show();
+
 					    loadItem(filename);
 					})
 					.enter(populateItems);
 			}
 
+			function capitalizeFirstLetter(string) {
+				return string.charAt(0).toUpperCase() + string.slice(1);
+			}
+
 			function entryPoint() {
 				$.getJSON("items/items.json", function (data) {
+					addItem("Home", "home", "22/10/1984", "hidden");
+
 					$.each(data, function (key, val) {
-						addItem(val.title, val.filename, val.date, val.hidden);
+						addItem(val.title, val.filename, val.date, val.category);
 					});
 
 					baseDocumentTitle = document.title;
 
-					$("#items").change(function () {
+					selects = $("select[id^=items]");
+					selects.change(function () {
 						window.location.href = window.location.origin + "/#/" + this.value;
 					});
 				
@@ -109,49 +147,77 @@
 
 			function populateItems()
 			{
-				$("#items").empty();
-			
-				//if (items.length == 0 ||
-				//	(items.length == 1 && items[0].filename == "home")) {
-				//	$("#items").append("<li><i>Nothing currently</i></li>");
-				//
-				//	return;
-				//}
+				selects.each(function (index) {
+					if (this.id == "items")
+						populateSelectWithCategory("items", "default", "Articles");
+					else
+					{
+						var category = this.id.substring("items-".length, this.id.length);
+						var defaultOption = capitalizeFirstLetter(category);
+						populateSelectWithCategory(this.id, category, defaultOption);
+					}
+				});
+			}
 
-				$("#items").append("<option>Choose an article...</option>");
+			function populateSelectWithCategory(selectId, category, defaultOption)
+			{
+				var querySelectId = "#" + selectId;
+				$(querySelectId).empty();
+				$(querySelectId).append("<option>" + defaultOption + "</option>");
 			
 				for (var i = 0; i < items.length; i++) {
 					var item = items[i];
 
-					if (item.hidden)
+					if (item.category == "hidden" || item.category != category)
 						continue;
 			
 					var html = '<option value="' + item.filename + '">' + 
 							item.title + ' - ' + item.date + 
 						'</option>';
 			
-					$("#items").append(html);
+					$(querySelectId).append(html);
 				}
 			}
 		</script>
 	</head>
 	<body onload='entryPoint()'>
-		<div id="title" class="center">
-		</div>
-		
-		<div id="actualBody">
+		<div id="home-outter">
+			<div id="home">
+				<div id="home-inner">
+					I love, since childhood, to build things which solve people's life;<br/>
+					&emsp;Nowadays, materialized as Xamarin Mobile Engineer working at DevsDNA;<br/>
+					<br/>
+					<select id="items"></select> <a href="#/now">Now</a> &ndash;what I'm doing.<br/>
+					<br/>
+					<br/>
+					De vez en cuando escribo sobre lo que descubro más importante en la vida:<br/>
+					<br/>
+					<select id="items-reflexiones"></select> <a href="mailto:hello@marcoscobena.com?subject=Suscribirme%20a%20Reflexiones">¡Suscríbete!</a><br/>
+					<br/>
+					<br/>
+					<span class="float-right">&mdash;<a href="mailto:hello@marcoscobena.com">Marcos Cobeña Morián</a></span>
+				</div>
+			</div>
 		</div>
 
-        <div id="signature">
-		</div>
+		<div id="article" class="hidden">
+			<div id="title" class="center">
+			</div>
+			
+			<div id="actualBody">
+			</div>
 
-		<div class="center">
-			<p>
-				~
-			</p>
+			<div id="signature">
+			</div>
 
-			<select id="items">
-			</select>
+			<!-- <div class="center">
+				<p>
+					~
+				</p>
+
+				<select id="items">
+				</select>
+			</div>  -->
 		</div>
 	</body>
 </html>
