@@ -18,6 +18,10 @@
 				width: 100px;
 			}
 
+			.center {
+				text-align: center;
+			}
+
 			.float-right {
 				float: right; 
 			}
@@ -26,9 +30,40 @@
 				display: none;
 			}
 
-			#home {
-				border-radius: 273px; -moz-border-radius: 273px; -webkit-border-radius: 273px;
+			.right {
+				text-align: right;
+			}
+
+			.uppercase {
+				text-transform: uppercase;
+			}
+
+			#article {
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+				width: 100%; height: 100%;
+			}
+
+			#article-inner {
+				margin: 0px auto;
+				padding: 80px 0px;
+				width: 388px;
+			}
+
+			#background {
+				background-color: black;
+				width: 100%; height: 100%;
+			}
+
+			#circle {
 				background-color: white;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+				width: 0px; height: 0px;
+			}
+
+			#home {
 				display: table;
 				margin: auto;
 				position: absolute;
@@ -43,9 +78,12 @@
 				vertical-align: middle;
 			}
 
-			#home-outter {
-				background-color: black;
-				width: 100%; height: 100%;
+			#signature {
+				font-size: 0.875em;
+			}
+
+			#title {
+				font-size: 2em;
 			}
 		</style>
 		
@@ -78,12 +116,28 @@
 						if (filename == "home") {
 							document.title = baseDocumentTitle;
 							$("#article").hide();
-							$("#home-outter").show();
+							$("#background").show();
+							// setCircleWidth($("#home").width());							
+							$("#home").show();
 
 							return;
 						}
 
-						$("#home-outter").hide();
+						// MAYBE home to article transition anims.
+						// $("#home").fadeOut("fast", function () {
+						// 	$("#circle").animate({
+						// 		width: "0px",
+						// 		height: "0px",
+						// 		borderRadius: "0px"
+						// 	}, "slow", function () {
+						// 		$("#background").fadeOut("fast", function () {
+						// 			$("#article").fadeIn("fast");
+						// 		});
+						// 	});
+						// });
+						$("#home").hide();
+						$("#background").hide();
+						// setCircleWidth($(window).width());
 						$("#article").show();
 
 					    loadItem(filename);
@@ -96,6 +150,18 @@
 			}
 
 			function entryPoint() {
+				// MAYBE Opening anims.
+				// $("#home-inner").fadeOut(0);
+				// $("#circle").animate({
+				// 	width: "546px",
+				// 	height: "546px",
+				// 	borderRadius: "273px"
+				// }, "slow", function () {
+				// 	$("#home-inner").fadeIn("fast");
+				// });
+				// TODO gather from div#home-inner's size
+				setCircleWidth($("#home").width());
+
 				$.getJSON("items/items.json", function (data) {
 					addItem("Home", "home", "22/10/1984", "hidden");
 
@@ -137,7 +203,7 @@
 
 					$("#actualBody").html(body);
 
-                    var signature = '-Marcos<br />Internet, ' + item.date;
+                    var signature = item.date;
 
                     $("#signature").html(signature);
 
@@ -178,46 +244,55 @@
 					$(querySelectId).append(html);
 				}
 			}
+
+			function setCircleWidth(width) {
+				var side = width;
+				var sidePx = side.toString() + "px";
+				var halfSide = side / 2;
+				var halfSidePx = halfSide.toString() + "px";
+				$("#circle").width(sidePx);
+				$("#circle").height(sidePx);
+				$("#circle").css("border-radius", halfSidePx);
+			}
 		</script>
 	</head>
 	<body onload='entryPoint()'>
-		<div id="home-outter">
-			<div id="home">
-				<div id="home-inner">
-					I love, since childhood, to build things which solve people's life;<br/>
-					&emsp;Nowadays, materialized as Xamarin Mobile Engineer working at DevsDNA;<br/>
-					<br/>
-					<select id="items"></select> <a href="#/now">Now</a> &ndash;what I'm doing.<br/>
-					<br/>
-					<br/>
-					De vez en cuando escribo sobre lo que descubro más importante en la vida:<br/>
-					<br/>
-					<select id="items-reflexiones"></select> <a href="mailto:hello@marcoscobena.com?subject=Suscribirme%20a%20Reflexiones">¡Suscríbete!</a><br/>
-					<br/>
-					<br/>
-					<span class="float-right">&mdash;<a href="mailto:hello@marcoscobena.com">Marcos Cobeña Morián</a></span>
-				</div>
+		<div id="background">
+			<div id="circle"></div>
+		</div>
+
+		<div id="home">
+			<div id="home-inner">
+				I love, since childhood, to build things which solve people's life;<br/>
+				&emsp;Nowadays, materialized as Xamarin Mobile Engineer working at DevsDNA;<br/>
+				<br/>
+				<select id="items"></select> <a href="#/now">Now</a> &ndash;what I'm doing.<br/>
+				<br/>
+				<br/>
+				De vez en cuando escribo sobre lo que descubro más importante en la vida:<br/>
+				<br/>
+				<select id="items-reflexiones"></select> <a href="mailto:hello@marcoscobena.com?subject=Suscribirme%20a%20Reflexiones">¡Suscríbete!</a><br/>
+				<br/>
+				<br/>
+				<span class="float-right">&mdash;<a href="mailto:hello@marcoscobena.com">Marcos Cobeña Morián</a></span>
 			</div>
 		</div>
 
 		<div id="article" class="hidden">
-			<div id="title" class="center">
-			</div>
-			
-			<div id="actualBody">
-			</div>
+			<div id="article-inner">
+				<div id="title" class="center uppercase">
+				</div>
+				
+				<div id="signature" class="center uppercase">
+				</div>
+				
+				<div id="actualBody">
+				</div>
 
-			<div id="signature">
+				<div class="right">
+					&mdash;<a href="/#/home">Marcos Cobeña Morián</a>
+				</div>
 			</div>
-
-			<!-- <div class="center">
-				<p>
-					~
-				</p>
-
-				<select id="items">
-				</select>
-			</div>  -->
-		</div>
+		</div> 
 	</body>
 </html>
