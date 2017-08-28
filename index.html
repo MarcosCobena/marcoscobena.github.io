@@ -1,0 +1,190 @@
+﻿
+<html>
+	<head>
+		<title>Marcos Cobeña Morián</title>
+
+		<link rel="alternate" type="application/rss+xml" title="Marcos Cobeña Morián" href="/feed.xml" />
+		<link rel="alternate" type="application/rss+xml" title="Xamarin" href="/feed-xamarin.xml" />
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+		
+		<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<style type="text/css">
+			body {
+				color: #333;
+				font-family: 'Open Sans', sans-serif;
+				margin: 0 auto;
+    			max-width: 750px;
+				padding: 8;
+			}
+
+			.center {
+				text-align: center;
+			}
+
+			#footer {
+				font-family: 'Parisienne', cursive;
+				margin-top: 50px;
+				text-align: center;
+			}
+
+			h1, h2, h3, h4, h5 {
+				font-family: 'Parisienne', cursive;
+				font-weight: 400;
+			}
+
+			#header {
+				font-family: 'Parisienne', cursive;
+				font-size: 2em;
+				text-align: center;
+			}
+
+			#header a {
+				color: #333;
+				text-decoration: none;
+			}
+
+			.item-date {
+				font-size: 0.75em;
+			}
+
+			.item-title {
+				font-size: 1.5em;
+			}
+
+			.serif {
+				font-family: 'Parisienne', cursive;
+			}
+
+			#title {
+				font-family: 'Parisienne', cursive;
+				text-align: center;
+			}
+		</style>
+		
+		<script src="scripts/jquery-3.1.1.min.js"></script>
+
+		<!-- Path.js provides path (yeah...) handling to make this behave like an actual web app -->
+		<script src="scripts/path.min.js"></script>
+
+		<script src="scripts/showdown.min.js"></script>
+		
+		<script type="text/javascript"> 
+			var items = [];
+			var converter = new showdown.Converter();
+			var baseDocumentTitle = "";
+					
+			function addItem(title, filename, date, hidden = false) {
+				var item = { title: title, filename: filename, date: date, hidden: hidden };
+
+				items.push(item);
+
+				Path.map("#/" + filename)
+					.to(function(){
+					    loadItem(filename);
+					})
+					.enter(populateItems);
+			}
+
+			function entryPoint() {
+				baseDocumentTitle = document.title;
+
+				$("#items").change(function () {
+					window.location.href = window.location.origin + "/#/" + this.value;
+				});
+			
+				// At least we need a "home" item to serve as the landing one
+				Path.root("#/home");
+
+				Path.rescue(function () {
+				    window.location.href = window.location.origin + "/#/404";
+				});
+					
+				Path.listen();
+			}
+			
+			function loadItem(filename) {
+				var actualPath = "items/" + filename + ".md";
+			
+				$.get(actualPath, function (data) {
+					var item = items.find(function(item) { 
+						return item.filename == filename;
+					});
+
+					document.title = item.title + ' - ' + baseDocumentTitle;
+			
+					var title = '<span class="item-title">' + item.title + '</span>';
+
+					if (item.filename != "home")
+						title += '<br /><span class="item-date">(' + item.date + ')</span>';
+		
+					$("#title").html(title);
+			
+    				var body = converter.makeHtml(data);
+
+					$("#actualBody").html(body);
+
+					window.scrollTo(0, 0);
+				});
+			}
+
+			function populateItems()
+			{
+				$("#items").empty();
+			
+				//if (items.length == 0 ||
+				//	(items.length == 1 && items[0].filename == "home")) {
+				//	$("#items").append("<li><i>Nothing currently</i></li>");
+				//
+				//	return;
+				//}
+
+				$("#items").append("<option>Choose an article...</option>");
+			
+				for (var i = 0; i < items.length; i++) {
+					var item = items[i];
+
+					if (item.hidden)
+						continue;
+			
+					var html = '<option value="' + item.filename + '">' + 
+							item.title + ' - ' + item.date + 
+						'</option>';
+			
+					$("#items").append(html);
+				}
+			}
+		</script>
+
+		<script src="items/items.js"></script>
+	</head>
+	<body onload='entryPoint()'>
+		<div id="header">
+			<a href="#/home">Marcos Cobeña Morián</a>
+		</div>
+
+		<div id="title">
+		</div>
+		
+		<div id="actualBody">
+		</div>
+
+		<div class="center">
+			<p class="serif">
+				~
+			</p>
+
+			<select id="items">
+			</select>
+		</div>
+
+		<div id="footer">
+			<p>
+				<i>El futuro pertenece a quienes creen en la belleza de sus sueños</i> -Eleanor Roosevelt
+			</p>
+		</div>
+	</body>
+</html>
