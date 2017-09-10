@@ -1,8 +1,8 @@
-This’ a Vocational Computer Engineer, nowadays making mobile apps -iOS mostly-
-at [DevsDNA](http://devsdna.com); minimalist, looking for happiness and
+This’ a Vocational Computer Engineer, nowadays making mobile apps -iOS &
+Android- at [DevsDNA](http://devsdna.com); minimalist, looking for happiness and
 self-realisation.
 
-You can find what I’m involved in [now](http://marcoscobena.com/#/now).
+You can find what I’m involved in [now](#/now).
 
 There’s a feed for anything I write here ([RSS](feed.xml)), or just those
 related with Xamarin ([RSS](feed-xamarin.xml)).
@@ -10,8 +10,8 @@ related with Xamarin ([RSS](feed-xamarin.xml)).
 A few “social” networks I’m in (if you want to contact me *please* see Contact
 below, I don’t use to access so frequently to these ones):
 
--   <https://twitter.com/MarcosCobena_>: I use to share what I publish on this
-    site
+-   <https://twitter.com/1Marcos2Cobena>: I use to share stuff find interesting
+    on my daily job
 
 -   <https://github.com/MarcosCobena>: among bits I write, this web runs there
 

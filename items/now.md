@@ -1,16 +1,18 @@
-I’m focused in Mobile Development, through Xamarin, with accent in UX aspects. I
-spend most of my time in Xamarin.iOS apps, helped by MVVMCross; from time to
-time I visit customers to teach Xamarin-related topics: Xamarin.iOS, Android,
-Forms, HockeyApp, Test Cloud, DevOps in general, etc. I enjoy that educational
-side of my job, and do my best to translate how much value have mobile apps for
-me.
+I’m working on [Beezy for
+Android](https://play.google.com/store/apps/details?id=net.beezy.store&hl=es),
+reaching feature complete to align with its [iOS
+version](https://itunes.apple.com/us/app/beezy-mobile/id1139620867?mt=8); from
+time to time I visit customers to teach Xamarin-related topics: Xamarin.iOS,
+Android, Forms, HockeyApp, Test Cloud, DevOps in general, etc. I enjoy that
+educational side of my job, and do my best to translate how much value have
+mobile apps for me.
 
-Every week I write down in this site what I learned the past one, related to my
-daily job. The main motivation here is to keep English fresh in my mind, but
-also share things I discover or learn which can be helpful for others as well.
-
-I’ve started a newsletter (in Spanish) to share thoughts or points of view I
-have on life things. Things that have helped in my own life which may be of
-interest for anyone else. You can subscribe [here](#/home).
+Before summer I started to study [Graphic
+Design](https://www.coursera.org/specializations/graphic-design) as a side
+project, achieving the first two grades in the specialization of five. I’m back
+after holidays to this and would like to finish the other three before the end
+of year. I committed to Gimp and Inkscape as my main tools during the entire
+course and also practice with them with small projects (gift cards, CVs, etc.)
+Graphic Design is something I’m truly enjoying.
 
 (Last updated on: see date above)
