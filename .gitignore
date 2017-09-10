@@ -2,3 +2,5 @@ packages
 *.user
 Web
 RSSGenerator
+*.sln
+*.csproj
