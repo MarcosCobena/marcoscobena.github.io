@@ -14,4 +14,4 @@ addItem("Decidir con el corazón", "decidir-con-el-corazon", "19/1/2017");
 addItem("This web", "this-web", "12/1/2017");
 
 addItem("404", "404", "29/1/2017", true);
-addItem("Home", "home", "12/1/2017", true);
+addItem("👋", "home", "12/1/2017", true);
