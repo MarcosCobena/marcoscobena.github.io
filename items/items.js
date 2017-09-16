@@ -5,7 +5,7 @@
 //     hidden <- Optional: whether you want it to not appear listed at home
 // );
 
-addItem("Now", "now", "10/9/2017");
+addItem("Now", "now", "16/9/2017");
 // addItem("App screen creation template", "app-screen-creation-template", "17/2/2017", false, "Xamarin");
 // addItem("En el otro lado", "en-el-otro-lado", "15/2/2017");
 // addItem("Last week: Dynamic cell's height", "last-week-dynamic-cells-height", "1/2/2017", false, "Xamarin");
