@@ -24,6 +24,8 @@ for bullfighting where bulls wouldn’t die (Spanish only, sorry).*
 Made with my friend
 [aro](http://www.aroideas.com/la-app-que-te-da-los-buenos-dias/).
 
+[![](items/images/PasswordOMaticScreenshot.png)](https://apps.getpebble.com/en_US/application/55dc1d7bc47b8e960c000069)
+
 ### Contact
 
 [E-mail](mailto:marcoscm.digital@gmail.com)’s the most direct one (check it in a
