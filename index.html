@@ -28,7 +28,7 @@
 			#bodyWrapper {
 				background: white;
 				height: inherit; min-height: 100%;
-				padding: 1.5em 1em;
+				padding: 1.5em 1em 1em;
 			}
 
 			.center {
@@ -36,8 +36,7 @@
 			}
 
 			h1, h2, h3, h4, h5 {
-				font-family: 'Parisienne', cursive;
-				font-weight: 400;
+				line-height: 1.25em;
 			}
 
 			.item-date {
@@ -49,8 +48,7 @@
 			}
 
 			.signature {
-				font-family: 'Parisienne', cursive;
-				font-size: 1.25em;
+				margin-top: 1.5em;
 				text-align: right;
 			}
 
@@ -77,7 +75,7 @@
 				items.push(item);
 
 				Path.map("#/" + filename)
-					.to(function(){
+					.to(function () {
 					    loadItem(filename);
 					});
 			}
@@ -135,7 +133,7 @@
 			</div>
 
 			<p class="signature">
-				-<a href="#/home">Marcos Cobeña-Morián</a>
+				–<a href="#/home">Marcos Cobeña-Morián</a>
 			</p>
 		</div>
 	</body>
