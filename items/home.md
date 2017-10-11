@@ -4,7 +4,7 @@ Mainly for iOS and Android, using Xamarin. I'm currently working full-time at [D
 
 You may want to know what I’m in [now](#/now).
 
-*Why don't I list my Social Networks as a poem?*:
+*Why don't I list my Social Networks as a poem?*
 
 Daily findings go to [Twitter](https://twitter.com/1Marcos2Cobena),<br />
 [Medium](https://medium.com/@MarcosCobena) holds larger writings\*;<br />
