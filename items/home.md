@@ -1,6 +1,8 @@
 # Hi! My name is Marcos and I craft apps for people like you and me
 
-Mainly for iOS and Android, using Xamarin. I'm currently working full-time at [DevsDNA](http://www.devsdna.com), a small-but-great Xamarin focused consultancy, building apps for others –[write us](mailto:marcos@devsdna.com)!
+Don't you like these colors? Shake your device or hit refresh!
+
+My beloved apps target mainly iOS and Android, using Xamarin. I'm currently working full-time at [DevsDNA](http://www.devsdna.com), a small-but-great Xamarin focused consultancy, building apps for others –[write us](mailto:marcos@devsdna.com)!
 
 You may want to know what I’m in [now](#/now).
 

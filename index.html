@@ -9,6 +9,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<style type="text/css">
+			a {
+				text-decoration-style: wavy;
+			}
+
 			#actualBody {
 				line-height: 1.5em;
 			}
@@ -21,7 +25,6 @@
 			}
 
 			#bodyWrapper {
-				background: rgba(255, 255, 255, 0.5);
 				height: inherit; min-height: 100%;
 				padding: 1.5em 1em 1em;
 			}
@@ -43,14 +46,6 @@
 				font-size: 2em;
 			}
 
-			#shakeAlert {
-				font-size: 0.75em;
-				margin-top: 1em; margin-right: 1em;
-				position: absolute;
-				text-align: right;
-    			top: 0; right: 0;
-			}
-
 			.signature {
 				margin-top: 1.5em;
 				text-align: right;
@@ -63,6 +58,7 @@
 		</style>
 		
 		<script src="scripts/jquery-3.1.1.min.js"></script>
+		<script src="scripts/jquery.color-2.1.2.min.js"></script>
 
 		<!-- Path.js provides path (yeah...) handling to make this behave like an actual web app -->
 		<script src="scripts/path.min.js"></script>
@@ -73,15 +69,13 @@
 		<script src="scripts/showdown.min.js"></script>
 		
 		<script type="text/javascript"> 
-			// Taken from https://gist.github.com/bobspace/2712980
-			var CSS_COLOR_NAMES = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"];
-			
 			var items = [];
 			var converter = new showdown.Converter();
 			var myShakeEvent = new Shake({
 				threshold: 15, // optional shake strength threshold
 				timeout: 1000 // optional, determines the frequency of event generation
 			});
+			var anchorColor;
 					
 			function addItem(title, filename, date, hidden = false) {
 				var item = { title: title, filename: filename, date: date, hidden: hidden };
@@ -95,11 +89,11 @@
 			}
 
 			function entryPoint() {
-				setRandomBackgroundColor();
+				setRandomColors();
 
 				myShakeEvent.start();
 				window.addEventListener('shake', function () {
-					setRandomBackgroundColor();
+					setRandomColors();
 				}, false);
 
 				// At least we need a "home" item to serve as the landing one
@@ -134,6 +128,7 @@
     				var body = converter.makeHtml(data);
 
 					$("#actualBody").html(body);
+					updateAnchorsColor();
 
 					if (weAreAtHome) {
 						populateLatestMediumStories();
@@ -165,12 +160,25 @@
 						"</li>";
 					output += "</ul>";
 					$("#medium").html(output);
+
+					updateAnchorsColor();
 				});
 			}
 
-			function setRandomBackgroundColor() {
-				var randomColor = CSS_COLOR_NAMES[Math.floor(Math.random() * CSS_COLOR_NAMES.length)];
-				$("body").css("background-color", randomColor);
+			function setRandomColors() {
+				var hue = parseInt(Math.random() * (360 - 1 + 1), 10);
+				var randomColor = "hsl(" + hue + ", 100%, 75%)";
+
+				var oppositeHue = (hue + 180) % 360;
+				anchorColor = "hsl(" + oppositeHue + ", 100%, 35%)";
+				
+				$("body").animate({ 
+					backgroundColor: randomColor, 
+					color: anchorColor });
+			}
+
+			function updateAnchorsColor() {
+				$("a").css("color", anchorColor);
 			}
 		</script>
 
@@ -178,11 +186,6 @@
 	</head>
 	<body onload='entryPoint()'>
 		<div id="bodyWrapper">
-			<span id="shakeAlert">
-				Pst! Shake your phone<br />
-				or refresh!
-			</span>
-
 			<div id="title">
 			</div>
 			
