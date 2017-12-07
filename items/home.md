@@ -2,7 +2,7 @@
 
 My beloved apps target mainly iOS and Android, using Xamarin. I'm currently working full-time at [DevsDNA](http://www.devsdna.com), a small-but-great Xamarin focused consultancy, building apps for others –[write us](mailto:marcos@devsdna.com)!
 
-You may want to know what I’m in [now](#/now).
+You may want to know what I’m in [now](#/now). Even the [conferences](#/conferences) I've spent.
 
 *Why don't I list my Social Networks as a poem?*
 
