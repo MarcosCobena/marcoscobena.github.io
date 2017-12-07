@@ -5,7 +5,7 @@
 //     hidden <- Optional: whether you want it to not appear listed at home
 // );
 
-addItem("Now", "now", "16/9/2017");
+addItem("Now", "now", "7/12/2017");
 addItem("App screen creation template", "app-screen-creation-template", "17/2/2017", false, "Xamarin");
 
 addItem("404", "404", "29/1/2017", true);
