@@ -7,6 +7,7 @@
 
 addItem("Now", "now", "7/12/2017");
 addItem("App screen creation template", "app-screen-creation-template", "17/2/2017", false, "Xamarin");
+addItem("Conferences and talks", "conferences", "7/12/2017");
 
 addItem("404", "404", "29/1/2017", true);
 addItem("👋", "home", "12/1/2017", true);
