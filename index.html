@@ -63,6 +63,7 @@
 		<script type="text/javascript"> 
 			var items = [];
 			var converter = new showdown.Converter();
+			var currentItem;
 					
 			function addItem(title, filename, date, hidden = false) {
 				var item = { title: title, filename: filename, date: date, hidden: hidden };
@@ -80,10 +81,16 @@
 				Path.root("#/home");
 
 				Path.rescue(function () {
-				    window.location.href = window.location.origin + "/#/404";
+					forceNavigationTo("404");
 				});
 					
 				Path.listen();
+			}
+
+			function forceNavigationTo(filename) {
+				if (filename) {
+					window.location.href = window.location.origin + "/#/" + filename;
+				}
 			}
 			
 			function loadItem(filename) {
@@ -93,6 +100,8 @@
 					var item = items.find(function(item) { 
 						return item.filename == filename;
 					});
+
+					currentItem = item;
 
 					document.title = item.title;
 			
@@ -110,11 +119,44 @@
 					$("#actualBody").html(body);
 
 					if (weAreAtHome) {
+						$("#navigationBar").hide();						
 						populateLatestMediumStories();
+					}
+					else {
+						$("#navigationBar").show();						
 					}
 
 					window.scrollTo(0, 0);
 				});
+			}
+
+			function loadNextItem() {
+				loadNextOrPreviousItem(true);
+			}
+
+			function loadNextOrPreviousItem(isNextOrPrevious) {
+				if (currentItem == null) {
+					return;
+				}
+
+				var currentItemIndex = items.findIndex(function(item) { 
+						return item == currentItem;
+					});
+
+				if (isNextOrPrevious && currentItemIndex <= 0 || 
+					!isNextOrPrevious && currentItemIndex >= items.length - 1) {
+					return;
+				}
+
+				var newItemIndex = isNextOrPrevious ?
+					currentItemIndex - 1 :
+					currentItemIndex + 1;
+				var newItem = items[newItemIndex];
+				forceNavigationTo(newItem.filename);
+			}
+
+			function loadPreviousItem() {
+				loadNextOrPreviousItem(false);
 			}
 
 			function populateLatestMediumStories() {
@@ -147,6 +189,10 @@
 	</head>
 	<body onload='entryPoint()'>
 		<div id="bodyWrapper">
+			<div id="navigationBar" style="display: none">
+				<a href="javascript:loadPreviousItem()">&larr; Previous</a> | <a href="javascript:loadNextItem()">Next &rarr;</a>
+			</div>
+
 			<div id="title">
 			</div>
 			
