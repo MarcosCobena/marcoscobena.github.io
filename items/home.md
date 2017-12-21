@@ -4,20 +4,28 @@ My beloved apps target mainly iOS and Android, using Xamarin. I'm currently work
 
 You may want to know what I’m in [now](#/now). Even the [conferences](#/conferences) I've spent.
 
-*Why don't I list my Social Networks as a poem?*
-
 > Daily findings go to [Twitter](https://twitter.com/1Marcos2Cobena),<br />
 > [Medium](https://medium.com/@MarcosCobena) holds larger writings\*;<br />
 > source code in [GitHub](https://github.com/MarcosCobena) viber,<br />
 > [LinkedIn](https://linkedin.com/in/MarcosCobena) expects my CV flying.
 
-\**I'm particularly proud of [Towards e-Bullfighting. A proposal for coexistence and entrepreneurship](https://medium.com/@MarcosCobena/hacia-la-e-tauromaquia-una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4) (Spanish)*
+# Every working day I write down what have learned new
 
-# Regularly I enjoy writting down my learnings (higher, newer)
+Because independently of what we're involved in –more green or more brown projects– you discover *always* something new:
+
+<div class="center">
+    <select id="items"></select>
+</div>
+
+# And sometimes work a more sophisticated article out
+
+Higher, newer:
 
 <div id="medium">
 Here should appear a list 🤷🏻‍♂️
 </div>
+
+\**I'm particularly proud of [Towards e-Bullfighting. A proposal for coexistence and entrepreneurship](https://medium.com/@MarcosCobena/hacia-la-e-tauromaquia-una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4) (Spanish)*
 
 # I love to build things, these are a few examples
 

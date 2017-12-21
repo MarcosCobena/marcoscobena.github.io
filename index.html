@@ -119,7 +119,8 @@
 					$("#actualBody").html(body);
 
 					if (weAreAtHome) {
-						$("#navigationBar").hide();						
+						$("#navigationBar").hide();	
+						populateItems();					
 						populateLatestMediumStories();
 					}
 					else {
@@ -159,6 +160,29 @@
 				loadNextOrPreviousItem(false);
 			}
 
+			function populateItems()
+			{
+				$("#items").empty();
+				$("#items").append("<option>Choose an entry...</option>");
+
+				for (var i = 0; i < items.length; i++) {
+					var item = items[i];
+
+					if (item.hidden) {
+						continue;
+					}
+
+					var html = '<option value="' + item.filename + '">' + 
+						item.title + ' - ' + item.date + 
+						'</option>';
+					$("#items").append(html);
+				}
+
+				$("#items").change(function () {
+					forceNavigationTo(this.value);
+				});
+			}
+
 			function populateLatestMediumStories() {
 				var data = {
 					api_key: "u4qu6potisc2xktyr88xjhdml5cnq29paoksv8gl",
@@ -189,9 +213,9 @@
 	</head>
 	<body onload='entryPoint()'>
 		<div id="bodyWrapper">
-			<div id="navigationBar" style="display: none">
+			<p id="navigationBar" class="center" style="display: none">
 				<a href="javascript:loadPreviousItem()">&larr; Previous</a> | <a href="javascript:loadNextItem()">Next &rarr;</a>
-			</div>
+			</p>
 
 			<div id="title">
 			</div>
