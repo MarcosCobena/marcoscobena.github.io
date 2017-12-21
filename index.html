@@ -1,5 +1,4 @@
-﻿
-<html>
+﻿<html>
 	<head>
 		<title></title>
 
@@ -72,6 +71,7 @@
 
 				Path.map("#/" + filename)
 					.to(function () {
+						currentItem = item;
 					    loadItem(filename);
 					});
 			}
@@ -101,8 +101,6 @@
 						return item.filename == filename;
 					});
 
-					currentItem = item;
-
 					document.title = item.title;
 			
 					var title = '<span class="item-title">' + item.title + '</span>';
@@ -122,9 +120,18 @@
 						$("#navigationBar").hide();	
 						populateItems();					
 						populateLatestMediumStories();
+						$("#disqus_thread").hide();
 					}
 					else {
-						$("#navigationBar").show();						
+						$("#navigationBar").show();
+
+						DISQUS.reset({
+							reload: true,
+							config: function () {  
+								this.page.identifier = item.filename;  
+								this.page.url = window.location.href;
+							}});
+						$("#disqus_thread").show();
 					}
 
 					window.scrollTo(0, 0);
@@ -207,6 +214,15 @@
 					$("#medium").html(output);
 				});
 			}
+
+			// BEGIN Disqus
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://marcoscobena.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			// END Disqus
 		</script>
 
 		<script src="items/items.js"></script>
@@ -227,6 +243,8 @@
 			<p class="signature">
 				–<a href="#/home">Marcos Cobeña-Morián</a>
 			</p>
+
+			<div id="disqus_thread" style="display: none"></div>
 		</div>
 	</body>
 </html>
