@@ -5,6 +5,7 @@
 //     hidden <- Optional: whether you want it to not appear listed at home
 // );
 
+addItem("Wednesday", "2017-12-20", "20/12/2017");
 addItem("Tuesday", "2017-12-19", "19/12/2017");
 addItem("Monday", "2017-12-18", "18/12/2017");
 addItem("Now", "now", "7/12/2017");
