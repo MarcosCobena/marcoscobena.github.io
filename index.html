@@ -130,10 +130,9 @@
 							reload: true,
 							config: function () {
 								this.page.identifier = item.filename;
-                                //var url = window.location.href;
-                                // http://marcoscobena.com/#/id
-                                //url = [url.slice(0, 25), "#!", a.slice(26)].join('');
-								this.page.url = "http://marcoscobena.com/#!/now";
+                                var url = window.location.href;
+                                url = url.replace("#", "#!");
+								this.page.url = url;
 							}});
 						//$("#disqus_thread").show();
 					}
