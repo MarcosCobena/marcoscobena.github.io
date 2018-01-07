@@ -60,11 +60,11 @@
 		
 		<script src="scripts/showdown.min.js"></script>
 		
-		<script type="text/javascript"> 
+		<script type="text/javascript">
 			var items = [];
 			var converter = new showdown.Converter();
 			var currentItem;
-					
+
 			function addItem(title, filename, date, hidden = false) {
 				var item = { title: title, filename: filename, date: date, hidden: hidden };
 
@@ -84,7 +84,7 @@
 				Path.rescue(function () {
 					forceNavigationTo("404");
 				});
-					
+
 				Path.listen();
 			}
 
@@ -93,17 +93,17 @@
 					window.location.href = window.location.origin + "/#/" + filename;
 				}
 			}
-			
+
 			function loadItem(filename) {
 				var actualPath = "items/" + filename + ".md";
-			
+
 				$.get(actualPath, function (data) {
-					var item = items.find(function(item) { 
+					var item = items.find(function(item) {
 						return item.filename == filename;
 					});
 
 					document.title = item.title;
-			
+
 					var title = '<span class="item-title">' + item.title + '</span>';
 					var weAreAtHome = item.filename == "home";
 
@@ -112,14 +112,14 @@
 					}
 
 					$("#title").html(title);
-			
+
     				var body = converter.makeHtml(data);
 
 					$("#actualBody").html(body);
 
 					if (weAreAtHome) {
-						$("#navigationBar").hide();	
-						populateItems();					
+						$("#navigationBar").hide();
+						populateItems();
 						populateLatestMediumStories();
 						//$("#disqus_thread").hide();
 					}
@@ -128,9 +128,12 @@
 
 						DISQUS.reset({
 							reload: true,
-							config: function () {  
-								this.page.identifier = item.filename;  
-								this.page.url = window.location.href + "#!newthread";
+							config: function () {
+								this.page.identifier = item.filename;
+                                var url = window.location.href;
+                                // http://marcoscobena.com/#/id
+                                url = [url.slice(0, 25), "#!", a.slice(26)].join('');
+								this.page.url = url;
 							}});
 						//$("#disqus_thread").show();
 					}
@@ -148,11 +151,11 @@
 					return;
 				}
 
-				var currentItemIndex = items.findIndex(function(item) { 
+				var currentItemIndex = items.findIndex(function(item) {
 						return item == currentItem;
 					});
 
-				if (isNextOrPrevious && currentItemIndex <= 0 || 
+				if (isNextOrPrevious && currentItemIndex <= 0 ||
 					!isNextOrPrevious && currentItemIndex >= items.length - 1) {
 					return;
 				}
@@ -180,8 +183,8 @@
 						continue;
 					}
 
-					var html = '<option value="' + item.filename + '">' + 
-						item.title + ' - ' + item.date + 
+					var html = '<option value="' + item.filename + '">' +
+						item.title + ' - ' + item.date +
 						'</option>';
 					$("#items").append(html);
 				}
@@ -204,11 +207,11 @@
 
 					var output = "<ul>";
 					$.each(response.items, function (k, item) {
-						output += "<li>\n" + 
+						output += "<li>\n" +
 							'<a href="'+ item.link + '">' + item.title + "</a>" +
 							"</li>";
 					});
-					output += "<li>\n" + 
+					output += "<li>\n" +
 						'<a href="https://medium.com/@MarcosCobena">See all...</a>' +
 						"</li>";
 					output += "</ul>";
@@ -242,7 +245,7 @@
                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
                 var disqus_config = function () {
-                this.page.url = "http://marcoscobena.com";  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.url = "http://marcoscobena.com/#!home";  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = "home"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
