@@ -4,3 +4,8 @@ Web
 RSSGenerator
 *.sln
 *.csproj
+bin
+obj
+*.userprefs
+Global.asax*
+Web.config
