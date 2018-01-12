@@ -3,8 +3,9 @@
 
 “Design should worry us more than code”, translated to English. My vision on how
 working close to people highly capable in Design made me change the focus from
-code to UI/UX, everything focused in the Xamarin ecosystem.
-([YouTube](https://youtu.be/G0uUN0c_MbM))
+code to UI/UX, everything focused in the Xamarin ecosystem. (YouTube:
+[landscape](https://youtu.be/G0uUN0c_MbM) & [with
+slides](https://www.youtube.com/watch?v=UEgEpe0RUaM))
 
 [Cross Development
 Madrid](https://www.meetup.com/CrossDevelopment-Madrid/events/243495012/),
