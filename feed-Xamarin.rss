@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel><title>Marcos Cobeña Morián</title>
+<description>I write apps for people using Xamarin</description>
+<link>http://marcoscobena.com</link>
 <item>
   <title>Saturday</title>
   <description>&lt;p&gt;This week haven’t touched any single line on Joy but en-joy-ed 🤭 working on the
@@ -77,7 +79,7 @@ on standardize this with an interface.&lt;/p&gt;
 &lt;p&gt;Finally, I still don’t handle the bird actually passing through the gap, too
 because I don’t feel comfortable with the calcs needed for so, and am also
 considering to simplify as much as possible the collision detection.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-27</guid>
   <pubDate>Fri, 26 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -95,7 +97,7 @@ it.&lt;/p&gt;
 
 &lt;p&gt;Aaand, take note deleting packages isn’t possible, the most you can achieve’s
 unlisting them, which’s fine too.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-26</guid>
   <pubDate>Thu, 25 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -135,7 +137,7 @@ actually lazy when instantiating.&lt;/p&gt;
 brought back to .NET Standard ecosystem. We’ve noted all this down within the
 &lt;a href="https://github.com/DevsDNA/WhenTheAppWasBuilt#how-to-use-it"&gt;package
 documentation&lt;/a&gt;.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-25</guid>
   <pubDate>Wed, 24 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -175,7 +177,7 @@ managed stack trace, which surely there it’ll be waiting for care.&lt;/p&gt;
 &lt;p&gt;I’ve discovered my issues with SSH keys isn’t macOS being updated but a computer
 restart. Calling &lt;code&gt;ssh-add&lt;/code&gt; acts on the current SSH agent running, but doesn’t
 persist over restarts. Think will automate it in any way.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-24</guid>
   <pubDate>Tue, 23 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -246,7 +248,7 @@ how elegant’s this solution now 😍&lt;/p&gt;
 &lt;p&gt;If you want “the link” for those features go
 &lt;a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7"&gt;here&lt;/a&gt;.
 Welcome!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-23</guid>
   <pubDate>Mon, 22 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -288,7 +290,7 @@ loose that. However, it’s something which could be workaround-ed.&lt;/p&gt;
 
 &lt;p&gt;It always recalls my attention what it’s possible to achieve with vanilla
 Xamarin.Forms, without MVVM frameworks, just using what you already have.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-22</guid>
   <pubDate>Sun, 21 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -379,7 +381,7 @@ finally.&lt;/p&gt;
 &lt;p&gt;I’ve been thinking the way Joy exposes touchs isn’t suitable for more complex
 situations, so probably will work it out a little bit. However, I think have all
 the basic pieces to finally write that Flappy Bird prototype.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-21</guid>
   <pubDate>Sat, 20 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -401,7 +403,7 @@ was as easy as adding again the keys:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-19</guid>
   <pubDate>Thu, 18 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -416,7 +418,7 @@ between Windows and Mac this was a light of hope. (Just kidding.)&lt;/p&gt;
 &lt;p&gt;In other aspects, got an e-mail that &lt;a href="https://bugzilla.xamarin.com/show_bug.cgi?id=61120"&gt;Xamarin just fixed the
 bug&lt;/a&gt; I reported last month.
 Sounds good!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-18</guid>
   <pubDate>Wed, 17 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -467,7 +469,7 @@ handy.&lt;/p&gt;
 &lt;p&gt;So, I decided to get rid of NuGet packaging today, and focus on the value,
 which’s the libs. content. Will be back to packaging in a close future and for
 sure will success then 🤞&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-17</guid>
   <pubDate>Tue, 16 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -522,7 +524,7 @@ on moving projects from PCL to .NET Standard&lt;/li&gt;
 &lt;p&gt;I’m becoming a PhD. in .NET Standard Compatibility Issues.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://media.giphy.com/media/ZWhA850E7azfO/giphy.gif" alt="" /&gt;&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-16</guid>
   <pubDate>Mon, 15 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -558,7 +560,7 @@ versioning:&lt;/li&gt;
 projects but get once and again an authentication error?
 &lt;a href="https://stackoverflow.com/a/46990403"&gt;This&lt;/a&gt;’ your answer&lt;/li&gt;
 &lt;/ul&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-15</guid>
   <pubDate>Sun, 14 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -671,7 +673,7 @@ code —and I see some refactoring available there… Yesterday was thinking too
 that this’ actually powerful to show children how to code small games, introduce
 them into the art of programming and keep those in a quite small managed
 environment. Will have to think about this a little bit more.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-13</guid>
   <pubDate>Fri, 12 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -774,7 +776,7 @@ so this &lt;code&gt;Operation()&lt;/code&gt; allows me to easily set each test u
 &lt;/ul&gt;
 
 &lt;p&gt;Thanks in advance!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-11</guid>
   <pubDate>Wed, 10 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -869,7 +871,7 @@ like:&lt;/p&gt;
 
 &lt;p&gt;Oh! There’s too a new version of
 &lt;a href="https://github.com/DevsDNA/WhenTheAppWasBuilt/"&gt;WhenTheAppWasBuilt&lt;/a&gt; 😎&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-10</guid>
   <pubDate>Tue, 09 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -936,7 +938,7 @@ with them&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Wow, quite productive day!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-9</guid>
   <pubDate>Mon, 08 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -964,7 +966,7 @@ and again. I feel Mac version is more stable in terms of Xamarin development,
 but am not a heavy Windows user these days.&lt;/p&gt;
 
 &lt;p&gt;Pst! Don’t want to say it louder, but you can use below comments already 🙌&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-8</guid>
   <pubDate>Sun, 07 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -1004,7 +1006,7 @@ process of rewriting it with a brand new script-alike description: each
 
 &lt;p&gt;A few hours before I couldn’t handle this sort of logic, just more simpler ones.
 Now, am thrilled with the incoming possibilities this’ offering 🤘&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-4</guid>
   <pubDate>Wed, 03 Jan 2018 23:00:00 GMT</pubDate>
 </item>
@@ -1026,7 +1028,7 @@ this.&lt;/p&gt;
 bad news’ don’t know why but making tests in localhost made Disqus thought every
 comment now’s made locally too :-S In the meantime have closed the discussion.
 But there it’s at bottom!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-21</guid>
   <pubDate>Wed, 20 Dec 2017 23:00:00 GMT</pubDate>
 </item>
@@ -1083,7 +1085,7 @@ and again.&lt;/p&gt;
 &lt;p&gt;PS: Anyone knows an UI-based RESX editor for Mac? I can do it directly in XML
 but definitely an Excel-like editor is much more convenient. If it’s non
 existent may be a good pet project to work on.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-20</guid>
   <pubDate>Tue, 19 Dec 2017 23:00:00 GMT</pubDate>
 </item>
@@ -1097,7 +1099,7 @@ bug&lt;/a&gt; reproduced, and
 followed Lluis steps to gather the IDE logs: (within VS for Mac) Help &gt; Open
 Log Directory. I didn’t remember such this easy way to access every log in a
 single folder, for the next time will have a look there before.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-19</guid>
   <pubDate>Mon, 18 Dec 2017 23:00:00 GMT</pubDate>
 </item>
@@ -1110,7 +1112,7 @@ nice acronym.)&lt;/p&gt;
 last days of Xamarin Components and crashes in Android, so back to 1.1; however,
 can’t consume 1.1 in iOS because is pre-Unified API, so am using 1.2.3 in this
 platform. But have done my first calls in both! 🎉&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-18</guid>
   <pubDate>Sun, 17 Dec 2017 23:00:00 GMT</pubDate>
 </item>
@@ -1123,7 +1125,7 @@ feeling behind checking something done.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://marcoscobena.com/items/images/IMG_0655.JPG" alt="" /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://marcoscobena.com/items/documents/AppScreenCreationTemplate.pdf"&gt;Download&lt;/a&gt; latest version.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com</author>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <guid isPermaLink="false">http://marcoscobena.com/#/app-screen-creation-template</guid>
   <pubDate>Thu, 16 Feb 2017 23:00:00 GMT</pubDate>
 </item></channel>
