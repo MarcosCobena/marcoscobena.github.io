@@ -4,6 +4,38 @@
 <description>I write apps for people using Xamarin</description>
 <link>http://marcoscobena.com</link>
 <item>
+  <title>Monday</title>
+  <description>&lt;p&gt;I’ve been working during the last two weeks on a Getting Started package to
+start future projects at DevsDNA. One of the things was asked for is supporting
+.NET Standard 2.0 from the very beginning, to be ready for upcoming movements in
+the .NET ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Doing some tests with out beta version I stumbled upon lot of errors when adding
+such to a Xamarin.iOS project —within a Forms solution— and decided to move into
+a bug at Xamarin.iOS product:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/xamarin/xamarin-macios/issues/3349"&gt;https://github.com/xamarin/xamarin-macios/issues/3349&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Álex Soto’s confirmed this as a bug, and added a repro. project which will help
+Xamarin guys to troubleshoot it easier. You probably won’t ever read this Álex
+but thanks man!&lt;/p&gt;
+
+&lt;h3&gt;Links&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://carbon.now.sh"&gt;https://carbon.now.sh&lt;/a&gt; —beauty code screenshots, although we’d breaking
+readability for handicapped people&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/PowerShell/PowerShell"&gt;https://github.com/PowerShell/PowerShell&lt;/a&gt; —cross-platform PowerShell, macOS
+included&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://gist.github.com/a4099181/074a6c3dd524ea0d343382137492399c"&gt;https://gist.github.com/a4099181/074a6c3dd524ea0d343382137492399c&lt;/a&gt;
+—PowerShell script to turn packages.config into PackageReferences within
+CSPROJs (now you get above link)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-29</guid>
+  <pubDate>Sun, 28 Jan 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Saturday</title>
   <description>&lt;p&gt;This week haven’t touched any single line on Joy but en-joy-ed 🤭 working on the
 Flappy Bird pixel copy. I borrowed some code on how to make the bird jump but

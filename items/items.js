@@ -5,6 +5,7 @@
 //     hidden <- Optional: whether you want it to not appear listed at home
 // );
 
+addItem("Monday", "2018-1-29", "29/1/2018", false, "Xamarin");
 addItem("Saturday", "2018-1-27", "27/1/2018", false, "Xamarin");
 addItem("Friday", "2018-1-26", "26/1/2018", false, "Xamarin");
 addItem("Thursday", "2018-1-25", "25/1/2018", false, "Xamarin");
