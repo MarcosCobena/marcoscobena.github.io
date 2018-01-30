@@ -2,9 +2,10 @@
 <rss version="2.0">
   <channel><title>Marcos Cobeña Morián</title>
 <description>I write apps for people using Xamarin</description>
-<link>http://marcoscobena.com</link>
+<link>https://marcoscobena.com</link>
 <item>
   <title>Monday</title>
+  <guid>https://marcoscobena.com/#/2018-1-29</guid>
   <description>&lt;p&gt;I’ve been working during the last two weeks on a Getting Started package to
 start future projects at DevsDNA. One of the things was asked for is supporting
 .NET Standard 2.0 from the very beginning, to be ready for upcoming movements in
@@ -32,11 +33,11 @@ included&lt;/p&gt;&lt;/li&gt;
 CSPROJs (now you get above link)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-29</guid>
   <pubDate>Sun, 28 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Saturday</title>
+  <guid>https://marcoscobena.com/#/2018-1-27</guid>
   <description>&lt;p&gt;This week haven’t touched any single line on Joy but en-joy-ed 🤭 working on the
 Flappy Bird pixel copy. I borrowed some code on how to make the bird jump but
 more than jumping it was actually getting frozen. However, I found the key in
@@ -112,11 +113,11 @@ on standardize this with an interface.&lt;/p&gt;
 because I don’t feel comfortable with the calcs needed for so, and am also
 considering to simplify as much as possible the collision detection.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-27</guid>
   <pubDate>Fri, 26 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friday</title>
+  <guid>https://marcoscobena.com/#/2018-1-26</guid>
   <description>&lt;p&gt;I’ve been recently playing a little bit with NuGet site and really liked its
 simplicity. How packages are uploaded, updated, edited, etc. Today I discovered
 that if you want to publish a prerelease version there’s no checkbox out there,
@@ -130,11 +131,11 @@ it.&lt;/p&gt;
 &lt;p&gt;Aaand, take note deleting packages isn’t possible, the most you can achieve’s
 unlisting them, which’s fine too.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-26</guid>
   <pubDate>Thu, 25 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
+  <guid>https://marcoscobena.com/#/2018-1-25</guid>
   <description>&lt;h3&gt;MAP_JIT error when launching a Xamarin.iOS app (II)&lt;/h3&gt;
 
 &lt;p&gt;After multiple attempts on delaying RxUI execution we still get the same error
@@ -170,11 +171,11 @@ brought back to .NET Standard ecosystem. We’ve noted all this down within the
 &lt;a href="https://github.com/DevsDNA/WhenTheAppWasBuilt#how-to-use-it"&gt;package
 documentation&lt;/a&gt;.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-25</guid>
   <pubDate>Wed, 24 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Wednesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-24</guid>
   <description>&lt;h3&gt;MAP_JIT error when launching a Xamarin.iOS app&lt;/h3&gt;
 
 &lt;p&gt;My coworker Marcos Antonio's having an issue with a Xamarin.iOS app closing at
@@ -210,11 +211,11 @@ managed stack trace, which surely there it’ll be waiting for care.&lt;/p&gt;
 restart. Calling &lt;code&gt;ssh-add&lt;/code&gt; acts on the current SSH agent running, but doesn’t
 persist over restarts. Think will automate it in any way.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-24</guid>
   <pubDate>Tue, 23 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-23</guid>
   <description>&lt;p&gt;Working on our own lib. to bundle all that stuff we usually need on each project
 I stumbled upon one issue when creating the unit testing project: VS for Mac
 doesn't detect Unit Tests from .NET Standard libraries, independent of the NUnit
@@ -281,11 +282,11 @@ how elegant’s this solution now 😍&lt;/p&gt;
 &lt;a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7"&gt;here&lt;/a&gt;.
 Welcome!&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-23</guid>
   <pubDate>Mon, 22 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Monday</title>
+  <guid>https://marcoscobena.com/#/2018-1-22</guid>
   <description>&lt;p&gt;It turns out &lt;a href="http://marcoscobena.com/#/2018-1-19"&gt;the fix&lt;/a&gt; I found last day to
 fix SSH connection with GitHub applies equally to Visual Studio Team Services:
 the SSH agent was missing the key I created specifically for it. So,
@@ -323,11 +324,11 @@ loose that. However, it’s something which could be workaround-ed.&lt;/p&gt;
 &lt;p&gt;It always recalls my attention what it’s possible to achieve with vanilla
 Xamarin.Forms, without MVVM frameworks, just using what you already have.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-22</guid>
   <pubDate>Sun, 21 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Sunday</title>
+  <guid>https://marcoscobena.com/#/2018-1-21</guid>
   <description>&lt;p&gt;This week, in order to make the library more solid, decided to write a small
 Flappy Bird alike game with it. However, it wasn’t possible: I had focused on
 the scripting side but the underlying code was not powerful enough to handle
@@ -414,11 +415,11 @@ finally.&lt;/p&gt;
 situations, so probably will work it out a little bit. However, I think have all
 the basic pieces to finally write that Flappy Bird prototype.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-21</guid>
   <pubDate>Sat, 20 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friday</title>
+  <guid>https://marcoscobena.com/#/2018-1-19</guid>
   <description>&lt;p&gt;Keeping with the Azure class —AZR110 at Xamarin University— it got to a point
 where following up in Mac was a little bit harder because of the lack the wizard
 when adding new table controllers. This’ something you should do manually and I
@@ -436,11 +437,11 @@ was as easy as adding again the keys:&lt;/p&gt;
 
 &lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-19</guid>
   <pubDate>Thu, 18 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
+  <guid>https://marcoscobena.com/#/2018-1-18</guid>
   <description>&lt;p&gt;For the very first time I created an ASP.NET MVC project within VS for Mac and
 published in Azure &lt;a href="https://blog.xamarin.com/publish-azure-visual-studio-mac/"&gt;everything from the
 Mac&lt;/a&gt;. And, to be
@@ -451,11 +452,11 @@ between Windows and Mac this was a light of hope. (Just kidding.)&lt;/p&gt;
 bug&lt;/a&gt; I reported last month.
 Sounds good!&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-18</guid>
   <pubDate>Wed, 17 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Wednesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-17</guid>
   <description>&lt;p&gt;In a quick sentence: I feel Xamarin ecosystem isn’t currently ready for fully
 working with .NET Standard libraries. And can fully understand it, as we’re all
 moving our stuff to .NET Standard but, you know, are in the process.&lt;/p&gt;
@@ -502,11 +503,11 @@ handy.&lt;/p&gt;
 which’s the libs. content. Will be back to packaging in a close future and for
 sure will success then 🤞&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-17</guid>
   <pubDate>Tue, 16 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-16</guid>
   <description>&lt;p&gt;I promise my-self the next time will create a new Xamarin.Forms project, the
 core library will be moved to .NET Standard 2.0 from instant zero —because if
 not, I could became crazy, again.&lt;/p&gt;
@@ -557,11 +558,11 @@ on moving projects from PCL to .NET Standard&lt;/li&gt;
 
 &lt;p&gt;&lt;img src="https://media.giphy.com/media/ZWhA850E7azfO/giphy.gif" alt="" /&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-16</guid>
   <pubDate>Mon, 15 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Monday</title>
+  <guid>https://marcoscobena.com/#/2018-1-15</guid>
   <description>&lt;p&gt;A few things have learnt today:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -593,11 +594,11 @@ projects but get once and again an authentication error?
 &lt;a href="https://stackoverflow.com/a/46990403"&gt;This&lt;/a&gt;’ your answer&lt;/li&gt;
 &lt;/ul&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-15</guid>
   <pubDate>Sun, 14 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Saturday</title>
+  <guid>https://marcoscobena.com/#/2018-1-13</guid>
   <description>&lt;p&gt;I’m really happy with the achievements this week. Although started it increasing
 the descriptive level of the first frame —a Frame is actually a room, a scene
 where player can interact—, ended up proposing my-self a new goal of writing Tic
@@ -706,11 +707,11 @@ that this’ actually powerful to show children how to code small games, introdu
 them into the art of programming and keep those in a quite small managed
 environment. Will have to think about this a little bit more.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-13</guid>
   <pubDate>Fri, 12 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
+  <guid>https://marcoscobena.com/#/2018-1-11</guid>
   <description>&lt;p&gt;Following with yesterday task, double checked the &lt;code&gt;HttpClient&lt;/code&gt; was being
 refreshed correctly in both Android &amp;amp; iOS and jumped to add some unit tests.&lt;/p&gt;
 
@@ -809,11 +810,11 @@ so this &lt;code&gt;Operation()&lt;/code&gt; allows me to easily set each test u
 
 &lt;p&gt;Thanks in advance!&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-11</guid>
   <pubDate>Wed, 10 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Wednesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-10</guid>
   <description>&lt;p&gt;Back to pre-Christmas project —Avianca’s Xamarin.Forms app for Android &amp;amp; iOS—
 I’m assigned a bug on gettings 401s because token refreshes don’t seem to work.
 Our app uses Refit to build the gateways provided through intermediate NuGet
@@ -904,11 +905,11 @@ like:&lt;/p&gt;
 &lt;p&gt;Oh! There’s too a new version of
 &lt;a href="https://github.com/DevsDNA/WhenTheAppWasBuilt/"&gt;WhenTheAppWasBuilt&lt;/a&gt; 😎&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-10</guid>
   <pubDate>Tue, 09 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-9</guid>
   <description>&lt;p&gt;After some time with the idea in mind and some other more working on a
 prototype, finally knowing when an app was built is an easy task. Since years
 ago I’ve missed this:&lt;/p&gt;
@@ -971,11 +972,11 @@ with them&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;Wow, quite productive day!&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-9</guid>
   <pubDate>Mon, 08 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Monday</title>
+  <guid>https://marcoscobena.com/#/2018-1-8</guid>
   <description>&lt;p&gt;Back from Christmas holidays with a cool task! Yeray asked me to play with
 native Spotify SDKs 😙 Looking for a little bit it turns out Aaron Bockover
 —this resembled me past days of Gnome’s Banshee— &lt;a href="https://github.com/abock/spotify-ios-sdk/tree/master/Xamarin"&gt;had already
@@ -999,11 +1000,11 @@ but am not a heavy Windows user these days.&lt;/p&gt;
 
 &lt;p&gt;Pst! Don’t want to say it louder, but you can use below comments already 🙌&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-8</guid>
   <pubDate>Sun, 07 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
+  <guid>https://marcoscobena.com/#/2018-1-4</guid>
   <description>&lt;p&gt;I’m working on a video-game. Actually have been working on it since Christmas
 began. I think will keep posting details mostly during weekends —have an
 agreement with my-self of not working on anything which could do in my daily
@@ -1039,11 +1040,11 @@ process of rewriting it with a brand new script-alike description: each
 &lt;p&gt;A few hours before I couldn’t handle this sort of logic, just more simpler ones.
 Now, am thrilled with the incoming possibilities this’ offering 🤘&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2018-1-4</guid>
   <pubDate>Wed, 03 Jan 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
+  <guid>https://marcoscobena.com/#/2017-12-21</guid>
   <description>&lt;p&gt;Maybe this’ totally newbie but I’ve used for the very first time git’s
 fast-forward thing. For my future me: quite useful when you have a branch
 outdated and there are no changes on it from the last merge back, so simply you
@@ -1061,11 +1062,11 @@ bad news’ don’t know why but making tests in localhost made Disqus thought e
 comment now’s made locally too :-S In the meantime have closed the discussion.
 But there it’s at bottom!&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-21</guid>
   <pubDate>Wed, 20 Dec 2017 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Wednesday</title>
+  <guid>https://marcoscobena.com/#/2017-12-20</guid>
   <description>&lt;p&gt;Since the nature of DevsDNA we use to work in a team made of people from our
 company as well from others –customer included. We have dailies, and exchange
 info through Skype, but always have had the feeling improvements made related to
@@ -1118,11 +1119,11 @@ and again.&lt;/p&gt;
 but definitely an Excel-like editor is much more convenient. If it’s non
 existent may be a good pet project to work on.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-20</guid>
   <pubDate>Tue, 19 Dec 2017 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
+  <guid>https://marcoscobena.com/#/2017-12-19</guid>
   <description>&lt;p&gt;I’ve had the chance to add a small anim. in the page am working out. Which’s the
 best easing function to fit? &lt;a href="http://easings.net"&gt;http://easings.net&lt;/a&gt;.&lt;/p&gt;
 
@@ -1132,11 +1133,11 @@ followed Lluis steps to gather the IDE logs: (within VS for Mac) Help &gt; Open
 Log Directory. I didn’t remember such this easy way to access every log in a
 single folder, for the next time will have a look there before.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-19</guid>
   <pubDate>Mon, 18 Dec 2017 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Monday</title>
+  <guid>https://marcoscobena.com/#/2017-12-18</guid>
   <description>&lt;p&gt;(Starting from today I’ll begin writting down What I Learned Today —WILT seems a
 nice acronym.)&lt;/p&gt;
 
@@ -1145,11 +1146,11 @@ last days of Xamarin Components and crashes in Android, so back to 1.1; however,
 can’t consume 1.1 in iOS because is pre-Unified API, so am using 1.2.3 in this
 platform. But have done my first calls in both! 🎉&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/2017-12-18</guid>
   <pubDate>Sun, 17 Dec 2017 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>App screen creation template</title>
+  <guid>https://marcoscobena.com/#/app-screen-creation-template</guid>
   <description>&lt;p&gt;This’ about finding a procedure for my-self to develop apps screens, iterating
 it and making it public for everyone. I’ve always liked the to do lists, and the
 feeling behind checking something done.&lt;/p&gt;
@@ -1158,7 +1159,6 @@ feeling behind checking something done.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://marcoscobena.com/items/documents/AppScreenCreationTemplate.pdf"&gt;Download&lt;/a&gt; latest version.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <guid isPermaLink="false">http://marcoscobena.com/#/app-screen-creation-template</guid>
   <pubDate>Thu, 16 Feb 2017 23:00:00 GMT</pubDate>
 </item></channel>
 </rss>

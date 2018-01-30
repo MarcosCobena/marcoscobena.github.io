@@ -4,6 +4,10 @@ My beloved apps target mainly iOS and Android, using Xamarin. I'm currently work
 
 You may want to know what I’m in [now](#/now). Even the [conferences](#/conferences) I've spent.
 
+Or just read whatever I write here through [RSS](feed-all.rss) ([just on Xamarin](feed-Xamarin.rss)).
+
+My e-mail? Sure: [marcoscm.digital@gmail.com](mailto:marcoscm.digital@gmail.com) –I *use to* check it in a daily basis.
+
 > Daily findings go to [Twitter](https://twitter.com/1Marcos2Cobena),<br />
 > [Medium](https://medium.com/@MarcosCobena) holds larger writings\*;<br />
 > source code in [GitHub](https://github.com/MarcosCobena) viber,<br />
@@ -38,4 +42,4 @@ Here should appear a list 🤷🏻‍♂️
 
 # *Thanks* for coming!
 
-My e-mail? Sure: [hello@marcoscobena.com](mailto:hello@marcoscobena.com) –I *use to* check it in a daily basis.
+That's all ☺️
