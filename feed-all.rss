@@ -9,7 +9,7 @@
   <description>&lt;p&gt;Finally my mate Marcos Antonio and I —yep, both Marcos— ‘ve found out the root
 for this issue:&lt;/p&gt;
 
-&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&lt;p&gt;```
 Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: 
 Unhandled Exception:
 System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.TypeInitializationException: The type initializer for 'AnAwesomeApp.Views.Controls.CollectionWrapLayoutView' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'ReactiveUI.RxApp' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'System.Reactive.Concurrency.TaskPoolScheduler' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'System.Reactive.Concurrency.ConcurrencyAbstractionLayer' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'System.Reactive.Concurrency.NewThreadScheduler' threw an exception. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object
@@ -50,9 +50,9 @@ a fatal error in the mono runtime or one of the native libraries &lt;/p&gt;
 
 &lt;h1&gt;used by your application.&lt;/h1&gt;
 
-&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;​Where was the issue? Well, there was a missalignment in some packages from the
+&lt;p&gt;Where was the issue? Well, there was a missalignment in some packages from the
 group Akavache–ReactiveUI–ReactiveX–SQLite. Although we had double checked this
 at the beginning there should be anything we forgot because it didn’t work by
 that day.&lt;/p&gt;
