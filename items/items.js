@@ -1,10 +1,7 @@
-﻿// addItem(
-// 	   title, <- Here goes the user-friendly title you want to show
-// 	   filename, <- Item's filename without .md extension, at the same level of this current one
-// 	   date <- Date, as is, i.e. will be rendered without conversion
-//     hidden <- Optional: whether you want it to not appear listed at home
-// );
-
+addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
+addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
+addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
+addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
 addItem("Tuesday", "2018-1-30", "30/1/2018", false, "Xamarin");
 addItem("Monday", "2018-1-29", "29/1/2018", false, "Xamarin");
 addItem("Saturday", "2018-1-27", "27/1/2018", false, "Xamarin");
@@ -30,6 +27,13 @@ addItem("Wednesday", "2017-12-20", "20/12/2017", false, "Xamarin");
 addItem("Tuesday", "2017-12-19", "19/12/2017", false, "Xamarin");
 addItem("Monday", "2017-12-18", "18/12/2017", false, "Xamarin");
 addItem("App screen creation template", "app-screen-creation-template", "17/2/2017", false, "Xamarin");
+
+// addItem(
+//     title, <- Here goes the user-friendly title you want to show
+//     filename, <- Item's filename without .md extension, at the same level of this current one
+//     date <- Date, as is, i.e. will be rendered without conversion
+//     hidden <- Optional: whether you want it to not appear listed at home
+// );
 
 addItem("Conferences and talks", "conferences", "7/12/2017", true);
 addItem("Now", "now", "7/12/2017", true);
