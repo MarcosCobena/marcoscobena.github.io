@@ -4,6 +4,88 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Tuesday</title>
+  <guid>https://marcoscobena.com/#/2018-1-30</guid>
+  <description>&lt;p&gt;Finally my mate Marcos Antonio and I —yep, both Marcos— ‘ve found out the root
+for this issue:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: 
+Unhandled Exception:
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.TypeInitializationException: The type initializer for 'AnAwesomeApp.Views.Controls.CollectionWrapLayoutView' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'ReactiveUI.RxApp' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'System.Reactive.Concurrency.TaskPoolScheduler' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'System.Reactive.Concurrency.ConcurrencyAbstractionLayer' threw an exception. ---&gt; System.TypeInitializationException: The type initializer for 'System.Reactive.Concurrency.NewThreadScheduler' threw an exception. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object
+  at System.Reactive.PlatformServices.SystemClock.Register (System.Reactive.Concurrency.LocalScheduler scheduler) &amp;lt;0x103959fa0 + 0x00174&gt; in &amp;lt;&amp;lt;\M-b\M^@\M-&amp;amp;&gt;
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: Unhandled managed exception:
+Exception has been thrown by the target of an invocation. (System.Reflection.TargetInvocationException)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) &amp;lt;0x100c4b000 + 0x0006c&gt; in &lt;d680a8bf3a2a4c8dbbfde665ba81f6f2#008dcf0648eed9dfc59fadc50c407e2c&gt;:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) &amp;lt;0x100ba1040 + 0x0011b&gt; in &lt;d680a8bf3a2a4c8dbbfde665ba81f6f2#008dcf0648eed9dfc59fadc50c407e2c&gt;:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark&amp;amp; stackMark) &amp;lt;0x100ba0ff0 + 0x0003f&gt; in &lt;d680a8bf3a2a4c8dbbfde665ba81f6f2#008dcf0648eed9dfc59fadc50c407e2c&gt;:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark&amp;amp; stackMark) &amp;lt;0x100ba07c0 + 0x00057&gt; in &lt;d680a8bf3a2a4c8dbbfde665ba81f6f2#008dcf0648&amp;lt;\M-b\M^@\M-&amp;amp;&gt;
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical: Stacktrace:
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical: 
+Native stacktrace:
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  0   AnAwesomeApp.iOS                    0x000000010401bdb4 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 236452
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  1   libsystem&lt;em&gt;platform.dylib            0x0000000183edbb50 _sigtramp + 52
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  2   libsystem&lt;/em&gt;pthread.dylib             0x0000000183ee12f8 &lt;redacted&gt; + 396
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  3   libsystem&lt;em&gt;c.dylib                   0x0000000183d3afbc abort + 140
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  4   AnAwesomeApp.iOS                    0x000000010415ad40 xamarin&lt;/em&gt;get&lt;em&gt;block&lt;/em&gt;descriptor + 5036
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  5   AnAwesomeApp.iOS                    0x0000000104063800 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 529904
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  6   AnAwesomeApp.iOS                    0x000000010401b914 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 235268
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  7   AnAwesomeApp.iOS                    0x000000010401a724 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 230676
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  8   AnAwesomeApp.iOS                    0x0000000104012334 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 196900
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  9   AnAwesomeApp.iOS                    0x00000001010449b8 sqlite3&lt;em&gt;db&lt;/em&gt;readonly + 8426368
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  10  AnAwesomeApp.iOS                    0x0000000100a68bb0 sqlite3&lt;em&gt;db&lt;/em&gt;readonly + 2282872
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  11  AnAwesomeApp.iOS                    0x0000000100fef3b4 sqlite3&lt;em&gt;db&lt;/em&gt;readonly + 8076668
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  12  AnAwesomeApp.iOS                    0x000000010402b698 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 300168
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  13  AnAwesomeApp.iOS                    0x00000001040a7d0c &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 809724
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  14  AnAwesomeApp.iOS                    0x00000001040aafb0 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 822688
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  15  AnAwesomeApp.iOS                    0x000000010400eb80 &lt;em&gt;ZN7plcrash3BIT5async24dwarf&lt;/em&gt;cfa&lt;em&gt;state&lt;/em&gt;iteratorIyxE4nextEPjPNS1&lt;em&gt;28plcrash&lt;/em&gt;dwarf&lt;em&gt;cfa&lt;/em&gt;reg&lt;em&gt;rule&lt;/em&gt;tEPy + 182640
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  16  AnAwesomeApp.iOS                    0x0000000104161d10 xamarin&lt;em&gt;localized&lt;/em&gt;string&lt;em&gt;format&lt;/em&gt;9 + 3236
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  17  AnAwesomeApp.iOS                    0x0000000100a67f48 sqlite3&lt;em&gt;db&lt;/em&gt;readonly + 2279696
+Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:  18  libdyld.dylib                       0x0000000183c9c56c &lt;redacted&gt; + 4&lt;/p&gt;
+
+&lt;h1&gt;Jan 30 13:24:02 iPhone-de-Marcos AnAwesomeApp.iOS[320] &lt;Notice&gt;: critical:&lt;/h1&gt;
+
+&lt;p&gt;Got a SIGABRT while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries &lt;/p&gt;
+
+&lt;h1&gt;used by your application.&lt;/h1&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;​Where was the issue? Well, there was a missalignment in some packages from the
+group Akavache–ReactiveUI–ReactiveX–SQLite. Although we had double checked this
+at the beginning there should be anything we forgot because it didn’t work by
+that day.&lt;/p&gt;
+
+&lt;p&gt;It looks so clear now as were getting some other &lt;code&gt;MissingMethodException&lt;/code&gt; at
+&lt;code&gt;Activator.CreateInstance()&lt;/code&gt; which I bet was because the exact type wasn’t
+present in the final bundle.&lt;/p&gt;
+
+&lt;p&gt;It’s resembled what Dominique Pochat —an Escalation Engineer on COM at
+Microsoft— told me 12 (sigh) years ago:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Never trust customers&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;He pushed me to check everything by my own, as sometimes customers don’t really
+understand the underlying happening, and the issues can come from the most
+stupid corners. More than a decade later: thanks again Dominique for your
+learnings!&lt;/p&gt;
+
+&lt;h3&gt;Links&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://gist.github.com/cvan/8630f847f579f90e0c014dc5199c337b"&gt;https://gist.github.com/cvan/8630f847f579f90e0c014dc5199c337b&lt;/a&gt; —how to
+enable HTTPS, &lt;em&gt;free&lt;/em&gt;, with your own domain at GitHub Pages&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://webmasters.stackexchange.com/questions/37907/how-to-use-cloudflare-and-namecheap-email-forwarding-at-the-same-time/58651#58651"&gt;https://webmasters.stackexchange.com/questions/37907/how-to-use-cloudflare-and-namecheap-email-forwarding-at-the-same-time/58651#58651&lt;/a&gt;
+—how to enable mail forwarding after setting above (I’m still waiting those
+48 hours…)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Mon, 29 Jan 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Monday</title>
   <guid>https://marcoscobena.com/#/2018-1-29</guid>
   <description>&lt;p&gt;I’ve been working during the last two weeks on a Getting Started package to
