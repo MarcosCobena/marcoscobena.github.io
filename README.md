@@ -7,7 +7,7 @@ A web site generator which runs entirely in your browser:
 
 You have [Jekyll](https://github.com/jekyll/jekyll) and, now, [Mr. Hyde](https://github.com/MarcosCobena/marcoscobena.github.io) too —obviously you get the joke.
 
-# How can I use it?
+## How can I use it?
 
 1.  Clone <https://github.com/MarcosCobena/marcoscobena.github.io>, or simply fork it
 
@@ -15,6 +15,6 @@ You have [Jekyll](https://github.com/jekyll/jekyll) and, now, [Mr. Hyde](https:/
 
 3.  Go live!
 
-# Could I contribute?
+## Could I contribute?
 
 Yes, sure, I'd really appreciate it! Have a look to the [Backlog](https://github.com/MarcosCobena/marcoscobena.github.io/issues/1) to see what I'm currently in.
