@@ -15,6 +15,6 @@ You have [Jekyll](https://github.com/jekyll/jekyll) and, now, [Mr. Hyde](https:/
 
 3.  Go live!
 
-# Could I contribute!
+# Could I contribute?
 
 Yes, sure, I'd really appreciate it! Have a look to the [Backlog](https://github.com/MarcosCobena/marcoscobena.github.io/issues/1) to see what I'm in currently.
