@@ -17,4 +17,4 @@ You have [Jekyll](https://github.com/jekyll/jekyll) and, now, [Mr. Hyde](https:/
 
 # Could I contribute?
 
-Yes, sure, I'd really appreciate it! Have a look to the [Backlog](https://github.com/MarcosCobena/marcoscobena.github.io/issues/1) to see what I'm in currently.
+Yes, sure, I'd really appreciate it! Have a look to the [Backlog](https://github.com/MarcosCobena/marcoscobena.github.io/issues/1) to see what I'm currently in.
