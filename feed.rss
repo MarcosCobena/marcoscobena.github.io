@@ -10,32 +10,32 @@
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;p&gt;Android File Transfer —self-explanatory&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Android File Transfer&lt;/strong&gt; —self-explanatory&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://www.android.com/filetransfer/"&gt;https://www.android.com/filetransfer/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;p&gt;Device Metrics —idem as (1)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Device Metrics&lt;/strong&gt; —idem as (1)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://material.io/devices/"&gt;https://material.io/devices/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;p&gt;Disk Inventory X —app to show a tree map with directories size, very handy for
-debugging where the hell an app is taking so much space in disk&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disk Inventory X&lt;/strong&gt; —app to show a tree map with directories size, very handy
+for debugging where the hell an app is taking so much space in disk&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://www.derlien.com/"&gt;http://www.derlien.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;p&gt;DPI love (1) —which DPI a specific device has&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DPI love (1)&lt;/strong&gt; —which DPI a specific device has&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://dpi.lv/"&gt;http://dpi.lv/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;p&gt;gimp-android-xdpi —plug-in to export current image into multiple Android
+&lt;p&gt;&lt;strong&gt;gimp-android-xdpi&lt;/strong&gt; —plug-in to export current image into multiple Android
 densities (Target DP Width is that which will have in mdpi) &lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/ncornette/gimp-android-xdpi"&gt;https://github.com/ncornette/gimp-android-xdpi&lt;/a&gt;&lt;/p&gt;</description>
