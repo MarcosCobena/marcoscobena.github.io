@@ -4,30 +4,6 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
-  <title>👹</title>
-  <guid>https://marcoscobena.com/#/Hyde</guid>
-  <description>&lt;h2&gt;Hyde&lt;/h2&gt;
-
-&lt;p&gt;A web site generator powered by Markdown which runs entirely in your browser.&lt;/p&gt;
-
-&lt;p&gt;You have &lt;a href="https://github.com/jekyll/jekyll"&gt;Jekyll&lt;/a&gt; and, now, &lt;a href="https://github.com/MarcosCobena/marcoscobena.github.io"&gt;Mr.
-Hyde&lt;/a&gt; too —obviously you
-get the joke.&lt;/p&gt;
-
-&lt;h2&gt;How can I use it?&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Clone &lt;a href="https://github.com/MarcosCobena/marcoscobena.github.io"&gt;https://github.com/MarcosCobena/marcoscobena.github.io&lt;/a&gt;, or simply
-fork it&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Delete my data for yours —mostly at
-&lt;a href="https://github.com/MarcosCobena/marcoscobena.github.io/blob/master/index.html"&gt;index.html&lt;/a&gt;
-and [items.js]&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Go live!&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Wed, 31 Jan 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Tuesday</title>
   <guid>https://marcoscobena.com/#/2018-1-30</guid>
   <description>&lt;p&gt;Finally my mate Marcos Antonio and I —yep, both Marcos— ‘ve found out the root
