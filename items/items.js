@@ -1,7 +1,4 @@
-addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
-addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
-addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
-addItem("Wednesday", "2018-1-31", "31/1/2018", false, "Xamarin");
+﻿addItem("👹", "Hyde", "1/2/2018", false);
 addItem("Tuesday", "2018-1-30", "30/1/2018", false, "Xamarin");
 addItem("Monday", "2018-1-29", "29/1/2018", false, "Xamarin");
 addItem("Saturday", "2018-1-27", "27/1/2018", false, "Xamarin");
