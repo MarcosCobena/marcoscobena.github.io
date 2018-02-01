@@ -4,7 +4,7 @@ My beloved apps target mainly iOS and Android, using Xamarin. I'm currently work
 
 You may want to know what I’m in [now](#/now). Even the [conferences](#/conferences) I've spent.
 
-Or just read whatever I write here through [RSS](feed-all.rss) ([just on Xamarin](feed-Xamarin.rss)).
+Or just read whatever I write here through [RSS](feed.rss).
 
 My e-mail? Sure: [marcoscm.digital@gmail.com](mailto:marcoscm.digital@gmail.com) –I *use to* check it in a daily basis.
 
