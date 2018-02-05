@@ -1,11 +1,5 @@
-packages
 *.user
-Web
-RSSGenerator
-*.sln
-*.csproj
+*.userprefs
 bin
 obj
-*.userprefs
-Global.asax*
-Web.config
+packages

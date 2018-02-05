@@ -8,7 +8,7 @@ using HeyRed.MarkdownSharp;
 using Microsoft.SyndicationFeed;
 using Microsoft.SyndicationFeed.Rss;
 
-namespace ItemsToRss
+namespace CLI
 {
     class Program
     {
