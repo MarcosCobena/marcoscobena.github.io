@@ -13,9 +13,10 @@ namespace CLI
     class Program
     {
         const string AddItemChunk = "addItem(";
+		const string DateParseFormat = "d/M/yyyy";
         const string Email = "marcoscm.digital@gmail.com";
-		const string FalseLowercase = "false";
-		const string FeedDescription = "I write apps for people using Xamarin";
+        const string FalseLowercase = "false";
+        const string FeedDescription = "I write apps for people using Xamarin";
         const string FeedPath = "feed.rss";
         const string FullName = "Marcos Cobeña Morián";
         const string ItemFilenamePathFormat = "items/{0}.md";
@@ -57,6 +58,9 @@ namespace CLI
                 return;
             }
 
+            var itemDate = DateTime.ParseExact(date, DateParseFormat, CultureInfo.InvariantCulture);
+            UseNowIfDateIsToday(ref itemDate);
+            addItemCall = $"addItem(\"{title}\", \"{filename}\", \"{itemDate}\", {isHidden}, \"{category}\");";
             File.WriteAllText(ItemsJavaScriptPath, addItemCall + Environment.NewLine + currentContent);
         }
 
@@ -77,15 +81,19 @@ namespace CLI
                     var itemPath = string.Format(ItemFilenamePathFormat, item.MarkdownFilename);
                     var markdownText = File.ReadAllText(itemPath);
                     var permalink = $"{Link}/#/{item.MarkdownFilename}";
+
+                    DateTime itemDate = item.Date;
+                    UseNowIfDateIsToday(ref itemDate);
+
                     var syndicationItem = new SyndicationItem
                     {
                         Title = item.Title,
                         Description = markdown.Transform(markdownText),
-                        Published = item.Date
+                        Published = itemDate
                     };
-                    syndicationItem.AddContributor(new SyndicationPerson(FullName, 
+                    syndicationItem.AddContributor(new SyndicationPerson(FullName,
                                                                          $"{Email} ({FullName})"));
-					syndicationItem.AddLink(new SyndicationLink(new Uri(permalink), "guid"));
+                    syndicationItem.AddLink(new SyndicationLink(new Uri(permalink), "guid"));
 
                     string category = item.Category;
 
@@ -99,6 +107,19 @@ namespace CLI
 
                 xmlWriter.Flush();
             }
+        }
+
+        static DateTime ParseDate(string date)
+        {
+            var successParsing = DateTime.TryParseExact(date, DateParseFormat, CultureInfo.InvariantCulture, 
+                                                        DateTimeStyles.None, out DateTime parsedDate);
+
+            if (!successParsing)
+            {
+                parsedDate = DateTime.Parse(date);
+            }
+
+            return parsedDate;
         }
 
         static IEnumerable<dynamic> ReadItems()
@@ -122,11 +143,12 @@ namespace CLI
                                          .Replace(");", string.Empty);
                     var paramsList = justParams.Split(',')
                                                .Select(param => param.Trim().Trim('"'));
+                    var date = ParseDate(paramsList.ElementAt(2));
                     var item = new
                     {
                         Title = paramsList.First(),
                         MarkdownFilename = paramsList.ElementAt(1),
-                        Date = DateTime.ParseExact(paramsList.ElementAt(2), "d/M/yyyy", CultureInfo.InvariantCulture),
+                        Date = date,
                         Hidden = bool.Parse(paramsList.ElementAtOrDefault(3) ?? false.ToString()),
                         Category = paramsList.ElementAtOrDefault(4)
                     };
@@ -141,6 +163,16 @@ namespace CLI
             }
 
             return items;
+        }
+
+        static void UseNowIfDateIsToday(ref DateTime itemDate)
+        {
+            var justNow = DateTime.Now;
+
+            if (justNow.Day == itemDate.Day && justNow.Month == itemDate.Month && justNow.Year == itemDate.Year)
+            {
+                itemDate = justNow;
+            }
         }
     }
 }
