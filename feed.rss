@@ -5,7 +5,7 @@
 <link>https://marcoscobena.com</link>
 <item>
   <title>Tools</title>
-  <guid>https://marcoscobena.com/#/Tools</guid>
+  <guid>https://marcoscobena.com/#/tools</guid>
   <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
@@ -38,10 +38,36 @@ for debugging where the hell an app is taking so much space in disk&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;gimp-android-xdpi&lt;/strong&gt; —plug-in to export current image into multiple Android
 densities (Target DP Width is that which will have in mdpi) &lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/ncornette/gimp-android-xdpi"&gt;https://github.com/ncornette/gimp-android-xdpi&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href="https://github.com/ncornette/gimp-android-xdpi"&gt;https://github.com/ncornette/gimp-android-xdpi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE: in macOS, place the plug-in under &lt;code&gt;/Users/marcos/Library/Application
+Support/GIMP/2.8/modules&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vysor&lt;/strong&gt; —the best way I know to work as with an emulator but on an actual
+Android device, worth purchasing&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.vysor.io/"&gt;https://www.vysor.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3&gt;Visual Studio for Mac&lt;/h3&gt;
+
+&lt;p&gt;If not said explicitly these are available through existing repositories at
+Visual Studio &gt; Extensions… &gt; Gallery.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MS Solution Launcher&lt;/strong&gt; —multiple instances of Visual Studio at the same time&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/Redth/MSSolutionLauncher"&gt;https://github.com/Redth/MSSolutionLauncher&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Redth’s Addins (IDE extensions)&lt;/strong&gt; —I can’t imagine VS withouth the Obliterate
+output paths menu option: removes every bin/obj folder&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Wed, 31 Jan 2018 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 06 Feb 2018 17:05:16 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
