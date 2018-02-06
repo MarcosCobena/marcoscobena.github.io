@@ -55,6 +55,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\feed.rss">
+      <Link>feed.rss</Link>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <MonoDevelop>
