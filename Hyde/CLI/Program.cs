@@ -28,8 +28,19 @@ namespace CLI
             var newItemTitle = args[0];
             var newItemFilename = args[1];
             var newItemDate = args[2];
-            var newItemIsHidden = args[3] ?? FalseLowercase;
-            var newItemCategory = args[4] ?? null;
+            var newItemIsHidden = FalseLowercase;
+
+            if (args.Length >= 4)
+            {
+                newItemIsHidden = args[3] ?? FalseLowercase;
+            }
+
+            string newItemCategory = null;
+
+            if (args.Length >= 5)
+            {
+                newItemCategory = args[4];
+            }
 
             if (!File.Exists(string.Format(ItemFilenamePathFormat, newItemFilename)))
             {
