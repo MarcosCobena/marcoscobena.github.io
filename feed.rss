@@ -4,6 +4,26 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Tuesday</title>
+  <guid>https://marcoscobena.com/#/2018-2-6</guid>
+  <description>&lt;p&gt;I’m back to Plain Concepts, and have joined a beautiful Xamarin.Forms project.&lt;/p&gt;
+
+&lt;p&gt;Asking the Designer for some info on a screen discovered how to capture a
+screenshot and copy it directly into the clipboard in macOS:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;CMD&lt;/code&gt; + &lt;code&gt;CTRL&lt;/code&gt; + &lt;code&gt;MAY&lt;/code&gt; + &lt;code&gt;4&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Very funny to press with a single hand.&lt;/p&gt;
+
+&lt;p&gt;Those assets was asking for needed a small tweak to turn one color into another
+one, in order to compose an animation, and GIMP’s been there to the rescue
+again:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://docs.gimp.org/en/plug-in-exchange.html"&gt;https://docs.gimp.org/en/plug-in-exchange.html&lt;/a&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Wed, 07 Feb 2018 07:34:22 GMT</pubDate>
+</item>
+<item>
   <title>Tools</title>
   <guid>https://marcoscobena.com/#/tools</guid>
   <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
