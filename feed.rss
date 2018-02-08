@@ -4,6 +4,46 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Wednesday</title>
+  <guid>https://marcoscobena.com/#/2018-2-7</guid>
+  <description>&lt;p&gt;I’ve been working on a screen playing with NFC discoveral, and have used for the
+very first time NFCForms plug-in. It’s nice because avoids all the boilerplate
+code needed to setup NFC, and gives back a few events to notice when tags are
+coming in.&lt;/p&gt;
+
+&lt;p&gt;Such returns ids in a &lt;code&gt;byte[]&lt;/code&gt; forms, where each position represents 2 hex.
+chars. How to covert it to a more convenient string?&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;var​ nfcTag = BitConverter.ToString(bytes).Replace("-", string.Empty);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I learnt that from &lt;a href="https://stackoverflow.com/questions/623104/byte-to-hex-string"&gt;this
+thread&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since we consume a REST API and wanted to make some tests with a wrist-band we
+have here at the office, my mate Sergio pointed me to capture the JSON payloads,
+save it within the project and reproduce calls with a fake service, where &lt;a href="https://stackoverflow.com/a/34356170"&gt;this
+method&lt;/a&gt; is sooo handy for reading from
+embedded resources.&lt;/p&gt;
+
+&lt;p&gt;Maybe this’ so simple but have read a little bit on how this op. works:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (items?.FirstOrDefault() == null)
+{ […] }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;The operator &lt;code&gt;?.&lt;/code&gt; —inside
+&lt;a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators"&gt;null-conditional&lt;/a&gt;
+set— returns the right side of the expression if left isn’t &lt;code&gt;null&lt;/code&gt;, or &lt;code&gt;null&lt;/code&gt;
+otherwise, so the chain with &lt;code&gt;==&lt;/code&gt; fits perfect in this case.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Thu, 08 Feb 2018 07:43:12 GMT</pubDate>
+</item>
+<item>
   <title>Tuesday</title>
   <guid>https://marcoscobena.com/#/2018-2-6</guid>
   <description>&lt;p&gt;I’m back to Plain Concepts, and have joined a beautiful Xamarin.Forms project.&lt;/p&gt;
