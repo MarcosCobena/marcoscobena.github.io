@@ -6,7 +6,9 @@ You may want to know what I’m in [now](#/now). Even the [conferences](#/confer
 
 Or just read whatever I write here through [RSS](feed.rss).
 
-<img class="center" alt="Featured at Planet Xamarin!" src="https://www.planetxamarin.com/Content/img/planetxamarin-featured-badge.png" width="100" />
+<div class="center">
+    <img alt="Featured at Planet Xamarin!" src="https://www.planetxamarin.com/Content/img/planetxamarin-featured-badge.png" width="100" />
+</div>
 
 My e-mail? Sure: [marcoscm.digital@gmail.com](mailto:marcoscm.digital@gmail.com) –I *use to* check it in a daily basis.
 
