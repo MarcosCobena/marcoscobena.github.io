@@ -4,6 +4,134 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Thursday</title>
+  <guid>https://marcoscobena.com/#/2018-2-8</guid>
+  <description>&lt;p&gt;During Christmas I was working on a small game prototype, fully backed by the
+joy I had going through Thimbleweed Park. Basically enabled a way to write down
+state-based logic in a ViewModel, which informs the View on just a few messages
+where this last only reacts. Everything powered by Tasks.&lt;/p&gt;
+
+&lt;p&gt;Today I woke up thinking could do better with the screen am on currently, and
+decided to implement that of above. I’m super lucky of being sat down ten steps
+away from Dani Cáceres, the one I know in person who better manages Tasks in
+depth.&lt;/p&gt;
+
+&lt;p&gt;And asked him to review my code. And, obviously, had stuff to improve. The most
+significant’s a corner case where a Task could be there forever, so he
+introduced &lt;code&gt;CancellationToken.Register()&lt;/code&gt;: a straight way to dispose stuff when
+the cancellation happens, and fit perfectly in my scenario.&lt;/p&gt;
+
+&lt;p&gt;Thanks Dani! 🙂&lt;/p&gt;
+
+&lt;p&gt;Back to the logic, my VM know exposes the following:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;    public async Task StartStateMachineAsync()
+    {
+        if (&lt;em&gt;cancellationTokenSource != null &amp;amp;&amp;amp; !&lt;/em&gt;cancellationTokenSource.IsCancellationRequested)
+        {
+            return;
+        }&lt;/p&gt;
+
+&lt;p&gt;        _cancellationTokenSource = new CancellationTokenSource();
+        var token = _cancellationTokenSource.Token;&lt;/p&gt;
+
+&lt;p&gt;        while (!token.IsCancellationRequested)
+        {
+            MessagingCenter.Send(this, NFCUnavailableMessage);
+            await Task.Delay(SecondsToHoldBetweenStates);&lt;/p&gt;
+
+&lt;p&gt;            var isNFCSupported = CheckNFCSupport();&lt;/p&gt;
+
+&lt;p&gt;            if (isNFCSupported)
+            {
+                await PoolForNFCAvailableAsync();
+            }
+            else
+            {
+                continue;
+            }&lt;/p&gt;
+
+&lt;p&gt;            MessagingCenter.Send(this, ReadyToReadMessage);
+            await Task.Delay(SecondsToHoldBetweenStates);&lt;/p&gt;
+
+&lt;p&gt;            var nfcTagId = await TagDetectedAsync(_cancellationTokenSource.Token);&lt;/p&gt;
+
+&lt;p&gt;            MessagingCenter.Send(this, ReadSuccessfulMessage);
+            await Task.Delay(SecondsToHoldBetweenStates);&lt;/p&gt;
+
+&lt;p&gt;            await TryNavigatingToMatchingControlAsync(nfcTagId);
+        }
+    }&lt;/p&gt;
+
+&lt;p&gt;    public void StopStateMachine()
+    {
+        _cancellationTokenSource.Cancel();
+    }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;(Yes, it’s all about handling NFC detection triggering some anims. in UI.)&lt;/p&gt;
+
+&lt;p&gt;Every piece of logic in on the VM. &lt;em&gt;Every&lt;/em&gt;. This’ the View:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;    protected override void OnAppearing()
+    {
+        base.OnAppearing();&lt;/p&gt;
+
+&lt;p&gt;        SubscribeMessages();
+        ViewModel.StartStateMachineAsync().ConfigureAwait(false);
+    }&lt;/p&gt;
+
+&lt;p&gt;    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();&lt;/p&gt;
+
+&lt;p&gt;        if (!_isAndroidMainActivityPausedBecauseOfNFCDetection)
+        {
+            UnsubscribeMessages();
+            ViewModel.StopStateMachine();
+            ResetImagesToTheirInitialState();
+        }
+    }&lt;/p&gt;
+
+&lt;p&gt;    private void ResetImagesToTheirInitialState()
+    {
+        nfcUnavailableImage.Opacity = 0.12f;
+        nfcReadyImage.Opacity = 0;
+        nfcJustNFCImage.Opacity = 0;
+        nfcJustOKImage.Opacity = 0;
+    }&lt;/p&gt;
+
+&lt;p&gt;    private void SubscribeMessages()
+    {
+        MessagingCenter.Subscribe&lt;NFCViewModel&gt;(this, NFCViewModel.NFCUnavailableMessage,
+                                                async _ =&gt;
+        {
+            await nfcReadyImage.FadeTo(0);
+            nfcJustNFCImage.Scale = 1;
+            nfcJustOKImage.Scale = 0;
+        });
+        [...]
+    }
+    
+    private void UnsubscribeMessages()
+    {
+        MessagingCenter.Unsubscribe&lt;NFCViewModel&gt;(this, NFCViewModel.NFCUnavailableMessage);
+        [...]
+    }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;That’s all. Probably this’ so obvious for you, or discover loads of downsides.
+Whatever it comes to your mind, please share it. For me it’s like got something
+really interesting to supply with MVVM, but it’s “my son”.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Fri, 09 Feb 2018 07:32:07 GMT</pubDate>
+</item>
+<item>
   <title>Wednesday</title>
   <guid>https://marcoscobena.com/#/2018-2-7</guid>
   <description>&lt;p&gt;I’ve been working on a screen playing with NFC discoveral, and have used for the
