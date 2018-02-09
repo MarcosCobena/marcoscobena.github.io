@@ -59,6 +59,12 @@
     <None Include="..\..\feed.rss">
       <Link>feed.rss</Link>
     </None>
+    <None Include="..\..\items\home.md">
+      <Link>items\home.md</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="items\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
