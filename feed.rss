@@ -4,6 +4,30 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Embedding JSON responses conditionally</title>
+  <guid>https://marcoscobena.com/#/2018-2-9</guid>
+  <description>&lt;p&gt;&lt;a href="https://marcoscobena.com/#/2018-2-7"&gt;Using JSON files to replicate calls&lt;/a&gt; has a
+downside: you can end up bundling those in the final package, increasing its
+size and looking ugly. I had never done before embedding something
+conditionally, but there was Stack Overflow with a
+&lt;a href="https://stackoverflow.com/questions/14224316/embed-a-resource-conditionally-in-a-csproj"&gt;solution&lt;/a&gt;
+for this:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;&lt;ItemGroup Condition="'$(Configuration)' == 'Debug'"&gt;
+    &lt;EmbeddedResource Include="..\Files\Debug\FakeExercises.json"&gt;
+      &lt;Link&gt;Services\Exercise\FakeExercises.json&lt;/Link&gt;
+    &lt;/EmbeddedResource&gt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;Just Debug compilations will move the file on, Release and so on will be cristal
+clear.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Mon, 12 Feb 2018 07:11:07 GMT</pubDate>
+</item>
+<item>
   <title>Thursday</title>
   <guid>https://marcoscobena.com/#/2018-2-8</guid>
   <description>&lt;p&gt;During Christmas I was working on a small game prototype, fully backed by the
