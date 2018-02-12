@@ -15,17 +15,17 @@ for this:&lt;/p&gt;
 
 &lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
 
-&lt;p&gt;&lt;ItemGroup Condition="'$(Configuration)' == 'Debug'"&gt;
-    &lt;EmbeddedResource Include="..\Files\Debug\FakeExercises.json"&gt;
-      &lt;Link&gt;Services\Exercise\FakeExercises.json&lt;/Link&gt;
-    &lt;/EmbeddedResource&gt;
+&lt;p&gt;&amp;lt;ItemGroup Condition="'$(Configuration)' == 'Debug’"&amp;gt;
+    &amp;lt;EmbeddedResource Include="..\Files\Debug\FakeExercises.json"&amp;gt;
+      &amp;lt;Link&gt;Services\Exercise\FakeExercises.json&amp;lt;/Link&amp;gt;
+    &amp;lt;/EmbeddedResource&amp;gt;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
 
 &lt;p&gt;Just Debug compilations will move the file on, Release and so on will be cristal
 clear.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Mon, 12 Feb 2018 07:11:07 GMT</pubDate>
+  <pubDate>Mon, 12 Feb 2018 07:30:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
