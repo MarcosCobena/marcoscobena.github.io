@@ -1,3 +1,4 @@
+addItem("Rapid styling ListViews", "2018-2-12", "13/02/2018 8:16:12", false, "Xamarin");
 addItem("Embedding JSON responses conditionally", "2018-2-9", "12/02/2018 8:29:59", false, "Xamarin");
 addItem("Thursday", "2018-2-8", "09/02/2018 8:32:06", false, "Xamarin");
 addItem("Wednesday", "2018-2-7", "08/02/2018 8:43:12", false, "Xamarin");

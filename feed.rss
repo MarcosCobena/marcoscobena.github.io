@@ -4,6 +4,32 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Rapid styling ListViews</title>
+  <guid>https://marcoscobena.com/#/2018-2-12</guid>
+  <description>&lt;p&gt;Today I’ve been working on a XAML page and, again, have needed some fake data to
+populate a &lt;code&gt;ListView&lt;/code&gt;’s &lt;code&gt;ItemsSource&lt;/code&gt;. A trick I find so useful for that,
+without building custom models which represent’s Design copies, is to simply
+bind an array of n items:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;within your ViewModel — here for instance 3:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;public IEnumerable&amp;lt;int&amp;gt; FakeData =&amp;gt; Enumerable.Range(0, 3);&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;within your &lt;code&gt;Page&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;amp;lt;ListView ItemsSource="{Binding FakeData}" [...]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now I can concentrate on the item template without putting so much effort on the
+temporal fake data.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Tue, 13 Feb 2018 07:16:13 GMT</pubDate>
+</item>
+<item>
   <title>Embedding JSON responses conditionally</title>
   <guid>https://marcoscobena.com/#/2018-2-9</guid>
   <description>&lt;p&gt;&lt;a href="https://marcoscobena.com/#/2018-2-7"&gt;Using JSON files to replicate calls&lt;/a&gt; has a
