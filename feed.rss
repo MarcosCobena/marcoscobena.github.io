@@ -4,6 +4,40 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Suave scroll-less lists in Xamarin.Forms</title>
+  <guid>https://marcoscobena.com/#/2018-2-13</guid>
+  <description>&lt;p&gt;The screen am working on needs something like a &lt;code&gt;ListView&lt;/code&gt; inside a
+&lt;code&gt;ScrollView&lt;/code&gt;, which’s nothing recommended —on a Xamarin.Android app had enabled
+nesting before but I try to avoid going Custom Rendering from the beginning.
+Other times have needed this ended up writing a converter which calculates
+&lt;code&gt;amountOfItems * RowHeight&lt;/code&gt; to avoid any scrolling, but today wanted to dig a
+little bit for a better approach.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://media.giphy.com/media/l41Ygr7sR5limRkek/giphy.gif" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;And I’ve discovered
+&lt;a href="https://github.com/SuavePirate/DynamicStackLayout"&gt;DynamicStackLayout&lt;/a&gt;, exactly
+what was looking for. It’s as easy to use as removing the &lt;code&gt;ListView&lt;/code&gt; declaration
+—and its attributes— for &lt;code&gt;DynamicStackLayout&lt;/code&gt;, and boom:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;    &lt;suave:DynamicStackLayout
+        ItemsSource="{Binding FakeData}"&gt;
+        &lt;suave:DynamicStackLayout.ItemTemplate&gt;
+            &lt;DataTemplate&gt;
+                &lt;templates:ExerciseSummaryItemTemplate /&gt;
+            &lt;/DataTemplate&gt;
+        &lt;/suave:DynamicStackLayout.ItemTemplate&gt;
+    &lt;/suave:DynamicStackLayout&gt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;Thanks Alex Dunn, really nice thing 😊&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Wed, 14 Feb 2018 07:20:03 GMT</pubDate>
+</item>
+<item>
   <title>Rapid styling ListViews</title>
   <guid>https://marcoscobena.com/#/2018-2-12</guid>
   <description>&lt;p&gt;Today I’ve been working on a XAML page and, again, have needed some fake data to
