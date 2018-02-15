@@ -8,6 +8,13 @@ Those I use to work with in my daily job, mostly while developing apps:
 
  
 
+**BetterSnapTools** —I like a lot how Windows adapts such when taken into edges
+and this makes exactly the same on macOS. Worth the price
+
+<https://itunes.apple.com/es/app/bettersnaptool/id417375580?mt=12>
+
+ 
+
 **Device Metrics** —idem as (1)
 
 <https://material.io/devices/>
@@ -24,6 +31,13 @@ for debugging where the hell an app is taking so much space in disk
 **DPI love (1)** —which DPI a specific device has
 
 <http://dpi.lv/>
+
+ 
+
+**GIF speed changer** —when Designers send me GIFs to showcase what they’re
+pretending I find really useful to decrease motion to perceive small details
+
+<https://ezgif.com/speed/>
 
  
 
