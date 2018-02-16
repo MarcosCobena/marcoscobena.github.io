@@ -49,3 +49,7 @@ Here should appear a list 🤷🏻‍♂️
 # *Thanks* for coming!
 
 That's all ☺️
+ 
+
+(Powered by [Mr. Hyde 👹](https://github.com/MarcosCobena/marcoscobena.github.io)
+—feel free to use it you too!)

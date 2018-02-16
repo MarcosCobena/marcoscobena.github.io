@@ -41,5 +41,5 @@ addItem("App screen creation template", "app-screen-creation-template", "17/2/20
 
 addItem("Conferences and talks", "conferences", "7/12/2017", true);
 addItem("Now", "now", "7/12/2017", true);
-addItem("404", "404", "29/1/2017", true);
+addItem("🤷", "404", "15/2/2018", true);
 addItem("👋", "home", "12/1/2017", true);
