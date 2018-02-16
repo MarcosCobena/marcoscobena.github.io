@@ -13,117 +13,55 @@ namespace CLI
     class Program
     {
         const string AddItemChunk = "addItem(";
+        const int AmountOfItemsForRss = 10;
 		const string DateParseFormat = "d/M/yyyy";
         const string Email = "marcoscm.digital@gmail.com";
-        const string FalseLowercase = "false";
         const string FeedDescription = "I write apps for people using Xamarin";
         const string FeedPath = "feed.rss";
         const string FullName = "Marcos Cobeña Morián";
         const string ItemFilenamePathFormat = "items/{0}.md";
         const string ItemsJavaScriptPath = "items/items.js";
         const string Link = "https://marcoscobena.com";
+        const string RssCommand = "rss";
 
         static void Main(string[] args)
         {
-            var newItemTitle = args[0];
-            var newItemFilename = args[1];
-            var newItemDate = args[2];
-            var newItemIsHidden = FalseLowercase;
-
-            if (args.Length >= 4)
+            if (args == null || !args.Any())
             {
-                newItemIsHidden = args[3] ?? FalseLowercase;
-            }
-
-            string newItemCategory = null;
-
-            if (args.Length >= 5)
-            {
-                newItemCategory = args[4];
-            }
-
-            if (!File.Exists(string.Format(ItemFilenamePathFormat, newItemFilename)))
-            {
-                Console.WriteLine($"Sorry, we can't find item {newItemFilename}.");
+                PrintUsage();
                 return;
             }
 
-            AddItemToJavaScript(newItemTitle, newItemFilename, newItemDate, newItemIsHidden, newItemCategory);
+            var command = args[0];
 
-            var items = ReadItems();
-            GenerateRss(items);
-
-            //Process.Start("git", $"add items/{newItemFilename}.md");
-            //Process.Start("git", $"commit items/items.js -m \"Added WILT\"");
-            //Process.Start("git", "push origin master");
-        }
-
-        static void AddItemToJavaScript(string title, string filename, string date, string isHidden = FalseLowercase, 
-                                        string category = null)
-        {
-            var currentContent = File.ReadAllText(ItemsJavaScriptPath);
-            var addItemCall = $"addItem(\"{title}\", \"{filename}\", \"{date}\", {isHidden}, \"{category}\");";
-
-            if (currentContent.Contains(addItemCall))
+            if (command == RssCommand)
             {
+                Say("OK, OK... I'll build that RSS for you, was sure you weren't able by your-self");
+
+                var items = ReadItems();
+                var latestItems = items.OrderByDescending(item => item.Date)
+                                       .Take(AmountOfItemsForRss);
+                var totalItems = items.Count();
+                var latestTotalItems = latestItems.Count();
+                Say($"I've found {totalItems} items but will take latest {latestTotalItems}");
+
+                WriteRss(items);
+
+                Say($"There it's your {FeedPath} file, don't become so much crazy");
+            }
+            else
+            {
+                PrintUsage();
                 return;
             }
 
-            var itemDate = DateTime.ParseExact(date, DateParseFormat, CultureInfo.InvariantCulture);
-            UseNowIfDateIsToday(ref itemDate);
-            addItemCall = $"addItem(\"{title}\", \"{filename}\", \"{itemDate}\", {isHidden}, \"{category}\");";
-            File.WriteAllText(ItemsJavaScriptPath, addItemCall + Environment.NewLine + currentContent);
-        }
-
-        static void GenerateRss(IEnumerable<dynamic> items)
-        {
-            var streamWritter = File.CreateText(FeedPath);
-
-            using (var xmlWriter = XmlWriter.Create(streamWritter, new XmlWriterSettings { Indent = true }))
-            {
-                var writer = new RssFeedWriter(xmlWriter);
-                writer.WriteTitle(FullName);
-                writer.WriteDescription(FeedDescription);
-                writer.WriteValue("link", Link);
-                var markdown = new Markdown();
-
-                foreach (var item in items)
-                {
-                    var itemPath = string.Format(ItemFilenamePathFormat, item.MarkdownFilename);
-                    var markdownText = File.ReadAllText(itemPath);
-                    var permalink = $"{Link}/#/{item.MarkdownFilename}";
-
-                    DateTime itemDate = item.Date;
-                    UseNowIfDateIsToday(ref itemDate);
-
-                    var syndicationItem = new SyndicationItem
-                    {
-                        Title = item.Title,
-                        Description = markdown.Transform(markdownText),
-                        Published = itemDate
-                    };
-                    syndicationItem.AddContributor(new SyndicationPerson(FullName,
-                                                                         $"{Email} ({FullName})"));
-                    syndicationItem.AddLink(new SyndicationLink(new Uri(permalink), "guid"));
-
-                    string category = item.Category;
-
-                    if (!string.IsNullOrWhiteSpace(category))
-                    {
-                        syndicationItem.AddCategory(new SyndicationCategory(category));
-                    }
-
-                    writer.Write(syndicationItem);
-                }
-
-                xmlWriter.Flush();
-            }
+            Say("Adiós...");
         }
 
         static DateTime ParseDate(string date)
         {
             var successParsing = DateTime.TryParseExact(date, DateParseFormat, CultureInfo.InvariantCulture, 
-                                                        DateTimeStyles.None, out DateTime parsedDate);
+                                                        DateTimeStyles.AssumeLocal, out DateTime parsedDate);
 
             if (!successParsing)
             {
@@ -133,11 +71,17 @@ namespace CLI
             return parsedDate;
         }
 
+        static void PrintUsage()
+        {
+            Say($"I only accept \"hyde {RssCommand}\" to create such with {AmountOfItemsForRss} latest items");
+            Say("And don't bother so much...");
+        }
+
         static IEnumerable<dynamic> ReadItems()
         {
             var items = new List<dynamic>();
 
-            using (var itemsFile = File.OpenText(ItemsJavaScriptPath))
+            using (var itemsFile = File.OpenText($"../{ItemsJavaScriptPath}"))
             {
                 var line = itemsFile.ReadLine();
 
@@ -176,13 +120,50 @@ namespace CLI
             return items;
         }
 
-        static void UseNowIfDateIsToday(ref DateTime itemDate)
+        static void Say(string message)
         {
-            var justNow = DateTime.UtcNow;
+            Console.WriteLine($"👹: {message}");
+        }
 
-            if (justNow.Day == itemDate.Day && justNow.Month == itemDate.Month && justNow.Year == itemDate.Year)
+        static void WriteRss(IEnumerable<dynamic> items)
+        {
+            var streamWritter = File.CreateText($"../{FeedPath}");
+
+            using (var xmlWriter = XmlWriter.Create(streamWritter, new XmlWriterSettings { Indent = true }))
             {
-                itemDate = justNow;
+                var writer = new RssFeedWriter(xmlWriter);
+                writer.WriteTitle(FullName);
+                writer.WriteDescription(FeedDescription);
+                writer.WriteValue("link", Link);
+                var markdown = new Markdown();
+
+                foreach (var item in items)
+                {
+                    var itemPath = string.Format(ItemFilenamePathFormat, item.MarkdownFilename);
+                    var markdownText = File.ReadAllText($"../{itemPath}");
+                    var permalink = $"{Link}/#/{item.MarkdownFilename}";
+
+                    var syndicationItem = new SyndicationItem
+                    {
+                        Title = item.Title,
+                        Description = markdown.Transform(markdownText),
+                        Published = item.Date
+                    };
+                    syndicationItem.AddContributor(new SyndicationPerson(FullName,
+                                                                         $"{Email} ({FullName})"));
+                    syndicationItem.AddLink(new SyndicationLink(new Uri(permalink), "guid"));
+
+                    string category = item.Category;
+
+                    if (!string.IsNullOrWhiteSpace(category))
+                    {
+                        syndicationItem.AddCategory(new SyndicationCategory(category));
+                    }
+
+                    writer.Write(syndicationItem);
+                }
+
+                xmlWriter.Flush();
             }
         }
     }

@@ -6,7 +6,7 @@
     <ProjectGuid>{8E79B013-3944-4006-A943-E037C768F8C8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CLI</RootNamespace>
-    <AssemblyName>CLI</AssemblyName>
+    <AssemblyName>hyde</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -25,6 +25,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ExternalConsole>true</ExternalConsole>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp * ../../../</command>
+          <workingdir>${ProjectDir}/bin/${ProjectConfigName}</workingdir>
+          <externalConsole>True</externalConsole>
+          <pauseExternalConsole>True</pauseExternalConsole>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
