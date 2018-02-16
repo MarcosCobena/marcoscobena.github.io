@@ -1,6 +1,8 @@
 *.user
 *.userprefs
+.mfractor/
 .vs/
 bin
 obj
 packages
+
