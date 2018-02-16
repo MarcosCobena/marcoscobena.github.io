@@ -1,11 +1,16 @@
 Hyde 👹
 =======
 
-A web site generator which runs entirely in your browser: - Powered by HTML, CSS
-& JavaScript, super simple to maintain; - You just write Markdown in your
-prefered editor ([Texts](http://www.texts.io/), for instance); - With optional
-RSS feed generation through a .NET Core console app
-([WIP](https://github.com/MarcosCobena/marcoscobena.github.io/blob/master/ItemsToRss/Program.cs))
+A web site generator which runs entirely in your browser:
+
+-   Powered by HTML, CSS & JavaScript, super simple to maintain;
+
+-   You just write Markdown in your preferred editor
+    ([Texts](http://www.texts.io/), for instance);
+
+-   Anyone can comment thanks to Disqus support;
+
+-   With built-in RSS feed generation
 
 You have [Jekyll](https://github.com/jekyll/jekyll) and, now, [Mr.
 Hyde](https://github.com/MarcosCobena/marcoscobena.github.io) too —obviously you
