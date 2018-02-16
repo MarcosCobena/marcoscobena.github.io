@@ -178,7 +178,7 @@ namespace CLI
 
         static void UseNowIfDateIsToday(ref DateTime itemDate)
         {
-            var justNow = DateTime.Now;
+            var justNow = DateTime.UtcNow;
 
             if (justNow.Day == itemDate.Day && justNow.Month == itemDate.Month && justNow.Year == itemDate.Year)
             {
