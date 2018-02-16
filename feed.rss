@@ -4,6 +4,49 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Falling in love with ValueTuples and a small heart break</title>
+  <guid>https://marcoscobena.com/#/2018-2-15</guid>
+  <description>&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Having Valentine’s Day so close in date, today I’ve felt in love with
+ValueTuples. Why you would say: because it allowed me to super super easy build
+models to wire up with the UI, something like:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;return new (Title: $”Action {index + 1}”, Exercise: currentExercise,
+ValidatedSession: currentValidatedSession);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Already “old” Tuples were doing a great job for me, because even &lt;code&gt;Item1&lt;/code&gt;, etc.
+was feeling ugly when binding in XAML, it still was allowing me go fast
+iterating. But discovered that beautiful naming in ValueTuples and moved on.&lt;/p&gt;
+
+&lt;p&gt;However, Xamarin.Forms’ XAML currently doesn’t support referencing a named
+property from ValueTuples —I guess it comes from XAMLC phase. So had to finally
+create some models and work with them from that on.&lt;/p&gt;
+
+&lt;p&gt;My question is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Has anyone sorted out a way to make that work? And, do you see it as
+    interesting as I do?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Oh, and &lt;a href="https://github.com/xamarin/Xamarin.Forms/issues/1891"&gt;found a bug&lt;/a&gt; with
+DataTriggers which cannot reference an enum value.&lt;/p&gt;
+
+&lt;p&gt;And another one, &lt;a href="https://bugzilla.xamarin.com/show_bug.cgi?id=59448"&gt;already
+filled&lt;/a&gt;, where
+&lt;code&gt;IsClippedToBounds&lt;/code&gt; doesn’t work with Fast Renderers.&lt;/p&gt;
+
+&lt;p&gt;We could say it’s been a buggy day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://media.giphy.com/media/oSUtmrhRz5te0/giphy.gif" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;(I could stay riveted with this GIF.)&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Fri, 16 Feb 2018 07:26:24 GMT</pubDate>
+</item>
+<item>
   <title>Tools</title>
   <guid>https://marcoscobena.com/#/tools</guid>
   <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
