@@ -1,8 +1,12 @@
+*.dll
+*.exe
+*.pdb
 *.user
 *.userprefs
+
 .mfractor/
 .vs/
+
 bin
 obj
 packages
-
