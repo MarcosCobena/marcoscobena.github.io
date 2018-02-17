@@ -33,7 +33,7 @@ How can I generate a RSS feed?
 ------------------------------
 
 1.  Build `Hyde/CLI/CLI.csproj` in Release mode —`Hyde/Hyde.sln` contains it too
-    along with an ASP.NET `Playground.csproj` with the web it-self
+    along with an ASP.NET `Web.csproj` with the web it-self
 
 2.  Open a Terminal (macOS), command line (Windows) or similar at `Hyde/`
 
