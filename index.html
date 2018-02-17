@@ -13,49 +13,54 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<style type="text/css">
-			#actualBody {
-				line-height: 1.5em;
-			}
+            #actualBody {
+                line-height: 1.5em;
+            }
 
-			body {
-				color: #333;
-				font-family: 'Raleway', sans-serif;
-				margin: 0 auto;
-    			max-width: 750px;
-			}
+            body {
+                color: #333;
+                font-family: 'Raleway', sans-serif;
+                margin: 0 auto;
+                max-width: 750px;
+            }
 
-			#bodyWrapper {
-				height: inherit; min-height: 100%;
-				padding: 1.5em 1em 1em;
-			}
+            #bodyWrapper {
+                height: inherit; min-height: 100%;
+                padding: 1.5em 1em 1em;
+            }
 
-			.center {
-				text-align: center;
-			}
+            .center {
+                text-align: center;
+            }
 
-			h1, h2, h3, h4, h5 {
-				font-weight: 900;
-				line-height: 1.25em;
-			}
+            h1, h2, h3, h4, h5 {
+                font-weight: 900;
+                line-height: 1.25em;
+            }
 
-			.item-date {
-				font-size: 1em;
-			}
+            .item-date {
+                font-size: 1em;
+            }
 
-			.item-title {
-				font-size: 2em;
-			}
+            .item-title {
+                font-size: 2em;
+            }
 
-			.signature {
-				margin-top: 1.5em;
-				text-align: right;
-			}
+            #powered-by {
+                font-size: 0.75em;
+                margin-top: 3em;
+            }
 
-			#title {
-				font-family: 'Parisienne', cursive;
-				text-align: center;
-			}
-		</style>
+            .signature {
+                margin-top: 1.5em;
+                text-align: right;
+            }
+
+            #title {
+                font-family: 'Parisienne', cursive;
+                text-align: center;
+            }
+    </style>
 		
 		<script src="scripts/jquery-3.1.1.min.js"></script>
 
@@ -129,14 +134,16 @@
 					else {
 						$("#navigationBar").show();
 
-						DISQUS.reset({
-							reload: true,
-							config: function () {
-								this.page.identifier = item.filename;
-                                var url = window.location.href;
-                                url = url.replace("#", "#!");
-								this.page.url = url;
-							}});
+                        if (weAreAtInternet()) {
+    						DISQUS.reset({
+    							reload: true,
+    							config: function () {
+    								this.page.identifier = item.filename;
+                                    var url = window.location.href;
+                                    url = url.replace("#", "#!");
+    								this.page.url = url;
+    							}});
+                        }
 					}
 
 					window.scrollTo(0, 0);
@@ -219,6 +226,29 @@
 					$("#medium").html(output);
 				});
 			}
+
+            function weAreAtInternet() {
+                if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            if (weAreAtInternet()) {
+                // Here starts Disqus set-up
+                var disqus_config = function () {
+                    this.page.url = "http://marcoscobena.com/#!/home";
+                    this.page.identifier = "home";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://marcoscobena.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                // Here ends Disqus set-up
+            }
 		</script>
 
 		<script src="items/items.js"></script>
@@ -241,19 +271,12 @@
 			</p>
 
             <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                this.page.url = "http://marcoscobena.com/#!/home";  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "home"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://marcoscobena.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+            <noscript>This site needs JavaScript enabled, please activate it to enjoy what's to come 👌</noscript>
+
+            <div id="powered-by" class="center">
+                <em>Pst!</em> All this' powered by Mr. <a href="https://github.com/MarcosCobena/marcoscobena.github.io">Hyde</a> 👹
+            </div>
 		</div>
 	</body>
 </html>
