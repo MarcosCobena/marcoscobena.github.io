@@ -2,7 +2,7 @@
 
 It's actually Marcos Cobeña Morián —Cobeña for my [Dad](http://joseantoniocobena.com) and Morián for my Mom, so sometimes I just write them together to assure my Mom's doesn't get lost. I'm a Xamarin Software Developer located at Sevilla, south of Spain.
 
-My beloved apps target mainly iOS and Android, using Xamarin. Most of my work's done nowadays with Xamarin.Forms, although still some customers need the classical approach —i.e. Xamarin.Android & iOS.
+My beloved apps target mainly iOS and Android, using Xamarin. Most of my work's done nowadays with Xamarin.Forms, although still some customers need the classical approach —i.e. Xamarin.Android & iOS. I maintain a list with all those [tools](/#/tools) which make my day easier. As well as the [template](/#/app-screen-creation-template) I came up with to develop new screens in my apps.
 
 On late 2017 I started writing down what learn each day, motivated because of helping others and putting my English in practice —I copied in some way my friend aro's "Good morning!" picture. Almost every entry deals with Xamarin, but I touch some other stuff too.
 
