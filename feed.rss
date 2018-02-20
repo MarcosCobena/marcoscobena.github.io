@@ -4,6 +4,41 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>SVGs in Xamarin.Forms &amp; Git's cherry picking</title>
+  <guid>https://marcoscobena.com/#/2018-2-20</guid>
+  <description>&lt;p&gt;It may sound strange but today’s been my welcome into using SVGs in
+Xamarin.Forms, and FFImageLoading’s helped a lot —have some mates here which are
+already heavily using it.&lt;/p&gt;
+
+&lt;p&gt;If you’re in the same position as me, read
+&lt;a href="https://github.com/luberda-molinet/FFImageLoading/wiki/SVG-support"&gt;this&lt;/a&gt;
+before going on, as needs some setup. I experienced the same issue as &lt;a href="https://github.com/luberda-molinet/FFImageLoading/issues/914"&gt;this
+user&lt;/a&gt; but ended up
+sorting it out —read my comment at bottom.&lt;/p&gt;
+
+&lt;p&gt;Honestly, I think will try to, from today, add every asset as SVG since Zeplin,
+for instance, supports that export option, and you avoid messing with Android’s
+densities, iOS' \@Nx, etc.; giving our users the best result in their screens.&lt;/p&gt;
+
+&lt;p&gt;The only thing which worries me’s that FFImageLoading depends on SkiaSharp for
+drawing SVGs, and read some months ago each time you work with a Skia’s canvas
+the amount of memory reserved corresponds to a bitmap of screen size. But
+probably FFImageLoading already handles this.&lt;/p&gt;
+
+&lt;p&gt;In other aspects, at the end of the day committed my changes, and pushed them,
+buuut discovered a bug I introduced with a few files changed. After reverting
+that commit for two (2) times, discovered you can cherry-pick a commit and don’t
+commit it back again, but leave it at staging, so you simply can reset here and
+there:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git cherry-pick -n PROBLEMATIC_COMMIT_HASH&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Tue, 20 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Connecting your app with an ASP.NET API running on a local VM</title>
   <guid>https://marcoscobena.com/#/2018-2-19</guid>
   <description>&lt;p&gt;My current project involves an ASP.NET server side with both a small web and its
@@ -40,7 +75,7 @@ Files\Blablabla&lt;/code&gt;, but inside the solution root: for instance,
 
 &lt;p&gt; &lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ol start="3"&gt;
 &lt;li&gt;&lt;p&gt;If you want to connect to the attached SQL Server DB —as for connecting with
 Management Studio:&lt;/p&gt;
 
