@@ -4,6 +4,66 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Connecting your app with an ASP.NET API running on a local VM</title>
+  <guid>https://marcoscobena.com/#/2018-2-19</guid>
+  <description>&lt;p&gt;My current project involves an ASP.NET server side with both a small web and its
+API. I needed to debug things locally to go faster, thus wanted to connect my
+app in macOS to the API in my virtualized Windows 10. In order to access such
+endpoint
+&lt;a href="https://stackoverflow.com/questions/35247847/bad-request-invalid-hostname-asp-net-visual-studio-2015/41895739"&gt;this&lt;/a&gt;
+article helped quite a lot.&lt;/p&gt;
+
+&lt;p&gt;Just would like to highlight some small details, which made me got it working:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The applicationhost.config file isn’t the one located under &lt;code&gt;Program
+Files\Blablabla&lt;/code&gt;, but inside the solution root: for instance,
+&lt;code&gt;C:\Users\Marcos\Repositorios\MyProject\src\.vs\config&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The correct binding which worked for me is as follows:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;site name="..." id="2"&amp;gt;
+    &amp;lt;application path="/" applicationPool="Clr4IntegratedAppPool"&amp;gt;
+        &amp;lt;virtualDirectory path="/" physicalPath="C:\Users\Marcos\Repositorios\MyProject\src\MyProjectServer\MyProjectApi" /&amp;gt;
+    &amp;lt;/application&amp;gt;
+    &amp;lt;bindings&amp;gt;
+        &amp;lt;binding protocol="http" bindingInformation="*:53034:localhost" /&amp;gt;
+        &amp;lt;!-- This one! --&amp;gt;
+        &amp;lt;binding protocol="http" bindingInformation="10.4.1.51:53034:*" /&amp;gt;
+    &amp;lt;/bindings&amp;gt;
+&amp;lt;/site&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you want to connect to the attached SQL Server DB —as for connecting with
+Management Studio:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;this command tells which instance I have in my machine:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C:\Program Files\Microsoft SQL Server\130\Tools\Binn&amp;gt;SqlLocalDB.exe
+info&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;and this whether my instance is on or off:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C:\Program Files\Microsoft SQL Server\130\Tools\Binn&amp;gt;SqlLocalDB.exe
+info MSSQLLocalDB&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Finally, Stephane Delcroix replied to my post at Planet Xamarin’s Twitter
+account with a &lt;a href="https://github.com/xamarin/Xamarin.Forms/pull/1317"&gt;PR&lt;/a&gt;, already
+merged, where he adds ValueTuples support to Xamarin.Forms! Thanks Stephane 😇&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Mon, 19 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Falling in love with ValueTuples and a small heart break</title>
   <guid>https://marcoscobena.com/#/2018-2-15</guid>
   <description>&lt;p&gt; &lt;/p&gt;
@@ -44,7 +104,7 @@ filled&lt;/a&gt;, where
 &lt;p&gt;(I could stay riveted with this GIF.)&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Fri, 16 Feb 2018 07:26:24 GMT</pubDate>
+  <pubDate>Thu, 15 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tools</title>
@@ -124,7 +184,7 @@ Visual Studio &gt; Extensions… &gt; Gallery.&lt;/p&gt;
 output paths menu option: removes every bin/obj folder&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Thu, 15 Feb 2018 06:58:18 GMT</pubDate>
+  <pubDate>Wed, 14 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Suave scroll-less lists in Xamarin.Forms</title>
@@ -158,7 +218,7 @@ what was looking for. It’s as easy to use as removing the &lt;code&gt;ListView
 &lt;p&gt;Thanks Alex Dunn, really nice thing 😊&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Wed, 14 Feb 2018 07:20:03 GMT</pubDate>
+  <pubDate>Tue, 13 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Rapid styling ListViews</title>
@@ -184,7 +244,7 @@ bind an array of n items:&lt;/p&gt;
 temporal fake data.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Tue, 13 Feb 2018 07:16:13 GMT</pubDate>
+  <pubDate>Mon, 12 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Embedding JSON responses conditionally</title>
@@ -208,7 +268,7 @@ for this:&lt;/p&gt;
 clear.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Mon, 12 Feb 2018 07:30:00 GMT</pubDate>
+  <pubDate>Sun, 11 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Thursday</title>
@@ -336,7 +396,7 @@ Whatever it comes to your mind, please share it. For me it’s like got somethin
 really interesting to supply with MVVM, but it’s “my son”.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Fri, 09 Feb 2018 07:32:07 GMT</pubDate>
+  <pubDate>Thu, 08 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Wednesday</title>
@@ -376,7 +436,7 @@ set— returns the right side of the expression if left isn’t &lt;code&gt;null
 otherwise, so the chain with &lt;code&gt;==&lt;/code&gt; fits perfect in this case.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
-  <pubDate>Thu, 08 Feb 2018 07:43:12 GMT</pubDate>
+  <pubDate>Wed, 07 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
@@ -396,7 +456,7 @@ again:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://docs.gimp.org/en/plug-in-exchange.html"&gt;https://docs.gimp.org/en/plug-in-exchange.html&lt;/a&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Wed, 07 Feb 2018 07:34:21 GMT</pubDate>
+  <pubDate>Tue, 06 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Tuesday</title>
