@@ -4,6 +4,37 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Git-LFS &amp; CarouselView &amp; Xamarin.Forms Chrome's shortcut</title>
+  <guid>https://marcoscobena.com/#/2018-2-21</guid>
+  <description>&lt;p&gt;Today I’ve started to help in a new project where Design is quite strict —which
+I like 🤘&lt;/p&gt;
+
+&lt;p&gt;Cloning the repo, it’s set up with Git-LFS and I moved to SSH keys a month ago
+or so. However, &lt;a href="https://github.com/git-lfs/git-lfs/issues/2186"&gt;LFS only works through
+HTTPS&lt;/a&gt; so back to alternate
+credentials. All of this within Visual Studio Team Services.&lt;/p&gt;
+
+&lt;p&gt;The screen am working on starts with a carousel —a carousel!— and
+&lt;a href="https://github.com/alexrainman/CarouselView"&gt;CarouselView&lt;/a&gt; fits perfectly. I’ve
+only missed properties to customize its page selectors’ margin, but it’s not so
+so important.&lt;/p&gt;
+
+&lt;p&gt;What I can’t believe is how the hell have lived without this Chrome shortcut
+—guess can be replicated in any other browser too:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/XamarinFormsChromeSearch.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of typing once and again “xamarin.forms “ and whatever now simply “xf” +
+TAB and whatever. I’m so proud of this 🤠&lt;/p&gt;
+
+&lt;p&gt;Finally, I’ve tried &lt;code&gt;RelativeLayout&lt;/code&gt; once again buuut keep thinking’s somewhat
+useless when things can grow up hor. or ver. (i.e. a &lt;code&gt;Label&lt;/code&gt; with +1 line). Know
+could do it by code, but after using LiveXAML’s difficult to switch back 🤷‍♂️&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Wed, 21 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>SVGs in Xamarin.Forms &amp; Git's cherry picking</title>
   <guid>https://marcoscobena.com/#/2018-2-20</guid>
   <description>&lt;p&gt;It may sound strange but today’s been my welcome into using SVGs in
