@@ -1,3 +1,4 @@
+addItem("Git-LFS, CarouselView & Xamarin.Forms Chrome's shortcut", "2018-2-21", "22/2/2018", false, "Xamarin");
 addItem("SVGs in Xamarin.Forms & Git's cherry picking", "2018-2-20", "21/2/2018", false, "Xamarin");
 addItem("Connecting your app with an ASP.NET API running on a local VM", "2018-2-19", "20/2/2018", false, "Xamarin");
 addItem("Falling in love with ValueTuples and a small heart break", "2018-2-15", "16/2/2018", false, "Xamarin");
