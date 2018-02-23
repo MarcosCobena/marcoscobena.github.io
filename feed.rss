@@ -4,6 +4,55 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>FFImageLoading's SVGCachedImage &amp; converters chaining</title>
+  <guid>https://marcoscobena.com/#/2018-2-22</guid>
+  <description>&lt;p&gt;After enjoying so much crafting a screen, today I’ve worked on the small details
+and continued with bindings.&lt;/p&gt;
+
+&lt;p&gt;We have SVGs everywhere, and tint those on demand. I’ve wanted to style some to
+avoid duplicate XAML here and there but this specifically doesn’t seem to work
+with FFImageLoading’s &lt;code&gt;SvgCachedImage&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;    &lt;Style x:Key="24By24BlueSvgImageStyle" TargetType="svg:SvgCachedImage"&gt;  
+        &lt;Setter Property="HeightRequest" Value="24" /&gt;  
+        &lt;Setter Property="WidthRequest" Value="24" /&gt;  
+        &lt;Setter Property="Transformations"&gt;  
+            &lt;Setter.Value&gt;  
+                &lt;collection:List x:TypeArguments="{x:Type svgwork:ITransformation}"&gt;  
+                    &lt;transformations:TintTransformation  
+                        HexColor="{StaticResource HexLightBlueColor}"  
+                        EnableSolidColor="true" /&gt;  
+                &lt;/collection:List&gt;  
+            &lt;/Setter.Value&gt;  
+        &lt;/Setter&gt;  
+    &lt;/Style&gt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;(This exact approach happened after trying the simplest ones, like having the
+&lt;code&gt;TintTransformation&lt;/code&gt; directly as child of the &lt;code&gt;Setter&lt;/code&gt;’s &lt;code&gt;Value&lt;/code&gt;.)&lt;/p&gt;
+
+&lt;p&gt;I think this’ a bug on such control, so will fill it just in case.&lt;/p&gt;
+
+&lt;p&gt;Finally, I’ve found a solution for converters chaining, where I needed a
+&lt;code&gt;!Any(list)&lt;/code&gt; operation:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;    &lt;converters:ValueConverterGroup x:Key="NotAnyConverter"&gt;  
+        &lt;converters:AnyConverter /&gt;  
+        &lt;converters:InverseBoolConverter /&gt;  
+    &lt;/converters:ValueConverterGroup&gt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;Above magic comes from
+&lt;a href="https://gist.github.com/QiMata/b674d8b5a9e8a65910c9"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Thu, 22 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Git-LFS &amp; CarouselView &amp; Xamarin.Forms Chrome's shortcut</title>
   <guid>https://marcoscobena.com/#/2018-2-21</guid>
   <description>&lt;p&gt;Today I’ve started to help in a new project where Design is quite strict —which
