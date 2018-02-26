@@ -15,6 +15,14 @@ and this makes exactly the same on macOS. Worth the price
 
  
 
+**🆕 ColorSlurp** —`CMD` + `MAY` + `M` and you’ll get a small magnifier which
+tells the color in hex format. Not only it’s handy for such, but also for
+aligning things close in pixels
+
+<https://itunes.apple.com/es/app/colorslurp/id1287239339?mt=12>
+
+ 
+
 **Device Metrics** —idem as (1)
 
 <https://material.io/devices/>
@@ -48,6 +56,14 @@ densities (Target DP Width is that which will have in mdpi) 
 
 NOTE: in macOS, place the plug-in under `/Users/marcos/Library/Application
 Support/GIMP/2.8/modules`.
+
+ 
+
+**🆕 Lorem Pixel** —returns random images categorized through topics and sizes.
+Quite useful when outlining UIs which have images. My fuchsia `BoxView`
+replacement
+
+<http://lorempixel.com/>
 
  
 

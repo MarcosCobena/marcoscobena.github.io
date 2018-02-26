@@ -4,6 +4,102 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Tools</title>
+  <guid>https://marcoscobena.com/#/tools</guid>
+  <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Android File Transfer&lt;/strong&gt; —self-explanatory&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.android.com/filetransfer/"&gt;https://www.android.com/filetransfer/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BetterSnapTools&lt;/strong&gt; —I like a lot how Windows adapts such when taken into edges
+and this makes exactly the same on macOS. Worth the price&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://itunes.apple.com/es/app/bettersnaptool/id417375580?mt=12"&gt;https://itunes.apple.com/es/app/bettersnaptool/id417375580?mt=12&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;🆕 ColorSlurp&lt;/strong&gt; —&lt;code&gt;CMD&lt;/code&gt; + &lt;code&gt;MAY&lt;/code&gt; + &lt;code&gt;M&lt;/code&gt; and you’ll get a small magnifier which
+tells the color in hex format. Not only it’s handy for such, but also for
+aligning things close in pixels&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://itunes.apple.com/es/app/colorslurp/id1287239339?mt=12"&gt;https://itunes.apple.com/es/app/colorslurp/id1287239339?mt=12&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Device Metrics&lt;/strong&gt; —idem as (1)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://material.io/devices/"&gt;https://material.io/devices/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disk Inventory X&lt;/strong&gt; —app to show a tree map with directories size, very handy
+for debugging where the hell an app is taking so much space in disk&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.derlien.com/"&gt;http://www.derlien.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DPI love (1)&lt;/strong&gt; —which DPI a specific device has&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://dpi.lv/"&gt;http://dpi.lv/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GIF speed changer&lt;/strong&gt; —when Designers send me GIFs to showcase what they’re
+pretending I find really useful to decrease motion to perceive small details&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://ezgif.com/speed/"&gt;https://ezgif.com/speed/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;gimp-android-xdpi&lt;/strong&gt; —plug-in to export current image into multiple Android
+densities (Target DP Width is that which will have in mdpi) &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/ncornette/gimp-android-xdpi"&gt;https://github.com/ncornette/gimp-android-xdpi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE: in macOS, place the plug-in under &lt;code&gt;/Users/marcos/Library/Application
+Support/GIMP/2.8/modules&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;🆕 Lorem Pixel&lt;/strong&gt; —returns random images categorized through topics and sizes.
+Quite useful when outlining UIs which have images. My fuchsia &lt;code&gt;BoxView&lt;/code&gt;
+replacement&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://lorempixel.com/"&gt;http://lorempixel.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vysor&lt;/strong&gt; —the best way I know to work as with an emulator but on an actual
+Android device, worth purchasing&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.vysor.io/"&gt;https://www.vysor.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3&gt;Visual Studio for Mac&lt;/h3&gt;
+
+&lt;p&gt;If not said explicitly these are available through existing repositories at
+Visual Studio &gt; Extensions… &gt; Gallery.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MS Solution Launcher&lt;/strong&gt; —multiple instances of Visual Studio at the same time&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/Redth/MSSolutionLauncher"&gt;https://github.com/Redth/MSSolutionLauncher&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Redth’s Addins (IDE extensions)&lt;/strong&gt; —I can’t imagine VS withouth the Obliterate
+output paths menu option: removes every bin/obj folder&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Sun, 25 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>FFImageLoading's SVGCachedImage &amp; converters chaining</title>
   <guid>https://marcoscobena.com/#/2018-2-22</guid>
   <description>&lt;p&gt;After enjoying so much crafting a screen, today I’ve worked on the small details
@@ -98,7 +194,7 @@ sorting it out —read my comment at bottom.&lt;/p&gt;
 
 &lt;p&gt;Honestly, I think will try to, from today, add every asset as SVG since Zeplin,
 for instance, supports that export option, and you avoid messing with Android’s
-densities, iOS' \@Nx, etc.; giving our users the best result in their screens.&lt;/p&gt;
+densities, iOS' &lt;code&gt;@Nx&lt;/code&gt;, etc.; giving our users the best result in their screens.&lt;/p&gt;
 
 &lt;p&gt;The only thing which worries me’s that FFImageLoading depends on SkiaSharp for
 drawing SVGs, and read some months ago each time you work with a Skia’s canvas
@@ -220,86 +316,6 @@ filled&lt;/a&gt;, where
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <category>Xamarin</category>
   <pubDate>Thu, 15 Feb 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Tools</title>
-  <guid>https://marcoscobena.com/#/tools</guid>
-  <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Android File Transfer&lt;/strong&gt; —self-explanatory&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.android.com/filetransfer/"&gt;https://www.android.com/filetransfer/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;BetterSnapTools&lt;/strong&gt; —I like a lot how Windows adapts such when taken into edges
-and this makes exactly the same on macOS. Worth the price&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://itunes.apple.com/es/app/bettersnaptool/id417375580?mt=12"&gt;https://itunes.apple.com/es/app/bettersnaptool/id417375580?mt=12&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Device Metrics&lt;/strong&gt; —idem as (1)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://material.io/devices/"&gt;https://material.io/devices/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Disk Inventory X&lt;/strong&gt; —app to show a tree map with directories size, very handy
-for debugging where the hell an app is taking so much space in disk&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www.derlien.com/"&gt;http://www.derlien.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;DPI love (1)&lt;/strong&gt; —which DPI a specific device has&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://dpi.lv/"&gt;http://dpi.lv/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;GIF speed changer&lt;/strong&gt; —when Designers send me GIFs to showcase what they’re
-pretending I find really useful to decrease motion to perceive small details&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://ezgif.com/speed/"&gt;https://ezgif.com/speed/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;gimp-android-xdpi&lt;/strong&gt; —plug-in to export current image into multiple Android
-densities (Target DP Width is that which will have in mdpi) &lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/ncornette/gimp-android-xdpi"&gt;https://github.com/ncornette/gimp-android-xdpi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;NOTE: in macOS, place the plug-in under &lt;code&gt;/Users/marcos/Library/Application
-Support/GIMP/2.8/modules&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Vysor&lt;/strong&gt; —the best way I know to work as with an emulator but on an actual
-Android device, worth purchasing&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.vysor.io/"&gt;https://www.vysor.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h3&gt;Visual Studio for Mac&lt;/h3&gt;
-
-&lt;p&gt;If not said explicitly these are available through existing repositories at
-Visual Studio &gt; Extensions… &gt; Gallery.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;MS Solution Launcher&lt;/strong&gt; —multiple instances of Visual Studio at the same time&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/Redth/MSSolutionLauncher"&gt;https://github.com/Redth/MSSolutionLauncher&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Redth’s Addins (IDE extensions)&lt;/strong&gt; —I can’t imagine VS withouth the Obliterate
-output paths menu option: removes every bin/obj folder&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <category>Xamarin</category>
-  <pubDate>Wed, 14 Feb 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Suave scroll-less lists in Xamarin.Forms</title>
