@@ -4,6 +4,29 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>xUnit &amp; SQLite</title>
+  <guid>https://marcoscobena.com/#/2018-2-26</guid>
+  <description>&lt;p&gt;On past Friday I found a bug in the screen was working related to how things are
+stored in the DB —SQLite, actually. My mates had already done an Unit Testing
+project, powered by xUnit, so have gone in and added a test which reproduces my
+issue.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I come from NUnit. Doing pair programming with a new workmate who
+have joined the company today, we found out &lt;a href="https://xunit.github.io/docs/comparisons.html"&gt;this comparison
+table&lt;/a&gt; which answered to my
+scaffolding questions —and I’ve liked a lot how xUnit makes things simpler, i.e.
+using &lt;code&gt;IDisposable.Dispose()&lt;/code&gt; for the tear down.&lt;/p&gt;
+
+&lt;p&gt;Talking about the disposing, we want the DB to be reset prior to any test run,
+and initially dropped the DB file with &lt;code&gt;System.IO.File&lt;/code&gt; helpers. Obviously this
+went into a race condition where SQLite throws some read-only exceptions and
+&lt;a href="https://github.com/oysteinkrog/SQLite.Net-PCL/issues/264"&gt;this thread&lt;/a&gt; helped
+us to solve it —a simple “VACUUM” and done.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Mon, 26 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Tools</title>
   <guid>https://marcoscobena.com/#/tools</guid>
   <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
