@@ -4,6 +4,30 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>SQLite &amp; Material Design Frames on iOS</title>
+  <guid>https://marcoscobena.com/#/2018-2-27</guid>
+  <description>&lt;p&gt;Today I’ve needed to debug how our DB is physically created —tables and PKs— and
+Pulido (thanks man!) told me to enable tracing so every query gets printed (we
+found it
+&lt;a href="http://igrali.com/2015/03/12/output-sqlite-queries-using-sqlite-net-in-universal-apps/"&gt;here&lt;/a&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;connection = new SQLiteAsyncConnection(DatabasePath) { Trace = true };&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Our app uses Material Design card views here and there, and we already have a
+custom &lt;code&gt;Frame&lt;/code&gt; which disables shadows on iOS because of default ones are quite
+dark and wide. Between
+&lt;a href="https://alexdunn.org/2017/05/01/xamarin-tips-making-your-ios-frame-shadows-more-material/"&gt;this&lt;/a&gt;
+Alex Dunn’s article,
+&lt;a href="https://medium.com/material-design-for-ios/part-1-elevation-e48ff795c693"&gt;this&lt;/a&gt;
+other one on moving elevation to iOS and
+&lt;a href="https://stackoverflow.com/questions/9761189/whats-the-best-way-to-add-a-drop-shadow-to-my-uiview"&gt;this&lt;/a&gt;
+last one on applying shadows to &lt;code&gt;UIView&lt;/code&gt; we got almost identical shadows on both
+platforms. Yeah!&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Wed, 28 Feb 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>xUnit &amp; SQLite</title>
   <guid>https://marcoscobena.com/#/2018-2-26</guid>
   <description>&lt;p&gt;On past Friday I found a bug in the screen was working related to how things are
