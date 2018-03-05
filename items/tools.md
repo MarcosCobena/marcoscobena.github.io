@@ -15,9 +15,9 @@ and this makes exactly the same on macOS. Worth the price
 
  
 
-**🆕 ColorSlurp** —`CMD` + `MAY` + `M` and you’ll get a small magnifier which
-tells the color in hex format. Not only it’s handy for such, but also for
-aligning things close in pixels
+**ColorSlurp** —`CMD` + `MAY` + `M` and you’ll get a small magnifier which tells
+the color in hex format. Not only it’s handy for such, but also for aligning
+things close in pixels
 
 <https://itunes.apple.com/es/app/colorslurp/id1287239339?mt=12>
 
@@ -59,11 +59,18 @@ Support/GIMP/2.8/modules`.
 
  
 
-**🆕 Lorem Pixel** —returns random images categorized through topics and sizes.
+**Lorem Pixel** —returns random images categorized through topics and sizes.
 Quite useful when outlining UIs which have images. My fuchsia `BoxView`
 replacement
 
 <http://lorempixel.com/>
+
+ 
+
+**🆕 SQLite Browser** —almost every app ends up with a local SQLite DB, and can
+explore its content with it
+
+<http://sqlitebrowser.org/>
 
  
 
@@ -82,6 +89,14 @@ Visual Studio \> Extensions… \> Gallery.
 **MS Solution Launcher** —multiple instances of Visual Studio at the same time
 
 <https://github.com/Redth/MSSolutionLauncher>
+
+ 
+
+**🆕 My custom key bindings** —after years using MonoDevelop, Xamarin Studio and
+now Visual Studio for Mac, I’ve finally customized a few key bindings which find
+very useful
+
+<https://gist.github.com/MarcosCobena/3b30e251249221478d1e17f02b6bab7b>
 
  
 
