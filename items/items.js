@@ -1,3 +1,4 @@
+addItem("VS for Mac bugs & LiteDB learning", "2018-3-5", "6/3/2018", false, "Xamarin");
 addItem("Tools", "tools", "5/3/2018", false, "Xamarin");
 addItem("Back with Wave Engine & some Visual Studio for Mac bugs", "2018-3-1", "2/3/2018", false, "Xamarin");
 addItem("SQLite & Material Design Frames on iOS", "2018-2-27", "1/3/2018", false, "Xamarin");

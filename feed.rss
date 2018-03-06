@@ -4,6 +4,36 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>VS for Mac bugs &amp; LiteDB learning</title>
+  <guid>https://marcoscobena.com/#/2018-3-5</guid>
+  <description>&lt;p&gt;I’ve started the day filling two bugs with VS for Mac had written down last
+week:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://bugzilla.xamarin.com/show_bug.cgi?id=60722"&gt;https://bugzilla.xamarin.com/show_bug.cgi?id=60722&lt;/a&gt; —the area to choose a
+device at toolbar wasn’t aligned with its corresponding touch one, but seems
+fixed and ready for 7.4!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://bugzilla.xamarin.com/show_bug.cgi?id=61249"&gt;https://bugzilla.xamarin.com/show_bug.cgi?id=61249&lt;/a&gt; —didn’t found any other
+one previously and particularly find this so useful: enabling direct search
+when pasting into CMD+. search bar&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My mate Juan called me during the morning to show a small but nice refactoring
+on the data layer of the app I was working on with them last week. He moved from
+SQLite to &lt;a href="https://github.com/mbdavid/LiteDB"&gt;LiteDB&lt;/a&gt;, mostly because there was
+no need for relational data, and SQLite was much more than actually needed.&lt;/p&gt;
+
+&lt;p&gt;I particularly moved my point of view during last years from having a shared
+start-up project for incoming needs into spending a few days at the beginning
+thinking what actually suits better for that current reality; for many reasons:
+control over codebase, growing bottom-up, etc. It’s also a good approach in
+life: going shopping because of a need instead of going shopping looking for
+what we may need. The second always takes to unneeded stuff.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Mon, 05 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Tools</title>
   <guid>https://marcoscobena.com/#/tools</guid>
   <description>&lt;p&gt;Those I use to work with in my daily job, mostly while developing apps:&lt;/p&gt;
