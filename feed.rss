@@ -4,6 +4,28 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Using again my sort of Visual State management</title>
+  <guid>https://marcoscobena.com/#/2018-3-6</guid>
+  <description>&lt;p&gt;Today I’ve doing a variety of things from contacting one of our customers,
+estimating an incoming project tooo actually work on a task from the first one.&lt;/p&gt;
+
+&lt;p&gt;Basically needed to add a sort of loading state to a summary view which pulls
+the results from the API, thus we don’t want success/failure banners to show
+before, mostly to avoid a heart attach in our users.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="#/2018-2-8"&gt;One month ago&lt;/a&gt; I wrote down my own version of a "Visual State"
+management which, from my point of view, simplifies the known version from
+WPF/Windows 8 aaand gives fine control over the storyboard to execute,
+everything with a minimal footprint and already usable on current Xamarin.Forms
+stable version.&lt;/p&gt;
+
+&lt;p&gt;So have done the fade in using above stuff, and liked how it still feels
+comfortable and solves the need quite well :-)&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Tue, 06 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>VS for Mac bugs &amp; LiteDB learning</title>
   <guid>https://marcoscobena.com/#/2018-3-5</guid>
   <description>&lt;p&gt;I’ve started the day filling two bugs with VS for Mac had written down last

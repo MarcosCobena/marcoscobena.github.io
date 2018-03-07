@@ -1,3 +1,4 @@
+addItem("Using again my sort of Visual State management", "2018-3-6", "7/3/2018", false, "Xamarin");
 addItem("VS for Mac bugs & LiteDB learning", "2018-3-5", "6/3/2018", false, "Xamarin");
 addItem("Tools", "tools", "5/3/2018", false, "Xamarin");
 addItem("Back with Wave Engine & some Visual Studio for Mac bugs", "2018-3-1", "2/3/2018", false, "Xamarin");
