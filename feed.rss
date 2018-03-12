@@ -4,6 +4,36 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Gathering Android's dentisty &amp; Entity Framework's CLI</title>
+  <guid>https://marcoscobena.com/#/2018-3-9</guid>
+  <description>&lt;p&gt;Yesterday we had our customer at office in order to review how the project’s
+going on. He told us which’s the final device our app will run on.&lt;/p&gt;
+
+&lt;p&gt;Creating a new emulator with Xamarin’s Android Devices gem —I’ve been using it
+almost daily during the last months and works quite good &amp;amp; stable— I wanted to
+set the most similar properties to the actual one, and with density didn’t
+really know its value: however, knew the diagonal and screen size in px so &lt;a href="http://kingscalculator.com/en/other-calculators/pixel-density-calculator"&gt;this
+calculator&lt;/a&gt;
+gave me the density.&lt;/p&gt;
+
+&lt;p&gt;In other aspects, I’ve been updating our database schema so had to work with
+Entity Framework’s CLI, where my friend Sergio helped a lot: for the record,
+these are the commands I used from PowerShell:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS YourCSProjInChargeOfDB&amp;gt; dotnet ef migrations list
+PS &amp;gt; dotnet ef migrations list --context AContext
+PS &amp;gt; dotnet ef migrations add ANewMigration
+PS &amp;gt; dotnet ef database update --context AContext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Sun, 11 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Using again my sort of Visual State management</title>
   <guid>https://marcoscobena.com/#/2018-3-6</guid>
   <description>&lt;p&gt;Today I’ve doing a variety of things from contacting one of our customers,
