@@ -4,6 +4,23 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Cannot connect to local IIS Express</title>
+  <guid>https://marcoscobena.com/#/2018-3-12</guid>
+  <description>&lt;p&gt;Hmm, when I’ve gone to locally debug my ASP.NET site which provides the API to
+my app, a got an alert saying something like We couldn’t connect to the local
+IIS Express server. Luckily,
+&lt;a href="https://stackoverflow.com/a/36801686"&gt;StackOverflow’s&lt;/a&gt; always there when you
+need it. I’d just add needed to run VS as Admin.&lt;/p&gt;
+
+&lt;p&gt;Most of my day has consisted on writing SQL queries to build a new scenario
+within our app, and I’ve missed a looot a way of friendly writing this in Excel
+maybe? but having the SQL back for “free”. Any ideas on existing stuff is
+reaaally welcomed.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Mon, 12 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Gathering Android's density &amp; Entity Framework's CLI</title>
   <guid>https://marcoscobena.com/#/2018-3-9</guid>
   <description>&lt;p&gt;Yesterday we had our customer at office in order to review how the project’s
