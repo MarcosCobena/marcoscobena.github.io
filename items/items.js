@@ -1,3 +1,4 @@
+addItem("Pushing our-selves into our users' perspective", "2018-3-13", "14/3/2018", false, "Xamarin");
 addItem("Cannot connect to local IIS Express", "2018-3-12", "13/3/2018", false, "Xamarin");
 addItem("Gathering Android's density & Entity Framework's CLI", "2018-3-9", "12/3/2018", false, "Xamarin");
 addItem("Using again my sort of Visual State management", "2018-3-6", "7/3/2018", false, "Xamarin");

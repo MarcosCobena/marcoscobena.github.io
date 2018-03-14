@@ -4,6 +4,27 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Pushing our-selves into our users' perspective</title>
+  <guid>https://marcoscobena.com/#/2018-3-13</guid>
+  <description>&lt;p&gt;Today I’ve finally deployed every NFC tag within our office to actual test the
+app. Independently on what our apps are all about, it reaaally helps a lot to
+put your-self in the user’s perspective. I mean not only using the app on a real
+device with a fake user or with fake data, but having to solve a real goal.&lt;/p&gt;
+
+&lt;p&gt;It’s funny because this’ not a common scenario have found out within the last
+years developing apps, sometimes because of our side —simply there’s no trigger
+to do that—, sometimes because of the business in place —working on a bank app
+you cannot real test it so easily, you know.&lt;/p&gt;
+
+&lt;p&gt;However, today I’ve felt it’s actually another face of the polygon we,
+developers, need to put care on: pushing our customers to prepare the field to
+move us a little bit more inside too, and pushing our-selves to see the value of
+doing this, even it’s another time-consuming point.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Tue, 13 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Cannot connect to local IIS Express</title>
   <guid>https://marcoscobena.com/#/2018-3-12</guid>
   <description>&lt;p&gt;Hmm, when I’ve gone to locally debug my ASP.NET site which provides the API to
