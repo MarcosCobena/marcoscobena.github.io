@@ -4,6 +4,26 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Let's use Control Templates</title>
+  <guid>https://marcoscobena.com/#/2018-3-14</guid>
+  <description>&lt;p&gt;I don’t know whether this happens to others as well but I still see my-self
+“discovering” new Xamarin.Forms' —actually in general— features as times goes
+by. Quoted discovering mostly because [in this case] knew its existence;
+however, didn’t apply it on a project of mine before. These all words to talk
+about Control Templates.&lt;/p&gt;
+
+&lt;p&gt;In my project there was an initial effort of building the entire UI conforming
+current design by those days, and we’ve reached a point where want to generally
+increase its font size, but had lots of &lt;code&gt;FontSize=X&lt;/code&gt; everywhere in XAML.&lt;/p&gt;
+
+&lt;p&gt;So, instead of just moving this into styles, I decided to move all that repeated
+code into Control Templates, where the &lt;code&gt;TemplateBinding&lt;/code&gt; asteroid came perfect
+for me, as we bing stuff to current Page/VM.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Wed, 14 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Pushing our-selves into our users' perspective</title>
   <guid>https://marcoscobena.com/#/2018-3-13</guid>
   <description>&lt;p&gt;Today I’ve finally deployed every NFC tag within our office to actual test the
