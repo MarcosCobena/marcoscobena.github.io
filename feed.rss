@@ -4,6 +4,45 @@
 <description>I write apps for people using Xamarin</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>How to centralize font-related styling</title>
+  <guid>https://marcoscobena.com/#/2018-3-15</guid>
+  <description>&lt;p&gt;One of the much things you learn when work with different people’s how they
+handle those same things you work on. A few weeks ago I spent two or three days
+on a Forms app where styles were pretty much taken into serious consideration,
+from my point of view.&lt;/p&gt;
+
+&lt;p&gt;I loved how they were handling font-related stuff that have started applying
+that approach in mine. It’s quite simple, i.e.:&lt;/p&gt;
+
+&lt;p&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;    &lt;Style x:Key="16FontStyle" TargetType="Label"&gt;
+        &lt;Setter Property="FontSize" Value="16" /&gt;
+    &lt;/Style&gt;&lt;/p&gt;
+
+&lt;p&gt;    &lt;Style 
+        x:Key="16BoldFontStyle" 
+        BasedOn="{StaticResource 16FontStyle}" 
+        TargetType="Label"&gt;
+        &lt;Setter Property="FontAttributes" Value="Bold" /&gt;
+    &lt;/Style&gt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Every &lt;code&gt;Label&lt;/code&gt; consumes these sort of styles. And one of the following tasks have
+to work on is replacing the font family, but only have to do that change in a
+single place. The same, increasing globally the font size because it feels too
+small in some devices.&lt;/p&gt;
+
+&lt;p&gt;How do you handle these things? Have a different approach which feel really
+work? I’m sure there’s still plenty of space to grow. Thanks in advance if you
+share anything!&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <category>Xamarin</category>
+  <pubDate>Thu, 15 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Let's use Control Templates</title>
   <guid>https://marcoscobena.com/#/2018-3-14</guid>
   <description>&lt;p&gt;I don’t know whether this happens to others as well but I still see my-self

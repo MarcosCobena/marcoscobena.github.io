@@ -1,3 +1,4 @@
+addItem("How to centralize font-related styling", "2018-3-15", "16/3/2018", false, "Xamarin");
 addItem("Let's use Control Templates", "2018-3-14", "15/3/2018", false, "Xamarin");
 addItem("Pushing our-selves into our users' perspective", "2018-3-13", "14/3/2018", false, "Xamarin");
 addItem("Cannot connect to local IIS Express", "2018-3-12", "13/3/2018", false, "Xamarin");
