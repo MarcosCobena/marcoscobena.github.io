@@ -1,13 +1,7 @@
-﻿
-<html>
+﻿<html>
 	<head>
 		<title></title>
 
-        <link rel="shortcut icon" href="favicon.png" type="image/png" />
-
-        <link rel="alternate" type="application/rss+xml" title="Marcos Cobeña Morián" href="feed.rss" />
-
-		<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,13 +14,12 @@
             body {
                 color: #333;
                 font-family: 'Raleway', sans-serif;
-                margin: 0 auto;
+                margin: 0px auto;
                 max-width: 750px;
             }
 
             #bodyWrapper {
-                height: inherit; min-height: 100%;
-                padding: 1.5em 1em 1em;
+                height: inherit;
             }
 
             .center {
@@ -34,33 +27,30 @@
             }
 
             h1, h2, h3, h4, h5 {
-                font-weight: 900;
                 line-height: 1.25em;
             }
 
             .item-date {
-                font-size: 1em;
+				/* Intentionally blank */
             }
 
             .item-title {
-                font-size: 2em;
+				/* Intentionally blank */
             }
 
-            #powered-by {
-                font-size: 0.75em;
-                margin-top: 3em;
-            }
+			#items {
+				margin: 12.5% 0% 33.34%;
+			}
 
             .signature {
                 margin-top: 1.5em;
-                text-align: right;
             }
 
             #title {
-                font-family: 'Parisienne', cursive;
-                text-align: center;
+				margin: 25% 0%;
+                text-align: right;
             }
-    </style>
+    	</style>
 		
 		<script src="scripts/jquery-3.1.1.min.js"></script>
 
@@ -72,7 +62,6 @@
 		<script type="text/javascript">
 			var items = [];
 			var converter = new showdown.Converter();
-			var currentItem;
 
 			function addItem(title, filename, date, hidden = false) {
 				var item = { title: title, filename: filename, date: date, hidden: hidden };
@@ -81,7 +70,6 @@
 
 				Path.map("#/" + filename)
 					.to(function () {
-						currentItem = item;
 					    loadItem(filename);
 					});
 			}
@@ -114,75 +102,21 @@
 					document.title = item.title;
 
 					var title = '<span class="item-title">' + item.title + '</span>';
-					var weAreAtHome = item.filename == "home";
-
-					if (!weAreAtHome) {
-						title += '<br /><span class="item-date">' + item.date + '</span>';
-					}
-
 					$("#title").html(title);
 
     				var body = converter.makeHtml(data);
-
 					$("#actualBody").html(body);
 
-					if (weAreAtHome) {
-						$("#navigationBar").hide();
-						populateItems();
-						populateLatestMediumStories();
-					}
-					else {
-						$("#navigationBar").show();
-
-                        if (weAreAtInternet()) {
-    						DISQUS.reset({
-    							reload: true,
-    							config: function () {
-    								this.page.identifier = item.filename;
-                                    var url = window.location.href;
-                                    url = url.replace("#", "#!");
-    								this.page.url = url;
-    							}});
-                        }
-					}
+					populateItems();
 
 					window.scrollTo(0, 0);
 				});
 			}
 
-			function loadNextItem() {
-				loadNextOrPreviousItem(true);
-			}
-
-			function loadNextOrPreviousItem(isNextOrPrevious) {
-				if (currentItem == null) {
-					return;
-				}
-
-				var currentItemIndex = items.findIndex(function(item) {
-						return item == currentItem;
-					});
-
-				if (isNextOrPrevious && currentItemIndex <= 0 ||
-					!isNextOrPrevious && currentItemIndex >= items.length - 1) {
-					return;
-				}
-
-				var newItemIndex = isNextOrPrevious ?
-					currentItemIndex - 1 :
-					currentItemIndex + 1;
-				var newItem = items[newItemIndex];
-				forceNavigationTo(newItem.filename);
-			}
-
-			function loadPreviousItem() {
-				loadNextOrPreviousItem(false);
-			}
-
 			function populateItems()
 			{
 				$("#items").empty();
-				$("#items").append("<option>Choose an entry...</option>");
+				$("#items").append("<option>Menu</option>");
 
 				for (var i = 0; i < items.length; i++) {
 					var item = items[i];
@@ -192,7 +126,7 @@
 					}
 
 					var html = '<option value="' + item.filename + '">' +
-						item.title + ' - ' + item.date +
+						item.title +
 						'</option>';
 					$("#items").append(html);
 				}
@@ -201,82 +135,28 @@
 					forceNavigationTo(this.value);
 				});
 			}
-
-			function populateLatestMediumStories() {
-				var data = {
-					api_key: "u4qu6potisc2xktyr88xjhdml5cnq29paoksv8gl",
-					count: 3,
-					rss_url: "https://medium.com/feed/@MarcosCobena"
-				};
-				$.get("https://api.rss2json.com/v1/api.json", data, function (response) {
-					if (response.status != 'ok') {
-						return;
-					}
-
-					var output = "<ul>";
-					$.each(response.items, function (k, item) {
-						output += "<li>\n" +
-							'<a href="'+ item.link + '">' + item.title + "</a>" +
-							"</li>";
-					});
-					output += "<li>\n" +
-						'<a href="https://medium.com/@MarcosCobena">See all...</a>' +
-						"</li>";
-					output += "</ul>";
-					$("#medium").html(output);
-				});
-			}
-
-            function weAreAtInternet() {
-                if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-
-            if (weAreAtInternet()) {
-                // Here starts Disqus set-up
-                var disqus_config = function () {
-                    this.page.url = "http://marcoscobena.com/#!/home";
-                    this.page.identifier = "home";
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://marcoscobena.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-                // Here ends Disqus set-up
-            }
 		</script>
 
 		<script src="items/items.js"></script>
 	</head>
 	<body onload='entryPoint()'>
 		<div id="bodyWrapper">
-			<p id="navigationBar" class="center" style="display: none">
-				<a href="javascript:loadPreviousItem()">&larr; Previous</a> | <a href="javascript:loadNextItem()">Next &rarr;</a>
-			</p>
-
-			<div id="title">
-			</div>
+			<h1 id="title">
+			</h1>
 			
 			<div id="actualBody">
 				<div class="center">⏳</div>
 			</div>
 
 			<p class="signature">
-				–<a href="#/home">Marcos Cobeña-Morián</a>
+				—<a href="mailto:marcoscm.digital@gmail.com">Marcos</a>
 			</p>
 
-            <div id="disqus_thread"></div>
+			<div class="center">
+				<select id="items"></select>
+			</div>
 
             <noscript>This site needs JavaScript enabled, please activate it to enjoy what's to come 👌</noscript>
-
-            <div id="powered-by" class="center">
-                <em>Pst!</em> All this' powered by Mr. <a href="https://github.com/MarcosCobena/marcoscobena.github.io">Hyde</a> 👹
-            </div>
 		</div>
 	</body>
 </html>
