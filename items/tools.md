@@ -15,6 +15,13 @@ and this makes exactly the same on macOS. Worth the price
 
  
 
+**🆕 Charles** —Fiddler for macOS: debug network connections, very useful when
+struggling with HTTP calls from an app which doesn’t work as expected
+
+<https://www.charlesproxy.com>
+
+ 
+
 **ColorSlurp** —`CMD` + `MAY` + `M` and you’ll get a small magnifier which tells
 the color in hex format. Not only it’s handy for such, but also for aligning
 things close in pixels
@@ -59,6 +66,14 @@ Support/GIMP/2.8/modules`.
 
  
 
+**🆕 JSON Viewer** —a customer I was working with introduced me this wonderful
+one, and like a lot because builds a tree view from any pasted payload, and even
+formats it beautifully
+
+<http://jsonviewer.stack.hu/>
+
+ 
+
 **Lorem Pixel** —returns random images categorized through topics and sizes.
 Quite useful when outlining UIs which have images. My fuchsia `BoxView`
 replacement
@@ -67,7 +82,7 @@ replacement
 
  
 
-**🆕 SQLite Browser** —almost every app ends up with a local SQLite DB, and can
+**SQLite Browser** —almost every app ends up with a local SQLite DB, and can
 explore its content with it
 
 <http://sqlitebrowser.org/>
@@ -92,7 +107,7 @@ Visual Studio \> Extensions… \> Gallery.
 
  
 
-**🆕 My custom key bindings** —after years using MonoDevelop, Xamarin Studio and
+**My custom key bindings** —after years using MonoDevelop, Xamarin Studio and
 now Visual Studio for Mac, I’ve finally customized a few key bindings which find
 very useful
 
