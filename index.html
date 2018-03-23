@@ -20,6 +20,7 @@
 
             #bodyWrapper {
                 height: inherit;
+				margin: 0 16pt;
             }
 
             .center {
@@ -30,16 +31,12 @@
                 line-height: 1.25em;
             }
 
-            .item-date {
-				/* Intentionally blank */
-            }
-
-            .item-title {
-				/* Intentionally blank */
-            }
-
 			#items {
 				margin: 12.5% 0% 33.34%;
+				list-style-type: none;
+				padding: 0;
+				text-align: right;
+				line-height: 2em;
 			}
 
             .signature {
@@ -101,8 +98,7 @@
 
 					document.title = item.title;
 
-					var title = '<span class="item-title">' + item.title + '</span>';
-					$("#title").html(title);
+					$("#title").html(item.title);
 
     				var body = converter.makeHtml(data);
 					$("#actualBody").html(body);
@@ -116,7 +112,6 @@
 			function populateItems()
 			{
 				$("#items").empty();
-				$("#items").append("<option>Menu</option>");
 
 				for (var i = 0; i < items.length; i++) {
 					var item = items[i];
@@ -125,15 +120,14 @@
 						continue;
 					}
 
-					var html = '<option value="' + item.filename + '">' +
+					var html = '<li><a href="#/' + item.filename + '">' +
 						item.title +
-						'</option>';
+						'</a></li>';
 					$("#items").append(html);
 				}
 
-				$("#items").change(function () {
-					forceNavigationTo(this.value);
-				});
+				var thanks = '<li>:-)</li>';
+				$("#items").append(thanks);
 			}
 		</script>
 
@@ -141,8 +135,7 @@
 	</head>
 	<body onload='entryPoint()'>
 		<div id="bodyWrapper">
-			<h1 id="title">
-			</h1>
+			<h1 id="title"></h1>
 			
 			<div id="actualBody">
 				<div class="center">⏳</div>
@@ -152,9 +145,7 @@
 				—<a href="mailto:marcoscm.digital@gmail.com">Marcos</a>
 			</p>
 
-			<div class="center">
-				<select id="items"></select>
-			</div>
+			<ul id="items"></ul>
 
             <noscript>This site needs JavaScript enabled, please activate it to enjoy what's to come 👌</noscript>
 		</div>
