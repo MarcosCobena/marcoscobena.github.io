@@ -15,7 +15,7 @@ and this makes exactly the same on macOS. Worth the price
 
  
 
-**🆕 Charles** —Fiddler for macOS: debug network connections, very useful when
+**Charles** —Fiddler for macOS: debug network connections, very useful when
 struggling with HTTP calls from an app which doesn’t work as expected
 
 <https://www.charlesproxy.com>
@@ -66,8 +66,8 @@ Support/GIMP/2.8/modules`.
 
  
 
-**🆕 JSON Viewer** —a customer I was working with introduced me this wonderful
-one, and like a lot because builds a tree view from any pasted payload, and even
+**JSON Viewer** —a customer I was working with introduced me this wonderful one,
+and like a lot because builds a tree view from any pasted payload, and even
 formats it beautifully
 
 <http://jsonviewer.stack.hu/>
@@ -86,6 +86,14 @@ replacement
 explore its content with it
 
 <http://sqlitebrowser.org/>
+
+ 
+
+**🆕 VirtualBox** —the software I run to virtualize Windows under macOS. I keep
+[here](https://medium.com/@MarcosCobena/tips-tricks-to-rely-in-virtualbox-e9e28c8cd180)
+all those tips & tricks which make my experience smoother.
+
+<https://www.virtualbox.org/>
 
  
 
