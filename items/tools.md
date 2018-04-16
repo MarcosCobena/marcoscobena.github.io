@@ -89,7 +89,23 @@ explore its content with it
 
  
 
-**🆕 VirtualBox** —the software I run to virtualize Windows under macOS. I keep
+**🆕 pidcat** —there’s no need to run Android Device Monitor for just logs, this
+CLI tool makes a great job directly from the Terminal. Thanks to [Javi
+Pulido](https://twitter.com/pulimento) who introduced me this.
+
+<https://github.com/JakeWharton/pidcat>
+
+NOTE: I had to add Android’s SDK to PATH manually:
+
+`export
+PATH=$PATH:/Users/marcos/Library/Developer/Xamarin/android-sdk-macosx/platform-tools`
+
+`export
+PATH=$PATH:/Users/marcos/Library/Developer/Xamarin/android-sdk-macosx/tools`
+
+ 
+
+**VirtualBox** —the software I run to virtualize Windows under macOS. I keep
 [here](https://medium.com/@MarcosCobena/tips-tricks-to-rely-in-virtualbox-e9e28c8cd180)
 all those tips & tricks which make my experience smoother.
 
