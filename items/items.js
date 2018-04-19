@@ -7,6 +7,7 @@
 
 addItem("Home", "home", "17/3/2018");
 addItem("Conferences", "conferences", "7/12/2017");
+addItem("Reading", "reading", "19/4/2018");
 addItem("Tools", "tools", "5/3/2018", false, "Xamarin");
 addItem("🤷", "404", "15/2/2018", true);
 // addItem("DEBUG", "debug", "1/1/1970");
