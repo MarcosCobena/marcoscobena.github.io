@@ -12,13 +12,15 @@ childhood video-games: Monkey Island
 [jimmac.musichall.cz](http://jimmac.musichall.cz) —Love Jimmac's commitment to
 Gimp, Inkscape & Blender, and his top quality
 
+[joseantoniocobena.com](https://www.joseantoniocobena.com) —*Papá* ☺️
+
 [sivers.org](https://sivers.org) —Oriol introduced me his book Anything You
 Want, and deeply moved my interior
 
 ### Xamarin/.NET
 
-[planetxamarin.com](https://www.planetxamarin.com) —Some of the most influent
-Developers on Xamarin are listed here
+[planetxamarin.com](https://www.planetxamarin.com/preview) —Some of the most
+influent Developers on Xamarin are listed here
 
 [praeclarum.org](http://praeclarum.org) —A really clever Developer who creates
 wonderful things with .NET
