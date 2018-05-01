@@ -51,51 +51,87 @@
 		
 		<script src="scripts/jquery-3.1.1.min.js"></script>
 
-		<!-- Path.js provides path (yeah...) handling to make this behave like an actual web app -->
-		<script src="scripts/path.min.js"></script>
-		
 		<script src="scripts/showdown.min.js"></script>
 		
 		<script type="text/javascript">
 			var items = [];
 			var converter = new showdown.Converter();
+			var urlSeparator = "#/";
+
+			$(document).on('click', 'a', function(event) {
+				var href = $(this).attr("href");
+				
+				if (href.startsWith("http") || href.startsWith("mailto:")) {
+					event.returnValue = false;
+					return;
+				}
+
+				event.preventDefault();
+
+				var filename = getJustFilename(href);
+				// TODO handle undefined item
+				var item = findItem(filename);
+				history.pushState({ filename: filename }, "", urlSeparator + filename);
+				loadItem(filename);
+			});
+
+			$(window).on('popstate', function(event) {
+				var state = event.originalEvent.state;
+
+				if (state !== null) {
+					loadItem(state.filename);
+				} else {
+					if (window.location.hash.length > 0) {
+						// User manually enters a different path
+						entryPoint();
+					} else {
+						// User taps back to root (i.e. https://marcoscobena.com)
+						pushHomeStateAndLoadIt();
+					}
+				}
+			});
 
 			function addItem(title, filename, date, hidden = false) {
 				var item = { title: title, filename: filename, date: date, hidden: hidden };
-
 				items.push(item);
-
-				Path.map("#/" + filename)
-					.to(function () {
-					    loadItem(filename);
-					});
 			}
 
 			function entryPoint() {
-				// At least we need a "home" item to serve as the landing one
-				Path.root("#/home");
+				var filename = getJustFilename(window.location.href);
 
-				Path.rescue(function () {
-					forceNavigationTo("404");
-				});
-
-				Path.listen();
-			}
-
-			function forceNavigationTo(filename) {
-				if (filename) {
-					window.location.href = window.location.origin + "/#/" + filename;
+				if (filename.length > 0) {
+					loadItem(filename);
+				} else {
+					pushHomeStateAndLoadIt();
 				}
 			}
 
+			function findItem(filename) {
+				var item = items.find(function(item) {
+					return item.filename == filename;
+				});
+
+				return item;
+			}
+
+			function getJustFilename(path) {
+				var lastSlashIndex = path.lastIndexOf("/");
+				var filename = path.substring(lastSlashIndex + 1);
+
+				return filename;
+			}
+
 			function loadItem(filename) {
+				var item = findItem(filename);
+
+				if (item == undefined) {
+					loadItem("404");
+					return;
+				}
+
 				var actualPath = "items/" + filename + ".md";
 
 				$.get(actualPath, function (data) {
-					var item = items.find(function(item) {
-						return item.filename == filename;
-					});
-
 					document.title = item.title;
 
 					$("#title").html(item.title);
@@ -120,7 +156,7 @@
 						continue;
 					}
 
-					var html = '<li><a href="#/' + item.filename + '">' +
+					var html = '<li><a href="' + urlSeparator + item.filename + '">' +
 						item.title +
 						'</a></li>';
 					$("#items").append(html);
@@ -128,6 +164,11 @@
 
 				var thanks = '<li>:-)</li>';
 				$("#items").append(thanks);
+			}
+
+			function pushHomeStateAndLoadIt() {
+				history.pushState({ filename: "home" }, "", urlSeparator + "home");
+				loadItem("home");
 			}
 		</script>
 
