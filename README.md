@@ -8,9 +8,13 @@ A web site generator which runs entirely in your browser:
 -   You just write Markdown in your preferred editor
     ([Texts](http://www.texts.io/), for instance);
 
+-   Navigation handled through HTML's `pushState()`, heading to enable Google actually crawls this;
+
+There are some other features which were available previously and still can be found in older commits, just ask and I'll glad help you find them:
+
 -   Anyone can comment thanks to Disqus support;
 
--   With built-in RSS feed generation
+-   Built-in RSS feed generation
 
 You have [Jekyll](https://github.com/jekyll/jekyll) and, now, [Mr.
 Hyde](https://github.com/MarcosCobena/marcoscobena.github.io) too —obviously you
@@ -29,19 +33,7 @@ How can I use it?
 
 3.  Go live!
 
-How can I generate a RSS feed?
-------------------------------
-
-1.  Build `Hyde/CLI/CLI.csproj` in Release mode —`Hyde/Hyde.sln` contains it too
-    along with an ASP.NET `Web.csproj` with the web it-self
-
-2.  Open a Terminal (macOS), command line (Windows) or similar at `Hyde/`
-
-3.  Type `mono hyde.exe` (macOS & Linux) or simply `hyde` (Windows)
-
 Could I contribute?
 -------------------
 
-Yes, sure, I'd really appreciate it! Have a look to the
-[Backlog](https://github.com/MarcosCobena/marcoscobena.github.io/issues/1) to
-see what I'm currently in.
+Yes, sure, I'd really appreciate it! However, I have no further expectations than spend a good time working on this to fit whichever need I may come up with. If this sounds good for you and have any change to share, please go ahead and send a PR.
