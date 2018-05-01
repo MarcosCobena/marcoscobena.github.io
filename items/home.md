@@ -1,8 +1,7 @@
 I write [software](https://github.com/MarcosCobena) &
 [stories](https://medium.com/@MarcosCobena) for people.
 
-My e-mail? Sure:
-[marcoscm.digital@gmail.com](mailto:marcoscm.digital@gmail.com)
+You can find my e-mail by tapping below signature.
 
 On April 2018 I recorded *Queso parmesano* while eating at an italian restaurant, thinking it'd serve to focus while working:
 <audio controls loop>
