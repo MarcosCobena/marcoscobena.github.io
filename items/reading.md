@@ -14,7 +14,7 @@ Gimp, Inkscape & Blender, and his top quality
 
 [joseantoniocobena.com](https://www.joseantoniocobena.com) —*Papá* ☺️
 
-[people.gnome.org/\~federico](https://people.gnome.org/~federico/) —Federico
+[people.gnome.org/~federico](https://people.gnome.org/~federico/) —Federico
 founded Gnome along with Miguel de Icaza, and enjoy visiting his site from time
 to time to see what’s he on
 
