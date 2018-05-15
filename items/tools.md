@@ -89,7 +89,7 @@ explore its content with it
 
  
 
-**🆕 pidcat** —there’s no need to run Android Device Monitor for just logs, this
+**pidcat** —there’s no need to run Android Device Monitor for just logs, this
 CLI tool makes a great job directly from the Terminal. Thanks to [Javi
 Pulido](https://twitter.com/pulimento) who introduced me this.
 
@@ -125,6 +125,20 @@ Android device, worth purchasing
 If not said explicitly these are available through existing repositories at
 Visual Studio \> Extensions… \> Gallery.
 
+ 
+
+**🆕 DeepClean (IDE extensions)** —not only deletes /bin & /obj folders but also
+cleans NuGet caches
+
+ 
+
+**🆕 FiraCode** —an absolute joyful font with beautiful ligatures for things
+like `=>`. Just choose it from VS’ Preferences
+
+<https://github.com/tonsky/FiraCode>
+
+ 
+
 **MS Solution Launcher** —multiple instances of Visual Studio at the same time
 
 <https://github.com/Redth/MSSolutionLauncher>
@@ -136,8 +150,3 @@ now Visual Studio for Mac, I’ve finally customized a few key bindings which fi
 very useful
 
 <https://gist.github.com/MarcosCobena/3b30e251249221478d1e17f02b6bab7b>
-
- 
-
-**Redth’s Addins (IDE extensions)** —I can’t imagine VS withouth the Obliterate
-output paths menu option: removes every bin/obj folder
