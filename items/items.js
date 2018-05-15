@@ -7,6 +7,7 @@
 
 addItem("Home", "home", "17/3/2018");
 addItem("Conferences", "conferences", "7/12/2017");
+addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Reading", "reading", "19/4/2018");
 addItem("Tools", "tools", "5/3/2018", false, "Xamarin");

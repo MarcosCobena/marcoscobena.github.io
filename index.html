@@ -2,11 +2,17 @@
 	<head>
 		<title></title>
 
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<style type="text/css">
+			a {
+				text-decoration-line: none;
+				box-shadow: 0px 1px #333;
+				color: #333;
+			}
+
             #actualBody {
                 line-height: 1.5em;
             }
@@ -29,7 +35,12 @@
 
             h1, h2, h3, h4, h5 {
                 line-height: 1.25em;
+				font-weight: 900;
             }
+
+			img {
+				width: 100%;
+			}
 
 			#items {
 				margin: 12.5% 0% 33.34%;
@@ -37,6 +48,21 @@
 				padding: 0;
 				text-align: right;
 				line-height: 2em;
+			}
+
+			#items a {
+				color: black;
+				display: inline-block;
+				background-color: lightgrey;
+				padding: 0px 6px;
+				text-decoration-line: none;
+				box-shadow: 2px 2px black;
+				font-weight: 700;
+			}
+
+			#items a:active {
+				box-shadow: 0px 0px;
+				background-color: darkgrey;
 			}
 
             .signature {
@@ -54,8 +80,13 @@
 		<script src="scripts/showdown.min.js"></script>
 		
 		<script type="text/javascript">
+			// TODO:
+			// - Enable back <a /> visited color states
+			// - Add some color here and there
+			// - Add any animation 8-)
+
 			var items = [];
-			var converter = new showdown.Converter();
+			var converter = new showdown.Converter({ tables: true });
 			var urlSeparator = "#/";
 
 			$(document).on('click', 'a', function(event) {
