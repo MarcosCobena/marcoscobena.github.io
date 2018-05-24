@@ -54,3 +54,8 @@ these with camera and goggles.
 | Buy one | [Banggood](https://www.banggood.com/Eachine-E013-Micro-FPV-Racing-Quadcopter-With-5_8G-1000TVL-40CH-Camera-VR006-VR-006-3-Inch-Goggles-p-1182628.html) |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 
+
+### Links of Interest
+
+-   <https://drones.enaire.es/#>: guides you on places to fly your drone within
+    Spain region.
