@@ -74,6 +74,13 @@ formats it beautifully
 
  
 
+**🆕 Lock Hunter** —if you can’t delete/rename any file/folder in Windows
+because someone else’s using it, this’ your tool
+
+<https://lockhunter.com/>
+
+ 
+
 **Lorem Pixel** —returns random images categorized through topics and sizes.
 Quite useful when outlining UIs which have images. My fuchsia `BoxView`
 replacement
@@ -127,13 +134,13 @@ Visual Studio \> Extensions… \> Gallery.
 
  
 
-**🆕 DeepClean (IDE extensions)** —not only deletes /bin & /obj folders but also
+**DeepClean (IDE extensions)** —not only deletes /bin & /obj folders but also
 cleans NuGet caches
 
  
 
-**🆕 FiraCode** —an absolute joyful font with beautiful ligatures for things
-like `=>`. Just choose it from VS’ Preferences
+**FiraCode** —an absolute joyful font with beautiful ligatures for things like
+`=>`. Just choose it from VS’ Preferences
 
 <https://github.com/tonsky/FiraCode>
 

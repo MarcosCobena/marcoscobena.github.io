@@ -18,6 +18,8 @@ Gimp, Inkscape & Blender, and his top quality
 founded Gnome along with Miguel de Icaza, and enjoy visiting his site from time
 to time to see what’s he on
 
+[planet.gnome.org](http://planet.gnome.org/) —What's going on with Gnome, I like their search for simplicity
+
 [sivers.org](https://sivers.org) —Oriol introduced me his book Anything You
 Want, and deeply moved my interior
 
