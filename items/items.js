@@ -11,7 +11,7 @@ addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Reading", "reading", "13/6/2018");
 addItem("Tools", "tools", "13/6/2018", false, "Xamarin");
-addItem("Snippets", "snippets", "13/6/2018");
+addItem("Snippets", "snippets", "14/6/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("🤷", "404", "15/2/2018", true);
 // addItem("DEBUG", "debug", "1/1/1970");
