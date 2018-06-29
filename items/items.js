@@ -13,6 +13,9 @@ addItem("Reading", "reading", "19/4/2018");
 addItem("Tools", "tools", "5/3/2018", false, "Xamarin");
 addItem("Snippets", "snippets", "24/5/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
+addItem("Audios", "audios", "28/5/2018");
+addItem("About", "about", "28/5/2018");
+
 addItem("🤷", "404", "15/2/2018", true);
 // addItem("DEBUG", "debug", "1/1/1970");
 

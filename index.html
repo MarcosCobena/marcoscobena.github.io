@@ -1,9 +1,10 @@
 ﻿<html>
 	<head>
-		<title></title>
+		<title>Marcos Cobeña Morián</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
 
+		<meta name="description" content="I write Software to solve people's problems" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<style type="text/css">
@@ -172,13 +173,13 @@
     				var body = converter.makeHtml(data);
 					$("#actualBody").html(body);
 
-					populateItems();
+					//populateItems();
 
 					window.scrollTo(0, 0);
 				});
 			}
 
-			function populateItems()
+			/*function populateItems()
 			{
 				$("#items").empty();
 
@@ -197,7 +198,7 @@
 
 				var thanks = '<li>:-)</li>';
 				$("#items").append(thanks);
-			}
+			}*/
 
 			function pushHomeStateAndLoadIt() {
 				history.pushState({ filename: "home" }, "", urlSeparator + "home");
@@ -212,16 +213,14 @@
 			<h1 id="title"></h1>
 			
 			<div id="actualBody">
-				<div class="center">⏳</div>
+				<noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
 			</div>
 
 			<p class="signature">
 				—<a href="mailto:marcoscm.digital@gmail.com">Marcos</a>
 			</p>
 
-			<ul id="items"></ul>
-
-            <noscript>This site needs JavaScript enabled, please activate it to enjoy what's to come 👌</noscript>
+			<!--<ul id="items"></ul>-->
 		</div>
 	</body>
 </html>
