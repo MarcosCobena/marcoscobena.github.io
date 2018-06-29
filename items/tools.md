@@ -110,7 +110,7 @@ PATH=$PATH:/Users/marcos/Library/Developer/Xamarin/android-sdk-macosx/platform-t
 `export
 PATH=$PATH:/Users/marcos/Library/Developer/Xamarin/android-sdk-macosx/tools`
 
- 
+- Pulido also wrote [this handy PowerShell script](https://gist.github.com/pulimento/ddd82080232360a49a2e4c751bf16515)
 
 **VirtualBox** —the software I run to virtualize Windows under macOS. I keep
 [here](https://medium.com/@MarcosCobena/tips-tricks-to-rely-in-virtualbox-e9e28c8cd180)
