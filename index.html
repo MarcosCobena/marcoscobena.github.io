@@ -1,9 +1,10 @@
 ﻿<html>
 	<head>
-		<title></title>
+		<title>Marcos Cobeña Morián</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
 
+		<meta name="description" content="I write Software to solve people's problems" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<style type="text/css">
@@ -42,31 +43,8 @@
 				width: 100%;
 			}
 
-			#items {
-				margin: 12.5% 0% 33.34%;
-				list-style-type: none;
-				padding: 0;
-				text-align: right;
-				line-height: 2em;
-			}
-
-			#items a {
-				color: black;
-				display: inline-block;
-				background-color: lightgrey;
-				padding: 0px 6px;
-				text-decoration-line: none;
-				box-shadow: 2px 2px black;
-				font-weight: 700;
-			}
-
-			#items a:active {
-				box-shadow: 0px 0px;
-				background-color: darkgrey;
-			}
-
             .signature {
-                margin-top: 1.5em;
+				margin: 1.5em 0% 33.34%;
             }
 
             #title {
@@ -80,13 +58,6 @@
 		<script src="scripts/showdown.min.js"></script>
 		
 		<script type="text/javascript">
-			// TODO:
-			// - Enable back <a /> visited color states
-			// - Add some color here and there
-			// - Add any animation 8-)
-			// - Make menu float at right and hamburguer-alike in mobile phones
-			// - https://blog.github.com/2018-05-01-github-pages-custom-domains-https/
-
 			var items = [];
 			var converter = new showdown.Converter({ tables: true });
 			var urlSeparator = "#/";
@@ -172,13 +143,13 @@
     				var body = converter.makeHtml(data);
 					$("#actualBody").html(body);
 
-					populateItems();
+					//populateItems();
 
 					window.scrollTo(0, 0);
 				});
 			}
 
-			function populateItems()
+			/*function populateItems()
 			{
 				$("#items").empty();
 
@@ -197,7 +168,7 @@
 
 				var thanks = '<li>:-)</li>';
 				$("#items").append(thanks);
-			}
+			}*/
 
 			function pushHomeStateAndLoadIt() {
 				history.pushState({ filename: "home" }, "", urlSeparator + "home");
@@ -212,16 +183,12 @@
 			<h1 id="title"></h1>
 			
 			<div id="actualBody">
-				<div class="center">⏳</div>
+				<noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
 			</div>
 
 			<p class="signature">
 				—<a href="mailto:marcoscm.digital@gmail.com">Marcos</a>
 			</p>
-
-			<ul id="items"></ul>
-
-            <noscript>This site needs JavaScript enabled, please activate it to enjoy what's to come 👌</noscript>
 		</div>
 	</body>
 </html>
