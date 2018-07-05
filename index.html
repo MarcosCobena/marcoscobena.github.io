@@ -65,7 +65,7 @@
 			$(document).on('click', 'a', function(event) {
 				var href = $(this).attr("href");
 				
-				if (href.startsWith("http") || href.startsWith("mailto:")) {
+				if (href.startsWith("http") || href.startsWith("mailto:") || !href.startsWith(urlSeparator)) {
 					event.returnValue = false;
 					return;
 				}
@@ -73,7 +73,6 @@
 				event.preventDefault();
 
 				var filename = getJustFilename(href);
-				// TODO handle undefined item
 				var item = findItem(filename);
 				history.pushState({ filename: filename }, "", urlSeparator + filename);
 				loadItem(filename);
