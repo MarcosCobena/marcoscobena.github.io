@@ -59,7 +59,10 @@
 		
 		<script type="text/javascript">
 			var items = [];
+			var posts = [];
 			var converter = new showdown.Converter({ tables: true });
+			var homeFilename = "home";
+			var resourceNotFoundFilename = "404";
 			var urlSeparator = "#/";
 
 			$(document).on('click', 'a', function(event) {
@@ -73,9 +76,7 @@
 				event.preventDefault();
 
 				var filename = getJustFilename(href);
-				// TODO handle undefined item
-				var item = findItem(filename);
-				history.pushState({ filename: filename }, "", urlSeparator + filename);
+				pushState(filename);
 				loadItem(filename);
 			});
 
@@ -95,9 +96,14 @@
 				}
 			});
 
-			function addItem(title, filename, date, hidden = false) {
-				var item = { title: title, filename: filename, date: date, hidden: hidden };
+			function addItem(title, filename, date) {
+				var item = { title: title, filename: filename, date: date };
 				items.push(item);
+			}
+
+			function addPost(title, filename, date) {
+				var post = { title: title, filename: filename, date: date };
+				posts.push(post);
 			}
 
 			function entryPoint() {
@@ -129,50 +135,77 @@
 				var item = findItem(filename);
 
 				if (item == undefined) {
-					loadItem("404");
+					loadItem(resourceNotFoundFilename);
 					return;
 				}
 
 				var actualPath = "items/" + filename + ".md";
 
-				$.get(actualPath, function (data) {
-					document.title = item.title;
-
-					$("#title").html(item.title);
-
-    				var body = converter.makeHtml(data);
-					$("#actualBody").html(body);
-
-					//populateItems();
-
-					window.scrollTo(0, 0);
+				$.get(actualPath, function (data) { 
+					render(item, data); 
 				});
 			}
 
-			/*function populateItems()
-			{
-				$("#items").empty();
+			function loadPost(filename) {
+				var item = posts.find(function(post) {
+					return post.filename == filename;
+				});
 
-				for (var i = 0; i < items.length; i++) {
-					var item = items[i];
-
-					if (item.hidden) {
-						continue;
-					}
-
-					var html = '<li><a href="' + urlSeparator + item.filename + '">' +
-						item.title +
-						'</a></li>';
-					$("#items").append(html);
+				if (item == undefined) {
+					loadItem(resourceNotFoundFilename);
+					return;
 				}
 
-				var thanks = '<li>:-)</li>';
-				$("#items").append(thanks);
-			}*/
+				pushState(filename);
+
+				var actualPath = "items/" + filename + ".md";
+
+				$.get(actualPath, function (data) { 
+					render(item, data); 
+				});
+			}
+
+			function populatePosts()
+			{
+				$("#posts").empty();
+
+				var help = "<option>Choose a post (day/month/year)...</option>";
+				$("#posts").append(help);
+
+				for (var i = 0; i < posts.length; i++) {
+					var post = posts[i];
+					var html = '<option value="' + post.filename + '">' +
+						post.title + ' (' + post.date + ')' +
+						'</option>';
+					$("#posts").append(html);
+				}
+			}
 
 			function pushHomeStateAndLoadIt() {
-				history.pushState({ filename: "home" }, "", urlSeparator + "home");
-				loadItem("home");
+				pushState(homeFilename);
+				loadItem(homeFilename);
+			}
+
+			function pushState(filename) {
+				history.pushState({ filename: filename }, "", urlSeparator + filename);
+			}
+
+			function render(item, markDown) {
+				document.title = item.title;
+
+				$("#title").html(item.title);
+
+				var body = converter.makeHtml(markDown);
+				$("#actualBody").html(body);
+
+				if (item.filename == homeFilename) {
+					$("#posts").change(function () {
+						loadPost(this.value);
+					});
+					populatePosts();
+				}
+
+				window.scrollTo(0, 0);
 			}
 		</script>
 
