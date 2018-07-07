@@ -1,5 +1,3 @@
-¡Hola!
-
 It's Marcos: I write Software to solve people's problems.
 
 ### Menu
