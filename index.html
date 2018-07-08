@@ -40,6 +40,7 @@
             }
 
 			#homeReturn {
+				display: none;
 				float: left;
 			}
 
@@ -149,12 +150,6 @@
 					loadItem(resourceNotFoundFilename);
 					return;
 				}
-
-                if (filename == "home") {
-                    $("#homeReturn").fadeOut();
-                } else {
-                    $("#homeReturn").fadeIn();
-                }
                 
 				var actualPath = "items/" + filename + ".md";
 
@@ -174,8 +169,6 @@
 				}
 
 				pushState(filename);
-
-				$("#homeReturn").fadeIn();
 
 				var actualPath = "items/" + filename + ".md";
 
@@ -212,9 +205,17 @@
 			function render(item, markDown) {
 				document.title = item.title;
 
+				if (item.filename == homeFilename) {
+                    $("#homeReturn").fadeOut(0);
+                } else {
+                    $("#homeReturn").fadeIn(0);
+                }
+
 				$("#title").html(item.title);
 				$("#date").html(item.date);
-				$("#lastUpdate").fadeIn();
+				$("#lastUpdate").fadeIn(0)
+					.delay(3000)
+					.fadeOut();
 
 				var body = converter.makeHtml(markDown);
 				$("#actualBody").html(body);
@@ -227,10 +228,6 @@
 				}
 
 				window.scrollTo(0, 0);
-
-				$("#lastUpdate")
-					.delay(3000)
-					.fadeOut();
 			}
 		</script>
 
