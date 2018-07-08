@@ -7,7 +7,7 @@
 // Items —it doesn't mind the order how they're added
 
 addItem("🤷", "404", "15/2/2018");
-addItem("¡Hola!", "home", "7/7/2018");
+addItem("👋 ¡Hola!", "home", "8/7/2018");
 addItem("About", "about", "28/5/2018");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Conferences", "conferences", "7/12/2017");
