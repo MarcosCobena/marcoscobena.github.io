@@ -1,0 +1,9 @@
+A few weeks ago we needed to setup CI/CD builds in HealthClinic.biz private repo ([here](https://github.com/Microsoft/HealthClinic.biz) is the public one), hosted in [Visual Studio Team Services](https://www.visualstudio.com/es-es/products/visual-studio-team-services-vs.aspx) (VSTS from now on), for the [Patients](https://github.com/Microsoft/HealthClinic.biz/tree/master/src/MyHealth.Client.iOS) app made with Xamarin.iOS. Since the suite includes a Cordoba app for iOS as well, such was being built through [MacinCloud](http://www.macincloud.com/), so the agent pool was already configured (if not, [here](https://blogs.msdn.microsoft.com/visualstudioalm/2015/11/18/macincloud-visual-studio-team-services-build-and-improvements-to-ios-build-support/) can be found how to).
+
+Nowadays, VSTS offers a Xamarin.iOS build step where, if the agent pools support such capability, wraps everything needed to generate the final APP/IPA (1st for Simulator, OK for CI; 2nd for device, needed for CD) just selecting a Visual Studio Solution to build. The issue is, what happens with **all** the other steps needed prior to this point? And, which are those?
+
+[![Xamarin.IOS CI Build Definition in VSTS](http://blogs.plainconcepts.com/xamarinteam/wp-content/uploads/sites/4/2016/03/Captura-de-pantalla-2016-03-22-a-las-11.30.02.png)](Captura-de-pantalla-2016-03-22-a-las-11.30.02.png)
+
+One of the things to solve prior building a Xamarin.iOS app is its NuGet packages. Not just NuGet, but [Xamarin Components](https://components.xamarin.com/) as well, since Patients has dependencies on both places.
+
+[Read the entire article...](http://blogs.plainconcepts.com/xamarinteam/2016/03/28/setting-up-xamarin-ios-builds-in-visual-studio-team-services-formerly-visual-studio-online-through-macincloud-and-a-bonus-hockeyapp/)
