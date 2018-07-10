@@ -118,7 +118,7 @@ all those tips & tricks which make my experience smoother.
 
 <https://www.virtualbox.org/>
 
- 
+- https://github.com/philipnewcomer/macOS-VirtualBox-VM —how to virtualize macOS (you'll need [this](https://mycyberuniverse.com/macos/how-download-complete-macos-high-sierra-installer-app.html) to fetch the entire installer app)
 
 **Vysor** —the best way I know to work as with an emulator but on an actual
 Android device, worth purchasing
