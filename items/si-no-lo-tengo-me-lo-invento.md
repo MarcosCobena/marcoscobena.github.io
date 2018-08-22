@@ -1,0 +1,22 @@
+*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+
+Seguimos con más patrones. En este caso: ¿cómo respondemos ante las necesidades? Solemos tener dos opciones: compramos algo que la solucione o nos inventamos algo que haga lo mismo. No quiero entrar en el punto de vista del consumismo sino de la felicidad. Pero ¿se puede ser feliz resolviendo necesidades?
+
+Los términos necesidad y problema a veces están tan cerca en nuestro día a día que actuámos (al menos a mí me pasa) con la solución más rápida: comprar. Se me rompe X, me compro otro. El acto de comprar comienza por la búsqueda, que disfrutamos como cuando éramos niños y caía en nuestras manos el catálogo de juguetes de El Corte Inglés. Seleccionamos n opciones y vamos bajando hasta llegar a dos o tres que, ante nuestra falta de decisión, dejamos decidir a lo que yo llamo <i>los factores limitantes</i>: disponibilidad, precio, qué opina mi colega, etc. Compramos uno, disfrutamos el <i>efecto papel de regalo</i>, los primeros días de novedad y, vuelta a la normalidad.
+
+Como tengo la enorme suerte de rodearme de gente que inventa más que compra, a veces me pregunto: <i>vaya, ¿y si me hubiese buscado una alternativa?</i> Las alternativas, las invenciones, tienen una cosa mala: como te compares con otro, la has liado. Las únicas comparaciones buenas son contigo misma/o ayer. En cambio, todo lo demás es bueno:
+<ul>
+	<li>Como has decidido buscar una alternativa, acabas de reforzar tu autoestima y tu poder de decisión. <i>Me lo podría comprar, pero no lo voy a hacer</i>. Has sido capaz de decir NO, enhorabuena</li>
+	<li>Si vas a buscar una alternativa, ¡tienes que ser creativa/o! Empezarás por definir muy claramente qué necesitas exactamente y cuándo lo necesitas. Con ésto claro, comenzarás con el proceso creativo</li>
+	<li>Sentirás miedo. Porque dependerá en la mayor parte de ti que salga adelante, porque no es <i>lo normal</i>, porque quizá no sepas por dónde empezar. Empieza por cualquier sitio en ése caso, da igual, confía. Confía mucho en ti. A mi me ayuda hacerme esta pregunta: ¿por qué yo no voy a poder si los demás sí?</li>
+	<li>Disfruta el proceso. A diferencia de la compra ahora disfrutas desde el boceto inicial en tu cabeza. Sin darte cuenta, es como si cayeses en que tienes fichas de LEGO a tu alrededor y toda la ilusión por hacer una figura de la cual no hay instrucciones. Pero sabes qué quieres que resuelva la figura</li>
+	<li>Aprenderás un montón. Quizá no te des cuenta pero estás aprendiendo haciendo. Mejor que leerlo, que verlo, es hacerlo. Así es además como mejor captamos la información los seres humanos</li>
+	<li>Lo valorarás más. Es una parte muy emocional de uno mismo, pero queremos más aquello que nos ha hecho esforzarnos. Y es curioso porque no funcionamos igual con el dinero: yo p.e. no valoro más aquello que más [dinero] me ha costado. Quizá los primeros días sí, pero acaba normalizándose. Y no lo fuerzo eh. En cambio, veo algo que hice después de años y ¡madre mía! hasta me puedo emocionar</li>
+	<li>Con lo que compras no te emocionas, con lo que fabricas sí. Y esto es un regalo para ti misma/o el día de mañana. Te estás preparando una cajita con un mensaje de amor para que la abras cuando quieras</li>
+	<li>Aunque menos importante, a veces me da vergüenza decir a alguien que me he comprado algo. En cambio, estoy deseando encontrarme a alguien para enseñarle lo que me he hecho</li>
+</ul>
+No quería llevar esto por el consumismo, si compramos más de lo que necesitamos o de si compramos por comprar. Las personas en las que estoy pensando ahora mismo no creo sinceramente que a voluntad se construyan sus propias cosas por huír del consumismo. De verdad creo que lo hacen porque saben, sin ser conscientes quizá, que una vía les hace más feliz que la otra. Y por desgracia muchas veces ayuda no tener dinero, no poder permitírtelo.
+
+Tampoco vamos a pretender que todo todo ahora me lo haga yo, no se trata de eso, pero ¿y si probase con una sola cosa? ¿Te animas a ser más feliz?
+<p style="text-align:right;"><a href="http://www.wired.com/2015/07/lego-makes-everything-bettereven-prosthetic-kids"><img class="aligncenter size-large wp-image-522" src="items/images/img_0038.jpg" alt="img_0038" width="1024" height="538" /></a>
+<i>-Dedicado a dos Jose que me inspiran muchísimo, uno de L a V, otro de V a D</i></p>

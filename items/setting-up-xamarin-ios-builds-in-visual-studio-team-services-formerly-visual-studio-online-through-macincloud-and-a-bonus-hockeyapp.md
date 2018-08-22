@@ -1,0 +1,11 @@
+*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+
+A few weeks ago we needed to setup CI/CD builds in HealthClinic.biz private repo (<a href="https://github.com/Microsoft/HealthClinic.biz">here</a> is the public one), hosted in <a href="https://www.visualstudio.com/es-es/products/visual-studio-team-services-vs.aspx">Visual Studio Team Services</a> (VSTS from now on), for the <a href="https://github.com/Microsoft/HealthClinic.biz/tree/master/src/MyHealth.Client.iOS">Patients</a> app made with Xamarin.iOS. Since the suite includes a Cordoba app for iOS as well, such was being built through <a href="http://www.macincloud.com/">MacinCloud</a>, so the agent pool was already configured (if not, <a href="https://blogs.msdn.microsoft.com/visualstudioalm/2015/11/18/macincloud-visual-studio-team-services-build-and-improvements-to-ios-build-support/">here</a> can be found how to).
+
+Nowadays, VSTS offers a Xamarin.iOS build step where, if the agent pools support such capability, wraps everything needed to generate the final APP/IPA (1st for Simulator, OK for CI; 2nd for device, needed for CD) just selecting a Visual Studio Solution to build. The issue is, what happens with <strong>all</strong> the other steps needed prior to this point? And, which are those?
+
+<a href="http://blogs.plainconcepts.com/xamarinteam/wp-content/uploads/sites/4/2016/03/Captura-de-pantalla-2016-03-22-a-las-11.30.02.png"><img class="aligncenter size-full wp-image-1722" src="http://blogs.plainconcepts.com/xamarinteam/wp-content/uploads/sites/4/2016/03/Captura-de-pantalla-2016-03-22-a-las-11.30.02.png" alt="Xamarin.IOS CI Build Definition in VSTS" width="614" height="594" /></a>
+
+One of the things to solve prior building a Xamarin.iOS app is its NuGet packages. Not just NuGet, but <a href="https://components.xamarin.com/">Xamarin Components</a> as well, since Patients has dependencies on both places.
+
+<a href="http://blogs.plainconcepts.com/xamarinteam/2016/03/28/setting-up-xamarin-ios-builds-in-visual-studio-team-services-formerly-visual-studio-online-through-macincloud-and-a-bonus-hockeyapp/">Read the entire article...</a>
