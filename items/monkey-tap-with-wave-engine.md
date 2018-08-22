@@ -1,7 +1,0 @@
-A few weeks ago Xamarin published on their blog a bunch of entries with a [nice step-by-step guide](https://blog.xamarin.com/building-your-first-game-with-monogame-finishing-the-app/) to create Monkey.Tap with MonoGame.
-
-We believe [Wave Engine ](https://waveengine.net/)can offer some advantages when creating games, such like its [component-based architecture](https://github.com/WaveEngine/Documentation/wiki/Component-based-Architecture), or the new cross-platform [Wave Visual Editor](http://blogs.plainconcepts.com/waveengineteam/2015/09/15/whats-new-in-2-0/), among other ones; so we've reproduced Monkey.Tap with Wave Engine.
-
-[caption id="attachment_295" align="aligncenter" width="1920"]![WaveVisualEditorScreenshot](wavevisualeditorscreenshot.png) Game being edited in Wave Visual Editor[/caption]
-
-I've spent 2 Wave-ternoons (we call those to Tuesday and Thursday afternoons, where people not belonging to Wave Engine Core Team work on it), 5 h total, making the port, which can be found [<span style="color:#0066cc;">here</span>](https://github.com/MarcosCobena/MonkeyTapWaveEngine). It's by default for Windows desktop, but takes [<span style="color:#0066cc;">just a few clicks </span>](https://github.com/WaveEngine/Documentation/wiki/Convert-Your-Game-to-More-Platforms)to get Android, iOS, Windows 10, Mac OS X and Linux as well.
