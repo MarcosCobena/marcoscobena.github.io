@@ -143,40 +143,6 @@
 				return filename;
 			}
 
-			function loadItem(filename) {
-				var item = findItem(filename);
-
-				if (item == undefined) {
-					loadItem(resourceNotFoundFilename);
-					return;
-				}
-                
-				var actualPath = "items/" + filename + ".md";
-
-				$.get(actualPath, function (data) { 
-					render(item, data); 
-				});
-			}
-
-			function loadPost(filename) {
-				var item = posts.find(function(post) {
-					return post.filename == filename;
-				});
-
-				if (item == undefined) {
-					loadItem(resourceNotFoundFilename);
-					return;
-				}
-
-				pushState(filename);
-
-				var actualPath = "items/" + filename + ".md";
-
-				$.get(actualPath, function (data) { 
-					render(item, data); 
-				});
-			}
-
 			function listBlogPosts(selector, amount = -1)
 			{
 				var length = amount < 0 ? posts.length : amount;
@@ -196,6 +162,28 @@
 				}
 				
 				$(selector).append("</ul>");
+			}
+
+			function loadItem(filename) {
+				var item = findItem(filename);
+
+				// It may be a post...
+				if (item == undefined) {
+					item = posts.find(function(post) {
+						return post.filename == filename;
+					});
+				}
+
+				if (item == undefined) {
+					loadItem(resourceNotFoundFilename);
+					return;
+				}
+                
+				var actualPath = "items/" + filename + ".md";
+
+				$.get(actualPath, function (data) { 
+					render(item, data); 
+				});
 			}
 
 			function pushHomeStateAndLoadIt() {
@@ -226,9 +214,6 @@
 				$("#actualBody").html(body);
 
 				if (item.filename == homeFilename) {
-					$("#posts").change(function () {
-						loadPost(this.value);
-					});
 					listBlogPosts("#posts-latest", 5);
 				} else if (item.filename == "blog") {
 					listBlogPosts("#posts");
