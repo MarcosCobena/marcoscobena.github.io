@@ -7,10 +7,10 @@
 // Items —it doesn't mind the order how they're added
 
 addItem("🤷", "404", "15/2/2018");
-addItem("👋 ¡Hola!", "home", "8/7/2018");
-addItem("About", "about", "28/5/2018");
+addItem("👋 ¡Hola!", "home", "22/8/2018");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Conferences", "conferences", "7/12/2017");
+addItem("Contact", "contact", "22/8/2018");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "5/7/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
