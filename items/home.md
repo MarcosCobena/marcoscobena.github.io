@@ -4,7 +4,9 @@ Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps
 
 ### Menu
 
-**Blog** <select id="posts"></select>
+[**Blog**](#/blog)
+
+<div id="posts-latest"></div>
 
 **Hobbies** [Audios](#/audios) [FPV Drones](#/drones) [Reading](#/reading)
 

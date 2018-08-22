@@ -177,20 +177,25 @@
 				});
 			}
 
-			function populatePosts()
+			function listBlogPosts(selector, amount = -1)
 			{
-				$("#posts").empty();
+				var length = amount < 0 ? posts.length : amount;
 
-				var help = "<option>Choose a post (day/month/year)...</option>";
-				$("#posts").append(help);
+				$(selector).empty();
+				$(selector).append("<ul>");
 
-				for (var i = 0; i < posts.length; i++) {
+				for (var i = 0; i < length; i++) {
 					var post = posts[i];
-					var html = '<option value="' + post.filename + '">' +
-						post.title + ' (' + post.date + ')' +
-						'</option>';
-					$("#posts").append(html);
+					var html = '<li><a href="#/' + post.filename + '">' + post.title + '</a> (' + post.date + ')' + '</li>';
+					$(selector).append(html);
 				}
+
+				if (amount > 0) {
+					var html = '<li><a href="#/blog">More...</a></li>';
+					$(selector).append(html);
+				}
+				
+				$(selector).append("</ul>");
 			}
 
 			function pushHomeStateAndLoadIt() {
@@ -224,7 +229,9 @@
 					$("#posts").change(function () {
 						loadPost(this.value);
 					});
-					populatePosts();
+					listBlogPosts("#posts-latest", 5);
+				} else if (item.filename == "blog") {
+					listBlogPosts("#posts");
 				}
 
 				window.scrollTo(0, 0);

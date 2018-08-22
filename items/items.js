@@ -9,6 +9,7 @@
 addItem("🤷", "404", "15/2/2018");
 addItem("👋 ¡Hola!", "home", "22/8/2018");
 addItem("Audios", "audios", "28/5/2018");
+addItem("Blog", "blog", "22/8/2018");
 addItem("Conferences", "conferences", "7/12/2017");
 addItem("Contact", "contact", "22/8/2018");
 addItem("FPV Drones", "drones", "8/5/2018");
