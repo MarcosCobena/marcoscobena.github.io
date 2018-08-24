@@ -1,4 +1,4 @@
-It's Marcos: I write Software to solve people's problems.
+It's Marcos: I write software to solve people's problems.
 
 Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with [Xamarin](http://www.xamarin.com), and developing small pieces for [Wave Engine](http://www.waveengine.net). I'm also interested in Graphic Design, and rely in [Gimp](http://www.gimp.org) and [Inkscape](http://inkscape.org) for anything related.
 
