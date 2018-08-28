@@ -2798,49 +2798,6 @@ redView.BackgroundColor = UIColor.Red;
   <pubDate>Sun, 04 Oct 2015 22:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Apps</title>
-  <guid>https://marcoscobena.com/#/apps</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Hello!&lt;/p&gt;
-
-&lt;p&gt;Here you'll find some of the apps I've worked on (the ones I can talk about: NDAs, pivate in-house deployments, you know). Almost never work on those alone, so below list is the result of the effort of a whole team. I've selected the most significant ones, as I've been in charge of the platforms they were made for.&lt;/p&gt;
-
-&lt;p&gt;I strongly enjoy developing the UX/UI side (layouts, animations, UI behaviors, etc.), and use to imaging the end user tapping on the screen, navigating, to assure my-self he/she feels the most comfortable using them. My main targets are iOS and Android, and have done a little bit also for Windows &lt;del&gt;Phone&lt;/del&gt; 10 Mobile. I &lt;span style="color:#ff0000;"&gt;♥&lt;/span&gt; &lt;a href="http://www.xamarin.com" target="_blank"&gt;Xamarin&lt;/a&gt;, it allows me to deliver great native apps while making the craftmanship a joy. &lt;code&gt;MyLanguage = "C-Sharp"&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I hope you like them!&lt;/p&gt;
-
-&lt;p style="text-align:right;"&gt;-&lt;a href="http://marcoscobena.com/contact/"&gt;Marcos&lt;/a&gt;&lt;/p&gt;
-
-&lt;p style="text-align:center;"&gt;∼&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;"¡Buenos días! aro" for Android &amp;amp; Windows Phone 8&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img class="aligncenter wp-image-258 size-full" src="items/images/icon.png" alt="Icon" width="144" height="144" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update Feb. 2016:&lt;/em&gt; We've &lt;a href="http://marcoscobena.com/2016/02/11/new-app-buenos-dias-aro/"&gt;rewritten the app from scratch&lt;/a&gt;. :-)&lt;/p&gt;
-
-&lt;p&gt;This one is a small personal project which has a &lt;em&gt;lot of value&lt;/em&gt; for me, for what it offers: "¡Buenos días! is a beautiful initiative, where Álvaro Reinoso (ARO) takes a picture of the reality around him every day, and draws up to transform it into something very valuable". You can find more on its &lt;a href="http://marcoscobena.com/buenosdias/"&gt;landing page&lt;/a&gt; (source code included). I've made it with Xamarin.Forms, where the UI is built in XAML just once, generating native controls on each device.&lt;/p&gt;
-
-&lt;p style="text-align:right;"&gt;&lt;strong&gt;HealthClinic.biz for iOS and Apple Watch&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p style="text-align:right;"&gt;&lt;img class="aligncenter wp-image-269 size-button-site-logo" src="items/images/5635-2015-12-08-healthclinic6.png" alt="5635.2015-12-08 Healthclinic6" width="400" height="368" /&gt;&lt;/p&gt;
-
-&lt;p style="text-align:right;"&gt;My mates and I at Plain Concepts worked on the entire demo suite for &lt;a href="https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/" target="_blank"&gt;Microsoft's Connect(); 2015&lt;/a&gt;: HealthClinic.biz, "an end-to-end demo scenario based on a fictitious B2B and multitenant system". It includes, among other things, mobile apps for Android, iOS and Windows 10 (through Windows Universal Platform: mobile and desktop).&lt;/p&gt;
-
-&lt;p style="text-align:right;"&gt;My effort was concentrated mainly on the iOS side (the one in the center), including an small piece of Xamarin.Forms (the Settings view), and the initial push for Android (right one). The iOS app is connected with a companion one on the Apple Watch, which shows on the wrist which's the next pill to take. Superb. I also worked on the shared Core, which supplies ViewModels, converters, Xamarin.Forms' page, etc. to every platform. This year source code is published at &lt;a href="https://github.com/Microsoft/HealthClinic.biz" target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p style="text-align:left;"&gt;&lt;strong&gt;MyShuttle.biz for Android and iOS&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p style="text-align:right;"&gt;&lt;img class="aligncenter size-full wp-image-115" src="items/images/image.png" alt="MyShuttle.biz Mobile Apps Suite" width="600" height="321" /&gt;&lt;/p&gt;
-
-&lt;p style="text-align:left;"&gt;As part of a team of people at &lt;a href="http://www.plainconcepts.com" target="_blank"&gt;Plain Concepts&lt;/a&gt;, I developed those native apps (in the picture, the ones running at the 2nd and 3rd device, from left to right) for Microsoft Connect(); 2014 event. Both are built with Xamarin.Android and Xamarin.iOS, respectively, sharing a common code base thanks to MvvmCross. The UIs were done using Xamarin's plug-ins for both native iOS Storyboards and Android layouts, everything from Visual Studio. The whole source code for the entire suite (including mobile apps) can be found &lt;a href="https://code.msdn.microsoft.com/windowsapps/MyShuttle-demo-applications-1a4b68fe" target="_blank"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 08 Oct 2015 22:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Missing Shadows on Lollipop's CardView</title>
   <guid>https://marcoscobena.com/#/missing-shadows-on-lollipops-cardview</guid>
   <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;

@@ -7,7 +7,7 @@
 // Items —it doesn't mind the order how they're added
 
 addItem("🤷", "404", "15/2/2018");
-addItem("👋 ¡Hola!", "home", "27/8/2018");
+addItem("👋 ¡Hola!", "home", "28/8/2018");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "22/8/2018");
 addItem("Conferences", "conferences", "7/12/2017");
@@ -15,6 +15,7 @@ addItem("Contact", "contact", "22/8/2018");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "5/7/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
+addItem("Portfolio", "portfolio", "28/8/2018");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Reading", "reading", "13/6/2018");
 addItem("Recipes", "recipes", "14/6/2018");
@@ -95,7 +96,6 @@ addPost("Quick Dump of Things I've Learned This Week Developing on Apple Watch",
 addPost("Wave Engine: Create a Custom UI Control", "wave-engine-create-a-custom-ui-control", "29/10/15");
 addPost("Wave Engine: Play Sound (Sound Effects & Themes)", "wave-engine-play-sound-effects-and-themes", "13/10/15");
 addPost("Colors in iOS: Same Value, Different Tonality", "colors-in-ios-same-value-different-tonality", "5/10/15");
-addPost("Apps", "apps", "9/10/15");
 addPost("Missing Shadows on Lollipop's CardView", "missing-shadows-on-lollipops-cardview", "21/9/15");
 addPost("My First App Published: ¡Buenos días!", "my-first-app-published-buenos-dias", "8/6/15");
 addPost("¡Buenos días! aro", "buenosdias", "4/6/15");
