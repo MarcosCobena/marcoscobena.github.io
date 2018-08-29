@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Este fin de semana estuvimos mis amigos y yo hablando de la [conocida para algunos] ecuación de la felicidad:
 

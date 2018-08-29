@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 <p style="text-align:center;">👋🏼  Actualmente trabajo a tiempo completo como Senior Mobile Developer (desarrollando apps) en <a href="http://devsdna.com">DevsDNA</a>. Si crees que podemos ayudarte ¡escríbenos! <a href="mailto:marcos@devsdna.com">marcos@devsdna.com</a>
 /

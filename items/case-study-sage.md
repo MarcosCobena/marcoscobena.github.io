@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 A few weeks ago Xamarin published one of our Case Studies: Sage.
 

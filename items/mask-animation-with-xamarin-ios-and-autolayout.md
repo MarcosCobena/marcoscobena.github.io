@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Our workmate <a href="https://twitter.com/sescaladab">Sergio Escalada</a> has just published a little gem on how to apply animations based in masks:
 

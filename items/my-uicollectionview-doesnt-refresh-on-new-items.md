@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Last week I was struggling with an UICollectionView -MvxCollectionView actually- which was not reacting to new items coming in the DataSource. For more turns I took, I didn't found the answer.
 

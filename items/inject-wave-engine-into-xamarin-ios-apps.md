@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 My good friend and workmate <a href="https://twitter.com/sescaladab">Sergio Escalada</a> and I wrote a few months ago a quick guide, along with a sample (find the link below), on how you can render Wave Engine on a Xamarin.iOS app: not a full-screen game it-self, but adding specific views which are handled from Wave Engine.
 

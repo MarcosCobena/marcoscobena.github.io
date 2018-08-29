@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 We are at <a href="http://www.plainconcepts.com/">Plain Concepts</a>, the Xamarin Team, investigating new ways to make use of <a href="http://xamarin.com/forms">Xamarin.Forms</a> to help our customers success on the main three mobile platforms: Android, iOS and Windows Phone. Most of our projects have been made using <a href="https://github.com/MvvmCross/MvvmCross">MVVMCross</a> as backend plus native UI for each target. Our company has special care for the visual side of every project, so this approach has given us the chance to follow the designs provided by our lovely Design &amp; UX Team. But, after being playing around with Xamarin.Forms since the last year, we have seen a great opportunity to build apps with it, specially for those customers where the main goal is to reach every market, and not having strong visual requirements.
 

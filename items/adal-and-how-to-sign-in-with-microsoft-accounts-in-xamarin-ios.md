@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 One the latest bits we added to <a href="https://github.com/Microsoft/HealthClinic.biz">HealthClinic.biz suite</a> is Azure's Active Directory Authentication (ADAL from now on). Basically, you can authenticate users by their Microsoft account, and let them access the app or not. You can do some other things, but our mainly goal was that one. For instance, we added also Touch ID so your fingerprint is saved to avoid entering the credentials once and again. Superb.
 

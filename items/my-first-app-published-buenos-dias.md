@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 <em>Dedicado a Elisa, que siempre me ha empujado para que siguiera con ello, y no lo dejara. Gracias, mi amor. ¡Te quiero!</em>
 

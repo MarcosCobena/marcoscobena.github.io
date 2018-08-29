@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Our workmate Juan Antonio Cano (<a href="https://twitter.com/jacano35">@jacano35</a>) has done a great review of this fantastic kit for Xamarin.Forms. We'd like to thank the guys from <a href="http://www.uxdivers.com/">UXDivers</a> for sharing a license with us, so we could analyze it deeply. Enjoy it!
 

@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Nací en 1984. Octubre. Hace 32 años. He entendido siempre la treintena como asentamiento, y me ha tocado -está tocando- seguir aprendiendo. Pero no en plan víctima eh; todo lo contrario, de buen rollo :-) Hemos escuchado que la vida es un aprendizaje continuo pero, aquí, me refiero a cosas básicas. Disfruto siempre leyendo frases de Mr. Wonderful, reflexionando sobre ellas, y escuchando a Elsa Punset sobre Inteligencia emocional, pero no ha sido tanto el impacto que esto tenía en mí como hacerme una pregunta.
 

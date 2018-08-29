@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 <em>This entry was originally written at <a href="http://blogs.plainconcepts.com/xamarinteam/2015/10/05/colors-in-ios-same-value-different-tonality/">Plain Concepts' Xamarin Team Blog</a>.</em>
 

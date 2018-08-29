@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 A few weeks ago we needed to setup CI/CD builds in HealthClinic.biz private repo (<a href="https://github.com/Microsoft/HealthClinic.biz">here</a> is the public one), hosted in <a href="https://www.visualstudio.com/es-es/products/visual-studio-team-services-vs.aspx">Visual Studio Team Services</a> (VSTS from now on), for the <a href="https://github.com/Microsoft/HealthClinic.biz/tree/master/src/MyHealth.Client.iOS">Patients</a> app made with Xamarin.iOS. Since the suite includes a Cordoba app for iOS as well, such was being built through <a href="http://www.macincloud.com/">MacinCloud</a>, so the agent pool was already configured (if not, <a href="https://blogs.msdn.microsoft.com/visualstudioalm/2015/11/18/macincloud-visual-studio-team-services-build-and-improvements-to-ios-build-support/">here</a> can be found how to).
 

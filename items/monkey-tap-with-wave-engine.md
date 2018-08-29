@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 A few weeks ago Xamarin published on their blog a bunch of entries with a <a href="https://blog.xamarin.com/building-your-first-game-with-monogame-finishing-the-app/">nice step-by-step guide</a> to create Monkey.Tap with MonoGame.
 

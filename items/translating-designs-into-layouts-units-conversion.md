@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 <a title="Ruler by Scott Akerman, on Flickr" href="https://www.flickr.com/photos/sterlic/4299631538"><img class=" aligncenter" src="https://farm3.staticflickr.com/2730/4299631538_220c9c9448_z.jpg" alt="Ruler" width="640" height="396" /></a>
 

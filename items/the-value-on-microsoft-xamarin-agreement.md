@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 It's close to 24:00 and I've just arrived to the hotel after spending a wonderful day at #dotNetSpain2016. However, I couldn't go to bed without writting down how much I value the acquisition of Xamarin from Microsoft.
 

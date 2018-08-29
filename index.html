@@ -77,7 +77,8 @@
 			$(document).on('click', 'a', function(event) {
 				var href = $(this).attr("href");
 				
-				if (href.startsWith("http") || href.startsWith("mailto:") || !href.startsWith(hashtagUrlSeparator)) {
+				if (href.startsWith("http") || href.startsWith("mailto:") || 
+					!href.startsWith(hashtagUrlSeparator) || !href.startsWith(queryUrlSeparator)) {
 					event.returnValue = false;
 					return;
 				}
@@ -157,12 +158,12 @@
 
 				for (var i = 0; i < length; i++) {
 					var post = posts[i];
-					var html = '<li><a href="#/' + post.filename + '">' + post.title + '</a> (' + post.date + ')' + '</li>';
+					var html = '<li><a href="' + queryUrlSeparator + post.filename + '">' + post.title + '</a> (' + post.date + ')' + '</li>';
 					$(selector).append(html);
 				}
 
 				if (amount > 0) {
-					var html = '<li><a href="#/blog">More...</a></li>';
+					var html = '<li><a href="' + queryUrlSeparator + 'blog">More...</a></li>';
 					$(selector).append(html);
 				}
 				
@@ -197,7 +198,7 @@
 			}
 
 			function pushState(filename) {
-				history.pushState({ filename: filename }, "", hashtagUrlSeparator + filename);
+				history.pushState({ filename: filename }, "", queryUrlSeparator + filename);
 			}
 
 			function render(item, markDown) {
@@ -237,7 +238,7 @@
 	<body>
 		<div id="bodyWrapper">
 			<p id="homeReturn" class="center">
-				<a href="#/home"><em>Sweet</em> home</a>
+				<a href="/"><em>Sweet</em> home</a>
 			</p>
 
 			<div id="titleWrapper" class="right">
@@ -250,7 +251,7 @@
 			</div>
 
 			<p class="signature">
-				—<a href="#/contact">Marcos</a>
+				—<a href="/?i=contact">Marcos</a>
 			</p>
 		</div>
 	</body>

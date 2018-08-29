@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 A few months ago I had the chance to showcase <a href="https://www.xamarin.com/platform">Xamarin.iOS</a> to pure Objective-C/Swift developers, within a local group called <a href="http://nscoder-sev.tumblr.com/">NSCoder Sevilla</a>.
 

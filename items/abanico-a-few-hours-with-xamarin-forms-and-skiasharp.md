@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 It's been a month and a half since I started to dig into the world of Graphic Design. The first module introduced, among other things, the notion of color wheel. And I felt the need to make my-self one of those :-)
 

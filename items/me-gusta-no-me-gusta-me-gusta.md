@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 <img class="aligncenter size-full wp-image-574" src="items/images/7104203537_b1d010cdfe_o.jpg" alt="DSC_0001" width="1024" height="685" />
 *<a href="https://www.flickr.com/photos/centermez/7104203537/in/photolist-bPLUcT-aFQJzM-zVFQG-miT5Kw-8h84WL-4VwiJz-mp8rzZ-8dcMHs-nuKRie-peaprg-Cso2K-QkvfB-nvcArr-9Vivdn-j8ZyC9-QtZnj-5QziCM-nfXssr-7vdFmV-4ubqt8-KqRYy-8h4PDX-8izvkJ-HWRP76-ftFHcr-4fvwjZ-gSrtx1-c7oMhL-61Xvdk-dRbdLs-aLvQmP-9qN7nD-9ukdnh-r1Cdeh-gaCE3k-ppwwR3-p7yFhD-GD9iik-cf51zS-4JSSjq-oK9jxq-nnVDsX-B7pHF-9N9ms-4hRPQq-fg7iWd-fTyeGT-f2t5gC-XHpi-8rCnTy">Thinking</a>*

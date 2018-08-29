@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 During the last months, we have made some improvements to the <a href="https://github.com/Cheesebaron/Cheesebaron.MvxPlugins/tree/master/FormsPresenters/WindowsPhone">FormsPresenters plug-in</a> taken from real-world projects we are working on with our customers, at Plain Concepts. Since we did not have some NuGet packages to make an easy install of the scaffolding needed, we dedicated some effort to add a small documentation to the GitHub repository it-self, so everyone can easily set-up MvvmCross on their Xamarin.Forms projects.
 

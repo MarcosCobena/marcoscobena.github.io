@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 During half 2015 I published a proof-of-concept app to deliver small pictures a friend of mine, "aro", creates every morning. I was delighted with his work done with those pictures, and I wanted to create the bridge to make them arrive to as much people as possible.
 

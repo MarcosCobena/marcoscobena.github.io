@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Seguimos con más patrones. En este caso: ¿cómo respondemos ante las necesidades? Solemos tener dos opciones: compramos algo que la solucione o nos inventamos algo que haga lo mismo. No quiero entrar en el punto de vista del consumismo sino de la felicidad. Pero ¿se puede ser feliz resolviendo necesidades?
 

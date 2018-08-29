@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Some members of the <a href="https://waveengine.net/">Wave Engine</a> Team are working on updating recipes to 2.0, and extend those to achieve more and more features of the engine. Past week, I wrote <a href="https://github.com/WaveEngine/Documentation/wiki/Play-Sound-%28Sound-Effects-%26-Themes%29">this one</a> at <a href="https://github.com/WaveEngine/Documentation/wiki">Wave Engine Documentation wiki</a>. I hope it'll move you something inside to give a chance to <a href="https://waveengine.net/Downloads">Wave</a>!
 

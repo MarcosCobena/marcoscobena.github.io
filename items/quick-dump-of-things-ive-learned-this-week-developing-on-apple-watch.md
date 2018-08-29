@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 It turns out we're lately at <a href="http://www.plainconcepts.com" target="_blank">Plain Concepts</a> working on a few iOS apps which involve Apple Watch. And we're using Xamarin. :-) The one I'm working on is quite simple, but I've learned a few things which can be interesting to any other one making a first landing into a similar project.
 

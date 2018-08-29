@@ -5,7 +5,7 @@
 <link>https://marcoscobena.com</link>
 <item>
   <title>How to centralize font-related styling</title>
-  <guid>https://marcoscobena.com/#/2018-3-15</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-15</guid>
   <description>&lt;p&gt;One of the much things you learn when work with different people’s how they
 handle those same things you work on. A few weeks ago I spent two or three days
 on a Forms app where styles were pretty much taken into serious consideration,
@@ -43,7 +43,7 @@ share anything!&lt;/p&gt;</description>
 </item>
 <item>
   <title>Let's use Control Templates</title>
-  <guid>https://marcoscobena.com/#/2018-3-14</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-14</guid>
   <description>&lt;p&gt;I don’t know whether this happens to others as well but I still see my-self
 “discovering” new Xamarin.Forms' —actually in general— features as times goes
 by. Quoted discovering mostly because [in this case] knew its existence;
@@ -62,7 +62,7 @@ for me, as we bing stuff to current Page/VM.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Pushing our-selves into our users' perspective</title>
-  <guid>https://marcoscobena.com/#/2018-3-13</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-13</guid>
   <description>&lt;p&gt;Today I’ve finally deployed every NFC tag within our office to actual test the
 app. Independently on what our apps are all about, it reaaally helps a lot to
 put your-self in the user’s perspective. I mean not only using the app on a real
@@ -82,7 +82,7 @@ doing this, even it’s another time-consuming point.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Cannot connect to local IIS Express</title>
-  <guid>https://marcoscobena.com/#/2018-3-12</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-12</guid>
   <description>&lt;p&gt;Hmm, when I’ve gone to locally debug my ASP.NET site which provides the API to
 my app, a got an alert saying something like We couldn’t connect to the local
 IIS Express server. Luckily,
@@ -98,7 +98,7 @@ reaaally welcomed.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Gathering Android's density &amp; Entity Framework's CLI</title>
-  <guid>https://marcoscobena.com/#/2018-3-9</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-9</guid>
   <description>&lt;p&gt;Yesterday we had our customer at office in order to review how the project’s
 going on. He told us which’s the final device our app will run on.&lt;/p&gt;
 
@@ -127,7 +127,7 @@ PS &amp;gt; dotnet ef database update --context AContext
 </item>
 <item>
   <title>Using again my sort of Visual State management</title>
-  <guid>https://marcoscobena.com/#/2018-3-6</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-6</guid>
   <description>&lt;p&gt;Today I’ve doing a variety of things from contacting one of our customers,
 estimating an incoming project tooo actually work on a task from the first one.&lt;/p&gt;
 
@@ -135,7 +135,7 @@ estimating an incoming project tooo actually work on a task from the first one.&
 the results from the API, thus we don’t want success/failure banners to show
 before, mostly to avoid a heart attach in our users.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="#/2018-2-8"&gt;One month ago&lt;/a&gt; I wrote down my own version of a "Visual State"
+&lt;p&gt;&lt;a href="/?i=2018-2-8"&gt;One month ago&lt;/a&gt; I wrote down my own version of a "Visual State"
 management which, from my point of view, simplifies the known version from
 WPF/Windows 8 aaand gives fine control over the storyboard to execute,
 everything with a minimal footprint and already usable on current Xamarin.Forms
@@ -148,7 +148,7 @@ comfortable and solves the need quite well :-)&lt;/p&gt;</description>
 </item>
 <item>
   <title>VS for Mac bugs &amp; LiteDB learning</title>
-  <guid>https://marcoscobena.com/#/2018-3-5</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-5</guid>
   <description>&lt;p&gt;I’ve started the day filling two bugs with VS for Mac had written down last
 week:&lt;/p&gt;
 
@@ -177,7 +177,7 @@ what we may need. The second always takes to unneeded stuff.&lt;/p&gt;</descript
 </item>
 <item>
   <title>Back with Wave Engine &amp; some Visual Studio for Mac bugs</title>
-  <guid>https://marcoscobena.com/#/2018-3-1</guid>
+  <guid>https://marcoscobena.com/?i=2018-3-1</guid>
   <description>&lt;p&gt;Today I’ve been back to collaborating with Wave Engine (yay!) I’ve been
 assigned, along with my friend &amp;amp; mate Sergio, the easing curves component in
 Gtk#. Sergio had already done an amazing job by including a maths library which
@@ -202,7 +202,7 @@ better! It’s only a bit of your time compared with how much you gain using it.
 </item>
 <item>
   <title>SQLite &amp; Material Design Frames on iOS</title>
-  <guid>https://marcoscobena.com/#/2018-2-27</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-27</guid>
   <description>&lt;p&gt;Today I’ve needed to debug how our DB is physically created —tables and PKs— and
 Pulido (thanks man!) told me to enable tracing so every query gets printed (we
 found it
@@ -225,7 +225,7 @@ platforms. Yeah!&lt;/p&gt;</description>
 </item>
 <item>
   <title>xUnit &amp; SQLite</title>
-  <guid>https://marcoscobena.com/#/2018-2-26</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-26</guid>
   <description>&lt;p&gt;On past Friday I found a bug in the screen was working related to how things are
 stored in the DB —SQLite, actually. My mates had already done an Unit Testing
 project, powered by xUnit, so have gone in and added a test which reproduces my
@@ -247,7 +247,7 @@ us to solve it —a simple “VACUUM” and done.&lt;/p&gt;</description>
 </item>
 <item>
   <title>FFImageLoading's SVGCachedImage &amp; converters chaining</title>
-  <guid>https://marcoscobena.com/#/2018-2-22</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-22</guid>
   <description>&lt;p&gt;After enjoying so much crafting a screen, today I’ve worked on the small details
 and continued with bindings.&lt;/p&gt;
 
@@ -295,7 +295,7 @@ with FFImageLoading’s &lt;code&gt;SvgCachedImage&lt;/code&gt;:&lt;/p&gt;
 </item>
 <item>
   <title>Git-LFS &amp; CarouselView &amp; Xamarin.Forms Chrome's shortcut</title>
-  <guid>https://marcoscobena.com/#/2018-2-21</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-21</guid>
   <description>&lt;p&gt;Today I’ve started to help in a new project where Design is quite strict —which
 I like 🤘&lt;/p&gt;
 
@@ -325,7 +325,7 @@ could do it by code, but after using LiveXAML’s difficult to switch back 🤷�
 </item>
 <item>
   <title>SVGs in Xamarin.Forms &amp; Git's cherry picking</title>
-  <guid>https://marcoscobena.com/#/2018-2-20</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-20</guid>
   <description>&lt;p&gt;It may sound strange but today’s been my welcome into using SVGs in
 Xamarin.Forms, and FFImageLoading’s helped a lot —have some mates here which are
 already heavily using it.&lt;/p&gt;
@@ -359,7 +359,7 @@ there:&lt;/p&gt;
 </item>
 <item>
   <title>Connecting your app with an ASP.NET API running on a local VM</title>
-  <guid>https://marcoscobena.com/#/2018-2-19</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-19</guid>
   <description>&lt;p&gt;My current project involves an ASP.NET server side with both a small web and its
 API. I needed to debug things locally to go faster, thus wanted to connect my
 app in macOS to the API in my virtualized Windows 10. In order to access such
@@ -418,7 +418,7 @@ merged, where he adds ValueTuples support to Xamarin.Forms! Thanks Stephane 😇
 </item>
 <item>
   <title>Falling in love with ValueTuples and a small heart break</title>
-  <guid>https://marcoscobena.com/#/2018-2-15</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-15</guid>
   <description>&lt;p&gt; &lt;/p&gt;
 
 &lt;p&gt;Having Valentine’s Day so close in date, today I’ve felt in love with
@@ -460,7 +460,7 @@ filled&lt;/a&gt;, where
 </item>
 <item>
   <title>Suave scroll-less lists in Xamarin.Forms</title>
-  <guid>https://marcoscobena.com/#/2018-2-13</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-13</guid>
   <description>&lt;p&gt;The screen am working on needs something like a &lt;code&gt;ListView&lt;/code&gt; inside a
 &lt;code&gt;ScrollView&lt;/code&gt;, which’s nothing recommended —on a Xamarin.Android app had enabled
 nesting before but I try to avoid going Custom Rendering from the beginning.
@@ -493,7 +493,7 @@ what was looking for. It’s as easy to use as removing the &lt;code&gt;ListView
 </item>
 <item>
   <title>Rapid styling ListViews</title>
-  <guid>https://marcoscobena.com/#/2018-2-12</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-12</guid>
   <description>&lt;p&gt;Today I’ve been working on a XAML page and, again, have needed some fake data to
 populate a &lt;code&gt;ListView&lt;/code&gt;’s &lt;code&gt;ItemsSource&lt;/code&gt;. A trick I find so useful for that,
 without building custom models which represent’s Design copies, is to simply
@@ -518,8 +518,8 @@ temporal fake data.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Embedding JSON responses conditionally</title>
-  <guid>https://marcoscobena.com/#/2018-2-9</guid>
-  <description>&lt;p&gt;&lt;a href="https://marcoscobena.com/#/2018-2-7"&gt;Using JSON files to replicate calls&lt;/a&gt; has a
+  <guid>https://marcoscobena.com/?i=2018-2-9</guid>
+  <description>&lt;p&gt;&lt;a href="https://marcoscobena.com/?i=2018-2-7"&gt;Using JSON files to replicate calls&lt;/a&gt; has a
 downside: you can end up bundling those in the final package, increasing its
 size and looking ugly. I had never done before embedding something
 conditionally, but there was Stack Overflow with a
@@ -541,7 +541,7 @@ clear.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Thursday</title>
-  <guid>https://marcoscobena.com/#/2018-2-8</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-8</guid>
   <description>&lt;p&gt;During Christmas I was working on a small game prototype, fully backed by the
 joy I had going through Thimbleweed Park. Basically enabled a way to write down
 state-based logic in a ViewModel, which informs the View on just a few messages
@@ -668,7 +668,7 @@ really interesting to supply with MVVM, but it’s “my son”.&lt;/p&gt;</desc
 </item>
 <item>
   <title>Wednesday</title>
-  <guid>https://marcoscobena.com/#/2018-2-7</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-7</guid>
   <description>&lt;p&gt;I’ve been working on a screen playing with NFC discoveral, and have used for the
 very first time NFCForms plug-in. It’s nice because avoids all the boilerplate
 code needed to setup NFC, and gives back a few events to notice when tags are
@@ -707,7 +707,7 @@ otherwise, so the chain with &lt;code&gt;==&lt;/code&gt; fits perfect in this ca
 </item>
 <item>
   <title>Tuesday</title>
-  <guid>https://marcoscobena.com/#/2018-2-6</guid>
+  <guid>https://marcoscobena.com/?i=2018-2-6</guid>
   <description>&lt;p&gt;I’m back to Plain Concepts, and have joined a beautiful Xamarin.Forms project.&lt;/p&gt;
 
 &lt;p&gt;Asking the Designer for some info on a screen discovered how to capture a
@@ -727,7 +727,7 @@ again:&lt;/p&gt;
 </item>
 <item>
   <title>Tuesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-30</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-30</guid>
   <description>&lt;p&gt;Finally my mate Marcos Antonio and I —yep, both Marcos— ‘ve found out the root
 for this issue:&lt;/p&gt;
 
@@ -809,7 +809,7 @@ enable HTTPS, &lt;em&gt;free&lt;/em&gt;, with your own domain at GitHub Pages&lt
 </item>
 <item>
   <title>Monday</title>
-  <guid>https://marcoscobena.com/#/2018-1-29</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-29</guid>
   <description>&lt;p&gt;I’ve been working during the last two weeks on a Getting Started package to
 start future projects at DevsDNA. One of the things was asked for is supporting
 .NET Standard 2.0 from the very beginning, to be ready for upcoming movements in
@@ -841,7 +841,7 @@ CSPROJs (now you get above link)&lt;/p&gt;&lt;/li&gt;
 </item>
 <item>
   <title>Saturday</title>
-  <guid>https://marcoscobena.com/#/2018-1-27</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-27</guid>
   <description>&lt;p&gt;This week haven’t touched any single line on Joy but en-joy-ed 🤭 working on the
 Flappy Bird pixel copy. I borrowed some code on how to make the bird jump but
 more than jumping it was actually getting frozen. However, I found the key in
@@ -921,7 +921,7 @@ considering to simplify as much as possible the collision detection.&lt;/p&gt;</
 </item>
 <item>
   <title>Friday</title>
-  <guid>https://marcoscobena.com/#/2018-1-26</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-26</guid>
   <description>&lt;p&gt;I’ve been recently playing a little bit with NuGet site and really liked its
 simplicity. How packages are uploaded, updated, edited, etc. Today I discovered
 that if you want to publish a prerelease version there’s no checkbox out there,
@@ -939,7 +939,7 @@ unlisting them, which’s fine too.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Thursday</title>
-  <guid>https://marcoscobena.com/#/2018-1-25</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-25</guid>
   <description>&lt;h3&gt;MAP_JIT error when launching a Xamarin.iOS app (II)&lt;/h3&gt;
 
 &lt;p&gt;After multiple attempts on delaying RxUI execution we still get the same error
@@ -979,7 +979,7 @@ documentation&lt;/a&gt;.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Wednesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-24</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-24</guid>
   <description>&lt;h3&gt;MAP_JIT error when launching a Xamarin.iOS app&lt;/h3&gt;
 
 &lt;p&gt;My coworker Marcos Antonio's having an issue with a Xamarin.iOS app closing at
@@ -1019,7 +1019,7 @@ persist over restarts. Think will automate it in any way.&lt;/p&gt;</description
 </item>
 <item>
   <title>Tuesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-23</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-23</guid>
   <description>&lt;p&gt;Working on our own lib. to bundle all that stuff we usually need on each project
 I stumbled upon one issue when creating the unit testing project: VS for Mac
 doesn't detect Unit Tests from .NET Standard libraries, independent of the NUnit
@@ -1090,8 +1090,8 @@ Welcome!&lt;/p&gt;</description>
 </item>
 <item>
   <title>Monday</title>
-  <guid>https://marcoscobena.com/#/2018-1-22</guid>
-  <description>&lt;p&gt;It turns out &lt;a href="http://marcoscobena.com/#/2018-1-19"&gt;the fix&lt;/a&gt; I found last day to
+  <guid>https://marcoscobena.com/?i=2018-1-22</guid>
+  <description>&lt;p&gt;It turns out &lt;a href="http://marcoscobena.com/?i=2018-1-19"&gt;the fix&lt;/a&gt; I found last day to
 fix SSH connection with GitHub applies equally to Visual Studio Team Services:
 the SSH agent was missing the key I created specifically for it. So,
 SourceTree’s fully working with my multi-keys env. SSH ✌️&lt;/p&gt;
@@ -1132,7 +1132,7 @@ Xamarin.Forms, without MVVM frameworks, just using what you already have.&lt;/p&
 </item>
 <item>
   <title>Sunday</title>
-  <guid>https://marcoscobena.com/#/2018-1-21</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-21</guid>
   <description>&lt;p&gt;This week, in order to make the library more solid, decided to write a small
 Flappy Bird alike game with it. However, it wasn’t possible: I had focused on
 the scripting side but the underlying code was not powerful enough to handle
@@ -1223,7 +1223,7 @@ the basic pieces to finally write that Flappy Bird prototype.&lt;/p&gt;</descrip
 </item>
 <item>
   <title>Friday</title>
-  <guid>https://marcoscobena.com/#/2018-1-19</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-19</guid>
   <description>&lt;p&gt;Keeping with the Azure class —AZR110 at Xamarin University— it got to a point
 where following up in Mac was a little bit harder because of the lack the wizard
 when adding new table controllers. This’ something you should do manually and I
@@ -1245,7 +1245,7 @@ was as easy as adding again the keys:&lt;/p&gt;
 </item>
 <item>
   <title>Thursday</title>
-  <guid>https://marcoscobena.com/#/2018-1-18</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-18</guid>
   <description>&lt;p&gt;For the very first time I created an ASP.NET MVC project within VS for Mac and
 published in Azure &lt;a href="https://blog.xamarin.com/publish-azure-visual-studio-mac/"&gt;everything from the
 Mac&lt;/a&gt;. And, to be
@@ -1260,7 +1260,7 @@ Sounds good!&lt;/p&gt;</description>
 </item>
 <item>
   <title>Wednesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-17</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-17</guid>
   <description>&lt;p&gt;In a quick sentence: I feel Xamarin ecosystem isn’t currently ready for fully
 working with .NET Standard libraries. And can fully understand it, as we’re all
 moving our stuff to .NET Standard but, you know, are in the process.&lt;/p&gt;
@@ -1311,7 +1311,7 @@ sure will success then 🤞&lt;/p&gt;</description>
 </item>
 <item>
   <title>Tuesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-16</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-16</guid>
   <description>&lt;p&gt;I promise my-self the next time will create a new Xamarin.Forms project, the
 core library will be moved to .NET Standard 2.0 from instant zero —because if
 not, I could became crazy, again.&lt;/p&gt;
@@ -1366,7 +1366,7 @@ on moving projects from PCL to .NET Standard&lt;/li&gt;
 </item>
 <item>
   <title>Monday</title>
-  <guid>https://marcoscobena.com/#/2018-1-15</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-15</guid>
   <description>&lt;p&gt;A few things have learnt today:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1402,7 +1402,7 @@ projects but get once and again an authentication error?
 </item>
 <item>
   <title>Saturday</title>
-  <guid>https://marcoscobena.com/#/2018-1-13</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-13</guid>
   <description>&lt;p&gt;I’m really happy with the achievements this week. Although started it increasing
 the descriptive level of the first frame —a Frame is actually a room, a scene
 where player can interact—, ended up proposing my-self a new goal of writing Tic
@@ -1515,7 +1515,7 @@ environment. Will have to think about this a little bit more.&lt;/p&gt;</descrip
 </item>
 <item>
   <title>Thursday</title>
-  <guid>https://marcoscobena.com/#/2018-1-11</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-11</guid>
   <description>&lt;p&gt;Following with yesterday task, double checked the &lt;code&gt;HttpClient&lt;/code&gt; was being
 refreshed correctly in both Android &amp;amp; iOS and jumped to add some unit tests.&lt;/p&gt;
 
@@ -1618,7 +1618,7 @@ so this &lt;code&gt;Operation()&lt;/code&gt; allows me to easily set each test u
 </item>
 <item>
   <title>Wednesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-10</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-10</guid>
   <description>&lt;p&gt;Back to pre-Christmas project —Avianca’s Xamarin.Forms app for Android &amp;amp; iOS—
 I’m assigned a bug on gettings 401s because token refreshes don’t seem to work.
 Our app uses Refit to build the gateways provided through intermediate NuGet
@@ -1713,7 +1713,7 @@ like:&lt;/p&gt;
 </item>
 <item>
   <title>Tuesday</title>
-  <guid>https://marcoscobena.com/#/2018-1-9</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-9</guid>
   <description>&lt;p&gt;After some time with the idea in mind and some other more working on a
 prototype, finally knowing when an app was built is an easy task. Since years
 ago I’ve missed this:&lt;/p&gt;
@@ -1780,7 +1780,7 @@ with them&lt;/p&gt;&lt;/li&gt;
 </item>
 <item>
   <title>Monday</title>
-  <guid>https://marcoscobena.com/#/2018-1-8</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-8</guid>
   <description>&lt;p&gt;Back from Christmas holidays with a cool task! Yeray asked me to play with
 native Spotify SDKs 😙 Looking for a little bit it turns out Aaron Bockover
 —this resembled me past days of Gnome’s Banshee— &lt;a href="https://github.com/abock/spotify-ios-sdk/tree/master/Xamarin"&gt;had already
@@ -1808,7 +1808,7 @@ but am not a heavy Windows user these days.&lt;/p&gt;
 </item>
 <item>
   <title>Thursday</title>
-  <guid>https://marcoscobena.com/#/2018-1-4</guid>
+  <guid>https://marcoscobena.com/?i=2018-1-4</guid>
   <description>&lt;p&gt;I’m working on a video-game. Actually have been working on it since Christmas
 began. I think will keep posting details mostly during weekends —have an
 agreement with my-self of not working on anything which could do in my daily
@@ -1848,7 +1848,7 @@ Now, am thrilled with the incoming possibilities this’ offering 🤘&lt;/p&gt;
 </item>
 <item>
   <title>Thursday</title>
-  <guid>https://marcoscobena.com/#/2017-12-21</guid>
+  <guid>https://marcoscobena.com/?i=2017-12-21</guid>
   <description>&lt;p&gt;Maybe this’ totally newbie but I’ve used for the very first time git’s
 fast-forward thing. For my future me: quite useful when you have a branch
 outdated and there are no changes on it from the last merge back, so simply you
@@ -1870,7 +1870,7 @@ But there it’s at bottom!&lt;/p&gt;</description>
 </item>
 <item>
   <title>Wednesday</title>
-  <guid>https://marcoscobena.com/#/2017-12-20</guid>
+  <guid>https://marcoscobena.com/?i=2017-12-20</guid>
   <description>&lt;p&gt;Since the nature of DevsDNA we use to work in a team made of people from our
 company as well from others –customer included. We have dailies, and exchange
 info through Skype, but always have had the feeling improvements made related to
@@ -1927,7 +1927,7 @@ existent may be a good pet project to work on.&lt;/p&gt;</description>
 </item>
 <item>
   <title>Tuesday</title>
-  <guid>https://marcoscobena.com/#/2017-12-19</guid>
+  <guid>https://marcoscobena.com/?i=2017-12-19</guid>
   <description>&lt;p&gt;I’ve had the chance to add a small anim. in the page am working out. Which’s the
 best easing function to fit? &lt;a href="http://easings.net"&gt;http://easings.net&lt;/a&gt;.&lt;/p&gt;
 
@@ -1941,7 +1941,7 @@ single folder, for the next time will have a look there before.&lt;/p&gt;</descr
 </item>
 <item>
   <title>Monday</title>
-  <guid>https://marcoscobena.com/#/2017-12-18</guid>
+  <guid>https://marcoscobena.com/?i=2017-12-18</guid>
   <description>&lt;p&gt;(Starting from today I’ll begin writting down What I Learned Today —WILT seems a
 nice acronym.)&lt;/p&gt;
 
@@ -1954,8 +1954,8 @@ platform. But have done my first calls in both! 🎉&lt;/p&gt;</description>
 </item>
 <item>
   <title>Abanico, a few hours with Xamarin.Forms and SkiaSharp</title>
-  <guid>https://marcoscobena.com/#/abanico-a-few-hours-with-xamarin-forms-and-skiasharp</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=abanico-a-few-hours-with-xamarin-forms-and-skiasharp</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;It's been a month and a half since I started to dig into the world of Graphic Design. The first module introduced, among other things, the notion of color wheel. And I felt the need to make my-self one of those :-)&lt;/p&gt;
 
@@ -1970,8 +1970,8 @@ platform. But have done my first calls in both! 🎉&lt;/p&gt;</description>
 </item>
 <item>
   <title>Reflexiones</title>
-  <guid>https://marcoscobena.com/#/reflexiones</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=reflexiones</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A veces me gusta escribir sobre pensamientos que tengo, motivados en su mayoría por cómo desenvolverse mejor en la vida. Cada vez que escriba uno (al mes más o menos) te lo enviaré personalmente; solo déjame tu dirección:&lt;/p&gt;
 
@@ -1981,8 +1981,8 @@ platform. But have done my first calls in both! 🎉&lt;/p&gt;</description>
 </item>
 <item>
   <title>Qué puedo hacer / What can I do</title>
-  <guid>https://marcoscobena.com/#/que-puedo-hacer</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=que-puedo-hacer</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p style="text-align:center;"&gt;👋🏼  Actualmente trabajo a tiempo completo como Senior Mobile Developer (desarrollando apps) en &lt;a href="http://devsdna.com"&gt;DevsDNA&lt;/a&gt;. Si crees que podemos ayudarte ¡escríbenos! &lt;a href="mailto:marcos@devsdna.com"&gt;marcos@devsdna.com&lt;/a&gt;
 /
@@ -2016,8 +2016,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Wrapping views in Xamarin.iOS</title>
-  <guid>https://marcoscobena.com/#/wrapping-views-in-xamarin-ios</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=wrapping-views-in-xamarin-ios</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Current sprint, which ends just tomorrow, is being thrilling. Wonderful. We're crafting a beautiful app which goes beyond pixel respect, but content flow. I [think] can't say anything about it, our customer, but our skills developing apps are taking a level which I've always dreamed with, and that definitely makes me super happy. :-)&lt;/p&gt;
 
@@ -2040,8 +2040,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>My UICollectionView doesn't refresh on new items</title>
-  <guid>https://marcoscobena.com/#/my-uicollectionview-doesnt-refresh-on-new-items</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=my-uicollectionview-doesnt-refresh-on-new-items</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Last week I was struggling with an UICollectionView -MvxCollectionView actually- which was not reacting to new items coming in the DataSource. For more turns I took, I didn't found the answer.&lt;/p&gt;
 
@@ -2059,8 +2059,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Para los que nacimos en los 80, y para los que no</title>
-  <guid>https://marcoscobena.com/#/para-los-que-nacimos-en-los-80-y-para-los-que-no</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=para-los-que-nacimos-en-los-80-y-para-los-que-no</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Nací en 1984. Octubre. Hace 32 años. He entendido siempre la treintena como asentamiento, y me ha tocado -está tocando- seguir aprendiendo. Pero no en plan víctima eh; todo lo contrario, de buen rollo :-) Hemos escuchado que la vida es un aprendizaje continuo pero, aquí, me refiero a cosas básicas. Disfruto siempre leyendo frases de Mr. Wonderful, reflexionando sobre ellas, y escuchando a Elsa Punset sobre Inteligencia emocional, pero no ha sido tanto el impacto que esto tenía en mí como hacerme una pregunta.&lt;/p&gt;
 
@@ -2088,8 +2088,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Mask Animation with Xamarin.iOS and AutoLayout</title>
-  <guid>https://marcoscobena.com/#/mask-animation-with-xamarin-ios-and-autolayout</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=mask-animation-with-xamarin-ios-and-autolayout</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Our workmate &lt;a href="https://twitter.com/sescaladab"&gt;Sergio Escalada&lt;/a&gt; has just published a little gem on how to apply animations based in masks:&lt;/p&gt;
 
@@ -2101,8 +2101,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Introducing Xamarin.iOS to Objective-C/Swift developers</title>
-  <guid>https://marcoscobena.com/#/introducing-xamarin-ios-to-objective-c-swift-developers</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=introducing-xamarin-ios-to-objective-c-swift-developers</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A few months ago I had the chance to showcase &lt;a href="https://www.xamarin.com/platform"&gt;Xamarin.iOS&lt;/a&gt; to pure Objective-C/Swift developers, within a local group called &lt;a href="http://nscoder-sev.tumblr.com/"&gt;NSCoder Sevilla&lt;/a&gt;.&lt;/p&gt;
 
@@ -2119,8 +2119,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Me gusta, no me gusta, me gusta...</title>
-  <guid>https://marcoscobena.com/#/me-gusta-no-me-gusta-me-gusta</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=me-gusta-no-me-gusta-me-gusta</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img class="aligncenter size-full wp-image-574" src="items/images/7104203537_b1d010cdfe_o.jpg" alt="DSC_0001" width="1024" height="685" /&gt;
 &lt;em&gt;&lt;a href="https://www.flickr.com/photos/centermez/7104203537/in/photolist-bPLUcT-aFQJzM-zVFQG-miT5Kw-8h84WL-4VwiJz-mp8rzZ-8dcMHs-nuKRie-peaprg-Cso2K-QkvfB-nvcArr-9Vivdn-j8ZyC9-QtZnj-5QziCM-nfXssr-7vdFmV-4ubqt8-KqRYy-8h4PDX-8izvkJ-HWRP76-ftFHcr-4fvwjZ-gSrtx1-c7oMhL-61Xvdk-dRbdLs-aLvQmP-9qN7nD-9ukdnh-r1Cdeh-gaCE3k-ppwwR3-p7yFhD-GD9iik-cf51zS-4JSSjq-oK9jxq-nnVDsX-B7pHF-9N9ms-4hRPQq-fg7iWd-fTyeGT-f2t5gC-XHpi-8rCnTy"&gt;Thinking&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -2155,8 +2155,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Si no lo tengo me lo invento</title>
-  <guid>https://marcoscobena.com/#/si-no-lo-tengo-me-lo-invento</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=si-no-lo-tengo-me-lo-invento</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Seguimos con más patrones. En este caso: ¿cómo respondemos ante las necesidades? Solemos tener dos opciones: compramos algo que la solucione o nos inventamos algo que haga lo mismo. No quiero entrar en el punto de vista del consumismo sino de la felicidad. Pero ¿se puede ser feliz resolviendo necesidades?&lt;/p&gt;
 
@@ -2186,8 +2186,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>La mala-vergüenza</title>
-  <guid>https://marcoscobena.com/#/la-mala-verguenza</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=la-mala-verguenza</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Con los años he descubierto un patrón curioso que es súper potente unido al "&lt;a href="http://marcoscobena.com/2016/06/05/el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer/"&gt;ir al mínimo&lt;/a&gt;" de la semana pasada: algunas personas que triunfan, que les va bien, habían perdido antes la vergüenza. No la vergüenza buena de la educación, sino la mala, la "freno de mano".&lt;/p&gt;
 
@@ -2211,8 +2211,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>El valor de ir al mínimo con aquello que sueñas sin querer</title>
-  <guid>https://marcoscobena.com/#/el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Este fin de semana estuvimos mis amigos y yo hablando de la [conocida para algunos] ecuación de la felicidad:&lt;/p&gt;
 
@@ -2246,8 +2246,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>ADAL and how to sign in with Microsoft accounts in Xamarin.iOS</title>
-  <guid>https://marcoscobena.com/#/adal-and-how-to-sign-in-with-microsoft-accounts-in-xamarin-ios</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=adal-and-how-to-sign-in-with-microsoft-accounts-in-xamarin-ios</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;One the latest bits we added to &lt;a href="https://github.com/Microsoft/HealthClinic.biz"&gt;HealthClinic.biz suite&lt;/a&gt; is Azure's Active Directory Authentication (ADAL from now on). Basically, you can authenticate users by their Microsoft account, and let them access the app or not. You can do some other things, but our mainly goal was that one. For instance, we added also Touch ID so your fingerprint is saved to avoid entering the credentials once and again. Superb.&lt;/p&gt;
 
@@ -2264,8 +2264,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Inject Wave Engine into Xamarin.iOS Apps</title>
-  <guid>https://marcoscobena.com/#/inject-wave-engine-into-xamarin-ios-apps</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=inject-wave-engine-into-xamarin-ios-apps</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;My good friend and workmate &lt;a href="https://twitter.com/sescaladab"&gt;Sergio Escalada&lt;/a&gt; and I wrote a few months ago a quick guide, along with a sample (find the link below), on how you can render Wave Engine on a Xamarin.iOS app: not a full-screen game it-self, but adding specific views which are handled from Wave Engine.&lt;/p&gt;
 
@@ -2284,8 +2284,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Álvaro and I fighting the crisis</title>
-  <guid>https://marcoscobena.com/#/alvaro-and-i-fighting-the-crisis</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=alvaro-and-i-fighting-the-crisis</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=" size-full wp-image-322 aligncenter" src="items/images/aromarcos.jpg" alt="aro&amp;amp;amp;marcos" width="590" height="441" /&gt;
 &lt;em&gt;Álvaro and my-self (carrying my C# t-shirt :-) )&lt;/em&gt;&lt;/p&gt;
@@ -2302,8 +2302,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Setting up Xamarin.iOS builds in Visual Studio Team Services (formerly Visual Studio Online) through MacinCloud, and a bonus (HockeyApp)</title>
-  <guid>https://marcoscobena.com/#/setting-up-xamarin-ios-builds-in-visual-studio-team-services-formerly-visual-studio-online-through-macincloud-and-a-bonus-hockeyapp</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=setting-up-xamarin-ios-builds-in-visual-studio-team-services-formerly-visual-studio-online-through-macincloud-and-a-bonus-hockeyapp</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A few weeks ago we needed to setup CI/CD builds in HealthClinic.biz private repo (&lt;a href="https://github.com/Microsoft/HealthClinic.biz"&gt;here&lt;/a&gt; is the public one), hosted in &lt;a href="https://www.visualstudio.com/es-es/products/visual-studio-team-services-vs.aspx"&gt;Visual Studio Team Services&lt;/a&gt; (VSTS from now on), for the &lt;a href="https://github.com/Microsoft/HealthClinic.biz/tree/master/src/MyHealth.Client.iOS"&gt;Patients&lt;/a&gt; app made with Xamarin.iOS. Since the suite includes a Cordoba app for iOS as well, such was being built through &lt;a href="http://www.macincloud.com/"&gt;MacinCloud&lt;/a&gt;, so the agent pool was already configured (if not, &lt;a href="https://blogs.msdn.microsoft.com/visualstudioalm/2015/11/18/macincloud-visual-studio-team-services-build-and-improvements-to-ios-build-support/"&gt;here&lt;/a&gt; can be found how to).&lt;/p&gt;
 
@@ -2319,8 +2319,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Monkey.Tap with Wave Engine</title>
-  <guid>https://marcoscobena.com/#/monkey-tap-with-wave-engine</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=monkey-tap-with-wave-engine</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A few weeks ago Xamarin published on their blog a bunch of entries with a &lt;a href="https://blog.xamarin.com/building-your-first-game-with-monogame-finishing-the-app/"&gt;nice step-by-step guide&lt;/a&gt; to create Monkey.Tap with MonoGame.&lt;/p&gt;
 
@@ -2335,8 +2335,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>The Value on Microsoft-Xamarin Agreement</title>
-  <guid>https://marcoscobena.com/#/the-value-on-microsoft-xamarin-agreement</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=the-value-on-microsoft-xamarin-agreement</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;It's close to 24:00 and I've just arrived to the hotel after spending a wonderful day at #dotNetSpain2016. However, I couldn't go to bed without writting down how much I value the acquisition of Xamarin from Microsoft.&lt;/p&gt;
 
@@ -2356,8 +2356,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>New App: ¡Buenos días! aro</title>
-  <guid>https://marcoscobena.com/#/new-app-buenos-dias-aro</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=new-app-buenos-dias-aro</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;During half 2015 I published a proof-of-concept app to deliver small pictures a friend of mine, "aro", creates every morning. I was delighted with his work done with those pictures, and I wanted to create the bridge to make them arrive to as much people as possible.&lt;/p&gt;
 
@@ -2382,8 +2382,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>We've Reviewed Grial UI Kit at Plain Concepts</title>
-  <guid>https://marcoscobena.com/#/weve-reviewed-grial-ui-kit-at-plain-concepts</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=weve-reviewed-grial-ui-kit-at-plain-concepts</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Our workmate Juan Antonio Cano (&lt;a href="https://twitter.com/jacano35"&gt;@jacano35&lt;/a&gt;) has done a great review of this fantastic kit for Xamarin.Forms. We'd like to thank the guys from &lt;a href="http://www.uxdivers.com/"&gt;UXDivers&lt;/a&gt; for sharing a license with us, so we could analyze it deeply. Enjoy it!&lt;/p&gt;
 
@@ -2422,8 +2422,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Wave Engine: Frustum Culling</title>
-  <guid>https://marcoscobena.com/#/wave-engine-frustum-culling</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=wave-engine-frustum-culling</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Below &lt;a href="https://github.com/WaveEngine/Documentation/wiki/Frustum-Culling"&gt;recipe&lt;/a&gt; belongs to &lt;a href="https://github.com/WaveEngine/Documentation/wiki"&gt;Wave Engine's official Documentation wiki&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -2457,8 +2457,8 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 </item>
 <item>
   <title>Quick Dump of Things I've Learned This Week Developing on Apple Watch</title>
-  <guid>https://marcoscobena.com/#/quick-dump-of-things-ive-learned-this-week-developing-on-apple-watch</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=quick-dump-of-things-ive-learned-this-week-developing-on-apple-watch</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;It turns out we're lately at &lt;a href="http://www.plainconcepts.com" target="_blank"&gt;Plain Concepts&lt;/a&gt; working on a few iOS apps which involve Apple Watch. And we're using Xamarin. :-) The one I'm working on is quite simple, but I've learned a few things which can be interesting to any other one making a first landing into a similar project.&lt;/p&gt;
 
@@ -2504,8 +2504,8 @@ _wormhole.PassMessage(FooMessage.MessageType, 
 </item>
 <item>
   <title>Wave Engine: Create a Custom UI Control</title>
-  <guid>https://marcoscobena.com/#/wave-engine-create-a-custom-ui-control</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=wave-engine-create-a-custom-ui-control</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;div class="gh-header"&gt;
 &lt;div class="gh-header-show"&gt;
@@ -2693,8 +2693,8 @@ You have learned how to extend the existing UI, through composition, to build a 
 </item>
 <item>
   <title>Wave Engine: Play Sound (Sound Effects &amp; Themes)</title>
-  <guid>https://marcoscobena.com/#/wave-engine-play-sound-effects-and-themes</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=wave-engine-play-sound-effects-and-themes</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Some members of the &lt;a href="https://waveengine.net/"&gt;Wave Engine&lt;/a&gt; Team are working on updating recipes to 2.0, and extend those to achieve more and more features of the engine. Past week, I wrote &lt;a href="https://github.com/WaveEngine/Documentation/wiki/Play-Sound-%28Sound-Effects-%26-Themes%29"&gt;this one&lt;/a&gt; at &lt;a href="https://github.com/WaveEngine/Documentation/wiki"&gt;Wave Engine Documentation wiki&lt;/a&gt;. I hope it'll move you something inside to give a chance to &lt;a href="https://waveengine.net/Downloads"&gt;Wave&lt;/a&gt;!&lt;/p&gt;
 
@@ -2764,8 +2764,8 @@ WaveServices.MusicPlayer.Play(music);&lt;/pre&gt;
 </item>
 <item>
   <title>Colors in iOS: Same Value, Different Tonality</title>
-  <guid>https://marcoscobena.com/#/colors-in-ios-same-value-different-tonality</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=colors-in-ios-same-value-different-tonality</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This entry was originally written at &lt;a href="http://blogs.plainconcepts.com/xamarinteam/2015/10/05/colors-in-ios-same-value-different-tonality/"&gt;Plain Concepts' Xamarin Team Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
@@ -2799,8 +2799,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>Missing Shadows on Lollipop's CardView</title>
-  <guid>https://marcoscobena.com/#/missing-shadows-on-lollipops-cardview</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=missing-shadows-on-lollipops-cardview</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Have you ever tried to drop shadows from CardViews? Did those happen on pre-Lollipop but don't on newer ones? Did you look for "android cardview shadow issue lollipop" and find just a few answers and none of them worked? Do even the shadows margins are just there, you can see those?&lt;/p&gt;
 
@@ -2828,8 +2828,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>My First App Published: ¡Buenos días!</title>
-  <guid>https://marcoscobena.com/#/my-first-app-published-buenos-dias</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=my-first-app-published-buenos-dias</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Dedicado a Elisa, que siempre me ha empujado para que siguiera con ello, y no lo dejara. Gracias, mi amor. ¡Te quiero!&lt;/em&gt;&lt;/p&gt;
 
@@ -2855,8 +2855,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>¡Buenos días! aro</title>
-  <guid>https://marcoscobena.com/#/buenosdias</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=buenosdias</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro&amp;amp;utm_source=global_co&amp;amp;utm_medium=prtnr&amp;amp;utm_content=Mar2515&amp;amp;utm_campaign=PartBadge&amp;amp;pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"&gt;&lt;img class="alignleft" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" alt="Get it on Google Play" width="250" height="74" /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -2910,8 +2910,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>Recipes for Wave Engine</title>
-  <guid>https://marcoscobena.com/#/recipes-for-wave-engine</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=recipes-for-wave-engine</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Appart from my day-to-day job with the Xamarin Team, I spend a few hours per week collaborating with small tasks of &lt;a href="http://waveengine.net/"&gt;Wave Engine&lt;/a&gt;. It is our 2D/3D cross-platform game engine, written and coded in .NET/C#, which targets all those mobile devices you have in mind (running on Android and iOS through Xamarin products). And, it is free. &lt;a href="https://www.youtube.com/watch?v=DvTzWrJltQU"&gt;&lt;img src="https://img.youtube.com/vi/DvTzWrJltQU/0.jpg" alt="" /&gt;&lt;/a&gt; When I was reading Adam Wolf's &lt;a href="https://www.syntaxismyui.com/the-xamarin-forms-chef/"&gt;post&lt;/a&gt; summarizing his recipes for Xamarin.Forms (thank you Master Chef!), I came up with the idea of doing the same, but with those I have been lately writting for Wave Engine. We are currently hosting those at the official Wave Engine's &lt;a href="https://github.com/WaveEngine/"&gt;GitHub account&lt;/a&gt;, at the Documentation repository's &lt;a href="https://github.com/WaveEngine/Documentation/wiki"&gt;Wiki&lt;/a&gt;, so anyone can help us to improve them:&lt;/p&gt;
 
@@ -2936,8 +2936,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>FormsPresenters: Setting Up MvvmCross with Xamarin.Forms</title>
-  <guid>https://marcoscobena.com/#/formspresenters-setting-up-mvvmcross-with-xamarin-forms</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=formspresenters-setting-up-mvvmcross-with-xamarin-forms</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;During the last months, we have made some improvements to the &lt;a href="https://github.com/Cheesebaron/Cheesebaron.MvxPlugins/tree/master/FormsPresenters/WindowsPhone"&gt;FormsPresenters plug-in&lt;/a&gt; taken from real-world projects we are working on with our customers, at Plain Concepts. Since we did not have some NuGet packages to make an easy install of the scaffolding needed, we dedicated some effort to add a small documentation to the GitHub repository it-self, so everyone can easily set-up MvvmCross on their Xamarin.Forms projects.&lt;/p&gt;
 
@@ -2949,8 +2949,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>Introducing SVQXDG</title>
-  <guid>https://marcoscobena.com/#/introducing-svqxdg</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=introducing-svqxdg</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Going back from past dotNet Conference Spain 2015, &lt;a href="https://twitter.com/jsuarezruiz" target="_blank"&gt;Javier Suárez&lt;/a&gt; and I shared our passion on Xamarin at the train's cafeteria. We both liked the idea of having a local user group where talking about our projects made with Xamarin, which are the latest news, meet some other people doing the same things, etc.&lt;/p&gt;
 
@@ -2964,8 +2964,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>Case Study: Sage</title>
-  <guid>https://marcoscobena.com/#/case-study-sage</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=case-study-sage</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A few weeks ago Xamarin published one of our Case Studies: Sage.&lt;/p&gt;
 
@@ -2977,8 +2977,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>Translating Designs into Layouts: Units Conversion</title>
-  <guid>https://marcoscobena.com/#/translating-designs-into-layouts-units-conversion</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=translating-designs-into-layouts-units-conversion</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a title="Ruler by Scott Akerman, on Flickr" href="https://www.flickr.com/photos/sterlic/4299631538"&gt;&lt;img class=" aligncenter" src="https://farm3.staticflickr.com/2730/4299631538_220c9c9448_z.jpg" alt="Ruler" width="640" height="396" /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -2994,8 +2994,8 @@ redView.BackgroundColor = UIColor.Red;
 </item>
 <item>
   <title>Xamarin.Forms and Design challenges</title>
-  <guid>https://marcoscobena.com/#/xamarin-forms-and-design-challenges</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=xamarin-forms-and-design-challenges</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Everyone looking forward to use Xamarin.Forms is asking the same question: &lt;em&gt;would we be able to match our Designer's layouts with Xamarin.Forms?&lt;/em&gt; One week ago, I installed again the official Twitter app on my iPhone, and it recalled my attention the opening: it has a beautiful animation which goes from the Twitter's bird to your timeline.&lt;/p&gt;
 
@@ -3053,8 +3053,8 @@ async Task ExecuteStoryboardAsync()
 </item>
 <item>
   <title>Enabling Xamarin.Forms with MVVMCross on Windows Phone</title>
-  <guid>https://marcoscobena.com/#/enabling-xamarin-forms-with-mvvmcross-on-windows-phone</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=enabling-xamarin-forms-with-mvvmcross-on-windows-phone</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;We are at &lt;a href="http://www.plainconcepts.com/"&gt;Plain Concepts&lt;/a&gt;, the Xamarin Team, investigating new ways to make use of &lt;a href="http://xamarin.com/forms"&gt;Xamarin.Forms&lt;/a&gt; to help our customers success on the main three mobile platforms: Android, iOS and Windows Phone. Most of our projects have been made using &lt;a href="https://github.com/MvvmCross/MvvmCross"&gt;MVVMCross&lt;/a&gt; as backend plus native UI for each target. Our company has special care for the visual side of every project, so this approach has given us the chance to follow the designs provided by our lovely Design &amp;amp; UX Team. But, after being playing around with Xamarin.Forms since the last year, we have seen a great opportunity to build apps with it, specially for those customers where the main goal is to reach every market, and not having strong visual requirements.&lt;/p&gt;
 
@@ -3079,8 +3079,8 @@ async Task ExecuteStoryboardAsync()
 </item>
 <item>
   <title>Error handling with Promises, and how to block the UI meanwhile</title>
-  <guid>https://marcoscobena.com/#/error-handling-with-promises-and-how-to-block-the-ui-meanwhile</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+  <guid>https://marcoscobena.com/?i=error-handling-with-promises-and-how-to-block-the-ui-meanwhile</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
 
 &lt;div&gt;
 

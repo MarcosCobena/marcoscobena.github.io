@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
 Con los años he descubierto un patrón curioso que es súper potente unido al "<a href="http://marcoscobena.com/2016/06/05/el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer/">ir al mínimo</a>" de la semana pasada: algunas personas que triunfan, que les va bien, habían perdido antes la vergüenza. No la vergüenza buena de la educación, sino la mala, la "freno de mano".
 
