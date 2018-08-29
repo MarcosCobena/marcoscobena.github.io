@@ -71,12 +71,13 @@
 			var converter = new showdown.Converter({ tables: true });
 			var homeFilename = "home";
 			var resourceNotFoundFilename = "404";
-			var urlSeparator = "#/";
+			var hashtagUrlSeparator = "#/";
+			var queryUrlSeparator = "/?i=";
 
 			$(document).on('click', 'a', function(event) {
 				var href = $(this).attr("href");
 				
-				if (href.startsWith("http") || href.startsWith("mailto:") || !href.startsWith(urlSeparator)) {
+				if (href.startsWith("http") || href.startsWith("mailto:") || !href.startsWith(hashtagUrlSeparator)) {
 					event.returnValue = false;
 					return;
 				}
@@ -133,8 +134,16 @@
 			}
 
 			function getJustFilename(path) {
-				var lastSlashIndex = path.lastIndexOf("/");
-				var filename = path.substring(lastSlashIndex + 1);
+				var filename;
+
+				if (path.includes(queryUrlSeparator)) {
+					var index = path.lastIndexOf(queryUrlSeparator);
+					filename = path.substring(index + queryUrlSeparator.length);
+				} else {
+					var lastSlashIndex = path.lastIndexOf("/");
+					filename = path.substring(lastSlashIndex + 1);
+
+				}
 
 				return filename;
 			}
@@ -188,7 +197,7 @@
 			}
 
 			function pushState(filename) {
-				history.pushState({ filename: filename }, "", urlSeparator + filename);
+				history.pushState({ filename: filename }, "", hashtagUrlSeparator + filename);
 			}
 
 			function render(item, markDown) {
