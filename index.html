@@ -140,10 +140,14 @@
 				if (path.includes(queryUrlSeparator)) {
 					var index = path.lastIndexOf(queryUrlSeparator);
 					filename = path.substring(index + queryUrlSeparator.length);
+					index = filename.lastIndexOf("#")
+
+					if (index >= 0) {
+						filename = filename.substring(0, index);
+					}
 				} else {
 					var lastSlashIndex = path.lastIndexOf("/");
 					filename = path.substring(lastSlashIndex + 1);
-
 				}
 
 				return filename;
