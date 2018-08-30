@@ -23,7 +23,7 @@
 
             #bodyWrapper {
                 height: inherit;
-				margin: 0 16pt;
+				margin: 0 16pt 33.34%;
             }
 
             .center {
@@ -48,8 +48,8 @@
                 text-align: right;
 			}
 
-            .signature {
-				margin: 1.5em 0% 33.34%;
+            #signature {
+				margin: 1.5em 0%;
             }
 
 			#title {
@@ -230,7 +230,7 @@
 
 				if (isBlogPost) {
 					if (weAreAtInternet()) {
-						$("#actualBody").append('\n\n<div id="disqus_thread"></div>');
+						$("#signature").after('\n\n<div id="disqus_thread"></div>');
 
 						DISQUS.reset({
 							reload: true,
@@ -293,7 +293,7 @@
 				<noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
 			</div>
 
-			<p class="signature">
+			<p id="signature">
 				—<a href="/?i=contact">Marcos</a>
 			</p>
 		</div>
