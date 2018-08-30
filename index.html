@@ -230,6 +230,8 @@
 
 				if (isBlogPost) {
 					if (weAreAtInternet()) {
+						$("#actualBody").append('\n\n<div id="disqus_thread"></div>');
+
 						DISQUS.reset({
 							reload: true,
 							config: function () {
@@ -294,8 +296,6 @@
 			<p class="signature">
 				—<a href="/?i=contact">Marcos</a>
 			</p>
-
-			<div id="disqus_thread"></div>
 		</div>
 	</body>
 </html>
