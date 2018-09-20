@@ -23,7 +23,7 @@
 
             #bodyWrapper {
                 height: inherit;
-				margin: 0 16pt;
+				margin: 0 16pt 33.34%;
             }
 
             .center {
@@ -53,8 +53,8 @@
                 text-align: right;
 			}
 
-            .signature {
-				margin: 1.5em 0% 33.34%;
+            #signature {
+				margin: 1.5em 0%;
             }
 
 			#title {
@@ -145,10 +145,14 @@
 				if (path.includes(queryUrlSeparator)) {
 					var index = path.lastIndexOf(queryUrlSeparator);
 					filename = path.substring(index + queryUrlSeparator.length);
+					index = filename.lastIndexOf("#")
+
+					if (index >= 0) {
+						filename = filename.substring(0, index);
+					}
 				} else {
 					var lastSlashIndex = path.lastIndexOf("/");
 					filename = path.substring(lastSlashIndex + 1);
-
 				}
 
 				return filename;
@@ -177,12 +181,17 @@
 
 			function loadItem(filename) {
 				var item = findItem(filename);
+				var isBlogPost = false;
 
 				// It may be a post...
 				if (item == undefined) {
 					item = posts.find(function(post) {
 						return post.filename == filename;
 					});
+
+					if (item != undefined) {
+						isBlogPost = true;
+					}
 				}
 
 				if (item == undefined) {
@@ -193,7 +202,7 @@
 				var actualPath = "items/" + filename + ".md";
 
 				$.get(actualPath, function (data) { 
-					render(item, data); 
+					render(item, data, isBlogPost); 
 				});
 			}
 
@@ -206,7 +215,7 @@
 				history.pushState({ filename: filename }, "", queryUrlSeparator + filename);
 			}
 
-			function render(item, markDown) {
+			function render(item, markDown, isBlogPost) {
 				document.title = item.title;
 
 				if (item.filename == homeFilename) {
@@ -224,7 +233,18 @@
 				var body = converter.makeHtml(markDown);
 				$("#actualBody").html(body);
 
-				if (item.filename == homeFilename) {
+				if (isBlogPost) {
+					if (weAreAtInternet()) {
+						$("#signature").after('\n\n<div id="disqus_thread"></div>');
+
+						DISQUS.reset({
+							reload: true,
+							config: function () {
+								this.page.identifier = item.filename;
+								this.page.url = window.location.href;
+							}});
+					}
+				} else if (item.filename == homeFilename) {
 					listBlogPosts("#posts-latest", 5);
 				} else if (item.filename == "blog") {
 					listBlogPosts("#posts");
@@ -232,6 +252,29 @@
 
 				window.scrollTo(0, 0);
 			}
+
+			function weAreAtInternet() {
+                if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+                    return false;
+                } else {
+                    return true;
+                }
+			}
+			
+			if (weAreAtInternet()) {
+                // Here starts Disqus set-up
+                var disqus_config = function () {
+                    this.page.url = "https://marcoscobena.com";
+                    this.page.identifier = "home";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://marcoscobena.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                // Here ends Disqus set-up
+            }
 
 			$(function() {
 				entryPoint();
@@ -255,7 +298,7 @@
 				<noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
 			</div>
 
-			<p class="signature">
+			<p id="signature">
 				—<a href="/?i=contact">Marcos</a>
 			</p>
 		</div>
