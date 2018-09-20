@@ -74,7 +74,7 @@ formats it beautifully
 
  
 
-**🆕 Lock Hunter** —if you can’t delete/rename any file/folder in Windows
+**Lock Hunter** —if you can’t delete/rename any file/folder in Windows
 because someone else’s using it, this’ your tool
 
 <https://lockhunter.com/>
@@ -86,6 +86,12 @@ Quite useful when outlining UIs which have images. My fuchsia `BoxView`
 replacement
 
 <http://lorempixel.com/>
+
+
+
+**🆕 NTFS for Mac** —I've just tried the trial option but makes super easy to work with NTFS drives
+
+https://www.paragon-software.com/ufsdhome/ntfs-mac/
 
  
 

@@ -13,14 +13,14 @@ addItem("Blog", "blog", "22/8/2018");
 addItem("Conferences", "conferences", "7/12/2017");
 addItem("Contact", "contact", "22/8/2018");
 addItem("FPV Drones", "drones", "8/5/2018");
-addItem("Git", "git", "5/7/2018");
+addItem("Git", "git", "20/9/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("Portfolio", "portfolio", "20/9/2018");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Reading", "reading", "13/6/2018");
 addItem("Recipes", "recipes", "14/6/2018");
 addItem("Screen template", "screen-template", "6/7/2018");
-addItem("Tools", "tools", "10/7/2018");
+addItem("Tools", "tools", "20/9/2018");
 // addItem("DEBUG", "debug", "1/1/1970");
 
 // Posts —this' the order they'll appear listed

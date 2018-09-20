@@ -2,6 +2,7 @@ It happens I work on projects on macOS with a Windows VM and an Ubuntu one side 
 
 - `git checkout -- path` —discards `path` changes
 - `git checkout foo-branch` —changes locally to foo-branch from current one
+- `git clean -xfd` —removes everything not tracked
 - `git commit -a -m "Foo"` —commits the entire working copy with "Foo" message
 - `git diff` —working copy diffs
 - `git pull` —pulls
