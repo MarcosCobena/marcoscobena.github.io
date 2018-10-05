@@ -58,6 +58,8 @@
 &lt;p&gt;&lt;/ContentView&gt;
 ```&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Update (4/10/2018):&lt;/strong&gt; Daniel Martín's recommended through &lt;a href="https://twitter.com/danimart1991/status/1047735254046453761"&gt;this tweet&lt;/a&gt; to have a look to &lt;a href="https://github.com/Xavalon/XamlStyler"&gt;XamlStyler&lt;/a&gt;: although it's focused on VS on Windows, they provide a CLI through NuGet which could fit under macOS.&lt;/p&gt;
+
 &lt;h3&gt;App.xaml&lt;/h3&gt;
 
 &lt;p&gt;At the opposite of what we'd think, I've found better with time to leave this file "empty". The quotes mean it's actually not empty, but blends other sources which do have XAML of value inside.&lt;/p&gt;
@@ -89,7 +91,7 @@
 
 &lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Wed, 03 Oct 2018 22:00:00 GMT</pubDate>
+  <pubDate>Thu, 04 Oct 2018 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>How to centralize font-related styling</title>

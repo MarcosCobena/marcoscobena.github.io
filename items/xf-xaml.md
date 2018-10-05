@@ -42,6 +42,8 @@ This' an example following above rules:
 </ContentView>
 ```
 
+**Update (4/10/2018):** Daniel Martín's recommended through [this tweet](https://twitter.com/danimart1991/status/1047735254046453761) to have a look to [XamlStyler](https://github.com/Xavalon/XamlStyler): although it's focused on VS on Windows, they provide a CLI through NuGet which could fit under macOS.
+
 ### App.xaml
 
 At the opposite of what we'd think, I've found better with time to leave this file "empty". The quotes mean it's actually not empty, but blends other sources which do have XAML of value inside.

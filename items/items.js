@@ -25,7 +25,7 @@ addItem("Tools", "tools", "20/9/2018");
 
 // Posts —this' the order they'll appear listed
 
-addPost("Xamarin.Forms XAML", "xf-xaml", "4/10/2018");
+addPost("Xamarin.Forms XAML", "xf-xaml", "5/10/2018");
 addPost("How to centralize font-related styling", "2018-3-15", "16/3/2018");
 addPost("Let's use Control Templates", "2018-3-14", "15/3/2018");
 addPost("Pushing our-selves into our users' perspective", "2018-3-13", "14/3/2018");
