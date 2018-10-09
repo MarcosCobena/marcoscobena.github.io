@@ -12,5 +12,4 @@ Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps
 
 **Software Development** [Conferences](/?i=conferences) [Git](/?i=git) [Key-bindings](/?i=key-bindings) [Portfolio](/?i=portfolio) [Questions](/?i=questions) [Recipes](/?i=recipes) [Screen template](/?i=screen-template) [Tools](/?i=tools)
 
-**About** [Contact](/?i=contact) [GitHub](https://github.com/MarcosCobena) [LinkedIn](https://www.linkedin.com/in/MarcosCobena) [Medium](https://medium.com/@MarcosCobena) [Twitter](https://twitter.com/1Marcos2Cobena)
-
+**About** [Contact](/?i=contact) [GitHub](https://github.com/MarcosCobena) [LinkedIn](https://www.linkedin.com/in/MarcosCobena) [Twitter](https://twitter.com/1Marcos2Cobena)
