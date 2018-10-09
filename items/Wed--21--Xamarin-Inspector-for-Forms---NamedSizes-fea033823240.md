@@ -16,12 +16,3 @@ The UI refactoring was finally finished! Phew, after all am super happy with the
 On that last piece, I followed the recommendation from yesterday and also my mate Sergio’s one of using Forms’ built-in [NamedSize](https://developer.xamarin.com/api/type/Xamarin.Forms.NamedSize/)s, where having source code at GitHub really helped understand [the underneath calcs](https://github.com/xamarin/Xamarin.Forms/blob/b96f65bdd9e7e931971338b122a8940e2a35ccc7/Xamarin.Forms.Platform.Android/Forms.cs#L429) to render its different sizes.
 
 The app now shines in a 7’’ tablet, running Full HD, but also on more smaller form factors. What I learnt? My next project will start yes or yes with font styles and, if fits, with named sizes and, if fits, with Control Templates, all in this order.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [March 21, 2018](https://medium.com/p/fea033823240).
-
-[Canonical link](https://medium.com/@MarcosCobena/wed-21-xamarin-inspector-for-forms-namedsizes-fea033823240)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

@@ -50,12 +50,3 @@ Regarding i18n, most of the work has been to carefully take strings out of code 
 > [](https://twitter.com/matthewrdev/status/910665130727182336)
 
   * Converters –MvxValueConverter actually– have been a great solution to cover i18n in enums which are directly taken to UI: not only can translate during conversion, but also can gather back original enum by converting back. Apart’s been a good refactoring process tooThe refreshes bug finally was a lot easier to fix: instead of looking to superb solutions, sometimes I should just concentrate on a single point, and give such an elegant exit. This’ my learning for the week.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [September 25, 2017](https://medium.com/p/3d9ad2a9421b).
-
-[Canonical link](https://medium.com/@MarcosCobena/the-refreshes-bug-and-i18n-3d9ad2a9421b)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

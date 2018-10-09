@@ -36,12 +36,3 @@ Also, making the CarouselControl offer a well-known binding scenario made me tes
  }Finally, I had to support swipe gestures so at Page level any left or right swipe is directly taken as a left/right movement for the carousel. I became a little bit crazy looking for [different swipe gesture implementations](https://github.com/xamarin/Xamarin.Forms/pull/1007/files) but finally, reusing PanGestureRecognizer was much easier and cleaner (ThresholdToFireSwipeGesture takes 100):
 
 Learnings? Things can be easier than we think –or we think too complex from the semaphore. Tests are helpful to feel confidence, and avoids debugging time. VS 4 Mac still has nice surprises to discover, like those beautiful “break”points :-)
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [October 31, 2017](https://medium.com/p/2ecf7d448fbf).
-
-[Canonical link](https://medium.com/@MarcosCobena/unit-testing-xamarinforms-controls-the-simplest-swipegesturerecognizer-and-no-more-debug-2ecf7d448fbf)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

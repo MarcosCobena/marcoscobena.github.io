@@ -20,12 +20,4 @@ In the other side, it’s curious how we all have similar issues, which in the e
 Oh, and one great productivity tip! I’ve finally discovered how can hide macOS’ badges —I was actually interested in hiding Outlook’s unread messages one:
 
 [**Quickly remove badge from app**  
-_Is it possible to quickly remove a notification badge from an app in the Dock? I'm looking for a solution faster than…_apple.stackexchange.com](https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app)[](https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app)  
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [April 5, 2018](https://medium.com/p/ab9c50246d5a).
-
-[Canonical link](https://medium.com/@MarcosCobena/thu-5-analysing-an-app-written-by-others-ab9c50246d5a)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-
+_Is it possible to quickly remove a notification badge from an app in the Dock? I'm looking for a solution faster than…_apple.stackexchange.com](https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app)[](https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app)

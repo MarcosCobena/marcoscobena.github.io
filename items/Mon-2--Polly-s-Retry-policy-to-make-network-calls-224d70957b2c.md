@@ -13,12 +13,3 @@ And [Polly](https://github.com/App-vNext/Polly) came to my mind. Don’t remembe
 So ended up using Polly’s Retry policy: “I want this call to be executed and, if anything fails, retry up to 3 times”. And this’ the code for exactly that:
 
 My mate Juan asked me whether Polly can handle different paths for different exceptions, and it [looks feasible](https://github.com/App-vNext/Polly/issues/104), although haven’t tried for my-self.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [April 2, 2018](https://medium.com/p/224d70957b2c).
-
-[Canonical link](https://medium.com/@MarcosCobena/mon-2-pollys-retry-policy-to-make-network-calls-224d70957b2c)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

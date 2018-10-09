@@ -87,12 +87,3 @@ Jim couldn’t use Gorilla so I don’t have a pre-comparison on both but I’ll
 I’ve remembered this week that widely-known recurrent sentence from Steve Jobs: points are linked looking back: I was able to make this implementation because I had the chance to work on games.
 
 Whatever we do nowadays, will serve us in the future ☺️
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [October 25, 2017](https://medium.com/p/70b96a692124).
-
-[Canonical link](https://medium.com/@MarcosCobena/the-carousel-party-in-xamarin-forms-70b96a692124)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

@@ -36,12 +36,3 @@ Designers could have templates for Sketch or PhotoShop where every control is ju
 The truth’s we are moving into an ecosystem where our apps can be mobile or desktop or cloud, but such can’t only rely in the Development side. If we don’t make our Designers happier — with its direct impact on the later development — we’ll keep having a very beatiful app on X, with a “free” version on Y and Z.
 
 And the best: there’s nothing to change on Forms. There’s nothing dependant on development tools, or SDKs. Sketching’s nothing new. It’s more of a mind change.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [June 11, 2018](https://medium.com/p/b23a2f12cce5).
-
-[Canonical link](https://medium.com/@MarcosCobena/xamarin-forms-design-framework-b23a2f12cce5)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

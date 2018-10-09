@@ -24,12 +24,3 @@ Also, studying Graphic Design has put me on a position where can better understa
 --------
   
 On last week on-site visit, I spent 3 days at Inditex, mainly teaching how to find both performance and memory leak issues with Xamarin Profiler. As it always happens, have learnt a lot too, and come quite happy with the level people are achieving with Xamarin.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [October 18, 2017](https://medium.com/p/fecc2b436e08).
-
-[Canonical link](https://medium.com/@MarcosCobena/design-should-worry-us-more-than-code-xamarin-fecc2b436e08)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

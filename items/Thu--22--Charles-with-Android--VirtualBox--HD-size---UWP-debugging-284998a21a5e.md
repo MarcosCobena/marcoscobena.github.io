@@ -25,12 +25,4 @@ My previous VS 2017 installation lacked Xamarin stuff, but couldn’t go for it 
 Finally, trying to debug PCL code with the UWP app, none of my breakpoints were hitting, but my friend Sergio immediately pointed me to the cause: look at that Debugging information piece (set as Full):
 
   
-![](https://cdn-images-1.medium.com/max/1000/1*9paf348GHCuucXvSRcLEfQ.png)  
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [March 22, 2018](https://medium.com/p/284998a21a5e).
-
-[Canonical link](https://medium.com/@MarcosCobena/thu-22-charles-with-android-virtualbox-hd-size-uwp-debugging-284998a21a5e)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-
+![](https://cdn-images-1.medium.com/max/1000/1*9paf348GHCuucXvSRcLEfQ.png)

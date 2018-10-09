@@ -71,12 +71,3 @@ De forma intrínseca a la propuesta, y en el contexto de una situación económi
 Marcos Cobeña Morián  
 [_hello@marcoscobena.com_](mailto:hello@marcoscobena.com)_  
 _Sevilla (Andalucía, España), 15 de agosto de 2016
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [August 15, 2016](https://medium.com/p/fe84192e75c4).
-
-[Canonical link](https://medium.com/@MarcosCobena/hacia-la-e-tauromaquia-una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

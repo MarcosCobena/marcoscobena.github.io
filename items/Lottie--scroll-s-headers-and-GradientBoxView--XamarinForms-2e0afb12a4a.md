@@ -24,12 +24,3 @@ Today has been the end of current sprint so have spent the whole day closing stu
 
 **Friday, 1st**  
 Airplane to Tenerife to our Christmas Dinner! 🎉
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [December 6, 2017](https://medium.com/p/2e0afb12a4a).
-
-[Canonical link](https://medium.com/@MarcosCobena/lottie-scrolls-headers-and-gradientboxview-xamarinforms-2e0afb12a4a)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

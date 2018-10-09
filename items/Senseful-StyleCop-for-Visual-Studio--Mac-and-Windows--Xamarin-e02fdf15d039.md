@@ -26,12 +26,3 @@ Also, profiling Xamarin.Forms apps, I came to the idea again that most of time i
 
 > Who doesn’t know where to go is in danger to get lost
 And that’s. All.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [October 11, 2017](https://medium.com/p/e02fdf15d039).
-
-[Canonical link](https://medium.com/@MarcosCobena/senseful-stylecop-for-visual-studio-mac-and-windows-xamarin-e02fdf15d039)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

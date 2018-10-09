@@ -32,12 +32,3 @@ Pay attention to how one looks like pushing the other 🤠The initial animations
 Super simple, super easy to understand.
 
 Well, this week I’ve double checked that it’s important how you create an UI hierarchy from the very beginning –actually it’s important to spend time on it. If not, there’s the need to look for workarounds. Also, I’ve felt how standardization at an UI level also leverages consistency along your app, which in the end is what you and I see, and touch.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [October 4, 2017](https://medium.com/p/57a805f646).
-
-[Canonical link](https://medium.com/@MarcosCobena/the-androids-fab-which-liked-to-follow-bottombar-xamarin-57a805f646)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

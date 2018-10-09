@@ -18,12 +18,3 @@ Such VM’s a more elaborated flavor of this one —with a cancellation token to
 [**MarcosCobena/XamarinFormsVisualStates**  
 _XamarinFormsVisualStates - Another approach to Visual States in Xamarin.Forms_github.com](https://github.com/MarcosCobena/XamarinFormsVisualStates/blob/master/XamarinFormsVisualStates/NFCViewModel.cs)[](https://github.com/MarcosCobena/XamarinFormsVisualStates/blob/master/XamarinFormsVisualStates/NFCViewModel.cs)  
 Surely, the cancellation isn’t happening…
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [April 3, 2018](https://medium.com/p/5e696e8dd793).
-
-[Canonical link](https://medium.com/@MarcosCobena/tue-3-multiple-instances-of-the-same-viewmodel-5e696e8dd793)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

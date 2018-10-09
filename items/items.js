@@ -86,7 +86,6 @@ addPost("Tuesday, 20/3/2018", "Tuesday--20-3-2018-f42e8eb10d25", "20-03-18");
 addPost("Playing with Xamarin.Forms for Web", "Playing-with-Xamarin-Forms-for-Web-cde48f1e12b4", "19-03-18");
 addPost("XAML things, merging RESX and 10.0.2.2 #XamarinForms", "XAML-things--merging-RESX-and-10-0-2-2--XamarinForms-b7ab15533176", "18-12-17");
 addPost("Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms", "Lottie-in-UWP--NuGetizer-3000-and-GradientBoxView--XamarinForms-2deeec043db8", "13-12-17");
-addPost("Thanks man, I’ve just diagonal read your Estonia story, and am happy things go fine for you ;-)", "Thanks-man--I-ve-just-diagonal-read-your-Estonia-story--and-am-happy-things-go-fine-for-you-----cea5cbd5fff2", "07-12-17");
 addPost("Lottie, scroll’s headers and GradientBoxView #XamarinForms", "Lottie--scroll-s-headers-and-GradientBoxView--XamarinForms-2e0afb12a4a", "06-12-17");
 addPost("Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms", "Design-should-worry-us-more--And-just-Debug-LiveXAML--Xamarin--XamarinForms-24c11327ccd6", "15-11-17");
 addPost("Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources", "Just-PCL-OpenID-authentication-in--XamarinForms--Firebase-and-limited-resources-53591bb20887", "08-11-17");

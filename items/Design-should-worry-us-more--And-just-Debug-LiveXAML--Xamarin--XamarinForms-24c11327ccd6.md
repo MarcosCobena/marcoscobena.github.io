@@ -30,12 +30,3 @@ I finally gave a try to LiveXAML: liked it a lot. Initially was just adding the 
 </Parsers>Adding LiveXAML’s NuGet doesn’t touch any DLL, adding references, but adds an Import step while compiling, so I wanted as well to get rid of it when not being in Debug mode. Some CSPROJ magic and done (pay attention to the second condition):
 
 <Import Project=”..\..\packages\LiveXAML.1.3.8\build\LiveXAML.targets” Condition=”Exists(‘..\..\packages\LiveXAML.1.3.8\build\LiveXAML.targets’) And ‘$(Configuration)’==’Debug’” />And voilá! LiveXAML’s just here in Debug, and nobody will notice it in Release 😇
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [November 15, 2017](https://medium.com/p/24c11327ccd6).
-
-[Canonical link](https://medium.com/@MarcosCobena/design-should-worry-us-more-and-just-debug-livexaml-xamarin-xamarinforms-24c11327ccd6)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

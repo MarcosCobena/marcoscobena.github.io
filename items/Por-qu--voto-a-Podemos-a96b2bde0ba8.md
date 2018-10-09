@@ -21,12 +21,3 @@ La adrenalina de aquellos años de darnos cuenta por nosotros mismos que los no 
 Y aquí viene lo que más me gusta de Podemos. La consciencia tan alta de que no todos tenemos la maldita misma suerte en la vida. La mejor forma de equilibrar una sociedad no creo que sea que cada uno se esfuerce desde la meta de salida que le haya tocado, para llegar a una misma meta final para todos, sino de hacer que da igual si eres un corredor de élite como uno que nunca pudo correr, las metas hagan que a ambos les cueste un esfuerzo similar llegar.
 
 Ayer me fui a la cama pensando que Podemos es lo más parecido a nuestro inconformismo universitario, y en la vida en general. Es el compañero que he agradecido tener al lado cuando recibía un no pero yo creía que quizá sí. Es el ánimo que ante el miedo de ir a contracorriente, cuando lo consigues, cuando se pueden evaluar las asignaturas por evaluación continua, cuando se puede dar esa formación de C, te dices que has hecho bien. Y yo por fin me puedo explicar a mi mismo, como decía ayer Pablo Iglesias, en [esos 50 s finales tan buenos](https://www.youtube.com/watch?v=_38NtXXDR0Y), que por favor sonría, que sí que se podrá.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [December 11, 2015](https://medium.com/p/a96b2bde0ba8).
-
-[Canonical link](https://medium.com/@MarcosCobena/por-qu%C3%A9-voto-a-podemos-a96b2bde0ba8)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

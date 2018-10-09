@@ -21,12 +21,3 @@ Because of having my web in GitHub, I commonly rely in [Mono’s XSP](http://www
 I was playing with Buttons, Labels, StackLayouts, ActivityIndicators and so on. Also, moving things into an isolated ContentPage and overriding OnAppearing().
 
 I really liked what I saw. Frank again has done an amazing and beautiful job —since a few years, for me, everything he touches simply rules. My mate Javi Suárez’s already pushed some commits into Ooui to enable more controls too. Today I woke up with the idea of moving [¡Buenos días!](https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro) into Forms (fixing the images bug along the way), and thanks to OOUI can finally have the web too.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [March 19, 2018](https://medium.com/p/cde48f1e12b4).
-
-[Canonical link](https://medium.com/@MarcosCobena/playing-with-xamarin-forms-for-web-cde48f1e12b4)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

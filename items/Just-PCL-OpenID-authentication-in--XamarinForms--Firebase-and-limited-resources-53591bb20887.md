@@ -40,12 +40,3 @@ Apart from I messed up with Android’s manifest and put the receiver stuff out 
 After all these things, my learning from previous week come from a three hours consultancy for a local company which develop a mobile app with Xamarin. They came to see us to one of the Xamarin Dev Days from a year ago and, without previous knowledge, jumped into the world of Xamarin.Forms.
 
 It amazed me a lot seeing what they’ve achieved with so much limited resources. We use to think our job is kind off shit. Sometimes need someone from outside to tell us it’s great having into account our start line. And how much humble people with limited resources is…
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [November 8, 2017](https://medium.com/p/53591bb20887).
-
-[Canonical link](https://medium.com/@MarcosCobena/just-pcl-openid-authentication-in-xamarinforms-firebase-and-limited-resources-53591bb20887)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

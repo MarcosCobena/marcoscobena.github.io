@@ -47,12 +47,3 @@ Simply write $name$ in lowercase and finally make upper first letter in just the
 Working on a new task with Twilio had to connect an Android app running in an emulator with an ASP.NET MVC server hosted locally, at 127.0.0.1:8080. Did you know pointing to 10.0.2.2 inside the emu forwards communication to the first? I didn’t, super handy.
 
 Our app needs to handle outgoing VoIP calls though Twilio, and the following days will be implementing the in-call screen, plus the attached service to handle the call it-self. Looks funny!
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [December 18, 2017](https://medium.com/p/b7ab15533176).
-
-[Canonical link](https://medium.com/@MarcosCobena/xaml-things-merging-resx-and-10-0-2-2-xamarinforms-b7ab15533176)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

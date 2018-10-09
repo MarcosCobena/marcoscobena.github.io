@@ -37,12 +37,3 @@ And, finally, I published GradientBoxView! –also in [GitHub](https://github.co
 _An empowered Xamarin.Forms' BoxView with 2-color gradients._www.nuget.org](https://www.nuget.org/packages/DevsDNA.GradientBoxView)[](https://www.nuget.org/packages/DevsDNA.GradientBoxView)  
 **Friday, 8th**  
 Bank holiday!
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [December 13, 2017](https://medium.com/p/2deeec043db8).
-
-[Canonical link](https://medium.com/@MarcosCobena/lottie-in-uwp-nugetizer-3000-and-gradientboxview-xamarinforms-2deeec043db8)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-

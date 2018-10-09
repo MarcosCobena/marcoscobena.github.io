@@ -16,12 +16,3 @@ I think it’s worth sharing. Basically, your ViewModels inherit IStateNotifier 
 Full storyboard runningAm really open to improve all this. During the last two weekends I’ve been reading Adam Pedley’s [series on functional ViewModels](https://xamarinhelp.com/more-functional-viewmodels-in-xamarin-forms-with-c/), and liked his approach of moving the states notion to just the view —this’ currently sorted out in VMs here. My main goal is performance, as my current scenarios involve a lot of bindings and the animations struggle a little bit, but please feel free to share any idea.
 
 You can find the repo [here](https://github.com/MarcosCobena/XamarinFormsVisualStates), including the sample app.
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [March 28, 2018](https://medium.com/p/730813111718).
-
-[Canonical link](https://medium.com/@MarcosCobena/wed-28-one-approach-to-visual-states-730813111718)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-
