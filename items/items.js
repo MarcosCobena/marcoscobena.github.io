@@ -71,6 +71,34 @@ addPost("Thursday", "2017-12-21", "21/12/2017");
 addPost("Wednesday", "2017-12-20", "20/12/2017");
 addPost("Tuesday", "2017-12-19", "19/12/2017");
 addPost("Monday", "2017-12-18", "18/12/2017");
+// Medium import
+addPost("Xamarin.Forms Design Framework", "Xamarin-Forms-Design-Framework-b23a2f12cce5", "11-06-18");
+addPost("Fri 6: Sum up &amp; fuget.org", "Fri-6--Sum-up---fuget-org-defecbf27385", "06-04-18");
+addPost("Thu 5: Analysing an app written by others", "Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a", "05-04-18");
+addPost("Wed 4: Meetings", "Wed-4--Meetings-2556117737e8", "04-04-18");
+addPost("Tue 3: Multiple instances of the same ViewModel", "Tue-3--Multiple-instances-of-the-same-ViewModel-5e696e8dd793", "03-04-18");
+addPost("Mon 2: Polly’s Retry policy to make network calls", "Mon-2--Polly-s-Retry-policy-to-make-network-calls-224d70957b2c", "02-04-18");
+addPost("Wed 28: One approach to Visual States", "Wed-28--One-approach-to-Visual-States-730813111718", "28-03-18");
+addPost("Tips &amp; tricks to rely in VirtualBox", "Tips---tricks-to-rely-in-VirtualBox-e9e28c8cd180", "23-03-18");
+addPost("Thu, 22: Charles with Android, VirtualBox’ HD size &amp; UWP debugging", "Thu--22--Charles-with-Android--VirtualBox--HD-size---UWP-debugging-284998a21a5e", "22-03-18");
+addPost("Wed, 21: Xamarin Inspector for Forms &amp; NamedSizes", "Wed--21--Xamarin-Inspector-for-Forms---NamedSizes-fea033823240", "21-03-18");
+addPost("Tuesday, 20/3/2018", "Tuesday--20-3-2018-f42e8eb10d25", "20-03-18");
+addPost("Playing with Xamarin.Forms for Web", "Playing-with-Xamarin-Forms-for-Web-cde48f1e12b4", "19-03-18");
+addPost("XAML things, merging RESX and 10.0.2.2 #XamarinForms", "XAML-things--merging-RESX-and-10-0-2-2--XamarinForms-b7ab15533176", "18-12-17");
+addPost("Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms", "Lottie-in-UWP--NuGetizer-3000-and-GradientBoxView--XamarinForms-2deeec043db8", "13-12-17");
+addPost("Thanks man, I’ve just diagonal read your Estonia story, and am happy things go fine for you ;-)", "Thanks-man--I-ve-just-diagonal-read-your-Estonia-story--and-am-happy-things-go-fine-for-you-----cea5cbd5fff2", "07-12-17");
+addPost("Lottie, scroll’s headers and GradientBoxView #XamarinForms", "Lottie--scroll-s-headers-and-GradientBoxView--XamarinForms-2e0afb12a4a", "06-12-17");
+addPost("Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms", "Design-should-worry-us-more--And-just-Debug-LiveXAML--Xamarin--XamarinForms-24c11327ccd6", "15-11-17");
+addPost("Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources", "Just-PCL-OpenID-authentication-in--XamarinForms--Firebase-and-limited-resources-53591bb20887", "08-11-17");
+addPost("Unit Testing #XamarinForms controls, the simplest SwipeGestureRecognizer and no more…", "Unit-Testing--XamarinForms-controls--the-simplest-SwipeGestureRecognizer-and-no-more--2ecf7d448fbf", "31-10-17");
+addPost("The Carousel party in #Xamarin Forms", "The-Carousel-party-in--Xamarin-Forms-70b96a692124", "25-10-17");
+addPost("“Design should worry us more than code” #Xamarin", "-Design-should-worry-us-more-than-code---Xamarin-fecc2b436e08", "18-10-17");
+addPost("Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin", "Senseful-StyleCop-for-Visual-Studio--Mac-and-Windows--Xamarin-e02fdf15d039", "11-10-17");
+addPost("The #Android’s FAB which liked to follow BottomBar #Xamarin", "The--Android-s-FAB-which-liked-to-follow-BottomBar--Xamarin-57a805f646", "04-10-17");
+addPost("The refreshes bug and i18n", "The-refreshes-bug-and-i18n-3d9ad2a9421b", "25-09-17");
+addPost("Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento", "Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4", "15-08-16");
+addPost("Por qué voto a Podemos", "Por-qu--voto-a-Podemos-a96b2bde0ba8", "11-12-15");
+// END Medium import
 // WordPress import
 addPost("Abanico, a few hours with Xamarin.Forms and SkiaSharp", "abanico-a-few-hours-with-xamarin-forms-and-skiasharp", "21/6/17");
 addPost("Reflexiones", "reflexiones", "21/3/17");

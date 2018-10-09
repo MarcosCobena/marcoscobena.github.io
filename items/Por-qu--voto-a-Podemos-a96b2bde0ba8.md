@@ -1,0 +1,32 @@
+*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+
+  # Por qué voto a Podemos
+
+   Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de…   --------
+  
+### Por qué voto a Podemos
+
+Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de ellos y de su ideología. Siempre he apoyado al PSOE, incluso me “alisté” como simpatizante en su Organización porque me motivaba mucho pensar en todas aquellas cosas que se podían hacer mejor y, mi idealismo no veía fronteras.
+
+Llegando al final de un libro que mis padres me regalaron por mi 31 cumpleaños, [Cosas que me contó un pajarito](http://www.amazon.es/Cosas-Que-Cont%C3%B3-Pajarito-colecci%C3%B3n/dp/8498753996), de Biz Stone (uno de los cofundadores de Twitter), me he acordado de repente de todo aquel inconformismo que algunos compañeros y yo vivimos en nuestra etapa de universitarios. Etapa fantástica, por cierto.
+
+Cuando era un derecho que los alumnos pudiésemos tener una evaluación continúa, ésto no era una realidad en algunas asignaturas. Al preguntar en clase, la respuesta era “no podemos”, no tenemos recursos, no tenemos tiempo, etc. Cuando los alumnos de las Ingenierías Técnica en Informática, en asambleas llenas, pedían que se hiciese algo porque les exigían en Sistemas Operativos conocimientos de C (un lenguaje de programación), pero las asignaturas de 1º ya no los cubrían, la respuesta era otra vez la misma. Siempre un no…
+
+Y así en varias ocasiones más. Para el primer caso, la evaluación continúa, unos compañeros y yo nos preocupamos de leer la legislación vigente, concertar citas con los distintos profesores, y negociar con ellos. Recuerdo estar con dos en concreto, que tenían fama de cierta insensibilidad, que resultaron ser los más respetuosos, y los que accedieron a una mejor negociación. A nosotros nos estaba costando el tiempo, pero a ellos también porque les iba a requerir un esfuerzo extra. Suspendí la asignatura y tuve que examinarme al final de todo, pero cientos de compañeros disfrutaron de esa opción. También, encontré un lado más humano y aprendí a valorar mejor a los profesores con los que tratamos.
+
+Para el segundo caso, junto con otros compañeros creamos [CHAR](https://groups.google.com/forum/#!forum/char-etsii-us) (_C, Histórico, Ágil y Rápido_). Creamos una pequeña asignatura lateral, con su pequeño temario, horario y aulas (hasta hicimos un [cartel](https://docs.google.com/viewer?a=v&amp;pid=forums&amp;srcid=MTQ4OTk3NDE1OTE1OTEwMzg4MzABMDMxNDQxOTYzODYzNzcwNDQyMDMBTVlpemVnVDUtbklKATAuMQEBdjI), que pusimos al entrar al Centro). Los que impartíamos éramos nosotros mismos. Chavales de 20 y pocos años que nos faltaba de todo pero la ilusión nos sobraba a raudales. Recuerdo que hasta localizamos una profesora de lengua de signos para que una compañera nuestra también pudiese asistir. No nos faltó de nada.
+
+La adrenalina de aquellos años de darnos cuenta por nosotros mismos que los no se pueden en realidad eran no queremos, o simplemente no sabemos cómo hacerlo, era la invitación más formal para aquellos que no aceptamos un no por definición. Uno puede pensar que ante la imposibilidad de tener evaluación continua lo que le queda es darle un empujón mayor a los libros. O que ante la ausencia de formación en C y la posterior exigencia, lo que queda es aprenderlo por tu cuenta.
+
+Y aquí viene lo que más me gusta de Podemos. La consciencia tan alta de que no todos tenemos la maldita misma suerte en la vida. La mejor forma de equilibrar una sociedad no creo que sea que cada uno se esfuerce desde la meta de salida que le haya tocado, para llegar a una misma meta final para todos, sino de hacer que da igual si eres un corredor de élite como uno que nunca pudo correr, las metas hagan que a ambos les cueste un esfuerzo similar llegar.
+
+Ayer me fui a la cama pensando que Podemos es lo más parecido a nuestro inconformismo universitario, y en la vida en general. Es el compañero que he agradecido tener al lado cuando recibía un no pero yo creía que quizá sí. Es el ánimo que ante el miedo de ir a contracorriente, cuando lo consigues, cuando se pueden evaluar las asignaturas por evaluación continua, cuando se puede dar esa formación de C, te dices que has hecho bien. Y yo por fin me puedo explicar a mi mismo, como decía ayer Pablo Iglesias, en [esos 50 s finales tan buenos](https://www.youtube.com/watch?v=_38NtXXDR0Y), que por favor sonría, que sí que se podrá.
+
+  
+  
+  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [December 11, 2015](https://medium.com/p/a96b2bde0ba8).
+
+[Canonical link](https://medium.com/@MarcosCobena/por-qu%C3%A9-voto-a-podemos-a96b2bde0ba8)
+
+Exported from [Medium](https://medium.com) on October 9, 2018.
+
