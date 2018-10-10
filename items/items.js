@@ -26,6 +26,18 @@ addItem("Tools", "tools", "20/9/2018");
 // Posts —this' the order they'll appear listed
 
 addPost("Xamarin.Forms XAML", "xf-xaml", "5/10/2018");
+addPost("Xamarin.Forms Design Framework", "Xamarin-Forms-Design-Framework-b23a2f12cce5", "11-06-18");
+addPost("Fri 6: Sum up &amp; fuget.org", "Fri-6--Sum-up---fuget-org-defecbf27385", "06-04-18");
+addPost("Thu 5: Analysing an app written by others", "Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a", "05-04-18");
+addPost("Wed 4: Meetings", "Wed-4--Meetings-2556117737e8", "04-04-18");
+addPost("Tue 3: Multiple instances of the same ViewModel", "Tue-3--Multiple-instances-of-the-same-ViewModel-5e696e8dd793", "03-04-18");
+addPost("Mon 2: Polly’s Retry policy to make network calls", "Mon-2--Polly-s-Retry-policy-to-make-network-calls-224d70957b2c", "02-04-18");
+addPost("Wed 28: One approach to Visual States", "Wed-28--One-approach-to-Visual-States-730813111718", "28-03-18");
+addPost("Tips &amp; tricks to rely in VirtualBox", "Tips---tricks-to-rely-in-VirtualBox-e9e28c8cd180", "23-03-18");
+addPost("Thu, 22: Charles with Android, VirtualBox’ HD size &amp; UWP debugging", "Thu--22--Charles-with-Android--VirtualBox--HD-size---UWP-debugging-284998a21a5e", "22-03-18");
+addPost("Wed, 21: Xamarin Inspector for Forms &amp; NamedSizes", "Wed--21--Xamarin-Inspector-for-Forms---NamedSizes-fea033823240", "21-03-18");
+addPost("Tuesday, 20/3/2018", "Tuesday--20-3-2018-f42e8eb10d25", "20-03-18");
+addPost("Playing with Xamarin.Forms for Web", "Playing-with-Xamarin-Forms-for-Web-cde48f1e12b4", "19-03-18");
 addPost("How to centralize font-related styling", "2018-3-15", "16/3/2018");
 addPost("Let's use Control Templates", "2018-3-14", "15/3/2018");
 addPost("Pushing our-selves into our users' perspective", "2018-3-13", "14/3/2018");
@@ -71,19 +83,6 @@ addPost("Thursday", "2017-12-21", "21/12/2017");
 addPost("Wednesday", "2017-12-20", "20/12/2017");
 addPost("Tuesday", "2017-12-19", "19/12/2017");
 addPost("Monday", "2017-12-18", "18/12/2017");
-// Medium import
-addPost("Xamarin.Forms Design Framework", "Xamarin-Forms-Design-Framework-b23a2f12cce5", "11-06-18");
-addPost("Fri 6: Sum up &amp; fuget.org", "Fri-6--Sum-up---fuget-org-defecbf27385", "06-04-18");
-addPost("Thu 5: Analysing an app written by others", "Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a", "05-04-18");
-addPost("Wed 4: Meetings", "Wed-4--Meetings-2556117737e8", "04-04-18");
-addPost("Tue 3: Multiple instances of the same ViewModel", "Tue-3--Multiple-instances-of-the-same-ViewModel-5e696e8dd793", "03-04-18");
-addPost("Mon 2: Polly’s Retry policy to make network calls", "Mon-2--Polly-s-Retry-policy-to-make-network-calls-224d70957b2c", "02-04-18");
-addPost("Wed 28: One approach to Visual States", "Wed-28--One-approach-to-Visual-States-730813111718", "28-03-18");
-addPost("Tips &amp; tricks to rely in VirtualBox", "Tips---tricks-to-rely-in-VirtualBox-e9e28c8cd180", "23-03-18");
-addPost("Thu, 22: Charles with Android, VirtualBox’ HD size &amp; UWP debugging", "Thu--22--Charles-with-Android--VirtualBox--HD-size---UWP-debugging-284998a21a5e", "22-03-18");
-addPost("Wed, 21: Xamarin Inspector for Forms &amp; NamedSizes", "Wed--21--Xamarin-Inspector-for-Forms---NamedSizes-fea033823240", "21-03-18");
-addPost("Tuesday, 20/3/2018", "Tuesday--20-3-2018-f42e8eb10d25", "20-03-18");
-addPost("Playing with Xamarin.Forms for Web", "Playing-with-Xamarin-Forms-for-Web-cde48f1e12b4", "19-03-18");
 addPost("XAML things, merging RESX and 10.0.2.2 #XamarinForms", "XAML-things--merging-RESX-and-10-0-2-2--XamarinForms-b7ab15533176", "18-12-17");
 addPost("Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms", "Lottie-in-UWP--NuGetizer-3000-and-GradientBoxView--XamarinForms-2deeec043db8", "13-12-17");
 addPost("Lottie, scroll’s headers and GradientBoxView #XamarinForms", "Lottie--scroll-s-headers-and-GradientBoxView--XamarinForms-2e0afb12a4a", "06-12-17");
@@ -95,16 +94,13 @@ addPost("“Design should worry us more than code” #Xamarin", "-Design-should-
 addPost("Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin", "Senseful-StyleCop-for-Visual-Studio--Mac-and-Windows--Xamarin-e02fdf15d039", "11-10-17");
 addPost("The #Android’s FAB which liked to follow BottomBar #Xamarin", "The--Android-s-FAB-which-liked-to-follow-BottomBar--Xamarin-57a805f646", "04-10-17");
 addPost("The refreshes bug and i18n", "The-refreshes-bug-and-i18n-3d9ad2a9421b", "25-09-17");
-addPost("Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento", "Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4", "15-08-16");
-addPost("Por qué voto a Podemos", "Por-qu--voto-a-Podemos-a96b2bde0ba8", "11-12-15");
-// END Medium import
-// WordPress import
 addPost("Abanico, a few hours with Xamarin.Forms and SkiaSharp", "abanico-a-few-hours-with-xamarin-forms-and-skiasharp", "21/6/17");
 addPost("Reflexiones", "reflexiones", "21/3/17");
 addPost("Qué puedo hacer / What can I do", "que-puedo-hacer", "14/3/17");
 addPost("Wrapping views in Xamarin.iOS", "wrapping-views-in-xamarin-ios", "22/12/16");
 addPost("My UICollectionView doesn't refresh on new items", "my-uicollectionview-doesnt-refresh-on-new-items", "12/12/16");
 addPost("Para los que nacimos en los 80, y para los que no", "para-los-que-nacimos-en-los-80-y-para-los-que-no", "11/12/16");
+addPost("Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento", "Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4", "15-08-16");
 addPost("Mask Animation with Xamarin.iOS and AutoLayout", "mask-animation-with-xamarin-ios-and-autolayout", "26/7/16");
 addPost("Introducing Xamarin.iOS to Objective-C/Swift developers", "introducing-xamarin-ios-to-objective-c-swift-developers", "21/7/16");
 addPost("Me gusta, no me gusta, me gusta...", "me-gusta-no-me-gusta-me-gusta", "29/6/16");
@@ -118,6 +114,7 @@ addPost("Setting up Xamarin.iOS builds in Visual Studio Team Services (formerly 
 addPost("Monkey.Tap with Wave Engine", "monkey-tap-with-wave-engine", "15/3/16");
 addPost("The Value on Microsoft-Xamarin Agreement", "the-value-on-microsoft-xamarin-agreement", "25/2/16");
 addPost("New App: ¡Buenos días! aro", "new-app-buenos-dias-aro", "11/2/16");
+addPost("Por qué voto a Podemos", "Por-qu--voto-a-Podemos-a96b2bde0ba8", "11-12-15");
 addPost("We've Reviewed Grial UI Kit at Plain Concepts", "weve-reviewed-grial-ui-kit-at-plain-concepts", "2/12/15");
 addPost("Wave Engine: Frustum Culling", "wave-engine-frustum-culling", "10/11/15");
 addPost("Quick Dump of Things I've Learned This Week Developing on Apple Watch", "quick-dump-of-things-ive-learned-this-week-developing-on-apple-watch", "6/11/15");
@@ -135,4 +132,3 @@ addPost("Translating Designs into Layouts: Units Conversion", "translating-desig
 addPost("Xamarin.Forms and Design challenges", "xamarin-forms-and-design-challenges", "1/2/15");
 addPost("Enabling Xamarin.Forms with MVVMCross on Windows Phone", "enabling-xamarin-forms-with-mvvmcross-on-windows-phone", "25/1/15");
 addPost("Error handling with Promises, and how to block the UI meanwhile", "error-handling-with-promises-and-how-to-block-the-ui-meanwhile", "19/5/13");
-// END WordPress import
