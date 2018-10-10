@@ -3,7 +3,7 @@ In the same way we continuously refactor our C# code we should trait XAML one eq
 Split into chapters, I'll try to cover everything expressed in XAML:
 
 - ["StyleCop" for XAML and App structure (this one)](?i=xf-xaml)
-- Colors
+- [Colors](?i=xf-xaml-colors)
 - Control Templates
 - Converters
 - Font Styles

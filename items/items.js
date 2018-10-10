@@ -25,6 +25,7 @@ addItem("Tools", "tools", "20/9/2018");
 
 // Posts —this' the order they'll appear listed
 
+addPost("Xamarin.Forms XAML: Colors", "xf-xaml-colors", "10/10/2018");
 addPost("Xamarin.Forms XAML", "xf-xaml", "5/10/2018");
 addPost("Xamarin.Forms Design Framework", "Xamarin-Forms-Design-Framework-b23a2f12cce5", "11/06/2018");
 addPost("Fri 6: Sum up &amp; fuget.org", "Fri-6--Sum-up---fuget-org-defecbf27385", "06/04/2018");

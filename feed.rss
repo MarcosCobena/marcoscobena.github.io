@@ -4,6 +4,56 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Xamarin.Forms XAML: Colors</title>
+  <guid>https://marcoscobena.com/?i=xf-xaml-colors</guid>
+  <description>&lt;h3&gt;Colors.xaml&lt;/h3&gt;
+
+&lt;p&gt;Every color's placed here: it's super convenient to have all together, it helps us identify repeated ones, for instance. We try to keep them order alphabetically, although it's not a must: simply helps some of us to quickly locate them —in C# we have a drop-down menu just on top of the editor to navigate between members, but currently, VS for Mac at least, doesn't have any similar.&lt;/p&gt;
+
+&lt;p&gt;Conventions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Key: {Identifier}Color for &lt;code&gt;Color&lt;/code&gt; or {Identifier}ColorString for &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Value: lowercase hex format (you can opt for uppercase, but choosing one will keep consistency)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RGB most of the times, although ARGB works pretty well in scenarios where backgrounds are semitransparent, or gradients too&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;```xaml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamarinCrumbs.XamarinForms.Colors"&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;Color x:Key="AccentColor"&amp;gt;#50e3c2&amp;lt;/Color&amp;gt;
+&amp;lt;x:String x:Key="AccentColorString"&amp;gt;#50e3c2&amp;lt;/x:String&amp;gt;
+
+&amp;lt;Color x:Key="DefaultTextColor"&amp;gt;#abb3c8&amp;lt;/Color&amp;gt;
+
+&amp;lt;Color x:Key="SecondaryTextColor"&amp;gt;#868ea4&amp;lt;/Color&amp;gt;
+
+&amp;lt;Color x:Key="WhiteColor"&amp;gt;#ffffff&amp;lt;/Color&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/ResourceDictionary&gt;
+```&lt;/p&gt;
+
+&lt;p&gt;You've probably asked your-self why WhiteColor's defined when there's already White in &lt;code&gt;Xamarin.Forms.Color&lt;/code&gt;: sometimes it's intelligent to "duplicate" them for supporting future tonality changes, f.e.&lt;/p&gt;
+
+&lt;p&gt;Moreover, you've seen in above XAML there's the same color twice: it makes sense when you need to consume such for controls like &lt;a href="https://github.com/luberda-molinet/FFImageLoading"&gt;FFImageLoading&lt;/a&gt;'s, which don't accept a &lt;code&gt;Color&lt;/code&gt;, but a &lt;code&gt;string&lt;/code&gt; in hex format.&lt;/p&gt;
+
+&lt;p&gt;Although I've personally prefered naming colors by their actual value (LightGreenColor, for example), I've ended up choosing those which give a hint on where they're applied: DefaultTextColor, SeparatorColor, things like these.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS.&lt;/em&gt;: On 2017 I wrote this small thing, &lt;a href="?i=abanico-a-few-hours-with-xamarin-forms-and-skiasharp"&gt;Abanico&lt;/a&gt;, to understand how color wheels work. It's Xamarin.Forms too, with SkiaSharp:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/jun-21-2017-22-47-38.gif" alt="" /&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 09 Oct 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML</title>
   <guid>https://marcoscobena.com/?i=xf-xaml</guid>
   <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
@@ -12,7 +62,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml"&gt;"StyleCop" for XAML and App structure (this one)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Colors&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-colors"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Control Templates&lt;/li&gt;
 &lt;li&gt;Converters&lt;/li&gt;
 &lt;li&gt;Font Styles&lt;/li&gt;
@@ -92,6 +142,330 @@
 &lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Thu, 04 Oct 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Xamarin.Forms Design Framework</title>
+  <guid>https://marcoscobena.com/?i=Xamarin-Forms-Design-Framework-b23a2f12cce5</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Xamarin.Forms Design Framework&lt;/p&gt;
+
+&lt;p&gt;In my personal trip to leverage all those small problems I found in my day to day, there’s one which sistematically reappears: I’m about to…   --------&lt;/p&gt;
+
+&lt;h3&gt;Xamarin.Forms Design Framework&lt;/h3&gt;
+
+&lt;p&gt;In my personal trip to leverage all those small problems I found in my day to day, there’s one which sistematically reappears: I’m about to start a new Xamarin.Forms project for X platforms — please note the plural — but just have its design for one of them. For instance: I want my app to target Android &amp;amp; iOS, but just have the Android design.&lt;/p&gt;
+
+&lt;p&gt;The reasons why this happen would give for a different thread but I feel them as an homogeneus mix of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Xamarin.Forms’ missunderstood, or we didn’t explain it quite well: it’s felt like Flutter — it appeared! — when it’s not&lt;/li&gt;
+&lt;li&gt;We don’t want to increase the time and money by spending a few more days with the rest of designs, for one reason or another we don’t see its valueI’ve been thinking a lot on this and nowadays have a strong opinnion which proposes one possible exit:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;&lt;strong&gt;Xamarin.Forms Design Framework&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Most of the times, when I’m working with a Zeplin project for a Forms app, the first servers as a handful guide of margins/paddings, sizes and colors. It’s not so much whether the status bar has a particular background color, or the button has any tweak which makes it look different. Obviously, those are things which in the end need to be done, but aren’t at the top of value.&lt;/p&gt;
+
+&lt;p&gt;Imagine we had something like &lt;a href="http://design.xamarin.com"&gt;http://design.xamarin.com&lt;/a&gt; where our Designers could head on and learn without the first scroll what actually Xamarin.Forms’ all about. In their language.&lt;/p&gt;
+
+&lt;p&gt;After this, it could propose a Design Framework which would isolate from platform specifics and would concentrate on letting Designers express our apps in an agnostic way. A quick example to explain this: a button in such Framework would be a flat box with text inside: as a Developer, I can gather its width &amp;amp; height, its relative position to the parent view, margins with close controls, padding with its internal title and even its font size &amp;amp; color, which could also be done latter by Platform Translators.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1000/0*t7UJdpwx2KGsTC1N" alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/@halgatewood?utm_source=medium&amp;amp;utm_medium=referral"&gt;Hal Gatewood&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;&lt;br /&gt;
+Platform Translators are the pieces which our Designer could fulfill to tell us how buttons should look like in iOS, in a closer aspect, or which’s the predominant font family to use in Android.&lt;/p&gt;
+
+&lt;p&gt;Such Design Framework could be seen as an imaginary device which focuses on wireframing, and then could have it’s Forms backend, letting us express the UIs internally with XAML.&lt;/p&gt;
+
+&lt;p&gt;Even more, all this also sets the scenario up for something like a WYSIWYG editor, where XAML brights, now yes, serving as a bridge where Designers and Developers can interact. XAML was conceived with this in mind more than a decade ago but the reality is it’s heavily focused on just Developers. Let’s change this.&lt;/p&gt;
+
+&lt;p&gt;Designers could have templates for Sketch or PhotoShop where every control is just there to drag &amp;amp; drop into their designs, in the same way there are toolkits for the most known platforms.&lt;/p&gt;
+
+&lt;p&gt;The truth’s we are moving into an ecosystem where our apps can be mobile or desktop or cloud, but such can’t only rely in the Development side. If we don’t make our Designers happier — with its direct impact on the later development — we’ll keep having a very beatiful app on X, with a “free” version on Y and Z.&lt;/p&gt;
+
+&lt;p&gt;And the best: there’s nothing to change on Forms. There’s nothing dependant on development tools, or SDKs. Sketching’s nothing new. It’s more of a mind change.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Sun, 10 Jun 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Fri 6: Sum up &amp;amp; fuget.org</title>
+  <guid>https://marcoscobena.com/?i=Fri-6--Sum-up---fuget-org-defecbf27385</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Fri 6: Sum up &amp;amp; fuget.org&lt;/p&gt;
+
+&lt;p&gt;The end of the week’s here and summing up what have worked on these days, most of time’s been reading other’s source code. Years ago I may…   --------&lt;/p&gt;
+
+&lt;h3&gt;Fri 6: Sum up &amp;amp; fuget.org&lt;/h3&gt;
+
+&lt;p&gt;The end of the week’s here and summing up what have worked on these days, most of time’s been reading other’s source code. Years ago I may have received this task as OK… I’ll do it; nowadays, I see it as a great opportunity to learn how others do the same I daily do.&lt;/p&gt;
+
+&lt;p&gt;My mate Javi Suárez’s just introduced me the latest Frank Krueger’s joy: &lt;a href="http://www.fuget.org"&gt;fuget.org&lt;/a&gt;. It’s immediately came to my mind the idea of picking just those portions of NuGet packages you’re actually interested on and go ahead.&lt;/p&gt;
+
+&lt;p&gt;I’ve multiple times had the idea of something simpler than NuGet, but more complex than pasting classes here and there —and stronger by the way. Something similar to JavaScript’s NPM, but maybe having code in IL —have to work the idea out a little bit.&lt;/p&gt;
+
+&lt;p&gt;(Take into account I wrote this while listening to this “Peaceful Meditation” list at Spotify: )&lt;/p&gt;
+
+&lt;p&gt;By &lt;a href="https://medium.com/@MarcosCobena"&gt;Marcos Cobeña Morián&lt;/a&gt; on &lt;a href="https://medium.com/p/defecbf27385"&gt;April 6, 2018&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://medium.com/@MarcosCobena/fri-6-sum-up-fuget-org-defecbf27385"&gt;Canonical link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Exported from &lt;a href="https://medium.com"&gt;Medium&lt;/a&gt; on October 9, 2018.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 05 Apr 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Thu 5: Analysing an app written by others</title>
+  <guid>https://marcoscobena.com/?i=Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Thu 5: Analysing an app written by others&lt;/p&gt;
+
+&lt;p&gt;From Wednesday to Friday I’ll be working on an analysis of a Xamarin.Forms app to detect those places where performance can be gained and…   --------&lt;/p&gt;
+
+&lt;h3&gt;Thu 5: Analysing an app written by others&lt;/h3&gt;
+
+&lt;p&gt;From Wednesday to Friday I’ll be working on an analysis of a Xamarin.Forms app to detect those places where performance can be gained and which actions can be performed to mitigate such. It’s a production app which serve as the entry point to an entire business, thus awesome to have the chance to work on this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*vbffrCWTz924jPae." alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/@jilburr?utm_source=medium&amp;amp;utm_medium=referral"&gt;Jilbert Ebrahimi&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;It came up to my mind a talk Federico Mena spent a few years ago —maybe more than a few— on how to start developing software: read what others write. Although I won’t be actually writing within these days am learning different ways of doing things, and really cool ones.&lt;/p&gt;
+
+&lt;p&gt;In the other side, it’s curious how we all have similar issues, which in the end are even more important and low level, such us deciding whether navigation happens just after tapping and the destiny loads on the demand, or first load everything and then navigates.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Oh, and one great productivity tip! I’ve finally discovered how can hide macOS’ badges —I was actually interested in hiding Outlook’s unread messages one:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app"&gt;&lt;strong&gt;Quickly remove badge from app&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;Is it possible to quickly remove a notification badge from an app in the Dock? I'm looking for a solution faster than…&lt;/em&gt;apple.stackexchange.com&lt;/a&gt;&lt;a href="https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app"&gt;&lt;/a&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Wed, 04 Apr 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Wed 4: Meetings</title>
+  <guid>https://marcoscobena.com/?i=Wed-4--Meetings-2556117737e8</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Wed 4: Meetings&lt;/p&gt;
+
+&lt;p&gt;I’ve spent almost the entire day with meetings.   --------&lt;/p&gt;
+
+&lt;h3&gt;Wed 4: Meetings&lt;/h3&gt;
+
+&lt;p&gt;I’ve spent almost the entire day with meetings.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*Ce9giJMX6AhHyiLo." alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/@dylandgillis?utm_source=medium&amp;amp;utm_medium=referral"&gt;Dylan Gillis&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;In the morning the app review, where learnt [again] such interactions need to happen more often: not every customer has the same needs, although we’re all humans in the end and communication’s the best tool in earth to round corners.&lt;/p&gt;
+
+&lt;p&gt;In the afternoon, had the same on Wave Engine, where I didn’t finish the GTK# component to CRUD animation curves —similar to the one Unity bundles with the editor. This month Sergio and I’ll finish such, and work to remove Stetic files since the rename to VS for Mac Xamarin Studio’s no longer available for Windows thus Stetic visual editor goes the same.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 03 Apr 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Tue 3: Multiple instances of the same ViewModel</title>
+  <guid>https://marcoscobena.com/?i=Tue-3--Multiple-instances-of-the-same-ViewModel-5e696e8dd793</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Tue 3: Multiple instances of the same ViewModel&lt;/p&gt;
+
+&lt;p&gt;I have another issue of multiple instances of the same ViewModel live at the same time. Basically am navigating to the same page —after…   --------&lt;/p&gt;
+
+&lt;h3&gt;Tue 3: Multiple instances of the same ViewModel&lt;/h3&gt;
+
+&lt;p&gt;I have another issue of multiple instances of the same ViewModel live at the same time. Basically am navigating to the same page —after having some others in the middle— through 1) InsertPageBefore() and 2) PopToRoot().&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*atYJhzXMB636j8nr." alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/@creativeexchange?utm_source=medium&amp;amp;utm_medium=referral"&gt;The Creative Exchange&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;Xamarin Profiler’s always helped me sort those things out, and turns out haven’t used it lately, and after taking some snapshots I see the instances decrease to just 1. However, remember those snapshots force a GC’s collect, and &lt;a href="https://forums.xamarin.com/discussion/comment/322352/#Comment_322352"&gt;that way it’s&lt;/a&gt;. So, it turns out this’ a wonderful fast way to detect whether your VM’s actually referenced.&lt;/p&gt;
+
+&lt;p&gt;Wasn’t there a way to see the back references for a given instance? My main concern isn’t having multiple instances live (which too), but the multiple navigations happening because of same code being executed on those places.&lt;/p&gt;
+
+&lt;p&gt;Such VM’s a more elaborated flavor of this one —with a cancellation token to “assure” the loop is endless:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/MarcosCobena/XamarinFormsVisualStates/blob/master/XamarinFormsVisualStates/NFCViewModel.cs"&gt;&lt;strong&gt;MarcosCobena/XamarinFormsVisualStates&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;XamarinFormsVisualStates - Another approach to Visual States in Xamarin.Forms&lt;/em&gt;github.com&lt;/a&gt;&lt;a href="https://github.com/MarcosCobena/XamarinFormsVisualStates/blob/master/XamarinFormsVisualStates/NFCViewModel.cs"&gt;&lt;/a&gt;&lt;br /&gt;
+Surely, the cancellation isn’t happening…&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Mon, 02 Apr 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Mon 2: Polly’s Retry policy to make network calls</title>
+  <guid>https://marcoscobena.com/?i=Mon-2--Polly-s-Retry-policy-to-make-network-calls-224d70957b2c</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Mon 2: Polly’s Retry policy to make network calls&lt;/p&gt;
+
+&lt;p&gt;The last day I picked a task to move some ops. from local to the cloud —there’s already an API for that.   --------&lt;/p&gt;
+
+&lt;h3&gt;Mon 2: Polly’s Retry policy to make network calls&lt;/h3&gt;
+
+&lt;p&gt;The last day I picked a task to move some ops. from local to the cloud —there’s already an API for that.&lt;/p&gt;
+
+&lt;p&gt;And &lt;a href="https://github.com/App-vNext/Polly"&gt;Polly&lt;/a&gt; came to my mind. Don’t remember where but discovered it a few months ago through Planet Xamarin. Basically the app needs to send some sensible data “through the wire” and show the results; however, it can be possible there’s no network at such time.&lt;/p&gt;
+
+&lt;p&gt;So ended up using Polly’s Retry policy: “I want this call to be executed and, if anything fails, retry up to 3 times”. And this’ the code for exactly that:&lt;/p&gt;
+
+&lt;p&gt;My mate Juan asked me whether Polly can handle different paths for different exceptions, and it &lt;a href="https://github.com/App-vNext/Polly/issues/104"&gt;looks feasible&lt;/a&gt;, although haven’t tried for my-self.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Sun, 01 Apr 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Wed 28: One approach to Visual States</title>
+  <guid>https://marcoscobena.com/?i=Wed-28--One-approach-to-Visual-States-730813111718</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Wed 28: One approach to Visual States&lt;/p&gt;
+
+&lt;p&gt;After struggling a few times with animations that respond to ViewModel changes in Xamarin.Forms —and while official Visual States arrive to…   --------&lt;/p&gt;
+
+&lt;h3&gt;Wed 28: One approach to Visual States&lt;/h3&gt;
+
+&lt;p&gt;After struggling a few times with animations that respond to ViewModel changes in Xamarin.Forms —and while official Visual States arrive to stable— I started my own road to solve this particular issue: how to storyboard animations.&lt;/p&gt;
+
+&lt;p&gt;Originally worked on this during last Christmas, as part of a point &amp;amp; click demo where had some sort of scripting logic. After that, I iterated it for the NFC view the current app am working on has. And, finally, for the same app, with the help of my mate Sergio, iterated it again to make it a little bit more elegant to use.&lt;/p&gt;
+
+&lt;p&gt;I think it’s worth sharing. Basically, your ViewModels inherit IStateNotifier and pages IStateNotified, adding also to this last StateNotificationBehavior. With permission from our Designer, I’ve pulled just the NFC resources from above app to showcase what I can do nowadays.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*9o5SWTFk_2kBtKPKcGVAhQ.gif" alt="" /&gt;&lt;br /&gt;
+Full storyboard runningAm really open to improve all this. During the last two weekends I’ve been reading Adam Pedley’s &lt;a href="https://xamarinhelp.com/more-functional-viewmodels-in-xamarin-forms-with-c/"&gt;series on functional ViewModels&lt;/a&gt;, and liked his approach of moving the states notion to just the view —this’ currently sorted out in VMs here. My main goal is performance, as my current scenarios involve a lot of bindings and the animations struggle a little bit, but please feel free to share any idea.&lt;/p&gt;
+
+&lt;p&gt;You can find the repo &lt;a href="https://github.com/MarcosCobena/XamarinFormsVisualStates"&gt;here&lt;/a&gt;, including the sample app.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 27 Mar 2018 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Tips &amp;amp; tricks to rely in VirtualBox</title>
+  <guid>https://marcoscobena.com/?i=Tips---tricks-to-rely-in-VirtualBox-e9e28c8cd180</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Tips &amp;amp; tricks to rely in VirtualBox&lt;/p&gt;
+
+&lt;p&gt;During the last years my VM needs were so much covered by Parallels and VMWare. Both are super reliable and, obviously, imply a cost. In…   --------&lt;/p&gt;
+
+&lt;h3&gt;Tips &amp;amp; tricks to rely in VirtualBox&lt;/h3&gt;
+
+&lt;p&gt;During the last years my VM needs were so much covered by Parallels and VMWare. Both are super reliable and, obviously, imply a cost. In that time too I’ve tried several times &lt;a href="https://www.virtualbox.org"&gt;VirtualBox&lt;/a&gt;, but always ended in the virtual HD corrupted so losing all inside. No good.&lt;/p&gt;
+
+&lt;p&gt;One month ago I gave it again a try. And, don’t want to say it loudly, have had zero issues from then. Moreover, I think don’t need the other solutions anymore.&lt;/p&gt;
+
+&lt;p&gt;VirtualBox’ a little bit more manual, and doesn’t have the Parallels mode where guest’ OS blends with host one —Coherence?; however, with some good tips, covers all my daily needs. Take into account am a macOS user which need Windows 10 virtualized, mostly to develop.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*bLpady9U79BnuGYf." alt="" /&gt;&lt;br /&gt;
+“Two people in elegant shirts brainstorming over a sheet of paper near two laptops” by &lt;a href="https://unsplash.com/@helloquence?utm_source=medium&amp;amp;utm_medium=referral"&gt;Helloquence&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;So, the tips:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After trying the different options, the most I feel comfortable with is having the VM window at its maximum size to fit screen bounds —not maximized as macOS understand. In that case, pressing CMD once and moving to other desktops with CTRL + ←/→ feels nice —forgot to mention I commonly use three virtual desktops: main work, VM and Spotify 😎&lt;/li&gt;
+&lt;li&gt;Maybe it’s because of my previous experiences, but I try to shut down the VM with Start, Shut down… I know am losing the magic pause options VM use to have, but gives more confidence the other way around&lt;/li&gt;
+&lt;li&gt;The &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;VM VirtualBox Extension Pack&lt;/a&gt;’s a must. I needed that to support USB sticks but know it empowers the guest in some other ways tooI’m sure forgetting something but will continue editing this as it comes to my mind. If you have any other tip please share it as well —thanks in advance!&lt;/li&gt;
+&lt;/ul&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 22 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Thu, 22: Charles with Android, VirtualBox’ HD size &amp;amp; UWP debugging</title>
+  <guid>https://marcoscobena.com/?i=Thu--22--Charles-with-Android--VirtualBox--HD-size---UWP-debugging-284998a21a5e</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Thu, 22: Charles with Android, VirtualBox’ HD size &amp;amp; UWP debugging&lt;/p&gt;
+
+&lt;p&gt;As part of changing endpoints at eShopOnContainers solution I wanted to double check every request was being received correctly, so came…   --------&lt;/p&gt;
+
+&lt;h3&gt;Thu, 22: Charles with Android, VirtualBox’ HD size &amp;amp; UWP debugging&lt;/h3&gt;
+
+&lt;p&gt;As part of changing endpoints at eShopOnContainers solution I wanted to double check every request was being received correctly, so came back to Charles Proxy.&lt;/p&gt;
+
+&lt;p&gt;I rely on official Android emus so found out a &lt;a href="https://dzone.com/articles/charles-proxy-in-android-emulator"&gt;nice article&lt;/a&gt; to configure everything so Charles can detect the communication happening within the emu.&lt;/p&gt;
+
+&lt;p&gt;The bad thing’s I was getting ERR&lt;em&gt;INCOMPLETE&lt;/em&gt;CHUNKED_ENCODING errors inside the emu so had to manually hook every HTTP response in the old less-fashioned way: breakpoints. (Any hint on that error and how to sort it out would be really appreaciated.)&lt;/p&gt;
+
+&lt;p&gt;Once everything was done —in macOS with VS for Mac— I switched to Windows, so can test UWP too. I’m having a really good experience with VirtualBox this time by the way—am thinking of publishing some notes with tips &amp;amp; tricks.&lt;/p&gt;
+
+&lt;p&gt;My previous VS 2017 installation lacked Xamarin stuff, but couldn’t go for it because was about to run out of space. Making your HD bigger in VirtualBox’ a little bit hand-made, but nothing too complicated:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Detach your HD image —make sure you stopped the VM in the formal way: Start, Shut down&lt;/li&gt;
+&lt;li&gt;Run in a terminal (102400 are MB, so make your own calcs): &lt;em&gt;VBoxManage modifymedium “Windows 10.vdi” — resize 102400&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Attach the HD back again, run it, and open Computer Management&lt;/li&gt;
+&lt;li&gt;Within HDs, just expand your current partition to fulfill the rest of available spaceI learnt all of this from &lt;a href="https://www.jesusamieiro.com/how-to-resize-a-virtual-machines-disk-in-virtualbox/"&gt;this article&lt;/a&gt; and &lt;a href="https://www.youtube.com/watch?v=7Aqx-VHv2_k"&gt;this video&lt;/a&gt;; however, it was something like a mix of both which took me to succeed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Finally, trying to debug PCL code with the UWP app, none of my breakpoints were hitting, but my friend Sergio immediately pointed me to the cause: look at that Debugging information piece (set as Full):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1000/1*9paf348GHCuucXvSRcLEfQ.png" alt="" /&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Wed, 21 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Wed, 21: Xamarin Inspector for Forms &amp;amp; NamedSizes</title>
+  <guid>https://marcoscobena.com/?i=Wed--21--Xamarin-Inspector-for-Forms---NamedSizes-fea033823240</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Wed, 21: Xamarin Inspector for Forms &amp;amp; NamedSizes&lt;/p&gt;
+
+&lt;p&gt;Was it me the only one in Earth who didn’t know Xamarin Inspector now shows not only the native OS’ UI hierarchy but also Forms one? I was…   --------&lt;/p&gt;
+
+&lt;h3&gt;Wed, 21: Xamarin Inspector for Forms &amp;amp; NamedSizes&lt;/h3&gt;
+
+&lt;p&gt;Was it me the only one in Earth who didn’t know &lt;a href="https://docs.microsoft.com/en-us/xamarin/tools/inspector/"&gt;Xamarin Inspector&lt;/a&gt; now shows not only the native OS’ UI hierarchy but also Forms one? I was struggling with a mysterious margin and BOOM, Inspector showed me the path :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*7pMarMbujb1W_lFY." alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/@igorovsyannykov?utm_source=medium&amp;amp;utm_medium=referral"&gt;Igor Ovsyannykov&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;For some reason I thought a control which’s not visible computes its margin even so. But no, as always the issue’s between the monitor and the chair.&lt;/p&gt;
+
+&lt;p&gt;The UI refactoring was finally finished! Phew, after all am super happy with the result, as using a custom font and increasing the entire sizes was a blast.&lt;/p&gt;
+
+&lt;p&gt;On that last piece, I followed the recommendation from yesterday and also my mate Sergio’s one of using Forms’ built-in &lt;a href="https://developer.xamarin.com/api/type/Xamarin.Forms.NamedSize/"&gt;NamedSize&lt;/a&gt;s, where having source code at GitHub really helped understand &lt;a href="https://github.com/xamarin/Xamarin.Forms/blob/b96f65bdd9e7e931971338b122a8940e2a35ccc7/Xamarin.Forms.Platform.Android/Forms.cs#L429"&gt;the underneath calcs&lt;/a&gt; to render its different sizes.&lt;/p&gt;
+
+&lt;p&gt;The app now shines in a 7’’ tablet, running Full HD, but also on more smaller form factors. What I learnt? My next project will start yes or yes with font styles and, if fits, with named sizes and, if fits, with Control Templates, all in this order.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 20 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Tuesday, 20/3/2018</title>
+  <guid>https://marcoscobena.com/?i=Tuesday--20-3-2018-f42e8eb10d25</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Tuesday, 20/3/2018&lt;/p&gt;
+
+&lt;p&gt;Yesterday I started a 1–2 days task on Microsoft-Xamarin’s eShopOnContainers solution. I haven’t heard before of this and it’s a really…   --------&lt;/p&gt;
+
+&lt;h3&gt;Tuesday, 20/3/2018&lt;/h3&gt;
+
+&lt;p&gt;Yesterday I started a 1–2 days task on Microsoft-Xamarin’s &lt;a href="https://github.com/dotnet-architecture/eShopOnContainers"&gt;eShopOnContainers&lt;/a&gt; solution. I haven’t heard before of this and it’s a really good opportunity to learn from a globe how to build a full architecture, from client to server sides, made of micro-services —relying on Docker, by the way.&lt;/p&gt;
+
+&lt;p&gt;During the afternoon went a few hours back to my other project, and gave final touches to the XAML refactoring I started last week —moving to Control Templates to simplify styling mostly.&lt;/p&gt;
+
+&lt;p&gt;I had a comment in one of those entries recommending me to rename font-related styles to something like SmallFontStyle, Medium bla bla bla and so on, and is actually a nice idea, as I’m increasing font-sizes maybe today or tomorrow. He pointed me this as a way to put Designers and Developers in the same road, and I totally agree. Thanks Dani for the feedback!&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Mon, 19 Mar 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Playing with Xamarin.Forms for Web</title>
+  <guid>https://marcoscobena.com/?i=Playing-with-Xamarin-Forms-for-Web-cde48f1e12b4</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Playing with Xamarin.Forms for Web&lt;/p&gt;
+
+&lt;p&gt;On Saturday I was playing a little bit with Frank’s OOUI, moreover Ooui.Wasm and Forms packages. The first allows to work with web’s DOM…   --------&lt;/p&gt;
+
+&lt;h3&gt;Playing with Xamarin.Forms for Web&lt;/h3&gt;
+
+&lt;p&gt;On Saturday I was playing a little bit with Frank’s &lt;a href="http://ooui.mecha.parts/"&gt;OOUI&lt;/a&gt;, moreover Ooui.Wasm and Forms packages. The first allows to work with web’s DOM from C# running in client side, the second’s a Xamarin.Forms backend for web.&lt;/p&gt;
+
+&lt;p&gt;At home I have a 10 years old PC, with Windows 10 —running to maximize performance, except ClearType, which can’t live without nowadays. With Visual Studio Code, and Frank’s guide, could launch my first “n times clicked!” button.&lt;/p&gt;
+
+&lt;p&gt;I told Frank through Twitter what changes had to do into server.py because I chose Python 3.x and there were some changes, but obviously someone had already noticed that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/1Marcos2Cobena/status/975033623308132354"&gt;&lt;/a&gt;
+  (Click above to see the entire thread.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Because of having my web in GitHub, I commonly rely in &lt;a href="http://www.mono-project.com/docs/web/aspnet/#aspnet-hosting-with-xsp"&gt;Mono’s XSP&lt;/a&gt; web server to test things out before committing. And it works too with Ooui —why not? Posted all this into &lt;a href="https://github.com/praeclarum/Ooui/issues/88"&gt;that issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I was playing with Buttons, Labels, StackLayouts, ActivityIndicators and so on. Also, moving things into an isolated ContentPage and overriding OnAppearing().&lt;/p&gt;
+
+&lt;p&gt;I really liked what I saw. Frank again has done an amazing and beautiful job —since a few years, for me, everything he touches simply rules. My mate Javi Suárez’s already pushed some commits into Ooui to enable more controls too. Today I woke up with the idea of moving &lt;a href="https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro"&gt;¡Buenos días!&lt;/a&gt; into Forms (fixing the images bug along the way), and thanks to OOUI can finally have the web too.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Sun, 18 Mar 2018 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>How to centralize font-related styling</title>
@@ -2043,6 +2417,537 @@ platform. But have done my first calls in both! 🎉&lt;/p&gt;</description>
   <pubDate>Sun, 17 Dec 2017 23:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>XAML things, merging RESX and 10.0.2.2 #XamarinForms</title>
+  <guid>https://marcoscobena.com/?i=XAML-things--merging-RESX-and-10-0-2-2--XamarinForms-b7ab15533176</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# XAML things, merging RESX and 10.0.2.2 #XamarinForms&lt;/p&gt;
+
+&lt;p&gt;Monday, 11th Finally I made the PR to ApiIntersect.   --------&lt;/p&gt;
+
+&lt;h3&gt;XAML things, merging RESX and 10.0.2.2 #XamarinForms&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Monday, 11th&lt;/strong&gt;&lt;br /&gt;
+Finally I made &lt;a href="https://github.com/xamarin/ApiInteresect/pull/3"&gt;the PR to ApiIntersect&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Redesigning a page I’ve found quite useful &lt;a href="https://developer.xamarin.com/guides/xamarin-forms/user-interface/styles/"&gt;Xamarin.Forms’ Styles&lt;/a&gt; to reduce the verbosity in XAML. Sometimes I just used to see a control as the main refactoring option; however, Styles are a good way too.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tuesday, 12th&lt;/strong&gt;&lt;br /&gt;
+Today’s been the &lt;a href="https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/triggers/"&gt;DataTrigger&lt;/a&gt; day 😊 Styling a page I needed something like iOS’ &lt;a href="https://developer.apple.com/documentation/uikit/uisegmentedcontrol"&gt;UISegmentedControl&lt;/a&gt;, without the borders. Trigger came quite handy when tinting items depending on its selection state:&lt;/p&gt;
+
+&lt;p&gt;&lt;Label Text="Option 1"&gt;&lt;br /&gt;
+ &lt;Label.Triggers&gt;&lt;br /&gt;
+ &lt;DataTrigger TargetType=”Label” Binding=”{Binding Option1Selected}” Value=”false” &gt;&lt;br /&gt;
+ &lt;Setter Property=”TextColor” Value=”Red” /&gt;&lt;br /&gt;
+ &lt;/DataTrigger&gt;&lt;br /&gt;
+ &lt;DataTrigger TargetType=”Label” Binding=”{Binding Option1Selected}” Value=”true” &gt;&lt;br /&gt;
+ &lt;Setter Property=”TextColor” Value=”Green” /&gt;&lt;br /&gt;
+ &lt;/DataTrigger&gt;&lt;br /&gt;
+ &lt;/Label.Triggers&gt;&lt;br /&gt;
+&lt;/Label&gt;However, I didn’t find a quick way to share those triggers among different controls: already know Styles would do the job, but have applied some others before to the same controls and can’t simply add the triggers to them. Am looking for another way. Anyone would know any idea?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wednesday, 13th&lt;/strong&gt;&lt;br /&gt;
+LiveXAML is one the most powerful tools when styling UI with Forms. Period. Thanks to Yeray who bought licenses for everyone at DevsDNA 😙&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*ua4EiwJkYsq7uY6kVn6rZw.jpeg" alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/photos/0wdPEt-ufqs?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Todd Diemer&lt;/a&gt; on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;We were reported with an issue with i18n and, in the end, had to do with having 3 different RESX files not consistent between them. Google-ing for a merge tool for such I stumbled upon &lt;a href="https://stackoverflow.com/a/32103645"&gt;this answer&lt;/a&gt; which, taken into a new Console Project, solved the issue in a fraction of time.&lt;/p&gt;
+
+&lt;p&gt;By the end of the day pushed some small changes to the &lt;a href="https://github.com/DevsDNA/GradientBoxView"&gt;GradientBoxView’s README&lt;/a&gt;, to clear things a little bit, and make it look more professional. I didn’t like nor the previous Example nor its screenshots, so made a new one for all. Looking for device frames I came up into &lt;a href="https://mockuphone.com"&gt;this site&lt;/a&gt; which just takes a screenshot (emulator is OK) and returns everything wrapped up.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thursday, 14th&lt;/strong&gt;&lt;br /&gt;
+I started the day by filling a bug on a little thing which once solved would make my days smoother:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/1Marcos2Cobena/status/941226957861244928"&gt;&lt;/a&gt;
+  Continuing with the page design I needed a new ListView so in order to populate it with fake data while LiveXAMLing had to look again how used to do such. &lt;a href="https://stackoverflow.com/q/28738090"&gt;For the records&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When the ViewModel time came in created also a new snippet in VS so writting new props. ready for ReactiveUI would be quicker:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*P0WkSZ3_RGXIyIuefopVuA.png" alt="" /&gt;&lt;br /&gt;
+Simply write $name$ in lowercase and finally make upper first letter in just the prop. declaration&lt;strong&gt;Friday, 15th&lt;/strong&gt;&lt;br /&gt;
+Working on a new task with Twilio had to connect an Android app running in an emulator with an ASP.NET MVC server hosted locally, at 127.0.0.1:8080. Did you know pointing to 10.0.2.2 inside the emu forwards communication to the first? I didn’t, super handy.&lt;/p&gt;
+
+&lt;p&gt;Our app needs to handle outgoing VoIP calls though Twilio, and the following days will be implementing the in-call screen, plus the attached service to handle the call it-self. Looks funny!&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Sun, 17 Dec 2017 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms</title>
+  <guid>https://marcoscobena.com/?i=Lottie-in-UWP--NuGetizer-3000-and-GradientBoxView--XamarinForms-2deeec043db8</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms&lt;/p&gt;
+
+&lt;p&gt;Monday, 4th I finally could spend some time on UWP for Lottie. Had to reinstall my whole Windows 10 + VS 2017 from scratch as latest UWP…   --------&lt;/p&gt;
+
+&lt;h3&gt;Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Monday, 4th&lt;/strong&gt;&lt;br /&gt;
+I finally could spend some time on UWP for Lottie. Had to reinstall my whole Windows 10 + VS 2017 from scratch as latest UWP SDK works with latest VS only (it saved also some extra space in my SSD which’s good too). Martijn’s already approved &lt;a href="https://github.com/martijn00/LottieXamarin/pull/114"&gt;the latest changes&lt;/a&gt; so expect to have it merged soon :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*pPDzN59Ek9_pH88AUZyg8g.jpeg" alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/photos/B6e96uSIApE?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Kirstyn Paynter&lt;/a&gt; on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;I’m in the process of publishing our “DNAGradientBoxView” NuGets, and have learned about &lt;a href="https://github.com/NuGet/Home/wiki/NuGetizer-3000"&gt;NuGetizer 3000&lt;/a&gt;, an easy way to create NuGets directly from VS. To be honest it’s my first time creating packages, and am struggling a little bit, but expect to have this all sorted out soon. Am currently trying the &lt;a href="https://github.com/NuGet/Home/wiki/NuGetizer-Core-Scenarios#bait-and-switch"&gt;bait-and-switch technique&lt;/a&gt;, which adds platform-specific code by just referencing a NuGet from the PCL project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tuesday, 5th&lt;/strong&gt;&lt;br /&gt;
+Hooray!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/1Marcos2Cobena/status/938003588827058176"&gt;&lt;/a&gt;
+  I keep struggling with NuGet packaging –am focused on doing this with the IDE. After recreating the solution n + 1 times I’ve received again the same error, which seems half-fixed from their side:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/NuGet/Home/issues/4597"&gt;&lt;strong&gt;NuGetizer api intersection does not support referenced assemblies · Issue #4597 · NuGet/Home&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;Details about Problem There needs to be a way to specify reference assembly paths for the ApiIntersect tool. Currently…&lt;/em&gt;github.com&lt;/a&gt;&lt;a href="https://github.com/NuGet/Home/issues/4597"&gt;&lt;/a&gt;&lt;br /&gt;
+It looks like Bait and Switch can’t be done from VS, so will go back to nuspec files and Terminal 🤷🏻‍♂️&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wednesday, 6th&lt;/strong&gt;&lt;br /&gt;
+Bank holiday!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thursday, 7th&lt;/strong&gt;&lt;br /&gt;
+Bank holiday too, but have spent some time updating my &lt;a href="http://marcoscobena.com/#/home"&gt;web&lt;/a&gt; and &lt;a href="http://marcoscobena.com/#/now"&gt;Now&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;I’ve kept with my determination to make NuGetizer-3000 work for my little project, and decided to clone &lt;a href="https://github.com/xamarin/ApiInteresect"&gt;ApiIntersect&lt;/a&gt; repo to debug the exception I got. Going through the code I’ve finally understood why Bait-and-switch doesn’t work in my scenario: it can’t work when the platform implementation inherits a class which’s out of the intersection with a .NET client profile. However, ApiIntersect wasn’t handling this fine –at least giving a hint on the issue–, so I’ll make a PR to improve this for others.&lt;/p&gt;
+
+&lt;p&gt;And, finally, I published GradientBoxView! –also in &lt;a href="https://github.com/DevsDNA/GradientBoxView"&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.nuget.org/packages/DevsDNA.GradientBoxView"&gt;&lt;strong&gt;DevsDNA.GradientBoxView 1.0.1&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;An empowered Xamarin.Forms' BoxView with 2-color gradients.&lt;/em&gt;www.nuget.org&lt;/a&gt;&lt;a href="https://www.nuget.org/packages/DevsDNA.GradientBoxView"&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Friday, 8th&lt;/strong&gt;&lt;br /&gt;
+Bank holiday!&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 12 Dec 2017 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Lottie, scroll’s headers and GradientBoxView #XamarinForms</title>
+  <guid>https://marcoscobena.com/?i=Lottie--scroll-s-headers-and-GradientBoxView--XamarinForms-2e0afb12a4a</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Lottie, scroll’s headers and GradientBoxView #XamarinForms&lt;/p&gt;
+
+&lt;p&gt;Monday, 27th Back to the Xamarin.Forms project after holidays :-) Yeray assigned me to polish a task on a Lottie anim. within a splash view…   --------&lt;/p&gt;
+
+&lt;h3&gt;Lottie, scroll’s headers and GradientBoxView #XamarinForms&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;*Monday, 27th&lt;br /&gt;
+*&lt;/em&gt;Back to the Xamarin.Forms project after holidays :-) Yeray assigned me to polish a task on a Lottie anim. within a splash view –the one in charge of logging in silently.&lt;/p&gt;
+
+&lt;p&gt;We needed something like Task.WhenAll(lottieAnimation, loggingIn) but Lottie for Xamarin.Forms doesn’t reflect when the anim. ends. I worked on &lt;a href="https://github.com/martijn00/LottieXamarin/pull/114"&gt;this PR&lt;/a&gt; which adds a handy OnEnd event for both Android &amp;amp; iOS (anyone out there which would add UWP please?)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tuesday, 28th&lt;/strong&gt;&lt;br /&gt;
+In the redesign task am working on have needed again a top view attached to parent’s top, with an underlying ScrollView/ListView flowing below. You want the scroll’s content to begin just below the attached view, so adding a padding seems perfect. Finally, I’ve given with one way to make this dynamic, through binding the attached’s height to the scroll’s padding, thanks to a Converter:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wednesday, 29th&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*1vbZ5v_Lhx5srfzqs8qF0w.jpeg" alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/photos/kP1AxmCyEXM?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Ilnur Kalimullin&lt;/a&gt; on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;I’ve needed again something like a gradient view within Xamarin.Forms. Looking for existing NuGets &lt;a href="https://github.com/tbaggett/xfgloss"&gt;XFGloss&lt;/a&gt; looked pretty promising, although after playing a little bit with it’s much more complex than my needs. In the end I found some Custom Renderers for Android &amp;amp; iOS through Xamarin Forums and adapted such for a new GradientBoxView, which accepts both a start color and an end one, and is very handy for placing wherever may be needed. It’s in our minds to publish it from DevsDNA.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thursday, 30th&lt;/strong&gt;&lt;br /&gt;
+Today has been the end of current sprint so have spent the whole day closing stuff.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Friday, 1st&lt;/strong&gt;&lt;br /&gt;
+Airplane to Tenerife to our Christmas Dinner! 🎉&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 05 Dec 2017 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms</title>
+  <guid>https://marcoscobena.com/?i=Design-should-worry-us-more--And-just-Debug-LiveXAML--Xamarin--XamarinForms-24c11327ccd6</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms&lt;/p&gt;
+
+&lt;p&gt;Past Tuesday I spent a talk at Madrid on the mindset change have experienced last years working with people who really care on Design…   --------&lt;/p&gt;
+
+&lt;h3&gt;Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms&lt;/h3&gt;
+
+&lt;p&gt;Past Tuesday I spent a talk at Madrid on the mindset change have experienced last years working with people who really care on Design, mainly aimed at Xamarin ecosystem. One of my goals was to make people conscious of the need to get our hands dirtier when developing apps, as not the entire value comes from C# files.&lt;/p&gt;
+
+&lt;p&gt;I’m sorry because it’s in pure Spanish (with some Andalusian), but it may be easy to follow up:&lt;/p&gt;
+
+&lt;p&gt;If you see the practice exercise where give out paper to everyone, it’s basically the template I made back in February and which nowadays use to implement apps. You can find it &lt;a href="http://marcoscobena.com/#/app-screen-creation-template"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*_Kh8TzABRb5lAqAz69Ftnw.jpeg" alt="" /&gt;&lt;br /&gt;
+Photo by &lt;a href="https://unsplash.com/photos/FwF_fKj5tBo?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Alice Achterhof&lt;/a&gt; on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;Taking advantage of going to Madrid I spent Tuesday and Wednesday mornings working at Google Campus. I thought there could be any issue –slow Wi-Fi, no free plug-ins, no empty space at all, etc.; however, everything went smooth and would definitely work there again for 1 or 2 days –no more because of my back, I thank any elaborated chair which cares of it.&lt;/p&gt;
+
+&lt;p&gt;I finally gave a try to LiveXAML: liked it a lot. Initially was just adding the NuGet package with the idea of removing it after PR-ing my branch back but find out a way to make StyleCop not bark with LiveXAML’s minified.cs: after looking for different solutions, the one I most liked was telling first to avoid such file, as if it was a design-generated one. It can be done by adding this to Settings.StyleCop XML file:&lt;/p&gt;
+
+&lt;p&gt;&lt;Parsers&gt;&lt;br /&gt;
+ &lt;Parser ParserId=”StyleCop.CSharp.CsParser”&gt;&lt;br /&gt;
+ &lt;ParserSettings&gt;&lt;br /&gt;
+ &lt;CollectionProperty Name=”GeneratedFileFilters”&gt;&lt;br /&gt;
+ [...]&lt;br /&gt;
+ &lt;!-— Avoid LiveXAML’s minified.cs too --&gt;&lt;br /&gt;
+ &lt;Value&gt;minified.cs$&lt;/Value&gt;&lt;br /&gt;
+ &lt;/CollectionProperty&gt;&lt;br /&gt;
+ &lt;/ParserSettings&gt;&lt;br /&gt;
+ &lt;/Parser&gt;&lt;br /&gt;
+&lt;/Parsers&gt;Adding LiveXAML’s NuGet doesn’t touch any DLL, adding references, but adds an Import step while compiling, so I wanted as well to get rid of it when not being in Debug mode. Some CSPROJ magic and done (pay attention to the second condition):&lt;/p&gt;
+
+&lt;p&gt;&lt;Import Project=”..\..\packages\LiveXAML.1.3.8\build\LiveXAML.targets” Condition=”Exists(‘..\..\packages\LiveXAML.1.3.8\build\LiveXAML.targets’) And ‘$(Configuration)’==’Debug’” /&gt;And voilá! LiveXAML’s just here in Debug, and nobody will notice it in Release 😇&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 14 Nov 2017 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources</title>
+  <guid>https://marcoscobena.com/?i=Just-PCL-OpenID-authentication-in--XamarinForms--Firebase-and-limited-resources-53591bb20887</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources&lt;/p&gt;
+
+&lt;p&gt;10 (ten) years after my first date with OpenID protocol, last week it was back to my life. By the former I reimplemented a bridge to…   --------&lt;/p&gt;
+
+&lt;h3&gt;Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources&lt;/h3&gt;
+
+&lt;p&gt;10 (ten) years after my first date with OpenID protocol, last week it was back to my life. By the former I reimplemented a bridge to authenticate users at public high schools, in PHP (with classes) 🤷🏻‍♂️ Also, I needed to learn a new path to Push Notifications with Azure. And some 1-to-1 consultancy hours.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*sxQyCvfHK09jpsMI7QcMEg.jpeg" alt="" /&gt;&lt;br /&gt;
+The start line –Photo by &lt;a href="https://unsplash.com/photos/JBxsARdTrxY?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Goh Rhy Yan&lt;/a&gt; on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;My task this week was to enable OpenID authentication in the Xamarin.Forms app am currently working with. My mates already had set an Identity Server up so the pending stuff was in the client side.&lt;/p&gt;
+
+&lt;p&gt;Initially I gave a try to Xamarin.Auth. To sum up –and be honest– it didn’t work for us. I don’t know exactly where within OpenID protocol the hand-shake breaks but, we moved to a different solution. (My guess comes from how Identity Server publishes the OpenID endpoint but I don’t really know, just suspecting.)&lt;/p&gt;
+
+&lt;p&gt;Yeray sent me a pair of links where anyone was implementing that communication with a different package: IdentityModel. It came as fresh milk for me because:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the user was also consuming an Identity Server, and&lt;/li&gt;
+&lt;li&gt;there was no need to touch platforms, just PCL!In just a sentence, it’s all about Forms’ WebView being set with an initial authorization URL and, by hooking successive ones, you carry the entire process without going down to Custom Renderers. Isn’t it beauty? 😍&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For example, this’ the way to gather initial URL –AuthorizeRequest belongs to IdentityModel NuGet:&lt;/p&gt;
+
+&lt;p&gt;public string GenerateAuthorizeUri()&lt;br /&gt;
+{&lt;br /&gt;
+ var authorizeRequest = new AuthorizeRequest(AuthorizeUri);var requestValues = new Dictionary&lt;string, string&gt;();&lt;br /&gt;
+ requestValues.Add(“client&lt;em&gt;id”, ClientId);&lt;br /&gt;
+ requestValues.Add(“response&lt;/em&gt;type”, ResponseType);&lt;br /&gt;
+ requestValues.Add(“scope”, Scope);&lt;br /&gt;
+ requestValues.Add(“redirect_uri”, RedirectUri);&lt;br /&gt;
+ requestValues.Add(“nonce”, Guid.NewGuid().ToString(“N”));currentCrossSiteRequestForgeryToken = Guid.NewGuid().ToString(“N”);requestValues.Add(“state”, currentCrossSiteRequestForgeryToken);var authorizeUri = authorizeRequest.Create(requestValues);return authorizeUri;&lt;br /&gt;
+}I’ve seen my-self checking many times &lt;a href="https://connect2id.com/learn/openid-connect"&gt;this OpenID guide&lt;/a&gt; on how the protocol happens step by step.&lt;/p&gt;
+
+&lt;p&gt;The last chunk of the week I stumbled upon Push Notifications, with Azure’s Notification Hub. I’ve set this plenty of times during the last years; however, it’s been my first relying in Firebase, for Android. I always used GCM component from Xamarin, but it’s been ~4 years since the last update 👹&lt;/p&gt;
+
+&lt;p&gt;Apart from I messed up with Android’s manifest and put the receiver stuff out of the application node without noticing (thanks Ciani!), it was a joy to configure. You can first send foo notifications from Firebase console and, when everything is OK, jump to Azure. Don’t became so much crazy gathering how to connect this with Firebase, you just need the legacy key provided from this last one’s settings.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://developer.xamarin.com/samples/monodroid/Firebase/FCMNotifications/"&gt;This Xamarin guide&lt;/a&gt; on Firebase for Android was so helpful for me as well.&lt;/p&gt;
+
+&lt;p&gt;After all these things, my learning from previous week come from a three hours consultancy for a local company which develop a mobile app with Xamarin. They came to see us to one of the Xamarin Dev Days from a year ago and, without previous knowledge, jumped into the world of Xamarin.Forms.&lt;/p&gt;
+
+&lt;p&gt;It amazed me a lot seeing what they’ve achieved with so much limited resources. We use to think our job is kind off shit. Sometimes need someone from outside to tell us it’s great having into account our start line. And how much humble people with limited resources is…&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 07 Nov 2017 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Unit Testing #XamarinForms controls, the simplest SwipeGestureRecognizer and no more…</title>
+  <guid>https://marcoscobena.com/?i=Unit-Testing--XamarinForms-controls--the-simplest-SwipeGestureRecognizer-and-no-more--2ecf7d448fbf</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Unit Testing #XamarinForms controls, the simplest SwipeGestureRecognizer and no more…&lt;/p&gt;
+
+&lt;p&gt;Following with previous week, I’ve kept with the carousel control. However, I started with one weird bug where a navigation between two…   --------&lt;/p&gt;
+
+&lt;h3&gt;Unit Testing #XamarinForms controls, the simplest SwipeGestureRecognizer and no more Debug.WriteLine()&lt;/h3&gt;
+
+&lt;p&gt;Following with previous week, I’ve kept with the carousel control. However, I started with one weird bug where a navigation between two Pages was taking too long.&lt;/p&gt;
+
+&lt;p&gt;It’s funny because every time I stumble upon these things I go deep in my code and start measuring time between breakpoints –how handy is VS for Mac’s Breakpoint Actions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*_RCs4suCdxCfUk6PWiIqfA.png" alt="" /&gt;&lt;br /&gt;
+Instead of plenty of Debug.WriteLine() this came to save our lifesAnd, finally, after 1 or 2 h of no success I went through Xamarin Profiler and BOOM the issue was in a JSON deserialization process. Fixing was quick because decided to move away from such JSON and create the hierarchy on demand in C# –we weren’t expecting that to change in a dynamic fashion.&lt;/p&gt;
+
+&lt;p&gt;So, first learning of the week, by Monday: every time I’ll have another performance issue&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I’ll rely on Xamarin Profiler and, if such didn’t help, then&lt;/li&gt;
+&lt;li&gt;will debug manuallyAs I was telling above I kept with the carousel. Mainly my task was to add a cyclic behavior and support lower than 3 items. Also, in the end, allow to specify which item’s selected from the beginning.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Making the carousel cyclic was an easy task. Since the entire thing relies on an int index a few module ops. were needed. The complex stuff came with supporting lower than 3 items. I started to feel pain on any modification made in the future breaking my code so added a new nUnit project in order to protect our-selves from those.&lt;/p&gt;
+
+&lt;p&gt;As the control heavily relies in animations, thus Xamarin.Forms libs, I reentered into &lt;a href="https://github.com/jonathanpeppers/Xamarin.Forms.Mocks"&gt;Jonathan Peppers’ Xamarin.Forms.Mocks&lt;/a&gt; NuGet. It helps you test straightforward your code with cool things as making every animation complete instantly. It saved my day.&lt;/p&gt;
+
+&lt;p&gt;Also, making the CarouselControl offer a well-known binding scenario made me testing it quite easy and joyable:&lt;/p&gt;
+
+&lt;p&gt;[Test]&lt;br /&gt;
+ public void FirstItemIsFocusedByDefaultFromThree()&lt;br /&gt;
+ {&lt;br /&gt;
+ AddItems(3);  &lt;/p&gt;
+
+&lt;p&gt;carouselControl.ItemsSource = items;  &lt;/p&gt;
+
+&lt;p&gt;Assert.AreEqual(items[0], carouselControl.SelectedItem);&lt;br /&gt;
+ }Finally, I had to support swipe gestures so at Page level any left or right swipe is directly taken as a left/right movement for the carousel. I became a little bit crazy looking for &lt;a href="https://github.com/xamarin/Xamarin.Forms/pull/1007/files"&gt;different swipe gesture implementations&lt;/a&gt; but finally, reusing PanGestureRecognizer was much easier and cleaner (ThresholdToFireSwipeGesture takes 100):&lt;/p&gt;
+
+&lt;p&gt;Learnings? Things can be easier than we think –or we think too complex from the semaphore. Tests are helpful to feel confidence, and avoids debugging time. VS 4 Mac still has nice surprises to discover, like those beautiful “break”points :-)&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Mon, 30 Oct 2017 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The Carousel party in #Xamarin Forms</title>
+  <guid>https://marcoscobena.com/?i=The-Carousel-party-in--Xamarin-Forms-70b96a692124</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# The Carousel party in #Xamarin Forms&lt;/p&gt;
+
+&lt;p&gt;Back from my on-site visit I’ve joined a new Xamarin.Forms project –which’s both cool and engaging, since I wanted that change after being…   --------&lt;/p&gt;
+
+&lt;h3&gt;The Carousel party in #Xamarin Forms&lt;/h3&gt;
+
+&lt;p&gt;Back from my on-site visit I’ve joined a new Xamarin.Forms project –which’s both cool and engaging, since I wanted that change after being somewhat like a year with pure Xamarin.Android/iOS.&lt;/p&gt;
+
+&lt;p&gt;My main task’s been to create a carousel control, where 3 items are showed at the same time and the one in the middle is aesthetically focused. Something similar to Finder’s Cover View, iTunes’ album carousel or this tvOS effect:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*hQcO0Qjsu8WeVbK6487dfQ.gif" alt="" /&gt;&lt;br /&gt;
+🤔How many items are rendered at the same time? 3? 4? 5? maybe more?Before reading, please think about above question (just below the GIF).&lt;/p&gt;
+
+&lt;p&gt;The answer is 4: if you’d see in slow-motion the animation just 4 items are rendered at a time, when most. This’ something I’ve learnt from making video-games, which’s part of my past as developer: what you see can largely differ from how things are actually made, and focus must be on the first.&lt;/p&gt;
+
+&lt;p&gt;So, back to Xamarin.Forms, just playing with 4 ContentViews I can make the animations go back and forth. Let me show you just the case when user wants to go left:&lt;/p&gt;
+
+&lt;p&gt;void Handle_BtnLeftTapped(object sender, System.EventArgs e)&lt;br /&gt;
+ {&lt;br /&gt;
+ if (thereAreAnimationsInProgress)&lt;br /&gt;
+ {&lt;br /&gt;
+ return;&lt;br /&gt;
+ }  &lt;/p&gt;
+
+&lt;p&gt;if (leftViewItemsSourceIndex &amp;lt; 0)&lt;br /&gt;
+ {&lt;br /&gt;
+ return;&lt;br /&gt;
+ }  &lt;/p&gt;
+
+&lt;p&gt;thereAreAnimationsInProgress = true;  &lt;/p&gt;
+
+&lt;p&gt;currentlyHiddenView.TranslationX = -1 * 2 * offsetBetweenBoxes;  &lt;/p&gt;
+
+&lt;p&gt;if (leftViewItemsSourceIndex == 0)&lt;br /&gt;
+ {&lt;br /&gt;
+ currentlyHiddenView.BindingContext = null;&lt;br /&gt;
+ }&lt;br /&gt;
+ else&lt;br /&gt;
+ {&lt;br /&gt;
+ currentlyHiddenView.BindingContext = ItemsSource.ElementAt(leftViewItemsSourceIndex - 1);&lt;br /&gt;
+ }  &lt;/p&gt;
+
+&lt;p&gt;Task.WhenAll(&lt;br /&gt;
+ currentlyHiddenView.TranslateTo(currentlyHiddenView.TranslationX + offsetBetweenBoxes, 0),&lt;br /&gt;
+ currentlyHiddenView.FadeTo(leftAndRightViewsOpacity),  &lt;/p&gt;
+
+&lt;p&gt;currentlyLeftView.TranslateTo(currentlyLeftView.TranslationX + offsetBetweenBoxes, 0),&lt;br /&gt;
+ currentlyLeftView.ScaleTo(centerBoxScaleFactor),&lt;br /&gt;
+ currentlyLeftView.FadeTo(1),  &lt;/p&gt;
+
+&lt;p&gt;currentlyCenterView.TranslateTo(currentlyCenterView.TranslationX + offsetBetweenBoxes, 0),&lt;br /&gt;
+ currentlyCenterView.ScaleTo(1 / centerBoxScaleFactor),&lt;br /&gt;
+ currentlyCenterView.FadeTo(leftAndRightViewsOpacity),  &lt;/p&gt;
+
+&lt;p&gt;currentlyRightView.TranslateTo(currentlyRightView.TranslationX + offsetBetweenBoxes, 0),&lt;br /&gt;
+ currentlyRightView.FadeTo(0))&lt;br /&gt;
+ .ContinueWith(_ =&gt;&lt;br /&gt;
+ {&lt;br /&gt;
+ var temporalRightView = currentlyRightView;&lt;br /&gt;
+ currentlyRightView = currentlyCenterView;&lt;br /&gt;
+ currentlyCenterView = currentlyLeftView;&lt;br /&gt;
+ currentlyLeftView = currentlyHiddenView;&lt;br /&gt;
+ currentlyHiddenView = temporalRightView;  &lt;/p&gt;
+
+&lt;p&gt;leftViewItemsSourceIndex--;  &lt;/p&gt;
+
+&lt;p&gt;SetSelectedItemAndUpdateTitle();  &lt;/p&gt;
+
+&lt;p&gt;thereAreAnimationsInProgress = false;&lt;br /&gt;
+ });&lt;br /&gt;
+ }The code I think’s self-explanatory:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;currently*View handles each of the 4 views we told before, and&lt;/li&gt;
+&lt;li&gt;temporalRightView, since we want to move left, is the 4th in the row which’s placed hidden at right side, just before executing the storyboardPacked in a single XAML and XAML.CS tuple we have a carousel-alike control which, too, exposes ItemsSource and SelectedItem bindings, very handy to play well outside.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In order to write XAML it turned out Xamarin’s Previewer didn’t work for me anymore after updating to last stable. So, I gave a try to Gorilla Player. I’ve successfully worked on the carousel control with Gorilla, and performed quite well since is totally isolated from Visual Studio –I work in Mac.&lt;/p&gt;
+
+&lt;p&gt;However, our ContentPages inherit ones linked to ReactiveUI, so such simply doesn’t work, which’s feasible. In the middle of the week I came into this article on LiveXAML, and saw the sky open:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/1Marcos2Cobena/status/920714659010891776"&gt;&lt;/a&gt;
+  Jim couldn’t use Gorilla so I don’t have a pre-comparison on both but I’ll definitely give it a try. I have a hope this yes will render things other can’t nowadays.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ve remembered this week that widely-known recurrent sentence from Steve Jobs: points are linked looking back: I was able to make this implementation because I had the chance to work on games.&lt;/p&gt;
+
+&lt;p&gt;Whatever we do nowadays, will serve us in the future ☺️&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 24 Oct 2017 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>“Design should worry us more than code” #Xamarin</title>
+  <guid>https://marcoscobena.com/?i=-Design-should-worry-us-more-than-code---Xamarin-fecc2b436e08</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# “Design should worry us more than code” #Xamarin&lt;/p&gt;
+
+&lt;p&gt;This’ the title for the talk I’m giving on November 7th at Madrid:   --------&lt;/p&gt;
+
+&lt;h3&gt;“Design should worry us more than code” #Xamarin&lt;/h3&gt;
+
+&lt;p&gt;This’ the title for the talk I’m giving on November 7th at Madrid:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/XDevMadrid/status/918158111571095552"&gt;&lt;/a&gt;
+  Thanks Dachi for the chance, since I’ve wanted this opportunity for long time now, and the day arrived :-)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The talk won’t be on how to design mobile apps, it isn’t targeted for pure Designers. It’ll drive us through how Developers can move closer to Designers in order to leverage what for me have direct impact in our final users: what they actually see.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*-UzVWdVAqeHlyzWMXDqCgw.jpeg" alt="" /&gt;&lt;br /&gt;
+What you see vs. what they’re playing (&lt;a href="https://www.flickr.com/photos/11152520@N03/5504054428/in/photolist-9onHC9-5u5We-52uvA-3kCBco-9iRBQc-e4RfKs-PHrAk-a7KUBL-a7KXJW-a7H3Vi-brh9wV-g79Efk-52g32C-eB5X9f-9niaRu-5m47EH-4rJq5A-6oxw15-qRqitz-qz1fm3-qjUiY3-NuZaH-c2E1VU-c2DSQu-A9X5S-c2E4p3-9nf8nr-9niaSQ-6eEUF7-qRqjbB-8cRhFs-9niaFA-9nf8rp-82LH8n-9niaWb-9niaQ1-aArBNz-eJhBGW-c2E4CG-c2E1mS-9jxxY-eaAGae-oFcebk-c2E4X9-c2DSgo-4EwMDP-fKzEMh-c2DVU5-7XcSZ-9jxNW"&gt;Radcliffe Orchestra rehearsing&lt;/a&gt;)Why linked to Xamarin? Mainly because it’s my main toolset nowadays, and Xamarin.Forms specifically is reaching a point where complex UIs can be achieved, so I feel we need to go one step further.&lt;/p&gt;
+
+&lt;p&gt;Also, studying Graphic Design has put me on a position where can better understand Designers, and why their decisions impact what we do, but almost no one talks about &lt;em&gt;how&lt;/em&gt; we do it.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;On last week on-site visit, I spent 3 days at Inditex, mainly teaching how to find both performance and memory leak issues with Xamarin Profiler. As it always happens, have learnt a lot too, and come quite happy with the level people are achieving with Xamarin.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 17 Oct 2017 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin</title>
+  <guid>https://marcoscobena.com/?i=Senseful-StyleCop-for-Visual-Studio--Mac-and-Windows--Xamarin-e02fdf15d039</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin&lt;/p&gt;
+
+&lt;p&gt;I’ve switched from Beezy to prepare material for some days I’m spending this week on-site. More specifically how to improve performance in…   --------&lt;/p&gt;
+
+&lt;h3&gt;Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin&lt;/h3&gt;
+
+&lt;p&gt;I’ve switched from Beezy to prepare material for some days I’m spending this week on-site. More specifically how to improve performance in Xamarin.Forms on Android.&lt;/p&gt;
+
+&lt;p&gt;At the beginning of past week Yeray proposed me to invest time solving how to enable StyleCop for Mac and Windows with our own ruleset. We have such defined within a document uploaded to Slack but, we’re humans, sometimes simply don’t remember those.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*6it0DME2FbFhD0kWccl4Ag.jpeg" alt="" /&gt;&lt;br /&gt;
+&lt;a href="https://www.flickr.com/photos/svenwerk/3973734146/in/photolist-749qHG-sawuca-4RkSLC-mPECsq-gYZ2MJ-5vX8W3-7WoTud-qmcBZT-rjhD93-WV9dZJ-6RuyMp-ffrMNW-9GMpXp-ffcv9M-dpZ5T2-6NPoaB-6dBMB-8DagT3-4Fbjbd-dhi9Sx-7tMJ1u-eGsEG9-e2v1Uv-9rbBRk-5FxAxc-8dnePX-nZfN9W-59k9Ld-rcLrra-57hBUQ-ffpQNq-hGE67y-9MWPF1-oNz8L-rwDQmJ-SwVDdo-bwmCe6-ffcw2v-bwHzYB-9AdWdA-4PUE1h-85tQJC-8VBSCT-bwHzV6-iCPqut-ffcGgz-jKp1ME-ffcuMH-jAjca-UqTKLL"&gt;Order&lt;/a&gt;It’s turned out actually was a lot easier to have StyleCop barking on rules not followed than defining the entire ruleset. StyleCop.MSBuild NuGet package does the first for us, just add it to every project and done. However, StyleCop.Settings XML is another world. I resigned from touching it manually but with the GUI provided in the package itself (tools subfolder). Visual Studio for Mac has an extension which allowed to do such in Mac but is broken nowadays.&lt;/p&gt;
+
+&lt;p&gt;So turned Windows on in Parallels and went with that GUI. My only previous experience with StyleCop had almost every rule enabled (and leveraged as errors) and remember it more blocker than helpful, so disabled all of them and just enabled back those which conform our existing guidelines. What we really pursue is code looking familiar for every of us.&lt;/p&gt;
+
+&lt;p&gt;As final: remember to place Settings file at the Solution level because replacing default one at packages will obviously not work in builds envs. I didn’t notice this at the beginning 👼&lt;/p&gt;
+
+&lt;p&gt;The rest of the week I’ve been most of the time with Xamarin Profiler, working out my on-site visit. I’m writing down some notes on feelings have had using it, and found plenty of space to improve. I promised Rodrigo Moya I’d send him an e-mail with all that, serve this as my commitment. Thanks Rodrigo for giving me support this week, really appreciated.&lt;/p&gt;
+
+&lt;p&gt;Investing on tools’ definitely worthy from time to time. Just having such StyleCop rules in a few clicks translates into more readable code. And it just took me half a day.&lt;/p&gt;
+
+&lt;p&gt;Also, profiling Xamarin.Forms apps, I came to the idea again that most of time issues why things go slow, don’t work or consume so much memory come from our faults. I’ve been thinking on the idea of adding a quick profiling time to every sprint story, or sprint-wide. However, it gives more value to directly look for a specific problem. I’ve recalled this sentence my father –I think– used to tell me:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Who doesn’t know where to go is in danger to get lost
+  And that’s. All.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 10 Oct 2017 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The #Android’s FAB which liked to follow BottomBar #Xamarin</title>
+  <guid>https://marcoscobena.com/?i=The--Android-s-FAB-which-liked-to-follow-BottomBar--Xamarin-57a805f646</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# The #Android’s FAB which liked to follow BottomBar #Xamarin&lt;/p&gt;
+
+&lt;p&gt;I’ve been thinking more and more from my last 5 years or so the following: if our users just touch Design, why do we become so crazy with…   --------&lt;/p&gt;
+
+&lt;h3&gt;The #Android’s FAB which liked to follow BottomBar #Xamarin&lt;/h3&gt;
+
+&lt;p&gt;I’ve been thinking more and more from my last 5 years or so the following: if our users just touch Design, why do we become so crazy with source code? Why do we invest so much time in improving the backend if the frontend is actually what we perceive? It turns out I’ve been last week with an UI Review in Beezy for Android, so had time to think on the first as well.&lt;/p&gt;
+
+&lt;p&gt;Part of that review has been to fix some wrong margins/paddings around items within RecyclerViews. We were setting such in code which means units are expressed in pixels, although Design asked for 16 dps. I’ve learnt how to reference in code units originally in dps, also taking advantage of dimens.xml files. This snippet shows how to gather 16 dps in pixel-size on an actual device:&lt;/p&gt;
+
+&lt;p&gt;// 'v' stands for a View&lt;br /&gt;
+var sixteenDps = TypedValue.ApplyDimension(ComplexUnitType.Dip, 16, v.Resources.DisplayMetrics);Android’s API uses to work on pxs (int, also, not float), so this is super handy. There’s also this other way to bring dps into action coming from dimens.xml:&lt;/p&gt;
+
+&lt;p&gt;var offset = (int)view.Resources.GetDimension(Resource.Dimension.default&lt;em&gt;margin&lt;/em&gt;padding);If you mix both above, you have that. This stupid thing has allowed to start a standardization process heading a single point of truth for this as well 👌🏼&lt;/p&gt;
+
+&lt;h4&gt;The BottomBar shyness with a coupled FAB&lt;/h4&gt;
+
+&lt;p&gt;I’ve been tweeting during this week on this thing. The Design Review also asked to hide BottomBar when scrolling down the RecyclerView –as &lt;a href="https://material.io/guidelines/components/bottom-navigation.html#bottom-navigation-behavior"&gt;Material Design suggests&lt;/a&gt;. After digging on this I came up with the idea there’s no easy-to-go way with our current UI hierarchy:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1000/1*rP3mHI0tOOds53QlT9AIww.png" alt="" /&gt;&lt;br /&gt;
+Xamarin Inspector (Workbooks) to rescue once again&lt;br /&gt;
+A FAB which could be attached to the BottomBar needs –AFAIK– to live in the same plane as the second, together with the RecyclerView, and everything on direct top of a CoordinatorLayout. Such and the BottomBar now are (I made an initial refactoring past sprint), and second’s shyness now works, but FAB was feeling alone…&lt;/p&gt;
+
+&lt;p&gt;So, I said: why don’t I animate it manually? Trade-off. And it worked! Thanks to accessing BottomBar’s source code could see the anims. durations, and this’ the final result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*r36D_mUE1Q9f44qI--jLhg.gif" alt="" /&gt;&lt;br /&gt;
+Pay attention to how one looks like pushing the other 🤠The initial animations I played with where Animation objects run with View.StartAnimation(), until I noticed the reverse flavor needed to be done manually, and didn’t like the result. So it ended being this way:&lt;/p&gt;
+
+&lt;p&gt;Super simple, super easy to understand.&lt;/p&gt;
+
+&lt;p&gt;Well, this week I’ve double checked that it’s important how you create an UI hierarchy from the very beginning –actually it’s important to spend time on it. If not, there’s the need to look for workarounds. Also, I’ve felt how standardization at an UI level also leverages consistency along your app, which in the end is what you and I see, and touch.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 03 Oct 2017 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The refreshes bug and i18n</title>
+  <guid>https://marcoscobena.com/?i=The-refreshes-bug-and-i18n-3d9ad2a9421b</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# The refreshes bug and i18n&lt;/p&gt;
+
+&lt;p&gt;Past week’s been all about translation (thankfully didn’t get lost 👏🏼). On Monday I fixed one bug in Beezy which’s been there around…   --------&lt;/p&gt;
+
+&lt;h3&gt;The refreshes bug and i18n&lt;/h3&gt;
+
+&lt;p&gt;Past week’s been all about translation (thankfully didn’t get lost 👏🏼). On Monday I fixed one bug in Beezy which’s been there around since the early beginnings.&lt;/p&gt;
+
+&lt;p&gt;On this last one, and to explain it super quickly, views were getting updated more than needed –on Android &amp;amp; iOS. This’ our architecture:&lt;/p&gt;
+
+&lt;p&gt;API (cloud) 🔄 Akavache (&lt;code&gt;IObservable&lt;/code&gt; flavour) 🔄 ViewModels 🔄 Views&lt;/p&gt;
+
+&lt;p&gt;Due to using Akavache in its reactive way, data use to come first from cache and second from API, so &lt;code&gt;PropertyChanged&lt;/code&gt;s were being fired at least twice in such cases. If it turns out VMs were exposing data to views with &lt;code&gt;ObservableCollection&lt;/code&gt; (we have our own implementation), it was common to see the final cell to support up to four or more refreshes. Issues with that? Ugly flickering effects and needless performance rise.&lt;/p&gt;
+
+&lt;p&gt;My-self when the app flickersHowever, on Monday could made a fix to solve just that:&lt;/p&gt;
+
+&lt;p&gt;void AddCommunities(IEnumerable&lt;GroupModel&gt; communities)&lt;br /&gt;
+{&lt;br /&gt;
+ if (communities == null || !communities.Any())&lt;br /&gt;
+ return;// 1st time we just add all of them&lt;br /&gt;
+ if (!_communities.Any())&lt;br /&gt;
+ {&lt;br /&gt;
+ Communities.AddRange(communities);&lt;br /&gt;
+ return;&lt;br /&gt;
+ }var existingCommunities = _communities.ToList();foreach (var community in communities)&lt;br /&gt;
+ {&lt;br /&gt;
+ var existingCommunity = existingCommunities.FirstOrDefault(c =&gt; c.GroupId == community.GroupId);if (existingCommunity != null)&lt;br /&gt;
+ {&lt;br /&gt;
+ // Criteria to decide whether an existing community should be overriden by a later one&lt;br /&gt;
+ var shouldOverrideExistingOne = !existingCommunity.Title.Equals(community.Title);if (shouldOverrideExistingOne)&lt;br /&gt;
+ Communities.Replace(existingCommunity, community);&lt;br /&gt;
+ else&lt;br /&gt;
+ continue;&lt;br /&gt;
+ }&lt;br /&gt;
+ else&lt;br /&gt;
+ Communities.Add(existingCommunity);&lt;br /&gt;
+ }&lt;br /&gt;
+}Such applies for communities, our model, but the important piece is &lt;code&gt;shouldOverrideExistingOne&lt;/code&gt;: the criteria to decide whether a new version should override previous one. Now it doesn’t matter whether data comes more than once, there’s only one refresh in UI. I’m a happier person ☺️&lt;/p&gt;
+
+&lt;p&gt;Regarding i18n, most of the work has been to carefully take strings out of code to our RESX files. But I’ve learned a few interesting things in this process:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DoD should comprise i18n: doing this in each task is a less than an hour job. It took me four working days to go all over the entire codebase –and just iOS is covered. With the lack of confidence on covering the 100% strings. (Another option is at least a small subtask)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It anyone had to do this, my mate Sergio had a clever idea:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/1Marcos2Cobena/status/910109009658761216"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the middle of the process Matthew announced this lovely feature:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href="https://twitter.com/matthewrdev/status/910665130727182336"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Converters –MvxValueConverter actually– have been a great solution to cover i18n in enums which are directly taken to UI: not only can translate during conversion, but also can gather back original enum by converting back. Apart’s been a good refactoring process tooThe refreshes bug finally was a lot easier to fix: instead of looking to superb solutions, sometimes I should just concentrate on a single point, and give such an elegant exit. This’ my learning for the week.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Sun, 24 Sep 2017 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Abanico, a few hours with Xamarin.Forms and SkiaSharp</title>
   <guid>https://marcoscobena.com/?i=abanico-a-few-hours-with-xamarin-forms-and-skiasharp</guid>
   <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="/?i=contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
@@ -2175,6 +3080,89 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 &lt;p&gt;Fotografía &lt;a href="https://www.flickr.com/photos/codnewsroom/16373930560/in/photolist-qWUF6A-gVQB7-8CJsXa-hsRBts-8CJrir-8CMz3w-jwJ6Kc-jwDr4e-hsRoVo-hsPKV1-dxLw8e-hsSUqv-hsPgKf-dxLxYz-8q4cyb-dxLwEB-hsRWuo-dZYr9B-hsPHWd-hsPDaN-hsSui2-hsRfEp-dxS1X3-nGs5r-hsRxK7-cwDVp1-hsQGqp-hsPSXs-dxLx7P-hsPj1h-hsQXpT-hsNyyM-dxS1VC-hsR9pi-3pGmQz-dxLxqK-hsPpNE-hsNEyH-hsQTr2-dxRZLh-hsPbU2-jwGM2U-dxS1b3-dxLxGP-hsNSWD-hsSEAM-dxLvbr-hsRgL3-hsQDR4-hsP2tj"&gt;original de COD Newsroom&lt;/a&gt;.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Sat, 10 Dec 2016 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento</title>
+  <guid>https://marcoscobena.com/?i=Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento&lt;/p&gt;
+
+&lt;p&gt;Motivación   --------&lt;/p&gt;
+
+&lt;h3&gt;Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento&lt;/h3&gt;
+
+&lt;h3&gt;&lt;strong&gt;Motivación&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;El Diccionario de la lengua española, perteneciente a la Real Academia Española,&lt;a href="http://dle.rae.es/?id=ZGSWKBT"&gt; define&lt;/a&gt; tauromaquia como el “arte de lidiar toros”. Lidiar, a su vez, tiene como&lt;a href="http://dle.rae.es/?id=NHImOL7"&gt; definición&lt;/a&gt; “burlar al toro esquivando sus acometidas según las reglas de la tauromaquia hasta darle muerte”. El final de ésa última ha provocado una división en la sociedad española entre aquellos que están a favor de la tauromaquia con el fin de la lidia, y aquellos que rechazan la tauromaquia en su totalidad, motivados por la lidia en sí: el daño -hasta la muerte- provocado sobre el animal.&lt;/p&gt;
+
+&lt;p&gt;El autor de este documento se quiere situar en una postura intermedia. Entendiendo que no es admisible en una sociedad contemporánea el daño provocado al toro, y entendiendo igualmente que la abolición de la tauromaquia es dar la espalda a una tradición que aporta valores importantes como el sacrificio y la valentía ante la adversidad, este documento expone una propuesta de transformación de la tauromaquia como hoy día se conoce, mediante las tecnologías de la información y comunicación, para que futuras generaciones reciban lo mejor de esta, pero no la asocien nunca más al daño y muerte del animal.&lt;/p&gt;
+
+&lt;p&gt;Lo aquí expuesto no persigue representar un estudio de fondo, ni una alternativa formal, sino proporcionar un conjunto de ideas básicas que puedan asegurar un futuro mediante la búsqueda de un término medio.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Si el plan ‘A’ no funciona, recuerda que el abecedario tiene 26 letras más” -Anónimo&lt;/p&gt;
+  
+  &lt;h3&gt;e-Tauromaquia&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;La transformación propuesta, bautizada como e-Tauromaquia (‘e’ representa ‘electrónica’, como medio de canalización de la información; véase e-mail) se divide en dos áreas de trabajo: por un lado, el toro, para el cual se propone la llamada Matriz de sensibilidad; por otro, las personas que actúan sobre el animal, cuyos útiles sufrirían una migración para entrar en juego con el primero.&lt;/p&gt;
+
+&lt;p&gt;A continuación, se visita brevemente cada área, proporcionando una base de trabajo para una hipotética etapa de I+D sobre las mismas.&lt;/p&gt;
+
+&lt;h4&gt;Matriz de sensibilidad&lt;/h4&gt;
+
+&lt;p&gt;Al toro se le realizan las siguientes acciones (conocidas en el argot como suertes) principales durante una corrida: capotazo, clavado de banderillas y clavado de puntilla (se han omitido otras acciones por no ser significativas para el objetivo de este documento). Todas ellas tienen un punto en común: el roze, o toque, entre la piel del animal y el útil. A excepción del capotazo, que colabora en el aumento de cansancio sobre el animal, tanto la banderilla como la puntilla penetran la piel de este provocándole heridas hasta causar su muerte.&lt;/p&gt;
+
+&lt;p&gt;Con objetivo primordial de reemplazar ésas dos últimas, al toro se le dotaría de una malla textil situada en la espalda y abarcando desde el cuello hasta el rabo, cubriendo igualmente los laterales izquierdo y derecho. Dicha malla iría sujeta mediante cierres con hebilla en la parte inferior.&lt;/p&gt;
+
+&lt;p&gt;Siendo la malla de color oscuro, para pasar desapercibida al público de la plaza, ésta contendría una matriz cuadrada de puntos de sensibilidad, con una separación entre unos y otros de 1 cm. En una malla hipotética de 1 m² se dispondrían según este sistema 10.000 puntos de sensibilidad.&lt;/p&gt;
+
+&lt;p&gt;Cada punto de sensibilidad está compuesto por un sensor de presión, localizado de forma unívoca dentro de la matriz. Cada sensor es capaz de detectar&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;la presión (&lt;em&gt;p&lt;/em&gt;) ejercida sobre el mismo, &lt;em&gt;p&lt;/em&gt; ∈ ℝ, &lt;em&gt;p&lt;/em&gt;~[0, 1]. Un sensor sobre el que no se actúe (es decir, no haya roce alguno) devolvería el valor &lt;em&gt;p&lt;/em&gt;=0. Aquel sobre el cual se ejerciese la presión máxima resultaría en &lt;em&gt;p&lt;/em&gt;=1;&lt;/li&gt;
+&lt;li&gt;la puntuación (&lt;em&gt;v&lt;/em&gt;, del inglés &lt;em&gt;value&lt;/em&gt;) en función de la localización dentro de la malla, v ∈ ℤ, &lt;em&gt;v&lt;/em&gt;~[0, 10]. Nótese que, debido a ésto, la colocación de la misma en el toro es de vital importancia; y&lt;/li&gt;
+&lt;li&gt;el instante de contacto (&lt;em&gt;t&lt;/em&gt;), que indica con precisión de milisegundos (ms) tal en el que un agente externo ha tenido contacto con un punto. Conociendo la disposición de los distintos puntos en la matriz, y siendo conocida la separación entre los mismos, es posible obtener la velocidad de contacto entre dos puntos (&lt;em&gt;x&lt;/em&gt;₁, &lt;em&gt;y&lt;/em&gt;₁) y (&lt;em&gt;x&lt;/em&gt;₂, &lt;em&gt;y&lt;/em&gt;₂)#### Transformación de los útiles principales&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Partiendo de la base de que la Matriz de sensibilidad está ya disponible en el animal, en los próximos puntos se detalla las modificaciones a los útiles principales de modo que interactúen con la primera.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*Capote&lt;br /&gt;
+*&lt;/em&gt;En sí el capote no necesitaría modificación alguna, al recaer la detección de presión en la Matriz de sensibilidad. La acción de pasar el capote por la parte superior del animal provocaría el disparo de los puntos de sensibilidad, siendo posible medir el paso del mismo mediante:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;velocidad (&lt;em&gt;v&lt;/em&gt;): ocurriendo un pase, siendo (&lt;em&gt;x&lt;/em&gt;₁, &lt;em&gt;y&lt;/em&gt;₁) y (&lt;em&gt;x&lt;/em&gt;₂, &lt;em&gt;y&lt;/em&gt;₂) ambos puntos de contacto donde el primero es aquel con &lt;em&gt;t&lt;/em&gt;₁ (s) menor y el segundo con &lt;em&gt;t&lt;/em&gt;₂ (s) mayor, &lt;em&gt;d&lt;/em&gt; (m) la distancia entre ambos puntos: &lt;em&gt;v&lt;/em&gt; (m/s)=&lt;em&gt;d&lt;/em&gt;/(&lt;em&gt;t&lt;/em&gt;₂-&lt;em&gt;t&lt;/em&gt;₁)&lt;/li&gt;
+&lt;li&gt;¹puntuación (&lt;em&gt;V&lt;/em&gt;): ocurriendo un pase, siendo (&lt;em&gt;x&lt;/em&gt;₁, &lt;em&gt;y&lt;/em&gt;₁), (&lt;em&gt;x&lt;/em&gt;₂, &lt;em&gt;y&lt;/em&gt;₂), …, (&lt;em&gt;xᵢ&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;ᵢ) todos aquellos puntos de contacto; &lt;em&gt;p&lt;/em&gt;₁, &lt;em&gt;p&lt;/em&gt;₂, …, &lt;em&gt;pᵢ&lt;/em&gt; las presiones asociadas a estos; &lt;em&gt;v&lt;/em&gt;₁, &lt;em&gt;v&lt;/em&gt;₂, …, &lt;em&gt;vᵢ&lt;/em&gt; las puntuaciones asociadas a cada punto: &lt;em&gt;V&lt;/em&gt;=∑ (&lt;em&gt;pᵢ·vᵢ&lt;/em&gt;)Ambas medidas cuantificarían la habilidad del torero al trabajar con el capote, pudiendo ordenar estos últimos en un ranking.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;*Banderilla&lt;br /&gt;
+*&lt;/em&gt;Terminada en punta y con la finalidad de ser clavada en el toro, sobre esta se reemplazaría la punta metálica por una semiesfera de espuma semirígida (mismo material que el usado en los cilindros de natación para su aprendizaje).&lt;/p&gt;
+
+&lt;p&gt;El ejercicio de clavado de la banderilla sería contemplado como el impacto de la semiesfera de espuma con la Matriz de sensibilidad. El contacto entre una y otra permitiría a la segunda, de inmediato, decidir cuál o cuáles han sido los puntos de impacto, la presión ejercida y el instante en el que ocurrió; de modo que se podría cuantificar la puntuación de dicho ejercicio de la misma forma al ocurrido anteriormente¹.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*Puntilla&lt;br /&gt;
+*&lt;/em&gt;Del mismo modo que la punta metálica sería reemplazada en la banderilla, ocurriría igual en la puntilla. El clavado de la puntilla tiene sentido en el cuello, cerca de la cabeza del animal, con objeto de provocarle una muerte rápida.&lt;/p&gt;
+
+&lt;p&gt;Persiguiendo mantener el procedimiento, pero eliminando el daño, se propone que la Matriz de sensibilidad tenga un segundo conjunto de presiones, de modo que los puntos más cercanos a la zona en cuestión tengan valores mucho más significativos que cualquier otro, pudiendo entonces aplicar la misma fórmula de puntuación¹ vista anteriormente. Solo entonces la puntilla, al entrar en contacto con la Matriz, tendrá una puntuación alta si ésta ocurre en una zona muy localizada de la malla.&lt;/p&gt;
+
+&lt;h3&gt;Conclusiones&lt;/h3&gt;
+
+&lt;p&gt;En este documento se han expuesto las ideas básicas de una futurible línea de trabajo para eliminar cualquier daño al toro, y favorecer una transición a esto perdurando la tauromaquia.&lt;/p&gt;
+
+&lt;p&gt;No se ha tenido en cuenta que el daño provocado al toro durante una corrida provoca en este un cansancio, factor de vital importancia en el espectáculo. Al eliminar el daño también se ha eliminado el cansancio provocado de ésa forma, quedando únicamente el físico debido al ejercicio realizado en las distintas fases. A cambio, esta propuesta proporciona un sistema de puntuación que, sin llegar a la muerte del animal, consigue establecer un orden entre los distintos actores.&lt;/p&gt;
+
+&lt;p&gt;La propuesta aquí detallada abre también la posibilidad de desarrollar la tauromaquia en industrias donde antes no tenían representación significativa, como los dispositivos móviles, o &lt;em&gt;smartphones&lt;/em&gt;. El público que acudiese a una corrida podría, en tiempo real, saber la puntuación obtenida, a la vez que poder comparar ésta en un ranking nacional o, por qué no, mundial. Ésto igualmente habilita el negocio on-line, de modo que se puedan realizar apuestas en tiempo real sobre una corrida, o simplemente seguir esta desde cualquier punto del mundo.&lt;/p&gt;
+
+&lt;p&gt;Cabría también la posibilidad de que la comunicación no ocurriese solo de la plaza al público, sino al revés también. Desde la app se podría digitalizar la acción asociada al “pañuelo”, de modo que la agitación del terminal enviase un mensaje a una “central”, ubicada en la plaza, que provocase una determinada melodía en esta, o la activación de un mensaje de voz por los altavoces.&lt;/p&gt;
+
+&lt;p&gt;De forma intrínseca a la propuesta, y en el contexto de una situación económica complicada en el país, la decisión de contemplar las ideas aquí expuestas, o la discusión que estas podrían generar, provocaría un revulsivo en la industria de la tauromaquia, tanto en la fabricación de los útiles, como en la digitalización de las plazas, pudiendo ser un punto de partida hacia el consenso que motivó este documento, pero también con ojos al emprendimiento y creación de puestos de trabajo.&lt;/p&gt;
+
+&lt;p&gt;Marcos Cobeña Morián&lt;br /&gt;
+&lt;a href="mailto:hello@marcoscobena.com"&gt;&lt;em&gt;hello@marcoscobena.com&lt;/em&gt;&lt;/a&gt;_&lt;br /&gt;
+_Sevilla (Andalucía, España), 15 de agosto de 2016&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Sun, 14 Aug 2016 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Mask Animation with Xamarin.iOS and AutoLayout</title>
@@ -2469,6 +3457,35 @@ I've got &lt;strong&gt;full-stack&lt;/strong&gt; experience (from server to clie
 &lt;p&gt;Thanks to &lt;em&gt;everyone&lt;/em&gt; who has helped us in one way or another. We, aro and I, really appreciate it!&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Wed, 10 Feb 2016 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Por qué voto a Podemos</title>
+  <guid>https://marcoscobena.com/?i=Por-qu--voto-a-Podemos-a96b2bde0ba8</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;# Por qué voto a Podemos&lt;/p&gt;
+
+&lt;p&gt;Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de…   --------&lt;/p&gt;
+
+&lt;h3&gt;Por qué voto a Podemos&lt;/h3&gt;
+
+&lt;p&gt;Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de ellos y de su ideología. Siempre he apoyado al PSOE, incluso me “alisté” como simpatizante en su Organización porque me motivaba mucho pensar en todas aquellas cosas que se podían hacer mejor y, mi idealismo no veía fronteras.&lt;/p&gt;
+
+&lt;p&gt;Llegando al final de un libro que mis padres me regalaron por mi 31 cumpleaños, &lt;a href="http://www.amazon.es/Cosas-Que-Cont%C3%B3-Pajarito-colecci%C3%B3n/dp/8498753996"&gt;Cosas que me contó un pajarito&lt;/a&gt;, de Biz Stone (uno de los cofundadores de Twitter), me he acordado de repente de todo aquel inconformismo que algunos compañeros y yo vivimos en nuestra etapa de universitarios. Etapa fantástica, por cierto.&lt;/p&gt;
+
+&lt;p&gt;Cuando era un derecho que los alumnos pudiésemos tener una evaluación continúa, ésto no era una realidad en algunas asignaturas. Al preguntar en clase, la respuesta era “no podemos”, no tenemos recursos, no tenemos tiempo, etc. Cuando los alumnos de las Ingenierías Técnica en Informática, en asambleas llenas, pedían que se hiciese algo porque les exigían en Sistemas Operativos conocimientos de C (un lenguaje de programación), pero las asignaturas de 1º ya no los cubrían, la respuesta era otra vez la misma. Siempre un no…&lt;/p&gt;
+
+&lt;p&gt;Y así en varias ocasiones más. Para el primer caso, la evaluación continúa, unos compañeros y yo nos preocupamos de leer la legislación vigente, concertar citas con los distintos profesores, y negociar con ellos. Recuerdo estar con dos en concreto, que tenían fama de cierta insensibilidad, que resultaron ser los más respetuosos, y los que accedieron a una mejor negociación. A nosotros nos estaba costando el tiempo, pero a ellos también porque les iba a requerir un esfuerzo extra. Suspendí la asignatura y tuve que examinarme al final de todo, pero cientos de compañeros disfrutaron de esa opción. También, encontré un lado más humano y aprendí a valorar mejor a los profesores con los que tratamos.&lt;/p&gt;
+
+&lt;p&gt;Para el segundo caso, junto con otros compañeros creamos &lt;a href="https://groups.google.com/forum/#!forum/char-etsii-us"&gt;CHAR&lt;/a&gt; (&lt;em&gt;C, Histórico, Ágil y Rápido&lt;/em&gt;). Creamos una pequeña asignatura lateral, con su pequeño temario, horario y aulas (hasta hicimos un &lt;a href="https://docs.google.com/viewer?a=v&amp;amp;pid=forums&amp;amp;srcid=MTQ4OTk3NDE1OTE1OTEwMzg4MzABMDMxNDQxOTYzODYzNzcwNDQyMDMBTVlpemVnVDUtbklKATAuMQEBdjI"&gt;cartel&lt;/a&gt;, que pusimos al entrar al Centro). Los que impartíamos éramos nosotros mismos. Chavales de 20 y pocos años que nos faltaba de todo pero la ilusión nos sobraba a raudales. Recuerdo que hasta localizamos una profesora de lengua de signos para que una compañera nuestra también pudiese asistir. No nos faltó de nada.&lt;/p&gt;
+
+&lt;p&gt;La adrenalina de aquellos años de darnos cuenta por nosotros mismos que los no se pueden en realidad eran no queremos, o simplemente no sabemos cómo hacerlo, era la invitación más formal para aquellos que no aceptamos un no por definición. Uno puede pensar que ante la imposibilidad de tener evaluación continua lo que le queda es darle un empujón mayor a los libros. O que ante la ausencia de formación en C y la posterior exigencia, lo que queda es aprenderlo por tu cuenta.&lt;/p&gt;
+
+&lt;p&gt;Y aquí viene lo que más me gusta de Podemos. La consciencia tan alta de que no todos tenemos la maldita misma suerte en la vida. La mejor forma de equilibrar una sociedad no creo que sea que cada uno se esfuerce desde la meta de salida que le haya tocado, para llegar a una misma meta final para todos, sino de hacer que da igual si eres un corredor de élite como uno que nunca pudo correr, las metas hagan que a ambos les cueste un esfuerzo similar llegar.&lt;/p&gt;
+
+&lt;p&gt;Ayer me fui a la cama pensando que Podemos es lo más parecido a nuestro inconformismo universitario, y en la vida en general. Es el compañero que he agradecido tener al lado cuando recibía un no pero yo creía que quizá sí. Es el ánimo que ante el miedo de ir a contracorriente, cuando lo consigues, cuando se pueden evaluar las asignaturas por evaluación continua, cuando se puede dar esa formación de C, te dices que has hecho bien. Y yo por fin me puedo explicar a mi mismo, como decía ayer Pablo Iglesias, en &lt;a href="https://www.youtube.com/watch?v=_38NtXXDR0Y"&gt;esos 50 s finales tan buenos&lt;/a&gt;, que por favor sonría, que sí que se podrá.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 10 Dec 2015 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>We've Reviewed Grial UI Kit at Plain Concepts</title>
