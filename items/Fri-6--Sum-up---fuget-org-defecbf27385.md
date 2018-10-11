@@ -13,12 +13,3 @@ My mate Javi Suárez’s just introduced me the latest Frank Krueger’s joy: [f
 I’ve multiple times had the idea of something simpler than NuGet, but more complex than pasting classes here and there —and stronger by the way. Something similar to JavaScript’s NPM, but maybe having code in IL —have to work the idea out a little bit.
 
 (Take into account I wrote this while listening to this “Peaceful Meditation” list at Spotify: )
-
-  
-  
-  By [Marcos Cobeña Morián](https://medium.com/@MarcosCobena) on [April 6, 2018](https://medium.com/p/defecbf27385).
-
-[Canonical link](https://medium.com/@MarcosCobena/fri-6-sum-up-fuget-org-defecbf27385)
-
-Exported from [Medium](https://medium.com) on October 9, 2018.
-
