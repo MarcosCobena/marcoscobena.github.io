@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# Por qué voto a Podemos
-
-   Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de…   --------
-  
 ### Por qué voto a Podemos
 
 Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de ellos y de su ideología. Siempre he apoyado al PSOE, incluso me “alisté” como simpatizante en su Organización porque me motivaba mucho pensar en todas aquellas cosas que se podían hacer mejor y, mi idealismo no veía fronteras.

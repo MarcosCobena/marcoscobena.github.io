@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# Playing with Xamarin.Forms for Web
-
-   On Saturday I was playing a little bit with Frank’s OOUI, moreover Ooui.Wasm and Forms packages. The first allows to work with web’s DOM…   --------
-  
 ### Playing with Xamarin.Forms for Web
 
 On Saturday I was playing a little bit with Frank’s [OOUI](http://ooui.mecha.parts/), moreover Ooui.Wasm and Forms packages. The first allows to work with web’s DOM from C# running in client side, the second’s a Xamarin.Forms backend for web.

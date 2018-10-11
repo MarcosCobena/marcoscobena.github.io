@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# Tips & tricks to rely in VirtualBox
-
-   During the last years my VM needs were so much covered by Parallels and VMWare. Both are super reliable and, obviously, imply a cost. In…   --------
-  
 ### Tips & tricks to rely in VirtualBox
 
 During the last years my VM needs were so much covered by Parallels and VMWare. Both are super reliable and, obviously, imply a cost. In that time too I’ve tried several times [VirtualBox](https://www.virtualbox.org), but always ended in the virtual HD corrupted so losing all inside. No good.

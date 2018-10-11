@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# “Design should worry us more than code” #Xamarin
-
-   This’ the title for the talk I’m giving on November 7th at Madrid:   --------
-  
 ### “Design should worry us more than code” #Xamarin
 
 This’ the title for the talk I’m giving on November 7th at Madrid:

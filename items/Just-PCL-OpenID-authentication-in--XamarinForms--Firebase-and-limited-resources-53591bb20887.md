@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources
-
-   10 (ten) years after my first date with OpenID protocol, last week it was back to my life. By the former I reimplemented a bridge to…   --------
-  
 ### Just-PCL OpenID authentication in #XamarinForms, Firebase and limited resources
 
 10 (ten) years after my first date with OpenID protocol, last week it was back to my life. By the former I reimplemented a bridge to authenticate users at public high schools, in PHP (with classes) 🤷🏻‍♂️ Also, I needed to learn a new path to Push Notifications with Azure. And some 1-to-1 consultancy hours.

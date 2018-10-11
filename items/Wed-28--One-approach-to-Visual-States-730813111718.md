@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# Wed 28: One approach to Visual States
-
-   After struggling a few times with animations that respond to ViewModel changes in Xamarin.Forms —and while official Visual States arrive to…   --------
-  
 ### Wed 28: One approach to Visual States
 
 After struggling a few times with animations that respond to ViewModel changes in Xamarin.Forms —and while official Visual States arrive to stable— I started my own road to solve this particular issue: how to storyboard animations.

@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# Unit Testing #XamarinForms controls, the simplest SwipeGestureRecognizer and no more…
-
-   Following with previous week, I’ve kept with the carousel control. However, I started with one weird bug where a navigation between two…   --------
-  
 ### Unit Testing #XamarinForms controls, the simplest SwipeGestureRecognizer and no more Debug.WriteLine()
 
 Following with previous week, I’ve kept with the carousel control. However, I started with one weird bug where a navigation between two Pages was taking too long.

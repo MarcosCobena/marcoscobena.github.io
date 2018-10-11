@@ -1,9 +1,5 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-# The #Android’s FAB which liked to follow BottomBar #Xamarin
-
-   I’ve been thinking more and more from my last 5 years or so the following: if our users just touch Design, why do we become so crazy with…   --------
-  
 ### The #Android’s FAB which liked to follow BottomBar #Xamarin
 
 I’ve been thinking more and more from my last 5 years or so the following: if our users just touch Design, why do we become so crazy with source code? Why do we invest so much time in improving the backend if the frontend is actually what we perceive? It turns out I’ve been last week with an UI Review in Beezy for Android, so had time to think on the first as well.
