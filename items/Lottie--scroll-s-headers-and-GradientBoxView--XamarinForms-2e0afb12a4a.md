@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Lottie, scroll’s headers and GradientBoxView #XamarinForms
+# Lottie, scroll’s headers and GradientBoxView #XamarinForms
 
    Monday, 27th Back to the Xamarin.Forms project after holidays :-) Yeray assigned me to polish a task on a Lottie anim. within a splash view…   --------
   

@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms
+# Lottie in UWP, NuGetizer-3000 and GradientBoxView #XamarinForms
 
    Monday, 4th I finally could spend some time on UWP for Lottie. Had to reinstall my whole Windows 10 + VS 2017 from scratch as latest UWP…   --------
   

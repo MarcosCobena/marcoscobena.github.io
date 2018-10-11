@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin
+# Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin
 
    I’ve switched from Beezy to prepare material for some days I’m spending this week on-site. More specifically how to improve performance in…   --------
   

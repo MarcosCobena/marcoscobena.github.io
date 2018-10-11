@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Tue 3: Multiple instances of the same ViewModel
+# Tue 3: Multiple instances of the same ViewModel
 
    I have another issue of multiple instances of the same ViewModel live at the same time. Basically am navigating to the same page —after…   --------
   

@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Por qué voto a Podemos
+# Por qué voto a Podemos
 
    Durante los últimos meses me he preguntado en muchas ocasiones si me sabría explicar a mí mismo por qué voto a Podemos, qué me atrae de…   --------
   

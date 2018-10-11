@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # XAML things, merging RESX and 10.0.2.2 #XamarinForms
+# XAML things, merging RESX and 10.0.2.2 #XamarinForms
 
    Monday, 11th Finally I made the PR to ApiIntersect.   --------
   

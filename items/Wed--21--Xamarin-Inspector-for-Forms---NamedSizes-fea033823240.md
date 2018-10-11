@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Wed, 21: Xamarin Inspector for Forms & NamedSizes
+# Wed, 21: Xamarin Inspector for Forms & NamedSizes
 
    Was it me the only one in Earth who didn’t know Xamarin Inspector now shows not only the native OS’ UI hierarchy but also Forms one? I was…   --------
   

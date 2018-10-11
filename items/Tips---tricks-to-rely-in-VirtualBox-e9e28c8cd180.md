@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Tips & tricks to rely in VirtualBox
+# Tips & tricks to rely in VirtualBox
 
    During the last years my VM needs were so much covered by Parallels and VMWare. Both are super reliable and, obviously, imply a cost. In…   --------
   

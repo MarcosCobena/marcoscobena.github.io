@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # The Carousel party in #Xamarin Forms
+# The Carousel party in #Xamarin Forms
 
    Back from my on-site visit I’ve joined a new Xamarin.Forms project –which’s both cool and engaging, since I wanted that change after being…   --------
   

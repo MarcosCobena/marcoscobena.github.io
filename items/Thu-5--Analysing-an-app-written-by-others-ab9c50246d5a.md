@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Thu 5: Analysing an app written by others
+# Thu 5: Analysing an app written by others
 
    From Wednesday to Friday I’ll be working on an analysis of a Xamarin.Forms app to detect those places where performance can be gained and…   --------
   

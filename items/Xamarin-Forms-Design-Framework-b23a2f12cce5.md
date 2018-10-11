@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Xamarin.Forms Design Framework
+# Xamarin.Forms Design Framework
 
    In my personal trip to leverage all those small problems I found in my day to day, there’s one which sistematically reappears: I’m about to…   --------
   

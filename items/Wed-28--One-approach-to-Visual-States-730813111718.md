@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Wed 28: One approach to Visual States
+# Wed 28: One approach to Visual States
 
    After struggling a few times with animations that respond to ViewModel changes in Xamarin.Forms —and while official Visual States arrive to…   --------
   

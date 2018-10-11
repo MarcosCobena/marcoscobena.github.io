@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Thu, 22: Charles with Android, VirtualBox’ HD size & UWP debugging
+# Thu, 22: Charles with Android, VirtualBox’ HD size & UWP debugging
 
    As part of changing endpoints at eShopOnContainers solution I wanted to double check every request was being received correctly, so came…   --------
   

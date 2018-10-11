@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Fri 6: Sum up & fuget.org
+# Fri 6: Sum up & fuget.org
 
    The end of the week’s here and summing up what have worked on these days, most of time’s been reading other’s source code. Years ago I may…   --------
   

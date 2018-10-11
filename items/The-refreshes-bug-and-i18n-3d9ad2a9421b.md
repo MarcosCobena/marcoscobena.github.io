@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # The refreshes bug and i18n
+# The refreshes bug and i18n
 
    Past week’s been all about translation (thankfully didn’t get lost 👏🏼). On Monday I fixed one bug in Beezy which’s been there around…   --------
   

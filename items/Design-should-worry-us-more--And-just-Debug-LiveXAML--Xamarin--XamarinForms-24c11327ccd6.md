@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms
+# Design should worry us more. And just-Debug LiveXAML #Xamarin #XamarinForms
 
    Past Tuesday I spent a talk at Madrid on the mindset change have experienced last years working with people who really care on Design…   --------
   

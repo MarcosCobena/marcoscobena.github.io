@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
 
-  # Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento
+# Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento
 
    Motivación   --------
   
