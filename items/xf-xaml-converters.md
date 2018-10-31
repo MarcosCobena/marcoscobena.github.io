@@ -8,7 +8,7 @@ Conventions:
 
   - The reason why "Converter" is ripped from the key comes from better readability when using them in XAML: it just feels nicer things like —the word already appears a few times:
 
-    `IsEnabled="{Binding ImagePath, Converter={StaticResource StringEmptyToBool}, ConverterParameter=inverse}"`
+  `IsEnabled="{Binding ImagePath, Converter={StaticResource StringEmptyToBool}, ConverterParameter=inverse}"`
 
 ​    I think will keep here all those I reuse from project to project:    
 
