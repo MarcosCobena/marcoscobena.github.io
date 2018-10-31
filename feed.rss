@@ -4,6 +4,37 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Xamarin.Forms XAML: Converters</title>
+  <guid>https://marcoscobena.com/?i=xf-xaml-converters</guid>
+  <description>&lt;h3&gt;Converters.xaml&lt;/h3&gt;
+
+&lt;p&gt;I think it's no new for anyone. If a particular converter's used only on a single XAML, just define it there. However, for those in more than one, having them here will help you adding new ones.&lt;/p&gt;
+
+&lt;p&gt;Conventions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Key: &lt;code&gt;nameof(YourActualConverter).Replace("Converter", string.Empty)&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The reason why "Converter" is ripped from the key comes from better readability when using them in XAML: it just feels nicer things like —the word already appears a few times:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;IsEnabled="{Binding ImagePath, Converter={StaticResource StringEmptyToBool}, ConverterParameter=inverse}"&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​    I think will keep here all those I reuse from project to project:    &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/AnyConverter.cs"&gt;AnyConverter&lt;/a&gt;&lt;code&gt;x:Key="Any" /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/AreEqualsConverter.cs"&gt;AreEqualsConverter&lt;/a&gt;&lt;code&gt;x:Key="AreEquals" /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/IsStringNullOrWhiteSpaceConverter.cs"&gt;IsStringNullOrWhiteSpaceConverter&lt;/a&gt;&lt;code&gt;x:Key="IsStringNullOrWhiteSpace" /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/NotConverter.cs"&gt;NotConverter&lt;/a&gt;&lt;code&gt;x:Key="Not" /&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 30 Oct 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML: Control Templates</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-control-templates</guid>
   <description>&lt;h3&gt;ControlTemplates.xaml&lt;/h3&gt;
@@ -335,25 +366,5 @@ Surely, the cancellation isn’t happening…&lt;/p&gt;</description>
 &lt;p&gt;My mate Juan asked me whether Polly can handle different paths for different exceptions, and it &lt;a href="https://github.com/App-vNext/Polly/issues/104"&gt;looks feasible&lt;/a&gt;, although haven’t tried for my-self.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Sun, 01 Apr 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Wed 28: One approach to Visual States</title>
-  <guid>https://marcoscobena.com/?i=Wed-28--One-approach-to-Visual-States-730813111718</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Wed 28: One approach to Visual States&lt;/h3&gt;
-
-&lt;p&gt;After struggling a few times with animations that respond to ViewModel changes in Xamarin.Forms —and while official Visual States arrive to stable— I started my own road to solve this particular issue: how to storyboard animations.&lt;/p&gt;
-
-&lt;p&gt;Originally worked on this during last Christmas, as part of a point &amp;amp; click demo where had some sort of scripting logic. After that, I iterated it for the NFC view the current app am working on has. And, finally, for the same app, with the help of my mate Sergio, iterated it again to make it a little bit more elegant to use.&lt;/p&gt;
-
-&lt;p&gt;I think it’s worth sharing. Basically, your ViewModels inherit IStateNotifier and pages IStateNotified, adding also to this last StateNotificationBehavior. With permission from our Designer, I’ve pulled just the NFC resources from above app to showcase what I can do nowadays.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/1*9o5SWTFk_2kBtKPKcGVAhQ.gif" alt="" /&gt;&lt;br /&gt;
-Full storyboard runningAm really open to improve all this. During the last two weekends I’ve been reading Adam Pedley’s &lt;a href="https://xamarinhelp.com/more-functional-viewmodels-in-xamarin-forms-with-c/"&gt;series on functional ViewModels&lt;/a&gt;, and liked his approach of moving the states notion to just the view —this’ currently sorted out in VMs here. My main goal is performance, as my current scenarios involve a lot of bindings and the animations struggle a little bit, but please feel free to share any idea.&lt;/p&gt;
-
-&lt;p&gt;You can find the repo &lt;a href="https://github.com/MarcosCobena/XamarinFormsVisualStates"&gt;here&lt;/a&gt;, including the sample app.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 27 Mar 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>
