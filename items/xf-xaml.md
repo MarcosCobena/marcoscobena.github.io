@@ -5,7 +5,7 @@ Split into chapters, I'll try to cover everything expressed in XAML:
 - ["StyleCop" for XAML and App structure (this one)](?i=xf-xaml)
 - [Colors](?i=xf-xaml-colors)
 - [Control Templates](?i=xf-xaml-control-templates)
-- Converters
+- [Converters](?i=xf-xaml-converters)
 - Font Styles
 - Global Styles
 - Sizes
