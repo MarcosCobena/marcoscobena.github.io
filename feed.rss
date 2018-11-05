@@ -153,7 +153,7 @@
 &lt;li&gt;&lt;a href="?i=xf-xaml"&gt;"StyleCop" for XAML and App structure (this one)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-colors"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-control-templates"&gt;Control Templates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Converters&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-converters"&gt;Converters&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Font Styles&lt;/li&gt;
 &lt;li&gt;Global Styles&lt;/li&gt;
 &lt;li&gt;Sizes&lt;/li&gt;
