@@ -4,6 +4,51 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Xamarin.Forms XAML: Font Styles</title>
+  <guid>https://marcoscobena.com/?i=xf-xaml-font-styles</guid>
+  <description>&lt;h3&gt;FontStyles.xaml&lt;/h3&gt;
+
+&lt;p&gt;Dealing with fonts can be a tricky part: because the app shows font faces different from the respective OS' ones, or because the Design specs have multiple sizes, for example.&lt;/p&gt;
+
+&lt;p&gt;You can define here every font the app may need. This will help you refactor sizes, for instance, much more easier —although for sizes I strongly recommend to consider &lt;a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.namedsize?view=xamarin-forms"&gt;named sizes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Conventions:
+- Key: {FontKey}{FontSize}{FontAttributes}{TargetType}Style&lt;/p&gt;
+
+&lt;p&gt;It may be the case you need external fonts, so you can define such this way, using it as a font family:&lt;/p&gt;
+
+&lt;p&gt;```xaml
+&lt;OnPlatform 
+    x:Key="LatoRegular"
+    x:TypeArguments="x:String"
+    Android="Lato-Regular.ttf#Lato"
+    iOS="Lato-Regular" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;Style 
+    x:Key="LatoRegular12RegularLabelStyle"
+    TargetType="Label"&gt;
+    &lt;Setter 
+        Property="FontSize" 
+        Value="12" /&gt;
+&lt;/Style&gt;
+```&lt;/p&gt;
+
+&lt;p&gt;Notice how this one depends on its regular flavour, through inheritance —we don't want to rewrite stuff:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xaml
+&amp;lt;Style
+    x:Key="LatoRegular12BoldLabelStyle"
+    TargetType="Label"
+    BasedOn="{StaticResource LatoRegular12RegularLabelStyle}"&amp;gt;
+    &amp;lt;Setter
+        Property="FontAttributes"
+        Value="Bold" /&amp;gt;
+&amp;lt;/Style&amp;gt;
+&lt;/code&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 08 Nov 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML: Converters</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-converters</guid>
   <description>&lt;h3&gt;Converters.xaml&lt;/h3&gt;
@@ -154,7 +199,7 @@
 &lt;li&gt;&lt;a href="?i=xf-xaml-colors"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-control-templates"&gt;Control Templates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-converters"&gt;Converters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Font Styles&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-font-styles"&gt;Font Styles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Global Styles&lt;/li&gt;
 &lt;li&gt;Sizes&lt;/li&gt;
 &lt;li&gt;Styles&lt;/li&gt;
@@ -349,22 +394,5 @@ Photo by &lt;a href="https://unsplash.com/@creativeexchange?utm_source=medium&am
 Surely, the cancellation isn’t happening…&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Mon, 02 Apr 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Mon 2: Polly’s Retry policy to make network calls</title>
-  <guid>https://marcoscobena.com/?i=Mon-2--Polly-s-Retry-policy-to-make-network-calls-224d70957b2c</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Mon 2: Polly’s Retry policy to make network calls&lt;/h3&gt;
-
-&lt;p&gt;The last day I picked a task to move some ops. from local to the cloud —there’s already an API for that.&lt;/p&gt;
-
-&lt;p&gt;And &lt;a href="https://github.com/App-vNext/Polly"&gt;Polly&lt;/a&gt; came to my mind. Don’t remember where but discovered it a few months ago through Planet Xamarin. Basically the app needs to send some sensible data “through the wire” and show the results; however, it can be possible there’s no network at such time.&lt;/p&gt;
-
-&lt;p&gt;So ended up using Polly’s Retry policy: “I want this call to be executed and, if anything fails, retry up to 3 times”. And this’ the code for exactly that:&lt;/p&gt;
-
-&lt;p&gt;My mate Juan asked me whether Polly can handle different paths for different exceptions, and it &lt;a href="https://github.com/App-vNext/Polly/issues/104"&gt;looks feasible&lt;/a&gt;, although haven’t tried for my-self.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Sun, 01 Apr 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>

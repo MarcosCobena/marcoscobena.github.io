@@ -6,7 +6,7 @@ Split into chapters, I'll try to cover everything expressed in XAML:
 - [Colors](?i=xf-xaml-colors)
 - [Control Templates](?i=xf-xaml-control-templates)
 - [Converters](?i=xf-xaml-converters)
-- Font Styles
+- [Font Styles](?i=xf-xaml-font-styles)
 - Global Styles
 - Sizes
 - Styles
