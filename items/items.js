@@ -25,6 +25,7 @@ addItem("Tools", "tools", "20/9/2018");
 
 // Posts —this' the order they'll appear listed
 
+addPost("Xamarin.Forms XAML: Sizes", "xf-xaml-sizes", "20/11/2018");
 addPost("Xamarin.Forms XAML: Global Styles", "xf-xaml-global-styles", "14/11/2018");
 addPost("Xamarin.Forms XAML: Font Styles", "xf-xaml-font-styles", "9/11/2018");
 addPost("Xamarin.Forms XAML: Converters", "xf-xaml-converters", "31/10/2018");

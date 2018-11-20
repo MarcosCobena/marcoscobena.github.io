@@ -8,7 +8,7 @@ Split into chapters, I'll try to cover everything expressed in XAML:
 - [Converters](?i=xf-xaml-converters)
 - [Font Styles](?i=xf-xaml-font-styles)
 - [Global Styles](?i=xf-xaml-global-styles)
-- Sizes
+- [Sizes](?i=xf-xaml-sizes)
 - Styles
 
 ### "StyleCop" for XAML

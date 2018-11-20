@@ -89,7 +89,7 @@ replacement
 
 
 
-**🆕 NTFS for Mac** —I've just tried the trial option but makes super easy to work with NTFS drives
+**NTFS for Mac** —I've just tried the trial option but makes super easy to work with NTFS drives
 
 https://www.paragon-software.com/ufsdhome/ntfs-mac/
 
@@ -132,6 +132,12 @@ Android device, worth purchasing
 <https://www.vysor.io/>
 
  
+
+### Visual Studio (for Windows)
+
+**🆕 VisualStudio.GitStashExtension** —adds stashes, that's all
+
+https://marketplace.visualstudio.com/items?itemName=vii.GitStashExtension
 
 ### Visual Studio for Mac
 

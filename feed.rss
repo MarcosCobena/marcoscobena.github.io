@@ -4,6 +4,47 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Xamarin.Forms XAML: Sizes</title>
+  <guid>https://marcoscobena.com/?i=xf-xaml-sizes</guid>
+  <description>&lt;h3&gt;Sizes.xaml&lt;/h3&gt;
+
+&lt;p&gt;This' the perfect place for sizes: margins, paddings, spacings, font sizes, etc. It's quite common designs rely in recurrent sizes to place stuff, thus are suitable to be reused —Designers use to call this "working on the grid" :-)&lt;/p&gt;
+
+&lt;p&gt;Conventions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Key: {Negative?}{Adjective}{Identifier}{Type}, where Type stands for Margin, Padding, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;```xaml
+&lt;x:Double x:Key="DefaultMargin"&gt;16&lt;/x:Double&gt;
+&lt;x:Int32 x:Key="DefaultMarginInt"&gt;16&lt;/x:Int32&gt;
+&lt;!-- Notice how we've defined the negative version, as it's neat for disabling outer margins, f.e. --&gt;
+&lt;x:Double x:Key="NegativeDefaultMargin"&gt;-16&lt;/x:Double&gt;
+&lt;x:Int32 x:Key="NegativeDefaultMarginInt"&gt;-16&lt;/x:Int32&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;x:Double x:Key="0.5xDefaultMargin"&gt;8&lt;/x:Double&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;x:Double x:Key="2xDefaultMargin"&gt;32&lt;/x:Double&gt;
+&lt;x:Double x:Key="Negative2xDefaultMargin"&gt;-32&lt;/x:Double&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;x:Double x:Key="3xDefaultMargin"&gt;48&lt;/x:Double&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;x:Double x:Key="4xDefaultMargin"&gt;64&lt;/x:Double&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;x:Double x:Key="Default2Margin"&gt;24&lt;/x:Double&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;!-- This can be handy if you drop shadows through PlatformConfigurations' VisualElement.Elevation --&gt;
+&lt;x:Int32 x:Key="DefaultElevation"&gt;30&lt;/x:Int32&gt;
+```&lt;/p&gt;
+
+&lt;p&gt;I like to ask Designers during the first days which's their default grid size, and then start building above list up on such value —for instance above relies in 16, the default one.&lt;/p&gt;
+
+&lt;p&gt;It may not be significant if you've never used this approach before; however, it enforces the grid along every page, pushing a sense of visual coherence —at least for those like me who are highly sensitive to this stuff.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Mon, 19 Nov 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML: Global Styles</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-global-styles</guid>
   <description>&lt;h3&gt;GlobalStyles.xaml&lt;/h3&gt;
@@ -246,7 +287,7 @@
 &lt;li&gt;&lt;a href="?i=xf-xaml-converters"&gt;Converters&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-font-styles"&gt;Font Styles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-global-styles"&gt;Global Styles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Sizes&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-sizes"&gt;Sizes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Styles&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -401,21 +442,5 @@ Photo by &lt;a href="https://unsplash.com/@jilburr?utm_source=medium&amp;amp;utm
 &lt;em&gt;Is it possible to quickly remove a notification badge from an app in the Dock? I'm looking for a solution faster than…&lt;/em&gt;apple.stackexchange.com&lt;/a&gt;&lt;a href="https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app"&gt;&lt;/a&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Wed, 04 Apr 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Wed 4: Meetings</title>
-  <guid>https://marcoscobena.com/?i=Wed-4--Meetings-2556117737e8</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Wed 4: Meetings&lt;/h3&gt;
-
-&lt;p&gt;I’ve spent almost the entire day with meetings.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*Ce9giJMX6AhHyiLo." alt="" /&gt;&lt;br /&gt;
-Photo by &lt;a href="https://unsplash.com/@dylandgillis?utm_source=medium&amp;amp;utm_medium=referral"&gt;Dylan Gillis&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;In the morning the app review, where learnt [again] such interactions need to happen more often: not every customer has the same needs, although we’re all humans in the end and communication’s the best tool in earth to round corners.&lt;/p&gt;
-
-&lt;p&gt;In the afternoon, had the same on Wave Engine, where I didn’t finish the GTK# component to CRUD animation curves —similar to the one Unity bundles with the editor. This month Sergio and I’ll finish such, and work to remove Stetic files since the rename to VS for Mac Xamarin Studio’s no longer available for Windows thus Stetic visual editor goes the same.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 03 Apr 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>
