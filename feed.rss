@@ -4,9 +4,104 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Xamarin.Forms XAML: Styles</title>
+  <guid>https://marcoscobena.com/?i=xf-xaml-styles</guid>
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;Styles.xaml&lt;/h3&gt;
+
+&lt;p&gt;Headers, bodies, captions... all these are suitable elements to style because may appear in different XAMLs and share common properties.&lt;/p&gt;
+
+&lt;p&gt;Are you looking for Key-less styles? &lt;a href="?i=xf-xaml-global-styles"&gt;GlobalStyles.xaml&lt;/a&gt; is your place.&lt;/p&gt;
+
+&lt;p&gt;Conventions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Key: {Identifier}{TargetType}Style
+
+&lt;ul&gt;
+&lt;li&gt;TargetType may look redundant but it really helps avoiding coming back here to know such&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following's just an example of styles I've worked with in different apps lately:&lt;/p&gt;
+
+&lt;p&gt;```xaml
+&lt;Style x:Key="DefaultButtonStyle"
+    TargetType="Button"&gt;
+    &lt;Setter Property="BackgroundColor" Value="White" /&gt;
+    &lt;Setter Property="FontFamily" Value="{StaticResource BrandonGrotesqueMedium}" /&gt;
+    &lt;Setter Property="FontSize" Value="Medium" /&gt;
+    &lt;Setter Property="Padding"&gt;
+      &lt;Thickness
+        Left="{StaticResource Default2Margin}"
+        Right="{StaticResource Default2Margin}" /&gt;
+    &lt;/Setter&gt;
+    &lt;Setter Property="TextColor" Value="{StaticResource AccentColor}" /&gt;
+&lt;/Style&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;Style x:Key="AccentColorButtonStyle"
+    BasedOn="{StaticResource DefaultButtonStyle}"
+    TargetType="Button"&gt;
+    &lt;Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" /&gt;
+    &lt;Setter Property="TextColor"&gt;White&lt;/Setter&gt;
+&lt;/Style&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;Style x:Key="Accent2ColorButtonStyle"
+    BasedOn="{StaticResource AccentColorButtonStyle}"
+    TargetType="Button"&gt;
+    &lt;Setter Property="BackgroundColor" Value="{StaticResource Accent2Color}" /&gt;
+&lt;/Style&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;Style x:Key="TitleLabelStyle"
+    TargetType="Label"
+    BasedOn="{StaticResource 12BoldFontStyle}"&gt;
+    &lt;Setter Property="Margin"&gt;
+        &lt;Thickness
+            Top="{StaticResource DefaultMargin}"
+            Bottom="{StaticResource DefaultMargin}"/&gt;
+    &lt;/Setter&gt;
+    &lt;Setter Property="TextColor" Value="{StaticResource DefaultTextColor}" /&gt;
+&lt;/Style&gt;
+```&lt;/p&gt;
+
+&lt;p&gt;However, take into account whether would make more sense to style in native. One example: a button which you accomplish through a &lt;code&gt;Label&lt;/code&gt; plus a &lt;code&gt;TapGestureRecognizer&lt;/code&gt;. In that case, Android app would loose Material Design haptics, and in the same way iOS' one the corresponding. So, it's better to style in native to assure we don't forget those differences each platform offers us.&lt;/p&gt;
+
+&lt;p&gt;Are you looking for styling &lt;code&gt;Grid&lt;/code&gt;'s columns or rows? You can't actually do this; however, can define rows and columns definitions which really accomplish the same:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xaml
+&amp;lt;Grid 
+    ColumnDefinitions="{StaticResource MyColumnDefinition}"&amp;gt;
+    [...]
+&amp;lt;/Grid&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Conventions:
+- Key: {Identifier}{ColumnOrRow}Definition&lt;/p&gt;
+
+&lt;p&gt;NOTE: adding comments on each row/column definition's helpful to later understand what's used for&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xaml
+&amp;lt;ColumnDefinitionCollection x:Key="MyColumnDefinition"&amp;gt;
+    &amp;lt;!-- Rate of interest --&amp;gt;
+    &amp;lt;ColumnDefinition /&amp;gt;
+    &amp;lt;!-- Stretch --&amp;gt;
+    &amp;lt;ColumnDefinition /&amp;gt;
+    &amp;lt;!-- Bonus --&amp;gt;
+    &amp;lt;ColumnDefinition /&amp;gt;
+    &amp;lt;!-- Balance --&amp;gt;
+    &amp;lt;ColumnDefinition /&amp;gt;
+&amp;lt;/ColumnDefinitionCollection&amp;gt;
+&lt;/code&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Wed, 21 Nov 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML: Sizes</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-sizes</guid>
-  <description>&lt;h3&gt;Sizes.xaml&lt;/h3&gt;
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;Sizes.xaml&lt;/h3&gt;
 
 &lt;p&gt;This' the perfect place for sizes: margins, paddings, spacings, font sizes, etc. It's quite common designs rely in recurrent sizes to place stuff, thus are suitable to be reused —Designers use to call this "working on the grid" :-)&lt;/p&gt;
 
@@ -47,7 +142,9 @@
 <item>
   <title>Xamarin.Forms XAML: Global Styles</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-global-styles</guid>
-  <description>&lt;h3&gt;GlobalStyles.xaml&lt;/h3&gt;
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;GlobalStyles.xaml&lt;/h3&gt;
 
 &lt;p&gt;Wouldn't be great to default &lt;code&gt;StackLayout&lt;/code&gt;'s &lt;code&gt;Spacing&lt;/code&gt; to 0 everywhere, or having every &lt;code&gt;Label&lt;/code&gt; a default font size and color? Less code to write, easier refactorings. All these fit here perfectly.&lt;/p&gt;
 
@@ -92,7 +189,9 @@
 <item>
   <title>Xamarin.Forms XAML: Font Styles</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-font-styles</guid>
-  <description>&lt;h3&gt;FontStyles.xaml&lt;/h3&gt;
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;FontStyles.xaml&lt;/h3&gt;
 
 &lt;p&gt;Dealing with fonts can be a tricky part: because the app shows font faces different from the respective OS' ones, or because the Design specs have multiple sizes, for example.&lt;/p&gt;
 
@@ -137,7 +236,9 @@
 <item>
   <title>Xamarin.Forms XAML: Converters</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-converters</guid>
-  <description>&lt;h3&gt;Converters.xaml&lt;/h3&gt;
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;Converters.xaml&lt;/h3&gt;
 
 &lt;p&gt;I think it's no new for anyone. If a particular converter's used only on a single XAML, just define it there. However, for those in more than one, having them here will help you adding new ones.&lt;/p&gt;
 
@@ -168,7 +269,9 @@
 <item>
   <title>Xamarin.Forms XAML: Control Templates</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-control-templates</guid>
-  <description>&lt;h3&gt;ControlTemplates.xaml&lt;/h3&gt;
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;ControlTemplates.xaml&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src="items/images/pine-watt-412305-unsplash.jpg" alt="" /&gt;&lt;/p&gt;
 
@@ -226,7 +329,9 @@
 <item>
   <title>Xamarin.Forms XAML: Colors</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-colors</guid>
-  <description>&lt;h3&gt;Colors.xaml&lt;/h3&gt;
+  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;Colors.xaml&lt;/h3&gt;
 
 &lt;p&gt;Every color's placed here: it's super convenient to have all together, it helps us identify repeated ones, for instance. We try to keep them order alphabetically, although it's not a must: simply helps some of us to quickly locate them —in C# we have a drop-down menu just on top of the editor to navigate between members, but currently, VS for Mac at least, doesn't have any similar.&lt;/p&gt;
 
@@ -288,7 +393,7 @@
 &lt;li&gt;&lt;a href="?i=xf-xaml-font-styles"&gt;Font Styles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-global-styles"&gt;Global Styles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="?i=xf-xaml-sizes"&gt;Sizes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Styles&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-styles"&gt;Styles&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3&gt;"StyleCop" for XAML&lt;/h3&gt;
@@ -419,28 +524,5 @@ Platform Translators are the pieces which our Designer could fulfill to tell us 
 &lt;p&gt;(Take into account I wrote this while listening to this “Peaceful Meditation” list at Spotify: )&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Thu, 05 Apr 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Thu 5: Analysing an app written by others</title>
-  <guid>https://marcoscobena.com/?i=Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Thu 5: Analysing an app written by others&lt;/h3&gt;
-
-&lt;p&gt;From Wednesday to Friday I’ll be working on an analysis of a Xamarin.Forms app to detect those places where performance can be gained and which actions can be performed to mitigate such. It’s a production app which serve as the entry point to an entire business, thus awesome to have the chance to work on this.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/800/0*vbffrCWTz924jPae." alt="" /&gt;&lt;br /&gt;
-Photo by &lt;a href="https://unsplash.com/@jilburr?utm_source=medium&amp;amp;utm_medium=referral"&gt;Jilbert Ebrahimi&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;It came up to my mind a talk Federico Mena spent a few years ago —maybe more than a few— on how to start developing software: read what others write. Although I won’t be actually writing within these days am learning different ways of doing things, and really cool ones.&lt;/p&gt;
-
-&lt;p&gt;In the other side, it’s curious how we all have similar issues, which in the end are even more important and low level, such us deciding whether navigation happens just after tapping and the destiny loads on the demand, or first load everything and then navigates.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Oh, and one great productivity tip! I’ve finally discovered how can hide macOS’ badges —I was actually interested in hiding Outlook’s unread messages one:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app"&gt;&lt;strong&gt;Quickly remove badge from app&lt;/strong&gt;&lt;br /&gt;
-&lt;em&gt;Is it possible to quickly remove a notification badge from an app in the Dock? I'm looking for a solution faster than…&lt;/em&gt;apple.stackexchange.com&lt;/a&gt;&lt;a href="https://apple.stackexchange.com/questions/163490/quickly-remove-badge-from-app"&gt;&lt;/a&gt;&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Wed, 04 Apr 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>

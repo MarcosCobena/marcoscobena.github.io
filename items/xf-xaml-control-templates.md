@@ -1,3 +1,5 @@
+*(This post belongs to [Xamarin.Forms XAML](?i=xf-xaml) series)*
+
 ### ControlTemplates.xaml
 
 ![](items/images/pine-watt-412305-unsplash.jpg)

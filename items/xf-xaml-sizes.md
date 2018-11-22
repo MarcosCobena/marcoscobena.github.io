@@ -1,3 +1,5 @@
+*(This post belongs to [Xamarin.Forms XAML](?i=xf-xaml) series)*
+
 ### Sizes.xaml
 
 This' the perfect place for sizes: margins, paddings, spacings, font sizes, etc. It's quite common designs rely in recurrent sizes to place stuff, thus are suitable to be reused —Designers use to call this "working on the grid" :-)

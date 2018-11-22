@@ -1,3 +1,5 @@
+*(This post belongs to [Xamarin.Forms XAML](?i=xf-xaml) series)*
+
 ### Converters.xaml
 
 I think it's no new for anyone. If a particular converter's used only on a single XAML, just define it there. However, for those in more than one, having them here will help you adding new ones.

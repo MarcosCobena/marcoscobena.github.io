@@ -1,3 +1,5 @@
+*(This post belongs to [Xamarin.Forms XAML](?i=xf-xaml) series)*
+
 ### GlobalStyles.xaml
 
 Wouldn't be great to default `StackLayout`'s `Spacing` to 0 everywhere, or having every `Label` a default font size and color? Less code to write, easier refactorings. All these fit here perfectly.

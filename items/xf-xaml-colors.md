@@ -1,3 +1,5 @@
+*(This post belongs to [Xamarin.Forms XAML](?i=xf-xaml) series)*
+
 ### Colors.xaml
 
 Every color's placed here: it's super convenient to have all together, it helps us identify repeated ones, for instance. We try to keep them order alphabetically, although it's not a must: simply helps some of us to quickly locate them —in C# we have a drop-down menu just on top of the editor to navigate between members, but currently, VS for Mac at least, doesn't have any similar.

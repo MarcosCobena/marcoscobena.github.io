@@ -1,3 +1,5 @@
+*(This post belongs to [Xamarin.Forms XAML](?i=xf-xaml) series)*
+
 ### FontStyles.xaml
 
 Dealing with fonts can be a tricky part: because the app shows font faces different from the respective OS' ones, or because the Design specs have multiple sizes, for example.

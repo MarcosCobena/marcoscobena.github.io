@@ -9,7 +9,7 @@ Split into chapters, I'll try to cover everything expressed in XAML:
 - [Font Styles](?i=xf-xaml-font-styles)
 - [Global Styles](?i=xf-xaml-global-styles)
 - [Sizes](?i=xf-xaml-sizes)
-- Styles
+- [Styles](?i=xf-xaml-styles)
 
 ### "StyleCop" for XAML
 
