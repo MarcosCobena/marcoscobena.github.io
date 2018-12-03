@@ -85,7 +85,7 @@ because someone else’s using it, this’ your tool
 Quite useful when outlining UIs which have images. My fuchsia `BoxView`
 replacement
 
-<http://lorempixel.com/>
+<http://lorempixel.com/> (https://picsum.photos/ is my plan b)
 
 
 
