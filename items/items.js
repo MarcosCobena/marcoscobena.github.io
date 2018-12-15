@@ -25,6 +25,7 @@ addItem("Tools", "tools", "3/12/2018");
 
 // Posts —this' the order they'll appear listed
 
+addPost("Exceptions to Exceptions (Xamarin)", "exceptions-to-exceptions", "15/12/2018");
 addPost("Xamarin.Forms XAML: Styles", "xf-xaml-styles", "22/11/2018");
 addPost("Xamarin.Forms XAML: Sizes", "xf-xaml-sizes", "20/11/2018");
 addPost("Xamarin.Forms XAML: Global Styles", "xf-xaml-global-styles", "14/11/2018");

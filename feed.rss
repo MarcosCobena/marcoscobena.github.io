@@ -4,6 +4,119 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Exceptions to Exceptions (Xamarin)</title>
+  <guid>https://marcoscobena.com/?i=exceptions-to-exceptions</guid>
+  <description>&lt;p&gt;A few weeks? ago I read &lt;a href="https://people.gnome.org/~federico/blog/propagating-errors.html"&gt;Federico's post&lt;/a&gt; on how they're handling errors with Rust —moving from C to Rust in librsvg, one the Gnome core libraries. I liked the article by it-self, because analyzes from 0 different approaches and, in the end, points to another one on how Midori did the same —for those who like me didn't know what Midori was: a Microsoft Research project to vertically analyze how an OS could be rewritten in managed code.&lt;/p&gt;
+
+&lt;p&gt;When making apps with Xamarin, and I guess this' shared among every framework, there's a moment when you need to retrieve data from an API, making a HTTP call, and things can go wrong.&lt;/p&gt;
+
+&lt;p&gt;One of my first implementations was something similar to —imagine we're in a ViewModel:&lt;/p&gt;
+
+&lt;p&gt;```c#
+private async Task LoadDataAsync()
+{
+    ResultDTO result;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;try
+{
+    // Think of refitAPI as a static readonly field
+    result = await refitAPI.GetAsync();
+}
+catch (Exception exception)
+{
+    await DisplayAlertAsync("Ops, something went wrong. Thanks for your patience.");
+}
+
+if (result == null)
+{
+    return;
+}
+
+// Here we assign result to a prop binded to the view
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+```&lt;/p&gt;
+
+&lt;p&gt;From the user perspective she shouldn't worry because anything that could go wrong is handled, although is presented with a generic valueless alert. It can also happen the API call ends just fine but it returns &lt;code&gt;null&lt;/code&gt; —it can happen if the JSON payload is empty, for instance. We should tell the user something about this too...&lt;/p&gt;
+
+&lt;p&gt;My desk-mate &lt;a href="https://twitter.com/sescaladab"&gt;Sergio&lt;/a&gt; shared with me his tooling to better handle all this stuff, which we've been using in &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile"&gt;Tailwind Traders&lt;/a&gt;, where the API call is boxed and a more appropriate return value is obtained:&lt;/p&gt;
+
+&lt;p&gt;```c#
+private async Task LoadDataAsync()
+{
+    var result = await TryExecuteWithLoadingIndicatorsAsync(refitAPI.GetAsync);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (!result.IsSucceeded || result.Result == null)
+{
+    return;
+}
+
+// Here we assign result to a prop binded to the view
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+```&lt;/p&gt;
+
+&lt;p&gt;This' a great improvement because:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;we no longer are in charge of handling the different exceptions on each API call;&lt;/li&gt;
+&lt;li&gt;when having such, there's a standard way to present such to our users;&lt;/li&gt;
+&lt;li&gt;the returning value has better semantics —i.e. &lt;code&gt;IsSucceeded&lt;/code&gt;; and&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;IsBusy&lt;/code&gt; is handled too so it'll end up on a loading overlay giving feedback&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While I was reading Federico's article, and Midori one, it called my attention how we were using a somewhat similar approach to them —saving the distance—, but they both have a language which's richer in error handling. Our, C#, heavily works on unchecked exceptions: each method can return any exception and there's no way of noticing that in develop-time:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;we can read the method documentation header, as we use to do with such coming from the .NET Framework it-self; or&lt;/li&gt;
+&lt;li&gt;we can disassemble it and see what it's internally doing, although we can't guarantee there's a inner call which does throw any other one&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Java, for instance, forces developers to explicitly type which exceptions a method may throw. It's quite verbose —it's been ~10 years since I don't write Java code— but makes us think what to do with them.&lt;/p&gt;
+
+&lt;p&gt;Using the hype those articles promoted in my interior I went to NuGet home and typed "Rust" in the search box. I found &lt;a href="https://www.nuget.org/packages/CSharp.OperationResult"&gt;CSharp.OperationResult&lt;/a&gt; project, which takes Rust approach into C# and, while I don't see the point on heavily relying in such everywhere in our projects, I do see its great value with above examples.&lt;/p&gt;
+
+&lt;p&gt;(Its owner has merged our &lt;a href="https://github.com/gnaeus/OperationResult/pull/1#issuecomment-447576656"&gt;PR moving the lib into .NET Standard&lt;/a&gt; and there'll be a new NuGet soon.)&lt;/p&gt;
+
+&lt;p&gt;This week I've spent a few hours rewriting our &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/feature/163-product-detail/Source/TailwindTraders.Mobile/TailwindTraders.Mobile/Framework/TaskHelper.cs"&gt;TaskHelper&lt;/a&gt; class by moving from our &lt;code&gt;WrapResult&lt;/code&gt; class to &lt;code&gt;Result&lt;/code&gt; and &lt;code&gt;Status&lt;/code&gt;, which reduces even more the code needed at ViewModel level but makes beautiful the one at the inner implementation:&lt;/p&gt;
+
+&lt;p&gt;```c#
+public async Task&lt;Result&lt;T&gt;&gt; TryWithErrorHandlingAsync&lt;T&gt;(
+    Task&lt;T&gt; task,
+    Func&lt;Exception, Task&lt;bool&gt;&gt; customErrorHandler = null)
+{
+    whenStarting?.Invoke();&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (!connectivityService.IsThereInternet)
+{
+    loggingService?.Warning("There's no Internet access");
+    return Error();
+}
+
+try
+{
+    T actualResult = await task;
+    return Ok(actualResult);
+}
+// Here goes multiple catches for each error scenario, alerting users accordingly
+
+whenFinished?.Invoke();
+
+return Error();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+```&lt;/p&gt;
+
+&lt;p&gt;From above method perspective anyone can quickly understand where things are leaving OK and where don't: &lt;code&gt;Ok&lt;/code&gt; and &lt;code&gt;Error&lt;/code&gt; methods speak for them-selves. But, more important, consumers from outside don't have to worry on catching exceptions, but wiring the result or alerting valuable information on what went wrong and could they could do then.&lt;/p&gt;
+
+&lt;p&gt;I think am personally in a phase where don't want to fill my code of try/catch everywhere, I prefer to leave things happen while I'm developing and, trust time will tell me which exceptions I should worry on. I too see the point on protecting that sensible stuff which could definitely go wrong don't know currently why however. I'm curious on what other feel on this area, which's the pros and cons of their work with errors and what are the findings while walking in that direction.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Fri, 14 Dec 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML: Styles</title>
   <guid>https://marcoscobena.com/?i=xf-xaml-styles</guid>
   <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
@@ -507,22 +620,5 @@ Platform Translators are the pieces which our Designer could fulfill to tell us 
 &lt;p&gt;And the best: there’s nothing to change on Forms. There’s nothing dependant on development tools, or SDKs. Sketching’s nothing new. It’s more of a mind change.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Sun, 10 Jun 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Fri 6: Sum up &amp;amp; fuget.org</title>
-  <guid>https://marcoscobena.com/?i=Fri-6--Sum-up---fuget-org-defecbf27385</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Fri 6: Sum up &amp;amp; fuget.org&lt;/h3&gt;
-
-&lt;p&gt;The end of the week’s here and summing up what have worked on these days, most of time’s been reading other’s source code. Years ago I may have received this task as OK… I’ll do it; nowadays, I see it as a great opportunity to learn how others do the same I daily do.&lt;/p&gt;
-
-&lt;p&gt;My mate Javi Suárez’s just introduced me the latest Frank Krueger’s joy: &lt;a href="http://www.fuget.org"&gt;fuget.org&lt;/a&gt;. It’s immediately came to my mind the idea of picking just those portions of NuGet packages you’re actually interested on and go ahead.&lt;/p&gt;
-
-&lt;p&gt;I’ve multiple times had the idea of something simpler than NuGet, but more complex than pasting classes here and there —and stronger by the way. Something similar to JavaScript’s NPM, but maybe having code in IL —have to work the idea out a little bit.&lt;/p&gt;
-
-&lt;p&gt;(Take into account I wrote this while listening to this “Peaceful Meditation” list at Spotify: )&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 05 Apr 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>
