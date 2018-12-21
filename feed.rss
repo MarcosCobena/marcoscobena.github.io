@@ -4,6 +4,99 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Xamarin.Forms XAML</title>
+  <guid>https://marcoscobena.com/?i=xf-xaml</guid>
+  <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
+
+&lt;p&gt;Split into chapters, I'll try to cover everything expressed in XAML:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml"&gt;Xaml Styler and App structure (this one)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-colors"&gt;Colors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-control-templates"&gt;Control Templates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-converters"&gt;Converters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-font-styles"&gt;Font Styles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-global-styles"&gt;Global Styles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-sizes"&gt;Sizes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="?i=xf-xaml-styles"&gt;Styles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Xaml Styler&lt;/h3&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://twitter.com/danimart1991"&gt;Daniel Martín&lt;/a&gt; we've been using &lt;a href="https://github.com/Xavalon/XamlStyler"&gt;Xaml Styler&lt;/a&gt; in &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/tree/develop/Source/Tools/XamlStyler"&gt;our last project&lt;/a&gt;. Xaml Styler's not StyleCop: it doesn't throw errors on bad formatting but rewrites everything to conform the guidelines. My mate &lt;a href="https://twitter.com/jacano35"&gt;Juan Antonio Cano&lt;/a&gt; &lt;a href="https://github.com/jacano/XamlStyler"&gt;forked it&lt;/a&gt; and added the "verify" option: now it can be used within a build pipeline and stop such on styling errors. For us App Center's &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/develop/Source/TailwindTraders.Mobile/TailwindTraders.Mobile.Android/appcenter-post-clone.sh"&gt;post-clone scripts&lt;/a&gt; have fit superb.&lt;/p&gt;
+
+&lt;p&gt;Since I work entirely on macOS there's no built-in option for Xaml Styler at Visual Studio for Mac, so I came up with this Custom Tool which I quickly run by &lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;X&lt;/code&gt; &lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;S&lt;/code&gt; —I passed from having a Terminal which runs a bash script into this, which's a good step:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/XamlStylerCustomTool.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The full Arguments: &lt;code&gt;../Tools/XamlStyler/XamlStyler.Console/xstyler.exe -c CodeAnalysis/XamlStylerSettings.json -d . -r true&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/develop/Source/TailwindTraders.Mobile/CodeAnalysis/XamlStylerSettings.json"&gt;Xaml Styler's JSON&lt;/a&gt; has still stuff to do with Visual Studio for Windows which could ideally be ripped in favor of a more agnostic flavour; however, they hurt nothing.&lt;/p&gt;
+
+&lt;p&gt;My only concern currently is why Visual Studio for Mac doesn't like setting the column width to 2 spaces, and continuously tries to make me work at 4. This' something I still have to study deeper.&lt;/p&gt;
+
+&lt;p&gt;Appart from above, these are some other rules I try to follow:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;120 chars per line; it helps us work with multiple files openned as columns —and is consistent with the same rule on C# files&lt;/li&gt;
+&lt;li&gt;Empty lines around XML nodes: look below how for instance &lt;code&gt;Label&lt;/code&gt; breezes inside the &lt;code&gt;ContentView&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;```xaml
+&lt;ContentView VerticalOptions="Start"&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ContentView.Padding&amp;gt;
+
+    &amp;lt;Thickness
+        Top="{StaticResource DefaultMargin}"
+        Right="{StaticResource DefaultMargin}"
+        Bottom="{StaticResource DefaultMargin}" /&amp;gt;
+
+&amp;lt;/ContentView.Padding&amp;gt;
+
+&amp;lt;Label x:Name="theLabel"
+    Text="{Binding Key}"
+    Style="{StaticResource 20BoldFontStyle}"
+    TextColor="{StaticResource WhiteColor}" /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/ContentView&gt;
+```&lt;/p&gt;
+
+&lt;h3&gt;App.xaml&lt;/h3&gt;
+
+&lt;p&gt;At the opposite of what we'd think, I've found better with time to leave this file "empty". The quotes mean it's actually not empty, but blends other sources which do have XAML of value inside.&lt;/p&gt;
+
+&lt;p&gt;This, for example, is a typical App.xaml:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xaml
+&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;
+&amp;lt;Application 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XamarinCrumbs.XamarinForms"
+    x:Class="XamarinCrumbs.XamarinForms.App"&amp;gt;
+    &amp;lt;Application.Resources&amp;gt;
+        &amp;lt;ResourceDictionary&amp;gt;
+            &amp;lt;ResourceDictionary.MergedDictionaries&amp;gt;
+                &amp;lt;local:Colors /&amp;gt;
+                &amp;lt;local:ControlTemplates /&amp;gt;
+                &amp;lt;local:Converters /&amp;gt;
+                &amp;lt;local:FontStyles /&amp;gt;
+                &amp;lt;local:GlobalStyles /&amp;gt;
+                &amp;lt;local:Sizes /&amp;gt;
+                &amp;lt;local:Styles /&amp;gt;
+            &amp;lt;/ResourceDictionary.MergedDictionaries&amp;gt;
+        &amp;lt;/ResourceDictionary&amp;gt;
+    &amp;lt;/Application.Resources&amp;gt;
+&amp;lt;/Application&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 20 Dec 2018 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Exceptions to Exceptions (Xamarin)</title>
   <guid>https://marcoscobena.com/?i=exceptions-to-exceptions</guid>
   <description>&lt;p&gt;A few weeks? ago I read &lt;a href="https://people.gnome.org/~federico/blog/propagating-errors.html"&gt;Federico's post&lt;/a&gt; on how they're handling errors with Rust —moving from C to Rust in librsvg, one the Gnome core libraries. I liked the article by it-self, because analyzes from 0 different approaches and, in the end, points to another one on how Midori did the same —for those who like me didn't know what Midori was: a Microsoft Research project to vertically analyze how an OS could be rewritten in managed code.&lt;/p&gt;
@@ -490,96 +583,6 @@ return Error();
 &lt;p&gt;&lt;img src="items/images/jun-21-2017-22-47-38.gif" alt="" /&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Tue, 09 Oct 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml</guid>
-  <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
-
-&lt;p&gt;Split into chapters, I'll try to cover everything expressed in XAML:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml"&gt;"StyleCop" for XAML and App structure (this one)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-colors"&gt;Colors&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-control-templates"&gt;Control Templates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-converters"&gt;Converters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-font-styles"&gt;Font Styles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-global-styles"&gt;Global Styles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-sizes"&gt;Sizes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-styles"&gt;Styles&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;"StyleCop" for XAML&lt;/h3&gt;
-
-&lt;p&gt;Nowdays, I don't know anything which checks styling in XAML files —haven't spent much time looking for to be honest. However, each one of us has a different way of writting XAML. Also, Visual Studio applies different formatting in Windows and macOS. For all this, it's not difficult to end up having a mix of styles when the project grows.&lt;/p&gt;
-
-&lt;p&gt;XAML's a much easier language to define than C#, so are the rules I try to follow:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;One attribute per line —we call this Merge-friendly XAML. The main reason's just that: merges are easier to handle when changes appear per line, instead of having to look which attribute/s were changed among a bunch;
-
-&lt;ol&gt;
-&lt;li&gt;As an exception to this rule we like to write &lt;code&gt;Name&lt;/code&gt; and &lt;code&gt;Key&lt;/code&gt; ones in the same line where the control's defined&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;120 chars per line; it helps us work with multiple files openned as columns.&lt;/li&gt;
-&lt;li&gt;Empty lines around controls' XML nodes: look below how &lt;code&gt;Label&lt;/code&gt; breezes inside the &lt;code&gt;ContentView&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This' an example following above rules:&lt;/p&gt;
-
-&lt;p&gt;```xaml
-&lt;ContentView
-    VerticalOptions="Start"&gt;
-    &lt;ContentView.Padding&gt;
-        &lt;Thickness
-            Top="{StaticResource DefaultMargin}"
-            Right="{StaticResource DefaultMargin}"
-            Bottom="{StaticResource DefaultMargin}"/&gt;
-    &lt;/ContentView.Padding&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;Label x:Name="theLabel"
-    Text="{Binding Key}"
-    Style="{StaticResource 20BoldFontStyle}"
-    TextColor="{StaticResource WhiteColor}"/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/ContentView&gt;
-```&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update (4/10/2018):&lt;/strong&gt; Daniel Martín's recommended through &lt;a href="https://twitter.com/danimart1991/status/1047735254046453761"&gt;this tweet&lt;/a&gt; to have a look to &lt;a href="https://github.com/Xavalon/XamlStyler"&gt;XamlStyler&lt;/a&gt;: although it's focused on VS on Windows, they provide a CLI through NuGet which could fit under macOS.&lt;/p&gt;
-
-&lt;h3&gt;App.xaml&lt;/h3&gt;
-
-&lt;p&gt;At the opposite of what we'd think, I've found better with time to leave this file "empty". The quotes mean it's actually not empty, but blends other sources which do have XAML of value inside.&lt;/p&gt;
-
-&lt;p&gt;This, for example, is a typical App.xaml:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xaml
-&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;
-&amp;lt;Application 
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:XamarinCrumbs.XamarinForms"
-    x:Class="XamarinCrumbs.XamarinForms.App"&amp;gt;
-    &amp;lt;Application.Resources&amp;gt;
-        &amp;lt;ResourceDictionary&amp;gt;
-            &amp;lt;ResourceDictionary.MergedDictionaries&amp;gt;
-                &amp;lt;local:Colors /&amp;gt;
-                &amp;lt;local:ControlTemplates /&amp;gt;
-                &amp;lt;local:Converters /&amp;gt;
-                &amp;lt;local:FontStyles /&amp;gt;
-                &amp;lt;local:GlobalStyles /&amp;gt;
-                &amp;lt;local:Sizes /&amp;gt;
-                &amp;lt;local:Styles /&amp;gt;
-            &amp;lt;/ResourceDictionary.MergedDictionaries&amp;gt;
-        &amp;lt;/ResourceDictionary&amp;gt;
-    &amp;lt;/Application.Resources&amp;gt;
-&amp;lt;/Application&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 04 Oct 2018 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Xamarin.Forms Design Framework</title>

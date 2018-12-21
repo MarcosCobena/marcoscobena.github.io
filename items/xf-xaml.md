@@ -2,7 +2,7 @@ In the same way we continuously refactor our C# code we should trait XAML one eq
 
 Split into chapters, I'll try to cover everything expressed in XAML:
 
-- ["StyleCop" for XAML and App structure (this one)](?i=xf-xaml)
+- [Xaml Styler and App structure (this one)](?i=xf-xaml)
 - [Colors](?i=xf-xaml-colors)
 - [Control Templates](?i=xf-xaml-control-templates)
 - [Converters](?i=xf-xaml-converters)
@@ -11,38 +11,44 @@ Split into chapters, I'll try to cover everything expressed in XAML:
 - [Sizes](?i=xf-xaml-sizes)
 - [Styles](?i=xf-xaml-styles)
 
-### "StyleCop" for XAML
+### Xaml Styler
 
-Nowdays, I don't know anything which checks styling in XAML files —haven't spent much time looking for to be honest. However, each one of us has a different way of writting XAML. Also, Visual Studio applies different formatting in Windows and macOS. For all this, it's not difficult to end up having a mix of styles when the project grows.
+Thanks to [Daniel Martín](https://twitter.com/danimart1991) we've been using [Xaml Styler](https://github.com/Xavalon/XamlStyler) in [our last project](https://github.com/Microsoft/TailwindTraders-Mobile/tree/develop/Source/Tools/XamlStyler). Xaml Styler's not StyleCop: it doesn't throw errors on bad formatting but rewrites everything to conform the guidelines. My mate [Juan Antonio Cano](https://twitter.com/jacano35) [forked it](https://github.com/jacano/XamlStyler) and added the "verify" option: now it can be used within a build pipeline and stop such on styling errors. For us App Center's [post-clone scripts](https://github.com/Microsoft/TailwindTraders-Mobile/blob/develop/Source/TailwindTraders.Mobile/TailwindTraders.Mobile.Android/appcenter-post-clone.sh) have fit superb.
 
-XAML's a much easier language to define than C#, so are the rules I try to follow:
+Since I work entirely on macOS there's no built-in option for Xaml Styler at Visual Studio for Mac, so I came up with this Custom Tool which I quickly run by `Alt`+`X` `Alt`+`S` —I passed from having a Terminal which runs a bash script into this, which's a good step:
 
-1. One attribute per line —we call this Merge-friendly XAML. The main reason's just that: merges are easier to handle when changes appear per line, instead of having to look which attribute/s were changed among a bunch;
-   1. As an exception to this rule we like to write `Name` and `Key` ones in the same line where the control's defined
-2. 120 chars per line; it helps us work with multiple files openned as columns.
-3. Empty lines around controls' XML nodes: look below how `Label` breezes inside the `ContentView`
+![](items/images/XamlStylerCustomTool.png)
 
-This' an example following above rules:
+*The full Arguments: `../Tools/XamlStyler/XamlStyler.Console/xstyler.exe -c CodeAnalysis/XamlStylerSettings.json -d . -r true`*
+
+The [Xaml Styler's JSON](https://github.com/Microsoft/TailwindTraders-Mobile/blob/develop/Source/TailwindTraders.Mobile/CodeAnalysis/XamlStylerSettings.json) has still stuff to do with Visual Studio for Windows which could ideally be ripped in favor of a more agnostic flavour; however, they hurt nothing.
+
+My only concern currently is why Visual Studio for Mac doesn't like setting the column width to 2 spaces, and continuously tries to make me work at 4. This' something I still have to study deeper.
+
+Appart from above, these are some other rules I try to follow:
+
+1. 120 chars per line; it helps us work with multiple files openned as columns —and is consistent with the same rule on C# files
+2. Empty lines around XML nodes: look below how for instance `Label` breezes inside the `ContentView`:
 
 ```xaml
-<ContentView
-    VerticalOptions="Start">
+<ContentView VerticalOptions="Start">
+    
     <ContentView.Padding>
+        
         <Thickness
             Top="{StaticResource DefaultMargin}"
             Right="{StaticResource DefaultMargin}"
-            Bottom="{StaticResource DefaultMargin}"/>
+            Bottom="{StaticResource DefaultMargin}" />
+        
     </ContentView.Padding>
     
     <Label x:Name="theLabel"
         Text="{Binding Key}"
         Style="{StaticResource 20BoldFontStyle}"
-        TextColor="{StaticResource WhiteColor}"/>
+        TextColor="{StaticResource WhiteColor}" />
     
 </ContentView>
 ```
-
-**Update (4/10/2018):** Daniel Martín's recommended through [this tweet](https://twitter.com/danimart1991/status/1047735254046453761) to have a look to [XamlStyler](https://github.com/Xavalon/XamlStyler): although it's focused on VS on Windows, they provide a CLI through NuGet which could fit under macOS.
 
 ### App.xaml
 
