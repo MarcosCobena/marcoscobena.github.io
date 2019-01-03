@@ -1,5 +1,19 @@
 *Pst!* I almost never work on projects alone; this' the result of a whole team effort:
 
+### Tailwind Traders
+
+![](items/images/TailwindTraders.png)
+
+This year Microsoft Connect(); 2018 event presented Xamarin.Forms 4 cycle showcased through our Tailwind Traders app. Such was conceived from scratch and introduced Shell along with its fly-out menu. I'd highlight how much care we took into almost every aspect of the solution: enforced XAML policies, minimalistic MVVM framework, feature toggling through its settings, beautiful shadows, etc.
+
+|            |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| Language   | C# (.NET)                                                    |
+| Frameworks | Xamarin.Forms                                                |
+| Platforms  | Android, iOS                                                 |
+| Date       | December 2018                                                |
+| More info? | [https://github.com/Microsoft/TailwindTraders-Mobile](https://github.com/Microsoft/TailwindTraders-Mobile) |
+
 ### Ges Seguros
 
 ![](items/images/GesSeguros.png)

@@ -15,7 +15,7 @@ addItem("Contact", "contact", "22/8/2018");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "20/9/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
-addItem("Portfolio", "portfolio", "4/10/2018");
+addItem("Portfolio", "portfolio", "19/12/2018");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Reading", "reading", "3/12/2018");
 addItem("Recipes", "recipes", "14/6/2018");
@@ -25,6 +25,7 @@ addItem("Tools", "tools", "3/12/2018");
 
 // Posts —this' the order they'll appear listed
 
+addPost("Xamarin.Forms XAML", "xf-xaml", "21/12/2018");
 addPost("Exceptions to Exceptions (Xamarin)", "exceptions-to-exceptions", "15/12/2018");
 addPost("Xamarin.Forms XAML: Styles", "xf-xaml-styles", "22/11/2018");
 addPost("Xamarin.Forms XAML: Sizes", "xf-xaml-sizes", "20/11/2018");
@@ -33,7 +34,6 @@ addPost("Xamarin.Forms XAML: Font Styles", "xf-xaml-font-styles", "9/11/2018");
 addPost("Xamarin.Forms XAML: Converters", "xf-xaml-converters", "31/10/2018");
 addPost("Xamarin.Forms XAML: Control Templates", "xf-xaml-control-templates", "18/10/2018");
 addPost("Xamarin.Forms XAML: Colors", "xf-xaml-colors", "10/10/2018");
-addPost("Xamarin.Forms XAML", "xf-xaml", "5/10/2018");
 addPost("Xamarin.Forms Design Framework", "Xamarin-Forms-Design-Framework-b23a2f12cce5", "11/6/2018");
 addPost("Fri 6: Sum up &amp; fuget.org", "Fri-6--Sum-up---fuget-org-defecbf27385", "6/4/2018");
 addPost("Thu 5: Analysing an app written by others", "Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a", "5/4/2018");
