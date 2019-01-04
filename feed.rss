@@ -4,6 +4,191 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>GoTo</title>
+  <guid>https://marcoscobena.com/?i=goto</guid>
+  <description>&lt;p&gt;While I was studying Computer Science had one subject named Computability Theory where it was introduced a quite simple, at the beginning, language: GOTO. Its target was to demonstrate whether a function could be expressed using such —then called GOTO-computable— thus such could be calculated by a computer. (My teachers may kill me because how I've summed things up but think it's somewhat valid :-)&lt;/p&gt;
+
+&lt;p&gt;By that time I wrote an interpreter in JavaScript (which may reside in one of my multiple back-ups) and quickly sent it to my teachers, thinking maybe any student could eventually find it useful. My programming abilities were weak by then and, for instance, I relied the parsing on regular expressions —you can imagine how strong my implementation was...&lt;/p&gt;
+
+&lt;p&gt;A few months ago, and pushed by &lt;a href="https://praeclarum.org/2018/08/27/oops-i-wrote-a-c-compiler.html"&gt;Fran Krueger's CLanguage article&lt;/a&gt;, I found it attractive to spent my spare time working on a more solid compiler which, how not, would target .NET ecosystem. Also because I've always had curiosity on how &lt;code&gt;System.Reflection.Emit&lt;/code&gt; works and saw a chance to learn it deeper.&lt;/p&gt;
+
+&lt;h4&gt;Language&lt;/h4&gt;
+
+&lt;p&gt;GOTO's quite simple: you add or subtract 1, jump anywhere or nothing —this' one the aspects why I said it can fit for children. This could be the Hello World in GOTO:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Y = Y + 1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The vars you can play with are simple too: input ones, aux ones and one output. And I'm sure you've already figured their notations out: &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;Z&lt;/code&gt; and &lt;code&gt;Y&lt;/code&gt;, in the same order.&lt;/p&gt;
+
+&lt;p&gt;The entire language specification can be found &lt;a href="https://github.com/MarcosCobena/GoTo/wiki/Language"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Parsing&lt;/h4&gt;
+
+&lt;p&gt;Also during University I learned Antlr, through Java, up to building a small BASIC interpreter. After some Google-ing I discovered there's a .NET backend for it, which's .NET Standard by the way, so decided to go with it as my parsing infrastructure.&lt;/p&gt;
+
+&lt;p&gt;The only language definition I have's the one my teachers still use in Computer Science and Mathematics courses, which's formal in its description but lacks a formal side to be used for actual programming, so my first steps were popping a grammar with lexer and parser rules of what I wanted to achieve. As an example, this' the way conditional instructions are detected:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+instruction : [...]
+    | 'IF' var=ID '!=' '0' 'GOTO' label=ID #ConditionalInstruction
+    [...]
+    ;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I've iterated a lot the grammar during this time, refactoring once and again, reaching a point where it feels comfortable for further passes such like the semantic one.&lt;/p&gt;
+
+&lt;h4&gt;Semantic Analysis&lt;/h4&gt;
+
+&lt;p&gt;There are a bunch of rules which aren't permitted in GOTO, for instance using different vars in the same instruction:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+X2 = X3 + 1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey, I told you GOTO was simple! Allowing above, however, can be easily achieved with something we'll see later on; however, it's not allowed by definition.&lt;/p&gt;
+
+&lt;p&gt;The semantic analysis, along with the lexing and parsing, produces error messages. You're already familiar with compiler errors and recognize the line, column and message they use to come with. I've based my-self on this idea for GOTO too, where the compiler returns a collection of messages with that information and, for the sake of future iterations, its severity: error or simply a warning —truth be told I've still not used this last :-D&lt;/p&gt;
+
+&lt;h4&gt;Abstract Syntax Tree&lt;/h4&gt;
+
+&lt;p&gt;My initial idea was to directly throw IL while visiting the parsing tree and, quickly, noticed it wasn't the best way to go. I needed to build an AST: a parsing-free tree representation which's ready for further steps, i.e. code generation.&lt;/p&gt;
+
+&lt;p&gt;Lucky of me GOTO's so small a flat collection of nodes do the job quite good in my opinion: instead of having an AST it actually manages instruction nodes where, now yes, are helpful by the time of translating into IL.&lt;/p&gt;
+
+&lt;p&gt;As a curious thing, I've ended up solving one or two semantic analysis over the "AST" instead of before, because simply having this new data structure's made easier the job: GOTO doesn't allow referencing labels in conditional instructions which aren't defined anywhere (I've allowed before or after, both), and checking this' something like:&lt;/p&gt;
+
+&lt;p&gt;```c#
+public static void CheckMissingLabel(ProgramNode program, ref List&lt;Message&gt; messages)
+{
+    var conditionals = program.Instructions
+        .Where(item =&gt; item is ConditionalInstructionNode node &amp;amp;&amp;amp; 
+            !node.TargetLabel.Equals(Settings.ExitLabel.ToString()))
+        .Cast&lt;ConditionalInstructionNode&gt;();
+    var labels = program.Instructions
+        .Cast&lt;InstructionNode&gt;()
+        .Select(item =&gt; item.Label);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;foreach (var item in conditionals)
+{
+    if (!labels.Contains(item.TargetLabel))
+    {
+        var message = new Message(
+            SeverityEnum.Error,
+            $"The conditional instruction cannot target missing label {item.TargetLabel}.",
+            item.Line,
+            item.Column);
+        messages.Add(message);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}
+```&lt;/p&gt;
+
+&lt;h4&gt;Code Generation&lt;/h4&gt;
+
+&lt;p&gt;Let's say our program has no errors and we're ready to throw IL —Intermediate Language, the byte-code .NET runtime understands. My idea's always been to have a CLI interface —&lt;em&gt;a la&lt;/em&gt; Microsoft's &lt;code&gt;csc&lt;/code&gt;, Mono's &lt;code&gt;mcs&lt;/code&gt;— where I could compile programs quickly. However, while the time passed, I noticed also wanted to quickly run my programs, so had to decide what I actually wanted to generate.&lt;/p&gt;
+
+&lt;p&gt;The main, and think only, difference between EXE and DLL files in .NET resides in the first having an entry-point on where the CLR knows has to start executing; the DLLs simply don't have such. If I wanted to allow people reuse their programs with, let's say, F# an EXE wouldn't be so useful, but yes a DLL: it can be consumable everywhere —except under iOS devices, although have to double-check this, because of Frank's Continuous. In the other hand, a DLL can't be easily runnable: I'd have to create a new project, reference such and write code to call it.&lt;/p&gt;
+
+&lt;p&gt;I decided to stick with the DLL. It's curious how &lt;a href="http://www.drdobbs.com/generating-code-at-run-time-with-reflect/184416570"&gt;the best article I read&lt;/a&gt; to leverage my &lt;code&gt;System.Reflection.Emit&lt;/code&gt; knowledge's been this from 2002! Even I still have serious concerns whether was the same article I read seventeen years ago (17)... Good stuff never passes by.&lt;/p&gt;
+
+&lt;p&gt;Summing up: I've copied &lt;code&gt;dotnet&lt;/code&gt; command idea, and provided the handy &lt;code&gt;gotool&lt;/code&gt; one:&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gotool
+  GOTO-ol&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Usage: gotool.exe option ...
+- option: build, run&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;If you want to build a program just pass "build" and the program path and go. Once you have the output DLL, just pass "run", the DLL path and an input value and go. This'd be a typical session:&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;type HelloWorld.goto
+  Y = Y + 1
+  gotool build HelloWorld.goto
+  GOTO-ol&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Success! HelloWorld.dll&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gotool run HelloWorld.dll 0
+  GOTO-ol&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1
+```&lt;/p&gt;
+
+&lt;h4&gt;Macros&lt;/h4&gt;
+
+&lt;p&gt;For example, GOTO allows conditional instructions asking whether a var is 0 but, could we turn such inconditional —i.e. independant of the value? Sure:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Z = Z + 1
+IF Z != 0 GOTO L
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This' known as the GOTO macro. Then, how can we use it?&lt;/p&gt;
+
+&lt;p&gt;Simply consider it as any other instruction within a program:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+GOTO A
+Y = Y + 1
+[A] X = X + 1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Because I had no origin on how macros could be expressed in a formal way —with formal I mean doable with a computer— I ended up creating a simple schema, where macros are defined by replacing those symbols at its signature:&lt;/p&gt;
+
+&lt;p&gt;```
+MACRO GOTO L
+Z = Z + 1
+IF Z != 0 GOTO L
+END&lt;/p&gt;
+
+&lt;p&gt;GOTO A
+Y = Y + 1
+[A] X = X + 1
+```&lt;/p&gt;
+
+&lt;h4&gt;IDE&lt;/h4&gt;
+
+&lt;p&gt;Saying I've been working on an IDE for GoTo's very pretentious I guess. Having the CLI wasn't so much funny for me as having something in the browser where I could start writing GOTO and running it by a single click.&lt;/p&gt;
+
+&lt;p&gt;I had already played with Frank's Ooui and since my daily job consists on 99% Xamarin.Forms it's been a pleasure path to travel by.&lt;/p&gt;
+
+&lt;p&gt;Although my initial idea was to rely in WebAssembly —mostly to avoid any different hosting from my web one— I couldn't take this road because &lt;code&gt;System.Reflection&lt;/code&gt; dependencies aren't supported in that scenario. What did I do then? No problem, Ooui offers an ASP.NET backend which communicates through Web Sockets. And this way GoTo Studio, as I named it, has been working until yesterday night.&lt;/p&gt;
+
+&lt;p&gt;One of the bugs I had was the lack of control on infinite loops: it's not a problem with the CLI, but it's actually one with Web Sockets: my Azure App Service tier (the free one) provided 5 simultaneous connections so blocking such with 5 different endless loops made the entire website break.&lt;/p&gt;
+
+&lt;p&gt;Two days ago I started writing a small interpreter —I really like to call it a Virtual Machine— which, taking advantage of the AST representation, runs the program step by step. Since now I have control on such, I've set a limit on the steps to, now yes, break those infinite loops on time.&lt;/p&gt;
+
+&lt;p&gt;To assure programs compiled into IL and run by .NET CLR have the same results as those interpreted by its own VM I made some small changes into the Unit Tests, where the same set passes —and actually pass in green— for both.&lt;/p&gt;
+
+&lt;p&gt;You can now use &lt;a href="https://marcoscobena.com/goto-studio/"&gt;GoTo Studio&lt;/a&gt; without worry on leaving it useless :-)&lt;/p&gt;
+
+&lt;h4&gt;Conclusions&lt;/h4&gt;
+
+&lt;p&gt;I've learned a lot with this personal project and above I discuss most of the technical aspects I've touched. However, it's in the human side where I most gain I think: having something I do just for pleasure and which doesn't conform to any rule further than providing joy to my-self is being a beautiful discover.&lt;/p&gt;
+
+&lt;p&gt;While working on this I got the idea —a bunch of ideas actually— this could serve for children to learn programming, and this motivates me even more to continue ~~working~~ playing.&lt;/p&gt;
+
+&lt;p&gt;Thanks to my mates at Plain Concepts which detected some bugs and helped me making GoTo Studio easier to use. And to my beautiful fiancee for encouraging me to go deep on this: I'd really like, one day, to teach our children how computer works with this project :,-)&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 03 Jan 2019 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Xamarin.Forms XAML</title>
   <guid>https://marcoscobena.com/?i=xf-xaml</guid>
   <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
@@ -583,45 +768,5 @@ return Error();
 &lt;p&gt;&lt;img src="items/images/jun-21-2017-22-47-38.gif" alt="" /&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Tue, 09 Oct 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms Design Framework</title>
-  <guid>https://marcoscobena.com/?i=Xamarin-Forms-Design-Framework-b23a2f12cce5</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post was imported, please &lt;a href="#/contact"&gt;contact&lt;/a&gt; me if there's anything wrong with it. Thanks in advance)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Xamarin.Forms Design Framework&lt;/h3&gt;
-
-&lt;p&gt;In my personal trip to leverage all those small problems I found in my day to day, there’s one which sistematically reappears: I’m about to start a new Xamarin.Forms project for X platforms — please note the plural — but just have its design for one of them. For instance: I want my app to target Android &amp;amp; iOS, but just have the Android design.&lt;/p&gt;
-
-&lt;p&gt;The reasons why this happen would give for a different thread but I feel them as an homogeneus mix of:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Xamarin.Forms’ missunderstood, or we didn’t explain it quite well: it’s felt like Flutter — it appeared! — when it’s not&lt;/li&gt;
-&lt;li&gt;We don’t want to increase the time and money by spending a few more days with the rest of designs, for one reason or another we don’t see its valueI’ve been thinking a lot on this and nowadays have a strong opinnion which proposes one possible exit:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;&lt;strong&gt;Xamarin.Forms Design Framework&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;p&gt;Most of the times, when I’m working with a Zeplin project for a Forms app, the first servers as a handful guide of margins/paddings, sizes and colors. It’s not so much whether the status bar has a particular background color, or the button has any tweak which makes it look different. Obviously, those are things which in the end need to be done, but aren’t at the top of value.&lt;/p&gt;
-
-&lt;p&gt;Imagine we had something like &lt;a href="http://design.xamarin.com"&gt;http://design.xamarin.com&lt;/a&gt; where our Designers could head on and learn without the first scroll what actually Xamarin.Forms’ all about. In their language.&lt;/p&gt;
-
-&lt;p&gt;After this, it could propose a Design Framework which would isolate from platform specifics and would concentrate on letting Designers express our apps in an agnostic way. A quick example to explain this: a button in such Framework would be a flat box with text inside: as a Developer, I can gather its width &amp;amp; height, its relative position to the parent view, margins with close controls, padding with its internal title and even its font size &amp;amp; color, which could also be done latter by Platform Translators.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1000/0*t7UJdpwx2KGsTC1N" alt="" /&gt;&lt;br /&gt;
-Photo by &lt;a href="https://unsplash.com/@halgatewood?utm_source=medium&amp;amp;utm_medium=referral"&gt;Hal Gatewood&lt;/a&gt; on &lt;a href="https://unsplash.com?utm_source=medium&amp;amp;utm_medium=referral"&gt;Unsplash&lt;/a&gt;&lt;br /&gt;
-Platform Translators are the pieces which our Designer could fulfill to tell us how buttons should look like in iOS, in a closer aspect, or which’s the predominant font family to use in Android.&lt;/p&gt;
-
-&lt;p&gt;Such Design Framework could be seen as an imaginary device which focuses on wireframing, and then could have it’s Forms backend, letting us express the UIs internally with XAML.&lt;/p&gt;
-
-&lt;p&gt;Even more, all this also sets the scenario up for something like a WYSIWYG editor, where XAML brights, now yes, serving as a bridge where Designers and Developers can interact. XAML was conceived with this in mind more than a decade ago but the reality is it’s heavily focused on just Developers. Let’s change this.&lt;/p&gt;
-
-&lt;p&gt;Designers could have templates for Sketch or PhotoShop where every control is just there to drag &amp;amp; drop into their designs, in the same way there are toolkits for the most known platforms.&lt;/p&gt;
-
-&lt;p&gt;The truth’s we are moving into an ecosystem where our apps can be mobile or desktop or cloud, but such can’t only rely in the Development side. If we don’t make our Designers happier — with its direct impact on the later development — we’ll keep having a very beatiful app on X, with a “free” version on Y and Z.&lt;/p&gt;
-
-&lt;p&gt;And the best: there’s nothing to change on Forms. There’s nothing dependant on development tools, or SDKs. Sketching’s nothing new. It’s more of a mind change.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Sun, 10 Jun 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>
