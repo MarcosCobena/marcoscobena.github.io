@@ -1,6 +1,6 @@
 It's Marcos: I write software to solve people's problems.
 
-Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with [Xamarin](http://www.xamarin.com) —these [NuGets](https://www.nuget.org/profiles/MarcosCobena) may be helpful for you too—, and developing small pieces for [Wave Engine](http://www.waveengine.net).
+Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with [Xamarin](http://www.xamarin.com) —these [NuGets](https://www.nuget.org/profiles/MarcosCobena) may be helpful for you too—, and developing small pieces for [Wave Engine](http://www.waveengine.net). From August 2018 I keep my [portfolio](/?i=portfolio) up with those projects I've worked on.
 
 ### Menu
 
