@@ -1,4 +1,4 @@
-It's Marcos: I write software to solve people's problems.
+It's Marcos: I'm a Software Development Engineer focused on .NET —and also enjoy doing things with JavaScript, as [this whole site](https://github.com/MarcosCobena/marcoscobena.github.io). In my spare time I'm working on [GoTo](https://github.com/MarcosCobena/GoTo), which I described [here](?i=goto).
 
 Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with [Xamarin](http://www.xamarin.com) —these [NuGets](https://www.nuget.org/profiles/MarcosCobena) may be helpful for you too—, and developing small pieces for [Wave Engine](http://www.waveengine.net). From August 2018 I keep my [portfolio](/?i=portfolio) up with those projects I've worked on.
 
