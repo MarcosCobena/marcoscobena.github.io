@@ -47,6 +47,12 @@ for debugging where the hell an app is taking so much space in disk
 
 <http://dpi.lv/>
 
+
+
+**Easing Functions Cheat Sheet** —when creating animations I tend to move the mouse over these handy functions to choose which's the one more convenient
+
+<https://easings.net/>
+
  
 
 **GIF speed changer** —when Designers send me GIFs to showcase what they’re
@@ -139,7 +145,7 @@ Android device, worth purchasing
 
 ### Visual Studio (for Windows)
 
-**🆕 VisualStudio.GitStashExtension** —adds stashes, that's all
+**VisualStudio.GitStashExtension** —adds stashes, that's all
 
 [https://marketplace.visualstudio.com/items?itemName=vii.GitStashExtension](https://marketplace.visualstudio.com/items?itemName=vii.GitStashExtension)
 
