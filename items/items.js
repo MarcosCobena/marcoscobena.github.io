@@ -17,7 +17,7 @@ addItem("Git", "git", "20/9/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("Portfolio", "portfolio", "19/12/2018");
 addItem("Questions", "questions", "7/5/2018");
-addItem("Reading", "reading", "3/12/2018");
+addItem("Reading", "reading", "24/1/2019");
 addItem("Recipes", "recipes", "14/6/2018");
 addItem("Screen template", "screen-template", "6/7/2018");
 addItem("Tools", "tools", "14/1/2019");
