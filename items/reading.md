@@ -23,6 +23,8 @@ Want, and deeply moved my interior
 
 ### Xamarin/.NET
 
+[mono-project.com/news](https://www.mono-project.com/news/) —News on Mono Project :-) It was my first face with .NET on 2002 and still keep somewhat linked
+
 [planetxamarin.com](https://www.planetxamarin.com/preview) —Some of the most
 influent Developers on Xamarin are listed here
 
@@ -30,4 +32,4 @@ influent Developers on Xamarin are listed here
 wonderful things with .NET
 
 [tirania.org/blog](http://tirania.org/blog) —Went to a conference he spent at
-Campus Party 2001 or 2? and got touched by his engaging vision of software
+Campus Party 2002 and got touched by his engaging vision of software
