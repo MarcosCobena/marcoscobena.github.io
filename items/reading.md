@@ -18,6 +18,8 @@ Gimp, Inkscape & Blender, and his top quality
 founded Gnome along with Miguel de Icaza, and enjoy visiting his site from time
 to time to see what’s he on
 
+[seths.blog](https://seths.blog) —My mate [Javi Pulido](https://twitter.com/pulimento?lang=es) introduced me this blog through [CNP](https://seths.blog/2019/02/cnp/) post and felt this' the sort of stuff I really like to read
+
 [sivers.org](https://sivers.org) —Oriol introduced me his book Anything You
 Want, and deeply moved my interior
 
