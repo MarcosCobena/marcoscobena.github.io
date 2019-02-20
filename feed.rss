@@ -4,6 +4,38 @@
 <description>I write software to solve people's problems</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Pull-Request reviews</title>
+  <guid>https://marcoscobena.com/?i=pr-reviews</guid>
+  <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
+
+&lt;p&gt;Serve this as my personal reminder for how to take a PR review:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If I detect something doesn't conform the style guidelines, instead of adding a comment:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;think of enforcing such rule in any way: through Git hooks, StyleCop, etc. It's important to consider how much time you'd earn by enabling such instead of once and again adding similar comments in future PRs; or&lt;/li&gt;
+&lt;li&gt;add an in-line comment to leverage this which, indeed, will arrive to the rest of team as well: for example:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;```c#
+// Marcos says: below fields are ordered alphabetically to easily allow us search
+public const string AppCenterKey = "bar";&lt;/p&gt;
+
+&lt;p&gt;public const string APIKey = "foo";
+```&lt;/p&gt;
+
+&lt;p&gt;​ ; or&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simply write this down in any communication channel your team has: a Slack/Teams conversation, during tomorrow daily, etc.; or&lt;/li&gt;
+&lt;li&gt;forget your impulse, just keep scrolling down because there for sure will be things far more interesting to consider&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Tue, 19 Feb 2019 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>GoTo</title>
   <guid>https://marcoscobena.com/?i=goto</guid>
   <description>&lt;p&gt;While I was studying Computer Science had one subject named Computability Theory where it was introduced a quite simple, at the beginning, language: GOTO. Its target was to demonstrate whether a function could be expressed using such —then called GOTO-computable— thus such could be calculated by a computer. (My teachers may kill me because how I've summed things up but think it's somewhat valid :-)&lt;/p&gt;
@@ -716,57 +748,5 @@ return Error();
 &lt;p&gt;Another scenario where I found these quite useful's pages with custom nav bars —i.e. you don't want predefined OS one. Instead of stacking once and again your "CustomNavBarControl" it can be done just once, worrying on the actual changing content.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Wed, 17 Oct 2018 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML: Colors</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml-colors</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Colors.xaml&lt;/h3&gt;
-
-&lt;p&gt;Every color's placed here: it's super convenient to have all together, it helps us identify repeated ones, for instance. We try to keep them order alphabetically, although it's not a must: simply helps some of us to quickly locate them —in C# we have a drop-down menu just on top of the editor to navigate between members, but currently, VS for Mac at least, doesn't have any similar.&lt;/p&gt;
-
-&lt;p&gt;Conventions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Key: {Identifier}Color for &lt;code&gt;Color&lt;/code&gt; or {Identifier}ColorString for &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Value: lowercase hex format (you can opt for uppercase, but choosing one will keep consistency)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;RGB most of the times, although ARGB works pretty well in scenarios where backgrounds are semitransparent, or gradients too&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;```xaml
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;ResourceDictionary 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="XamarinCrumbs.XamarinForms.Colors"&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;Color x:Key="AccentColor"&amp;gt;#50e3c2&amp;lt;/Color&amp;gt;
-&amp;lt;x:String x:Key="AccentColorString"&amp;gt;#50e3c2&amp;lt;/x:String&amp;gt;
-
-&amp;lt;Color x:Key="DefaultTextColor"&amp;gt;#abb3c8&amp;lt;/Color&amp;gt;
-
-&amp;lt;Color x:Key="SecondaryTextColor"&amp;gt;#868ea4&amp;lt;/Color&amp;gt;
-
-&amp;lt;Color x:Key="WhiteColor"&amp;gt;#ffffff&amp;lt;/Color&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/ResourceDictionary&gt;
-```&lt;/p&gt;
-
-&lt;p&gt;You've probably asked your-self why WhiteColor's defined when there's already White in &lt;code&gt;Xamarin.Forms.Color&lt;/code&gt;: sometimes it's intelligent to "duplicate" them for supporting future tonality changes, f.e.&lt;/p&gt;
-
-&lt;p&gt;Moreover, you've seen in above XAML there's the same color twice: it makes sense when you need to consume such for controls like &lt;a href="https://github.com/luberda-molinet/FFImageLoading"&gt;FFImageLoading&lt;/a&gt;'s, which don't accept a &lt;code&gt;Color&lt;/code&gt;, but a &lt;code&gt;string&lt;/code&gt; in hex format.&lt;/p&gt;
-
-&lt;p&gt;Although I've personally prefered naming colors by their actual value (LightGreenColor, for example), I've ended up choosing those which give a hint on where they're applied: DefaultTextColor, SeparatorColor, things like these.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;PS.&lt;/em&gt;: On 2017 I wrote this small thing, &lt;a href="?i=abanico-a-few-hours-with-xamarin-forms-and-skiasharp"&gt;Abanico&lt;/a&gt;, to understand how color wheels work. It's Xamarin.Forms too, with SkiaSharp:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="items/images/jun-21-2017-22-47-38.gif" alt="" /&gt;&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 09 Oct 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>
