@@ -3,19 +3,62 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    
-</head>
-<body>
-    <div id="uno-body" class="container-fluid">
-        <p id="loading"><i class="fa fa-refresh fa-spin" style="font-size:14px;margin-right:0.5em;"></i> Loading...</p>
-    </div>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
     <script defer type="text/javascript" src="require.js"></script>
     <script type="text/javascript" src="mono-config.js"></script>
     <script type="text/javascript" src="uno-config.js"></script>
     <script type="text/javascript" src="uno-bootstrap.js"></script>
     <script async type="text/javascript" src="mono.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="normalize.css" />
+<link rel="stylesheet" type="text/css" href="uno-bootstrap.css" />
+    <link rel="prefetch" href="mono.wasm" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/Mono.Security.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/Samples.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.ComponentModel.Composition.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Core.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Data.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Drawing.Common.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.IO.Compression.FileSystem.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.IO.Compression.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Memory.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Net.Http.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Numerics.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Runtime.Serialization.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.ServiceModel.Internals.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Transactions.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Web.Services.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Xml.Linq.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.Xml.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/System.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/WaveEngine.Common.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/WebAssembly.Bindings.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/WebAssembly.Net.Http.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/WebAssembly.Net.WebSockets.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/WebGLDotNET.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/mscorlib.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/netstandard.clr" />
+<link rel="prefetch" href="managed-473f6dad1a68115f3bc14081e172014d5308c536/protobuf-net.clr" />
+
+</head>
+<body>
+    <div id="uno-body" class="container-fluid uno-body">
+        <div class="uno-loader"
+             loading-position="bottom"
+             loading-alert="none">
+
+            <!-- Logo: change src to customize the logo -->
+            <img class="logo"
+                 src=""
+                 title="Uno is loading your application" />
+
+            <progress></progress>
+            <span class="alert"></span>
+        </div>
+    </div>
+    <noscript>
+        <p>This application requires Javascript and WebAssembly to be enabled.</p>
+    </noscript>
 </body>
 </html>
