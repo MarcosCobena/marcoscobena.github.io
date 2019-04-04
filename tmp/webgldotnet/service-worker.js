@@ -30,4 +30,4 @@ self.addEventListener('fetch', event => {
         })
     );
 });
-// managed-509309c8a0dd4b418e17f9f8c7a8951656bccf7e
+// managed-8215c20a8a8aafa8c55dc73f8784eaae18775f22
