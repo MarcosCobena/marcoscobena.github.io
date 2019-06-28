@@ -4,6 +4,108 @@
 <description>Marcos' Blog</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Unit Testing WebGL.NET</title>
+  <guid>https://marcoscobena.com/?i=unit-testing-webglnet</guid>
+  <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
+
+&lt;p&gt;While my mate Juan is working on the first actual Wave Engine 3.0 app with WebGL -he's already achieved the tricolor 
+triangle, by the way- I've spent some time trying to set up something for unit testing the API. Eric Mellino, the guy 
+from Veldrid, created 2 issues the other day about marshalling errors and, as I was thinking how to address them, I 
+heavily noticed the need to avoid regressions such like those.&lt;/p&gt;
+
+&lt;p&gt;The pair Mono Wasm and Unit Tests isn't an easy one: I tried to run Xunit's AssemblyRunner with no success -the browser 
+always stucks on the discovering/execution process. Although I didn't debug it deeply (debugging isn't so easy either...
+) my bet is Xunit relies on multiple ManualResetEvents and Wasm is monothread nowadays (I'm aware of Chrome's 
+implementation but am trying to stick to the common one). I tried different attempts: going down the Xunit repo to find 
+what was being executed internally but, in the end, got nothing.&lt;/p&gt;
+
+&lt;p&gt;But came up with an idea: since Xunit has splitted the asserts thing as a separate NuGet I could build a small 
+infrastructure to discover tests through reflection and depend on Xunit for the in-test experience. And voilá! 
+&lt;a href="https://webglnet.surge.sh/tests/"&gt;Here&lt;/a&gt; it's (&lt;a href="https://github.com/WaveEngine/WebGL.NET/tree/master/src/Tests"&gt;this&lt;/a&gt; is 
+the source code). I still have to fix the Linux build which's not publishing the tests/ dir at Surge but this is another
+ page.&lt;/p&gt;
+
+&lt;p&gt;Oh, the entire test set fails on my home machine, will have to look into that:&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;mono&lt;em&gt;wasm&lt;/em&gt;runtime&lt;em&gt;ready mono.js:7805:14
+    ﻿4 tests found mono.js:2236:13
+    Running 'GetErrorRegressionTest'... mono.js:2236:13
+    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.Invoke (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:127 mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.InvokeForBasicType[T] (System.String method, System.Object[] args) [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:154 mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.GetError () [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:810 mono.js:2236:13
+      at Tests.TheTests.GetErrorRegressionTest () [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:19 mono.js:2236:13
+      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
+       --- End of inner exception stack trace --- mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
+      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
+      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
+    Failed! mono.js:2236:13
+    Running 'GetUniformBlockIndexRegressionTest'... mono.js:2236:13
+    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.Invoke[T] (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:137 mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.CreateProgram () [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:744 mono.js:2236:13
+      at Tests.TheTests.GetUniformBlockIndexRegressionTest () [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:27 mono.js:2236:13
+      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
+       --- End of inner exception stack trace --- mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
+      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
+      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
+    Failed! mono.js:2236:13
+    Running 'BindBufferRangeRegressionTest'... mono.js:2236:13
+    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.Invoke[T] (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:137 mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.CreateBuffer () [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:740 mono.js:2236:13
+      at Tests.TheTests.BindBufferRangeRegressionTest () [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:34 mono.js:2236:13
+      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
+       --- End of inner exception stack trace --- mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
+      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
+      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
+    Failed! mono.js:2236:13
+    Running 'BufferSubDataRegressionTest'... mono.js:2236:13
+    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.Invoke (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:127 mono.js:2236:13
+      at WebGLDotNET.WebGLRenderingContextBase.BufferSubData (System.UInt32 target, System.UInt32 offset, System.Array data) [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:716 mono.js:2236:13
+      at Tests.TheTests.BufferSubDataRegressionTest () [0x00008] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:41 mono.js:2236:13
+      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
+       --- End of inner exception stack trace --- mono.js:2236:13
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
+      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
+      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
+    Failed! mono.js:2236:13
+    0/4 tests passed mono.js:2236:13
+    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
+    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
+    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
+    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
+    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
+    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7_15 mono.js:9089:18
+    ```&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 27 Jun 2019 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Pull-Request reviews</title>
   <guid>https://marcoscobena.com/?i=pr-reviews</guid>
   <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
@@ -688,65 +790,5 @@ return Error();
 &lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/NotConverter.cs"&gt;NotConverter&lt;/a&gt;&lt;code&gt;x:Key="Not" /&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Tue, 30 Oct 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML: Control Templates</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml-control-templates</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;ControlTemplates.xaml&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src="items/images/pine-watt-412305-unsplash.jpg" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Photo by &lt;a href="https://unsplash.com/photos/3_Xwxya43hE?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;pine  watt&lt;/a&gt; on &lt;a href="https://unsplash.com/search/photos/frame?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;As it uses to happen, I learned what Control Templates were during a big refactoring involving styles. When you're going through the screens designed, don't you realize there's a common pattern? If you do, try to group all those things shared into Control Templates, because will frame your pages letting such concentrate just in the inner content.&lt;/p&gt;
-
-&lt;p&gt;Conventions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Key: {Identifier}Template&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In order to consume them, just add those at page's definition:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xaml
-&amp;lt;ContentPage 
-    [...]
-    ControlTemplate="{StaticResource FullScreenLoadingTemplate}"&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This one's particularly handy, as can make any page loading-aware:&lt;/p&gt;
-
-&lt;p&gt;```xaml
-&lt;ControlTemplate x:Key="FullScreenLoadingTemplate"&gt;
-    &lt;AbsoluteLayout&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    &amp;lt;ContentPresenter
-        AbsoluteLayout.LayoutFlags="All"
-        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-        IsVisible="{TemplateBinding BindingContext.IsBusy, Converter={StaticResource NotConverter}}" /&amp;gt;
-
-    &amp;lt;ContentView
-        AbsoluteLayout.LayoutFlags="All"
-        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-        IsVisible="{TemplateBinding BindingContext.IsBusy}"&amp;gt;
-
-        &amp;lt;ActivityIndicator
-            IsRunning="true"
-            HorizontalOptions="Center"
-            VerticalOptions="Center" /&amp;gt;
-
-    &amp;lt;/ContentView&amp;gt;
-
-&amp;lt;/AbsoluteLayout&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/ControlTemplate&gt;
-```&lt;/p&gt;
-
-&lt;p&gt;Another scenario where I found these quite useful's pages with custom nav bars —i.e. you don't want predefined OS one. Instead of stacking once and again your "CustomNavBarControl" it can be done just once, worrying on the actual changing content.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Wed, 17 Oct 2018 22:00:00 GMT</pubDate>
 </item></channel>
 </rss>
