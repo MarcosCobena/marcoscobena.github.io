@@ -4,6 +4,53 @@
 <description>Marcos' Blog</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Your first Wasm app with C#</title>
+  <guid>https://marcoscobena.com/?i=wasmapp1</guid>
+  <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
+Mono's latest Wasm progress. It's taking the shape of something which could make users File &gt; New and start creating 
+apps with such but, still needs some progress. However, I ask my-self whether everyone out there would like to start 
+writing C# to target Wasm but still not worrying on configuring their environment in any way.&lt;/p&gt;
+
+&lt;p&gt;Frank Krueger and Jérôme Laban have made great works with their NuGets Ouui.Wasm and Uno.Wasm.Bootstrap, respectively, 
+but as soon as you want to go deeper in JavaScript &amp;amp; .NET communication (consuming the DOM in a richer way, for 
+instance), you'll surely enjoy having the peeper Mono is working on.&lt;/p&gt;
+
+&lt;p&gt;For all this, I've set up &lt;a href="https://github.com/MarcosCobena/WasmApp1"&gt;WasmApp1&lt;/a&gt; repo, the minimum stuff needed I guess, 
+to give all the power for targeting Wasm. You just can go and clone or download it, and start working. I'd like to 
+keep it updated with the latest changes from Mono, but what I dream with is deleting such in the upcoming months 
+because finally it's all integrated into stable, and File &gt; New &gt; Wasm App would be just there :-)&lt;/p&gt;
+
+&lt;p&gt;In the meantime, this is a session for start running your app. The last command (&lt;code&gt;xsp4&lt;/code&gt;) serves the output folder at 
+http://localhost:9000/, and it's Mono's integrated ASP.NET server for CLI, which comes with regular Mono downloads; 
+you can use anything for serving such actually, or just upload it to your own web server:&lt;/p&gt;
+
+&lt;p&gt;```cmd
+C:\Users\Marcos\source\repos\WasmApp1&gt;dotnet build
+Microsoft (R) Build Engine versión 15.8.169+g1ccb72aefa para .NET Core
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.&lt;/p&gt;
+
+&lt;p&gt;Restauración realizada en 54,5 ms para C:\Users\Marcos\source\repos\WasmApp1\WasmApp1\WasmApp1.csproj.&lt;/p&gt;
+
+&lt;p&gt;Compilación correcta.
+    0 Advertencia(s)
+    0 Errores&lt;/p&gt;
+
+&lt;p&gt;Tiempo transcurrido 00:00:01.63&lt;/p&gt;
+
+&lt;p&gt;C:\Users\Marcos\source\repos\WasmApp1&gt;xsp4 WasmApp1\bin\Debug\netstandard2.0\
+xsp4
+Listening on address: 0.0.0.0
+Root directory: C:\Users\Marcos\source\repos\WasmApp1\WasmApp1\bin\Debug\netstandard2.0
+Listening on port: 9000 (non-secure)
+Hit Return to stop the server.&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;Now browse http://localhost:9000/ in your prefered app (Wasm is widely supported) and enjoy!&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Fri, 05 Jul 2019 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Unit Testing WebGL.NET</title>
   <guid>https://marcoscobena.com/?i=unit-testing-webglnet</guid>
   <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
@@ -757,38 +804,5 @@ return Error();
 &lt;/code&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Thu, 08 Nov 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML: Converters</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml-converters</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Converters.xaml&lt;/h3&gt;
-
-&lt;p&gt;I think it's no new for anyone. If a particular converter's used only on a single XAML, just define it there. However, for those in more than one, having them here will help you adding new ones.&lt;/p&gt;
-
-&lt;p&gt;Conventions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Key: &lt;code&gt;nameof(YourActualConverter).Replace("Converter", string.Empty)&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The reason why "Converter" is ripped from the key comes from better readability when using them in XAML: it just feels nicer things like —the word already appears a few times:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;IsEnabled="{Binding ImagePath, Converter={StaticResource StringEmptyToBool}, ConverterParameter=inverse}"&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;​    I think will keep here all those I reuse from project to project:    &lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/AnyConverter.cs"&gt;AnyConverter&lt;/a&gt;&lt;code&gt;x:Key="Any" /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/AreEqualsConverter.cs"&gt;AreEqualsConverter&lt;/a&gt;&lt;code&gt;x:Key="AreEquals" /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/IsStringNullOrWhiteSpaceConverter.cs"&gt;IsStringNullOrWhiteSpaceConverter&lt;/a&gt;&lt;code&gt;x:Key="IsStringNullOrWhiteSpace" /&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;converters:&lt;/code&gt;&lt;a href="https://github.com/MarcosCobena/XamarinCrumbs/blob/master/XamarinCrumbs/XamarinForms/Converters/NotConverter.cs"&gt;NotConverter&lt;/a&gt;&lt;code&gt;x:Key="Not" /&amp;gt;&lt;/code&gt;&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 30 Oct 2018 23:00:00 GMT</pubDate>
 </item></channel>
 </rss>
