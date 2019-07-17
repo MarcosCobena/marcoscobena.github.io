@@ -1,5 +1,21 @@
 *Pst!* I almost never work on projects alone; this' the result of a whole team effort:
 
+### Attendance Control
+
+During some months our apps team at Plain Concepts have been working on this Xamarin.Android project
+for MAPAL, a spanish company which provides attendance control solutions focused on restaurants and
+similar. The key point here was to build the entire product, including a custom ODROID tablet, and
+make all work in the immersive mode (no one should see Android below). I'm particularly proud of the
+actual timeline control, which was made entirely through Android's drawing API.
+
+|            |                                                              |
+| ---------- | ------------------------------------------------------------ |
+| Language   | C# (.NET)                                                    |
+| Frameworks | Xamarin.Android                                              |
+| Platforms  | Android                                                      |
+| Date       | February-May 2019                                            |
+| More info? | [https://mapalsoftware.com/](https://mapalsoftware.com/)     |
+
 ### Tailwind Traders
 
 ![](items/images/TailwindTraders.png)
