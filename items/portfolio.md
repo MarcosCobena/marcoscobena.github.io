@@ -1,6 +1,8 @@
 *Pst!* I almost never work on projects alone; this' the result of a whole team effort:
 
-### Attendance Control
+### Time Attendance
+
+![](items/images/TimeAttendance.png)
 
 During some months our apps team at Plain Concepts have been working on this Xamarin.Android project
 for MAPAL, a spanish company which provides attendance control solutions focused on restaurants and
