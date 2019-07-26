@@ -25,6 +25,7 @@ addItem("Tools", "tools", "14/1/2019");
 
 // Posts —this' the order they'll appear listed
 
+addPost("Wave Engine & WebGL.NET status", "2019-7-26", "26/7/2019");
 addPost("Your first Wasm app with C#", "wasmapp1", "6/7/2019");
 addPost("Unit Testing WebGL.NET", "unit-testing-webglnet", "28/6/2019");
 addPost("Pull-Request reviews", "pr-reviews", "20/2/2019");

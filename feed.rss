@@ -4,6 +4,53 @@
 <description>Marcos' Blog</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Wave Engine &amp; WebGL.NET status</title>
+  <guid>https://marcoscobena.com/?i=2019-7-26</guid>
+  <description>&lt;p&gt;After some months working on
+&lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; this Wednesday we've
+finally created the first NuGet. I've been personally avoiding doing this
+because we rely on some Mono's NuGets which are not public so anyone adding ours
+will get a bunch of errors.&lt;/p&gt;
+
+&lt;p&gt;However, we neeed such. Wave Engine was consuming WebGL through a submodule
+inside a submodule and such dependency was breaking flow to some of my
+workmates. I discussed this with Dani and found a medium-term solution:
+- creating a private feed on Azure DevOps and put every Mono dependency there
+  isolated, and
+- publish WebGL.NET under preview and alert on above in a noticeable place -I
+  think still noone has still used such but there it's :-)&lt;/p&gt;
+
+&lt;p&gt;Also, I discovered this &lt;a href="http://deat.tk/jazz2/wasm/"&gt;game&lt;/a&gt; which's using our
+project from sources and even have evolved it in some places. If people can
+consume it through NuGet I believe will report issues back and we all can gain
+from that. Eric Mellino's done something similar too, and provided good issues
+:-)&lt;/p&gt;
+
+&lt;p&gt;So, the NuGet is just there and it works. I must say we're close to complete
+every low-level Wave Engine visual test on Wasm so it reforces the idea of
+having WebGL.NET somewhat stable.&lt;/p&gt;
+
+&lt;p&gt;Working on 2D &amp;amp; 3D textures this week I've written once and again this portion:
+```csharp
+IntPtr data = [...] // Imagine a large chunk of bytes
+var colors = new byte[length];
+Marshal.Copy(data, colors, colors.Length);&lt;/p&gt;
+
+&lt;p&gt;GL.TexImage2D([...], colors);
+```&lt;/p&gt;
+
+&lt;p&gt;, and, obviously, this should be done &lt;em&gt;inside&lt;/em&gt; our binding, exposing a new
+overload for passing pixels as &lt;code&gt;IntPtr&lt;/code&gt;. Actually OpenGL/ES does something
+similar too.&lt;/p&gt;
+
+&lt;p&gt;Today Miguel de Icaza has told us in Twitter Mono's Wasm bits will be launched
+by the end of the year and that's great. Still the development workflow is rough
+but for sure this will improve; however, even in this way, Wasm is a great
+platform to target because of the browser-based and native execution tuple.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 25 Jul 2019 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Your first Wasm app with C#</title>
   <guid>https://marcoscobena.com/?i=wasmapp1</guid>
   <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
@@ -757,52 +804,5 @@ return Error();
 &lt;p&gt;Are you looking for Key-full styles? &lt;a href="?i=xf-xaml-styles"&gt;Styles.xaml&lt;/a&gt; is your place.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Tue, 13 Nov 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML: Font Styles</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml-font-styles</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;FontStyles.xaml&lt;/h3&gt;
-
-&lt;p&gt;Dealing with fonts can be a tricky part: because the app shows font faces different from the respective OS' ones, or because the Design specs have multiple sizes, for example.&lt;/p&gt;
-
-&lt;p&gt;You can define here every font the app may need. This will help you refactor sizes, for instance, much more easier —although for sizes I strongly recommend to consider &lt;a href="https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.namedsize?view=xamarin-forms"&gt;named sizes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Conventions:
-- Key: {FontKey}{FontSize}{FontAttributes}{TargetType}Style&lt;/p&gt;
-
-&lt;p&gt;It may be the case you need external fonts, so you can define such this way, using it as a font family:&lt;/p&gt;
-
-&lt;p&gt;```xaml
-&lt;OnPlatform 
-    x:Key="LatoRegular"
-    x:TypeArguments="x:String"
-    Android="Lato-Regular.ttf#Lato"
-    iOS="Lato-Regular" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;Style 
-    x:Key="LatoRegular12RegularLabelStyle"
-    TargetType="Label"&gt;
-    &lt;Setter 
-        Property="FontSize" 
-        Value="12" /&gt;
-&lt;/Style&gt;
-```&lt;/p&gt;
-
-&lt;p&gt;Notice how this one depends on its regular flavour, through inheritance —we don't want to rewrite stuff:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xaml
-&amp;lt;Style
-    x:Key="LatoRegular12BoldLabelStyle"
-    TargetType="Label"
-    BasedOn="{StaticResource LatoRegular12RegularLabelStyle}"&amp;gt;
-    &amp;lt;Setter
-        Property="FontAttributes"
-        Value="Bold" /&amp;gt;
-&amp;lt;/Style&amp;gt;
-&lt;/code&gt;&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 08 Nov 2018 23:00:00 GMT</pubDate>
 </item></channel>
 </rss>
