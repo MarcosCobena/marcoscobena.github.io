@@ -1,4 +1,9 @@
-It's Marcos: I'm a Software Development Engineer focused on .NET —and also enjoy doing things with JavaScript, as [this whole site](https://github.com/MarcosCobena/marcoscobena.github.io). In my spare time I'm working on [GoTo](https://github.com/MarcosCobena/GoTo), which I described [here](?i=goto).
+It's Marcos: I'm a Software Development Engineer focused on .NET —and also enjoy
+doing things with JavaScript, as [this whole
+site](https://github.com/MarcosCobena/marcoscobena.github.io).
+
+[GoTo Studio](goto-studio) is my lame IDE where you
+can play with [GoTo](?i=goto) within the browser.
 
 Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with
 [Xamarin](http://www.xamarin.com) —these [NuGets](https://www.nuget.org/profiles/MarcosCobena) may
