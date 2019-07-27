@@ -6,6 +6,7 @@
 
 .mfractor/
 .vs/
+.vscode/
 
 bin
 obj
