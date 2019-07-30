@@ -10,7 +10,7 @@ addItem("404 Not Found", "404", "29/8/2018");
 addItem("👋 ¡Hola!", "home", "27/7/2019");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "22/8/2018");
-addItem("Conferences", "conferences", "21/6/2019");
+addItem("Conferences", "conferences", "30/7/2019");
 addItem("Contact", "contact", "22/8/2018");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "20/9/2018");
