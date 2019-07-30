@@ -4,7 +4,7 @@ Bringing Wave Engine to the Web through WebGL & WebAssembly
 *Llevando Wave Engine a la web a través de WebGL y WebAssembly*, its original title in Spanish. Along with Wave Engine 
 3.0 launch we explained those steps taken into moving such apps into the Web: from how to run C# 
 code in the browser to the transpiler implemented for covering the entire WebGL API.
-([Slides](items/documents/WaveEngineWebGLWebAssembly.pdf) & [demos](items/documents/UnoWasmBootstrapDemo.zip))
+([YouTube](https://www.youtube.com/watch?v=dzTMsHH5O1w), [slides](items/documents/WaveEngineWebGLWebAssembly.pdf) & [demos](items/documents/UnoWasmBootstrapDemo.zip))
 
 [DotNet 2019](https://www.dotnet2019.com/), Madrid (Spain), June 19th, 2019
 
