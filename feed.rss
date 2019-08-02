@@ -4,6 +4,27 @@
 <description>Marcos' Blog</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
+  <guid>https://marcoscobena.com/?i=2019-8-2</guid>
+  <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
+running —between quotes because the stencil one actually doesn't, and we need to go for a second round as we enabled
+texture storage in the middle.&lt;/p&gt;
+
+&lt;p&gt;This' for instance the last one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/FrameBufferTextureCubeTest.gif" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the beginning of the week I worked on passing a ReadOnlySpan&amp;lt;byte&amp;gt; to a few WebGL calls —as Juan recommended us
+through Twitter. I started touching the transpiler, WebIDLToCSharp, but quickly noticed it wasn't worth as needs a
+somewhat big change while such can be done at the backend side. Also, I'm not 100% sure will find any other approach
+which's still better in performance.&lt;/p&gt;
+
+&lt;p&gt;With the last visual test we've gotten ~30 fps so thinking on AOT is becoming a must. I'd like to research on this
+sooner or later.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 01 Aug 2019 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Wave Engine &amp; WebGL.NET status</title>
   <guid>https://marcoscobena.com/?i=2019-7-26</guid>
   <description>&lt;p&gt;After some months working on
@@ -757,52 +778,5 @@ return Error();
 &lt;p&gt;It may not be significant if you've never used this approach before; however, it enforces the grid along every page, pushing a sense of visual coherence —at least for those like me who are highly sensitive to this stuff.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Mon, 19 Nov 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML: Global Styles</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml-global-styles</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;GlobalStyles.xaml&lt;/h3&gt;
-
-&lt;p&gt;Wouldn't be great to default &lt;code&gt;StackLayout&lt;/code&gt;'s &lt;code&gt;Spacing&lt;/code&gt; to 0 everywhere, or having every &lt;code&gt;Label&lt;/code&gt; a default font size and color? Less code to write, easier refactorings. All these fit here perfectly.&lt;/p&gt;
-
-&lt;p&gt;You may ask: why default controls' spacing, padding, margin, etc. to 0? Because, personally, when working with Design specs it helps a lot to just take into account those sizes I explicitly type.&lt;/p&gt;
-
-&lt;p&gt;```xaml
-&lt;!-- This exposes DefaultButtonStyle as the predefined one for every Button --&gt;
-&lt;Style
-  BasedOn="{StaticResource DefaultButtonStyle}"
-  TargetType="Button" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;Style TargetType="Entry"&gt;
-  &lt;Setter Property="TextColor" Value="{StaticResource AccentColor}" /&gt;
-&lt;/Style&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;Style TargetType="Frame"&gt;
-  &lt;Setter Property="HasShadow" Value="false" /&gt;
-  &lt;Setter Property="Padding" Value="0" /&gt;
-&lt;/Style&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;Style TargetType="Grid"&gt;
-  &lt;Setter Property="ColumnSpacing" Value="0" /&gt;
-  &lt;Setter Property="RowSpacing" Value="0" /&gt;
-&lt;/Style&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;!-- This sets font-related settings to every Label --&gt;
-&lt;Style
-  BasedOn="{StaticResource BrandonGrotesqueMediumMediumFontStyle}"
-  TargetType="Label"&gt;
-  &lt;Setter Property="TextColor" Value="{StaticResource AccentColor}" /&gt;
-&lt;/Style&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;Style TargetType="StackLayout"&gt;
-  &lt;Setter Property="Spacing" Value="0" /&gt;
-&lt;/Style&gt;
-```&lt;/p&gt;
-
-&lt;p&gt;Are you looking for Key-full styles? &lt;a href="?i=xf-xaml-styles"&gt;Styles.xaml&lt;/a&gt; is your place.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 13 Nov 2018 23:00:00 GMT</pubDate>
 </item></channel>
 </rss>
