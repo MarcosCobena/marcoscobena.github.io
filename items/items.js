@@ -11,7 +11,7 @@ addItem("👋 ¡Hola!", "home", "27/7/2019");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "22/8/2018");
 addItem("Conferences", "conferences", "30/7/2019");
-addItem("Contact", "contact", "22/8/2018");
+addItem("Contact", "contact", "2/8/2019");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "20/9/2018");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
