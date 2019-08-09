@@ -4,6 +4,19 @@
 <description>Marcos' Blog</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Podcast sobre testing</title>
+  <guid>https://marcoscobena.com/?i=podcast-testing</guid>
+  <description>&lt;p&gt;&lt;a href="https://twitter.com/juanlao"&gt;Juanma&lt;/a&gt; y yo grabamos ayer este "podcast" sobre testing, en general —no tenemos nombre por
+ahora:&lt;/p&gt;
+
+&lt;p&gt;&lt;audio controls loop&gt;
+  &lt;source src="items/documents/PodcastTesting.mp3" type="audio/mpeg"&gt;
+(Sorry, your browser doesn't support embedding audio.)
+&lt;/audio&gt;&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Thu, 08 Aug 2019 22:00:00 GMT</pubDate>
+</item>
+<item>
   <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
   <guid>https://marcoscobena.com/?i=2019-8-2</guid>
   <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
@@ -735,48 +748,5 @@ return Error();
 &lt;/code&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Wed, 21 Nov 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML: Sizes</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml-sizes</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post belongs to &lt;a href="?i=xf-xaml"&gt;Xamarin.Forms XAML&lt;/a&gt; series)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;Sizes.xaml&lt;/h3&gt;
-
-&lt;p&gt;This' the perfect place for sizes: margins, paddings, spacings, font sizes, etc. It's quite common designs rely in recurrent sizes to place stuff, thus are suitable to be reused —Designers use to call this "working on the grid" :-)&lt;/p&gt;
-
-&lt;p&gt;Conventions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Key: {Negative?}{Adjective}{Identifier}{Type}, where Type stands for Margin, Padding, etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;```xaml
-&lt;x:Double x:Key="DefaultMargin"&gt;16&lt;/x:Double&gt;
-&lt;x:Int32 x:Key="DefaultMarginInt"&gt;16&lt;/x:Int32&gt;
-&lt;!-- Notice how we've defined the negative version, as it's neat for disabling outer margins, f.e. --&gt;
-&lt;x:Double x:Key="NegativeDefaultMargin"&gt;-16&lt;/x:Double&gt;
-&lt;x:Int32 x:Key="NegativeDefaultMarginInt"&gt;-16&lt;/x:Int32&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;x:Double x:Key="0.5xDefaultMargin"&gt;8&lt;/x:Double&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;x:Double x:Key="2xDefaultMargin"&gt;32&lt;/x:Double&gt;
-&lt;x:Double x:Key="Negative2xDefaultMargin"&gt;-32&lt;/x:Double&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;x:Double x:Key="3xDefaultMargin"&gt;48&lt;/x:Double&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;x:Double x:Key="4xDefaultMargin"&gt;64&lt;/x:Double&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;x:Double x:Key="Default2Margin"&gt;24&lt;/x:Double&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;!-- This can be handy if you drop shadows through PlatformConfigurations' VisualElement.Elevation --&gt;
-&lt;x:Int32 x:Key="DefaultElevation"&gt;30&lt;/x:Int32&gt;
-```&lt;/p&gt;
-
-&lt;p&gt;I like to ask Designers during the first days which's their default grid size, and then start building above list up on such value —for instance above relies in 16, the default one.&lt;/p&gt;
-
-&lt;p&gt;It may not be significant if you've never used this approach before; however, it enforces the grid along every page, pushing a sense of visual coherence —at least for those like me who are highly sensitive to this stuff.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Mon, 19 Nov 2018 23:00:00 GMT</pubDate>
 </item></channel>
 </rss>
