@@ -12,7 +12,11 @@ ahora:&lt;/p&gt;
 &lt;p&gt;&lt;audio controls loop&gt;
   &lt;source src="items/documents/PodcastTesting.mp3" type="audio/mpeg"&gt;
 (Sorry, your browser doesn't support embedding audio.)
-&lt;/audio&gt;&lt;/p&gt;</description>
+&lt;/audio&gt;&lt;/p&gt;
+
+&lt;p&gt;Créditos:
+- El redoble para anunciar nuestro patrocinador lo cogimos de
+  &lt;a href="https://freesound.org/people/bigjoedrummer/sounds/77305/"&gt;aquí&lt;/a&gt;&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Thu, 08 Aug 2019 22:00:00 GMT</pubDate>
 </item>

@@ -5,3 +5,7 @@ ahora:
   <source src="items/documents/PodcastTesting.mp3" type="audio/mpeg">
 (Sorry, your browser doesn't support embedding audio.)
 </audio>
+
+Créditos:
+- El redoble para anunciar nuestro patrocinador lo cogimos de
+  [aquí](https://freesound.org/people/bigjoedrummer/sounds/77305/)
