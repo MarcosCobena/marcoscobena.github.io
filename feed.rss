@@ -6,23 +6,9 @@
 <item>
   <title>Podcast sobre testing</title>
   <guid>https://marcoscobena.com/?i=podcast-testing</guid>
-  <description>&lt;p&gt;&lt;a href="https://twitter.com/juanlao"&gt;Juanma&lt;/a&gt; y yo grabamos ayer este "podcast" sobre testing, en general —no tenemos nombre por
-ahora:&lt;/p&gt;
-
-&lt;p&gt;&lt;audio controls loop&gt;
-  &lt;source src="items/documents/PodcastTesting.mp3" type="audio/mpeg"&gt;
-(Sorry, your browser doesn't support embedding audio.)
-&lt;/audio&gt;&lt;/p&gt;
-
-&lt;p&gt;Referencias:
-- &lt;a href="https://grumpygamer.com/unit_testing_games"&gt;Este&lt;/a&gt; es el artículo que menciono de Ron Gilbert sobre testing en
-  vídeo-juegos&lt;/p&gt;
-
-&lt;p&gt;Créditos:
-- El redoble para anunciar nuestro patrocinador lo cogimos de
-  &lt;a href="https://freesound.org/people/bigjoedrummer/sounds/77305/"&gt;aquí&lt;/a&gt;&lt;/p&gt;</description>
+  <description>&lt;p&gt;Hemos movido esto &lt;a href="?i=juanma-y-marcos"&gt;aquí&lt;/a&gt;.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 08 Aug 2019 22:00:00 GMT</pubDate>
+  <pubDate>Mon, 30 Sep 2019 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>

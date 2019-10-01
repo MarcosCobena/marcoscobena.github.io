@@ -26,7 +26,6 @@ addItem("Tools", "tools", "14/1/2019");
 
 // Posts —this' the order they'll appear listed
 
-addPost("Your first WebGL.NET app", "hello-webgldotnet", "28/8/2019");
 addPost("Podcast sobre testing", "podcast-testing", "1/10/2019");
 addPost("The 'last' Visual Test #WaveEngine #WebGL #Wasm", "2019-8-2", "2/8/2019");
 addPost("Wave Engine & WebGL.NET status", "2019-7-26", "26/7/2019");
