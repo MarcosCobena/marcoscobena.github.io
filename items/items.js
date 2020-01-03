@@ -16,7 +16,7 @@ addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "20/9/2018");
 addItem("Juanma y Marcos", "juanma-y-marcos", "1/10/2019");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
-addItem("Portfolio", "portfolio", "18/7/2019");
+addItem("Portfolio", "portfolio", "3/1/2020");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Reading", "reading", "16/7/2019");
 addItem("Recipes", "recipes", "14/6/2018");

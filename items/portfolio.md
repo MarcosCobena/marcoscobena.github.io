@@ -1,5 +1,23 @@
 *Pst!* I almost never work on projects alone; this' the result of a whole team effort:
 
+### WebGL.NET
+
+![](items/images/WebGLDotNET.gif)
+
+With the goal of enabling [Wave Engine](https://waveengine.net/) in the web, my mate 
+[Juan](https://twitter.com/jacano35) & I started exploring how such could be done with current 
+[Mono's WebAssembly](https://github.com/mono/mono/tree/master/sdks/wasm) support. It looked promising, so I switched 
+to full-time work on a bindings set to serve as the low-level WebGL layer for Wave. I really enjoyed writting the 
+transpiler with ANTLR, which auto-generates the C# bindings from the official Khronos' specification.
+
+|            |                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------- |
+| Language   | C# (.NET)                                                                              |
+| Frameworks | Mono's WebAssembly Runtime, ANTLR                                                      |
+| Platforms  | WebAssembly                                                                            |
+| Date       | June-October 2019                                                                      |
+| More info? | [https://github.com/WaveEngine/WebGL.NET](https://github.com/WaveEngine/WebGL.NET)     |
+
 ### Time Attendance
 
 ![](items/images/TimeAttendance.png)
