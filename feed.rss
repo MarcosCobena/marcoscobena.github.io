@@ -18,7 +18,7 @@
 
 &lt;p&gt;&lt;em&gt;The on-boarding experience&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://gltf.waveengine.net/"&gt;glTF viewer&lt;/a&gt; is a SPA (Single Page Application, a website run on a single page) which works entirely in client side, powered by &lt;a href="https://github.com/mono/mono/tree/master/sdks/wasm"&gt;Mono's support for Wasm&lt;/a&gt;, which will be &lt;a href="https://twitter.com/jcant0n/status/1200388180316446721"&gt;included in .NET 5&lt;/a&gt;. glTF is the nowadays standard for 3D models, and can be viewed on-line by simply drag &amp;amp; dropping such inside �we've included a demo-mode for those without a handy file close. Its main features pack:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gltf.waveengine.net/"&gt;glTF viewer&lt;/a&gt; is a SPA (Single Page Application, a website run on a single page) which works entirely in client side, powered by &lt;a href="https://github.com/mono/mono/tree/master/sdks/wasm"&gt;Mono's support for Wasm&lt;/a&gt;, which will be &lt;a href="https://twitter.com/jcant0n/status/1200388180316446721"&gt;included in .NET 5&lt;/a&gt;. glTF is the nowadays standard for 3D models, and can be viewed on-line by simply drag &amp;amp; dropping such inside —we've included a demo-mode for those without a handy file close. Its main features pack:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;support for glTF 2.0 (*) in different flavours: plain glTF, glTF-Binary (.glb) and glTF-Embedded
@@ -61,7 +61,7 @@ FS.close(stream);
 
 &lt;p&gt;Solved this, the next issue we found was how to overcome the glTF files dropped were not processed in any way, and Wave Engine "does not support" reading such on the fly. The quotes are intended, as we do support such: dropping such in the Editor renders the model immediately, but there is some magic underneath.&lt;/p&gt;
 
-&lt;p&gt;We started exploring to consume &lt;code&gt;WaveEngine.Assets&lt;/code&gt; namespace &lt;em&gt;inside&lt;/em&gt; and app, instead of just from the Editor, which was its natural environment. And voil�, it worked! When a .glb file (the single binary format for glTF) is dropped:&lt;/p&gt;
+&lt;p&gt;We started exploring to consume &lt;code&gt;WaveEngine.Assets&lt;/code&gt; namespace &lt;em&gt;inside&lt;/em&gt; and app, instead of just from the Editor, which was its natural environment. And voilá, it worked! When a .glb file (the single binary format for glTF) is dropped:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;it is imported by "decompressing" its content (textures, materials, etc.) into the FS, and&lt;/li&gt;
@@ -80,7 +80,7 @@ FS.close(stream);
 
 &lt;p&gt;How, then, can we read images faster? For our &lt;a href="https://webgldotnet.surge.sh/"&gt;WebGL.NET samples gallery&lt;/a&gt;, our friend Juan Antonio Cano consumed Skia through some initial .NET bindings, and already solved such by taking some hundred ms. However, the current state of &lt;a href="https://github.com/unoplatform/Uno.SkiaSharp"&gt;such bindings&lt;/a&gt;, made by Uno team, were not compatible with vanilla Mono Wasm, thus we looked for an alternative thinking on maintenance in a future. Also important, we only needed the small piece to decode an image, and nothing else.&lt;/p&gt;
 
-&lt;p&gt;It turns out &lt;a href="https://skia.org/user/modules/canvaskit"&gt;CanvasKit&lt;/a&gt; ("Skia in Wasm", quickly), exposed such piece, and has a JavaScript interface. We made some tests in the CanvasKit playground and looked promising. Then, our &lt;code&gt;CanvasKitImporter&lt;/code&gt; was born �replacing ImageSharp one.&lt;/p&gt;
+&lt;p&gt;It turns out &lt;a href="https://skia.org/user/modules/canvaskit"&gt;CanvasKit&lt;/a&gt; ("Skia in Wasm", quickly), exposed such piece, and has a JavaScript interface. We made some tests in the CanvasKit playground and looked promising. Then, our &lt;code&gt;CanvasKitImporter&lt;/code&gt; was born —replacing ImageSharp one.&lt;/p&gt;
 
 &lt;p&gt;```c-sharp
 private JSObject DecodeImage(Stream stream)
