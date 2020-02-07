@@ -1,4 +1,4 @@
-*(This post appeared first [here](https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/) on February 6th, 2020)*
+ï»¿*(This post appeared first [here](https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/) on February 6th, 2020)*
 
 **TL;DR**: We are announcing our experimental glTF on-line viewer made with Wave Engine 3.0, powered by WebAssembly. Try the demo! <a href="http://gltf.waveengine.net" rel="noopener" target="_blank">http://gltf.waveengine.net</a>
 
@@ -10,13 +10,13 @@ Our current WebGL backend relies on its 2.0 version, which is [supported by most
 
 *The on-boarding experience*
 
-[glTF viewer](http://gltf.waveengine.net/) is a SPA (Single Page Application, a website run on a single page) which works entirely in client side, powered by [Mono's support for Wasm](https://github.com/mono/mono/tree/master/sdks/wasm), which will be [included in .NET 5](https://twitter.com/jcant0n/status/1200388180316446721). glTF is the nowadays standard for 3D models, and can be viewed on-line by simply drag &amp; dropping such inside —we've included a demo-mode for those without a handy file close. Its main features pack:
+[glTF viewer](http://gltf.waveengine.net/) is a SPA (Single Page Application, a website run on a single page) which works entirely in client side, powered by [Mono's support for Wasm](https://github.com/mono/mono/tree/master/sdks/wasm), which will be [included in .NET 5](https://twitter.com/jcant0n/status/1200388180316446721). glTF is the nowadays standard for 3D models, and can be viewed on-line by simply drag &amp; dropping such inside â€”we've included a demo-mode for those without a handy file close. Its main features pack:
 
-- support for glTF 2.0 (*) in different flavours: plain glTF, glTF-Binary (.glb) and glTF-Embedded
-  - [here](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0) you can find sample models
-  - (*) it may happen models fail loading: we are working on making the import process stronger, and would help us if you report us any issue may find (thanks in advance!)
-- load .glb files from external links: you can show models to others by just sharing a single link ([example](https://gltf.waveengine.net/?model=https%3A%2F%2Fraw.githubusercontent.com%2FKhronosGroup%2FglTF-Sample-Models%2Fmaster%2F2.0%2FAvocado%2FglTF-Binary%2FAvocado.glb))
-- manipulate the model with mouse or fingers, thinking on mobile devices for this last
+  - support for glTF 2.0 (*) in different flavours: plain glTF, glTF-Binary (.glb) and glTF-Embedded
+    - [here](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0) you can find sample models
+    - (*) it may happen models fail loading: we are working on making the import process stronger, and would help us if you report us any issue may find (thanks in advance!)
+  - load .glb files from external links: you can show models to others by just sharing a single link ([example](https://gltf.waveengine.net/?model=https%3A%2F%2Fraw.githubusercontent.com%2FKhronosGroup%2FglTF-Sample-Models%2Fmaster%2F2.0%2FAvocado%2FglTF-Binary%2FAvocado.glb))
+  - manipulate the model with mouse or fingers, thinking on mobile devices for this last
 
 This article will visit a few caveats we found during the development, and how we surpassed them finally. We hope you enjoy reading such and, hopefully, will learn something new in between.
 
@@ -46,7 +46,7 @@ function writeToFS(filename, typedArray) {
 
 Solved this, the next issue we found was how to overcome the glTF files dropped were not processed in any way, and Wave Engine "does not support" reading such on the fly. The quotes are intended, as we do support such: dropping such in the Editor renders the model immediately, but there is some magic underneath.
 
-We started exploring to consume `WaveEngine.Assets` namespace *inside* and app, instead of just from the Editor, which was its natural environment. And voilá, it worked! When a .glb file (the single binary format for glTF) is dropped:
+We started exploring to consume `WaveEngine.Assets` namespace *inside* and app, instead of just from the Editor, which was its natural environment. And voilÃ¡, it worked! When a .glb file (the single binary format for glTF) is dropped:
 
 - it is imported by "decompressing" its content (textures, materials, etc.) into the FS, and
 - it is exported by generating .we* files ready to be read by Wave Engine
@@ -63,7 +63,7 @@ Allocating memory it-self is not a problem, Wave internally depends on `ArrayPoo
 
 How, then, can we read images faster? For our [WebGL.NET samples gallery](https://webgldotnet.surge.sh/), our friend Juan Antonio Cano consumed Skia through some initial .NET bindings, and already solved such by taking some hundred ms. However, the current state of [such bindings](https://github.com/unoplatform/Uno.SkiaSharp), made by Uno team, were not compatible with vanilla Mono Wasm, thus we looked for an alternative thinking on maintenance in a future. Also important, we only needed the small piece to decode an image, and nothing else.
 
-It turns out [CanvasKit](https://skia.org/user/modules/canvaskit) ("Skia in Wasm", quickly), exposed such piece, and has a JavaScript interface. We made some tests in the CanvasKit playground and looked promising. Then, our `CanvasKitImporter` was born —replacing ImageSharp one.
+It turns out [CanvasKit](https://skia.org/user/modules/canvaskit) ("Skia in Wasm", quickly), exposed such piece, and has a JavaScript interface. We made some tests in the CanvasKit playground and looked promising. Then, our `CanvasKitImporter` was born â€”replacing ImageSharp one.
 
 ```c-sharp
 private JSObject DecodeImage(Stream stream)
