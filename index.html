@@ -2,7 +2,8 @@
 
 Hey! I was sure you'd end up looking under the hood ;-)
 
-Below you'll find a bunch of JavaScript functions, ordered alphabetically —I've tried at least—, which load items.js to populate the entire site.
+Below you'll find a bunch of JavaScript functions, ordered alphabetically —I've tried at least—, which load items.js to
+populate the entire site.
 
 Each item is simply a Markdown file which renders to HTML, that's all :-)
 
@@ -103,6 +104,23 @@ PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply
 		<script src="scripts/showdown.min.js"></script>
 		
 		<script type="text/javascript">
+            const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
+
+			if (weAreAtInternet) {
+                // Here starts Disqus set-up
+                var disqus_config = function () {
+                    this.page.url = "https://marcoscobena.com";
+                    this.page.identifier = "home";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://marcoscobena.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                // Here ends Disqus set-up
+            }
+
 			var items = [];
 			var posts = [];
 			var converter = new showdown.Converter({ strikethrough: true, tables: true });
@@ -171,6 +189,7 @@ PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply
 				return item;
 			}
 
+			// FIXME https://marcoscobena.com/#!/2018-3-15#comment-3808745187 returns 404
 			function getJustFilename(path) {
 				var filename;
 
@@ -272,7 +291,7 @@ PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply
 				$("#actualBody").html(body);
 
 				if (isBlogPost) {
-					if (weAreAtInternet()) {
+					if (weAreAtInternet) {
 						$("#signature").after('\n\n<div id="disqus_thread"></div>');
 
 						DISQUS.reset({
@@ -290,29 +309,6 @@ PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply
 
 				window.scrollTo(0, 0);
 			}
-
-			function weAreAtInternet() {
-                if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-                    return false;
-                } else {
-                    return true;
-                }
-			}
-			
-			if (weAreAtInternet()) {
-                // Here starts Disqus set-up
-                var disqus_config = function () {
-                    this.page.url = "https://marcoscobena.com";
-                    this.page.identifier = "home";
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://marcoscobena.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-                // Here ends Disqus set-up
-            }
 
 			$(function() {
 				entryPoint();
