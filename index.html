@@ -1,32 +1,32 @@
 ﻿<!--
 
-Hey! I was sure you'd end up looking under the hood ;-)
+    Hey! I was sure you'd end up looking under the hood ;-)
 
-Below you'll find a bunch of JavaScript functions, ordered alphabetically —I've tried at least—, which load items.js to
-populate the entire site.
+    Below you'll find a bunch of JavaScript functions, ordered alphabetically —I've tried at least—, which load 
+    items.js to	populate the entire site.
 
-Each item is simply a Markdown file which renders to HTML, that's all :-)
+    Each item is simply a Markdown file which renders to HTML, that's all :-)
 
-Thanks for coming by!
+    Thanks for coming by!
 
-—Marcos
+    —Marcos
 
-PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply scroll in one single file.
+    PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply scroll in one single file.
 
 -->
 <html>
-	<head>
-		<title>Marcos Cobeña Morián</title>
+    <head>
+        <title>Marcos Cobeña Morián</title>
 
-		<link rel="alternate" type="application/rss+xml" title="Marcos Cobeña Morián" href="feed.rss" />
+        <link rel="alternate" type="application/rss+xml" title="Marcos Cobeña Morián" href="feed.rss" />
 
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
 
-		<meta name="description" content="Software Development Engineer focused on .NET" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
-		<style type="text/css">
-			#actualBody {
+        <meta name="description" content="Software Development Engineer focused on .NET" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <style type="text/css">
+            #actualBody {
                 line-height: 1.5em;
             }
 
@@ -39,7 +39,7 @@ PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply
 
             #bodyWrapper {
                 height: inherit;
-				margin: 0 16pt 33.34%;
+                margin: 0 16pt 33.34%;
             }
 
             .center {
@@ -48,293 +48,306 @@ PS: Yeah, I could split HTML, CSS and JavaScript but, honestly, I like to simply
 
             h1, h2, h3, h4, h5 {
                 line-height: 1.25em;
-				font-weight: 900;
+                font-weight: 900;
             }
 
-			#homeReturn {
-				display: none;
-				float: left;
-			}
+            #homeReturn {
+                display: none;
+                float: left;
+            }
 
-			img {
-				display: block;
-				height: auto;
-				margin-left: auto;
-				margin-right: auto;
-				max-height: 480px;
-				max-width: 100%;
-			}
+            img {
+                display: block;
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 480px;
+                max-width: 100%;
+            }
 
-			pre {
-				overflow-x: auto;
-			}
+            pre {
+                overflow-x: auto;
+            }
 
-			.right {
+            .right {
                 text-align: right;
-			}
+            }
 
             #signature {
-				margin: 1.5em 0%;
+                margin: 1.5em 0%;
             }
 
-			table {
-				border-collapse: collapse;
-				width: 100%;
-			}
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
 
-			td, th {
-				padding: 8px;
-			}
+            td, th {
+                padding: 8px;
+            }
 
-			tr:nth-child(even) {
-				background-color: whitesmoke;
-			}
+            tr:nth-child(even) {
+                background-color: whitesmoke;
+            }
 
-			#title {
-				margin-bottom: 0;
+            #title {
+                margin-bottom: 0;
             }
 
             #titleWrapper {
-				margin: 25% 0%;
+                margin: 25% 0%;
             }
-    	</style>
-		
-		<script src="scripts/jquery-3.1.1.min.js"></script>
+        </style>
+        
+        <script src="scripts/jquery-3.1.1.min.js"></script>
 
-		<script src="scripts/showdown.min.js"></script>
-		
-		<script type="text/javascript">
+        <script src="scripts/showdown.min.js"></script>
+        
+        <script type="text/javascript">
+            // WIP replace " with ' for strings
+            // WIP replace "var" for "let" within functions
+            // WIP replace "var" for "const" where appropiate
+
             const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
-			if (weAreAtInternet) {
-                // Here starts Disqus set-up
-                var disqus_config = function () {
-                    this.page.url = "https://marcoscobena.com";
-                    this.page.identifier = "home";
-                };
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://marcoscobena.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-                // Here ends Disqus set-up
+            var items = [];
+            var posts = [];
+            var converter = new showdown.Converter({ strikethrough: true, tables: true });
+            var homeFilename = "home";
+            var resourceNotFoundFilename = "404";
+            var hashtagUrlSeparator = "#/";
+            var queryUrlSeparator = "/?i=";
+
+            $(document).on('click', 'a', function(event) {
+                var href = $(this).attr("href");
+                
+                if (href.startsWith("http") || href.startsWith("mailto:") || 
+                    !href.startsWith(hashtagUrlSeparator) || !href.startsWith(queryUrlSeparator)) {
+                    event.returnValue = false;
+                    return;
+                }
+
+                event.preventDefault();
+
+                var filename = getJustFilename(href);
+                pushState(filename);
+                loadItem(filename);
+            });
+
+            $(window).on('popstate', function(event) {
+                var state = event.originalEvent.state;
+
+                if (state !== null) {
+                    loadItem(state.filename);
+                } else {
+                    if (window.location.hash.length > 0) {
+                        // User manually enters a different path
+                        entryPoint();
+                    } else {
+                        // User taps back to root (i.e. https://marcoscobena.com)
+                        pushHomeStateAndLoadIt();
+                    }
+                }
+            });
+
+            function addItem(title, filename, date) {
+                var item = { title: title, filename: filename, date: date };
+                items.push(item);
             }
 
-			var items = [];
-			var posts = [];
-			var converter = new showdown.Converter({ strikethrough: true, tables: true });
-			var homeFilename = "home";
-			var resourceNotFoundFilename = "404";
-			var hashtagUrlSeparator = "#/";
-			var queryUrlSeparator = "/?i=";
+            function addPost(title, filename, date) {
+                var post = { title: title, filename: filename, date: date };
+                posts.push(post);
+            }
 
-			$(document).on('click', 'a', function(event) {
-				var href = $(this).attr("href");
-				
-				if (href.startsWith("http") || href.startsWith("mailto:") || 
-					!href.startsWith(hashtagUrlSeparator) || !href.startsWith(queryUrlSeparator)) {
-					event.returnValue = false;
-					return;
-				}
+            function entryPoint() {
+                var filename = getJustFilename(window.location.href);
 
-				event.preventDefault();
+                if (filename.length > 0) {
+                    loadItem(filename);
+                } else {
+                    pushHomeStateAndLoadIt();
+                }
+            }
 
-				var filename = getJustFilename(href);
-				pushState(filename);
-				loadItem(filename);
-			});
+            function findItem(filename) {
+                var item = items.find(function(item) {
+                    return item.filename == filename;
+                });
 
-			$(window).on('popstate', function(event) {
-				var state = event.originalEvent.state;
+                return item;
+            }
 
-				if (state !== null) {
-					loadItem(state.filename);
-				} else {
-					if (window.location.hash.length > 0) {
-						// User manually enters a different path
-						entryPoint();
-					} else {
-						// User taps back to root (i.e. https://marcoscobena.com)
-						pushHomeStateAndLoadIt();
-					}
-				}
-			});
+            // FIXME https://marcoscobena.com/#!/2018-3-15#comment-3808745187 returns 404
+            function getJustFilename(path) {
+                var filename;
 
-			function addItem(title, filename, date) {
-				var item = { title: title, filename: filename, date: date };
-				items.push(item);
-			}
+                if (path.includes(queryUrlSeparator)) {
+                    var index = path.lastIndexOf(queryUrlSeparator);
+                    filename = path.substring(index + queryUrlSeparator.length);
+                    index = filename.indexOf("&")
 
-			function addPost(title, filename, date) {
-				var post = { title: title, filename: filename, date: date };
-				posts.push(post);
-			}
+                    if (index >= 0) {
+                        filename = filename.substring(0, index);
+                    }
+                    
+                    index = filename.lastIndexOf("#")
 
-			function entryPoint() {
-				var filename = getJustFilename(window.location.href);
+                    if (index >= 0) {
+                        filename = filename.substring(0, index);
+                    }
+                } else {
+                    var lastSlashIndex = path.lastIndexOf("/");
+                    filename = path.substring(lastSlashIndex + 1);
+                }
 
-				if (filename.length > 0) {
-					loadItem(filename);
-				} else {
-					pushHomeStateAndLoadIt();
-				}
-			}
+                return filename;
+            }
 
-			function findItem(filename) {
-				var item = items.find(function(item) {
-					return item.filename == filename;
-				});
+            function listBlogPosts(selector, amount = -1)
+            {
+                var length = amount < 0 ? posts.length : amount;
 
-				return item;
-			}
+                $(selector).empty();
+                $(selector).append("<ul>");
 
-			// FIXME https://marcoscobena.com/#!/2018-3-15#comment-3808745187 returns 404
-			function getJustFilename(path) {
-				var filename;
+                for (var i = 0; i < length; i++) {
+                    var post = posts[i];
+                    var html = '<li><a href="' + queryUrlSeparator + post.filename + '">' + post.title + '</a> (' + post.date + ')' + '</li>';
+                    $(selector).append(html);
+                }
 
-				if (path.includes(queryUrlSeparator)) {
-					var index = path.lastIndexOf(queryUrlSeparator);
-					filename = path.substring(index + queryUrlSeparator.length);
-					index = filename.indexOf("&")
-
-					if (index >= 0) {
-						filename = filename.substring(0, index);
-					}
-					
-					index = filename.lastIndexOf("#")
-
-					if (index >= 0) {
-						filename = filename.substring(0, index);
-					}
-				} else {
-					var lastSlashIndex = path.lastIndexOf("/");
-					filename = path.substring(lastSlashIndex + 1);
-				}
-
-				return filename;
-			}
-
-			function listBlogPosts(selector, amount = -1)
-			{
-				var length = amount < 0 ? posts.length : amount;
-
-				$(selector).empty();
-				$(selector).append("<ul>");
-
-				for (var i = 0; i < length; i++) {
-					var post = posts[i];
-					var html = '<li><a href="' + queryUrlSeparator + post.filename + '">' + post.title + '</a> (' + post.date + ')' + '</li>';
-					$(selector).append(html);
-				}
-
-				if (amount > 0) {
-					var html = '<li><a href="' + queryUrlSeparator + 'blog">More...</a></li>';
-					$(selector).append(html);
-				}
-				
-				$(selector).append("</ul>");
-			}
-
-			function loadItem(filename) {
-				var item = findItem(filename);
-				var isBlogPost = false;
-
-				// It may be a post...
-				if (item == undefined) {
-					item = posts.find(function(post) {
-						return post.filename == filename;
-					});
-
-					if (item != undefined) {
-						isBlogPost = true;
-					}
-				}
-
-				if (item == undefined) {
-					loadItem(resourceNotFoundFilename);
-					return;
-				}
+                if (amount > 0) {
+                    var html = '<li><a href="' + queryUrlSeparator + 'blog">More...</a></li>';
+                    $(selector).append(html);
+                }
                 
-				var actualPath = "items/" + filename + ".md";
+                $(selector).append("</ul>");
+            }
 
-				$.get(actualPath, function (data) { 
-					render(item, data, isBlogPost); 
-				});
-			}
+            function loadItem(filename) {
+                var item = findItem(filename);
+                var isBlogPost = false;
 
-			function pushHomeStateAndLoadIt() {
-				pushState(homeFilename);
-				loadItem(homeFilename);
-			}
+                // It may be a post...
+                if (item == undefined) {
+                    item = posts.find(function(post) {
+                        return post.filename == filename;
+                    });
 
-			function pushState(filename) {
-				history.pushState({ filename: filename }, "", queryUrlSeparator + filename);
-			}
+                    if (item != undefined) {
+                        isBlogPost = true;
+                    }
+                }
 
-			function render(item, markDown, isBlogPost) {
-				document.title = item.title;
+                if (item == undefined) {
+                    loadItem(resourceNotFoundFilename);
+                    return;
+                }
+                
+                var actualPath = "items/" + filename + ".md";
 
-				if (item.filename == homeFilename) {
+                $.get(actualPath, function (data) { 
+                    render(item, data, isBlogPost); 
+                });
+            }
+
+            function pushHomeStateAndLoadIt() {
+                pushState(homeFilename);
+                loadItem(homeFilename);
+            }
+
+            function pushState(filename) {
+                history.pushState({ filename: filename }, "", queryUrlSeparator + filename);
+            }
+
+            function render(item, markDown, isBlogPost) {
+                document.title = item.title;
+
+                if (item.filename == homeFilename) {
                     $("#homeReturn").fadeOut(0);
                 } else {
                     $("#homeReturn").fadeIn(0);
                 }
 
-				$("#title").html(item.title);
-				$("#date").html(item.date);
-				$("#lastUpdate").fadeIn(0)
-					.delay(3000)
-					.fadeOut();
+                $("#title").html(item.title);
+                $("#date").html(item.date);
+                $("#lastUpdate").fadeIn(0)
+                    .delay(3000)
+                    .fadeOut();
 
-				var body = converter.makeHtml(markDown);
-				$("#actualBody").html(body);
+                var body = converter.makeHtml(markDown);
+                $("#actualBody").html(body);
 
-				if (isBlogPost) {
-					if (weAreAtInternet) {
-						$("#signature").after('\n\n<div id="disqus_thread"></div>');
+                if (isBlogPost) {
+                    $('#disqus_thread').show();
 
-						DISQUS.reset({
-							reload: true,
-							config: function () {
-								this.page.identifier = item.filename;
-								this.page.url = window.location.href;
-							}});
-					}
-				} else if (item.filename == homeFilename) {
-					listBlogPosts("#posts-latest", 5);
-				} else if (item.filename == "blog") {
-					listBlogPosts("#posts");
-				}
+                    DISQUS.reset({
+                        reload: true,
+                        config: function () {
+                            this.page.identifier = item.filename;
+                            this.page.url = window.location.href;
+                        }
+                    });
+                } else {
+                    $('#disqus_thread').hide();
 
-				window.scrollTo(0, 0);
-			}
+                    if (item.filename == homeFilename) {
+                        listBlogPosts("#posts-latest", 5);
+                    } else if (item.filename == "blog") {
+                        listBlogPosts("#posts");
+                    }
+                }
 
-			$(function() {
-				entryPoint();
-			});
-		</script>
+                window.scrollTo(0, 0);
+            }
 
-		<script src="items/items.js"></script>
-	</head>
-	<body>
-		<div id="bodyWrapper">
-			<p id="homeReturn" class="center">
-				<a href="/"><em>Sweet</em> home</a>
-			</p>
+            $(window).on('load', entryPoint);
+        </script>
 
-			<div id="titleWrapper" class="right">
-				<h1 id="title"></h1>
-				<span id="lastUpdate">Updated: </span><span id="date"></span>
-			</div>
-			
-			<div id="actualBody">
-				<noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
-			</div>
+        <script src="items/items.js"></script>
+    </head>
+    <body>
+        <div id="bodyWrapper">
+            <p id="homeReturn" class="center">
+                <a href="/"><em>Sweet</em> home</a>
+            </p>
 
-			<p id="signature">
-				—<a href="/?i=contact">Marcos</a>
-			</p>
-		</div>
-	</body>
-</html>
+            <div id="titleWrapper" class="right">
+                <h1 id="title"></h1>
+                <span id="lastUpdate">Updated: </span><span id="date"></span>
+            </div>
+
+            <div id="actualBody">
+                <noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
+            </div>
+
+            <p id="signature">
+                —<a href="/?i=contact">Marcos</a>
+            </p>
+
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+                // Taken from: https://archondigital.com/articles/disable-adsense-disqus-jekyll-localhost/
+                var disqus_shortname = weAreAtInternet ?
+                    'marcoscobena' :
+                    // This one doesn't even exist :-)
+                    'marcoscobena-debug';
+
+                // Here starts Disqus set-up
+                var disqus_config = function () {
+                    this.page.url = "https://marcoscobena.com";
+                    this.page.identifier = "home";
+                };
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+                // Here ends Disqus set-up
+            </script>
+        </div >
+    </body >
+</html >
