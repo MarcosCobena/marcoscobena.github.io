@@ -39,7 +39,7 @@
 
             #bodyWrapper {
                 height: inherit;
-                margin: 0 16pt 33.34%;
+                margin: 0 16pt;
             }
 
             .center {
@@ -299,7 +299,13 @@
                     }
                 }
 
+                scrollUp();
+            }
+
+            function scrollUp() {
                 window.scrollTo(0, 0);
+
+                return false;
             }
 
             $(window).on('load', entryPoint);
@@ -349,5 +355,15 @@
                 // Here ends Disqus set-up
             </script>
         </div >
+
+        <p class="center" style="margin: 16.67% 0;">
+            <a 
+                href="" 
+                onclick="return scrollUp();" 
+                style="color: inherit; font-size: 2em; text-decoration: none;"
+                title="Take me up!">
+                &#8670;
+            </a>
+        </p>
     </body >
 </html >
