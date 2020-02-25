@@ -108,6 +108,7 @@
             // WIP replace "var" for "let" within functions
             // WIP replace "var" for "const" where appropiate
 
+            const blogFilename = 'blog';
             const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
             var items = [];
@@ -158,6 +159,15 @@
             function addPost(title, filename, date) {
                 var post = { title: title, filename: filename, date: date };
                 posts.push(post);
+            }
+
+            function draw(item, markDown) {
+                document.title = item.title;
+
+                $("#title").html(item.title);
+                $("#date").html(item.date);
+                var body = converter.makeHtml(markDown);
+                $("#actualBody").html(body);
             }
 
             function entryPoint() {
@@ -262,41 +272,30 @@
             }
 
             function render(item, markDown, isBlogPost) {
-                document.title = item.title;
+                $('#disqus_thread').hide();
 
-                if (item.filename == homeFilename) {
-                    $("#homeReturn").fadeOut(0);
+                let isHome = item.filename == homeFilename;
+
+                if (isHome) {
+                    $("#homeReturn").hide(0);
                 } else {
-                    $("#homeReturn").fadeIn(0);
+                    $("#homeReturn").show(0);
                 }
 
-                $("#title").html(item.title);
-                $("#date").html(item.date);
-                $("#lastUpdate").fadeIn(0)
+                draw(item, markDown);
+
+                $("#lastUpdate")
+                    .fadeIn(0)
                     .delay(3000)
                     .fadeOut();
 
-                var body = converter.makeHtml(markDown);
-                $("#actualBody").html(body);
-
-                if (isBlogPost) {
+                if (isHome) {
+                    listBlogPosts("#posts-latest", 5);
+                } else if (item.filename == blogFilename) {
+                    listBlogPosts("#posts");
+                } else if (isBlogPost) {
                     $('#disqus_thread').show();
-
-                    DISQUS.reset({
-                        reload: true,
-                        config: function () {
-                            this.page.identifier = item.filename;
-                            this.page.url = window.location.href;
-                        }
-                    });
-                } else {
-                    $('#disqus_thread').hide();
-
-                    if (item.filename == homeFilename) {
-                        listBlogPosts("#posts-latest", 5);
-                    } else if (item.filename == "blog") {
-                        listBlogPosts("#posts");
-                    }
+                    updateDisqus(item.filename);
                 }
 
                 scrollUp();
@@ -306,6 +305,16 @@
                 window.scrollTo(0, 0);
 
                 return false;
+            }
+
+            function updateDisqus(filename) {
+                DISQUS.reset({
+                    reload: true,
+                    config: function () {
+                        this.page.identifier = filename;
+                        this.page.url = window.location.href;
+                    }
+                });
             }
 
             $(window).on('load', entryPoint);
