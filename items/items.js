@@ -14,7 +14,7 @@ addItem("Conferences", "conferences", "30/7/2019");
 addItem("Contact", "contact", "2/8/2019");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "20/9/2018");
-addItem("Juanma y Marcos", "juanma-y-marcos", "1/10/2019");
+addItem("Juanma y Marcos", "juanma-y-marcos", "29/2/2020");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("Portfolio", "portfolio", "3/1/2020");
 addItem("Questions", "questions", "7/5/2018");
