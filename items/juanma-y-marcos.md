@@ -22,14 +22,24 @@ Créditos:
 - El redoble para anunciar nuestro patrocinador lo cogimos de
   [aquí](https://freesound.org/people/bigjoedrummer/sounds/77305/)
 
+Publicado el 9/8/2019.
+
 ## 1x2: ASAPto de Mata
 
 <audio controls loop>
   <source src="items/documents/JuanmaYMarcos-1x2.mp3" type="audio/mpeg">
 </audio>
 
+Publicado el 1/10/2019.
+
 ## 1x3: Vivir para trabajar
 
 <audio controls loop>
   <source src="items/documents/JuanmaYMarcos-1x3.mp3" type="audio/mpeg">
 </audio>
+
+Referencias:
+- Fernando Fabiani es el nombre del Médico de Familia que dirije la compañía de teatro Síndrome Clown, 
+cuya obra [Mejor... es posible](https://www.redescena.net/espectaculo/25903/mejor-es-posible/?) es la que menciono sobre la cerveza en el congelador
+
+Publicado el 29/2/2020.
