@@ -4,6 +4,14 @@ context.
 
 I use this list to quickly jump from any device may be using:
 
+### Friends & workmates
+
+[divcompo2020.now.sh](https://divcompo2020.now.sh) —My childhood friend Gabriel is working on a game made with DIV :,-)
+
+[javipulido.com](https://javipulido.com) —Puli, as we call him, is our Mobile Team Lead at Plain Concepts. He comes from native Android & iOS world, and enjoys scripting everything
+
+[zalods.blogspot.com](http://zalods.blogspot.com) —It turns out after following Zalo on Twitter, we're now sat down one close to each other at the office. He makes really cool stuff related to homebrewing consoles
+
 ### Software Development, Graphic Design & Life in general
 
 [dfreniche.github.io](https://dfreniche.github.io) —Diego is a mobile developer from my city who writes cool stuff ranging from CLI scripts to philosophical rants on our industry. Those last used to be in [this other blog](http://blog.freniche.com/), written in spanish :-)

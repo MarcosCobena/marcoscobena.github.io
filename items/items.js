@@ -18,7 +18,7 @@ addItem("Juanma y Marcos", "juanma-y-marcos", "1/10/2019");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("Portfolio", "portfolio", "3/1/2020");
 addItem("Questions", "questions", "7/5/2018");
-addItem("Reading", "reading", "16/7/2019");
+addItem("Reading", "reading", "29/2/2020");
 addItem("Recipes", "recipes", "14/6/2018");
 addItem("Screen template", "screen-template", "6/7/2018");
 addItem("Tools", "tools", "14/1/2019");
