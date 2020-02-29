@@ -151,8 +151,8 @@
                 }
             });
 
-            function addItem(title, filename, date) {
-                var item = { title: title, filename: filename, date: date };
+            function addItem(title, filename, date, allowComments = false) {
+                var item = { title: title, filename: filename, date: date, allowComments: allowComments };
                 items.push(item);
             }
 
@@ -180,12 +180,12 @@
                 }
             }
 
-            function findItem(filename) {
-                var item = items.find(function(item) {
+            function findIn(filename, itemArray) {
+                let found = itemArray.find(function (item) {
                     return item.filename == filename;
                 });
 
-                return item;
+                return found;
             }
 
             // FIXME https://marcoscobena.com/#!/2018-3-15#comment-3808745187 returns 404
@@ -236,14 +236,12 @@
             }
 
             function loadItem(filename) {
-                var item = findItem(filename);
-                var isBlogPost = false;
+                let item = findIn(filename, items);
+                let isBlogPost = false;
 
                 // It may be a post...
                 if (item == undefined) {
-                    item = posts.find(function(post) {
-                        return post.filename == filename;
-                    });
+                    item = findIn(filename, posts);
 
                     if (item != undefined) {
                         isBlogPost = true;
@@ -255,7 +253,7 @@
                     return;
                 }
                 
-                var actualPath = "items/" + filename + ".md";
+                let actualPath = 'items/' + filename + '.md';
 
                 $.get(actualPath, function (data) { 
                     render(item, data, isBlogPost); 
@@ -277,23 +275,23 @@
                 let isHome = item.filename == homeFilename;
 
                 if (isHome) {
-                    $("#homeReturn").hide(0);
+                    $('#homeReturn').hide(0);
                 } else {
-                    $("#homeReturn").show(0);
+                    $('#homeReturn').show(0);
                 }
 
                 draw(item, markDown);
 
-                $("#lastUpdate")
+                $('#lastUpdate')
                     .fadeIn(0)
                     .delay(3000)
                     .fadeOut();
 
                 if (isHome) {
-                    listBlogPosts("#posts-latest", 5);
+                    listBlogPosts('#posts-latest', 5);
                 } else if (item.filename == blogFilename) {
-                    listBlogPosts("#posts");
-                } else if (isBlogPost) {
+                    listBlogPosts('#posts');
+                } else if (isBlogPost || item.allowComments) {
                     $('#disqus_thread').show();
                     updateDisqus(item.filename);
                 }

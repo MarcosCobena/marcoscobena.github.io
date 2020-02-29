@@ -1,7 +1,8 @@
 // addItem/Post(
 //     title, <- Here goes the user-friendly title you want to show
 //     filename, <- Item's filename without .md extension, at the same level of this current one
-//     date <- Date, as is, i.e. will be rendered without conversion
+//     date, <- Date, as is, i.e. will be rendered without conversion
+//     allowComments <- addItem() only: enables comments, disabled by-default for items
 // );
 
 // Items —it doesn't mind the order how they're added
@@ -14,7 +15,7 @@ addItem("Conferences", "conferences", "30/7/2019");
 addItem("Contact", "contact", "2/8/2019");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "20/9/2018");
-addItem("Juanma y Marcos", "juanma-y-marcos", "29/2/2020");
+addItem("Juanma y Marcos", "juanma-y-marcos", "29/2/2020", /*allowComments*/ true);
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("Portfolio", "portfolio", "3/1/2020");
 addItem("Questions", "questions", "7/5/2018");
