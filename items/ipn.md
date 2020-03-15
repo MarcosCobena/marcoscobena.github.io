@@ -49,4 +49,4 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 - No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me dedico profesionalmente a programar, desarrollar software, en una consultora española. Pero me gusta eso de dar clases, siempre me ha llamado la atención :-) Puedes verme haciendo algo similar [aquí](/?i=conferences).
 
 - **¿Hay mínimo de edad?**
-- Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y resta creo que será suficiente.
+- Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.
