@@ -8,7 +8,7 @@ Todos los niños saben qué es un móvil, saben manejarlos (a veces incluso mejo
 
 GOTO ("IR A" en español) es un lenguaje muy muy sencillote; taaan sencillote, que solo trabaja con numeritos: el 1, el 28, etc. ¡Pero se pueden hacer cosas muy chulas con él! Juntos, padres e hijos (y abuelos :-) ), aprenderemos a hacer pequeños programas en GOTO, que en la 2ª clase podremos incluso probar en el ordenador, el móvil o la tablet.
 
-Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del colegio y, cuando nos sentábamos delante del ordenador, los tecleábamos por completo para poder probarlos. He querido reflejar esa misma idea aquí: en la 1ª clase no tocaremos el ordenador, solo necesitaremos papel y lápiz y ¡darle al coco! Ya en la 2ª clase, probaremos nuestro programas a ver qué tal se comportan :-)
+Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del colegio y, cuando nos sentábamos delante del ordenador, los tecleábamos por completo para poder probarlos. He querido reflejar esa misma idea aquí: en la 1ª clase no tocaremos el ordenador, solo necesitaremos papel y lápiz y ¡darle al coco! Ya en la 2ª clase, probaremos nuestros programas a ver qué tal se comportan :-)
 
 ¡Apúntate, será muy divertido!
 
@@ -31,9 +31,9 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 ### Clase 2
 
 1. El entorno de programación GoTo Studio
-   1. Cómo probar tus programas
-   2. Cómo depurar tus programas
-   3. Cómo compartir tus programas
+    1. Cómo probar tus programas
+    2. Cómo depurar tus programas
+    3. Cómo compartir tus programas
 2. Macros para no escribir una y otra vez lo mismo
 3. Reto: ¿qué eres capaz de programar con GOTO?
 
