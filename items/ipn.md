@@ -12,10 +12,10 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 
 ¡Apúntate, será muy divertido!
 
-- **Clase 1:** sábado, 21 de marzo, a las 11:00 (hora española)
-  - *Próximamente publicaré aquí el enlace a YouTube*
-- **Clase 2:** sábado, 28 de marzo, a las 11:00 (hora española)
-  - *Próximamente publicaré aquí el enlace a YouTube*
+- **Clase 1:** sábado, 21 de marzo, a las 11:00 (hora española), 1 h de duración
+    - *Próximamente publicaré aquí el enlace a YouTube*
+- **Clase 2:** sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
+    - *Próximamente publicaré aquí el enlace a YouTube*
 
 ## Temario
 
