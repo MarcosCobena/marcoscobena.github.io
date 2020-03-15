@@ -39,14 +39,14 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 
 ## Preguntas frecuentes
 
-- **¿Qué necesito para seguir el curso?**
-- Un ordenador, o una tablet, con acceso a Internet —un móvil también vale, pero se ve todo muy chiquitito, no es del todo cómodo; sí que podrás después probar tus propios programas en el móvil :-)
+**¿Qué necesito para seguir el curso?**
+Un ordenador, o una tablet, con acceso a Internet —un móvil también vale, pero se ve todo muy chiquitito, no es del todo cómodo; sí que podrás después probar tus propios programas en el móvil :-)
 
-- **¿Qué precio tiene el curso?**
-- Nada, es gratis. Además, el lenguaje GOTO y las herramientas que usaremos también son gratis.
+**¿Qué precio tiene el curso?**
+Nada, es gratis. Además, el lenguaje GOTO y las herramientas que usaremos también son gratis.
 
-- **¿Eres profesor o tienes formación similar de algún tipo?**
-- No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me dedico profesionalmente a programar, desarrollar software, en una consultora española. Pero me gusta eso de dar clases, siempre me ha llamado la atención :-) Puedes verme haciendo algo similar [aquí](/?i=conferences).
+**¿Eres profesor o tienes formación similar de algún tipo?**
+No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me dedico profesionalmente a programar, desarrollar software, en una consultora española. Pero me gusta eso de dar clases, siempre me ha llamado la atención :-) Puedes verme haciendo algo similar [aquí](/?i=conferences).
 
-- **¿Hay mínimo de edad?**
-- Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.
+**¿Hay mínimo de edad?**
+Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.
