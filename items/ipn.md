@@ -1,3 +1,5 @@
+**Actualización 20/3:** ya está abajo, junto a la fecha de la 1ª clase, la dirección para conectarte mañana. Finalmente usaremos Skype: el otro día no sabía que YouTube no permite de forma sencilla mostrar la pantalla del organizador. Skype tiene un límite de 50 personas, no creo que lo superemos; pero, por si acaso, grabaré la sesión en vídeo y, mañana mismo, la publicaré aquí para quien quiera verla de nuevo, o tuvo cualquier problema. ¡Acordaos del papel y lápiz!
+
 ¡Hola! :-) Me llamo Marcos y soy un programador que vive en Sevilla. Con la necesidad de quedarnos unos días sin salir de casa, se me ha ocurrido organizar este pequeño curso para entretener a los más pequeños de la casa.
 
 ![](items/images/HOW-BRITAIN-ADOPTED-THE-HOME-COMPUTER-OF-THE-1980s-1170x780.jpg)
@@ -13,7 +15,7 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 ¡Apúntate, será muy divertido!
 
 - **Clase 1:** sábado, 21 de marzo, a las 11:00 (hora española), 1 h de duración
-    - *Próximamente publicaré aquí el enlace a YouTube*
+    - https://join.skype.com/apHhmwtfMLDm
 - **Clase 2:** sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
     - *Próximamente publicaré aquí el enlace a YouTube*
 
