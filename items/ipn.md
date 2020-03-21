@@ -17,7 +17,7 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 ¡Apúntate, será muy divertido!
 
 - **Clase 1:** sábado, 21 de marzo, a las 11:00 (hora española), 1 h de duración
-    - *El vídeo de la clase está abajo*
+    - *Abajo encontrarás tanto el vídeo como el material*
 - **Clase 2:** sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
     - [https://join.skype.com/apHhmwtfMLDm](https://join.skype.com/apHhmwtfMLDm)
 
@@ -25,14 +25,16 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 
 ### Clase 1
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g1ToSnhQKJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 1. Mamá, Papá, ¿qué tiene el móvil por dentro?
 2. ¿Cómo piensa un ordenador?
 3. ¿Qué idioma/lenguaje hablan los ordenadores?
 4. El lenguaje de programación GOTO
 5. Nuestro primer programa en GOTO
 6. Ejercicios para la próxima clase
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g1ToSnhQKJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+El documento que he usado como presentación está [aquí](items/documents/IPN-Clase1.pdf).
 
 ### Clase 2
 
