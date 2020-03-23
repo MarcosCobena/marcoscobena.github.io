@@ -4,6 +4,87 @@
 <description>Marcos' Blog</description>
 <link>https://marcoscobena.com</link>
 <item>
+  <title>Introducción a la Programación para Niños</title>
+  <guid>https://marcoscobena.com/?i=ipn</guid>
+  <description>&lt;p&gt;&lt;strong&gt;Actualización 21/3:&lt;/strong&gt; ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización 20/3:&lt;/strong&gt; ya está abajo, junto a la fecha de la 1ª clase, la dirección para conectarte mañana. Finalmente usaremos Skype: el otro día no sabía que YouTube no permite de forma sencilla mostrar la pantalla del organizador. Skype tiene un límite de 50 personas, no creo que lo superemos; pero, por si acaso, grabaré la sesión en vídeo y, mañana mismo, la publicaré aquí para quien quiera verla de nuevo, o tuvo cualquier problema. ¡Acordaos del papel y lápiz!&lt;/p&gt;
+
+&lt;p&gt;¡Hola! :-) Me llamo Marcos y soy un programador que vive en Sevilla. Con la necesidad de quedarnos unos días sin salir de casa, se me ha ocurrido organizar este pequeño curso para entretener a los más pequeños de la casa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/HOW-BRITAIN-ADOPTED-THE-HOME-COMPUTER-OF-THE-1980s-1170x780.jpg" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Niños en los años 80 alrededor de un ordenador de la época (imagen sacada de &lt;a href="https://thecodeshow.info/how-britain-adopted-the-home-computer-of-the-1980s/"&gt;aquí&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Todos los niños saben qué es un móvil, saben manejarlos (a veces incluso mejor que nosotros) pero, ¿saben qué hay dentro? Y, sobre todo, ¿cómo puede uno decirle al móvil que haga lo que yo quiera? De ésto último trata la programación: cómo expresarle al móvil, a un ordenador, qué tiene que hacer paso a paso.&lt;/p&gt;
+
+&lt;p&gt;GOTO ("IR A" en español) es un lenguaje muy muy sencillote; taaan sencillote, que solo trabaja con numeritos: el 1, el 28, etc. ¡Pero se pueden hacer cosas muy chulas con él! Juntos, padres e hijos (y abuelos :-) ), aprenderemos a hacer pequeños programas en GOTO, que en la 2ª clase podremos incluso probar en el ordenador, el móvil o la tablet.&lt;/p&gt;
+
+&lt;p&gt;Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del colegio y, cuando nos sentábamos delante del ordenador, los tecleábamos por completo para poder probarlos. He querido reflejar esa misma idea aquí: en la 1ª clase no tocaremos el ordenador, solo necesitaremos papel y lápiz y ¡darle al coco! Ya en la 2ª clase, probaremos nuestros programas a ver qué tal se comportan :-)&lt;/p&gt;
+
+&lt;p&gt;¡Apúntate, será muy divertido!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clase 1:&lt;/strong&gt; sábado, 21 de marzo, a las 11:00 (hora española), 1 h de duración
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Abajo encontrarás tanto el vídeo como el material&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clase 2:&lt;/strong&gt; sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://join.skype.com/apHhmwtfMLDm"&gt;https://join.skype.com/apHhmwtfMLDm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Temario&lt;/h2&gt;
+
+&lt;h3&gt;Clase 1&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mamá, Papá, ¿qué tiene el móvil por dentro?&lt;/li&gt;
+&lt;li&gt;¿Cómo piensa un ordenador?&lt;/li&gt;
+&lt;li&gt;¿Qué idioma/lenguaje hablan los ordenadores?&lt;/li&gt;
+&lt;li&gt;El lenguaje de programación GOTO&lt;/li&gt;
+&lt;li&gt;Nuestro primer programa en GOTO&lt;/li&gt;
+&lt;li&gt;Ejercicios para la próxima clase&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/g1ToSnhQKJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;El documento que he usado como presentación está &lt;a href="items/documents/IPN-Clase1.pdf"&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Clase 2&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;El entorno de programación GoTo Studio
+
+&lt;ol&gt;
+&lt;li&gt;Cómo probar tus programas&lt;/li&gt;
+&lt;li&gt;Cómo depurar tus programas&lt;/li&gt;
+&lt;li&gt;Cómo compartir tus programas&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Macros para no escribir una y otra vez lo mismo&lt;/li&gt;
+&lt;li&gt;Reto: ¿qué eres capaz de programar con GOTO?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Preguntas frecuentes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Qué necesito para seguir el curso?&lt;/strong&gt;
+Un ordenador, o una tablet, con acceso a Internet —un móvil también vale, pero se ve todo muy chiquitito, no es del todo cómodo; sí que podrás después probar tus propios programas en el móvil :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Qué precio tiene el curso?&lt;/strong&gt;
+Nada, es gratis. Además, el lenguaje GOTO y las herramientas que usaremos también son gratis.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Eres profesor o tienes formación similar de algún tipo?&lt;/strong&gt;
+No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me dedico profesionalmente a programar, desarrollar software, en una consultora española. Pero me gusta eso de dar clases, siempre me ha llamado la atención :-) Puedes verme haciendo algo similar &lt;a href="/?i=conferences"&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Hay mínimo de edad?&lt;/strong&gt;
+Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.&lt;/p&gt;</description>
+  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+  <pubDate>Fri, 20 Mar 2020 23:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Wave Engine's on-line glTF viewer</title>
   <guid>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</guid>
   <description>&lt;p&gt;&lt;em&gt;(This post appeared first &lt;a href="https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/"&gt;here&lt;/a&gt; on February 6th, 2020)&lt;/em&gt;&lt;/p&gt;
@@ -661,118 +742,5 @@ Y = Y + 1
 &lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
   <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
   <pubDate>Thu, 20 Dec 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Exceptions to Exceptions (Xamarin)</title>
-  <guid>https://marcoscobena.com/?i=exceptions-to-exceptions</guid>
-  <description>&lt;p&gt;A few weeks? ago I read &lt;a href="https://people.gnome.org/~federico/blog/propagating-errors.html"&gt;Federico's post&lt;/a&gt; on how they're handling errors with Rust —moving from C to Rust in librsvg, one the Gnome core libraries. I liked the article by it-self, because analyzes from 0 different approaches and, in the end, points to another one on how Midori did the same —for those who like me didn't know what Midori was: a Microsoft Research project to vertically analyze how an OS could be rewritten in managed code.&lt;/p&gt;
-
-&lt;p&gt;When making apps with Xamarin, and I guess this' shared among every framework, there's a moment when you need to retrieve data from an API, making a HTTP call, and things can go wrong.&lt;/p&gt;
-
-&lt;p&gt;One of my first implementations was something similar to —imagine we're in a ViewModel:&lt;/p&gt;
-
-&lt;p&gt;```c#
-private async Task LoadDataAsync()
-{
-    ResultDTO result;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;try
-{
-    // Think of refitAPI as a static readonly field
-    result = await refitAPI.GetAsync();
-}
-catch (Exception exception)
-{
-    await DisplayAlertAsync("Ops, something went wrong. Thanks for your patience.");
-}
-
-if (result == null)
-{
-    return;
-}
-
-// Here we assign result to a prop binded to the view
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;p&gt;From the user perspective she shouldn't worry because anything that could go wrong is handled, although is presented with a generic valueless alert. It can also happen the API call ends just fine but it returns &lt;code&gt;null&lt;/code&gt; —it can happen if the JSON payload is empty, for instance. We should tell the user something about this too...&lt;/p&gt;
-
-&lt;p&gt;My desk-mate &lt;a href="https://twitter.com/sescaladab"&gt;Sergio&lt;/a&gt; shared with me his tooling to better handle all this stuff, which we've been using in &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile"&gt;Tailwind Traders&lt;/a&gt;, where the API call is boxed and a more appropriate return value is obtained:&lt;/p&gt;
-
-&lt;p&gt;```c#
-private async Task LoadDataAsync()
-{
-    var result = await TryExecuteWithLoadingIndicatorsAsync(refitAPI.GetAsync);&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if (!result.IsSucceeded || result.Result == null)
-{
-    return;
-}
-
-// Here we assign result to a prop binded to the view
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;p&gt;This' a great improvement because:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;we no longer are in charge of handling the different exceptions on each API call;&lt;/li&gt;
-&lt;li&gt;when having such, there's a standard way to present such to our users;&lt;/li&gt;
-&lt;li&gt;the returning value has better semantics —i.e. &lt;code&gt;IsSucceeded&lt;/code&gt;; and&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;IsBusy&lt;/code&gt; is handled too so it'll end up on a loading overlay giving feedback&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;While I was reading Federico's article, and Midori one, it called my attention how we were using a somewhat similar approach to them —saving the distance—, but they both have a language which's richer in error handling. Our, C#, heavily works on unchecked exceptions: each method can return any exception and there's no way of noticing that in develop-time:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;we can read the method documentation header, as we use to do with such coming from the .NET Framework it-self; or&lt;/li&gt;
-&lt;li&gt;we can disassemble it and see what it's internally doing, although we can't guarantee there's a inner call which does throw any other one&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Java, for instance, forces developers to explicitly type which exceptions a method may throw. It's quite verbose —it's been ~10 years since I don't write Java code— but makes us think what to do with them.&lt;/p&gt;
-
-&lt;p&gt;Using the hype those articles promoted in my interior I went to NuGet home and typed "Rust" in the search box. I found &lt;a href="https://www.nuget.org/packages/CSharp.OperationResult"&gt;CSharp.OperationResult&lt;/a&gt; project, which takes Rust approach into C# and, while I don't see the point on heavily relying in such everywhere in our projects, I do see its great value with above examples.&lt;/p&gt;
-
-&lt;p&gt;(Its owner has merged our &lt;a href="https://github.com/gnaeus/OperationResult/pull/1#issuecomment-447576656"&gt;PR moving the lib into .NET Standard&lt;/a&gt; and there'll be a new NuGet soon.)&lt;/p&gt;
-
-&lt;p&gt;This week I've spent a few hours rewriting our &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/feature/163-product-detail/Source/TailwindTraders.Mobile/TailwindTraders.Mobile/Framework/TaskHelper.cs"&gt;TaskHelper&lt;/a&gt; class by moving from our &lt;code&gt;WrapResult&lt;/code&gt; class to &lt;code&gt;Result&lt;/code&gt; and &lt;code&gt;Status&lt;/code&gt;, which reduces even more the code needed at ViewModel level but makes beautiful the one at the inner implementation:&lt;/p&gt;
-
-&lt;p&gt;```c#
-public async Task&lt;Result&lt;T&gt;&gt; TryWithErrorHandlingAsync&lt;T&gt;(
-    Task&lt;T&gt; task,
-    Func&lt;Exception, Task&lt;bool&gt;&gt; customErrorHandler = null)
-{
-    whenStarting?.Invoke();&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if (!connectivityService.IsThereInternet)
-{
-    loggingService?.Warning("There's no Internet access");
-    return Error();
-}
-
-try
-{
-    T actualResult = await task;
-    return Ok(actualResult);
-}
-// Here goes multiple catches for each error scenario, alerting users accordingly
-
-whenFinished?.Invoke();
-
-return Error();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;p&gt;From above method perspective anyone can quickly understand where things are leaving OK and where don't: &lt;code&gt;Ok&lt;/code&gt; and &lt;code&gt;Error&lt;/code&gt; methods speak for them-selves. But, more important, consumers from outside don't have to worry on catching exceptions, but wiring the result or alerting valuable information on what went wrong and could they could do then.&lt;/p&gt;
-
-&lt;p&gt;I think am personally in a phase where don't want to fill my code of try/catch everywhere, I prefer to leave things happen while I'm developing and, trust time will tell me which exceptions I should worry on. I too see the point on protecting that sensible stuff which could definitely go wrong don't know currently why however. I'm curious on what other feel on this area, which's the pros and cons of their work with errors and what are the findings while walking in that direction.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Fri, 14 Dec 2018 23:00:00 GMT</pubDate>
 </item></channel>
 </rss>
