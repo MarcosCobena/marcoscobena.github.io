@@ -109,8 +109,10 @@
             // WIP replace "var" for "const" where appropiate
 
             const blogFilename = 'blog';
+            const podcastFilename = 'juanma-y-marcos';
             const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
+            var episodes = [];
             var items = [];
             var posts = [];
             var converter = new showdown.Converter({ strikethrough: true, tables: true });
@@ -151,6 +153,17 @@
                 }
             });
 
+            function addEpisode(title, audioFilename, documentFilename, date, allowComments = false) {
+                var item = {
+                    title: title,
+                    audioFilename: audioFilename,
+                    filename: documentFilename,
+                    date: date,
+                    allowComments: allowComments
+                };
+                episodes.push(item);
+            }
+
             function addItem(title, filename, date, allowComments = false) {
                 var item = { title: title, filename: filename, date: date, allowComments: allowComments };
                 items.push(item);
@@ -161,12 +174,24 @@
                 posts.push(post);
             }
 
-            function draw(item, markDown) {
+            function draw(item, markDown, isPodcastEpisode) {
                 document.title = item.title;
 
                 $("#title").html(item.title);
                 $("#date").html(item.date);
-                var body = converter.makeHtml(markDown);
+
+                let body = '';
+
+                if (isPodcastEpisode) {
+                    body += `<audio controls loop>
+  <source src="items/documents/${item.audioFilename}" type="audio/mpeg">
+(Perdona, tu navegador no soporta empotrar audio.)
+</audio>
+
+`;
+                }
+
+                body += converter.makeHtml(markDown);
                 $("#actualBody").html(body);
             }
 
@@ -214,21 +239,26 @@
                 return filename;
             }
 
-            function listBlogPosts(selector, amount = -1)
+            function listItems(selector, items, moreFilename = null, amount = -1)
             {
-                var length = amount < 0 ? posts.length : amount;
+                let length = amount < 0 ?
+                    items.length :
+                    amount;
+                length = Math.min(length, items.length);
 
                 $(selector).empty();
                 $(selector).append("<ul>");
 
                 for (var i = 0; i < length; i++) {
-                    var post = posts[i];
-                    var html = '<li><a href="' + queryUrlSeparator + post.filename + '">' + post.title + '</a> (' + post.date + ')' + '</li>';
+                    var item = items[i];
+                    var html = `<li>
+    <a href="${queryUrlSeparator}${item.filename}">${item.title}</a> (${item.date})
+</li>`;
                     $(selector).append(html);
                 }
 
-                if (amount > 0) {
-                    var html = '<li><a href="' + queryUrlSeparator + 'blog">More...</a></li>';
+                if (moreFilename != null && items.length > length) {
+                    var html = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
                     $(selector).append(html);
                 }
                 
@@ -238,6 +268,7 @@
             function loadItem(filename) {
                 let item = findIn(filename, items);
                 let isBlogPost = false;
+                let isPodcastEpisode = false;
 
                 // It may be a post...
                 if (item == undefined) {
@@ -248,6 +279,15 @@
                     }
                 }
 
+                // Or an episode...
+                if (item == undefined) {
+                    item = findIn(filename, episodes);
+
+                    if (item != undefined) {
+                        isPodcastEpisode = true;
+                    }
+                }
+
                 if (item == undefined) {
                     loadItem(resourceNotFoundFilename);
                     return;
@@ -255,8 +295,8 @@
                 
                 let actualPath = 'items/' + filename + '.md';
 
-                $.get(actualPath, function (data) { 
-                    render(item, data, isBlogPost); 
+                $.get(actualPath, function (data) {
+                    render(item, data, isBlogPost, isPodcastEpisode); 
                 });
             }
 
@@ -269,7 +309,7 @@
                 history.pushState({ filename: filename }, "", queryUrlSeparator + filename);
             }
 
-            function render(item, markDown, isBlogPost) {
+            function render(item, markDown, isBlogPost, isPodcastEpisode) {
                 $('#disqus_thread').hide();
 
                 let isHome = item.filename == homeFilename;
@@ -280,7 +320,7 @@
                     $('#homeReturn').show(0);
                 }
 
-                draw(item, markDown);
+                draw(item, markDown, isPodcastEpisode);
 
                 $('#lastUpdate')
                     .fadeIn(0)
@@ -288,10 +328,13 @@
                     .fadeOut();
 
                 if (isHome) {
-                    listBlogPosts('#posts-latest', 5);
+                    listItems('#episodes-latest', episodes, podcastFilename, 5);
+                    listItems('#posts-latest', posts, blogFilename, 5);
                 } else if (item.filename == blogFilename) {
-                    listBlogPosts('#posts');
-                } else if (isBlogPost || item.allowComments) {
+                    listItems('#posts', posts);
+                } else if (item.filename == podcastFilename) {
+                    listItems('#episodes', episodes);
+                } else if (isBlogPost || isPodcastEpisode || item.allowComments) {
                     $('#disqus_thread').show();
                     updateDisqus(item.filename);
                 }
