@@ -1,3 +1,5 @@
+**Actualización 28/3:** acabo de publicar el vídeo y el documento de la segunda, y última, clase :-) Al comienzo de ambos están las soluciones (¡algunas de ellas, hay muchas!) a los ejercicios de la clase anterior. ¿Serás capaz de resolver el reto? 8-)
+
 **Actualización 21/3:** ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)
 
 **Actualización 20/3:** ya está abajo, junto a la fecha de la 1ª clase, la dirección para conectarte mañana. Finalmente usaremos Skype: el otro día no sabía que YouTube no permite de forma sencilla mostrar la pantalla del organizador. Skype tiene un límite de 50 personas, no creo que lo superemos; pero, por si acaso, grabaré la sesión en vídeo y, mañana mismo, la publicaré aquí para quien quiera verla de nuevo, o tuvo cualquier problema. ¡Acordaos del papel y lápiz!
@@ -19,7 +21,7 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 - **Clase 1:** sábado, 21 de marzo, a las 11:00 (hora española), 1 h de duración
     - *Abajo encontrarás tanto el vídeo como el material*
 - **Clase 2:** sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
-    - [https://join.skype.com/apHhmwtfMLDm](https://join.skype.com/apHhmwtfMLDm)
+    - *Abajo encontrarás tanto el vídeo como el material*
 
 ## Temario
 
@@ -44,6 +46,14 @@ El documento que he usado como presentación está [aquí](items/documents/IPN-C
     3. Cómo compartir tus programas
 2. Macros para no escribir una y otra vez lo mismo
 3. Reto: ¿qué eres capaz de programar con GOTO?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_4H7g4i3Trg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+El documento que he usado como presentación está [aquí](items/documents/IPN-Clase2.pdf).
+
+#### Reto
+
+*Aquí pondré las soluciones que reciba al reto. Puedes encontrar el enunciado del mismo tanto en el vídeo como en el documento de la clase 2*
 
 ## Preguntas frecuentes
 
