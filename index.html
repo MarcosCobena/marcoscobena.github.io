@@ -343,7 +343,9 @@ function render(item, markDown, isBlogPost, isPodcastEpisode) {
         listItems('#posts', posts);
     } else if (item.filename == podcastFilename) {
         listItems('#episodes', episodes);
-    } else if (isBlogPost || isPodcastEpisode || item.allowComments) {
+    }
+    
+    if (isBlogPost || isPodcastEpisode || item.allowComments) {
         $('#disqus_thread').show();
         updateDisqus(item.filename);
     }
