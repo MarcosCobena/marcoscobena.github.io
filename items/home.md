@@ -10,10 +10,6 @@ Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps
 be helpful for you too—, and developing small pieces for [Wave Engine](http://www.waveengine.net).
 I'm happy here rounded by friends coming from my University years.
 
-🇪🇸 Parece que mi amigo Juanma y yo estamos grabando algo parecido a un [podcast](?i=juanma-y-marcos):
-
-<div id="episodes-latest"></div>
-
 <form action="https://www.google.com/search" class="center" method="get" name="searchform">
     <input name="sitesearch" type="hidden" value="marcoscobena.com">
     <input autocomplete="on" class="form-control search" name="q" required="required" type="text">
@@ -26,7 +22,11 @@ I'm happy here rounded by friends coming from my University years.
 
 <div id="posts-latest"></div>
 
-**Hobbies** [Audios](/?i=audios) [FPV Drones](/?i=drones) [Juanma y Marcos](?i=juanma-y-marcos) [Reading](/?i=reading)
+**Hobbies** [Audios](/?i=audios) [FPV Drones](/?i=drones) [Reading](/?i=reading)
+
+[Podcast: Juanma y Marcos](?i=juanma-y-marcos) (🇪🇸)
+
+<div id="episodes-latest"></div>
 
 **Job** [Portfolio](/?i=portfolio)
 

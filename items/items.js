@@ -29,7 +29,7 @@ addItem("Tools", "tools", "14/1/2019");
 //     title, <- idem
 //     audioFilename, <- The audio file played in HTML, expected to be placed at items/documents/
 //     documentFilename, <- idem as above items & posts' filename
-//     date, <- idem
+//     date <- idem
 // );
 
 // Episodes —this' the order they'll appear listed
