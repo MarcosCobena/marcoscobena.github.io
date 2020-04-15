@@ -6,10 +6,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.ServiceModel.Syndication;
 using System.Xml;
 using HeyRed.MarkdownSharp;
-using Microsoft.SyndicationFeed;
-using Microsoft.SyndicationFeed.Rss;
 
 namespace RSS 
 {
@@ -34,8 +33,12 @@ namespace RSS
 
         static DateTime ParseDate(string date)
         {
-            var successParsing = DateTime.TryParseExact(date, DateParseFormat, CultureInfo.InvariantCulture, 
-                                                        DateTimeStyles.AssumeLocal, out DateTime parsedDate);
+            var successParsing = DateTime.TryParseExact(
+                date, 
+                DateParseFormat, 
+                CultureInfo.InvariantCulture, 
+                DateTimeStyles.AssumeLocal, 
+                out DateTime parsedDate);
 
             if (!successParsing)
             {
@@ -97,42 +100,40 @@ namespace RSS
         {
             Console.Write("Writting feed... ");
             
-            var streamWritter = File.CreateText(FeedPath);
+            var feed = new SyndicationFeed(FullName, FeedDescription, new Uri(Link));
+            var author = new SyndicationPerson($"{Email} ({FullName})", FullName, Link);
+            feed.Authors.Add(author);
 
-            using (var xmlWriter = XmlWriter.Create(streamWritter, new XmlWriterSettings { Indent = true }))
+            var markdown = new Markdown();
+            var feedItems = new List<SyndicationItem>();
+
+            foreach (var item in items)
             {
-                var writer = new RssFeedWriter(xmlWriter);
-                writer.WriteTitle(FullName);
-                writer.WriteDescription(FeedDescription);
-                writer.WriteValue("link", Link);
-                var markdown = new Markdown();
+                var itemPath = string.Format(ItemFilenamePathFormat, item.MarkdownFilename);
+                var markdownText = File.ReadAllText(itemPath);
+                var permalink = new Uri($"{Link}/?i={item.MarkdownFilename}");
 
-                foreach (var item in items)
+                var syndicationItem = new SyndicationItem(item.Title, markdown.Transform(markdownText), permalink)
                 {
-                    var itemPath = string.Format(ItemFilenamePathFormat, item.MarkdownFilename);
-                    var markdownText = File.ReadAllText(itemPath);
-                    var permalink = $"{Link}/?i={item.MarkdownFilename}";
+                    PublishDate = item.Date.ToUniversalTime()
+                };
+                syndicationItem.Authors.Add(author);
+                
+                feedItems.Add(syndicationItem);
+            }
 
-                    var syndicationItem = new SyndicationItem
-                    {
-                        Title = item.Title,
-                        Description = markdown.Transform(markdownText),
-                        Published = item.Date
-                    };
-                    syndicationItem.AddContributor(new SyndicationPerson(FullName,
-                                                                         $"{Email} ({FullName})"));
-                    syndicationItem.AddLink(new SyndicationLink(new Uri(permalink), "guid"));
+            feed.Items = feedItems;
 
-                    writer.Write(syndicationItem);
-                }
-
-                xmlWriter.Flush();
+            using (var rssWriter = XmlWriter.Create(FeedPath, new XmlWriterSettings { Indent = true }))
+            {
+                feed.LastUpdatedTime = DateTime.UtcNow;
+                feed.SaveAsRss20(rssWriter);
             }
             
             Console.WriteLine($"done! {FeedPath}");
         }
 
-        private class ItemModel
+        public class ItemModel
         {
             public DateTime Date { get; set; }
 
