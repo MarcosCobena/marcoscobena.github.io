@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
-  <channel><title>Marcos Cobeña Morián</title>
-<description>Marcos' Blog</description>
-<link>https://marcoscobena.com</link>
-<item>
-  <title>Introducción a la Programación para Niños</title>
-  <guid>https://marcoscobena.com/?i=ipn</guid>
-  <description>&lt;p&gt;&lt;strong&gt;Actualización 28/3:&lt;/strong&gt; acabo de publicar el vídeo y el documento de la segunda, y última, clase :-) Al comienzo de ambos están las soluciones (¡algunas de ellas, hay muchas!) a los ejercicios de la clase anterior. ¿Serás capaz de resolver el reto? 8-)&lt;/p&gt;
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Marcos Cobeña Morián</title>
+    <link>https://marcoscobena.com/</link>
+    <description>Marcos' Blog</description>
+    <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
+    <lastBuildDate>Sat, 18 Apr 2020 21:45:11 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=ipn</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Introducción a la Programación para Niños</title>
+      <description>&lt;p&gt;&lt;strong&gt;Actualización 28/3:&lt;/strong&gt; acabo de publicar el vídeo y el documento de la segunda, y última, clase :-) Al comienzo de ambos están las soluciones (¡algunas de ellas, hay muchas!) a los ejercicios de la clase anterior. ¿Serás capaz de resolver el reto? 8-)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización 21/3:&lt;/strong&gt; ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)&lt;/p&gt;
 
@@ -91,13 +95,13 @@ No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me
 
 &lt;p&gt;&lt;strong&gt;¿Hay mínimo de edad?&lt;/strong&gt;
 Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Fri, 27 Mar 2020 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Wave Engine's on-line glTF viewer</title>
-  <guid>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post appeared first &lt;a href="https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/"&gt;here&lt;/a&gt; on February 6th, 2020)&lt;/em&gt;&lt;/p&gt;
+      <pubDate>Fri, 27 Mar 2020 23:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Wave Engine's on-line glTF viewer</title>
+      <description>&lt;p&gt;&lt;em&gt;(This post appeared first &lt;a href="https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/"&gt;here&lt;/a&gt; on February 6th, 2020)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: We are announcing our experimental glTF on-line viewer made with Wave Engine 3.0, powered by WebAssembly. Try the demo! &lt;a href="http://gltf.waveengine.net" rel="noopener" target="_blank"&gt;http://gltf.waveengine.net&lt;/a&gt;&lt;/p&gt;
 
@@ -216,13 +220,13 @@ return image;
 &lt;p&gt;We have pursued such during some time but the scenario was still not ready for the jump. Nowadays, we see a bunch of possibilities for helping our customers to take visual experiences into the browser, adding Web to the list of officially supported platforms.&lt;/p&gt;
 
 &lt;p&gt;If you think we can help you reach the Web too, &lt;a href="https://waveengine.net/Company#Contact"&gt;we are here to listen&lt;/a&gt;. Oh, and if you found any issue, please &lt;a href="https://github.com/WaveEngine/Feedback/issues"&gt;report it&lt;/a&gt;. Thank you for reading.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 06 Feb 2020 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
-  <guid>https://marcoscobena.com/?i=2019-8-2</guid>
-  <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
+      <pubDate>Thu, 06 Feb 2020 23:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=2019-8-2</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
+      <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
 running —between quotes because the stencil one actually doesn't, and we need to go for a second round as we enabled
 texture storage in the middle.&lt;/p&gt;
 
@@ -237,13 +241,13 @@ which's still better in performance.&lt;/p&gt;
 
 &lt;p&gt;With the last visual test we've gotten ~30 fps so thinking on AOT is becoming a must. I'd like to research on this
 sooner or later.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 01 Aug 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Wave Engine &amp; WebGL.NET status</title>
-  <guid>https://marcoscobena.com/?i=2019-7-26</guid>
-  <description>&lt;p&gt;After some months working on
+      <pubDate>Thu, 01 Aug 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=2019-7-26</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Wave Engine &amp; WebGL.NET status</title>
+      <description>&lt;p&gt;After some months working on
 &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; this Wednesday we've
 finally created the first NuGet. I've been personally avoiding doing this
 because we rely on some Mono's NuGets which are not public so anyone adding ours
@@ -284,13 +288,13 @@ similar too.&lt;/p&gt;
 by the end of the year and that's great. Still the development workflow is rough
 but for sure this will improve; however, even in this way, Wasm is a great
 platform to target because of the browser-based and native execution tuple.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 25 Jul 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Your first Wasm app with C#</title>
-  <guid>https://marcoscobena.com/?i=wasmapp1</guid>
-  <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
+      <pubDate>Thu, 25 Jul 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=wasmapp1</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Your first Wasm app with C#</title>
+      <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
 Mono's latest Wasm progress. It's taking the shape of something which could make users File &gt; New and start creating 
 apps with such but, still needs some progress. However, I ask my-self whether everyone out there would like to start 
 writing C# to target Wasm but still not worrying on configuring their environment in any way.&lt;/p&gt;
@@ -331,13 +335,13 @@ Hit Return to stop the server.&lt;/p&gt;
 &lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;Now browse http://localhost:9000/ in your prefered app (Wasm is widely supported) and enjoy!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Fri, 05 Jul 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Unit Testing WebGL.NET</title>
-  <guid>https://marcoscobena.com/?i=unit-testing-webglnet</guid>
-  <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
+      <pubDate>Fri, 05 Jul 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=unit-testing-webglnet</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Unit Testing WebGL.NET</title>
+      <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
 
 &lt;p&gt;While my mate Juan is working on the first actual Wave Engine 3.0 app with WebGL -he's already achieved the tricolor 
 triangle, by the way- I've spent some time trying to set up something for unit testing the API. Eric Mellino, the guy 
@@ -433,13 +437,13 @@ the source code). I still have to fix the Linux build which's not publishing the
     ```&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 27 Jun 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Pull-Request reviews</title>
-  <guid>https://marcoscobena.com/?i=pr-reviews</guid>
-  <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
+      <pubDate>Thu, 27 Jun 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=pr-reviews</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Pull-Request reviews</title>
+      <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
 
 &lt;p&gt;Serve this as my personal reminder for how to take a PR review:&lt;/p&gt;
 
@@ -465,13 +469,13 @@ public const string AppCenterKey = "bar";&lt;/p&gt;
 &lt;li&gt;forget your impulse, just keep scrolling down because there for sure will be things far more interesting to consider&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 19 Feb 2019 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>GoTo</title>
-  <guid>https://marcoscobena.com/?i=goto</guid>
-  <description>&lt;p&gt;While I was studying Computer Science had one subject named Computability Theory where it was introduced a quite simple, at the beginning, language: GOTO. Its target was to demonstrate whether a function could be expressed using such —then called GOTO-computable— thus such could be calculated by a computer. (My teachers may kill me because how I've summed things up but think it's somewhat valid :-)&lt;/p&gt;
+      <pubDate>Tue, 19 Feb 2019 23:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=goto</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>GoTo</title>
+      <description>&lt;p&gt;While I was studying Computer Science had one subject named Computability Theory where it was introduced a quite simple, at the beginning, language: GOTO. Its target was to demonstrate whether a function could be expressed using such —then called GOTO-computable— thus such could be calculated by a computer. (My teachers may kill me because how I've summed things up but think it's somewhat valid :-)&lt;/p&gt;
 
 &lt;p&gt;By that time I wrote an interpreter in JavaScript (which may reside in one of my multiple back-ups) and quickly sent it to my teachers, thinking maybe any student could eventually find it useful. My programming abilities were weak by then and, for instance, I relied the parsing on regular expressions —you can imagine how strong my implementation was...&lt;/p&gt;
 
@@ -650,13 +654,13 @@ Y = Y + 1
 &lt;p&gt;While working on this I got the idea —a bunch of ideas actually— this could serve for children to learn programming, and this motivates me even more to continue ~~working~~ playing.&lt;/p&gt;
 
 &lt;p&gt;Thanks to my mates at Plain Concepts which detected some bugs and helped me making GoTo Studio easier to use. And to my beautiful fiancee for encouraging me to go deep on this: I'd really like, one day, to teach our children how computer works with this project :,-)&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 03 Jan 2019 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml</guid>
-  <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
+      <pubDate>Thu, 03 Jan 2019 23:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=xf-xaml</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Xamarin.Forms XAML</title>
+      <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
 
 &lt;p&gt;Split into chapters, I'll try to cover everything expressed in XAML:&lt;/p&gt;
 
@@ -743,13 +747,13 @@ Y = Y + 1
 &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 20 Dec 2018 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Exceptions to Exceptions (Xamarin)</title>
-  <guid>https://marcoscobena.com/?i=exceptions-to-exceptions</guid>
-  <description>&lt;p&gt;A few weeks? ago I read &lt;a href="https://people.gnome.org/~federico/blog/propagating-errors.html"&gt;Federico's post&lt;/a&gt; on how they're handling errors with Rust —moving from C to Rust in librsvg, one the Gnome core libraries. I liked the article by it-self, because analyzes from 0 different approaches and, in the end, points to another one on how Midori did the same —for those who like me didn't know what Midori was: a Microsoft Research project to vertically analyze how an OS could be rewritten in managed code.&lt;/p&gt;
+      <pubDate>Thu, 20 Dec 2018 23:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=exceptions-to-exceptions</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Exceptions to Exceptions (Xamarin)</title>
+      <description>&lt;p&gt;A few weeks? ago I read &lt;a href="https://people.gnome.org/~federico/blog/propagating-errors.html"&gt;Federico's post&lt;/a&gt; on how they're handling errors with Rust —moving from C to Rust in librsvg, one the Gnome core libraries. I liked the article by it-self, because analyzes from 0 different approaches and, in the end, points to another one on how Midori did the same —for those who like me didn't know what Midori was: a Microsoft Research project to vertically analyze how an OS could be rewritten in managed code.&lt;/p&gt;
 
 &lt;p&gt;When making apps with Xamarin, and I guess this' shared among every framework, there's a moment when you need to retrieve data from an API, making a HTTP call, and things can go wrong.&lt;/p&gt;
 
@@ -856,7 +860,7 @@ return Error();
 &lt;p&gt;From above method perspective anyone can quickly understand where things are leaving OK and where don't: &lt;code&gt;Ok&lt;/code&gt; and &lt;code&gt;Error&lt;/code&gt; methods speak for them-selves. But, more important, consumers from outside don't have to worry on catching exceptions, but wiring the result or alerting valuable information on what went wrong and could they could do then.&lt;/p&gt;
 
 &lt;p&gt;I think am personally in a phase where don't want to fill my code of try/catch everywhere, I prefer to leave things happen while I'm developing and, trust time will tell me which exceptions I should worry on. I too see the point on protecting that sensible stuff which could definitely go wrong don't know currently why however. I'm curious on what other feel on this area, which's the pros and cons of their work with errors and what are the findings while walking in that direction.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Fri, 14 Dec 2018 23:00:00 GMT</pubDate>
-</item></channel>
+      <pubDate>Fri, 14 Dec 2018 23:00:00 Z</pubDate>
+    </item>
+  </channel>
 </rss>
