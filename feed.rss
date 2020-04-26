@@ -5,7 +5,208 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Sat, 18 Apr 2020 21:45:11 Z</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 15:03:23 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=wave-engine-web-performance</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Wave Engine Web performance</title>
+      <description>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; We've analyzed why Wave Engine Web performance decreases under high WebGL consuming pressure, arriving to the final conclusion the way we currently interop with JavaScript is too slow for us. Finally, we introduce how we're overcoming this situation.&lt;/p&gt;
+
+&lt;h2&gt;"Wave Engines goes slow in Web"&lt;/h2&gt;
+
+&lt;p&gt;That's the idea we all have had since started to make Wave work in Web but, didn't have analyzed it until recently. Since I have notion of Java or .NET, this' always scared everyone programming against a Virtual Machine (VM). However, the daily reality has revealed once and again, at least for me, the loss of performance isn't such a big concern; and when it's, I think more of an issue with my code than being the VM guilty for that. I just can code things better, I think.&lt;/p&gt;
+
+&lt;p&gt;Sadly, that hasn't happened with WebAssembly (Wasm) —well, .NET running on Wasm. If you open &lt;a href="http://gltf.waveengine.net/?model=https%3A%2F%2Fraw.githubusercontent.com%2FKhronosGroup%2FglTF-Sample-Models%2Fmaster%2F2.0%2FBuggy%2FglTF-Binary%2FBuggy.glb"&gt;this URL&lt;/a&gt; your PC will quickly ask for a new CPU and 2 or 4 extra GB of RAM, if not for a deep dive into cold water (depending on your location).&lt;/p&gt;
+
+&lt;p&gt;David Ávila, one of my workmates, had the intuition the issue was the interop cost with JavaScript, but I endlessly repeated him I had no numbers to argue, against or not, such. With the time going by, I feel more uncomfortable by stating things without having numbers to back such up: I've seen my-self &lt;em&gt;so&lt;/em&gt; many times thinking the issue was A, when actually was B.&lt;/p&gt;
+
+&lt;h2&gt;Two problems&lt;/h2&gt;
+
+&lt;p&gt;One week or two ago our manager Javi Cantón let us spend some time researching how to make things go faster and, I convinced him to first understand where the culprit actually is. Together, we recorded some sessions with SpectorJS, from both &lt;a href="http://gltf.waveengine.net/"&gt;Wave Engine's glTF viewer&lt;/a&gt; and &lt;a href="https://sandbox.babylonjs.com/"&gt;BabylonJS' Sandbox&lt;/a&gt;, using the same &lt;a href="https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/2.0/Buggy/glTF-Binary/Buggy.glb"&gt;model&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://spector.babylonjs.com/"&gt;SpectorJS&lt;/a&gt; is one of the few available tools to hook WebGL calls nowadays —I've tried the RenderDoc approach in Chrome with no luck; among others— and let you save the sessions in JSON format, which self-invites someone like me to write something to pull statistics from :-) (I've remembered working with another mate, Pablo Íñigo, who always tends to write tools to solve issues; I think have learnt this from him, am another "tool-oriented guy".)&lt;/p&gt;
+
+&lt;p&gt;To make the comparisson fair enough —and sorry in advance because in terms on benchmarking I've probably bypassed a few recommendations— we recorded exactly 1 frame, expecting every WebGL command between 2 drawing calls.&lt;/p&gt;
+
+&lt;p&gt;Maybe I spent 1 or 2 hours writting SpectorJSCaptureAnalyzer, as I named it; but, a simple Console project which basically accumulates every command made, started to return really usefull insights.&lt;/p&gt;
+
+&lt;h3&gt;Amount of commands&lt;/h3&gt;
+
+&lt;p&gt;This' the output for BabylonJS:&lt;/p&gt;
+
+&lt;p&gt;```
+bindVertexArray (181): 1,039794921875 ms
+bindBufferBase (149): 0,94140625 ms
+uniformMatrix4fv (118): 0,85498046875 ms
+drawElements (118): 0,829833984375 ms
+bufferSubData (31): 0,454833984375 ms
+useProgram (53): 0,304443359375 ms
+bindBuffer (62): 0,27880859375 ms
+drawElementsInstanced (31): 0,189697265625 ms
+clear (1): 0,02001953125 ms
+viewport (1): 0,005126953125 ms
+clearStencil (1): 0,0048828125 ms
+enable (1): 0,0048828125 ms
+clearColor (1): 0 ms
+clearDepth (1): 0 ms
+disable (1): 0 ms&lt;/p&gt;
+
+&lt;p&gt;Total (750): 4,9287109375 ms (0,0049287109375 s)&lt;/p&gt;
+
+&lt;p&gt;One frame at 60 FPS lengths 16,666666 ms (0,016666666 s), so
+current total would generate 202,8928076084803 FPS
+```
+&lt;em&gt;BabylonJS-Buggy-OneFrame.json (~59 FPS)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;; and this the one for Wave:&lt;/p&gt;
+
+&lt;p&gt;```
+texParameteri (7552): 22,98095703125 ms
+getExtension (944): 8,7890625 ms
+bindBufferBase (1890): 7,427734375 ms
+bindTexture (1888): 7,3662109375 ms
+bindBuffer (1396): 5,51416015625 ms
+texParameterf (1888): 5,268798828125 ms
+uniform1i (944): 4,046142578125 ms
+vertexAttribPointer (944): 3,690673828125 ms
+enableVertexAttribArray (944): 3,38037109375 ms
+activeTexture (944): 2,61767578125 ms
+bindBufferRange (470): 2,58203125 ms
+drawElements (472): 2,561767578125 ms
+bufferSubData (7): 0,215087890625 ms
+clear (4): 0,03515625 ms
+clearDepth (2): 0,01513671875 ms
+depthMask (2): 0,014892578125 ms
+clearColor (2): 0,010009765625 ms
+clearStencil (2): 0,010009765625 ms
+scissor (2): 0,005126953125 ms&lt;/p&gt;
+
+&lt;p&gt;Total (20297): 76,531005859375 ms (0,076531005859375 s)&lt;/p&gt;
+
+&lt;p&gt;One frame at 60 FPS lengths 16,666666 ms (0,016666666 s), so
+current total would generate 13,066599462151204 FPS
+```
+&lt;em&gt;WaveEngine-Buggy-OneFrame2.json (~1 FPS)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first punch in my face was the total amount of commands made: 750 in BabylonJS vs. 20297 in Wave. It's 27x times more commands we make against Babylon! Crazy. Just before breaking my Computer Science degree into small pieces, thanks God I noticed one subtle difference: why do we have 2 &lt;code&gt;clearColor()&lt;/code&gt; calls instead of just 1, as Babylon does? One frame should suffice with just 1 clear command...&lt;/p&gt;
+
+&lt;p&gt;Then some words from again David came into my mind: "guys take care with having more than one camera as they all get rendered". That basically means Wave doesn't differentiate whether you actually wanted to draw 2 cameras at the same time: you may want to have a scene in background and an overlay on top, for instance. It's a very common practice with 2D UIs in games: you're killing enemies in your favourite FPS and see in 2D on top your actual life, weapon, etc. Those are 2 cameras being rendered at the same time.&lt;/p&gt;
+
+&lt;p&gt;Well, all this' so beautiful but, our glTF viewer has no need for 2 cameras; so, after digging a few seconds within the code, I confirmed it: I was rendering 2 cameras, yes. Quickly fixed it and took a new session:&lt;/p&gt;
+
+&lt;p&gt;```
+texParameteri (3776): 12,076171875 ms
+getExtension (472): 4,739990234375 ms
+bindTexture (944): 3,7275390625 ms
+bindBufferBase (945): 3,667236328125 ms
+texParameterf (944): 3,400390625 ms
+bindBuffer (699): 3,30029296875 ms
+vertexAttribPointer (472): 2,2255859375 ms
+uniform1i (472): 2,025634765625 ms
+enableVertexAttribArray (472): 1,82958984375 ms
+activeTexture (472): 1,620361328125 ms
+drawElements (236): 1,28564453125 ms
+bindBufferRange (235): 1,279052734375 ms
+bufferSubData (4): 1,03515625 ms
+clear (2): 0,02490234375 ms
+clearDepth (1): 0,005126953125 ms
+clearColor (1): 0,0048828125 ms
+clearStencil (1): 0,0048828125 ms
+depthMask (1): 0,0048828125 ms&lt;/p&gt;
+
+&lt;p&gt;Total (10149): 42,25732421875 ms (0,04225732421875 s)&lt;/p&gt;
+
+&lt;p&gt;One frame at 60 FPS lengths 16,666666 ms (0,016666666 s), so
+current total would generate 23,664536704297287 FPS
+```
+&lt;em&gt;WaveEngine-Buggy-OneFrame3.json&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Yeah, exactly half the amount of calls than before, like it was expected. With these better numbers, we make 10149 / 750 = ~14x more calls than Babylon, which's still huge.&lt;/p&gt;
+
+&lt;p&gt;I'm not an OpenGL guy, and my knowledge is quite limited in this sense. I've recently learned what instancing is, and what a VBO (Vertex Buffer Object) is, but don't have a further notion of the rendering pipeline happening underneath.&lt;/p&gt;
+
+&lt;p&gt;Guided by my friend Javi Cantón, I can see we're making 236 &lt;code&gt;drawElements()&lt;/code&gt; calls, while Babylon does 118 &lt;code&gt;drawElements()&lt;/code&gt; + 31 &lt;code&gt;drawElementsInstanced()&lt;/code&gt; = 149. Then I can think of Babylon having infrasctructure to apply instancing where appropiate, which not only reduces the amount of commands but also takes advantage of the GPU. I can see we call &lt;code&gt;texParameteri()&lt;/code&gt; 3776 times (3776 / 236 draw calls = 16 times/draw call) while Babylon makes 0, surely because such are made at the beginning and aren't needed anymore after.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, we can do a better job in our OpenGL backend. You'll see the &lt;a href="https://www.fuget.org/packages/WaveEngine.OpenGL.Common/"&gt;WaveEngine.OpenGL.Common NuGet&lt;/a&gt; in the OpenGL launchers, as it serves both OpenGL/ES and WebGL, and it's exactly there where there's room for improvement. Truth be told, there's already a feature branch in our repo with some improvements made in that direction, and we've gained some FPS already, but still need to assure it works in every visual test. We've frozen this effort because of what have found bellow.&lt;/p&gt;
+
+&lt;h3&gt;Time consumed&lt;/h3&gt;
+
+&lt;p&gt;The statistics generated by my small tool also sum the amount of time taken per command, finally adding everything to calc how many FPS can be expected. That's not 100% exact as any engine not only consumes time with graphic calls, but in the rest of logic stuff: updating components, for instance. But it's a way to compare the actual frame rate (SpectorJS reports it within its toolbar menu) with the expected one, between Wave and Babylon.&lt;/p&gt;
+
+&lt;p&gt;|             | Time (ms) | Expected FPS | Actual ~FPS |
+| ----------- |:---------:|:------------:|:-----------:|
+| Wave Engine | 42,26     | 23,66        | 1           |
+| BabylonJS   | 4,93      | 202,89       | 59          |&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Table comparing time consumed in 1 frame. Numbers are rounded by 2 decimals&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I made every test under Chrome, where haven't disabled the framerate limit of 60 FPS. This explains why Babylon is up to the limit, with ~59, but surely could do better if the browser wouldn't limit such. However, Wave reports barely 1 FPS, although we could expect almost 24.&lt;/p&gt;
+
+&lt;p&gt;I've still not talked about how we're running the .NET runtime under Wasm. Until here, I've made every test in interpreter mode, which's the lowest option in terms of performance. Every instruction of the .NET VM is interpreted in Wasm, without any sort of cache (like the JITter does).&lt;/p&gt;
+
+&lt;p&gt;Our mate Javier Carnero has been working heavily on researching the AOT scenario, in which percentage it can be of help for us, but I'll let him share —if he wants obviously!— his findings. I'll just say AOT isn't the gold key we're looking for &lt;strong&gt;here&lt;/strong&gt;, so we must keep looking for other paths.&lt;/p&gt;
+
+&lt;p&gt;If we have a really low framerate compared to the theoretical values, if AOT can't help us to overcome this situation, what's then happening here? Reached this point, I decided to move one step down and analyze timings at the &lt;a href="https://github.com/WaveEngine/WebGL.NET/"&gt;WebGL.NET&lt;/a&gt; layer. &lt;/p&gt;
+
+&lt;h2&gt;WebGL.NET costs&lt;/h2&gt;
+
+&lt;p&gt;I wanted to compare just one single thing: how much time lengths exactly when calling WebGL commands through JavaScript from 1) the .NET Runtime perspective and 2) the JavaScript Runtime one. I already had 2) thanks to above reports, where each WebGL command also shows the time consumed in total, from the JavaScript side.&lt;/p&gt;
+
+&lt;p&gt;For 1), I added a &lt;code&gt;Stopwatch&lt;/code&gt; exactly here:
+```csharp
+protected object Invoke(string method, params object[] args)
+{
+    var actualArgs = Translate(args);
+    // Between here...
+    var result = gl.Invoke(method, actualArgs);
+    // ... and here
+    DisposeArrayTypes(actualArgs);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (IsVerbosityEnabled)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```
+&lt;em&gt;The WebGL.NET backend which finally calls JavaScript to execute the WebGL &lt;code&gt;method&lt;/code&gt; with params &lt;code&gt;args&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;; and another one at the very beginning and end of the above same method, because I was somewhat worried the hand-made marshalling could cause some bottleneck. I made these tests over &lt;a href="https://webgldotnet.surge.sh/"&gt;the samples gallery&lt;/a&gt;, where we have control on the rendering loop. I added some logic to run exactly 600 frames, breaking the app just after. Such amount of frames would let me calc some averages and hopefully avoid the initial cold states.&lt;/p&gt;
+
+&lt;p&gt;In the end, I got hundreds of tuples with those 2 times. With a handy bunch of &lt;code&gt;Console.WriteLine()&lt;/code&gt; calls, it generated a large CSV output which Excel would leverage. I trusted my 1.5 years working in front of Excel with backlogs, costs and so on, would let me quickly get a few beautiful charts 8-)&lt;/p&gt;
+
+&lt;p&gt;And that way it was! This' the first chart:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/AverageDotNETVSJavaScriptDurations.png" alt="Chart: Average .NET vs. JavaScript durations" /&gt;
+&lt;em&gt;Chart: Average .NET vs. JavaScript durations&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;My interpretation of this chart is quite simple: since the orange path is almost always on top of the blue one, most of the time consumed on a WebGL call is gone exactly in doing that —remember: everything in the .NET Runtime land, for now. Except for 2 or 3 commands where we could gain a good amount of time by improving our marshalling, it seems to make no sense investing time on this.&lt;/p&gt;
+
+&lt;p&gt;Then, I built another chart (the last one):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/AverageRatioJSDotNET.png" alt="Chart: Average ratio JS/.NET" /&gt;
+&lt;em&gt;Chart: Average ratio JS/.NET&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically it's the first chart represented as a ratio between the 2 values: this way we can easily see the percentage gone in the JavaScript interop. Except for the commands I mentioned above, we could say ~80% of the time consumed by our WebGL.NET backend is due to the low-level JavaScript calls, so it leaves us only 20% of improvement. I don't think 20% is low enough to don't think of improving it; I just think the actual time taken by commands —as reported by SpectorJS with the recorded sessions— is &lt;em&gt;much&lt;/em&gt; lower than the one we can see here.&lt;/p&gt;
+
+&lt;h3&gt;JSObject.Invoke()&lt;/h3&gt;
+
+&lt;p&gt;If by example we continue with &lt;code&gt;clearColor()&lt;/code&gt;, it took 0,0048828125 ms in the Wave session —again: it's the time taken &lt;em&gt;only&lt;/em&gt; in JavaScript. When looking at the same command at above charts (the first one exactly, although you can't see it because didn't get rendered in the graph) it took 0,079018124 ms of average. 0,079018124 / 0,0048828125 = 16,18 times slower making such call from .NET than in pure JavaScript. And I've seen also such ratio growing up to 20 times as well.&lt;/p&gt;
+
+&lt;p&gt;Here's where the big issue is: calling JavaScript code from .NET through &lt;a href="https://github.com/mono/mono/tree/master/sdks/wasm/framework/src/WebAssembly.Bindings"&gt;Mono's WebAssembly.Bindings&lt;/a&gt; NuGet doesn't offer the performance we need. It's feasible for ocasional calls, where you won't notice such impact, but not for stuff like ours, with hundreds or thousands calls per second. We need to consume WebGL in a much faster way.&lt;/p&gt;
+
+&lt;h2&gt;Emscripten will bring some light&lt;/h2&gt;
+
+&lt;p&gt;Two weeks ago my mate Javier Carnero and I started researching dynamic &amp;amp; static linking approaches at Emscripten level, directly. After seeing &lt;a href="https://wasm.continuation-labs.com/d3demo/"&gt;Doom 3&lt;/a&gt;, &lt;a href="http://xproger.info/projects/OpenLara/"&gt;Tomb Raider&lt;/a&gt;, &lt;a href="https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/win2k.cfg&amp;amp;mem=192&amp;amp;graphic=1&amp;amp;w=1024&amp;amp;h=768"&gt;Windows 2000&lt;/a&gt;, etc., high-performance ports of software pieces, running well through Emscripten, we think there must exist a better way to interop.&lt;/p&gt;
+
+&lt;p&gt;The linking approaches would let us P/Invoke C functions, compiled into Wasm, from .NET, expecting to be faster than going through JavaScript. Actually, JavaScript is never left aside, as Emscripten ports of OpenGL/ES libraries are actually wrappers around JavaScript/WebGL. However, this way we remove the trampoline from .NET to JavaScript, with all the manual marshalling needed, by letting Emscripten handle all this for us.&lt;/p&gt;
+
+&lt;p&gt;Lin Clark wrote, in late 2018, &lt;a href="https://hacks.mozilla.org/2018/10/calls-between-javascript-and-webassembly-are-finally-fast-%F0%9F%8E%89/"&gt;a beautiful article&lt;/a&gt; on how they improved JavaScript &amp;amp; Wasm communication in Firefox. Jérôme Laban's recently &lt;a href="https://jaylee.org/archive/2020/03/22/csharp-interop-with-c-cpp-and-rust-in-webassembly.html"&gt;written&lt;/a&gt; too on how P/Invoking Rust and C code from .NET-Wasm, where already alerts on the performance aspect.&lt;/p&gt;
+
+&lt;p&gt;When we had an initial render loop working, with promising times, Javi Cantón had an idea which would shift our route: could we reuse the existing &lt;a href="https://www.fuget.org/packages/WaveEngine.OpenGL/"&gt;WaveEngine.OpenGL NuGet&lt;/a&gt; with Emscripten's EGL &lt;code&gt;getProcAddress()&lt;/code&gt; call? And here we are, but this' stuff for another post.&lt;/p&gt;
+
+&lt;h2&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;To my workmates from Plain Concepts' Seville office for their help, in one way or another, with Wave Engine Web. Specially, the core team working in Wave Engine. More specifically, Dani Cáceres recommended me some approaches to improve WebGL.NET performance, like having multiple &lt;code&gt;Invoke()&lt;/code&gt; overloads per amount of params, instead of using &lt;code&gt;params object[] args&lt;/code&gt;.&lt;/p&gt;</description>
+      <pubDate>Sat, 25 Apr 2020 22:00:00 Z</pubDate>
+    </item>
     <item>
       <link>https://marcoscobena.com/?i=ipn</link>
       <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
@@ -748,119 +949,6 @@ Y = Y + 1
 
 &lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
       <pubDate>Thu, 20 Dec 2018 23:00:00 Z</pubDate>
-    </item>
-    <item>
-      <link>https://marcoscobena.com/?i=exceptions-to-exceptions</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-      <title>Exceptions to Exceptions (Xamarin)</title>
-      <description>&lt;p&gt;A few weeks? ago I read &lt;a href="https://people.gnome.org/~federico/blog/propagating-errors.html"&gt;Federico's post&lt;/a&gt; on how they're handling errors with Rust —moving from C to Rust in librsvg, one the Gnome core libraries. I liked the article by it-self, because analyzes from 0 different approaches and, in the end, points to another one on how Midori did the same —for those who like me didn't know what Midori was: a Microsoft Research project to vertically analyze how an OS could be rewritten in managed code.&lt;/p&gt;
-
-&lt;p&gt;When making apps with Xamarin, and I guess this' shared among every framework, there's a moment when you need to retrieve data from an API, making a HTTP call, and things can go wrong.&lt;/p&gt;
-
-&lt;p&gt;One of my first implementations was something similar to —imagine we're in a ViewModel:&lt;/p&gt;
-
-&lt;p&gt;```c#
-private async Task LoadDataAsync()
-{
-    ResultDTO result;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;try
-{
-    // Think of refitAPI as a static readonly field
-    result = await refitAPI.GetAsync();
-}
-catch (Exception exception)
-{
-    await DisplayAlertAsync("Ops, something went wrong. Thanks for your patience.");
-}
-
-if (result == null)
-{
-    return;
-}
-
-// Here we assign result to a prop binded to the view
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;p&gt;From the user perspective she shouldn't worry because anything that could go wrong is handled, although is presented with a generic valueless alert. It can also happen the API call ends just fine but it returns &lt;code&gt;null&lt;/code&gt; —it can happen if the JSON payload is empty, for instance. We should tell the user something about this too...&lt;/p&gt;
-
-&lt;p&gt;My desk-mate &lt;a href="https://twitter.com/sescaladab"&gt;Sergio&lt;/a&gt; shared with me his tooling to better handle all this stuff, which we've been using in &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile"&gt;Tailwind Traders&lt;/a&gt;, where the API call is boxed and a more appropriate return value is obtained:&lt;/p&gt;
-
-&lt;p&gt;```c#
-private async Task LoadDataAsync()
-{
-    var result = await TryExecuteWithLoadingIndicatorsAsync(refitAPI.GetAsync);&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if (!result.IsSucceeded || result.Result == null)
-{
-    return;
-}
-
-// Here we assign result to a prop binded to the view
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;p&gt;This' a great improvement because:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;we no longer are in charge of handling the different exceptions on each API call;&lt;/li&gt;
-&lt;li&gt;when having such, there's a standard way to present such to our users;&lt;/li&gt;
-&lt;li&gt;the returning value has better semantics —i.e. &lt;code&gt;IsSucceeded&lt;/code&gt;; and&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;IsBusy&lt;/code&gt; is handled too so it'll end up on a loading overlay giving feedback&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;While I was reading Federico's article, and Midori one, it called my attention how we were using a somewhat similar approach to them —saving the distance—, but they both have a language which's richer in error handling. Our, C#, heavily works on unchecked exceptions: each method can return any exception and there's no way of noticing that in develop-time:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;we can read the method documentation header, as we use to do with such coming from the .NET Framework it-self; or&lt;/li&gt;
-&lt;li&gt;we can disassemble it and see what it's internally doing, although we can't guarantee there's a inner call which does throw any other one&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Java, for instance, forces developers to explicitly type which exceptions a method may throw. It's quite verbose —it's been ~10 years since I don't write Java code— but makes us think what to do with them.&lt;/p&gt;
-
-&lt;p&gt;Using the hype those articles promoted in my interior I went to NuGet home and typed "Rust" in the search box. I found &lt;a href="https://www.nuget.org/packages/CSharp.OperationResult"&gt;CSharp.OperationResult&lt;/a&gt; project, which takes Rust approach into C# and, while I don't see the point on heavily relying in such everywhere in our projects, I do see its great value with above examples.&lt;/p&gt;
-
-&lt;p&gt;(Its owner has merged our &lt;a href="https://github.com/gnaeus/OperationResult/pull/1#issuecomment-447576656"&gt;PR moving the lib into .NET Standard&lt;/a&gt; and there'll be a new NuGet soon.)&lt;/p&gt;
-
-&lt;p&gt;This week I've spent a few hours rewriting our &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/feature/163-product-detail/Source/TailwindTraders.Mobile/TailwindTraders.Mobile/Framework/TaskHelper.cs"&gt;TaskHelper&lt;/a&gt; class by moving from our &lt;code&gt;WrapResult&lt;/code&gt; class to &lt;code&gt;Result&lt;/code&gt; and &lt;code&gt;Status&lt;/code&gt;, which reduces even more the code needed at ViewModel level but makes beautiful the one at the inner implementation:&lt;/p&gt;
-
-&lt;p&gt;```c#
-public async Task&lt;Result&lt;T&gt;&gt; TryWithErrorHandlingAsync&lt;T&gt;(
-    Task&lt;T&gt; task,
-    Func&lt;Exception, Task&lt;bool&gt;&gt; customErrorHandler = null)
-{
-    whenStarting?.Invoke();&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if (!connectivityService.IsThereInternet)
-{
-    loggingService?.Warning("There's no Internet access");
-    return Error();
-}
-
-try
-{
-    T actualResult = await task;
-    return Ok(actualResult);
-}
-// Here goes multiple catches for each error scenario, alerting users accordingly
-
-whenFinished?.Invoke();
-
-return Error();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;p&gt;From above method perspective anyone can quickly understand where things are leaving OK and where don't: &lt;code&gt;Ok&lt;/code&gt; and &lt;code&gt;Error&lt;/code&gt; methods speak for them-selves. But, more important, consumers from outside don't have to worry on catching exceptions, but wiring the result or alerting valuable information on what went wrong and could they could do then.&lt;/p&gt;
-
-&lt;p&gt;I think am personally in a phase where don't want to fill my code of try/catch everywhere, I prefer to leave things happen while I'm developing and, trust time will tell me which exceptions I should worry on. I too see the point on protecting that sensible stuff which could definitely go wrong don't know currently why however. I'm curious on what other feel on this area, which's the pros and cons of their work with errors and what are the findings while walking in that direction.&lt;/p&gt;</description>
-      <pubDate>Fri, 14 Dec 2018 23:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>

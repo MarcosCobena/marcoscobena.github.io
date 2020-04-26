@@ -40,6 +40,7 @@ addEpisode("Vivir para trabajar", "JuanmaYMarcos-1x3.mp3", "vivir-para-trabajar"
 
 // Posts —this' the order they'll appear listed
 
+addPost("Wave Engine Web performance", "wave-engine-web-performance", "26/4/2020");
 addPost("Introducción a la Programación para Niños", "ipn", "28/3/2020");
 addPost("Wave Engine's on-line glTF viewer", "wave-engines-on-line-gltf-viewer", "7/2/2020");
 addPost("The 'last' Visual Test #WaveEngine #WebGL #Wasm", "2019-8-2", "2/8/2019");
