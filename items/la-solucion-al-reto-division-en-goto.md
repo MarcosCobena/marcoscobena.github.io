@@ -46,8 +46,8 @@ Además, también incluyó la codificación del mismo. Puedes introducirlo dígi
 Unas rápidas estadísticas del programa podrían ser:
 - Número de instrucciones (sin contar comentarios): 17
 - Variables usadas (al margen de Y como salida):
-  - de entrada: X1, X2
-  - auxiliares: Z1, Z2, Z3, Z4
+    - de entrada: X1, X2
+    - auxiliares: Z1, Z2, Z3, Z4
 - Etiquetas usadas (al margen de E): A, B, C, D
 
 ## Vayamos por partes

@@ -41,8 +41,8 @@ addEpisode("Vivir para trabajar", "JuanmaYMarcos-1x3.mp3", "vivir-para-trabajar"
 // Posts —this' the order they'll appear listed
 
 addPost("La solución al reto: división en GOTO", "la-solucion-al-reto-division-en-goto", "9/5/2020");
+addPost("Introducción a la Programación para Niños", "ipn", "9/5/2020");
 addPost("Wave Engine Web performance", "wave-engine-web-performance", "26/4/2020");
-addPost("Introducción a la Programación para Niños", "ipn", "28/3/2020");
 addPost("Wave Engine's on-line glTF viewer", "wave-engines-on-line-gltf-viewer", "7/2/2020");
 addPost("The 'last' Visual Test #WaveEngine #WebGL #Wasm", "2019-8-2", "2/8/2019");
 addPost("Wave Engine & WebGL.NET status", "2019-7-26", "26/7/2019");

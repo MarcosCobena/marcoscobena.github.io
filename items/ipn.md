@@ -1,3 +1,5 @@
+**Actualización 9/5:** ¡Tenemos solución al reto! Echa un ojo abajo, en la clase 2.
+
 **Actualización 28/3:** acabo de publicar el vídeo y el documento de la segunda, y última, clase :-) Al comienzo de ambos están las soluciones (¡algunas de ellas, hay muchas!) a los ejercicios de la clase anterior. ¿Serás capaz de resolver el reto? 8-)
 
 **Actualización 21/3:** ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)
@@ -53,7 +55,9 @@ El documento que he usado como presentación está [aquí](items/documents/IPN-C
 
 #### Reto
 
-*Aquí pondré las soluciones que reciba al reto. Puedes encontrar el enunciado del mismo tanto en el vídeo como en el documento de la clase 2*
+Aquí pondré las soluciones que reciba (puedes encontrar el enunciado del mismo tanto en el vídeo, como en el documento, de justo arriba):
+
+1. Anónimo: [programa](goto-studio/?p=%3B%20Y%3DX1%2FX2%20X2%20must%20be%20%3E0%20Resto%20Z1%0A%5BA%5D%20X2%20%3D%20X2%20-%201%0AZ2%20%3D%20Z2%20%2B%201%0AZ4%20%3D%20Z4%20%2B%201%0AIF%20X2%20%21%3D%200%20GOTO%20%20A%0A%5BB%5D%20X1%20%3D%20X1%20-%201%0AZ4%20%3D%20Z4%20-%201%0AZ1%20%3D%20Z1%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20B%0AIF%20Z4%20%21%3D%200%20GOTO%20E%0A%5BC%5D%20Z1%20%3D%20Z1%20-1%0AX1%20%3D%20X1%20%2B%201%0AIF%20Z1%20%21%3D%200%20GOTO%20C%0A%5BD%5D%20Z2%20%3D%20Z2%20-%201%0AX1%20%3D%20X1%20-%201%0AX2%20%3D%20X2%20%2B%201%0AIF%20Z2%20%21%3D%200%20GOTO%20D%0AY%20%3D%20Y%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20A). He analizado esta solución [aquí](?i=la-solucion-al-reto-division-en-goto)
 
 ## Preguntas frecuentes
 
