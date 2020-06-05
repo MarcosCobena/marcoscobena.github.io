@@ -14,6 +14,8 @@ It happens I work on projects on macOS with a Windows VM and an Ubuntu one side 
 
 Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a new project, he introduced me this way to write better, and more semantic, commit messages. I've taken his list of actions and made this small tool.
 
+**IMPORTANT:** if you're new into this please, read [this article](https://opensource.com/article/19/2/emoji-log-git-commit-messages) first: it reinforces the *why* behind.
+
 The resulting message is copied automatically into the clipboard 😊
 
 <select id="commit-action" style="width: 170px;">
