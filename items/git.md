@@ -16,8 +16,6 @@ Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a n
 
 **IMPORTANT:** if you're new into this please, read [this article](https://opensource.com/article/19/2/emoji-log-git-commit-messages) first: it reinforces the *why* behind.
 
-The resulting message is copied automatically into the clipboard 😊
-
 <select id="commit-action" style="width: 170px;">
   <option value="❓">Choose action...</option>
   <option value="🎉">Initial</option>
@@ -47,37 +45,36 @@ The resulting message is copied automatically into the clipboard 😊
   <option value="✔️">Test pass</option>
   <option value="🚧">WIP</option>
 </select>
-<input id="commit-message" placeholder="type message..." style="width: 330px;" type="text" /><br />
-<label id="commit-error" />
+<input id="commit-message" placeholder="type message..." style="width: 330px;" type="text" />
+<label id="commit-status" />
 
-<code id="result"></code>
+<pre id="result"></pre>
 
 <script>
     let commitAction = '❓';
     let commitMessage = '';
 
-    const span = document.getElementById('result');
+    const statusLabel = document.querySelector('#commit-status');
+    const resultSpan = document.getElementById('result');
 
     const updateResult = () => {
         const message = `${commitAction}: ${commitMessage}`;
 
-        span.textContent = message;
+        resultSpan.textContent = message;
 
         navigator.clipboard.writeText(message)
-            .catch(_ => {
-                const errorLabel = document.querySelector('#commit-error');
-                errorLabel.textContent = 'Sorry, we could not copy to the clipboard. Please, make it manually.';
-            });
+            .then(() => statusLabel.textContent = 'Message copied! 😊')
+            .catch(_ => statusLabel.textContent = 'Ops! 😐 Copy it manually');
     }
 
-    const select = document.querySelector('#commit-action');
-    select.addEventListener('input', event => {
+    const actionSelect = document.querySelector('#commit-action');
+    actionSelect.addEventListener('input', event => {
         commitAction = event.target.value;
         updateResult();
     });
     
-    const input = document.querySelector('#commit-message');
-    input.addEventListener('input', event => {
+    const messageInput = document.querySelector('#commit-message');
+    messageInput.addEventListener('input', event => {
         commitMessage = event.target.value;
         updateResult();
     });
