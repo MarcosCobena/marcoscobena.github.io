@@ -1,18 +1,4 @@
-It happens I work on projects on macOS with a Windows VM and an Ubuntu one side by side, and just want to test the latest changes in a Git repo; so end up pulling the terminal and using these commands:
-
-- `git checkout -- path` —discards `path` changes
-- `git checkout foo-branch` —changes locally to foo-branch from current one
-- `git clean -xfd` —removes everything not tracked
-- `git commit -a -m "Foo"` —commits the entire working copy with "Foo" message
-- `git diff` —working copy diffs
-- `git pull` —pulls
-- `git pull origin foo-branch` —pulls foo-branch from origin
-- `git push` —pushes
-- `git status` —working copy changes
-
-### Semantic (Emoji) commits
-
-Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a new project, he introduced me this way to write better, and more semantic, commit messages. I've taken his list of actions and made this small tool.
+## Semantic (Emoji) commits
 
 **IMPORTANT:** if you're new into this please, read [this article](https://opensource.com/article/19/2/emoji-log-git-commit-messages) first: it reinforces the *why* behind.
 
@@ -31,7 +17,8 @@ Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a n
   <option value="🐳">DevOps</option>
   <option value="📝">Documentation</option>
   <option value="✨">Feature</option>
-  <option value="🛠/🐛">Fix</option>
+  <option value="🛠">Fix (general)</option>
+  <option value="🐛">Fix bug</option>
   <option value="🎨">Format/structure</option>
   <option value="💩">Hack</option>
   <option value="🚑">Hotfix</option>
@@ -49,40 +36,22 @@ Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a n
 <button id="commit-copy" type="button">Copy</button>
 <label id="commit-status" />
 
-<pre id="result"></pre>
+<pre id="result" style="background-color: black; color: white;"></pre>
 
-<script>
-    let commitAction = '❓';
-    let commitMessage = 'type message...';
-    let result = '';
+<script src="items/git.js"></script>
 
-    const statusLabel = document.querySelector('#commit-status');
-    const resultSpan = document.getElementById('result');
+Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a new project, he introduced me this way to write better, and more semantic, commit messages. I've taken his list of actions and made this small tool.
 
-    const updateResult = () => {
-        result = `${commitAction}: ${commitMessage}`;
-        resultSpan.textContent = result;
-    }
+## Commands cheat sheet
 
-    const actionSelect = document.querySelector('#commit-action');
-    actionSelect.addEventListener('input', event => {
-        commitAction = event.target.value;
-        updateResult();
-    });
-    
-    const messageInput = document.querySelector('#commit-message');
-    messageInput.addEventListener('input', event => {
-        commitMessage = event.target.value;
-        updateResult();
-    });
+It happens I work on projects on macOS with a Windows VM and an Ubuntu one side by side, and just want to test the latest changes in a Git repo; so end up pulling the terminal and using these commands:
 
-    const copyButton = document.querySelector('#commit-copy');
-    copyButton.addEventListener('click', event => {
-        navigator.clipboard.writeText(result)
-            .then(() => statusLabel.textContent = 'Copied! 😊')
-            .catch(_ => statusLabel.textContent = 'Sorry 😐 May you copy it manually?')
-            .then(() => window.setTimeout(() => statusLabel.textContent = '', 3000));
-    });
-
-    updateResult();
-</script>
+- `git checkout -- path` —discards `path` changes
+- `git checkout foo-branch` —changes locally to foo-branch from current one
+- `git clean -xfd` —removes everything not tracked
+- `git commit -a -m "Foo"` —commits the entire working copy with "Foo" message
+- `git diff` —working copy diffs
+- `git pull` —pulls
+- `git pull origin foo-branch` —pulls foo-branch from origin
+- `git push` —pushes
+- `git status` —working copy changes
