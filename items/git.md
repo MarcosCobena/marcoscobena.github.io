@@ -16,7 +16,7 @@ Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a n
 
 **IMPORTANT:** if you're new into this please, read [this article](https://opensource.com/article/19/2/emoji-log-git-commit-messages) first: it reinforces the *why* behind.
 
-<select id="commit-action" style="width: 170px;">
+<select id="commit-action">
   <option value="❓">Choose action...</option>
   <option value="🎉">Initial</option>
   <option value="♿">Accessibility</option>
@@ -45,26 +45,23 @@ Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a n
   <option value="✔️">Test pass</option>
   <option value="🚧">WIP</option>
 </select>
-<input id="commit-message" placeholder="type message..." style="width: 330px;" type="text" />
+<input id="commit-message" placeholder="type message..." type="text" />
+<button id="commit-copy" type="button">Copy</button>
 <label id="commit-status" />
 
 <pre id="result"></pre>
 
 <script>
     let commitAction = '❓';
-    let commitMessage = '';
+    let commitMessage = 'type message...';
+    let result = '';
 
     const statusLabel = document.querySelector('#commit-status');
     const resultSpan = document.getElementById('result');
 
     const updateResult = () => {
-        const message = `${commitAction}: ${commitMessage}`;
-
-        resultSpan.textContent = message;
-
-        navigator.clipboard.writeText(message)
-            .then(() => statusLabel.textContent = 'Message copied! 😊')
-            .catch(_ => statusLabel.textContent = 'Ops! 😐 Copy it manually');
+        result = `${commitAction}: ${commitMessage}`;
+        resultSpan.textContent = result;
     }
 
     const actionSelect = document.querySelector('#commit-action');
@@ -78,4 +75,14 @@ Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a n
         commitMessage = event.target.value;
         updateResult();
     });
+
+    const copyButton = document.querySelector('#commit-copy');
+    copyButton.addEventListener('click', event => {
+        navigator.clipboard.writeText(result)
+            .then(() => statusLabel.textContent = 'Copied! 😊')
+            .catch(_ => statusLabel.textContent = 'Sorry 😐 May you copy it manually?')
+            .then(() => window.setTimeout(() => statusLabel.textContent = '', 3000));
+    });
+
+    updateResult();
 </script>
