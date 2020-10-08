@@ -1,12 +1,181 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
-  <channel><title>Marcos Cobeña Morián</title>
-<description>Marcos' Blog</description>
-<link>https://marcoscobena.com</link>
-<item>
-  <title>Introducción a la Programación para Niños</title>
-  <guid>https://marcoscobena.com/?i=ipn</guid>
-  <description>&lt;p&gt;&lt;strong&gt;Actualización 21/3:&lt;/strong&gt; ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)&lt;/p&gt;
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Marcos Cobeña Morián</title>
+    <link>https://marcoscobena.com/</link>
+    <description>Marcos' Blog</description>
+    <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
+    <lastBuildDate>Thu, 08 Oct 2020 12:22:03 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=creativity-inc</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Creativity, Inc.</title>
+      <description>&lt;p&gt;&lt;img src="items/images/CreativityInc.jpg" alt="Creativity, Inc. book cover" /&gt;
+&lt;em&gt;&lt;a href="https://archive.org/details/creativityincove0000catm/"&gt;Creativity, Inc.: overcoming the unseen forces that stand in the way of true inspiration&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I have read it as a Software Engineer, a programmer, convinced there are still plenty of problems to solve in our daily job. Also, as that boy who still remembers how was the day I watched Toy Story for the first time.&lt;/p&gt;
+
+&lt;p&gt;Like them (Pixar), the software it-self is not the primary value, but what it actually generates on people who use it. They look for making people happier with their stories, we look for solving people's problems with our products, thus making them happier. And we are more or less good solving things inside the computer; however, we lack knowledge to solve those out of it.&lt;/p&gt;
+
+&lt;p&gt;It has been trully inspiring for me. And, at the end, there is a beautiful gift for those who appreaciate Steve Jobs —and have read a few of his biographies.&lt;/p&gt;</description>
+      <pubDate>Wed, 07 Oct 2020 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=la-solucion-al-reto-division-en-goto</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>La solución al reto: división en GOTO</title>
+      <description>&lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; tenemos una &lt;a href="goto-studio/?p=%3B%20Y%3DX1%2FX2%20X2%20must%20be%20%3E0%20Resto%20Z1%0A%5BA%5D%20X2%20%3D%20X2%20-%201%0AZ2%20%3D%20Z2%20%2B%201%0AZ4%20%3D%20Z4%20%2B%201%0AIF%20X2%20%21%3D%200%20GOTO%20%20A%0A%5BB%5D%20X1%20%3D%20X1%20-%201%0AZ4%20%3D%20Z4%20-%201%0AZ1%20%3D%20Z1%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20B%0AIF%20Z4%20%21%3D%200%20GOTO%20E%0A%5BC%5D%20Z1%20%3D%20Z1%20-1%0AX1%20%3D%20X1%20%2B%201%0AIF%20Z1%20%21%3D%200%20GOTO%20C%0A%5BD%5D%20Z2%20%3D%20Z2%20-%201%0AX1%20%3D%20X1%20-%201%0AX2%20%3D%20X2%20%2B%201%0AIF%20Z2%20%21%3D%200%20GOTO%20D%0AY%20%3D%20Y%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20A"&gt;solución&lt;/a&gt; al reto de Introducción a la Programación para Niños. He analizado el programa por partes y, además de estar hecho con cariño, hace todo tal y como pedí.&lt;/p&gt;
+
+&lt;p&gt;El 27 de abril, me llegó un correo con una solución al reto de &lt;a href="?i=ipn"&gt;Introducción a la Programación para Niños&lt;/a&gt;. En este, pedía un programa que hiciese la operación Y = X1 / X2 y, como extra, en Z1 se almacenara el resto si la división no fuese entera.&lt;/p&gt;
+
+&lt;p&gt;Quizá así se vea más claro:&lt;/p&gt;
+
+&lt;p&gt;![Fórmula de la división](items/images/DivisionGOTO.png =459x101)
+&lt;em&gt;Fórmula de la división: "dividendo entre divisor es igual a cociente más resto"&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Me ha hecho tanta ilusión recibirlo que, me han entrado ganas de analizarlo, línea a línea. Comentándolo, como si hicésemos un &lt;em&gt;peer-review&lt;/em&gt; en el trabajo.&lt;/p&gt;
+
+&lt;h2&gt;El programa&lt;/h2&gt;
+
+&lt;p&gt;El e-mail venía con el programa tal que así:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+; Y=X1/X2 X2 must be &amp;gt;0 Resto Z1
+[A] X2 = X2 - 1
+Z2 = Z2 + 1
+Z4 = Z4 + 1
+IF X2 != 0 GOTO  A
+[B] X1 = X1 - 1
+Z4 = Z4 - 1
+Z1 = Z1 + 1
+IF X1 != 0 GOTO B
+IF Z4 != 0 GOTO E
+[C] Z1 = Z1 -1
+X1 = X1 + 1
+IF Z1 != 0 GOTO C
+[D] Z2 = Z2 - 1
+X1 = X1 - 1
+X2 = X2 + 1
+IF Z2 != 0 GOTO D
+Y = Y + 1
+IF X1 != 0 GOTO A
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Si quieres, puedes &lt;a href="goto-studio/?p=%3B%20Y%3DX1%2FX2%20X2%20must%20be%20%3E0%20Resto%20Z1%0A%5BA%5D%20X2%20%3D%20X2%20-%201%0AZ2%20%3D%20Z2%20%2B%201%0AZ4%20%3D%20Z4%20%2B%201%0AIF%20X2%20%21%3D%200%20GOTO%20%20A%0A%5BB%5D%20X1%20%3D%20X1%20-%201%0AZ4%20%3D%20Z4%20-%201%0AZ1%20%3D%20Z1%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20B%0AIF%20Z4%20%21%3D%200%20GOTO%20E%0A%5BC%5D%20Z1%20%3D%20Z1%20-1%0AX1%20%3D%20X1%20%2B%201%0AIF%20Z1%20%21%3D%200%20GOTO%20C%0A%5BD%5D%20Z2%20%3D%20Z2%20-%201%0AX1%20%3D%20X1%20-%201%0AX2%20%3D%20X2%20%2B%201%0AIF%20Z2%20%21%3D%200%20GOTO%20D%0AY%20%3D%20Y%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20A"&gt;probarlo en GoTo Studio&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Además, también incluyó la codificación del mismo. Puedes introducirlo dígito a dígito en &lt;a href="goto-studio/"&gt;GoTo Studio&lt;/a&gt; (ver &lt;em&gt;Codify&lt;/em&gt;) pero, te recomiendo que lo copies y pegues, son &lt;em&gt;solo&lt;/em&gt; 11.445 dígitos (once mil cuatrocientos cuarenta y cinco, sí):&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+874063336928642723956741849984126468518108745574612584406945635346014518450433696808231900903989242551396956369515845386611437062837697945475867583424089563119151301858962012141649750328349954285666820315343468250743556358235396285794278349031598617679927452548594890827415323329549881233144906683657682157582781373061702320739288768021736738229139076893425427304230051847876393270093757239557214309647259903013554444939090264271316606716018155057887006521230845095083816231162563052976001262801267290306288939577998115191222502924759940842722555913781376026984410009410233439922419607132333176896627168555085652316673773731148512924799923080842802114017946206729482785043204452110972990850429494444525434993230876534978072558060987841793955871575140042206417963467238126963068524952518047195026810218452979052604440374102067413184027163766525834974427730039433487231855735346180738096471037501906180532457985882757077193415078422539836212827202271736394490471781427194068562605845572126566153302818503346534462784574591911958035420398684925965741216235780875347274022343912564617913859843532208067683785426777028134786507301147209646477093825533866555735933969993531129811115998151502949815945422621807661829017984453068156979170581656171724412456817209388561753156207394087438578796460879374891986745966110011088835432065795845624649764372192761886687679477284094891702500042195988162567623472083829212811772729886679779883753345616530721851096127753465637091808219204897841608114211015940444463576798141376303782249102444427243484242961948128859398831615270529757176578551202003503354020560736053016326088465612255293236366250055853571930052123661582559675254267066732212791945931477920001212845948213115625233080843215162573175360546259480615710215087426468882275790416571481110760697783231030918263812318853005911580057166332723918446304620633346802481902650196534521028246637859870216809822515094072426936791459163518896605903750085419405641558394382223614051639262872176470556979111844592950418378606456401234454814037700261520944729032876748048277364902979400342601241353685605620820705946375649596751414447927523521699159205163841716083526641898184612381015333052244289701673623291659881631321080621943487577002064341665629351876471186372190826762042702712722121148745488503910564083295918612956183490468214214732387024873681881024782108631284131236541154058248318231829572768342450183923976973961617741497159510296262705873243674359550079133949947327945976011625256484062619678795584480720894678494957271190804614716622722646327509067416649316576989146897221412521867464979697762525340392271810298278719765785006127633862726702147293080891985359297224889101162919332006145872944190144121734948603154674954690425251763317594176233865435094152969498074228659965466408711618188843656824605137480245206109665926509935955442706945209055897852100915375640930012785279910098172448473484467303623892418125453236311363119708444894029068753219606211014454737672702416700843470953562578363233032170626165793832168472465815218635074249998664492222056347933831600067074404857345860668943943314362663932781680083994013589439578308502890555287684991957649182892396357728703583449531408275789643505502600181036344355256003064497803009053035708933598592382713309270808172118741237505357854639273707218418908851411043049354990360353278910612114079628807333817489856812682032234879225362980713149330474883367019609540361220789189494853631479749707200600487628418898013713687029705605436114440433537637986610777455493679559275591404745912380363618404577624133992100908811727425778562208939584690446659661335491382043910714025552613583828723819005633388936149751952674882471398688061768835627602015478659205007305760278453788381693210010358166220193908553746264804247258646590332269000460206389973767948403126853291391270195992421687874615248901010038354999066379768976315167612775039447405387545411682004213462234975350310723234018454761269491602683434146297166848863829456756716877436330601170676884034025821324639265796308202072350757035349074873285569018381070184812783275430493551394647240797318218233910059083928704817134906422032771385107087704853876128954957790677725215165590716222749018110276275424352319334092513278335877978955820033418537689772731158698014272364818631797677586134902852885612535754358321416113315256310632969101002876937074695025366656675253288723035043479327377788937413761768754874300436146137081740517905367265711291983028073222614482081859986546684535806650644423957802468291572695875399791345957375589535440536589763114445871516629788523589403893659542674435618101142461467799591308159258864864793582336142202172452010668606846002086677811676858629329320083023298524689152112952054428508037333285898665015799324918943650577552150888719405911782562375112341526057156838493138164263855040429792123026897982312096611094941268171117444275293953567103590468479256929318570333216263879537297295738032621628187400800540166414247980074212151323743922023268233593328156775422237645127885001483469424152404387362573516417921839160942161413120694285580195659534060728306701590596080596054825860866844792645682821837614924075861089375295807020332985881120919983203657433285136428054098889621874259242551521242910140028321954299323793934375840345527545082748477632473500313494750957972770193919762601323545851514377779686243074665869988725869661568699639092073605500203302194682500265780260179113061827307459849371234713467269077902602762759399098752102529387579772131901223880259809313711470785959002482506759269064790322050334227526326784177143241859154583821649492490420485434679001534656153300297967639834177935604310662356054623523561962121844472519730206445399925323849921357726712260814339476359678820493696874024802314430068234324551476965600898526595237740844836104509726307324651610328786980070476224140992221991387573111030653697721756642915228518415403629147207282112933231838216791092509769410795408384470303575391777944668587627443959922308121450289121928955732320864638736171425870699089478077986089925253979068312252001582948423174923713659507308574025292779261621745694725634511445479503576651024096841559360451613443587563231502396485627742819344087601983402865375954935501528151464714798394578708384849171487440543820266301444580936082499351389142840975121561704971413039994575500345798296756964999192930536553898286636687060276866533094471513762178986710349614931296658483434660029493826412506352818013012207063509143922638696575263826463326587052192250903379750365753072153604232848608004778134957388598630043489411914874591547558113885195489306163146998653558770657466114560524021870404674116483980314982054960888893081187031032821464471359752788574000102959243036560953179156794348611657487997211884523827403573694749622249321435716033364143502564639236994228662386429304629249498112261190834564714986845507996876112680743919091712552799294132279750780929119037439304732815338072027838977089425833454388168181333000305494023426448483623411666889923926459676196228380430866656531563493384033146532528418382752624052428446272289306481378368776181943217778987294694905372163307846075034686972643178452433974073954855643892448539837684431525312819571860567238687056039129161774436106010820411023155649957481201299005332479118016305278358250076339577204409781499809166437996865227306048843907641603155792016337965363294767544994820011486029978806439443699644766311296724807451248394425537931537105248137580901447336995528046036234009727540564184044991974153978373934290316230713588191918918945436523202862672417662159614764005356511559500773746322760574925086136791404778148938988134258661866045987413187562366392045083049998875048845973619978977981363204275228175507931919356947140589998959564691597333400886338661811292082940957239398742122998026089792780922348340749673729127180451269958055776982102316593646670951895655434101626348723837385178230919851410691238361525943542819992264597183615406174639824416901094178033013506802312918115933917173635005853414565549096236051311903654637045336898380288155843107193061761788023317621865536588078573040417847539030810827011685703603516932944086034670229727247178590752880886653196687249332471038841132773638734269887981638240334659381272590206602275958612545055899873268950330527812940831427709123396440918191037866949566277652337366541716546388341722597715838935044636624699658439102321069839863798042117457363730447742392498457092710109527890763737474122622062534957968104715791757182906531312460163374307445388089992202777046379557604679990307997485360088536084467583710729275066075752982174783914508880803319620866988200276017434333561484509979222931147072272842700843904140441486921046608888378331141196613149910984293769445749522046338605392146854447079655988577397768316070188562452219920304048846235583886005472798519361932451914580993127607515464128465229724505787756445261568204820064402620247774202553788747352716403451088906051253634516954676661302065646101052966976345037525288472792756356320326584339729039263348493203100159832185960946106803509690935455417908609209123388522331064343209117652743424862712310042129079969733369227339660925276748652453178261716631798830196651447474981918639386435949172858452221291827128329692901499935839815929103343057661823925556353756837267698023791313702370315564519135054208740280965128908473989498518887994722545062856922144627834671920528584282510658982614243328808682169327430388525013282578511942398894073907405463909887651058232563706212504401507618144485560071495389611553177250575305349031403785527790397807370464980544419835155191835913814897585150764198538284448668762886359847125593921050426405562467892174654496030389433303744444352998824646217859974268657499327695424607977036507502526269629981423117372843027148653073904525570888115818611054572074799304886852652321305459911597328662212458478743089750219852152364913363597383720688209824916861937255057236922285962486510022768687764586147221549355500555295133821756286250997272229153291906827769723108694076924409980567801141043632060596688732381923428941920281155970876458862471592824653783094116641317234194312152435019179019971163945349606405885225691695522821071582242360849119379064511501156574338032261152052091513074266144319152042290857204085499228629263158044884319892168961789073583647036186635153361392753393842481873567973439913405963750485214018327795371558533825147940494882987538512538336250341590034974593996138351458726753273411475711971402436529662680840007672911901567155838044822200875556326002662614829732703067670495245580571448351515432653223891730604692879590238096109969021158131977151067982129406391547986814841551672486462646678422496144443147281796890403984162070396692640436495849448468119318738986262708222439099837104827389910666462286659427999675910033655278299308861595630282508288328197494377933645404661185282168638306505936361566335659749466225479122891953264161793168673012752867348228091120642042403774009116396178817690294311051914605680364283842312865056552378999472571902429257727147244458353963573030475506096767796105137555306480483615653365699977433948007350788794695429228328824807084472417433055457252922972492027463047624411767774034413148667196783089739996214244757833903321328250976005047025288342611873982828307352533179794841693268956924906072830958444059876286347134095592174262990202616922988787433963744547973997421591815058765119487999999999999999999999999999999999999999999999999999999999999999999
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Unas rápidas estadísticas del programa podrían ser:
+- Número de instrucciones (sin contar comentarios): 17
+- Variables usadas (al margen de Y como salida):
+    - de entrada: X1, X2
+    - auxiliares: Z1, Z2, Z3, Z4
+- Etiquetas usadas (al margen de E): A, B, C, D&lt;/p&gt;
+
+&lt;h2&gt;Vayamos por partes&lt;/h2&gt;
+
+&lt;p&gt;A nivel lógico, el programa podríamos dividirlo en partes, según el objetivo concreto de cada una de ellas.&lt;/p&gt;
+
+&lt;h3&gt;Parte uno&lt;/h3&gt;
+
+&lt;p&gt;Estado inicial (aquellas variables que no aparecen se suponen 0): X1 y X2 con los valores proporcionados por el usuario.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+; Y=X1/X2 X2 must be &amp;gt;0 Resto Z1
+[A] X2 = X2 - 1
+Z2 = Z2 + 1
+Z4 = Z4 + 1
+IF X2 != 0 GOTO  A
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;En las primeras cuatro instrucciones, el programa mueve por completo el valor de X2 a Z2 y Z4, dejando X2 a 0. Recordemos que en X2, inicialmente, está el divisor. Por ejemplo: en la división 10 / 2, X2 contendría el valor 2. Después de ejecutarse la porción del programa, tanto Z2 como Z4 pasarían a valer 2, mientras que X2 valdría 0.&lt;/p&gt;
+
+&lt;h3&gt;Parte dos&lt;/h3&gt;
+
+&lt;p&gt;Estado inicial: X2 = 0, Z2 = X2, Z4 = X2.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+[B] X1 = X1 - 1
+Z4 = Z4 - 1
+Z1 = Z1 + 1
+IF X1 != 0 GOTO B
+IF Z4 != 0 GOTO E
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Aunque es similar en estructura a la parte uno, hay dos diferencias fundamentales:
+1. X1 no se mueve a otras dos variables auxiliares, sino solo a Z1
+2. A la misma vez, se hace la operación Z4 = Z4 - X1&lt;/p&gt;
+
+&lt;p&gt;Al terminar esta parte, si Z4 no valiese 0 el programa terminaría (recordemos, E es una etiqueta especial, de salida). ¿En qué casos, entonces, terminaría el programa, para qué valores de X1 y X2 ocurriría esto? Vamos a estudiar las dos posibilidades:
+- X1 &gt;= X2: en este caso, Z4 (que inicialmente contiene X2) siempre valdrá 0, pues en GOTO solo se trabaja con los números naturales, y la operación 0 - 1 siempre vale 0;
+- X1 &amp;lt; X2: en esta ocasión, Z4 siempre será mayor que 0, por lo tanto distinto, por lo tanto terminará el programa&lt;/p&gt;
+
+&lt;p&gt;Es fantástico porque esta solución, además, ha tenido en cuentra controlar que el dividendo sea mayor, o igual, que el divisor. Y, en caso contrario, al no haber manipulado Y todavía, esta valdría 0, con Z1 = X1, tal como pedí. ¡Buen trabajo!&lt;/p&gt;
+
+&lt;h3&gt;Parte tres&lt;/h3&gt;
+
+&lt;p&gt;Estado inicial, para X1 &amp;lt; X2: X1 = 0, X2 = 0, Z1 = X1, Z2 = X2, Z4 = X2 - X1.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+[C] Z1 = Z1 -1
+X1 = X1 + 1
+IF Z1 != 0 GOTO C
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Esta parte es muy sencillita: vuelve a mover el valor de Z1, que almacenaba X1, de vuelta a este.&lt;/p&gt;
+
+&lt;h3&gt;Parte cuatro&lt;/h3&gt;
+
+&lt;p&gt;Estado inicial: X2 = 0, Z2 = X2, Z4 = X2 - X1.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+[D] Z2 = Z2 - 1
+X1 = X1 - 1
+X2 = X2 + 1
+IF Z2 != 0 GOTO D
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;En estructura, es muy similar a la parte dos, donde se aprovecha un mismo bucle para hacer dos operaciones a la vez: resta y suma. En esta ocasión:
+- se resta el valor de Z2 (X2) a X1 (que seguía manteniendo su valor original): X1 = X1 - Z2 = X1 - X2; y
+- se vuelca el mismo valor a X2, como se hacía con Z1 y X2 en la parte tres&lt;/p&gt;
+
+&lt;p&gt;Podemos decir que es aquí, en esta parte, donde se hace el primer paso de la división, pues dividendo = dividendo - divisor y, el divisor sigue intacto.&lt;/p&gt;
+
+&lt;h3&gt;Parte cinco&lt;/h3&gt;
+
+&lt;p&gt;Estado inicial: X1 = X1 - X2, Z4 = X2 - X1.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Y = Y + 1
+IF X1 != 0 GOTO A
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Finalmente, se incrementa en 1 la Y, el cociente. En el caso de que X1, el divisor, aún no valga 0, todavía podemos seguir con la división, por lo que se vuelve a A, justo la primera instrucción de todas.&lt;/p&gt;
+
+&lt;h2&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Cuando aprendemos a multiplicar, de pequeños, nos explican que no es más que sumar varias veces. Del mismo modo, dividir no es más que restar. Este programa hace justo eso, restar; tantas veces como el dividendo siga siendo mayor o igual que el divisor, y contar cuántas veces se hace esa resta. Además, cuando ya no es posible restar más, también se almacena ese resto. ¡Hace todo lo que se pedía!&lt;/p&gt;
+
+&lt;p&gt;Que lo haya analizado por partes ha sido algo natural, debido a lo bien organizado que está el código:
+- las etiquetas se usan en orden alfabético, lo que ayuda a un humano a seguir el código; y
+- las variables auxiliares corresponden en índice con aquella con la que comparte el valor: Z1 para X1 y Z2 para X2&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Dedicado a mi cuñada (y a mi cuñado, que es de letras pero puso su granito de arena también): muchísimas gracias por el esfuerzo y, ¡enhorabuena por conseguirlo!&lt;/em&gt;&lt;/p&gt;</description>
+      <pubDate>Fri, 08 May 2020 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=ipn</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Introducción a la Programación para Niños</title>
+      <description>&lt;p&gt;&lt;strong&gt;Actualización 9/5:&lt;/strong&gt; ¡Tenemos solución al reto! Echa un ojo abajo, en la clase 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización 28/3:&lt;/strong&gt; acabo de publicar el vídeo y el documento de la segunda, y última, clase :-) Al comienzo de ambos están las soluciones (¡algunas de ellas, hay muchas!) a los ejercicios de la clase anterior. ¿Serás capaz de resolver el reto? 8-)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización 21/3:&lt;/strong&gt; ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización 20/3:&lt;/strong&gt; ya está abajo, junto a la fecha de la 1ª clase, la dirección para conectarte mañana. Finalmente usaremos Skype: el otro día no sabía que YouTube no permite de forma sencilla mostrar la pantalla del organizador. Skype tiene un límite de 50 personas, no creo que lo superemos; pero, por si acaso, grabaré la sesión en vídeo y, mañana mismo, la publicaré aquí para quien quiera verla de nuevo, o tuvo cualquier problema. ¡Acordaos del papel y lápiz!&lt;/p&gt;
 
@@ -33,7 +202,7 @@
 &lt;li&gt;&lt;strong&gt;Clase 2:&lt;/strong&gt; sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://join.skype.com/apHhmwtfMLDm"&gt;https://join.skype.com/apHhmwtfMLDm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Abajo encontrarás tanto el vídeo como el material&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -68,6 +237,18 @@
 &lt;li&gt;Reto: ¿qué eres capaz de programar con GOTO?&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/_4H7g4i3Trg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;El documento que he usado como presentación está &lt;a href="items/documents/IPN-Clase2.pdf"&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Reto&lt;/h4&gt;
+
+&lt;p&gt;Aquí pondré las soluciones que reciba (puedes encontrar el enunciado del mismo tanto en el vídeo, como en el documento, de justo arriba):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Anónimo: &lt;a href="goto-studio/?p=%3B%20Y%3DX1%2FX2%20X2%20must%20be%20%3E0%20Resto%20Z1%0A%5BA%5D%20X2%20%3D%20X2%20-%201%0AZ2%20%3D%20Z2%20%2B%201%0AZ4%20%3D%20Z4%20%2B%201%0AIF%20X2%20%21%3D%200%20GOTO%20%20A%0A%5BB%5D%20X1%20%3D%20X1%20-%201%0AZ4%20%3D%20Z4%20-%201%0AZ1%20%3D%20Z1%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20B%0AIF%20Z4%20%21%3D%200%20GOTO%20E%0A%5BC%5D%20Z1%20%3D%20Z1%20-1%0AX1%20%3D%20X1%20%2B%201%0AIF%20Z1%20%21%3D%200%20GOTO%20C%0A%5BD%5D%20Z2%20%3D%20Z2%20-%201%0AX1%20%3D%20X1%20-%201%0AX2%20%3D%20X2%20%2B%201%0AIF%20Z2%20%21%3D%200%20GOTO%20D%0AY%20%3D%20Y%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20A"&gt;programa&lt;/a&gt;. He analizado esta solución &lt;a href="?i=la-solucion-al-reto-division-en-goto"&gt;aquí&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h2&gt;Preguntas frecuentes&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;¿Qué necesito para seguir el curso?&lt;/strong&gt;
@@ -81,13 +262,214 @@ No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me
 
 &lt;p&gt;&lt;strong&gt;¿Hay mínimo de edad?&lt;/strong&gt;
 Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Fri, 20 Mar 2020 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Wave Engine's on-line glTF viewer</title>
-  <guid>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</guid>
-  <description>&lt;p&gt;&lt;em&gt;(This post appeared first &lt;a href="https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/"&gt;here&lt;/a&gt; on February 6th, 2020)&lt;/em&gt;&lt;/p&gt;
+      <pubDate>Fri, 08 May 2020 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=wave-engine-web-performance</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Wave Engine Web performance</title>
+      <description>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; We've analyzed why Wave Engine Web performance decreases under high WebGL consuming pressure, arriving to the final conclusion the way we currently interop with JavaScript is too slow for us. Finally, we introduce how we're overcoming this situation.&lt;/p&gt;
+
+&lt;h2&gt;"Wave Engines goes slow in Web"&lt;/h2&gt;
+
+&lt;p&gt;That's the idea we all have had since started to make Wave work in Web but, didn't have analyzed it until recently. Since I have notion of Java or .NET, this' always scared everyone programming against a Virtual Machine (VM). However, the daily reality has revealed once and again, at least for me, the loss of performance isn't such a big concern; and when it's, I think more of an issue with my code than being the VM guilty for that. I just can code things better, I think.&lt;/p&gt;
+
+&lt;p&gt;Sadly, that hasn't happened with WebAssembly (Wasm) —well, .NET running on Wasm. If you open &lt;a href="http://gltf.waveengine.net/?model=https%3A%2F%2Fraw.githubusercontent.com%2FKhronosGroup%2FglTF-Sample-Models%2Fmaster%2F2.0%2FBuggy%2FglTF-Binary%2FBuggy.glb"&gt;this URL&lt;/a&gt; your PC will quickly ask for a new CPU and 2 or 4 extra GB of RAM, if not for a deep dive into cold water (depending on your location).&lt;/p&gt;
+
+&lt;p&gt;David Ávila, one of my workmates, had the intuition the issue was the interop cost with JavaScript, but I endlessly repeated him I had no numbers to argue, against or not, such. With the time going by, I feel more uncomfortable by stating things without having numbers to back such up: I've seen my-self &lt;em&gt;so&lt;/em&gt; many times thinking the issue was A, when actually was B.&lt;/p&gt;
+
+&lt;h2&gt;Two problems&lt;/h2&gt;
+
+&lt;p&gt;One week or two ago our manager Javi Cantón let us spend some time researching how to make things go faster and, I convinced him to first understand where the culprit actually is. Together, we recorded some sessions with SpectorJS, from both &lt;a href="http://gltf.waveengine.net/"&gt;Wave Engine's glTF viewer&lt;/a&gt; and &lt;a href="https://sandbox.babylonjs.com/"&gt;BabylonJS' Sandbox&lt;/a&gt;, using the same &lt;a href="https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/2.0/Buggy/glTF-Binary/Buggy.glb"&gt;model&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://spector.babylonjs.com/"&gt;SpectorJS&lt;/a&gt; is one of the few available tools to hook WebGL calls nowadays —I've tried the RenderDoc approach in Chrome with no luck; among others— and let you save the sessions in JSON format, which self-invites someone like me to write something to pull statistics from :-) (I've remembered working with another mate, Pablo Íñigo, who always tends to write tools to solve issues; I think have learnt this from him, am another "tool-oriented guy".)&lt;/p&gt;
+
+&lt;p&gt;To make the comparisson fair enough —and sorry in advance because in terms on benchmarking I've probably bypassed a few recommendations— we recorded exactly 1 frame, expecting every WebGL command between 2 drawing calls.&lt;/p&gt;
+
+&lt;p&gt;Maybe I spent 1 or 2 hours writting SpectorJSCaptureAnalyzer, as I named it; but, a simple Console project which basically accumulates every command made, started to return really usefull insights.&lt;/p&gt;
+
+&lt;h3&gt;Amount of commands&lt;/h3&gt;
+
+&lt;p&gt;This' the output for BabylonJS:&lt;/p&gt;
+
+&lt;p&gt;```
+bindVertexArray (181): 1,039794921875 ms
+bindBufferBase (149): 0,94140625 ms
+uniformMatrix4fv (118): 0,85498046875 ms
+drawElements (118): 0,829833984375 ms
+bufferSubData (31): 0,454833984375 ms
+useProgram (53): 0,304443359375 ms
+bindBuffer (62): 0,27880859375 ms
+drawElementsInstanced (31): 0,189697265625 ms
+clear (1): 0,02001953125 ms
+viewport (1): 0,005126953125 ms
+clearStencil (1): 0,0048828125 ms
+enable (1): 0,0048828125 ms
+clearColor (1): 0 ms
+clearDepth (1): 0 ms
+disable (1): 0 ms&lt;/p&gt;
+
+&lt;p&gt;Total (750): 4,9287109375 ms (0,0049287109375 s)&lt;/p&gt;
+
+&lt;p&gt;One frame at 60 FPS lengths 16,666666 ms (0,016666666 s), so
+current total would generate 202,8928076084803 FPS
+```
+&lt;em&gt;BabylonJS-Buggy-OneFrame.json (~59 FPS)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;; and this the one for Wave:&lt;/p&gt;
+
+&lt;p&gt;```
+texParameteri (7552): 22,98095703125 ms
+getExtension (944): 8,7890625 ms
+bindBufferBase (1890): 7,427734375 ms
+bindTexture (1888): 7,3662109375 ms
+bindBuffer (1396): 5,51416015625 ms
+texParameterf (1888): 5,268798828125 ms
+uniform1i (944): 4,046142578125 ms
+vertexAttribPointer (944): 3,690673828125 ms
+enableVertexAttribArray (944): 3,38037109375 ms
+activeTexture (944): 2,61767578125 ms
+bindBufferRange (470): 2,58203125 ms
+drawElements (472): 2,561767578125 ms
+bufferSubData (7): 0,215087890625 ms
+clear (4): 0,03515625 ms
+clearDepth (2): 0,01513671875 ms
+depthMask (2): 0,014892578125 ms
+clearColor (2): 0,010009765625 ms
+clearStencil (2): 0,010009765625 ms
+scissor (2): 0,005126953125 ms&lt;/p&gt;
+
+&lt;p&gt;Total (20297): 76,531005859375 ms (0,076531005859375 s)&lt;/p&gt;
+
+&lt;p&gt;One frame at 60 FPS lengths 16,666666 ms (0,016666666 s), so
+current total would generate 13,066599462151204 FPS
+```
+&lt;em&gt;WaveEngine-Buggy-OneFrame2.json (~1 FPS)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first punch in my face was the total amount of commands made: 750 in BabylonJS vs. 20297 in Wave. It's 27x times more commands we make against Babylon! Crazy. Just before breaking my Computer Science degree into small pieces, thanks God I noticed one subtle difference: why do we have 2 &lt;code&gt;clearColor()&lt;/code&gt; calls instead of just 1, as Babylon does? One frame should suffice with just 1 clear command...&lt;/p&gt;
+
+&lt;p&gt;Then some words from again David came into my mind: "guys take care with having more than one camera as they all get rendered". That basically means Wave doesn't differentiate whether you actually wanted to draw 2 cameras at the same time: you may want to have a scene in background and an overlay on top, for instance. It's a very common practice with 2D UIs in games: you're killing enemies in your favourite FPS and see in 2D on top your actual life, weapon, etc. Those are 2 cameras being rendered at the same time.&lt;/p&gt;
+
+&lt;p&gt;Well, all this' so beautiful but, our glTF viewer has no need for 2 cameras; so, after digging a few seconds within the code, I confirmed it: I was rendering 2 cameras, yes. Quickly fixed it and took a new session:&lt;/p&gt;
+
+&lt;p&gt;```
+texParameteri (3776): 12,076171875 ms
+getExtension (472): 4,739990234375 ms
+bindTexture (944): 3,7275390625 ms
+bindBufferBase (945): 3,667236328125 ms
+texParameterf (944): 3,400390625 ms
+bindBuffer (699): 3,30029296875 ms
+vertexAttribPointer (472): 2,2255859375 ms
+uniform1i (472): 2,025634765625 ms
+enableVertexAttribArray (472): 1,82958984375 ms
+activeTexture (472): 1,620361328125 ms
+drawElements (236): 1,28564453125 ms
+bindBufferRange (235): 1,279052734375 ms
+bufferSubData (4): 1,03515625 ms
+clear (2): 0,02490234375 ms
+clearDepth (1): 0,005126953125 ms
+clearColor (1): 0,0048828125 ms
+clearStencil (1): 0,0048828125 ms
+depthMask (1): 0,0048828125 ms&lt;/p&gt;
+
+&lt;p&gt;Total (10149): 42,25732421875 ms (0,04225732421875 s)&lt;/p&gt;
+
+&lt;p&gt;One frame at 60 FPS lengths 16,666666 ms (0,016666666 s), so
+current total would generate 23,664536704297287 FPS
+```
+&lt;em&gt;WaveEngine-Buggy-OneFrame3.json&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Yeah, exactly half the amount of calls than before, like it was expected. With these better numbers, we make 10149 / 750 = ~14x more calls than Babylon, which's still huge.&lt;/p&gt;
+
+&lt;p&gt;I'm not an OpenGL guy, and my knowledge is quite limited in this sense. I've recently learned what instancing is, and what a VBO (Vertex Buffer Object) is, but don't have a further notion of the rendering pipeline happening underneath.&lt;/p&gt;
+
+&lt;p&gt;Guided by my friend Javi Cantón, I can see we're making 236 &lt;code&gt;drawElements()&lt;/code&gt; calls, while Babylon does 118 &lt;code&gt;drawElements()&lt;/code&gt; + 31 &lt;code&gt;drawElementsInstanced()&lt;/code&gt; = 149. Then I can think of Babylon having infrasctructure to apply instancing where appropiate, which not only reduces the amount of commands but also takes advantage of the GPU. I can see we call &lt;code&gt;texParameteri()&lt;/code&gt; 3776 times (3776 / 236 draw calls = 16 times/draw call) while Babylon makes 0, surely because such are made at the beginning and aren't needed anymore after.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, we can do a better job in our OpenGL backend. You'll see the &lt;a href="https://www.fuget.org/packages/WaveEngine.OpenGL.Common/"&gt;WaveEngine.OpenGL.Common NuGet&lt;/a&gt; in the OpenGL launchers, as it serves both OpenGL/ES and WebGL, and it's exactly there where there's room for improvement. Truth be told, there's already a feature branch in our repo with some improvements made in that direction, and we've gained some FPS already, but still need to assure it works in every visual test. We've frozen this effort because of what have found bellow.&lt;/p&gt;
+
+&lt;h3&gt;Time consumed&lt;/h3&gt;
+
+&lt;p&gt;The statistics generated by my small tool also sum the amount of time taken per command, finally adding everything to calc how many FPS can be expected. That's not 100% exact as any engine not only consumes time with graphic calls, but in the rest of logic stuff: updating components, for instance. But it's a way to compare the actual frame rate (SpectorJS reports it within its toolbar menu) with the expected one, between Wave and Babylon.&lt;/p&gt;
+
+&lt;p&gt;|             | Time (ms) | Expected FPS | Actual ~FPS |
+| ----------- |:---------:|:------------:|:-----------:|
+| Wave Engine | 42,26     | 23,66        | 1           |
+| BabylonJS   | 4,93      | 202,89       | 59          |&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Table comparing time consumed in 1 frame. Numbers are rounded by 2 decimals&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I made every test under Chrome, where haven't disabled the framerate limit of 60 FPS. This explains why Babylon is up to the limit, with ~59, but surely could do better if the browser wouldn't limit such. However, Wave reports barely 1 FPS, although we could expect almost 24.&lt;/p&gt;
+
+&lt;p&gt;I've still not talked about how we're running the .NET runtime under Wasm. Until here, I've made every test in interpreter mode, which's the lowest option in terms of performance. Every instruction of the .NET VM is interpreted in Wasm, without any sort of cache (like the JITter does).&lt;/p&gt;
+
+&lt;p&gt;Our mate Javier Carnero has been working heavily on researching the AOT scenario, in which percentage it can be of help for us, but I'll let him share —if he wants obviously!— his findings. I'll just say AOT isn't the gold key we're looking for &lt;strong&gt;here&lt;/strong&gt;, so we must keep looking for other paths.&lt;/p&gt;
+
+&lt;p&gt;If we have a really low framerate compared to the theoretical values, if AOT can't help us to overcome this situation, what's then happening here? Reached this point, I decided to move one step down and analyze timings at the &lt;a href="https://github.com/WaveEngine/WebGL.NET/"&gt;WebGL.NET&lt;/a&gt; layer. &lt;/p&gt;
+
+&lt;h2&gt;WebGL.NET costs&lt;/h2&gt;
+
+&lt;p&gt;I wanted to compare just one single thing: how much time lengths exactly when calling WebGL commands through JavaScript from 1) the .NET Runtime perspective and 2) the JavaScript Runtime one. I already had 2) thanks to above reports, where each WebGL command also shows the time consumed in total, from the JavaScript side.&lt;/p&gt;
+
+&lt;p&gt;For 1), I added a &lt;code&gt;Stopwatch&lt;/code&gt; exactly here:
+```csharp
+protected object Invoke(string method, params object[] args)
+{
+    var actualArgs = Translate(args);
+    // Between here...
+    var result = gl.Invoke(method, actualArgs);
+    // ... and here
+    DisposeArrayTypes(actualArgs);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if (IsVerbosityEnabled)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```
+&lt;em&gt;The WebGL.NET backend which finally calls JavaScript to execute the WebGL &lt;code&gt;method&lt;/code&gt; with params &lt;code&gt;args&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;; and another one at the very beginning and end of the above same method, because I was somewhat worried the hand-made marshalling could cause some bottleneck. I made these tests over &lt;a href="https://webgldotnet.surge.sh/"&gt;the samples gallery&lt;/a&gt;, where we have control on the rendering loop. I added some logic to run exactly 600 frames, breaking the app just after. Such amount of frames would let me calc some averages and hopefully avoid the initial cold states.&lt;/p&gt;
+
+&lt;p&gt;In the end, I got hundreds of tuples with those 2 times. With a handy bunch of &lt;code&gt;Console.WriteLine()&lt;/code&gt; calls, it generated a large CSV output which Excel would leverage. I trusted my 1.5 years working in front of Excel with backlogs, costs and so on, would let me quickly get a few beautiful charts 8-)&lt;/p&gt;
+
+&lt;p&gt;And that way it was! This' the first chart:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/AverageDotNETVSJavaScriptDurations.png" alt="Chart: Average .NET vs. JavaScript durations" /&gt;
+&lt;em&gt;Chart: Average .NET vs. JavaScript durations&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;My interpretation of this chart is quite simple: since the orange path is almost always on top of the blue one, most of the time consumed on a WebGL call is gone exactly in doing that —remember: everything in the .NET Runtime land, for now. Except for 2 or 3 commands where we could gain a good amount of time by improving our marshalling, it seems to make no sense investing time on this.&lt;/p&gt;
+
+&lt;p&gt;Then, I built another chart (the last one):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/AverageRatioJSDotNET.png" alt="Chart: Average ratio JS/.NET" /&gt;
+&lt;em&gt;Chart: Average ratio JS/.NET&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically it's the first chart represented as a ratio between the 2 values: this way we can easily see the percentage gone in the JavaScript interop. Except for the commands I mentioned above, we could say ~80% of the time consumed by our WebGL.NET backend is due to the low-level JavaScript calls, so it leaves us only 20% of improvement. I don't think 20% is low enough to don't think of improving it; I just think the actual time taken by commands —as reported by SpectorJS with the recorded sessions— is &lt;em&gt;much&lt;/em&gt; lower than the one we can see here.&lt;/p&gt;
+
+&lt;h3&gt;JSObject.Invoke()&lt;/h3&gt;
+
+&lt;p&gt;If by example we continue with &lt;code&gt;clearColor()&lt;/code&gt;, it took 0,0048828125 ms in the Wave session —again: it's the time taken &lt;em&gt;only&lt;/em&gt; in JavaScript. When looking at the same command at above charts (the first one exactly, although you can't see it because didn't get rendered in the graph) it took 0,079018124 ms of average. 0,079018124 / 0,0048828125 = 16,18 times slower making such call from .NET than in pure JavaScript. And I've seen also such ratio growing up to 20 times as well.&lt;/p&gt;
+
+&lt;p&gt;Here's where the big issue is: calling JavaScript code from .NET through &lt;a href="https://github.com/mono/mono/tree/master/sdks/wasm/framework/src/WebAssembly.Bindings"&gt;Mono's WebAssembly.Bindings&lt;/a&gt; NuGet doesn't offer the performance we need. It's feasible for ocasional calls, where you won't notice such impact, but not for stuff like ours, with hundreds or thousands calls per second. We need to consume WebGL in a much faster way.&lt;/p&gt;
+
+&lt;h2&gt;Emscripten will bring some light&lt;/h2&gt;
+
+&lt;p&gt;Two weeks ago my mate Javier Carnero and I started researching dynamic &amp;amp; static linking approaches at Emscripten level, directly. After seeing &lt;a href="https://wasm.continuation-labs.com/d3demo/"&gt;Doom 3&lt;/a&gt;, &lt;a href="http://xproger.info/projects/OpenLara/"&gt;Tomb Raider&lt;/a&gt;, &lt;a href="https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/win2k.cfg&amp;amp;mem=192&amp;amp;graphic=1&amp;amp;w=1024&amp;amp;h=768"&gt;Windows 2000&lt;/a&gt;, etc., high-performance ports of software pieces, running well through Emscripten, we think there must exist a better way to interop.&lt;/p&gt;
+
+&lt;p&gt;The linking approaches would let us P/Invoke C functions, compiled into Wasm, from .NET, expecting to be faster than going through JavaScript. Actually, JavaScript is never left aside, as Emscripten ports of OpenGL/ES libraries are actually wrappers around JavaScript/WebGL. However, this way we remove the trampoline from .NET to JavaScript, with all the manual marshalling needed, by letting Emscripten handle all this for us.&lt;/p&gt;
+
+&lt;p&gt;Lin Clark wrote, in late 2018, &lt;a href="https://hacks.mozilla.org/2018/10/calls-between-javascript-and-webassembly-are-finally-fast-%F0%9F%8E%89/"&gt;a beautiful article&lt;/a&gt; on how they improved JavaScript &amp;amp; Wasm communication in Firefox. Jérôme Laban's recently &lt;a href="https://jaylee.org/archive/2020/03/22/csharp-interop-with-c-cpp-and-rust-in-webassembly.html"&gt;written&lt;/a&gt; too on how P/Invoking Rust and C code from .NET-Wasm, where already alerts on the performance aspect.&lt;/p&gt;
+
+&lt;p&gt;When we had an initial render loop working, with promising times, Javi Cantón had an idea which would shift our route: could we reuse the existing &lt;a href="https://www.fuget.org/packages/WaveEngine.OpenGL/"&gt;WaveEngine.OpenGL NuGet&lt;/a&gt; with Emscripten's EGL &lt;code&gt;getProcAddress()&lt;/code&gt; call? And here we are, but this' stuff for another post.&lt;/p&gt;
+
+&lt;h2&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;To my workmates from Plain Concepts' Seville office for their help, in one way or another, with Wave Engine Web. Specially, the core team working in Wave Engine. More specifically, Dani Cáceres recommended me some approaches to improve WebGL.NET performance, like having multiple &lt;code&gt;Invoke()&lt;/code&gt; overloads per amount of params, instead of using &lt;code&gt;params object[] args&lt;/code&gt;.&lt;/p&gt;</description>
+      <pubDate>Sat, 25 Apr 2020 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Wave Engine's on-line glTF viewer</title>
+      <description>&lt;p&gt;&lt;em&gt;(This post appeared first &lt;a href="https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/"&gt;here&lt;/a&gt; on February 6th, 2020)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: We are announcing our experimental glTF on-line viewer made with Wave Engine 3.0, powered by WebAssembly. Try the demo! &lt;a href="http://gltf.waveengine.net" rel="noopener" target="_blank"&gt;http://gltf.waveengine.net&lt;/a&gt;&lt;/p&gt;
 
@@ -206,20 +588,13 @@ return image;
 &lt;p&gt;We have pursued such during some time but the scenario was still not ready for the jump. Nowadays, we see a bunch of possibilities for helping our customers to take visual experiences into the browser, adding Web to the list of officially supported platforms.&lt;/p&gt;
 
 &lt;p&gt;If you think we can help you reach the Web too, &lt;a href="https://waveengine.net/Company#Contact"&gt;we are here to listen&lt;/a&gt;. Oh, and if you found any issue, please &lt;a href="https://github.com/WaveEngine/Feedback/issues"&gt;report it&lt;/a&gt;. Thank you for reading.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 06 Feb 2020 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Podcast sobre testing</title>
-  <guid>https://marcoscobena.com/?i=podcast-testing</guid>
-  <description>&lt;p&gt;Hemos movido esto &lt;a href="?i=juanma-y-marcos"&gt;aquí&lt;/a&gt;.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Mon, 30 Sep 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
-  <guid>https://marcoscobena.com/?i=2019-8-2</guid>
-  <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
+      <pubDate>Thu, 06 Feb 2020 23:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=2019-8-2</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
+      <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
 running —between quotes because the stencil one actually doesn't, and we need to go for a second round as we enabled
 texture storage in the middle.&lt;/p&gt;
 
@@ -234,13 +609,13 @@ which's still better in performance.&lt;/p&gt;
 
 &lt;p&gt;With the last visual test we've gotten ~30 fps so thinking on AOT is becoming a must. I'd like to research on this
 sooner or later.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 01 Aug 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Wave Engine &amp; WebGL.NET status</title>
-  <guid>https://marcoscobena.com/?i=2019-7-26</guid>
-  <description>&lt;p&gt;After some months working on
+      <pubDate>Thu, 01 Aug 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=2019-7-26</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Wave Engine &amp; WebGL.NET status</title>
+      <description>&lt;p&gt;After some months working on
 &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; this Wednesday we've
 finally created the first NuGet. I've been personally avoiding doing this
 because we rely on some Mono's NuGets which are not public so anyone adding ours
@@ -281,13 +656,13 @@ similar too.&lt;/p&gt;
 by the end of the year and that's great. Still the development workflow is rough
 but for sure this will improve; however, even in this way, Wasm is a great
 platform to target because of the browser-based and native execution tuple.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 25 Jul 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Your first Wasm app with C#</title>
-  <guid>https://marcoscobena.com/?i=wasmapp1</guid>
-  <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
+      <pubDate>Thu, 25 Jul 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=wasmapp1</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Your first Wasm app with C#</title>
+      <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
 Mono's latest Wasm progress. It's taking the shape of something which could make users File &gt; New and start creating 
 apps with such but, still needs some progress. However, I ask my-self whether everyone out there would like to start 
 writing C# to target Wasm but still not worrying on configuring their environment in any way.&lt;/p&gt;
@@ -328,13 +703,13 @@ Hit Return to stop the server.&lt;/p&gt;
 &lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;Now browse http://localhost:9000/ in your prefered app (Wasm is widely supported) and enjoy!&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Fri, 05 Jul 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Unit Testing WebGL.NET</title>
-  <guid>https://marcoscobena.com/?i=unit-testing-webglnet</guid>
-  <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
+      <pubDate>Fri, 05 Jul 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=unit-testing-webglnet</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Unit Testing WebGL.NET</title>
+      <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
 
 &lt;p&gt;While my mate Juan is working on the first actual Wave Engine 3.0 app with WebGL -he's already achieved the tricolor 
 triangle, by the way- I've spent some time trying to set up something for unit testing the API. Eric Mellino, the guy 
@@ -430,13 +805,13 @@ the source code). I still have to fix the Linux build which's not publishing the
     ```&lt;/p&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 27 Jun 2019 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Pull-Request reviews</title>
-  <guid>https://marcoscobena.com/?i=pr-reviews</guid>
-  <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
+      <pubDate>Thu, 27 Jun 2019 22:00:00 Z</pubDate>
+    </item>
+    <item>
+      <link>https://marcoscobena.com/?i=pr-reviews</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Pull-Request reviews</title>
+      <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
 
 &lt;p&gt;Serve this as my personal reminder for how to take a PR review:&lt;/p&gt;
 
@@ -462,285 +837,7 @@ public const string AppCenterKey = "bar";&lt;/p&gt;
 &lt;li&gt;forget your impulse, just keep scrolling down because there for sure will be things far more interesting to consider&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Tue, 19 Feb 2019 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>GoTo</title>
-  <guid>https://marcoscobena.com/?i=goto</guid>
-  <description>&lt;p&gt;While I was studying Computer Science had one subject named Computability Theory where it was introduced a quite simple, at the beginning, language: GOTO. Its target was to demonstrate whether a function could be expressed using such —then called GOTO-computable— thus such could be calculated by a computer. (My teachers may kill me because how I've summed things up but think it's somewhat valid :-)&lt;/p&gt;
-
-&lt;p&gt;By that time I wrote an interpreter in JavaScript (which may reside in one of my multiple back-ups) and quickly sent it to my teachers, thinking maybe any student could eventually find it useful. My programming abilities were weak by then and, for instance, I relied the parsing on regular expressions —you can imagine how strong my implementation was...&lt;/p&gt;
-
-&lt;p&gt;A few months ago, and pushed by &lt;a href="https://praeclarum.org/2018/08/27/oops-i-wrote-a-c-compiler.html"&gt;Fran Krueger's CLanguage article&lt;/a&gt;, I found it attractive to spent my spare time working on a more solid compiler which, how not, would target .NET ecosystem. Also because I've always had curiosity on how &lt;code&gt;System.Reflection.Emit&lt;/code&gt; works and saw a chance to learn it deeper.&lt;/p&gt;
-
-&lt;h4&gt;Language&lt;/h4&gt;
-
-&lt;p&gt;GOTO's quite simple: you add or subtract 1, jump anywhere or nothing —this' one the aspects why I said it can fit for children. This could be the Hello World in GOTO:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-Y = Y + 1
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The vars you can play with are simple too: input ones, aux ones and one output. And I'm sure you've already figured their notations out: &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;Z&lt;/code&gt; and &lt;code&gt;Y&lt;/code&gt;, in the same order.&lt;/p&gt;
-
-&lt;p&gt;The entire language specification can be found &lt;a href="https://github.com/MarcosCobena/GoTo/wiki/Language"&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4&gt;Parsing&lt;/h4&gt;
-
-&lt;p&gt;Also during University I learned Antlr, through Java, up to building a small BASIC interpreter. After some Google-ing I discovered there's a .NET backend for it, which's .NET Standard by the way, so decided to go with it as my parsing infrastructure.&lt;/p&gt;
-
-&lt;p&gt;The only language definition I have's the one my teachers still use in Computer Science and Mathematics courses, which's formal in its description but lacks a formal side to be used for actual programming, so my first steps were popping a grammar with lexer and parser rules of what I wanted to achieve. As an example, this' the way conditional instructions are detected:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-instruction : [...]
-    | 'IF' var=ID '!=' '0' 'GOTO' label=ID #ConditionalInstruction
-    [...]
-    ;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I've iterated a lot the grammar during this time, refactoring once and again, reaching a point where it feels comfortable for further passes such like the semantic one.&lt;/p&gt;
-
-&lt;h4&gt;Semantic Analysis&lt;/h4&gt;
-
-&lt;p&gt;There are a bunch of rules which aren't permitted in GOTO, for instance using different vars in the same instruction:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-X2 = X3 + 1
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Hey, I told you GOTO was simple! Allowing above, however, can be easily achieved with something we'll see later on; however, it's not allowed by definition.&lt;/p&gt;
-
-&lt;p&gt;The semantic analysis, along with the lexing and parsing, produces error messages. You're already familiar with compiler errors and recognize the line, column and message they use to come with. I've based my-self on this idea for GOTO too, where the compiler returns a collection of messages with that information and, for the sake of future iterations, its severity: error or simply a warning —truth be told I've still not used this last :-D&lt;/p&gt;
-
-&lt;h4&gt;Abstract Syntax Tree&lt;/h4&gt;
-
-&lt;p&gt;My initial idea was to directly throw IL while visiting the parsing tree and, quickly, noticed it wasn't the best way to go. I needed to build an AST: a parsing-free tree representation which's ready for further steps, i.e. code generation.&lt;/p&gt;
-
-&lt;p&gt;Lucky of me GOTO's so small a flat collection of nodes do the job quite good in my opinion: instead of having an AST it actually manages instruction nodes where, now yes, are helpful by the time of translating into IL.&lt;/p&gt;
-
-&lt;p&gt;As a curious thing, I've ended up solving one or two semantic analysis over the "AST" instead of before, because simply having this new data structure's made easier the job: GOTO doesn't allow referencing labels in conditional instructions which aren't defined anywhere (I've allowed before or after, both), and checking this' something like:&lt;/p&gt;
-
-&lt;p&gt;```c#
-public static void CheckMissingLabel(ProgramNode program, ref List&lt;Message&gt; messages)
-{
-    var conditionals = program.Instructions
-        .Where(item =&gt; item is ConditionalInstructionNode node &amp;amp;&amp;amp; 
-            !node.TargetLabel.Equals(Settings.ExitLabel.ToString()))
-        .Cast&lt;ConditionalInstructionNode&gt;();
-    var labels = program.Instructions
-        .Cast&lt;InstructionNode&gt;()
-        .Select(item =&gt; item.Label);&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;foreach (var item in conditionals)
-{
-    if (!labels.Contains(item.TargetLabel))
-    {
-        var message = new Message(
-            SeverityEnum.Error,
-            $"The conditional instruction cannot target missing label {item.TargetLabel}.",
-            item.Line,
-            item.Column);
-        messages.Add(message);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;}
-```&lt;/p&gt;
-
-&lt;h4&gt;Code Generation&lt;/h4&gt;
-
-&lt;p&gt;Let's say our program has no errors and we're ready to throw IL —Intermediate Language, the byte-code .NET runtime understands. My idea's always been to have a CLI interface —&lt;em&gt;a la&lt;/em&gt; Microsoft's &lt;code&gt;csc&lt;/code&gt;, Mono's &lt;code&gt;mcs&lt;/code&gt;— where I could compile programs quickly. However, while the time passed, I noticed also wanted to quickly run my programs, so had to decide what I actually wanted to generate.&lt;/p&gt;
-
-&lt;p&gt;The main, and think only, difference between EXE and DLL files in .NET resides in the first having an entry-point on where the CLR knows has to start executing; the DLLs simply don't have such. If I wanted to allow people reuse their programs with, let's say, F# an EXE wouldn't be so useful, but yes a DLL: it can be consumable everywhere —except under iOS devices, although have to double-check this, because of Frank's Continuous. In the other hand, a DLL can't be easily runnable: I'd have to create a new project, reference such and write code to call it.&lt;/p&gt;
-
-&lt;p&gt;I decided to stick with the DLL. It's curious how &lt;a href="http://www.drdobbs.com/generating-code-at-run-time-with-reflect/184416570"&gt;the best article I read&lt;/a&gt; to leverage my &lt;code&gt;System.Reflection.Emit&lt;/code&gt; knowledge's been this from 2002! Even I still have serious concerns whether was the same article I read seventeen years ago (17)... Good stuff never passes by.&lt;/p&gt;
-
-&lt;p&gt;Summing up: I've copied &lt;code&gt;dotnet&lt;/code&gt; command idea, and provided the handy &lt;code&gt;gotool&lt;/code&gt; one:&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;gotool
-  GOTO-ol&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Usage: gotool.exe option ...
-- option: build, run&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;If you want to build a program just pass "build" and the program path and go. Once you have the output DLL, just pass "run", the DLL path and an input value and go. This'd be a typical session:&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;type HelloWorld.goto
-  Y = Y + 1
-  gotool build HelloWorld.goto
-  GOTO-ol&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Success! HelloWorld.dll&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;gotool run HelloWorld.dll 0
-  GOTO-ol&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;1
-```&lt;/p&gt;
-
-&lt;h4&gt;Macros&lt;/h4&gt;
-
-&lt;p&gt;For example, GOTO allows conditional instructions asking whether a var is 0 but, could we turn such inconditional —i.e. independant of the value? Sure:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-Z = Z + 1
-IF Z != 0 GOTO L
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This' known as the GOTO macro. Then, how can we use it?&lt;/p&gt;
-
-&lt;p&gt;Simply consider it as any other instruction within a program:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-GOTO A
-Y = Y + 1
-[A] X = X + 1
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Because I had no origin on how macros could be expressed in a formal way —with formal I mean doable with a computer— I ended up creating a simple schema, where macros are defined by replacing those symbols at its signature:&lt;/p&gt;
-
-&lt;p&gt;```
-MACRO GOTO L
-Z = Z + 1
-IF Z != 0 GOTO L
-END&lt;/p&gt;
-
-&lt;p&gt;GOTO A
-Y = Y + 1
-[A] X = X + 1
-```&lt;/p&gt;
-
-&lt;h4&gt;IDE&lt;/h4&gt;
-
-&lt;p&gt;Saying I've been working on an IDE for GoTo's very pretentious I guess. Having the CLI wasn't so much funny for me as having something in the browser where I could start writing GOTO and running it by a single click.&lt;/p&gt;
-
-&lt;p&gt;I had already played with Frank's Ooui and since my daily job consists on 99% Xamarin.Forms it's been a pleasure path to travel by.&lt;/p&gt;
-
-&lt;p&gt;Although my initial idea was to rely in WebAssembly —mostly to avoid any different hosting from my web one— I couldn't take this road because &lt;code&gt;System.Reflection&lt;/code&gt; dependencies aren't supported in that scenario. What did I do then? No problem, Ooui offers an ASP.NET backend which communicates through Web Sockets. And this way GoTo Studio, as I named it, has been working until yesterday night.&lt;/p&gt;
-
-&lt;p&gt;One of the bugs I had was the lack of control on infinite loops: it's not a problem with the CLI, but it's actually one with Web Sockets: my Azure App Service tier (the free one) provided 5 simultaneous connections so blocking such with 5 different endless loops made the entire website break.&lt;/p&gt;
-
-&lt;p&gt;Two days ago I started writing a small interpreter —I really like to call it a Virtual Machine— which, taking advantage of the AST representation, runs the program step by step. Since now I have control on such, I've set a limit on the steps to, now yes, break those infinite loops on time.&lt;/p&gt;
-
-&lt;p&gt;To assure programs compiled into IL and run by .NET CLR have the same results as those interpreted by its own VM I made some small changes into the Unit Tests, where the same set passes —and actually pass in green— for both.&lt;/p&gt;
-
-&lt;p&gt;You can now use &lt;a href="https://marcoscobena.com/goto-studio/"&gt;GoTo Studio&lt;/a&gt; without worry on leaving it useless :-)&lt;/p&gt;
-
-&lt;h4&gt;Conclusions&lt;/h4&gt;
-
-&lt;p&gt;I've learned a lot with this personal project and above I discuss most of the technical aspects I've touched. However, it's in the human side where I most gain I think: having something I do just for pleasure and which doesn't conform to any rule further than providing joy to my-self is being a beautiful discover.&lt;/p&gt;
-
-&lt;p&gt;While working on this I got the idea —a bunch of ideas actually— this could serve for children to learn programming, and this motivates me even more to continue ~~working~~ playing.&lt;/p&gt;
-
-&lt;p&gt;Thanks to my mates at Plain Concepts which detected some bugs and helped me making GoTo Studio easier to use. And to my beautiful fiancee for encouraging me to go deep on this: I'd really like, one day, to teach our children how computer works with this project :,-)&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 03 Jan 2019 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Xamarin.Forms XAML</title>
-  <guid>https://marcoscobena.com/?i=xf-xaml</guid>
-  <description>&lt;p&gt;In the same way we continuously refactor our C# code we should trait XAML one equally. As we layout screens there uses to be pieces which can be reused here and there. After some years working with Xamarin.Forms —plus some more with WPF and co.— I've learnt from others, and my own experience, how to scaffold good XAML which maintains its good shape as time goes by.&lt;/p&gt;
-
-&lt;p&gt;Split into chapters, I'll try to cover everything expressed in XAML:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml"&gt;Xaml Styler and App structure (this one)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-colors"&gt;Colors&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-control-templates"&gt;Control Templates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-converters"&gt;Converters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-font-styles"&gt;Font Styles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-global-styles"&gt;Global Styles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-sizes"&gt;Sizes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="?i=xf-xaml-styles"&gt;Styles&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Xaml Styler&lt;/h3&gt;
-
-&lt;p&gt;Thanks to &lt;a href="https://twitter.com/danimart1991"&gt;Daniel Martín&lt;/a&gt; we've been using &lt;a href="https://github.com/Xavalon/XamlStyler"&gt;Xaml Styler&lt;/a&gt; in &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/tree/develop/Source/Tools/XamlStyler"&gt;our last project&lt;/a&gt;. Xaml Styler's not StyleCop: it doesn't throw errors on bad formatting but rewrites everything to conform the guidelines. My mate &lt;a href="https://twitter.com/jacano35"&gt;Juan Antonio Cano&lt;/a&gt; &lt;a href="https://github.com/jacano/XamlStyler"&gt;forked it&lt;/a&gt; and added the "verify" option: now it can be used within a build pipeline and stop such on styling errors. For us App Center's &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/develop/Source/TailwindTraders.Mobile/TailwindTraders.Mobile.Android/appcenter-post-clone.sh"&gt;post-clone scripts&lt;/a&gt; have fit superb.&lt;/p&gt;
-
-&lt;p&gt;Since I work entirely on macOS there's no built-in option for Xaml Styler at Visual Studio for Mac, so I came up with this Custom Tool which I quickly run by &lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;X&lt;/code&gt; &lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;S&lt;/code&gt; —I passed from having a Terminal which runs a bash script into this, which's a good step:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="items/images/XamlStylerCustomTool.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;The full Arguments: &lt;code&gt;../Tools/XamlStyler/XamlStyler.Console/xstyler.exe -c CodeAnalysis/XamlStylerSettings.json -d . -r true&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href="https://github.com/Microsoft/TailwindTraders-Mobile/blob/develop/Source/TailwindTraders.Mobile/CodeAnalysis/XamlStylerSettings.json"&gt;Xaml Styler's JSON&lt;/a&gt; has still stuff to do with Visual Studio for Windows which could ideally be ripped in favor of a more agnostic flavour; however, they hurt nothing.&lt;/p&gt;
-
-&lt;p&gt;My only concern currently is why Visual Studio for Mac doesn't like setting the column width to 2 spaces, and continuously tries to make me work at 4. This' something I still have to study deeper.&lt;/p&gt;
-
-&lt;p&gt;Appart from above, these are some other rules I try to follow:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;120 chars per line; it helps us work with multiple files openned as columns —and is consistent with the same rule on C# files&lt;/li&gt;
-&lt;li&gt;Empty lines around XML nodes: look below how for instance &lt;code&gt;Label&lt;/code&gt; breezes inside the &lt;code&gt;ContentView&lt;/code&gt;:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;```xaml
-&lt;ContentView VerticalOptions="Start"&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;ContentView.Padding&amp;gt;
-
-    &amp;lt;Thickness
-        Top="{StaticResource DefaultMargin}"
-        Right="{StaticResource DefaultMargin}"
-        Bottom="{StaticResource DefaultMargin}" /&amp;gt;
-
-&amp;lt;/ContentView.Padding&amp;gt;
-
-&amp;lt;Label x:Name="theLabel"
-    Text="{Binding Key}"
-    Style="{StaticResource 20BoldFontStyle}"
-    TextColor="{StaticResource WhiteColor}" /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/ContentView&gt;
-```&lt;/p&gt;
-
-&lt;h3&gt;App.xaml&lt;/h3&gt;
-
-&lt;p&gt;At the opposite of what we'd think, I've found better with time to leave this file "empty". The quotes mean it's actually not empty, but blends other sources which do have XAML of value inside.&lt;/p&gt;
-
-&lt;p&gt;This, for example, is a typical App.xaml:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xaml
-&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;
-&amp;lt;Application 
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:XamarinCrumbs.XamarinForms"
-    x:Class="XamarinCrumbs.XamarinForms.App"&amp;gt;
-    &amp;lt;Application.Resources&amp;gt;
-        &amp;lt;ResourceDictionary&amp;gt;
-            &amp;lt;ResourceDictionary.MergedDictionaries&amp;gt;
-                &amp;lt;local:Colors /&amp;gt;
-                &amp;lt;local:ControlTemplates /&amp;gt;
-                &amp;lt;local:Converters /&amp;gt;
-                &amp;lt;local:FontStyles /&amp;gt;
-                &amp;lt;local:GlobalStyles /&amp;gt;
-                &amp;lt;local:Sizes /&amp;gt;
-                &amp;lt;local:Styles /&amp;gt;
-            &amp;lt;/ResourceDictionary.MergedDictionaries&amp;gt;
-        &amp;lt;/ResourceDictionary&amp;gt;
-    &amp;lt;/Application.Resources&amp;gt;
-&amp;lt;/Application&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Whoever may open this file for the first time will quickly know how stuff's placed within the project.&lt;/p&gt;</description>
-  <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-  <pubDate>Thu, 20 Dec 2018 23:00:00 GMT</pubDate>
-</item></channel>
+      <pubDate>Tue, 19 Feb 2019 23:00:00 Z</pubDate>
+    </item>
+  </channel>
 </rss>

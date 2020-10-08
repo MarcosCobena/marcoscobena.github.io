@@ -1,3 +1,7 @@
+**Actualización 9/5:** ¡Tenemos solución al reto! Echa un ojo abajo, en la clase 2.
+
+**Actualización 28/3:** acabo de publicar el vídeo y el documento de la segunda, y última, clase :-) Al comienzo de ambos están las soluciones (¡algunas de ellas, hay muchas!) a los ejercicios de la clase anterior. ¿Serás capaz de resolver el reto? 8-)
+
 **Actualización 21/3:** ¡ya tenéis el vídeo de la primera clase publicado! Justo abajo, en Temario, Clase 1. Además, también he puesto el enlace para la clase del próximo sábado :-)
 
 **Actualización 20/3:** ya está abajo, junto a la fecha de la 1ª clase, la dirección para conectarte mañana. Finalmente usaremos Skype: el otro día no sabía que YouTube no permite de forma sencilla mostrar la pantalla del organizador. Skype tiene un límite de 50 personas, no creo que lo superemos; pero, por si acaso, grabaré la sesión en vídeo y, mañana mismo, la publicaré aquí para quien quiera verla de nuevo, o tuvo cualquier problema. ¡Acordaos del papel y lápiz!
@@ -19,7 +23,7 @@ Cuando era pequeño, mis amigos y yo escribíamos programas en las libretas del 
 - **Clase 1:** sábado, 21 de marzo, a las 11:00 (hora española), 1 h de duración
     - *Abajo encontrarás tanto el vídeo como el material*
 - **Clase 2:** sábado, 28 de marzo, a las 11:00 (hora española), 1 h de duración
-    - [https://join.skype.com/apHhmwtfMLDm](https://join.skype.com/apHhmwtfMLDm)
+    - *Abajo encontrarás tanto el vídeo como el material*
 
 ## Temario
 
@@ -44,6 +48,16 @@ El documento que he usado como presentación está [aquí](items/documents/IPN-C
     3. Cómo compartir tus programas
 2. Macros para no escribir una y otra vez lo mismo
 3. Reto: ¿qué eres capaz de programar con GOTO?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_4H7g4i3Trg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+El documento que he usado como presentación está [aquí](items/documents/IPN-Clase2.pdf).
+
+#### Reto
+
+Aquí pondré las soluciones que reciba (puedes encontrar el enunciado del mismo tanto en el vídeo, como en el documento, de justo arriba):
+
+1. Anónimo: [programa](goto-studio/?p=%3B%20Y%3DX1%2FX2%20X2%20must%20be%20%3E0%20Resto%20Z1%0A%5BA%5D%20X2%20%3D%20X2%20-%201%0AZ2%20%3D%20Z2%20%2B%201%0AZ4%20%3D%20Z4%20%2B%201%0AIF%20X2%20%21%3D%200%20GOTO%20%20A%0A%5BB%5D%20X1%20%3D%20X1%20-%201%0AZ4%20%3D%20Z4%20-%201%0AZ1%20%3D%20Z1%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20B%0AIF%20Z4%20%21%3D%200%20GOTO%20E%0A%5BC%5D%20Z1%20%3D%20Z1%20-1%0AX1%20%3D%20X1%20%2B%201%0AIF%20Z1%20%21%3D%200%20GOTO%20C%0A%5BD%5D%20Z2%20%3D%20Z2%20-%201%0AX1%20%3D%20X1%20-%201%0AX2%20%3D%20X2%20%2B%201%0AIF%20Z2%20%21%3D%200%20GOTO%20D%0AY%20%3D%20Y%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20A). He analizado esta solución [aquí](?i=la-solucion-al-reto-division-en-goto)
 
 ## Preguntas frecuentes
 
