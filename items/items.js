@@ -37,6 +37,7 @@ addItem("Tools", "tools", "14/1/2019");
 addEpisode("Testing", "JuanmaYMarcos-1x1.mp3", "testing", "9/8/2019");
 addEpisode("ASAPto de Mata", "JuanmaYMarcos-1x2.mp3", "asap-to-de-mata", "1/10/2019");
 addEpisode("Vivir para trabajar", "JuanmaYMarcos-1x3.mp3", "vivir-para-trabajar", "29/2/2020");
+addEpisode("Pull Requests", "JuanmaYMarcos-2x1.mp3", "pull-requests", "2/1/2021");
 
 // Posts —this' the order they'll appear listed
 
