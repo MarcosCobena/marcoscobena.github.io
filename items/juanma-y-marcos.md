@@ -1,3 +1,7 @@
+**Actualización 20/1/2021:** nos hemos mudado
+[aquí](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
+([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml)).
+
 [Juan María Laó Ramos](https://twitter.com/juanlao), Juanma, y yo nos conocimos estudiando Ingeniería en Informática, en la Universidad de Sevilla. 
 Más concretamente, ambos participamos en la creación del Club .NET Sevilla. 
 Juanma llevaba su Palm encima, en la que apuntaba sus tareas pendientes, 
