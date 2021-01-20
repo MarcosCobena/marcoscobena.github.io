@@ -145,6 +145,12 @@ Android device, worth purchasing
 
 ### Visual Studio (for Windows)
 
+**Editor Guidelines** —it allows me to add a vertical rule at 120 chars
+
+<https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines>
+
+
+
 **VisualStudio.GitStashExtension** —adds stashes, that's all
 
 [https://marketplace.visualstudio.com/items?itemName=vii.GitStashExtension](https://marketplace.visualstudio.com/items?itemName=vii.GitStashExtension)
