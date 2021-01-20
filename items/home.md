@@ -1,3 +1,9 @@
+*Soy Marcos, bienvenid@ a mi web.
+La mayoría del contenido aquí está en inglés, pero tengo un
+[podcast](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
+([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml)) —con mi amigo Juanma Laó Ramos—
+y algún artículo del [blog](/?i=blog) que sí están en español.*
+
 It's Marcos: I'm a Software Development Engineer focused on .NET —and also enjoy
 doing things with JavaScript, as [this whole
 site](https://github.com/MarcosCobena/marcoscobena.github.io).
@@ -22,7 +28,7 @@ I'm happy here rounded by friends coming from my University years.
 
 <div id="posts-latest"></div>
 
-**Hobbies** [Audios](/?i=audios) [FPV Drones](/?i=drones) [Podcast: Juanma y Marcos (🇪🇸)](?i=juanma-y-marcos) [Reading](/?i=reading)
+**Hobbies** [Audios](/?i=audios) [FPV Drones](/?i=drones) [Podcast: Juanma y Marcos](?i=juanma-y-marcos) [Reading](/?i=reading)
 
 **Job** [Portfolio](/?i=portfolio)
 
