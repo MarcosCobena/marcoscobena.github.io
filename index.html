@@ -109,6 +109,7 @@
 // WIP replace "var" for "const" where appropiate
 
 const blogFilename = 'blog';
+const blogSpanishFilename = 'blog-es';
 const podcastFilename = 'juanma-y-marcos';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
@@ -168,8 +169,8 @@ function addItem(title, filename, date, allowComments = false) {
     items.push(item);
 }
 
-function addPost(title, filename, date) {
-    var post = { title: title, filename: filename, date: date };
+function addPost(title, filename, date, tags = []) {
+    var post = { title: title, filename: filename, date: date, tags: tags };
     posts.push(post);
 }
 
@@ -218,25 +219,28 @@ function getMarkDownPath(filename) {
     return `items/${filename}.md`;
 }
 
-function listItems(selector, items, moreFilename = null, amount = -1)
+function listItems(selector, items, moreFilename = null, amount = -1, tag = null)
 {
+    const filteredItems = tag != null ?
+        items.filter(item => item.tags.some(itemTag => itemTag == tag)) :
+        items;
     let length = amount < 0 ?
-        items.length :
+        filteredItems.length :
         amount;
-    length = Math.min(length, items.length);
+    length = Math.min(length, filteredItems.length);
 
     $(selector).empty();
     $(selector).append("<ul>");
 
     for (var i = 0; i < length; i++) {
-        var item = items[i];
+        var item = filteredItems[i];
         var html = `<li>
     <a href="${queryUrlSeparator}${item.filename}">${item.title}</a> (${item.date})
 </li>`;
         $(selector).append(html);
     }
 
-    if (moreFilename != null && items.length > length) {
+    if (moreFilename != null && filteredItems.length > length) {
         var html = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
         $(selector).append(html);
     }
@@ -311,6 +315,8 @@ function render(item, markDown, isBlogPost) {
         listItems('#posts-latest', posts, blogFilename, 5);
     } else if (item.filename == blogFilename) {
         listItems('#posts', posts);
+    } else if (item.filename == blogSpanishFilename) {
+        listItems('#posts-es', posts, /* moreFilename */ null, Number.MAX_VALUE, 'es');
     } else if (item.filename == podcastFilename) {
         renderPodcast();
     }

@@ -8,9 +8,10 @@
 // Items —it doesn't mind the order how they're added
 
 addItem("404 Not Found", "404", "29/8/2018");
-addItem("👋 ¡Hola!", "home", "20/1/2021");
+addItem("👋 ¡Hola!", "home", "21/1/2021");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "22/8/2018");
+addItem("Blog", "blog-es", "21/1/2021");
 addItem("Conferences", "conferences", "30/7/2019");
 addItem("Contact", "contact", "2/8/2019");
 addItem("FPV Drones", "drones", "8/5/2018");
@@ -42,8 +43,8 @@ addEpisode("Pull Requests", "JuanmaYMarcos-2x1.mp3", "pull-requests", "2/1/2021"
 // Posts —this' the order they'll appear listed
 
 addPost("Creativity, Inc.", "creativity-inc", "8/10/2020");
-addPost("La solución al reto: división en GOTO", "la-solucion-al-reto-division-en-goto", "9/5/2020");
-addPost("Introducción a la Programación para Niños", "ipn", "9/5/2020");
+addPost("La solución al reto: división en GOTO", "la-solucion-al-reto-division-en-goto", "9/5/2020", [ 'es' ]);
+addPost("Introducción a la Programación para Niños", "ipn", "9/5/2020", ['es']);
 addPost("Wave Engine Web performance", "wave-engine-web-performance", "26/4/2020");
 addPost("Wave Engine's on-line glTF viewer", "wave-engines-on-line-gltf-viewer", "7/2/2020");
 addPost("The 'last' Visual Test #WaveEngine #WebGL #Wasm", "2019-8-2", "2/8/2019");
@@ -130,18 +131,18 @@ addPost("Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin", "Sens
 addPost("The #Android’s FAB which liked to follow BottomBar #Xamarin", "The--Android-s-FAB-which-liked-to-follow-BottomBar--Xamarin-57a805f646", "4/10/2017");
 addPost("The refreshes bug and i18n", "The-refreshes-bug-and-i18n-3d9ad2a9421b", "25/9/2017");
 addPost("Abanico, a few hours with Xamarin.Forms and SkiaSharp", "abanico-a-few-hours-with-xamarin-forms-and-skiasharp", "21/6/2017");
-addPost("Reflexiones", "reflexiones", "21/3/2017");
-addPost("Qué puedo hacer / What can I do", "que-puedo-hacer", "14/3/2017");
+addPost("Reflexiones", "reflexiones", "21/3/2017", ['es']);
+addPost("Qué puedo hacer / What can I do", "que-puedo-hacer", "14/3/2017", ['es']);
 addPost("Wrapping views in Xamarin.iOS", "wrapping-views-in-xamarin-ios", "22/12/2016");
 addPost("My UICollectionView doesn't refresh on new items", "my-uicollectionview-doesnt-refresh-on-new-items", "12/12/2016");
-addPost("Para los que nacimos en los 80, y para los que no", "para-los-que-nacimos-en-los-80-y-para-los-que-no", "11/12/2016");
-addPost("Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento", "Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4", "15/8/2016");
+addPost("Para los que nacimos en los 80, y para los que no", "para-los-que-nacimos-en-los-80-y-para-los-que-no", "11/12/2016", ['es']);
+addPost("Hacia la e-Tauromaquia. Una propuesta para la convivencia y el emprendimiento", "Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4", "15/8/2016", ['es']);
 addPost("Mask Animation with Xamarin.iOS and AutoLayout", "mask-animation-with-xamarin-ios-and-autolayout", "26/7/2016");
 addPost("Introducing Xamarin.iOS to Objective-C/Swift developers", "introducing-xamarin-ios-to-objective-c-swift-developers", "21/7/2016");
-addPost("Me gusta, no me gusta, me gusta...", "me-gusta-no-me-gusta-me-gusta", "29/6/2016");
-addPost("Si no lo tengo me lo invento", "si-no-lo-tengo-me-lo-invento", "20/6/2016");
-addPost("La mala-vergüenza", "la-mala-verguenza", "12/6/2016");
-addPost("El valor de ir al mínimo con aquello que sueñas sin querer", "el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer", "5/6/2016");
+addPost("Me gusta, no me gusta, me gusta...", "me-gusta-no-me-gusta-me-gusta", "29/6/2016", ['es']);
+addPost("Si no lo tengo me lo invento", "si-no-lo-tengo-me-lo-invento", "20/6/2016", ['es']);
+addPost("La mala-vergüenza", "la-mala-verguenza", "12/6/2016", ['es']);
+addPost("El valor de ir al mínimo con aquello que sueñas sin querer", "el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer", "5/6/2016", ['es']);
 addPost("ADAL and how to sign in with Microsoft accounts in Xamarin.iOS", "adal-and-how-to-sign-in-with-microsoft-accounts-in-xamarin-ios", "16/5/2016");
 addPost("Inject Wave Engine into Xamarin.iOS Apps", "inject-wave-engine-into-xamarin-ios-apps", "19/4/2016");
 addPost("Álvaro and I fighting the crisis", "alvaro-and-i-fighting-the-crisis", "10/4/2016");
@@ -149,7 +150,7 @@ addPost("Setting up Xamarin.iOS builds in Visual Studio Team Services (formerly 
 addPost("Monkey.Tap with Wave Engine", "monkey-tap-with-wave-engine", "15/3/2016");
 addPost("The Value on Microsoft-Xamarin Agreement", "the-value-on-microsoft-xamarin-agreement", "25/2/2016");
 addPost("New App: ¡Buenos días! aro", "new-app-buenos-dias-aro", "11/2/2016");
-addPost("Por qué voto a Podemos", "Por-qu--voto-a-Podemos-a96b2bde0ba8", "11/12/2015");
+addPost("Por qué voto a Podemos", "Por-qu--voto-a-Podemos-a96b2bde0ba8", "11/12/2015", ['es']);
 addPost("We've Reviewed Grial UI Kit at Plain Concepts", "weve-reviewed-grial-ui-kit-at-plain-concepts", "2/12/2015");
 addPost("Wave Engine: Frustum Culling", "wave-engine-frustum-culling", "10/11/2015");
 addPost("Quick Dump of Things I've Learned This Week Developing on Apple Watch", "quick-dump-of-things-ive-learned-this-week-developing-on-apple-watch", "6/11/2015");
@@ -158,7 +159,7 @@ addPost("Wave Engine: Play Sound (Sound Effects & Themes)", "wave-engine-play-so
 addPost("Colors in iOS: Same Value, Different Tonality", "colors-in-ios-same-value-different-tonality", "5/10/2015");
 addPost("Missing Shadows on Lollipop's CardView", "missing-shadows-on-lollipops-cardview", "21/9/2015");
 addPost("My First App Published: ¡Buenos días!", "my-first-app-published-buenos-dias", "8/6/2015");
-addPost("¡Buenos días! aro", "buenosdias", "4/6/2015");
+addPost("¡Buenos días! aro", "buenosdias", "4/6/2015", ['es']);
 addPost("Recipes for Wave Engine", "recipes-for-wave-engine", "28/5/2015");
 addPost("FormsPresenters: Setting Up MvvmCross with Xamarin.Forms", "formspresenters-setting-up-mvvmcross-with-xamarin-forms", "21/5/2015");
 addPost("Introducing SVQXDG", "introducing-svqxdg", "3/5/2015");
