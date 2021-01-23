@@ -1,4 +1,4 @@
-﻿Todas las entradas ordenadas cronológicamente, de más nueva a más antigua:
+﻿Todas las entradas en español ordenadas cronológicamente, de más nueva a más antigua:
 
 <div id="posts-es"></div>
 
