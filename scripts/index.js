@@ -57,7 +57,9 @@ function addEpisode(title, audioFilename, documentFilename, date) {
 }
 
 function addItem(title, filename, date, allowComments = false, tags = []) {
-    var item = { title: title, filename: filename, date: date, allowComments: allowComments, tags: tags };
+    var tokens = date.split('/');
+    var parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
+    var item = { title: title, filename: filename, date: parsedDate, allowComments: allowComments, tags: tags };
     items.push(item);
 }
 
@@ -116,14 +118,24 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         items.length :
         amount;
     length = Math.min(length, items.length);
+    let previousYear = -1;
 
     $(selector).empty();
     $(selector).append("<ul>");
 
     for (var i = 0; i < length; i++) {
         var item = items[i];
+        const year = item.date.getFullYear();
+
+        if (moreFilename == null && year != previousYear) {
+            const html = `<strong>${year}</strong>`;
+            $(selector).append(html);
+
+            previousYear = year;
+        }
+
         var html = `<li>
-    <a href="${queryUrlSeparator}${item.filename}">${item.title}</a> (${item.date})
+    <a href="${queryUrlSeparator}${item.filename}">${item.title}</a> (${item.date.toLocaleDateString()})
 </li>`;
         $(selector).append(html);
     }
@@ -220,7 +232,7 @@ function renderItem(item, markDown) {
     document.title = item.title;
 
     $("#title").html(item.title);
-    $("#date").html(item.date);
+    $("#date").html(item.date.toLocaleDateString());
 
     let body = converter.makeHtml(markDown);
     $("#actualBody").html(body);
