@@ -7,6 +7,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.ServiceModel.Syndication;
+using System.Text.RegularExpressions;
 using System.Xml;
 using HeyRed.MarkdownSharp;
 
@@ -57,6 +58,7 @@ namespace RSS
             using (var itemsFile = File.OpenText(ItemsJavaScriptPath))
             {
                 var line = itemsFile.ReadLine();
+                var regex = new Regex("\"[^\"]+\"", RegexOptions.Compiled);
 
                 while (line != null)
                 {
@@ -66,18 +68,13 @@ namespace RSS
                         continue;
                     }
 
-                    // addPost("How to centralize font-related styling", "2018-3-15", "16/3/2018");
-                    var justParams = line.Replace(AddItemChunk, string.Empty)
-                                         .Replace(");", string.Empty);
-                    // "Abanico, a few hours with Xamarin.Forms and SkiaSharp", "abanico-a-few-hours-with-xamarin-forms-and-skiasharp", "21/6/17"
-                    var paramsList = justParams.Split(new[] { "\", \"" }, StringSplitOptions.None)
-                                               .Select(param => param.Trim().Trim('"'));
-                    var date = ParseDate(paramsList.ElementAt(2));
+                    // addPost("How to centralize font-related styling", "2018-3-15", "16/3/2018", ['en']);
+                    var matches = regex.Matches(line);
                     var item = new ItemModel
                     {
-                        Title = paramsList.First(),
-                        MarkdownFilename = paramsList.ElementAt(1),
-                        Date = date
+                        Title = matches[0].Value.Trim('"'),
+                        MarkdownFilename = matches[1].Value.Trim('"'),
+                        Date = ParseDate(matches[2].Value.Trim('"')),
                     };
                     items.Add(item);
 
