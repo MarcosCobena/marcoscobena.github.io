@@ -69,10 +69,12 @@ function addPost(title, filename, date, tags = []) {
 }
 
 function entryPoint() {
-    var filename = getJustFilename(window.location.href);
+    const path = window.location.href;
+    const filename = getJustFilename(path);
+    const anchor = getAnchor(path);
 
     if (filename.length > 0) {
-        loadItem(filename);
+        loadItem(filename, anchor);
     } else {
         pushHomeStateAndLoadIt();
     }
@@ -86,7 +88,17 @@ function findIn(filename, itemArray) {
     return found;
 }
 
-// TODO scroll to anchors: https://marcoscobena.com/#!/2018-3-15#comment-3808745187
+function getAnchor(path) {
+    const index = path.lastIndexOf("#")
+    let result = null;
+
+    if (index >= 0) {
+        result = path.substring(index);
+    }
+
+    return result;
+}
+
 function getJustFilename(path) {
     let filename;
 
@@ -148,7 +160,7 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
     $(selector).append("</ul>");
 }
 
-function loadItem(filename) {
+function loadItem(filename, anchor = null) {
     const item = findIn(filename, items);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
 
@@ -160,7 +172,7 @@ function loadItem(filename) {
     let actualPath = getMarkDownPath(filename);
 
     $.get(actualPath, function (data) {
-        render(item, data, isBlogPost);
+        render(item, data, isBlogPost, anchor);
     });
 }
 
@@ -184,7 +196,7 @@ function removeAnchor(filename) {
     return result;
 }
 
-function render(item, markDown, isBlogPost) {
+function render(item, markDown, isBlogPost, anchor) {
     $('#disqus_thread').hide();
 
     let isHome = item.filename == homeFilename;
@@ -212,7 +224,9 @@ function render(item, markDown, isBlogPost) {
         updateDisqus(item.filename);
     }
 
-    scrollUp();
+    if (anchor != null) {
+        location.hash = anchor;
+    }
 }
 
 function renderEpisode(item, markDown) {
