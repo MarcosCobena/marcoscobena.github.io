@@ -1,9 +1,10 @@
 *Soy Marcos, bienvenid@ a mi web.
-La mayoría del contenido aquí está en inglés, pero tengo
-un [blog en español](/?i=blog-es)
+Casi todo aquí está en inglés, pero tengo
+algunas entradas del [blog en español](/?i=blog-es)
 y
-un [podcast](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
-([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml)) —con mi amigo Juanma Laó Ramos.*
+[Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
+([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml))
+, un podcast con mi amigo Juanma Laó Ramos.*
 
 It's Marcos: I'm a Software Development Engineer focused on .NET —and also enjoy
 doing things with JavaScript, as [this whole

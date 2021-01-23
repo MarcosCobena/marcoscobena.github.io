@@ -2,18 +2,19 @@
 //     title, <- Here goes the user-friendly title you want to show
 //     filename, <- Item's filename without .md extension, at the same level of this current one
 //     date, <- Date, as is, i.e. will be rendered without conversion
-//     allowComments <- addItem() only: enables comments, disabled by-default for items
+//     allowComments, <- addItem() only: enables comments, disabled by-default for items
+//     tags, <- string array of tags
 // );
 
 // Items —it doesn't mind the order how they're added
 
 addItem("404 Not Found", "404", "29/8/2018");
-addItem("👋 ¡Hola!", "home", "21/1/2021");
+addItem("👋 ¡Hola!", "home", "23/1/2021");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "22/8/2018");
 addItem("Blog", "blog-es", "21/1/2021");
 addItem("Conferences", "conferences", "30/7/2019");
-addItem("Contact", "contact", "2/8/2019");
+addItem("Contact", "contact", "23/1/2021");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "8/6/2020");
 addItem("Juanma y Marcos", "juanma-y-marcos", "20/1/2021", /*allowComments*/ true);

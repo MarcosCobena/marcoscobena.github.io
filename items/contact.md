@@ -1,4 +1,4 @@
 I use to check the e-mail in a daily basis:
 
-- [marcoscm.digital@gmail.com](mailto:marcoscm.digital@gmail.com) —personal
+- [marcoscobena@outlook.com](mailto:marcoscobena@outlook.com) —personal
 - [mcobena@plainconcepts.com](mailto:mcobena@plainconcepts.com) —professional
