@@ -197,10 +197,11 @@ function render(item, markDown, isBlogPost) {
 
     renderItem(item, markDown);
 
-    $('#lastUpdate')
-        .fadeIn(0)
-        .delay(3000)
-        .fadeOut();
+    if (isBlogPost) {
+        $('#date').fadeIn(0);
+    } else {
+        $('#date').fadeOut(0);
+    }
 
     if (item.filename == podcastFilename) {
         renderPodcast();
