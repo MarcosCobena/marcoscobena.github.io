@@ -29,6 +29,8 @@ I'm happy here rounded by friends coming from my University years.
 
 <div id="posts-latest"></div>
 
+<script src="items/home.js"></script>
+
 **Hobbies** [Audios](/?i=audios) [FPV Drones](/?i=drones) [Podcast: Juanma y Marcos](?i=juanma-y-marcos) [Reading](/?i=reading)
 
 **Job** [Portfolio](/?i=portfolio)
