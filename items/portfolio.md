@@ -1,5 +1,22 @@
 *Pst!* I almost never work on projects alone; this' the result of a whole team effort:
 
+### Wave Engine's on-line glTF viewer
+
+![](items/images/FlightHelmetDemoOptimized.gif)
+
+Our first public product/experiment with Wave Engine Web was this glTF viewer.
+This time, I worked alone on it with close support from my mates focused on the engine's core.
+Its most difficult task was to decrease the model loading time, where textures were taking too much —order of minutes.
+I wrote about how we overcame that, among other things, [here](https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer).
+
+|            |                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------- |
+| Language   | C# (.NET), JavaScript, HTML, CSS                                                       |
+| Frameworks | Wave Engine, Mono's WebAssembly Runtime                                                |
+| Platforms  | WebAssembly                                                                            |
+| Date       | December 2019-January 2020                                                             |
+| More info? | <http://gltf.waveengine.net>                                                           |
+
 ### WebGL.NET
 
 ![](items/images/WebGLDotNET.gif)
