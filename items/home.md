@@ -8,7 +8,7 @@ y
 ([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml))
 , un podcast con mi amigo Juanma Laó Ramos.*
 
-*En abril de 2020, di un pequeño curso para hacer más llevadera la pandemia a los más pequeños de la casa:
+*En marzo de 2020, di un pequeño curso para hacer más llevadera la pandemia a los más pequeños de la casa:
 [Introducción a la Programación para Niños](?i=ipn).*
 
 *En el verano de 2016, se me ocurrió cómo podían convivir la tauromaquia y la protección a los animales:
