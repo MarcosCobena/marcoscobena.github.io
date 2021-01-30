@@ -14,7 +14,7 @@ Tap above to play!
 | Language   | C# (.NET), JavaScript, HTML, CSS                                                       |
 | Frameworks | Wave Engine, Mono's WebAssembly Runtime                                                |
 | Platforms  | WebAssembly                                                                            |
-| Date       | March-April 2020                                                                       |
+| Date       | April-May 2020                                                                       |
 | More info? | <https://innovation.microsoft.com/en-us/exploring-project-paidia>                      |
 
 ### Wave Engine's on-line glTF viewer
