@@ -9,7 +9,7 @@
 // Items —it doesn't mind the order how they're added
 
 addItem("404 Not Found", "404", "29/8/2018");
-addItem("👋 ¡Hola!", "home", "23/1/2021");
+addItem("👋 ¡Hola!", "home", "31/1/2021");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "22/8/2018");
 addItem("Blog", "blog-es", "21/1/2021");
