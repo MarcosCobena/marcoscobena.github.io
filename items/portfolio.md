@@ -1,5 +1,22 @@
 *Pst!* I almost never work on projects alone; this' the result of a whole team effort:
 
+### Project Paidia
+
+<iframe src="https://ms-paidia-playground.azurewebsites.net/" allowfullscreen=""></iframe>
+
+This small game bundles some interesting technologies: an ONNX Neural Network running on JavaScript, consumed by the game it-self on Wave Engine.
+I applied Test-Driven Development to figure out the game logic, built on top of [Zalo's state machine implementation](http://zalods.blogspot.com/2018/11/simple-yet-powerful-fsm-implementation.html).
+My friend, and boss, Javi Cantón invited me to talk a little bit about this project at [Singularity 2020's Research Team session](https://www.youtube.com/watch?v=Qz4sEGv1PUQ).
+Tap above to play!
+
+|            |                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------- |
+| Language   | C# (.NET), JavaScript, HTML, CSS                                                       |
+| Frameworks | Wave Engine, Mono's WebAssembly Runtime                                                |
+| Platforms  | WebAssembly                                                                            |
+| Date       | March-April 2020                                                                       |
+| More info? | <https://innovation.microsoft.com/en-us/exploring-project-paidia>                      |
+
 ### Wave Engine's on-line glTF viewer
 
 ![](items/images/FlightHelmetDemoOptimized.gif)
