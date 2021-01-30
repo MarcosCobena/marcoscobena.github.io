@@ -2,7 +2,7 @@
 
 ### Project Paidia
 
-<iframe src="https://ms-paidia-playground.azurewebsites.net/" allowfullscreen=""></iframe>
+<iframe height="400" src="https://ms-paidia-playground.azurewebsites.net/" style="display: block; margin: 0 auto;" width="640"></iframe>
 
 This small game bundles some interesting technologies: an ONNX Neural Network running on JavaScript, consumed by the game it-self on Wave Engine.
 I applied Test-Driven Development to figure out the game logic, built on top of [Zalo's state machine implementation](http://zalods.blogspot.com/2018/11/simple-yet-powerful-fsm-implementation.html).
