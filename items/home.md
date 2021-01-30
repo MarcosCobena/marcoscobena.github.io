@@ -1,22 +1,31 @@
-*Soy Marcos, bienvenid@ a mi web.
+[English, please](#english).
+
+*Soy Marcos, escribo software para resolver problemas a las personas.
 Casi todo aquí está en inglés, pero tengo
 algunas entradas del [blog en español](/?i=blog-es)
 y
 [Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 ([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml))
-, un podcast con mi amigo Juanma Laó Ramos.*
+, un podcast con mi amigo Juanma Laó Ramos.
 
-It's Marcos: I'm a Software Development Engineer focused on .NET —and also enjoy
-doing things with JavaScript, as [this whole
-site](https://github.com/MarcosCobena/marcoscobena.github.io).
+En abril de 2020, di un pequeño curso para hacer más llevadera la pandemia a los más pequeños de la casa:
+[Introducción a la Programación para Niños](?i=ipn).
 
-[GoTo Studio](goto-studio) is my lame IDE where you
-can play with [GoTo](?i=goto) within the browser.
+En el verano de 2016, se me ocurrió cómo podían convivir la tauromaquia y la protección a los animales:
+[Hacia la e-Tauromaquia](?i=Hacia-la-e-Tauromaquia--Una-propuesta-para-la-convivencia-y-el-emprendimiento-fe84192e75c4).*
+
+<span id="english" />
+
+It's Marcos, I write software to solve problems for people.
+I'm focused on .NET & C# —and also enjoy doing things with JavaScript,
+as [this whole site](https://github.com/MarcosCobena/marcoscobena.github.io).
 
 Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with
 [Xamarin](http://www.xamarin.com) —these [NuGets](https://www.nuget.org/profiles/MarcosCobena) may
 be helpful for you too—, and developing small pieces for [Wave Engine](http://www.waveengine.net).
 I'm happy here rounded by friends coming from my University years.
+
+By the end of 2018, I wrote [GoTo](?i=goto): a compiler and its own on-line IDE, [GoTo Studio](goto-studio).
 
 <form action="https://www.google.com/search" class="center" method="get" name="searchform">
     <input name="sitesearch" type="hidden" value="marcoscobena.com">
