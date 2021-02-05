@@ -16,142 +16,55 @@
         <title>Marcos Cobeña Morián</title>
 
         <link rel="alternate" type="application/rss+xml" title="Marcos Cobeña Morián" href="feed.rss" />
-
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
 
         <meta name="description" content="Software Development Engineer focused on .NET" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-        <style type="text/css">
-            #actualBody {
-                line-height: 1.5em;
-            }
-
-            body {
-                color: #333;
-                font-family: 'Raleway', sans-serif;
-                margin: 0px auto;
-                max-width: 750px;
-            }
-
-            #bodyWrapper {
-                height: inherit;
-                margin: 0 16pt;
-            }
-
-            .center {
-                text-align: center;
-            }
-
-            h1, h2, h3, h4, h5 {
-                line-height: 1.25em;
-                font-weight: 900;
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            #homeReturn {
-                display: none;
-                float: left;
-            }
-
-            img {
-                display: block;
-                height: auto;
-                margin-left: auto;
-                margin-right: auto;
-                max-height: 480px;
-                max-width: 100%;
-            }
-
-            pre {
-                overflow-x: auto;
-            }
-
-            .right {
-                text-align: right;
-            }
-
-            #signature {
-                margin: 1.5em 0%;
-            }
-
-            table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            td, th {
-                padding: 8px;
-            }
-
-            tr:nth-child(even) {
-                background-color: whitesmoke;
-            }
-
-            #title {
-                margin-bottom: 0;
-            }
-
-            #titleWrapper {
-                margin: 25% 0%;
-            }
-        </style>
-        
         <script src="scripts/jquery-3.1.1.min.js"></script>
-
         <script src="scripts/showdown.min.js"></script>
-        
         <script src="scripts/index.js"></script>
-
         <script src="items/items.js"></script>
     </head>
     <body>
-        <div id="bodyWrapper">
-            <p id="homeReturn" class="center">
-                <a href="/"><em>Sweet</em> home</a>
-            </p>
+        <p id="homeReturn">
+            <a href="/"><em>Sweet</em> home</a>
+        </p>
 
-            <div id="titleWrapper" class="right">
-                <h1 id="title"></h1>
-                <span id="date" class="hidden"></span>
-            </div>
+        <h1 id="title"></h1>
 
-            <div id="actualBody">
-                <noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
-            </div>
+        <span id="date" class="hidden"></span>
 
-            <p id="signature">
-                —<a href="/?i=contact">Marcos</a>
-            </p>
+        <div id="actualBody">
+            <noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
+        </div>
 
-            <div id="disqus_thread" style="display: none;"></div>
+        <div id="disqus_thread" style="display: none;"></div>
 
-            <script type="text/javascript">
-                // Taken from: https://archondigital.com/articles/disable-adsense-disqus-jekyll-localhost/
-                var disqus_shortname = weAreAtInternet ?
-                    'marcoscobena' :
-                    // This one doesn't even exist :-)
-                    'marcoscobena-debug';
+        <script type="text/javascript">
+            // Taken from: https://archondigital.com/articles/disable-adsense-disqus-jekyll-localhost/
+            var disqus_shortname = weAreAtInternet ?
+                'marcoscobena' :
+                // This one doesn't even exist :-)
+                'marcoscobena-debug';
 
-                // Here starts Disqus set-up
-                var disqus_config = function () {
-                    this.page.url = "https://marcoscobena.com";
-                    this.page.identifier = "home";
-                };
-                (function () { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-                // Here ends Disqus set-up
-            </script>
-        </div >
+            // Here starts Disqus set-up
+            var disqus_config = function () {
+                this.page.url = "https://marcoscobena.com";
+                this.page.identifier = "home";
+            };
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            // Here ends Disqus set-up
+        </script>
 
-        <p class="center" style="margin: 16.67% 0;">
+        <p id="scrollUp" class="right">
             <a href="" onclick="return scrollUp();"><em>Pst</em>, take me up!</a>
         </p>
     </body >
