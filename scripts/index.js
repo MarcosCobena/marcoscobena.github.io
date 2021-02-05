@@ -173,10 +173,12 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
 
     $(selector).append("</ul>");
 
-    const total = `<p>
+    if (moreFilename != null) {
+        const total = `<p>
     (Total: ${length})
 </p>`;
-    $(selector).append(total);
+        $(selector).append(total);
+    }
 }
 
 function loadItem(filename, anchor = null) {
