@@ -1,9 +1,10 @@
-// WIP replace " with ' for strings
+﻿// WIP replace " with ' for strings
 // WIP replace "var" for "let" within functions
 // WIP replace "var" for "const" where appropiate
 
 const blogTag = 'blog';
 const podcastFilename = 'juanma-y-marcos';
+const siteTitle = 'Marcos Cobeña Morián';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 var episodes = [];
@@ -236,7 +237,7 @@ function renderEpisode(item, markDown) {
 <audio controls loop>
     <source src="${src}" type="audio/mpeg">
     (Perdona, tu navegador no soporta empotrar audio. 
-    Pero puedes descargar el episodio directamente <a href="${src}">aqu�</a>.)
+    Pero puedes descargar el episodio directamente <a href="${src}">aquí</a>.)
 </audio>
 ${html}`;
 
@@ -244,7 +245,7 @@ ${html}`;
 }
 
 function renderItem(item, markDown) {
-    document.title = item.title;
+    document.title = `${item.title} — ${siteTitle}`;
 
     $("#title").html(item.title);
     $("#date").html(item.date.toLocaleDateString());
@@ -271,7 +272,7 @@ function renderPodcast() {
             })
             .catch(_ => {
                 let markDown = `*Lo siento*, hubo un problema cargando el texto. 
-Creo que se puede arreglar recargando la p�gina.`;
+Creo que se puede arreglar recargando la página.`;
 
                 return markDown;
             })
