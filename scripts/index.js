@@ -132,6 +132,7 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         amount;
     length = Math.min(length, items.length);
     let previousYear = -1;
+    let previousMonth = -1;
 
     $(selector).empty();
     $(selector).append("<ul>");
@@ -139,12 +140,24 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
     for (var i = 0; i < length; i++) {
         var item = items[i];
         const year = item.date.getFullYear();
+        const month = item.date.getMonth();
 
-        if (moreFilename == null && year != previousYear) {
-            const html = `<strong>${year}</strong>`;
-            $(selector).append(html);
+        if (moreFilename == null) {
+            if (year != previousYear) {
+                const html = `<h2>${year}</h2>`;
+                $(selector).append(html);
 
-            previousYear = year;
+                previousYear = year;
+            }
+
+            if (month != previousMonth) {
+                const date = new Date(year, month);
+                const monthAndYear = date.toLocaleString('en', { month: 'long', year: 'numeric' });
+                const html = `<h3>${monthAndYear}</h3>`;
+                $(selector).append(html);
+
+                previousMonth = month;
+            }
         }
 
         var html = `<li>
@@ -159,6 +172,11 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
     }
 
     $(selector).append("</ul>");
+
+    const total = `<p>
+    (Total: ${length})
+</p>`;
+    $(selector).append(total);
 }
 
 function loadItem(filename, anchor = null) {
