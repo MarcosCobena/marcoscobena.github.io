@@ -43,6 +43,7 @@ addEpisode("Pull Requests", "JuanmaYMarcos-2x1.mp3", "pull-requests", "2/1/2021"
 
 // Posts —this' the order they'll appear listed
 
+addPost("Design follows logic", "design-follows-logic", "16/2/2021");
 addPost("Creativity, Inc.", "creativity-inc", "8/10/2020");
 addPost("La solución al reto: división en GOTO", "la-solucion-al-reto-division-en-goto", "9/5/2020", ['es']);
 addPost("Introducción a la Programación para Niños", "ipn", "9/5/2020", ['es']);

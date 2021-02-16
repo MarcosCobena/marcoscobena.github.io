@@ -5,7 +5,18 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Sat, 23 Jan 2021 19:04:54 Z</lastBuildDate>
+    <lastBuildDate>Tue, 16 Feb 2021 13:50:35 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=design-follows-logic</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Design follows logic</title>
+      <description>&lt;p&gt;I have learnt it is way better to close logic before design when you are about to start a task.&lt;/p&gt;
+
+&lt;p&gt;Imagine you need to create a log-in page. If you start laying the design out, it is possible to run out of time —from the estimation— and still the functionality is missing. If an user would need to use it, it is simply not there. However, if you start with logic and, run out of time, the user at least can solve her need, although it is not the most beautiful log-in she has seen. Both can then decide whether to invest some more time.&lt;/p&gt;
+
+&lt;p&gt;Fist logic, business needs, Acceptance Criteria, functionality; second design, layout, style. Form follows function, not the other way around.&lt;/p&gt;</description>
+      <pubDate>Mon, 15 Feb 2021 23:00:00 Z</pubDate>
+    </item>
     <item>
       <link>https://marcoscobena.com/?i=creativity-inc</link>
       <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
@@ -806,38 +817,6 @@ the source code). I still have to fix the Linux build which's not publishing the
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;</description>
       <pubDate>Thu, 27 Jun 2019 22:00:00 Z</pubDate>
-    </item>
-    <item>
-      <link>https://marcoscobena.com/?i=pr-reviews</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-      <title>Pull-Request reviews</title>
-      <description>&lt;p&gt;I've being feeling lately am spending too much effort in cosmetic stuff which add low value instead of concentrating in logic, algorithms.&lt;/p&gt;
-
-&lt;p&gt;Serve this as my personal reminder for how to take a PR review:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;If I detect something doesn't conform the style guidelines, instead of adding a comment:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;think of enforcing such rule in any way: through Git hooks, StyleCop, etc. It's important to consider how much time you'd earn by enabling such instead of once and again adding similar comments in future PRs; or&lt;/li&gt;
-&lt;li&gt;add an in-line comment to leverage this which, indeed, will arrive to the rest of team as well: for example:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;```c#
-// Marcos says: below fields are ordered alphabetically to easily allow us search
-public const string AppCenterKey = "bar";&lt;/p&gt;
-
-&lt;p&gt;public const string APIKey = "foo";
-```&lt;/p&gt;
-
-&lt;p&gt;​ ; or&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;simply write this down in any communication channel your team has: a Slack/Teams conversation, during tomorrow daily, etc.; or&lt;/li&gt;
-&lt;li&gt;forget your impulse, just keep scrolling down because there for sure will be things far more interesting to consider&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      <pubDate>Tue, 19 Feb 2019 23:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>
