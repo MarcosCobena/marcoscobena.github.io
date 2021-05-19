@@ -5,7 +5,51 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Tue, 16 Feb 2021 13:50:35 Z</lastBuildDate>
+    <lastBuildDate>Wed, 19 May 2021 16:44:53 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=haz-tests</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Haz tests</title>
+      <description>&lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; haz tests. En vez de tanto depurar, haz un test. Cuando tengas un bug, reprodúcelo con un test (¡y corrígelo!). Yo he tardado diez años en darme cuenta, no te quieras parecer a mí en eso :-)&lt;/p&gt;
+
+&lt;p&gt;Los tests son una herramienta para, de forma aislada, probar una porción de código. Hay de muchos tipos: integración, regresión, UI, etc., pero a todos les suele seguir la palabra unitarios, porque su objetivo es probar una única cosa. No quiero ser exhaustivo con ésto, me conformo con tests, a secas. De cómo hacer tests está lleno Internet de tutoriales, pero tampoco me quiero meter ahí. Si tienes interés en aprender a hacerlos seguro sabes cómo encontrarlos. Yo quiero que tengas interés.&lt;/p&gt;
+
+&lt;h2&gt;Mirando a otro lado&lt;/h2&gt;
+
+&lt;p&gt;La primera vez que supe de los tests fue en cuarto de carrera. En Ingeniería del Software (II, creo). Rafael Corchuelo nos daba esta asignatura. Yo tenía veintiún o veintidos años por entonces. El temario usaba una API de un banco ficticio para probar que sus llamadas devolvían lo que debían. Recuerdo que Rafael nos preguntó en clase qué diferencia había entre probar y demostrar, porque nuestro objetivo con los tests es probar.&lt;/p&gt;
+
+&lt;p&gt;Nunca más volví a echar cuenta a los tests hasta los treinta y pico. Todos estos años he seguido teniendo a mi amigo Juanma Laó Ramos al lado, que sí vió la importancia de esto mucho más temprano, pero, como un impermeable al agua, pasé de largo sin mojarme. Creo que hace unos años tenía la [errónea] sensación de que los tests era una moda. Y no me quería unir a ella. Creía que un buen programador es aquel que vive por y para la programación, usa bytes en lugar de enteros para los bucles y escribía código críptico. Y yo me esforzaba por ser así.&lt;/p&gt;
+
+&lt;p&gt;Si bien las cagadas que he tenido en estos años no se hubiesen subsanado 100% con tests, sí me hubiesen supuesto una gran ayuda para escribir software más sólido y más fácil de mantener para el siguiente (que, a veces, vuelvo a ser yo).&lt;/p&gt;
+
+&lt;h2&gt;Una forma mejor de depurar&lt;/h2&gt;
+
+&lt;p&gt;En DevsDNA nos propusimos leer un trozo de un libro, y comentarlo después. Alguien escogió &lt;a href="https://www.amazon.es/Software-Craftsman-Professionalism-Pragmatism-Robert-ebook/dp/B00QXAGIDO"&gt;A Software Craftsman, de Sandro Mancuso&lt;/a&gt;. Ahí leí por primera vez que los tests, como otra herramienta más para escribir software, era comparable a la depuración. Hoy día, casi todo lo que construímos es depurable fácilmente: pones un puntito rojo en la línea donde quieres detenerte, ejecutas la aplicación, la llevas hasta el punto que te interesa y ¡ta-chán!, puedes pasar el ratón por el código para ver el valor de las variables. No hace mucho atrás (o si has trabajado con los inicios de .NET en WebAssembly :-) ), tenías que usar &lt;code&gt;printf()&lt;/code&gt;. Es un salto cualitativo, ¿no?&lt;/p&gt;
+
+&lt;p&gt;En el libro leí que la gente que usa tests, escogían estos a la depuración. ¿Cómo? Pero si escribir tests lleva su tiempo y poner un puntito es inmediato... El truco está en el punto de vista:
+- los breakpoints son muy rápidos de poner (un click), pero llevar la app al estado que te interesa depende: puede que tengas suerte y quieras verificar algo nada más arrancar, o puede que tengas que iniciar sesión, navegar dos veces, esperar a una push que envías desde otro dispositivo, etc; los tests no son tan rápidos de escribir, pero llevar la app al estado que te interesa, ahora sí, es inmediato: ejecuta el test y listo;
+- los breakpoints están en tu máquina, en tu IDE: ni llegan al repositorio, ni por tanto se mantienen en el tiempo, te valen solo a ti; los tests acaban en el repositorio, lo disfrutan los demás, el equipo, y se mantienen en el tiempo para no volver atrás (además, es otra forma de documentación)
+- un breakpoint se pone una vez y depuras n veces; un test se escribe una vez y lo ejecutas n veces&lt;/p&gt;
+
+&lt;p&gt;A veces, no podemos hacer un test: por ejemplo, quiero probar algo concreto de la plataforma, como me ocurre con Xamarin.Forms, y no tengo un entorno de testing donde echarlo a andar (que podría). Los tests no son la bala de plata, pero son una gran herramienta.&lt;/p&gt;
+
+&lt;h2&gt;Sé que esto no funciona&lt;/h2&gt;
+
+&lt;p&gt;Cuando comencé a hacer tests en aquellos proyectos donde no había ninguno, una sensación que tuve (y sigo teniendo) es lo poco agradable que es saber con certeza que tienes código que no funciona, aunque todavía no ha fallado en producción. Da hasta un poquito de miedo. Cuando no tenía tests, intuía que funcionaba, y no tenía ningún bug que me indicase lo contrario. Ahora sé, por mí mismo, que algo está mal.&lt;/p&gt;
+
+&lt;p&gt;Creo que lidiar con esta sensación es un pequeño escalón que tenemos que superar si decidimos apostar por los tests. La felicidad de la ignorancia siempre será peor. Esto ocurre tanto en los tests como en la vida misma. Si no sabes que algo está roto, ¿cómo lo vas a corregir?&lt;/p&gt;
+
+&lt;p&gt;Cuando vives al margen de los tests, programas por intuición: sé que esto ha funcionado hoy, intuyo que lo seguirá haciendo mañana. Si tu proyecto es muy muy pequeño, una demo, es poco costoso corroborar la intuición: vuelves a probar tú mismo todo, y listo. Pero con poco que se salga de ahí, estás jodido: no conozco a ningún programador que, al avanzar en un proyecto, siempre pruebe todos los casos de uso que, al menos él/la, ha desarrollado. Nadie hace esto. Bueno, sí, el cliente :-)&lt;/p&gt;
+
+&lt;h2&gt;El placer de avanzar sobre suelo firme&lt;/h2&gt;
+
+&lt;p&gt;Por otro lado, tocar una base de código y, al final, ver que todos los tests pasan en verde, es el aloe vera de la quemazón después de un día al sol. Sabes que, al menos, no te has cargado algunas partes del código. Si tienes suerte y hay tests de lo más primordial, tienes una buena probabilidad de haber construído sobre suelo firme.&lt;/p&gt;
+
+&lt;p&gt;También puede ser la excusa perfecta: como los tests pasan en verde, todo funcionará a la perfección. ¡Eeerrooor! No nos vamos a ir al otro extremo tampoco, seamos razonables: la lectura correcta sería "lo que he tocado no ha roto lo que está probado". Y, ésto, es mucho. Si somos inteligentes y test-eamos los puntos más críticos, y si añadimos tests de regresión para que un bug no vuelva a ocurrir, tenemos una buena probabilidad de conservar el aprecio que un cliente puede llegar a tener sobre nosotros.&lt;/p&gt;
+
+&lt;p&gt;Al final, y como dice Juanma, quiero ser feliz. Quiero que mis clientes, tengan más dinero o menos, sean más grandes o más pequeños, tengan una solución mejor a sus problemas hoy y, más importante, mañana. No pensar en el mañana es lo que me alejaba de hacer tests.&lt;/p&gt;</description>
+      <pubDate>Tue, 18 May 2021 22:00:00 Z</pubDate>
+    </item>
     <item>
       <link>https://marcoscobena.com/?i=design-follows-logic</link>
       <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
@@ -715,108 +759,6 @@ Hit Return to stop the server.&lt;/p&gt;
 
 &lt;p&gt;Now browse http://localhost:9000/ in your prefered app (Wasm is widely supported) and enjoy!&lt;/p&gt;</description>
       <pubDate>Fri, 05 Jul 2019 22:00:00 Z</pubDate>
-    </item>
-    <item>
-      <link>https://marcoscobena.com/?i=unit-testing-webglnet</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-      <title>Unit Testing WebGL.NET</title>
-      <description>&lt;p&gt;Wow! It's been some time since I wrote here.&lt;/p&gt;
-
-&lt;p&gt;While my mate Juan is working on the first actual Wave Engine 3.0 app with WebGL -he's already achieved the tricolor 
-triangle, by the way- I've spent some time trying to set up something for unit testing the API. Eric Mellino, the guy 
-from Veldrid, created 2 issues the other day about marshalling errors and, as I was thinking how to address them, I 
-heavily noticed the need to avoid regressions such like those.&lt;/p&gt;
-
-&lt;p&gt;The pair Mono Wasm and Unit Tests isn't an easy one: I tried to run Xunit's AssemblyRunner with no success -the browser 
-always stucks on the discovering/execution process. Although I didn't debug it deeply (debugging isn't so easy either...
-) my bet is Xunit relies on multiple ManualResetEvents and Wasm is monothread nowadays (I'm aware of Chrome's 
-implementation but am trying to stick to the common one). I tried different attempts: going down the Xunit repo to find 
-what was being executed internally but, in the end, got nothing.&lt;/p&gt;
-
-&lt;p&gt;But came up with an idea: since Xunit has splitted the asserts thing as a separate NuGet I could build a small 
-infrastructure to discover tests through reflection and depend on Xunit for the in-test experience. And voilá! 
-&lt;a href="https://webglnet.surge.sh/tests/"&gt;Here&lt;/a&gt; it's (&lt;a href="https://github.com/WaveEngine/WebGL.NET/tree/master/src/Tests"&gt;this&lt;/a&gt; is 
-the source code). I still have to fix the Linux build which's not publishing the tests/ dir at Surge but this is another
- page.&lt;/p&gt;
-
-&lt;p&gt;Oh, the entire test set fails on my home machine, will have to look into that:&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;mono&lt;em&gt;wasm&lt;/em&gt;runtime&lt;em&gt;ready mono.js:7805:14
-    ﻿4 tests found mono.js:2236:13
-    Running 'GetErrorRegressionTest'... mono.js:2236:13
-    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.Invoke (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:127 mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.InvokeForBasicType[T] (System.String method, System.Object[] args) [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:154 mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.GetError () [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:810 mono.js:2236:13
-      at Tests.TheTests.GetErrorRegressionTest () [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:19 mono.js:2236:13
-      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
-       --- End of inner exception stack trace --- mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
-      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
-      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
-    Failed! mono.js:2236:13
-    Running 'GetUniformBlockIndexRegressionTest'... mono.js:2236:13
-    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.Invoke[T] (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:137 mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.CreateProgram () [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:744 mono.js:2236:13
-      at Tests.TheTests.GetUniformBlockIndexRegressionTest () [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:27 mono.js:2236:13
-      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
-       --- End of inner exception stack trace --- mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
-      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
-      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
-    Failed! mono.js:2236:13
-    Running 'BindBufferRangeRegressionTest'... mono.js:2236:13
-    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.Invoke[T] (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:137 mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.CreateBuffer () [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:740 mono.js:2236:13
-      at Tests.TheTests.BindBufferRangeRegressionTest () [0x00001] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:34 mono.js:2236:13
-      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
-       --- End of inner exception stack trace --- mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
-      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
-      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
-    Failed! mono.js:2236:13
-    Running 'BufferSubDataRegressionTest'... mono.js:2236:13
-    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.NullReferenceException: Object reference not set to an instance of an object. mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.Invoke (System.String method, System.Object[] args) [0x00009] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.Backend.cs:127 mono.js:2236:13
-      at WebGLDotNET.WebGLRenderingContextBase.BufferSubData (System.UInt32 target, System.UInt32 offset, System.Array data) [0x00000] in /Users/marcos/Repositorios/WebGL.NET/src/WebGLDotNET/WebGL.cs:716 mono.js:2236:13
-      at Tests.TheTests.BufferSubDataRegressionTest () [0x00008] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/TheTests.cs:41 mono.js:2236:13
-      at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&amp;amp;) mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:395 mono.js:2236:13
-       --- End of inner exception stack trace --- mono.js:2236:13
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00081] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/mcs/class/corlib/System.Reflection/RuntimeMethodInfo.cs:409 mono.js:2236:13
-      at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in /mnt/jenkins/workspace/test-mono-mainline-wasm/label/ubuntu-1804-amd64/external/corefx/src/Common/src/CoreLib/System/Reflection/MethodBase.cs:53 mono.js:2236:13
-      at Tests.Program.Main () [0x000e2] in /Users/marcos/Repositorios/WebGL.NET/src/Tests/Program.cs:34 mono.js:2236:13
-    Failed! mono.js:2236:13
-    0/4 tests passed mono.js:2236:13
-    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
-    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
-    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
-    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting. mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7&lt;em&gt;15 mono.js:9089:18
-    Error: WebGL warning: &lt;SetDimensions&gt;: Failed to create WebGL context: WebGL creation failed: 
-    * Refused to create WebGL2 context because of blacklist entry: FEATURE&lt;/em&gt;FAILURE&lt;em&gt;NV&lt;/em&gt;W7_15 mono.js:9089:18
-    ```&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;</description>
-      <pubDate>Thu, 27 Jun 2019 22:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>
