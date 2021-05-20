@@ -5,12 +5,12 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Wed, 19 May 2021 16:44:53 Z</lastBuildDate>
+    <lastBuildDate>Thu, 20 May 2021 05:05:11 Z</lastBuildDate>
     <item>
       <link>https://marcoscobena.com/?i=haz-tests</link>
       <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
       <title>Haz tests</title>
-      <description>&lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; haz tests. En vez de tanto depurar, haz un test. Cuando tengas un bug, reprodúcelo con un test (¡y corrígelo!). Yo he tardado diez años en darme cuenta, no te quieras parecer a mí en eso :-)&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; haz tests. En vez de tanto depurar, haz un test. Cuando tengas un bug, reprodúcelo con un test (¡y corrígelo!) Yo he tardado diez años en darme cuenta, no te quieras parecer a mí en eso :-)&lt;/p&gt;
 
 &lt;p&gt;Los tests son una herramienta para, de forma aislada, probar una porción de código. Hay de muchos tipos: integración, regresión, UI, etc., pero a todos les suele seguir la palabra unitarios, porque su objetivo es probar una única cosa. No quiero ser exhaustivo con ésto, me conformo con tests, a secas. De cómo hacer tests está lleno Internet de tutoriales, pero tampoco me quiero meter ahí. Si tienes interés en aprender a hacerlos seguro sabes cómo encontrarlos. Yo quiero que tengas interés.&lt;/p&gt;
 

@@ -1,4 +1,4 @@
-**Resumen:** haz tests. En vez de tanto depurar, haz un test. Cuando tengas un bug, reprodúcelo con un test (¡y corrígelo!). Yo he tardado diez años en darme cuenta, no te quieras parecer a mí en eso :-)
+**Resumen:** haz tests. En vez de tanto depurar, haz un test. Cuando tengas un bug, reprodúcelo con un test (¡y corrígelo!) Yo he tardado diez años en darme cuenta, no te quieras parecer a mí en eso :-)
 
 Los tests son una herramienta para, de forma aislada, probar una porción de código. Hay de muchos tipos: integración, regresión, UI, etc., pero a todos les suele seguir la palabra unitarios, porque su objetivo es probar una única cosa. No quiero ser exhaustivo con ésto, me conformo con tests, a secas. De cómo hacer tests está lleno Internet de tutoriales, pero tampoco me quiero meter ahí. Si tienes interés en aprender a hacerlos seguro sabes cómo encontrarlos. Yo quiero que tengas interés.
 
