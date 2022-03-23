@@ -10,9 +10,7 @@ It's Marcos, I write software to solve problems for people.
 I'm focused on .NET & C# —and also enjoy doing things with JavaScript,
 as [this whole site](https://github.com/MarcosCobena/marcoscobena.github.io).
 
-Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building apps with
-[Xamarin](http://www.xamarin.com) —these [NuGets](https://www.nuget.org/profiles/MarcosCobena) may
-be helpful for you too—, and developing small pieces for [Wave Engine](http://www.waveengine.net).
+Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building stuff around the web side of [Evergine](https://evergine.com).
 I'm happy here rounded by friends coming from my University years.
 
 By the end of 2018, I wrote [GoTo](?i=goto): a compiler and its own on-line IDE, [GoTo Studio](goto-studio).
@@ -39,4 +37,4 @@ By the end of 2018, I wrote [GoTo](?i=goto): a compiler and its own on-line IDE,
 [Key-bindings](/?i=key-bindings) [Questions](/?i=questions) [Recipes](/?i=recipes) [Screen
 template](/?i=screen-template) [Tools](/?i=tools)
 
-**About** [Contact](/?i=contact) [GitHub](https://github.com/MarcosCobena) [LinkedIn](https://www.linkedin.com/in/MarcosCobena) [Twitter](https://twitter.com/1Marcos2Cobena)
+**About** [Contact](/?i=contact) [GitHub](https://github.com/MarcosCobena) [LinkedIn](https://www.linkedin.com/in/MarcosCobena) [NuGet](https://www.nuget.org/profiles/MarcosCobena) [Twitter](https://twitter.com/1Marcos2Cobena)
