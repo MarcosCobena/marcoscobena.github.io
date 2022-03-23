@@ -183,16 +183,16 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
 
 function loadItem(filename, anchor = null) {
     const item = findIn(filename, items);
-    const isBlogPost = item.tags.some(tag => tag == blogTag);
-
+    
     if (item == undefined) {
         loadItem(resourceNotFoundFilename);
         return;
     }
-
+    
     let actualPath = getMarkDownPath(filename);
-
+    
     $.get(actualPath, function (data) {
+        const isBlogPost = item.tags.some(tag => tag == blogTag);
         render(item, data, isBlogPost, anchor);
     });
 }
