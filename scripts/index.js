@@ -9,6 +9,7 @@ const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !
 
 var episodes = [];
 var items = [];
+const redirections = [];
 var converter = new showdown.Converter({ strikethrough: true, tables: true });
 var homeFilename = "home";
 var resourceNotFoundFilename = "404";
@@ -69,13 +70,24 @@ function addPost(title, filename, date, tags = []) {
     addItem(title, filename, date, /* allowComments: */ true, tags);
 }
 
+function addRedirection(fromFilename, toURL) {
+    const redirection = { filename: fromFilename, url: toURL };
+    redirections.push(redirection);
+}
+
 function entryPoint() {
     const path = window.location.href;
     const filename = getJustFilename(path);
     const anchor = getAnchor(path);
 
     if (filename.length > 0) {
-        loadItem(filename, anchor);
+        const redirection = findIn(filename, redirections);
+
+        if (redirection != undefined) {
+            window.location.href = redirection.url;
+        } else {
+            loadItem(filename, anchor);
+        }
     } else {
         pushHomeStateAndLoadIt();
     }

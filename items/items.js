@@ -26,6 +26,8 @@ addItem("Screen template", "screen-template", "6/7/2018");
 addItem("Tools", "tools", "20/1/2021");
 //addItem("DEBUG", "debug", "1/1/1970");
 
+addRedirection("contact", "/?i=home");
+
 // addEpisode(
 //     title, <- idem
 //     audioFilename, <- The audio file played in HTML, expected to be placed at items/documents/
