@@ -5,7 +5,35 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Thu, 20 May 2021 05:05:11 Z</lastBuildDate>
+    <lastBuildDate>Fri, 23 Sep 2022 14:58:26 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=git-interactively-rebase</link>
+      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <title>Por una git-arra con menos cuerdas</title>
+      <description>&lt;p&gt;Imagínate: has terminado de trabajar en tu propia rama y llegó la hora de llevar todos los cambios a la rama de origen. ¿Qué sueles hacer en ese caso? Yo, hasta hace unos meses, hacía merge tal cual y listo. Todos los commits de mi rama temporal pasaban a la de origen. Y se añadía una "cuerda" más a la guitarra (trabajo en proyectos donde ni el propio Jimi Hendrix se hubiese apañado bien).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="items/images/git-commits-flow.png" alt="" /&gt;
+&lt;em&gt;Histórico de commits típico (&lt;a href="https://fork.dev/blog/posts/collapsible-graph/swift-show-all.png"&gt;fuente&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Mi compañero de squad, Gabriel (¡gracias tío!), me llevó a la siguiente reflexión: ¿para qué quieres conservar todos los commits, no sería mejor agruparlos según el valor final para el proyecto? Un ejemplo: la rama feature/x, sacada de master, tiene los siguientes commits (más nuevos primero):
+- fix
+- add Wasm support
+- wip&lt;/p&gt;
+
+&lt;p&gt;¿Qué valor tiene fix, o wip, cuando termine mi feature/elimine mi rama? Quizá haya casos en los que sí pero, en la mayoría que me he encontrado personalmente, lo que realmente aporta valor es agrupar todos esos commits en uno único que se llame "add Wasm support": 1) los cambios están autocontenidos y 2) no añadimos una nueva cuerda.&lt;/p&gt;
+
+&lt;p&gt;En mi caso uso Fork, y tan solo tienes que:
+1. estando en tu rama, hacer click con el botón derecho sobre el commit de la cual nació;
+2. seleccionar Interactively Rebase 'tu-rama' to Here...;
+3. se abrirá un diálogo donde, de forma muy intuitiva, podrás jugar con los commits a gusto;
+4. después tendrás que hacer force push (para sobreescribir tu rama en origin) y, finalmente,
+5. desde la rama de origen, hacer pull con fast-forward&lt;/p&gt;
+
+&lt;p&gt;Seguro que en otros clientes de Git es similar.&lt;/p&gt;
+
+&lt;p&gt;Es complicado llegar al origen de un bug. Es complicado mantener a la vez varias releases en producción. Es complicado encontrar la aguja (commit) en un pajar (histórico). Con pequeños gestos como este nos hacemos todos la vida más fácil. Y podemos invertir el tiempo donde realmente aporta valor.&lt;/p&gt;</description>
+      <pubDate>Thu, 22 Sep 2022 22:00:00 Z</pubDate>
+    </item>
     <item>
       <link>https://marcoscobena.com/?i=haz-tests</link>
       <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
@@ -712,53 +740,6 @@ by the end of the year and that's great. Still the development workflow is rough
 but for sure this will improve; however, even in this way, Wasm is a great
 platform to target because of the browser-based and native execution tuple.&lt;/p&gt;</description>
       <pubDate>Thu, 25 Jul 2019 22:00:00 Z</pubDate>
-    </item>
-    <item>
-      <link>https://marcoscobena.com/?i=wasmapp1</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-      <title>Your first Wasm app with C#</title>
-      <description>&lt;p&gt;As part of our work with &lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; have learned how to be aligned with 
-Mono's latest Wasm progress. It's taking the shape of something which could make users File &gt; New and start creating 
-apps with such but, still needs some progress. However, I ask my-self whether everyone out there would like to start 
-writing C# to target Wasm but still not worrying on configuring their environment in any way.&lt;/p&gt;
-
-&lt;p&gt;Frank Krueger and Jérôme Laban have made great works with their NuGets Ouui.Wasm and Uno.Wasm.Bootstrap, respectively, 
-but as soon as you want to go deeper in JavaScript &amp;amp; .NET communication (consuming the DOM in a richer way, for 
-instance), you'll surely enjoy having the peeper Mono is working on.&lt;/p&gt;
-
-&lt;p&gt;For all this, I've set up &lt;a href="https://github.com/MarcosCobena/WasmApp1"&gt;WasmApp1&lt;/a&gt; repo, the minimum stuff needed I guess, 
-to give all the power for targeting Wasm. You just can go and clone or download it, and start working. I'd like to 
-keep it updated with the latest changes from Mono, but what I dream with is deleting such in the upcoming months 
-because finally it's all integrated into stable, and File &gt; New &gt; Wasm App would be just there :-)&lt;/p&gt;
-
-&lt;p&gt;In the meantime, this is a session for start running your app. The last command (&lt;code&gt;xsp4&lt;/code&gt;) serves the output folder at 
-http://localhost:9000/, and it's Mono's integrated ASP.NET server for CLI, which comes with regular Mono downloads; 
-you can use anything for serving such actually, or just upload it to your own web server:&lt;/p&gt;
-
-&lt;p&gt;```cmd
-C:\Users\Marcos\source\repos\WasmApp1&gt;dotnet build
-Microsoft (R) Build Engine versión 15.8.169+g1ccb72aefa para .NET Core
-Copyright (C) Microsoft Corporation. Todos los derechos reservados.&lt;/p&gt;
-
-&lt;p&gt;Restauración realizada en 54,5 ms para C:\Users\Marcos\source\repos\WasmApp1\WasmApp1\WasmApp1.csproj.&lt;/p&gt;
-
-&lt;p&gt;Compilación correcta.
-    0 Advertencia(s)
-    0 Errores&lt;/p&gt;
-
-&lt;p&gt;Tiempo transcurrido 00:00:01.63&lt;/p&gt;
-
-&lt;p&gt;C:\Users\Marcos\source\repos\WasmApp1&gt;xsp4 WasmApp1\bin\Debug\netstandard2.0\
-xsp4
-Listening on address: 0.0.0.0
-Root directory: C:\Users\Marcos\source\repos\WasmApp1\WasmApp1\bin\Debug\netstandard2.0
-Listening on port: 9000 (non-secure)
-Hit Return to stop the server.&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;Now browse http://localhost:9000/ in your prefered app (Wasm is widely supported) and enjoy!&lt;/p&gt;</description>
-      <pubDate>Fri, 05 Jul 2019 22:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>

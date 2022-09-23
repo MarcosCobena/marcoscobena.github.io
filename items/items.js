@@ -44,6 +44,7 @@ addEpisode("Pull Requests", "JuanmaYMarcos-2x1.mp3", "pull-requests", "2/1/2021"
 
 // Posts —this' the order they'll appear listed
 
+addPost("Por una git-arra con menos cuerdas", "git-interactively-rebase", "23/9/2022", ['es']);
 addPost("Haz tests", "haz-tests", "19/5/2021", ['es']);
 addPost("Design follows logic", "design-follows-logic", "16/2/2021");
 addPost("Creativity, Inc.", "creativity-inc", "8/10/2020");
