@@ -172,9 +172,10 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
             }
         }
 
-        var html = `<li>
-    <a href="${queryUrlSeparator}${item.filename}">${item.title}</a> (${item.date.toLocaleDateString()})
-</li>`;
+        var html = '<li>'
+            + `<a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
+            + ` (${item.date.toLocaleDateString()})`
+            + '</li>';
         $(selector).append(html);
     }
 
