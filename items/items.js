@@ -16,7 +16,6 @@ addItem("Blog", "blog-es", "5/2/2021");
 addItem("Conferences", "conferences", "30/7/2019");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "8/6/2020");
-addItem("Juanma y Marcos", "juanma-y-marcos", "20/1/2021", /*allowComments*/ true);
 addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("Portfolio", "portfolio", "30/1/2021");
 addItem("Questions", "questions", "7/5/2018");
@@ -27,6 +26,7 @@ addItem("Tools", "tools", "20/1/2021");
 //addItem("DEBUG", "debug", "1/1/1970");
 
 addRedirection("contact", "/?i=home");
+addRedirection("juanma-y-marcos", "https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html");
 
 // addEpisode(
 //     title, <- idem
@@ -37,10 +37,7 @@ addRedirection("contact", "/?i=home");
 
 // Episodes —this' the order they'll appear listed
 
-addEpisode("Testing", "JuanmaYMarcos-1x1.mp3", "testing", "9/8/2019");
-addEpisode("ASAPto de Mata", "JuanmaYMarcos-1x2.mp3", "asap-to-de-mata", "1/10/2019");
-addEpisode("Vivir para trabajar", "JuanmaYMarcos-1x3.mp3", "vivir-para-trabajar", "29/2/2020");
-addEpisode("Pull Requests", "JuanmaYMarcos-2x1.mp3", "pull-requests", "2/1/2021");
+// Intentionally empty
 
 // Posts —this' the order they'll appear listed
 
