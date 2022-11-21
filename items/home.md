@@ -37,4 +37,4 @@ By the end of 2018, I wrote [GoTo](?i=goto): a compiler and its own on-line IDE,
 [Key-bindings](/?i=key-bindings) [Questions](/?i=questions) [Recipes](/?i=recipes) [Screen
 template](/?i=screen-template) [Tools](/?i=tools)
 
-**About** [E-mail (personal)](mailto:MarcosCobena@outlook.com) [E-mail (professional)](mailto:MCobena@plainconcepts.com) [GitHub](https://github.com/MarcosCobena) [LinkedIn](https://www.linkedin.com/in/MarcosCobena) [NuGet](https://www.nuget.org/profiles/MarcosCobena) [Twitter](https://twitter.com/1Marcos2Cobena)
+**About** [E-mail (personal)](mailto:MarcosCobena@outlook.com) [E-mail (professional)](mailto:MCobena@plainconcepts.com) [GitHub](https://github.com/MarcosCobena) [LinkedIn](https://www.linkedin.com/in/MarcosCobena) <a rel="me" href="https://mastodon.social/@MarcosCobena">Mastodon</a> [NuGet](https://www.nuget.org/profiles/MarcosCobena) [Twitter](https://twitter.com/1Marcos2Cobena)
