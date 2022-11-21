@@ -1,19 +1,10 @@
-> *Soy Marcos, escribo software para resolver problemas a las personas.
-> Casi todo aquí está en inglés, pero tengo
-> algunas entradas del [blog en español](/?i=blog-es)
-> y
-> [Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
-> ([RSS](https://www.ivoox.com/podcast-aporreando-teclados_fg_f11142253_filtro_1.xml))
-> , un podcast con mi amigo Juanma Laó Ramos.*
+It is Marcos.
+I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
+I am devoting my career to .NET & C#, and a little bit of JavaScript.
 
-It's Marcos, I write software to solve problems for people.
-I'm focused on .NET & C# —and also enjoy doing things with JavaScript,
-as [this whole site](https://github.com/MarcosCobena/marcoscobena.github.io).
-
-Nowadays, I work at [Plain Concepts](http://www.plainconcepts.com) building stuff around the web side of [Evergine](https://evergine.com).
-I'm happy here rounded by friends coming from my University years.
-
-By the end of 2018, I wrote [GoTo](?i=goto): a compiler and its own on-line IDE, [GoTo Studio](goto-studio).
+_Soy Marcos.
+Escribo software en [Plain Concepts](https://www.plainconcepts.com/es) para resolver problemas a las personas.
+Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
 
 <form action="https://www.google.com/search" class="center" method="get" name="searchform">
     <input name="sitesearch" type="hidden" value="marcoscobena.com">
@@ -23,17 +14,21 @@ By the end of 2018, I wrote [GoTo](?i=goto): a compiler and its own on-line IDE,
 
 ### Menu
 
-[**Blog**](/?i=blog) ([RSS](feed.rss))
+[**Blog**](/?i=blog) ([RSS](feed.rss)) [es](/?i=blog-es)
 
 <div id="posts-latest"></div>
 
 <script src="items/home.js"></script>
 
-**Hobbies** [Audios](/?i=audios) [FPV Drones](/?i=drones) [Podcast: Juanma y Marcos](?i=juanma-y-marcos) [Reading](/?i=reading)
+**Hobbies**
+[Audios](/?i=audios)
+[FPV Drones](/?i=drones)
+[Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
+[Reading](/?i=reading)
 
 **Job** [Portfolio](/?i=portfolio)
 
-**Software Development** [Conferences](/?i=conferences) [Git](/?i=git)
+**Software Development** [Conferences](/?i=conferences) [Git](/?i=git) [GoTo Studio](goto-studio)
 [Key-bindings](/?i=key-bindings) [Questions](/?i=questions) [Recipes](/?i=recipes) [Screen
 template](/?i=screen-template) [Tools](/?i=tools)
 
