@@ -36,5 +36,5 @@ template](/?i=screen-template) [Tools](/?i=tools)
 [E-mail](mailto:MarcosCobena@outlook.com)
 [GitHub](https://github.com/MarcosCobena)
 [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
-<a rel="me" href="https://mastodon.social/@MarcosCobena">Mastodon</a>
+<a rel="me" href="https://dotnet.social/@MarcosCobena">Mastodon</a>
 [NuGet](https://www.nuget.org/profiles/MarcosCobena)
