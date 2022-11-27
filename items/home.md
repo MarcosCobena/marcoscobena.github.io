@@ -1,10 +1,10 @@
 It is Marcos.
-I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
-I am devoting my career to .NET & C#, and a little bit of JavaScript.
+[I write software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.com) for solving problems [to people](/?i=conferences).
+I am devoting my career to .NET & C#, WebAssembly and a little bit of JavaScript.
 
 _Soy Marcos.
-Escribo software en [Plain Concepts](https://www.plainconcepts.com/es) para resolver problemas a las personas.
-Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
+Escribo software en Plain Concepts para resolver problemas a las personas.
+Estoy dedicando mi carrera a .NET y C#, WebAssembly y un poquito de JavaScript._
 
 <form action="https://www.google.com/search" class="center" method="get" name="searchform">
     <input name="sitesearch" type="hidden" value="marcoscobena.com">
@@ -26,13 +26,18 @@ Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
 [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 [Reading](/?i=reading)
 
-**Job** [Portfolio](/?i=portfolio)
+**Software Development**
+[Conferences](/?i=conferences)
+[Git](/?i=git)
+[GoTo Studio](goto-studio)
+[Key-bindings](/?i=key-bindings)
+[Portfolio](/?i=portfolio)
+[Questions](/?i=questions)
+[Recipes](/?i=recipes)
+[Screen template](/?i=screen-template)
+[Tools](/?i=tools)
 
-**Software Development** [Conferences](/?i=conferences) [Git](/?i=git) [GoTo Studio](goto-studio)
-[Key-bindings](/?i=key-bindings) [Questions](/?i=questions) [Recipes](/?i=recipes) [Screen
-template](/?i=screen-template) [Tools](/?i=tools)
-
-**About**
+**Contact**
 [E-mail](mailto:MarcosCobena@outlook.com)
 [GitHub](https://github.com/MarcosCobena)
 [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
