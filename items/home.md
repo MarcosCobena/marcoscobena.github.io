@@ -1,10 +1,10 @@
 It is Marcos.
 [I write software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.com) for solving problems [to people](/?i=conferences).
-I am devoting my career to .NET & C#, WebAssembly and a little bit of JavaScript.
+I am devoting my career to .NET & C#, and a little bit of JavaScript.
 
 _Soy Marcos.
 Escribo software en Plain Concepts para resolver problemas a las personas.
-Estoy dedicando mi carrera a .NET y C#, WebAssembly y un poquito de JavaScript._
+Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
 
 <form action="https://www.google.com/search" class="center" method="get" name="searchform">
     <input name="sitesearch" type="hidden" value="marcoscobena.com">
