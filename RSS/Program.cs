@@ -18,7 +18,7 @@ namespace RSS
         const string AddItemChunk = "addPost(";
         const int AmountOfItemsForRss = 10;
         const string DateParseFormat = "d/M/yyyy";
-        const string Email = "marcoscm.digital@gmail.com";
+        const string Email = "marcoscobena@outlook.com";
         const string FeedDescription = "Marcos' Blog";
         const string FeedPath = "feed.rss";
         const string FullName = "Marcos Cobeña Morián";
