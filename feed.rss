@@ -4,11 +4,34 @@
     <title>Marcos Cobeña Morián</title>
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
-    <managingEditor>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Fri, 23 Sep 2022 14:58:26 Z</lastBuildDate>
+    <managingEditor>marcoscobena@outlook.com (Marcos Cobeña Morián)</managingEditor>
+    <lastBuildDate>Tue, 03 Jan 2023 09:30:01 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=2022</link>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
+      <title>Frustated 2022 recap</title>
+      <description>&lt;p&gt;After reading &lt;a href="https://danigm.net/2022.html"&gt;Dani’s year recap&lt;/a&gt;, I have felt the need to write mine down too.&lt;/p&gt;
+
+&lt;p&gt;However, I am not right now as creative as I would like; instead, I have came up with this list of intents which I will not achieve:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shut my-self up more often during video calls: better listen what others have to say&lt;/li&gt;
+&lt;li&gt;Less Google, more documentation: I want to achieve great things in the long-term, not today nor tomorrow&lt;/li&gt;
+&lt;li&gt;Refactor first or after, not in the middle: no more bloated commits&lt;/li&gt;
+&lt;li&gt;Wake up earlier! Somewhat difficult with two babies :-)&lt;/li&gt;
+&lt;li&gt;More writting thoughts down: I think have found Mastodon really helpful here, but still exploring it&lt;/li&gt;
+&lt;li&gt;Accept I can not change a lot of things: appreciate I can change a really small subset&lt;/li&gt;
+&lt;li&gt;Focus on what I can change, trust on others taking care of the rest: I suffer a lot of “it will fail if I do not manage it my-self”&lt;/li&gt;
+&lt;li&gt;Read more to fall in love with problems: it makes the road a joy, and sometimes you solve them&lt;/li&gt;
+&lt;li&gt;Do not stay sit down periods longer than 1 h&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And that’s it.&lt;/p&gt;</description>
+      <pubDate>Sat, 31 Dec 2022 23:00:00 Z</pubDate>
+    </item>
     <item>
       <link>https://marcoscobena.com/?i=git-interactively-rebase</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Por una git-arra con menos cuerdas</title>
       <description>&lt;p&gt;Imagínate: has terminado de trabajar en tu propia rama y llegó la hora de llevar todos los cambios a la rama de origen. ¿Qué sueles hacer en ese caso? Yo, hasta hace unos meses, hacía merge tal cual y listo. Todos los commits de mi rama temporal pasaban a la de origen. Y se añadía una "cuerda" más a la guitarra (trabajo en proyectos donde ni el propio Jimi Hendrix se hubiese apañado bien).&lt;/p&gt;
 
@@ -36,7 +59,7 @@
     </item>
     <item>
       <link>https://marcoscobena.com/?i=haz-tests</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Haz tests</title>
       <description>&lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; haz tests. En vez de tanto depurar, haz un test. Cuando tengas un bug, reprodúcelo con un test (¡y corrígelo!) Yo he tardado diez años en darme cuenta, no te quieras parecer a mí en eso :-)&lt;/p&gt;
 
@@ -80,7 +103,7 @@
     </item>
     <item>
       <link>https://marcoscobena.com/?i=design-follows-logic</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Design follows logic</title>
       <description>&lt;p&gt;I have learnt it is way better to close logic before design when you are about to start a task.&lt;/p&gt;
 
@@ -91,7 +114,7 @@
     </item>
     <item>
       <link>https://marcoscobena.com/?i=creativity-inc</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Creativity, Inc.</title>
       <description>&lt;p&gt;&lt;img src="items/images/CreativityInc.jpg" alt="Creativity, Inc. book cover" /&gt;
 &lt;em&gt;&lt;a href="https://archive.org/details/creativityincove0000catm/"&gt;Creativity, Inc.: overcoming the unseen forces that stand in the way of true inspiration&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -105,7 +128,7 @@
     </item>
     <item>
       <link>https://marcoscobena.com/?i=la-solucion-al-reto-division-en-goto</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>La solución al reto: división en GOTO</title>
       <description>&lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; tenemos una &lt;a href="goto-studio/?p=%3B%20Y%3DX1%2FX2%20X2%20must%20be%20%3E0%20Resto%20Z1%0A%5BA%5D%20X2%20%3D%20X2%20-%201%0AZ2%20%3D%20Z2%20%2B%201%0AZ4%20%3D%20Z4%20%2B%201%0AIF%20X2%20%21%3D%200%20GOTO%20%20A%0A%5BB%5D%20X1%20%3D%20X1%20-%201%0AZ4%20%3D%20Z4%20-%201%0AZ1%20%3D%20Z1%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20B%0AIF%20Z4%20%21%3D%200%20GOTO%20E%0A%5BC%5D%20Z1%20%3D%20Z1%20-1%0AX1%20%3D%20X1%20%2B%201%0AIF%20Z1%20%21%3D%200%20GOTO%20C%0A%5BD%5D%20Z2%20%3D%20Z2%20-%201%0AX1%20%3D%20X1%20-%201%0AX2%20%3D%20X2%20%2B%201%0AIF%20Z2%20%21%3D%200%20GOTO%20D%0AY%20%3D%20Y%20%2B%201%0AIF%20X1%20%21%3D%200%20GOTO%20A"&gt;solución&lt;/a&gt; al reto de Introducción a la Programación para Niños. He analizado el programa por partes y, además de estar hecho con cariño, hace todo tal y como pedí.&lt;/p&gt;
 
@@ -252,7 +275,7 @@ IF X1 != 0 GOTO A
     </item>
     <item>
       <link>https://marcoscobena.com/?i=ipn</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Introducción a la Programación para Niños</title>
       <description>&lt;p&gt;&lt;strong&gt;Actualización 9/5:&lt;/strong&gt; ¡Tenemos solución al reto! Echa un ojo abajo, en la clase 2.&lt;/p&gt;
 
@@ -349,7 +372,7 @@ Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que s
     </item>
     <item>
       <link>https://marcoscobena.com/?i=wave-engine-web-performance</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Wave Engine Web performance</title>
       <description>&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; We've analyzed why Wave Engine Web performance decreases under high WebGL consuming pressure, arriving to the final conclusion the way we currently interop with JavaScript is too slow for us. Finally, we introduce how we're overcoming this situation.&lt;/p&gt;
 
@@ -550,7 +573,7 @@ protected object Invoke(string method, params object[] args)
     </item>
     <item>
       <link>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>Wave Engine's on-line glTF viewer</title>
       <description>&lt;p&gt;&lt;em&gt;(This post appeared first &lt;a href="https://geeks.ms/waveengineteam/2020/02/06/wave-engines-on-line-gltf-viewer/"&gt;here&lt;/a&gt; on February 6th, 2020)&lt;/em&gt;&lt;/p&gt;
 
@@ -675,7 +698,7 @@ return image;
     </item>
     <item>
       <link>https://marcoscobena.com/?i=2019-8-2</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
       <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
       <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
 running —between quotes because the stencil one actually doesn't, and we need to go for a second round as we enabled
@@ -693,53 +716,6 @@ which's still better in performance.&lt;/p&gt;
 &lt;p&gt;With the last visual test we've gotten ~30 fps so thinking on AOT is becoming a must. I'd like to research on this
 sooner or later.&lt;/p&gt;</description>
       <pubDate>Thu, 01 Aug 2019 22:00:00 Z</pubDate>
-    </item>
-    <item>
-      <link>https://marcoscobena.com/?i=2019-7-26</link>
-      <author>marcoscm.digital@gmail.com (Marcos Cobeña Morián)</author>
-      <title>Wave Engine &amp; WebGL.NET status</title>
-      <description>&lt;p&gt;After some months working on
-&lt;a href="https://github.com/WaveEngine/WebGL.NET"&gt;WebGL.NET&lt;/a&gt; this Wednesday we've
-finally created the first NuGet. I've been personally avoiding doing this
-because we rely on some Mono's NuGets which are not public so anyone adding ours
-will get a bunch of errors.&lt;/p&gt;
-
-&lt;p&gt;However, we neeed such. Wave Engine was consuming WebGL through a submodule
-inside a submodule and such dependency was breaking flow to some of my
-workmates. I discussed this with Dani and found a medium-term solution:
-- creating a private feed on Azure DevOps and put every Mono dependency there
-  isolated, and
-- publish WebGL.NET under preview and alert on above in a noticeable place -I
-  think still noone has still used such but there it's :-)&lt;/p&gt;
-
-&lt;p&gt;Also, I discovered this &lt;a href="http://deat.tk/jazz2/wasm/"&gt;game&lt;/a&gt; which's using our
-project from sources and even have evolved it in some places. If people can
-consume it through NuGet I believe will report issues back and we all can gain
-from that. Eric Mellino's done something similar too, and provided good issues
-:-)&lt;/p&gt;
-
-&lt;p&gt;So, the NuGet is just there and it works. I must say we're close to complete
-every low-level Wave Engine visual test on Wasm so it reforces the idea of
-having WebGL.NET somewhat stable.&lt;/p&gt;
-
-&lt;p&gt;Working on 2D &amp;amp; 3D textures this week I've written once and again this portion:
-```csharp
-IntPtr data = [...] // Imagine a large chunk of bytes
-var colors = new byte[length];
-Marshal.Copy(data, colors, colors.Length);&lt;/p&gt;
-
-&lt;p&gt;GL.TexImage2D([...], colors);
-```&lt;/p&gt;
-
-&lt;p&gt;, and, obviously, this should be done &lt;em&gt;inside&lt;/em&gt; our binding, exposing a new
-overload for passing pixels as &lt;code&gt;IntPtr&lt;/code&gt;. Actually OpenGL/ES does something
-similar too.&lt;/p&gt;
-
-&lt;p&gt;Today Miguel de Icaza has told us in Twitter Mono's Wasm bits will be launched
-by the end of the year and that's great. Still the development workflow is rough
-but for sure this will improve; however, even in this way, Wasm is a great
-platform to target because of the browser-based and native execution tuple.&lt;/p&gt;</description>
-      <pubDate>Thu, 25 Jul 2019 22:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>
