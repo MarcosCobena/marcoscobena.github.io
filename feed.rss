@@ -5,7 +5,7 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscobena@outlook.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Tue, 03 Jan 2023 09:30:01 Z</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jan 2023 08:52:11 Z</lastBuildDate>
     <item>
       <link>https://marcoscobena.com/?i=2022</link>
       <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
@@ -27,7 +27,7 @@
 &lt;/ul&gt;
 
 &lt;p&gt;And that’s it.&lt;/p&gt;</description>
-      <pubDate>Sat, 31 Dec 2022 23:00:00 Z</pubDate>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=git-interactively-rebase</link>
@@ -55,7 +55,7 @@
 &lt;p&gt;Seguro que en otros clientes de Git es similar.&lt;/p&gt;
 
 &lt;p&gt;Es complicado llegar al origen de un bug. Es complicado mantener a la vez varias releases en producción. Es complicado encontrar la aguja (commit) en un pajar (histórico). Con pequeños gestos como este nos hacemos todos la vida más fácil. Y podemos invertir el tiempo donde realmente aporta valor.&lt;/p&gt;</description>
-      <pubDate>Thu, 22 Sep 2022 22:00:00 Z</pubDate>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=haz-tests</link>
@@ -99,7 +99,7 @@
 &lt;p&gt;También puede ser la excusa perfecta: como los tests pasan en verde, todo funcionará a la perfección. ¡Eeerrooor! No nos vamos a ir al otro extremo tampoco, seamos razonables: la lectura correcta sería "lo que he tocado no ha roto lo que está probado". Y, ésto, es mucho. Si somos inteligentes y test-eamos los puntos más críticos, y si añadimos tests de regresión para que un bug no vuelva a ocurrir, tenemos una buena probabilidad de conservar el aprecio que un cliente puede llegar a tener sobre nosotros.&lt;/p&gt;
 
 &lt;p&gt;Al final, y como dice Juanma, quiero ser feliz. Quiero que mis clientes, tengan más dinero o menos, sean más grandes o más pequeños, tengan una solución mejor a sus problemas hoy y, más importante, mañana. No pensar en el mañana es lo que me alejaba de hacer tests.&lt;/p&gt;</description>
-      <pubDate>Tue, 18 May 2021 22:00:00 Z</pubDate>
+      <pubDate>Wed, 19 May 2021 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=design-follows-logic</link>
@@ -110,7 +110,7 @@
 &lt;p&gt;Imagine you need to create a log-in page. If you start laying the design out, it is possible to run out of time —from the estimation— and still the functionality is missing. If an user would need to use it, it is simply not there. However, if you start with logic and, run out of time, the user at least can solve her need, although it is not the most beautiful log-in she has seen. Both can then decide whether to invest some more time.&lt;/p&gt;
 
 &lt;p&gt;Fist logic, business needs, Acceptance Criteria, functionality; second design, layout, style. Form follows function, not the other way around.&lt;/p&gt;</description>
-      <pubDate>Mon, 15 Feb 2021 23:00:00 Z</pubDate>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=creativity-inc</link>
@@ -124,7 +124,7 @@
 &lt;p&gt;Like them (Pixar), the software it-self is not the primary value, but what it actually generates on people who use it. They look for making people happier with their stories, we look for solving people's problems with our products, thus making them happier. And we are more or less good solving things inside the computer; however, we lack knowledge to solve those out of it.&lt;/p&gt;
 
 &lt;p&gt;It has been trully inspiring for me. And, at the end, there is a beautiful gift for those who appreaciate Steve Jobs —and have read a few of his biographies.&lt;/p&gt;</description>
-      <pubDate>Wed, 07 Oct 2020 22:00:00 Z</pubDate>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=la-solucion-al-reto-division-en-goto</link>
@@ -271,7 +271,7 @@ IF X1 != 0 GOTO A
 - las variables auxiliares corresponden en índice con aquella con la que comparte el valor: Z1 para X1 y Z2 para X2&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Dedicado a mi cuñada (y a mi cuñado, que es de letras pero puso su granito de arena también): muchísimas gracias por el esfuerzo y, ¡enhorabuena por conseguirlo!&lt;/em&gt;&lt;/p&gt;</description>
-      <pubDate>Fri, 08 May 2020 22:00:00 Z</pubDate>
+      <pubDate>Sat, 09 May 2020 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=ipn</link>
@@ -368,7 +368,7 @@ No, lo siento: soy Ingeniero en Informática por la Universidad de Sevilla, y me
 
 &lt;p&gt;&lt;strong&gt;¿Hay mínimo de edad?&lt;/strong&gt;
 Por mi parte, no. El lenguaje GOTO solo suma y resta, no hace más, por lo que si el/la niño/a sabe sumar y restar creo que será suficiente.&lt;/p&gt;</description>
-      <pubDate>Fri, 08 May 2020 22:00:00 Z</pubDate>
+      <pubDate>Sat, 09 May 2020 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=wave-engine-web-performance</link>
@@ -569,7 +569,7 @@ protected object Invoke(string method, params object[] args)
 &lt;h2&gt;Thanks&lt;/h2&gt;
 
 &lt;p&gt;To my workmates from Plain Concepts' Seville office for their help, in one way or another, with Wave Engine Web. Specially, the core team working in Wave Engine. More specifically, Dani Cáceres recommended me some approaches to improve WebGL.NET performance, like having multiple &lt;code&gt;Invoke()&lt;/code&gt; overloads per amount of params, instead of using &lt;code&gt;params object[] args&lt;/code&gt;.&lt;/p&gt;</description>
-      <pubDate>Sat, 25 Apr 2020 22:00:00 Z</pubDate>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer</link>
@@ -694,7 +694,7 @@ return image;
 &lt;p&gt;We have pursued such during some time but the scenario was still not ready for the jump. Nowadays, we see a bunch of possibilities for helping our customers to take visual experiences into the browser, adding Web to the list of officially supported platforms.&lt;/p&gt;
 
 &lt;p&gt;If you think we can help you reach the Web too, &lt;a href="https://waveengine.net/Company#Contact"&gt;we are here to listen&lt;/a&gt;. Oh, and if you found any issue, please &lt;a href="https://github.com/WaveEngine/Feedback/issues"&gt;report it&lt;/a&gt;. Thank you for reading.&lt;/p&gt;</description>
-      <pubDate>Thu, 06 Feb 2020 23:00:00 Z</pubDate>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 Z</pubDate>
     </item>
     <item>
       <link>https://marcoscobena.com/?i=2019-8-2</link>
@@ -715,7 +715,7 @@ which's still better in performance.&lt;/p&gt;
 
 &lt;p&gt;With the last visual test we've gotten ~30 fps so thinking on AOT is becoming a must. I'd like to research on this
 sooner or later.&lt;/p&gt;</description>
-      <pubDate>Thu, 01 Aug 2019 22:00:00 Z</pubDate>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>

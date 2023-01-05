@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using HeyRed.MarkdownSharp;
 
-namespace RSS 
+namespace RSS
 {
     class Program
     {
@@ -35,10 +35,10 @@ namespace RSS
         static DateTime ParseDate(string date)
         {
             var successParsing = DateTime.TryParseExact(
-                date, 
-                DateParseFormat, 
-                CultureInfo.InvariantCulture, 
-                DateTimeStyles.AssumeLocal, 
+                date,
+                DateParseFormat,
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.AssumeUniversal,
                 out DateTime parsedDate);
 
             if (!successParsing)
@@ -52,7 +52,7 @@ namespace RSS
         static IEnumerable<ItemModel> ReadLatestItems()
         {
             Console.Write("Reading items... ");
-            
+
             var items = new List<ItemModel>();
 
             using (var itemsFile = File.OpenText(ItemsJavaScriptPath))
@@ -96,7 +96,7 @@ namespace RSS
         static void WriteRss(IEnumerable<ItemModel> items)
         {
             Console.Write("Writting feed... ");
-            
+
             var feed = new SyndicationFeed(FullName, FeedDescription, new Uri(Link));
             var author = new SyndicationPerson($"{Email} ({FullName})", FullName, Link);
             feed.Authors.Add(author);
@@ -115,7 +115,7 @@ namespace RSS
                     PublishDate = item.Date.ToUniversalTime()
                 };
                 syndicationItem.Authors.Add(author);
-                
+
                 feedItems.Add(syndicationItem);
             }
 
@@ -126,7 +126,7 @@ namespace RSS
                 feed.LastUpdatedTime = DateTime.UtcNow;
                 feed.SaveAsRss20(rssWriter);
             }
-            
+
             Console.WriteLine($"done! {FeedPath}");
         }
 
