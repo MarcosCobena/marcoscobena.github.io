@@ -148,7 +148,7 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
     let previousMonth = -1;
 
     $(selector).empty();
-    $(selector).append("<ul>");
+    let html = '';
 
     for (var i = 0; i < length; i++) {
         var item = items[i];
@@ -157,8 +157,8 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
 
         if (moreFilename == null) {
             if (year != previousYear) {
-                const html = `<h2>${year}</h2>`;
-                $(selector).append(html);
+                const header2Html = `<h2>${year}</h2>`;
+                html += header2Html;
 
                 previousYear = year;
             }
@@ -166,33 +166,37 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
             if (month != previousMonth) {
                 const date = new Date(year, month);
                 const monthAndYear = date.toLocaleString('en', { month: 'long', year: 'numeric' });
-                const html = `<h3>${monthAndYear}</h3>`;
-                $(selector).append(html);
+                const header3Html = `<h3>${monthAndYear}</h3>`;
+                html += header3Html;
 
                 previousMonth = month;
             }
         }
 
-        var html = '<li>'
+        const listItemHtml = '<li>'
             + `<a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
             + ` (${item.date.toLocaleDateString()})`
             + '</li>';
-        $(selector).append(html);
+        html += listItemHtml;
     }
 
     if (moreFilename != null && items.length > length) {
-        var html = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
-        $(selector).append(html);
+        const listItemHtml = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
+        html += listItemHtml;
     }
 
-    $(selector).append("</ul>");
+    if (moreFilename != null) {
+        html = `<ul>${html}</ul>`;
+    }
 
     if (moreFilename == null) {
-        const total = `<p>
+        const totalHtml = `<p>
     (Total: ${length})
 </p>`;
-        $(selector).append(total);
+        html += totalHtml;
     }
+    
+    $(selector).append(html);
 }
 
 async function loadItemAsync(filename, anchor = null) {
