@@ -1,6 +1,7 @@
 ﻿// WIP replace " with ' for strings
 // WIP replace "var" for "let" within functions
 // WIP replace "var" for "const" where appropiate
+// WIP remove jQuery
 
 const blogTag = 'blog';
 const podcastFilename = 'juanma-y-marcos';
@@ -16,7 +17,7 @@ var resourceNotFoundFilename = "404";
 var hashtagUrlSeparator = "#/";
 var queryUrlSeparator = "/?i=";
 
-$(document).on('click', 'a', function (event) {
+$(document).on('click', 'a', async function (event) {
     var href = $(this).attr("href");
 
     if (href.startsWith("http") || href.startsWith("mailto:") ||
@@ -29,21 +30,21 @@ $(document).on('click', 'a', function (event) {
 
     var filename = getJustFilename(href);
     pushState(filename);
-    loadItem(filename);
+    await loadItemAsync(filename);
 });
 
-$(window).on('popstate', function (event) {
+$(window).on('popstate', async function (event) {
     var state = event.originalEvent.state;
 
     if (state !== null) {
-        loadItem(state.filename);
+        await loadItemAsync(state.filename);
     } else {
         if (window.location.hash.length > 0) {
             // User manually enters a different path
-            entryPoint();
+            await entryPointAsync();
         } else {
             // User taps back to root (i.e. https://marcoscobena.com)
-            pushHomeStateAndLoadIt();
+            await pushHomeStateAndLoadItAsync();
         }
     }
 });
@@ -75,7 +76,7 @@ function addRedirection(fromFilename, toURL) {
     redirections.push(redirection);
 }
 
-function entryPoint() {
+async function entryPointAsync() {
     const path = window.location.href;
     const filename = getJustFilename(path);
     const anchor = getAnchor(path);
@@ -86,10 +87,10 @@ function entryPoint() {
         if (redirection != undefined) {
             window.location.href = redirection.url;
         } else {
-            loadItem(filename, anchor);
+            await loadItemAsync(filename, anchor);
         }
     } else {
-        pushHomeStateAndLoadIt();
+        await pushHomeStateAndLoadItAsync();
     }
 }
 
@@ -194,25 +195,24 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
     }
 }
 
-function loadItem(filename, anchor = null) {
+async function loadItemAsync(filename, anchor = null) {
     const item = findIn(filename, items);
     
     if (item == undefined) {
-        loadItem(resourceNotFoundFilename);
+        await loadItemAsync(resourceNotFoundFilename);
         return;
     }
     
     let actualPath = getMarkDownPath(filename);
-    
-    $.get(actualPath, function (data) {
-        const isBlogPost = item.tags.some(tag => tag == blogTag);
-        render(item, data, isBlogPost, anchor);
-    });
+    const response = await fetch(actualPath);
+    const data = await response.text();
+    const isBlogPost = item.tags.some(tag => tag == blogTag);
+    render(item, data, isBlogPost, anchor);
 }
 
-function pushHomeStateAndLoadIt() {
+async function pushHomeStateAndLoadItAsync() {
     pushState(homeFilename);
-    loadItem(homeFilename);
+    await loadItemAsync(homeFilename);
 }
 
 function pushState(filename) {
@@ -283,8 +283,13 @@ function renderItem(item, markDown) {
     $("#title").html(item.title);
     $("#date").html(item.date.toLocaleDateString());
 
-    let body = converter.makeHtml(markDown);
-    $("#actualBody").html(body);
+    const body = converter.makeHtml(markDown);
+    const bodyElement = document.getElementById('actualBody');
+    bodyElement.innerHTML = body;
+    const itemScriptElement = document.createElement('script');
+    itemScriptElement.src = `items/${item.filename}.js`;
+    itemScriptElement.type = "text/javascript";
+    bodyElement.appendChild(itemScriptElement);
 }
 
 function renderPodcast() {
@@ -336,4 +341,4 @@ function updateDisqus(filename) {
     });
 }
 
-$(window).on('load', entryPoint);
+document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());

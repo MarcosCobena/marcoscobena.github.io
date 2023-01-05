@@ -38,8 +38,6 @@
 
 <pre id="result" style="background-color: black; color: white;"></pre>
 
-<script src="items/git.js"></script>
-
 Working with my mate [Ángel Carlos López](https://twitter.com/_aclopez) on a new project, he introduced me this way to write better, and more semantic, commit messages. I've taken his list of actions and made this small tool.
 
 ## Commands cheat sheet

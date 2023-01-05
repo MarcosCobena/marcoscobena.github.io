@@ -18,8 +18,6 @@ Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
 
 <div id="posts-latest"></div>
 
-<script src="items/home.js"></script>
-
 **Hobbies**
 [Audios](/?i=audios)
 [FPV Drones](/?i=drones)
