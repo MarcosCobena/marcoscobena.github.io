@@ -18,7 +18,7 @@ Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
 
 <div id="posts-latest"></div>
 
-[**µBlog**](https://dotnet.social/@MarcosCobena)
+[**Microblog**](https://dotnet.social/@MarcosCobena)
 
 <div id="toots-latest"></div>
 

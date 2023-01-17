@@ -4,6 +4,17 @@ listItems(
     'blog',
     3);
 
+// https://stackoverflow.com/a/35385518
+/**
+ * @param {String} HTML representing any number of sibling elements
+ * @return {NodeList} 
+ */
+function htmlToElements(html) {
+    var template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content.childNodes;
+}
+
 async function listLatestTootsAsync() {
     const mastodonUrl = 'https://dotnet.social/@MarcosCobena';
     const response = await fetch(`${mastodonUrl}.rss`);
@@ -14,11 +25,13 @@ async function listLatestTootsAsync() {
 
     for (let i = 0; i < 3; i++) {
         const element = items[i];
-        const textContent = element.querySelector('description').textContent;
+        const descriptionTextContent = element.querySelector('description').textContent;
+        const descriptionElements = htmlToElements(descriptionTextContent);
+        const description = `${descriptionElements[0].innerHTML}...`;
         const date = new Date(element.querySelector('pubDate').textContent);
         html += `<li>`
-            + `(<a href="${element.querySelector('link').textContent}">${date.toLocaleDateString()}</a>)`
-            + ` ${textContent}`
+            + `${description}`
+            + ` (<a href="${element.querySelector('link').textContent}">${date.toLocaleDateString()}</a>)`
             + `</li>`;
     }
 
