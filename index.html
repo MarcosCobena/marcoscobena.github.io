@@ -37,29 +37,6 @@
             <noscript>This site runs entirely in your browser, please double check JavaScript's enabled.</noscript>
         </div>
 
-        <div id="disqus_thread" style="display: none;"></div>
-
-        <script type="text/javascript">
-            // Taken from: https://archondigital.com/articles/disable-adsense-disqus-jekyll-localhost/
-            var disqus_shortname = weAreAtInternet ?
-                'marcoscobena' :
-                // This one doesn't even exist :-)
-                'marcoscobena-debug';
-
-            // Here starts Disqus set-up
-            var disqus_config = function () {
-                this.page.url = "https://marcoscobena.com";
-                this.page.identifier = "home";
-            };
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-            // Here ends Disqus set-up
-        </script>
-
         <p id="scrollUp" class="right">
             <a href="" onclick="return scrollUp();"><em>Pst</em>, take me up!</a>
         </p>

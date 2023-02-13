@@ -59,16 +59,16 @@ function addEpisode(title, audioFilename, documentFilename, date) {
     episodes.push(item);
 }
 
-function addItem(title, filename, date, allowComments = false, tags = []) {
+function addItem(title, filename, date, tags = []) {
     var tokens = date.split('/');
     var parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
-    var item = { title: title, filename: filename, date: parsedDate, allowComments: allowComments, tags: tags };
+    var item = { title: title, filename: filename, date: parsedDate, tags: tags };
     items.push(item);
 }
 
 function addPost(title, filename, date, tags = []) {
     tags.push('blog');
-    addItem(title, filename, date, /* allowComments: */ true, tags);
+    addItem(title, filename, date, tags);
 }
 
 function addRedirection(fromFilename, toURL) {
@@ -235,8 +235,6 @@ function removeAnchor(filename) {
 }
 
 function render(item, markDown, isBlogPost, anchor) {
-    $('#disqus_thread').hide();
-
     let isHome = item.filename == homeFilename;
 
     if (isHome) {
@@ -255,11 +253,6 @@ function render(item, markDown, isBlogPost, anchor) {
 
     if (item.filename == podcastFilename) {
         renderPodcast();
-    }
-
-    if (isBlogPost || item.allowComments) {
-        $('#disqus_thread').show();
-        updateDisqus(item.filename);
     }
 
     if (anchor != null) {
@@ -333,16 +326,6 @@ function scrollUp() {
     window.scrollTo(0, 0);
 
     return false;
-}
-
-function updateDisqus(filename) {
-    DISQUS.reset({
-        reload: true,
-        config: function () {
-            this.page.identifier = filename;
-            this.page.url = window.location.href;
-        }
-    });
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());

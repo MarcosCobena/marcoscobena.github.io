@@ -2,7 +2,6 @@
 //     title, <- Here goes the user-friendly title you want to show
 //     filename, <- Item's filename without .md extension, at the same level of this current one
 //     date, <- Date, as is, i.e. will be rendered without conversion
-//     allowComments, <- addItem() only: enables comments, disabled by-default for items
 //     tags, <- string array of tags
 // );
 
