@@ -144,58 +144,44 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         items.length :
         amount;
     length = Math.min(length, items.length);
-    let previousYear = -1;
-    let previousMonth = -1;
+    const itemsPerYearMap = new Map();
+    items.map(value => {
+        const year = value.date.getFullYear();
+        const month = value.date.getMonth();
 
-    $(selector).empty();
-    let html = '';
-
-    for (var i = 0; i < length; i++) {
-        var item = items[i];
-        const year = item.date.getFullYear();
-        const month = item.date.getMonth();
-
-        if (moreFilename == null) {
-            if (year != previousYear) {
-                const header2Html = `<h2>${year}</h2>`;
-                html += header2Html;
-
-                previousYear = year;
-            }
-
-            if (month != previousMonth) {
-                const date = new Date(year, month);
-                const monthAndYear = date.toLocaleString('en', { month: 'long', year: 'numeric' });
-                const header3Html = `<h3>${monthAndYear}</h3>`;
-                html += header3Html;
-
-                previousMonth = month;
-            }
+        if (!itemsPerYearMap.has(year)) {
+            itemsPerYearMap.set(year, new Map());
         }
 
-        const listItemHtml = '<li>'
-            + `<a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
-            + ` (${item.date.toLocaleDateString()})`
-            + '</li>';
-        html += listItemHtml;
-    }
+        const itemsPerMonthMap = itemsPerYearMap.get(year);
 
-    if (moreFilename != null && items.length > length) {
+        if (!itemsPerMonthMap.has(month)) {
+            itemsPerMonthMap.set(month, []);
+        }
+
+        const itemsArray = itemsPerMonthMap.get(month);
+        itemsArray.push(value);
+    });
+    const isMoreRequested = moreFilename != null;
+    let html = renderListItems(itemsPerYearMap, isMoreRequested, length);
+
+    if (isMoreRequested && items.length > length) {
         const listItemHtml = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
         html += listItemHtml;
     }
 
-    if (moreFilename != null) {
+    if (isMoreRequested) {
         html = `<ul>${html}</ul>`;
     }
 
-    if (moreFilename == null) {
+    if (!isMoreRequested) {
         const totalHtml = `<p>
     (Total: ${length})
 </p>`;
         html += totalHtml;
     }
     
+    $(selector).empty();
     $(selector).append(html);
 }
 
@@ -287,6 +273,45 @@ function renderItem(item, markDown) {
     itemScriptElement.src = `items/${item.filename}.js`;
     itemScriptElement.type = "text/javascript";
     bodyElement.appendChild(itemScriptElement);
+}
+
+function renderListItems(itemsPerYearMap, isMoreRequested, length) {
+    let html = '';
+    let count = 0;
+
+    for (const [year, itemsPerMonthMap] of itemsPerYearMap) {
+        if (!isMoreRequested) {
+            html += `<h2>${year}</h2>`;
+        }
+
+        for (const [month, itemsArray] of itemsPerMonthMap) {
+            if (!isMoreRequested) {
+                const date = new Date(year, month);
+                const monthAndYear = date.toLocaleString('en', { month: 'long', year: 'numeric' });
+                html += `<h3>${monthAndYear}</h3>`;
+                html += '<ul>';
+            }
+
+            for (const item of itemsArray) {
+                const listItemHtml = '<li>'
+                    + `<a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
+                    + ` (${item.date.toLocaleDateString()})`
+                    + '</li>';
+                html += listItemHtml;
+                count++;
+
+                if (isMoreRequested && (count == length)) {
+                    return html;
+                }
+            }
+
+            if (!isMoreRequested) {
+                html += '</ul>';
+            }
+        }
+    }
+
+    return html;
 }
 
 function renderPodcast() {
