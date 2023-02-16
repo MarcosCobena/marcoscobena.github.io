@@ -26,7 +26,6 @@ Estoy dedicando mi carrera a .NET y C#, y un poquito de JavaScript._
 [Audios](/?i=audios)
 [FPV Drones](/?i=drones)
 [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
-[Reading](/?i=reading)
 
 **Software Development**
 [Conferences](/?i=conferences)
