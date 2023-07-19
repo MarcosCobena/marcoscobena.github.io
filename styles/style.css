@@ -1,9 +1,26 @@
+/* Light mode */
+:root {
+    --body-background-color: #FFF;
+    --body-color: #333;
+    --table-tr-background-color: #F5F5F5;
+}
+ 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-background-color: #111;
+        --body-color: #EEE;
+        --table-tr-background-color: #333;
+    }
+}
+
 #actualBody {
     line-height: 1.5em;
 }
 
 body {
-    color: #333;
+    background-color: var(--body-background-color);
+    color: var(--body-color);
     font-family: sans-serif;
     margin-left: auto;
     margin-right: auto;
@@ -63,5 +80,5 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: whitesmoke;
+    background-color: var(--table-tr-background-color);
 }
