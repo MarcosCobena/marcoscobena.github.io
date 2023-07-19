@@ -1,9 +1,24 @@
+/* Light mode */
+:root {
+    --body-bg: #FFF;
+    --body-color: #333;
+ }
+ 
+ /* Dark mode */
+ @media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg: #111;
+        --body-color: #EEE;
+    }
+ }
+
 #actualBody {
     line-height: 1.5em;
 }
 
 body {
-    color: #333;
+    background-color: var(--body-bg);
+    color: var(--body-color);
     font-family: sans-serif;
     margin-left: auto;
     margin-right: auto;
