@@ -20,6 +20,7 @@ addItem("Portfolio", "portfolio", "28/11/2022");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Recipes", "recipes", "14/6/2018");
 addItem("Screen template", "screen-template", "6/7/2018");
+addItem("Tests", "tests", "19/7/2023");
 addItem("Tools", "tools", "20/1/2021");
 //addItem("DEBUG", "debug", "1/1/1970");
 
