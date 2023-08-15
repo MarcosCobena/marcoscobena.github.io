@@ -26,4 +26,4 @@ Así es como se desarrolla software.
 
 Esta constante es ¿local o global?
 
-’const int maxInteractions = 3;’
+const int maxInteractions = 3;
