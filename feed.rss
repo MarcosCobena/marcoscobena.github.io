@@ -5,7 +5,42 @@
     <link>https://marcoscobena.com/</link>
     <description>Marcos' Blog</description>
     <managingEditor>marcoscobena@outlook.com (Marcos Cobeña Morián)</managingEditor>
-    <lastBuildDate>Thu, 05 Jan 2023 08:52:11 Z</lastBuildDate>
+    <lastBuildDate>Fri, 06 Oct 2023 14:44:24 Z</lastBuildDate>
+    <item>
+      <link>https://marcoscobena.com/?i=como-desarrollar-software</link>
+      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
+      <title>Cómo desarrollar software</title>
+      <description>&lt;p&gt;Si tuviese la oportunidad de añadir un capítulo al libro Cómo vivir (Derek Sivers) pero, centrado en el desarrollo de software, sería algo así:&lt;/p&gt;
+
+&lt;p&gt;Estima una sola vez y comprométete a una fecha de entrega. Pase lo que pase, haz lo que dijiste que ibas a hacer y no te salgas de ahí. Si necesitas más tiempo, echa más horas, trabaja las tardes, noches o fines de semana si hace falta, pero nunca te pases de la fecha acordada.&lt;/p&gt;
+
+&lt;p&gt;No hagas tests, no pierdas el tiempo; dedica todo tu esfuerzo a escribir código que el cliente pueda probar.&lt;/p&gt;
+
+&lt;p&gt;No le enseñes el software al cliente hasta el final, si lo ve a mitad no hará más que confundirlo y será peor.&lt;/p&gt;
+
+&lt;p&gt;No planifiques, hay que hacerlo todo, así de sencillo. No inviertas tiempo en liturgias; en su lugar, escribe código que acerque el software a su completitud.&lt;/p&gt;
+
+&lt;p&gt;Así es como se desarrolla software.&lt;/p&gt;
+
+&lt;p&gt;—&lt;/p&gt;
+
+&lt;p&gt;Estima tantas veces como sea necesario. La realidad cambia a medida que avanzan los proyectos, el cliente sabe mejor lo que quiere a medida que avanza.&lt;/p&gt;
+
+&lt;p&gt;Haz todos los tests que sea posible, mientras más mejor. Así, si haces cualquier cambio, te darás tú cuenta antes del error que el cliente, y podrás corregirlo.&lt;/p&gt;
+
+&lt;p&gt;No te comprometas a una fecha de entrega, nadie sabe qué va a ocurrir hasta entonces. Si necesitas más tiempo, evalúa la situación, busca términos medios y sigue avanzando. Nunca trabajes más horas de las necesarias.&lt;/p&gt;
+
+&lt;p&gt;Enséñale al cliente cómo vas en cada momento. Enséñale a probar el software tal como está, y enséñale también a reportar errores o simplemente dar feedback. Enséñale a hacerlo él mismo.&lt;/p&gt;
+
+&lt;p&gt;Así es como se desarrolla software.&lt;/p&gt;
+
+&lt;p&gt;—&lt;/p&gt;
+
+&lt;p&gt;Esta constante es ¿local o global?&lt;/p&gt;
+
+&lt;p&gt;const int maxInteractions = 3;&lt;/p&gt;</description>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 Z</pubDate>
+    </item>
     <item>
       <link>https://marcoscobena.com/?i=2022</link>
       <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
@@ -695,27 +730,6 @@ return image;
 
 &lt;p&gt;If you think we can help you reach the Web too, &lt;a href="https://waveengine.net/Company#Contact"&gt;we are here to listen&lt;/a&gt;. Oh, and if you found any issue, please &lt;a href="https://github.com/WaveEngine/Feedback/issues"&gt;report it&lt;/a&gt;. Thank you for reading.&lt;/p&gt;</description>
       <pubDate>Fri, 07 Feb 2020 00:00:00 Z</pubDate>
-    </item>
-    <item>
-      <link>https://marcoscobena.com/?i=2019-8-2</link>
-      <author>marcoscobena@outlook.com (Marcos Cobeña Morián)</author>
-      <title>The 'last' Visual Test #WaveEngine #WebGL #Wasm</title>
-      <description>&lt;p&gt;Today we've reached a mid-term goal with our port of Wave Engine to WebGL: "every" visual test we agreed is currently
-running —between quotes because the stencil one actually doesn't, and we need to go for a second round as we enabled
-texture storage in the middle.&lt;/p&gt;
-
-&lt;p&gt;This' for instance the last one:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="items/images/FrameBufferTextureCubeTest.gif" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;At the beginning of the week I worked on passing a ReadOnlySpan&amp;lt;byte&amp;gt; to a few WebGL calls —as Juan recommended us
-through Twitter. I started touching the transpiler, WebIDLToCSharp, but quickly noticed it wasn't worth as needs a
-somewhat big change while such can be done at the backend side. Also, I'm not 100% sure will find any other approach
-which's still better in performance.&lt;/p&gt;
-
-&lt;p&gt;With the last visual test we've gotten ~30 fps so thinking on AOT is becoming a must. I'd like to research on this
-sooner or later.&lt;/p&gt;</description>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 Z</pubDate>
     </item>
   </channel>
 </rss>
