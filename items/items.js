@@ -12,7 +12,7 @@ addItem("¡Hola! 👋", "home", "28/11/2022");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "5/2/2021");
 addItem("Blog", "blog-es", "5/2/2021");
-addItem("Conferences", "conferences", "30/7/2019");
+addItem("Conferences", "conferences", "19/12/2023");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "8/6/2020");
 addItem("Key-bindings", "key-bindings", "24/5/2018");

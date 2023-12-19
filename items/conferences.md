@@ -1,3 +1,13 @@
+Evolve ChatGPT to a virtual avatar for talking with
+---------------------------------------------------
+
+*Evoluciona ChatGPT a un avatar virtual con el que poder conversar*, its original title in Spanish.
+Our Research Director, Jorge, and I shared our experience working on [Brain](https://www.thera4all.com/), an app to take psychological tests with a 3D avatar powered by ChatGPT, among other technologies.
+My slides were focused on the backend side, the orchestrator, with those challenges we found along the way, and how we overcame them.
+([YouTube](https://www.youtube.com/watch?v=MRxLJpn3igY))
+
+[Monkey Conf 2023](http://monkeyconf.es/), on-line, December 2nd, 2023
+
 Bringing Wave Engine to the Web through WebGL & WebAssembly
 -----------------------------------------------------------
 
