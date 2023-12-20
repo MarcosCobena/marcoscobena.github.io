@@ -1,5 +1,25 @@
 _Pst!_ I almost never work on projects alone; this' the result of a whole team effort:
 
+### Brain
+
+![](items/images/brain.png)
+
+This mobile app blends a lot of cutting-edge technologies:
+Evergine, ChatGPT, MAUI, Speech to Text & Text to Speech, lip-sync, Azure, etc.
+I worked on both backend and frontend sides.
+For the first, I started with Test-Driven Development (TDD):
+it orchestrates the dialogues between the user and ChatGPT and, it is critical.
+For the other, I built from scratch a good portion of the app, mainly XAML & ViewModels.
+We spent a [talk](?i=conferences) about this project at Monkey Conf 2023.
+
+|            |                              |
+| ---------- | ---------------------------- |
+| Language   | C# (.NET)                    |
+| Frameworks | Evergine, MAUI, ASP.NET Core |
+| Platforms  | Android, iOS                 |
+| Date       | May-September 2023           |
+| More info? | <https://www.thera4all.com>  |
+
 ### CITYPLAIN
 
 ![](items/images/cityplain.png)

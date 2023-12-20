@@ -16,7 +16,7 @@ addItem("Conferences", "conferences", "19/12/2023");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "8/6/2020");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
-addItem("Portfolio", "portfolio", "28/11/2022");
+addItem("Portfolio", "portfolio", "20/12/2023");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Recipes", "recipes", "14/6/2018");
 addItem("Screen template", "screen-template", "6/7/2018");
@@ -38,7 +38,6 @@ addRedirection("juanma-y-marcos", "https://www.ivoox.com/podcast-aporreando-tecl
 // Intentionally empty
 
 // Posts —this' the order they'll appear listed
-
 
 addPost("Cómo desarrollar software", "como-desarrollar-software", "15/8/2023", ['es']);
 addPost("Frustated 2022 recap", "2022", "1/1/2023");
