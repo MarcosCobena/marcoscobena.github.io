@@ -8,7 +8,6 @@
 // Items —it doesn't mind the order how they're added
 
 addItem("404 Not Found", "404", "29/8/2018");
-addItem("¡Hola! 👋", "home", "28/11/2022");
 addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "5/2/2021");
 addItem("Blog", "blog-es", "5/2/2021");
@@ -16,6 +15,7 @@ addItem("Conferences", "conferences", "19/12/2023");
 addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "8/6/2020");
 addItem("Key-bindings", "key-bindings", "24/5/2018");
+addItem("Marcos' web", "home", "13/1/2024");
 addItem("Portfolio", "portfolio", "20/12/2023");
 addItem("Questions", "questions", "7/5/2018");
 addItem("Recipes", "recipes", "14/6/2018");

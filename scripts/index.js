@@ -94,6 +94,14 @@ async function entryPointAsync() {
     }
 }
 
+async function fetchTextAsync(filename) {
+    const actualPath = getMarkDownPath(filename);
+    const response = await fetch(actualPath);
+    const text = await response.text();
+    
+    return text;
+}
+
 function findIn(filename, itemArray) {
     let found = itemArray.find(function (item) {
         return item.filename == filename;
@@ -193,9 +201,7 @@ async function loadItemAsync(filename, anchor = null) {
         return;
     }
     
-    let actualPath = getMarkDownPath(filename);
-    const response = await fetch(actualPath);
-    const data = await response.text();
+    const data = await fetchTextAsync(filename);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
     render(item, data, isBlogPost, anchor);
 }
@@ -229,13 +235,7 @@ function render(item, markDown, isBlogPost, anchor) {
         $('#homeReturn').show(0);
     }
 
-    renderItem(item, markDown);
-
-    if (isBlogPost) {
-        $('#date').fadeIn(0);
-    } else {
-        $('#date').fadeOut(0);
-    }
+    showItem(item, markDown, isBlogPost);
 
     if (item.filename == podcastFilename) {
         renderPodcast();
@@ -260,19 +260,30 @@ ${html}`;
     return body;
 }
 
-function renderItem(item, markDown) {
-    document.title = `${item.title} — ${siteTitle}`;
+function renderItem(item, markDown, isBlogPost) {
+    const styleClass = isBlogPost
+        ? ''
+        : 'hidden';
 
-    $("#title").html(item.title);
-    $("#date").html(item.date.toLocaleDateString());
+    return `<h1 id="title"><a href="?i=${item.filename}">${item.title}</a></h1>
 
-    const body = converter.makeHtml(markDown);
-    const bodyElement = document.getElementById('actualBody');
-    bodyElement.innerHTML = body;
-    const itemScriptElement = document.createElement('script');
-    itemScriptElement.src = `items/${item.filename}.js`;
-    itemScriptElement.type = "text/javascript";
-    bodyElement.appendChild(itemScriptElement);
+<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
+    
+${converter.makeHtml(markDown)}`;
+}
+
+async function renderLatestsPostsAsync(selector) {
+    const posts = items.filter(item => item.tags.some(tag => tag == blogTag));
+    let html = '';
+
+    for (let i = 0; i < 3; i++) {
+        const post = posts[i];
+        const markDown = await fetchTextAsync(post.filename);
+        html += renderItem(post, markDown, /* isBlogPost: */ true);
+    }
+    
+    $(selector).empty();
+    $(selector).append(html);
 }
 
 function renderListItems(itemsPerYearMap, isMoreRequested, length) {
@@ -351,6 +362,17 @@ function scrollUp() {
     window.scrollTo(0, 0);
 
     return false;
+}
+
+function showItem(item, markDown, isBlogPost) {
+    document.title = `${item.title} — ${siteTitle}`;
+    const body = renderItem(item, markDown, isBlogPost);
+    const bodyElement = document.getElementById('actualBody');
+    bodyElement.innerHTML = body;
+    const itemScriptElement = document.createElement('script');
+    itemScriptElement.src = `items/${item.filename}.js`;
+    itemScriptElement.type = "text/javascript";
+    bodyElement.appendChild(itemScriptElement);
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());
