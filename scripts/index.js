@@ -264,12 +264,17 @@ function renderItem(item, markDown, isBlogPost) {
     const styleClass = isBlogPost
         ? ''
         : 'hidden';
-
-    return `<h1 id="title"><a href="?i=${item.filename}">${item.title}</a></h1>
-
-<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
+    let result = `<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
     
 ${converter.makeHtml(markDown)}`;
+
+    if (item.title != '') {
+        result = `<h1 id="title"><a href="?i=${item.filename}">${item.title}</a></h1>
+
+${result}`;
+    }
+
+    return result;
 }
 
 async function renderLatestsPostsAsync(selector) {

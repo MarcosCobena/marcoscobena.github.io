@@ -1,10 +1,12 @@
+*¡Hola!* 👋
+
 <a href="javascript:window.scrollTo(0, document.body.scrollHeight);">Menu</a>
 
 <div id="posts-latest"></div>
 
-[**More...**](/?i=blog)
+[More posts...](/?i=blog)
 
----
+<div class="center">~</div>
 
 **About**
 I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
