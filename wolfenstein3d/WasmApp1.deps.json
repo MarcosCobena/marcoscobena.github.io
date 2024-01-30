@@ -1,0 +1,139 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "WasmApp1/1.0.0": {
+        "dependencies": {
+          "Library": "1.0.0",
+          "Mono.WebAssembly.Build": "0.2.2",
+          "Mono.WebAssembly.Framework": "0.2.2",
+          "Mono.WebAssembly.Runtime": "0.2.2",
+          "NETStandard.Library": "2.0.3",
+          "WebAssembly.Bindings": "0.2.2",
+          "WebAssembly.Net.Http": "0.2.2",
+          "WebAssembly.Net.WebSockets": "0.2.2"
+        },
+        "runtime": {
+          "WasmApp1.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Mono.WebAssembly.Build/0.2.2": {},
+      "Mono.WebAssembly.Framework/0.2.2": {},
+      "Mono.WebAssembly.Runtime/0.2.2": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "WebAssembly.Bindings/0.2.2": {
+        "runtime": {
+          "lib/netstandard2.0/WebAssembly.Bindings.dll": {
+            "assemblyVersion": "0.2.2.0",
+            "fileVersion": "0.2.2.0"
+          }
+        }
+      },
+      "WebAssembly.Net.Http/0.2.2": {
+        "dependencies": {
+          "WebAssembly.Bindings": "0.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebAssembly.Net.Http.dll": {
+            "assemblyVersion": "0.2.2.0",
+            "fileVersion": "0.2.2.0"
+          }
+        }
+      },
+      "WebAssembly.Net.WebSockets/0.2.2": {
+        "dependencies": {
+          "WebAssembly.Bindings": "0.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebAssembly.Net.WebSockets.dll": {
+            "assemblyVersion": "0.2.2.0",
+            "fileVersion": "0.2.2.0"
+          }
+        }
+      },
+      "Library/1.0.0": {
+        "runtime": {
+          "Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WasmApp1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Mono.WebAssembly.Build/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+WWqZTDoC82rwXhAEZuwbJNTuCGEtFHe4CgB6sjpoZi1cGn7IkHthwZ5F9/0qQWDX8oHFGTpzp33Qdqzl02Y5Q==",
+      "path": "mono.webassembly.build/0.2.2",
+      "hashPath": "mono.webassembly.build.0.2.2.nupkg.sha512"
+    },
+    "Mono.WebAssembly.Framework/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jrcvrcXvPwVyJ3gdGYVs/S4ZY/dJ+R7xIHOcSoJ35W5+4hG+tU0kMBbYU3CJlIfLsL3lBWL2XTFHSmUTqH0qlA==",
+      "path": "mono.webassembly.framework/0.2.2",
+      "hashPath": "mono.webassembly.framework.0.2.2.nupkg.sha512"
+    },
+    "Mono.WebAssembly.Runtime/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s4jsD7QGAOvVvIcRqHaFRhlvG3a3AF01iT4OCHvPWA1Ic3v2Z9bu8/cj4HbUkwsm/hJDxv4bzE6L+HoYIk398A==",
+      "path": "mono.webassembly.runtime/0.2.2",
+      "hashPath": "mono.webassembly.runtime.0.2.2.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "WebAssembly.Bindings/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vH58uldHMHj1DhCLpPdB0AZyvB7OJGCLKtdiXO31xJW3NWYo7ZMr1tHeEppGqiUgMih8A3k5HJ184D883OaCPQ==",
+      "path": "webassembly.bindings/0.2.2",
+      "hashPath": "webassembly.bindings.0.2.2.nupkg.sha512"
+    },
+    "WebAssembly.Net.Http/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nnWK04ubH5GoxXvN7bHudLAYaovLsNP++pJ6mF0tUwUPGIVg+jQ5FObkStWtHVIxaDglRlx1o4vkQc0UVICasg==",
+      "path": "webassembly.net.http/0.2.2",
+      "hashPath": "webassembly.net.http.0.2.2.nupkg.sha512"
+    },
+    "WebAssembly.Net.WebSockets/0.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x8ixpZ6trFh7Xs/oha9vNa4pxcAHJmXLQMVulK7HcRMfO6xc4qtB6a0+MZi/yNSGq2wMkAg1iTKM6Kr0EWa5vA==",
+      "path": "webassembly.net.websockets/0.2.2",
+      "hashPath": "webassembly.net.websockets.0.2.2.nupkg.sha512"
+    },
+    "Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
