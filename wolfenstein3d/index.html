@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <style type="text/css">
-        /*#viewport {
-            height: 480px;
-            width: 640px;
-        }*/
+        #viewport {
+            width: 50%;
+            height: auto;
+            image-rendering: pixelated;
+        }
     </style>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -22,11 +23,15 @@
         </p>
     </div>
 
-    <canvas id="viewport" width="160" height="120"></canvas>
+    <canvas id="viewport" width="304" height="152"></canvas>
 
     <p>
-        Controls: arrows up, down, left, right
+        Controls:
     </p>
+    <ul>
+        <li>Player movement: arrows up, down, left, right</li>
+        <li>Toggle fisheye correction (enabled by default): F</li>
+    </ul>
 
     <script type="text/javascript">
         var App = {
