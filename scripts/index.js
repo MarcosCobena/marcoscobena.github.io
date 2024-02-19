@@ -11,7 +11,7 @@ const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !
 var episodes = [];
 var items = [];
 const redirections = [];
-var converter = new showdown.Converter({ strikethrough: true, tables: true });
+var converter = new showdown.Converter({ strikethrough: true, tables: true, headerLevelStart: 2 });
 var homeFilename = "home";
 var resourceNotFoundFilename = "404";
 var hashtagUrlSeparator = "#/";
