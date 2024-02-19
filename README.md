@@ -1,5 +1,7 @@
 # A.m.e.d.i.o.
 
+*From <https://github.com/MarcosCobena/marcoscobena.github.io> to <https://marcoscobena.com>*
+
 This may be the number n blog engine I have written. It could start on around 2000 with PHP?, until I learned C# and all the rest were written in such. There is something magical in using your own stuff, maybe similar to wood-working. First versions were named Amelio, as a joke of the cartoon Marco whose mate was the monkey Amedio (it was years since I noticed Amelio was misspelled). I named this one Amedio as well by 2017 but, as soon as I noticed was not interested in distributing it for others, I removed that README and simply iterated it following my own joy.
 
 # How it is made
@@ -18,8 +20,8 @@ Let me try collecting everything currently supported:
 - two types of entries: items (pages) and blog posts
 - list of latests blog posts: both titles and full text
 - blog archive view by
-  - years and months
-  - tags
+    - years and months
+    - tags
 - RSS generation: this is the only piece written in C#, simply call `dotnet run --project .\RSS\RSS.csproj` at root and it will output feed.rss ready to publish
 - URL redirections
 
@@ -35,4 +37,4 @@ These are the features which I have started working on (see the features branche
 
 # Close-up
 
-My workmate Carnero told me he was writting his own blog engine from scratch, and it lifted my energy to write this post so, it is dedicated to him. It may serve for others as well, feel free to fork the repo and adapt it to your needs.
+My workmate [Carnero](https://carnero.net) told me he was writting his own blog engine from scratch, and it lifted my energy to write this post so, it is dedicated to him. It may serve for others as well, feel free to fork the repo and adapt it to your needs.
