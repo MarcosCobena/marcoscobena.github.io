@@ -39,6 +39,7 @@ addRedirection("juanma-y-marcos", "https://www.ivoox.com/podcast-aporreando-tecl
 
 // Posts —this' the order they'll appear listed
 
+addPost("Software público", "software-publico", "27/2/2024");
 addPost("README", "../README", "17/2/2024");
 addPost("Cómo desarrollar software", "como-desarrollar-software", "15/8/2023", ['es']);
 addPost("Frustated 2022 recap", "2022", "1/1/2023");
