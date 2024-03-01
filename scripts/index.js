@@ -80,6 +80,7 @@ async function entryPointAsync() {
     const path = window.location.href;
     const filename = getJustFilename(path);
     const anchor = getAnchor(path);
+    await loadMenuAsync();
 
     if (filename.length > 0) {
         const redirection = findIn(filename, redirections);
@@ -206,6 +207,13 @@ async function loadItemAsync(filename, anchor = null) {
     render(item, data, isBlogPost, anchor);
 }
 
+async function loadMenuAsync() {
+    const markDown = await fetchTextAsync('menu');
+    const html = converter.makeHtml(markDown);
+    const navElement = document.getElementsByTagName('nav')[0];
+    navElement.innerHTML = html;
+}
+
 async function pushHomeStateAndLoadItAsync() {
     pushState(homeFilename);
     await loadItemAsync(homeFilename);
@@ -227,14 +235,6 @@ function removeAnchor(filename) {
 }
 
 function render(item, markDown, isBlogPost, anchor) {
-    let isHome = item.filename == homeFilename;
-
-    if (isHome) {
-        $('#homeReturn').hide(0);
-    } else {
-        $('#homeReturn').show(0);
-    }
-
     showItem(item, markDown, isBlogPost);
 
     if (item.filename == podcastFilename) {
