@@ -1,15 +1,14 @@
+🍔 <a href="" onclick="return scrollBottom();">Menu</a>
+—
 *¡Hola!* 👋
-
-<a href="javascript:window.scrollTo(0, document.body.scrollHeight);">Menu</a>
+It is Marcos.
+I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
 
 <div id="posts-latest"></div>
 
 [More posts...](/?i=blog)
 
 <div class="center">~</div>
-
-**About**
-I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
 
 [**Blog**](/?i=blog) ([RSS](feed.rss)) [es](/?i=blog-es)
 

@@ -363,8 +363,8 @@ Creo que se puede arreglar recargando la página.`;
         });
 }
 
-function scrollUp() {
-    window.scrollTo(0, 0);
+function scrollBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
 
     return false;
 }
