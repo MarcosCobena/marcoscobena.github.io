@@ -34,6 +34,13 @@ These features are supported as well but I am not using them nowadays (however, 
 These are the features which I have started working on (see the features branches):
 - dark theme
 - test engine
+- navigation bar (side menu)
+
+# Import from other engines
+
+Because I needed them for my-self, I wrote the following exporters to Markdown:
+- [Medium](https://github.com/MarcosCobena/MediumExportToMarkdown)
+- [WordPress](https://github.com/MarcosCobena/WordPressExportToMarkdown)
 
 # Close-up
 
