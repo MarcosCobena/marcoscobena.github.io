@@ -28,8 +28,7 @@ I write software at [Plain Concepts](https://www.plainconcepts.com) for solving 
 [Screen template](/?i=screen-template)
 [Tools](/?i=tools)
 
-**Contact**
-[E-mail](mailto:MarcosCobena@outlook.com)
+[**Contact**](/?i=contact)
 [GitHub](https://github.com/MarcosCobena)
 [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
 <a rel="me" href="https://dotnet.social/@MarcosCobena">Mastodon</a>
