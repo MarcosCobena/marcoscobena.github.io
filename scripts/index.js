@@ -11,7 +11,6 @@ const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !
 var episodes = [];
 var items = [];
 const redirections = [];
-var converter = new showdown.Converter({ strikethrough: true, tables: true, headerLevelStart: 2 });
 var homeFilename = "home";
 var resourceNotFoundFilename = "404";
 var hashtagUrlSeparator = "#/";
@@ -203,7 +202,7 @@ async function loadItemAsync(filename, anchor = null) {
     
     const data = await fetchTextAsync(filename);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
-    render(item, data, isBlogPost, anchor);
+    show(item, data, isBlogPost, anchor);
 }
 
 async function pushHomeStateAndLoadItAsync() {
@@ -226,28 +225,9 @@ function removeAnchor(filename) {
     return result;
 }
 
-function render(item, markDown, isBlogPost, anchor) {
-    let isHome = item.filename == homeFilename;
-
-    if (isHome) {
-        $('#homeReturn').hide(0);
-    } else {
-        $('#homeReturn').show(0);
-    }
-
-    showItem(item, markDown, isBlogPost);
-
-    if (item.filename == podcastFilename) {
-        renderPodcast();
-    }
-
-    if (anchor != null) {
-        location.hash = anchor;
-    }
-}
-
 function renderEpisode(item, markDown) {
     let src = `items/documents/${item.audioFilename}`;
+    const converter = new showdown.Converter({ strikethrough: true, tables: true });
     let html = converter.makeHtml(markDown);
     let body = `<h3>${item.title} - ${item.date}</h3>
 <audio controls loop>
@@ -260,35 +240,26 @@ ${html}`;
     return body;
 }
 
-function renderItem(item, markDown, isBlogPost) {
+function renderItem(item, markDown, isBlogPost, hasItemsInside) {
     const styleClass = isBlogPost
         ? ''
         : 'hidden';
+    const topHeaderLevel = hasItemsInside
+        ? 2
+        : 1;
+    const converter = new showdown.Converter(
+        { strikethrough: true, tables: true, headerLevelStart: topHeaderLevel + 1 });
     let result = `<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
     
 ${converter.makeHtml(markDown)}`;
 
     if (item.title != '') {
-        result = `<h1 id="title"><a href="?i=${item.filename}">${item.title}</a></h1>
+        result = `<h${topHeaderLevel} id="title"><a href="?i=${item.filename}">${item.title}</a></h${topHeaderLevel}>
 
 ${result}`;
     }
 
     return result;
-}
-
-async function renderLatestsPostsAsync(selector) {
-    const posts = items.filter(item => item.tags.some(tag => tag == blogTag));
-    let html = '';
-
-    for (let i = 0; i < 3; i++) {
-        const post = posts[i];
-        const markDown = await fetchTextAsync(post.filename);
-        html += renderItem(post, markDown, /* isBlogPost: */ true);
-    }
-    
-    $(selector).empty();
-    $(selector).append(html);
 }
 
 function renderListItems(itemsPerYearMap, isMoreRequested, length) {
@@ -330,7 +301,77 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
     return html;
 }
 
-function renderPodcast() {
+function scrollBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+
+    return false;
+}
+
+function show(item, markDown, isBlogPost, anchor) {
+    let isHome = item.filename == homeFilename;
+
+    if (isHome) {
+        $('#homeReturn').hide(0);
+    } else {
+        $('#homeReturn').show(0);
+    }
+
+    showItem(item, markDown, isBlogPost);
+
+    if (item.filename == podcastFilename) {
+        showPodcast();
+    }
+
+    if (anchor != null) {
+        location.hash = anchor;
+    }
+}
+
+async function showEveryPostAsync(selector, tag) {
+    let posts = items.filter(item => item.tags.some(itemTag => itemTag == blogTag));
+
+    if (tag != undefined) {
+        posts = posts.filter(item => item.tags.some(itemTag => itemTag == tag));
+    }
+
+    let html = '';
+
+    for (let i = 0; i < posts.length; i++) {
+        const post = posts[i];
+        const markDown = await fetchTextAsync(post.filename);
+        html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
+    }
+    
+    $(selector).empty();
+    $(selector).append(html);
+}
+
+function showItem(item, markDown, isBlogPost) {
+    document.title = `${item.title} — ${siteTitle}`;
+    const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false);
+    const bodyElement = document.getElementById('actualBody');
+    bodyElement.innerHTML = body;
+    const itemScriptElement = document.createElement('script');
+    itemScriptElement.src = `items/${item.filename}.js`;
+    itemScriptElement.type = "text/javascript";
+    bodyElement.appendChild(itemScriptElement);
+}
+
+async function showLatestsPostsAsync(selector) {
+    const posts = items.filter(item => item.tags.some(tag => tag == blogTag));
+    let html = '';
+
+    for (let i = 0; i < 3; i++) {
+        const post = posts[i];
+        const markDown = await fetchTextAsync(post.filename);
+        html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
+    }
+    
+    $(selector).empty();
+    $(selector).append(html);
+}
+
+function showPodcast() {
     let promises = [];
 
     episodes.forEach(item => {
@@ -361,23 +402,6 @@ Creo que se puede arreglar recargando la página.`;
             let body = bodies.join('\n');
             $('#episodes').html(body);
         });
-}
-
-function scrollBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-
-    return false;
-}
-
-function showItem(item, markDown, isBlogPost) {
-    document.title = `${item.title} — ${siteTitle}`;
-    const body = renderItem(item, markDown, isBlogPost);
-    const bodyElement = document.getElementById('actualBody');
-    bodyElement.innerHTML = body;
-    const itemScriptElement = document.createElement('script');
-    itemScriptElement.src = `items/${item.filename}.js`;
-    itemScriptElement.type = "text/javascript";
-    bodyElement.appendChild(itemScriptElement);
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());

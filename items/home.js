@@ -1,1 +1,1 @@
-renderLatestsPostsAsync('#posts-latest');
+showLatestsPostsAsync('#posts-latest');
