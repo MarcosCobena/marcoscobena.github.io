@@ -40,7 +40,7 @@ addRedirection("juanma-y-marcos", "https://www.ivoox.com/podcast-aporreando-tecl
 // Posts —this' the order they'll appear listed
 
 addPost("Wolfenstein 3D", "wolfenstein3d", "5/3/2024", ['portfolio']);
-addPost("Software público", "software-publico", "27/2/2024");
+addPost("Software público", "software-publico", "27/2/2024", ['es']);
 addPost("README", "../README", "17/2/2024");
 addPost("Portfolio -2023", "portfolio-2023", "20/12/2023", ['portfolio']);
 addPost("Cómo desarrollar software", "como-desarrollar-software", "15/8/2023", ['es']);
