@@ -12,7 +12,7 @@ I like Markdown, JavaScript and running stuff on browsers (client side), so what
 - transformed into HTML, and
 - dinamically injected into the index.html
 
-That is all. I learned this approach by reading the source code of www.darkwater.info a long time ago. Every item/post is listed in the form of a function call at items.js, and index.js makes the work from above. You can see items.js as a database, created locally in your browser, which is queried on demand.
+That is all. I learned this approach by reading the source code of [www.darkwater.info](https://web.archive.org/web/20020212122136/http://www.darkwater.info/) a long time ago. Every item/post is listed in the form of a function call at items.js, and index.js makes the work from above. You can see items.js as a database, created locally in your browser, which is queried on demand.
 
 # Features
 
