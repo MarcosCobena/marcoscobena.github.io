@@ -23,11 +23,13 @@ Let me try collecting everything currently supported:
     - years and months
     - tags
 - RSS generation: this is the only piece written in C#, simply call `dotnet run --project .\RSS\RSS.csproj` at root and it will output feed.rss ready to publish
+    - Since March 8th, 2024, there is a custom workflow which automates this while deploying the web site, so there is no need to track feed.rss in the repository anymore
 - URL redirections
 
 These features are supported as well but I am not using them nowadays (however, you can navigate the repo back in time and you will find some examples):
 - podcast: in the form of a third type of entry, you can add episodes along with their audio files
 - list of latests Mastodon posts
+- scripts to speed up adding new posts and publishing them (see tools/)
 
 # Work in progress
 
