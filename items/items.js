@@ -13,15 +13,9 @@ addItem("Blog", "blog", "5/2/2021");
 addItem("Blog", "blog-es", "5/2/2021");
 addItem("Conferences", "conferences", "19/12/2023");
 addItem("Contact", "contact", "5/3/2024");
-addItem("FPV Drones", "drones", "8/5/2018");
 addItem("Git", "git", "8/6/2020");
-addItem("Key-bindings", "key-bindings", "24/5/2018");
 addItem("", "home", "15/1/2024");
 addItem("Portfolio", "portfolio", "20/12/2023");
-addItem("Questions", "questions", "7/5/2018");
-addItem("Recipes", "recipes", "14/6/2018");
-addItem("Screen template", "screen-template", "6/7/2018");
-addItem("Tools", "tools", "20/1/2021");
 //addItem("DEBUG", "debug", "1/1/1970");
 
 addRedirection("juanma-y-marcos", "https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html");
