@@ -12,12 +12,12 @@ addItem("Audios", "audios", "28/5/2018");
 addItem("Blog", "blog", "5/2/2021");
 addItem("Blog", "blog-es", "5/2/2021");
 addItem("Conferences", "conferences", "19/12/2023");
-addItem("Contact", "contact", "5/3/2024");
 addItem("Git", "git", "8/6/2020");
 addItem("", "home", "15/1/2024");
 addItem("Portfolio", "portfolio", "20/12/2023");
 //addItem("DEBUG", "debug", "1/1/1970");
 
+addRedirection("contact", "/?i=home");
 addRedirection("juanma-y-marcos", "https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html");
 
 // addEpisode(

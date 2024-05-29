@@ -22,7 +22,8 @@ I write software at [Plain Concepts](https://www.plainconcepts.com) for solving 
 [GoTo Studio](goto-studio)
 [Portfolio](/?i=portfolio)
 
-[**Contact**](/?i=contact)
+**Contact**
+[E-mail](mailto:MarcosCobena@outlook.com)
 [GitHub](https://github.com/MarcosCobena)
 [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
 <a rel="me" href="https://dotnet.social/@MarcosCobena">Mastodon</a>
