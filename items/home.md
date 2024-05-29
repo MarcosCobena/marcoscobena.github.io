@@ -33,3 +33,5 @@ I write software at [Plain Concepts](https://www.plainconcepts.com) for solving 
 [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
 <a rel="me" href="https://dotnet.social/@MarcosCobena">Mastodon</a>
 [NuGet](https://www.nuget.org/profiles/MarcosCobena)
+
+*<div class="center">The world just makes sense forward...</div>*
