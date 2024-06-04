@@ -13,7 +13,7 @@ addItem("Blog", "blog", "5/2/2021");
 addItem("Blog", "blog-es", "5/2/2021");
 addItem("Conferences", "conferences", "19/12/2023");
 addItem("Git", "git", "8/6/2020");
-addItem("", "home", "15/1/2024");
+addItem("", "home", "4/6/2024");
 addItem("Portfolio", "portfolio", "20/12/2023");
 //addItem("DEBUG", "debug", "1/1/1970");
 

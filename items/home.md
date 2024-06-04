@@ -6,21 +6,22 @@
 
 <div class="center">~</div>
 
-**About**
-It is Marcos.
-I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
+**Blog**
+([RSS](feed.rss))
+[Archive](/?i=blog)
+Tags:
+[es](/?i=blog-es "Posts en español")
 
-[**Blog**](/?i=blog) ([RSS](feed.rss)) [es](/?i=blog-es)
-
-**Hobbies**
+**Pages**
 [Audios](/?i=audios)
-[Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
-
-**Software Development**
 [Conferences](/?i=conferences)
 [Git](/?i=git)
 [GoTo Studio](goto-studio)
+[Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 [Portfolio](/?i=portfolio)
+
+**About**
+I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
 
 **Contact**
 [E-mail](mailto:MarcosCobena@outlook.com)
