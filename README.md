@@ -34,7 +34,6 @@ These features are supported as well but I am not using them nowadays (however, 
 # Work in progress
 
 These are the features which I have started working on (see the features branches):
-- dark theme
 - test engine
 - navigation bar (side menu)
 
