@@ -1,4 +1,4 @@
-🍔 <a href="" onclick="return scrollBottom();">Menu</a>
+*I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.com) for solving problems [to people](/?i=conferences).*
 
 <div id="posts-latest"></div>
 
@@ -19,9 +19,6 @@ Tags:
 [GoTo Studio](goto-studio)
 [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 [Portfolio](/?i=portfolio)
-
-**About**
-I write software at [Plain Concepts](https://www.plainconcepts.com) for solving problems to people.
 
 **Contact**
 [E-mail](mailto:MarcosCobena@outlook.com)
