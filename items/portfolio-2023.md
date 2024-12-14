@@ -39,12 +39,11 @@ On 2022 I have been back on track, drawing static maps and exporting georeferenc
 
 # Project Paidia
 
-<iframe height="400" src="https://ms-athens-playground-dev-egl-aot.azurewebsites.net/" style="display: block; margin: 0 auto;" width="640"></iframe>
+![](items/images/project-paidia.gif)
 
 This small game bundles some interesting technologies: an ONNX Neural Network running on JavaScript, consumed by the game it-self on Wave Engine.
 I applied Test-Driven Development to figure out the game logic, built on top of [Zalo's state machine implementation](http://zalods.blogspot.com/2018/11/simple-yet-powerful-fsm-implementation.html).
 My friend, and boss, Javi Cantón invited me to talk a little bit about this project at [Singularity 2020's Research Team session](https://www.youtube.com/watch?v=Qz4sEGv1PUQ).
-Tap above to play!
 
 |            |                                                                   |
 | ---------- | ----------------------------------------------------------------- |
