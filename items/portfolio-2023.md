@@ -106,6 +106,20 @@ actual timeline control, which was made entirely through Android's drawing API.
 | Date       | February-May 2019                                        |
 | More info? | [https://mapalsoftware.com/](https://mapalsoftware.com/) |
 
+# GoTo Studio
+
+![](items/images/goto-studio.png)
+
+GoTo is my side project for learning about compilers and Virtual Machines. I wrote about it [here](/?i=goto). As soon as I had something working, why not?, I created a small IDE with Xamarin.Forms and Ooui: [GoTo Studio](/goto-studio). I dreamed with nowadays students using such in their classes :-)
+
+|            |                                           |
+| ---------- | ----------------------------------------- |
+| Language   | C# (.NET)                                 |
+| Frameworks | Xamarin.Forms, Ooui                       |
+| Platforms  | WebAssembly                               |
+| Date       | Late 2018                                 |
+| More info? | <https://github.com/MarcosCobena/GoTo>    |
+
 # Tailwind Traders
 
 ![](items/images/TailwindTraders.png)

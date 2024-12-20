@@ -16,7 +16,6 @@ Tags:
 [Audios](/?i=audios)
 [Conferences](/?i=conferences)
 [Git](/?i=git)
-[GoTo Studio](goto-studio)
 [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 [Portfolio](/?i=portfolio)
 
