@@ -14,7 +14,7 @@ addItem("Blog", "blog-es", "5/2/2021");
 addItem("Conferences", "conferences", "19/12/2023");
 addItem("Git", "git", "8/6/2020");
 addItem("Marcos Cobeña Morián", "home", "14/12/2024");
-addItem("Portfolio", "portfolio", "14/12/2024");
+addItem("Portfolio", "portfolio", "23/12/2024");
 //addItem("DEBUG", "debug", "1/1/1970");
 
 addRedirection("contact", "/?i=home");
