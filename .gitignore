@@ -3,6 +3,7 @@
 *.pdb
 *.user
 *.userprefs
+feed.rss
 
 .mfractor/
 .vs/
