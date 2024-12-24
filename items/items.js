@@ -33,6 +33,7 @@ addRedirection('juanma-y-marcos', 'https://www.ivoox.com/podcast-aporreando-tecl
 
 // Posts —this' the order they'll appear listed
 
+addPost('Jint', 'jint', '24/12/2024');
 addPost('Wolfenstein 3D', 'wolfenstein3d', '5/3/2024', ['portfolio']);
 addPost('Software público', 'software-publico', '27/2/2024', ['es']);
 addPost('README', '../README', '17/2/2024');
