@@ -7,15 +7,14 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.ServiceModel.Syndication;
-using System.Text.RegularExpressions;
 using System.Xml;
 using HeyRed.MarkdownSharp;
+using Jint;
 
 namespace RSS
 {
     class Program
     {
-        const string AddItemChunk = "addPost(";
         const int AmountOfItemsForRss = 10;
         const string DateParseFormat = "d/M/yyyy";
         const string Email = "marcoscobena@outlook.com";
@@ -52,42 +51,26 @@ namespace RSS
         static IEnumerable<ItemModel> ReadLatestItems()
         {
             Console.Write("Reading items... ");
-
             var items = new List<ItemModel>();
-
-            using (var itemsFile = File.OpenText(ItemsJavaScriptPath))
-            {
-                var line = itemsFile.ReadLine();
-                var regex = new Regex("\"[^\"]+\"", RegexOptions.Compiled);
-
-                while (line != null)
+            var engine = new Engine()
+                .SetValue("addPost", (string title, string filename, string date, string[] tags) => 
                 {
-                    if (!line.StartsWith(AddItemChunk, StringComparison.InvariantCulture))
-                    {
-                        line = itemsFile.ReadLine();
-                        continue;
-                    }
-
-                    // addPost("How to centralize font-related styling", "2018-3-15", "16/3/2018", ['en']);
-                    var matches = regex.Matches(line);
                     var item = new ItemModel
                     {
-                        Title = matches[0].Value.Trim('"'),
-                        MarkdownFilename = matches[1].Value.Trim('"'),
-                        Date = ParseDate(matches[2].Value.Trim('"')),
+                        Title = title,
+                        MarkdownFilename = filename,
+                        Date = ParseDate(date),
                     };
                     items.Add(item);
-
-                    line = itemsFile.ReadLine();
-                }
-            }
-
+                })
+                .SetValue("addItem", (string _, string __, string ___) => { /*Intentionally empty*/ })
+                .SetValue("addRedirection", (string _, string __) => { /*Intentionally empty*/ });
+            engine.Execute(File.ReadAllText(ItemsJavaScriptPath));
             var latestItems = items
                 .OrderByDescending(item => item.Date)
                 .Take(AmountOfItemsForRss);
             var totalItems = items.Count();
             var latestTotalItems = latestItems.Count();
-
             Console.WriteLine($"done! Top latest {latestTotalItems} / {totalItems}");
 
             return latestItems;
