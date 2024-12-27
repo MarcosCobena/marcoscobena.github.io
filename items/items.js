@@ -19,6 +19,8 @@ addItem('Portfolio', 'portfolio', '23/12/2024');
 
 addRedirection('contact', '/?i=home');
 addRedirection('juanma-y-marcos', 'https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html');
+addRedirection('abanico-a-few-hours-with-xamarin-forms-and-skiasharp', '/?i=abanico');
+addRedirection('portfolio-2023', '/?i=portfolio-2018-2023');
 
 // addEpisode(
 //     title, <- idem
@@ -37,7 +39,7 @@ addPost('Jint', 'jint', '24/12/2024');
 addPost('Wolfenstein 3D', 'wolfenstein3d', '5/3/2024', ['portfolio']);
 addPost('Software público', 'software-publico', '27/2/2024', ['es']);
 addPost('README', '../README', '17/2/2024');
-addPost('Portfolio -2023', 'portfolio-2023', '20/12/2023', ['portfolio']);
+addPost('Portfolio 2018-2023', 'portfolio-2018-2023', '20/12/2023', ['portfolio']);
 addPost('Cómo desarrollar software', 'como-desarrollar-software', '15/8/2023', ['es']);
 addPost('Frustated 2022 recap', '2022', '1/1/2023');
 addPost('Por una git-arra con menos cuerdas', 'git-interactively-rebase', '23/9/2022', ['es']);
@@ -131,7 +133,7 @@ addPost('“Design should worry us more than code” #Xamarin', '-Design-should-
 addPost('Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin', 'Senseful-StyleCop-for-Visual-Studio--Mac-and-Windows--Xamarin-e02fdf15d039', '11/10/2017');
 addPost('The #Android’s FAB which liked to follow BottomBar #Xamarin', 'The--Android-s-FAB-which-liked-to-follow-BottomBar--Xamarin-57a805f646', '4/10/2017');
 addPost('The refreshes bug and i18n', 'The-refreshes-bug-and-i18n-3d9ad2a9421b', '25/9/2017');
-addPost('Abanico, a few hours with Xamarin.Forms and SkiaSharp', 'abanico-a-few-hours-with-xamarin-forms-and-skiasharp', '21/6/2017');
+addPost('Abanico', 'abanico', '21/6/2017', ['portfolio']);
 addPost('Reflexiones', 'reflexiones', '21/3/2017', ['es']);
 addPost('Qué puedo hacer / What can I do', 'que-puedo-hacer', '14/3/2017', ['es']);
 addPost('Wrapping views in Xamarin.iOS', 'wrapping-views-in-xamarin-ios', '22/12/2016');
