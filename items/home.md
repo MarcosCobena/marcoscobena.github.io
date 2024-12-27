@@ -2,7 +2,7 @@
 
 <div id="posts-latest"></div>
 
-[More posts...](/?i=blog)
+# [More posts...](/?i=blog)
 
 <div class="center">~</div>
 
