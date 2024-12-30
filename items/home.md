@@ -26,4 +26,4 @@ Tags:
 <a rel="me" href="https://dotnet.social/@MarcosCobena">Mastodon</a>
 [NuGet](https://www.nuget.org/profiles/MarcosCobena)
 
-*<div class="center">The world just makes sense forward...</div>*
+*[<div class="right">The world just makes sense forward...</div>](https://joseantoniocobena.com)*
