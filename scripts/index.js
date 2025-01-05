@@ -5,7 +5,6 @@
 
 const blogTag = 'blog';
 const podcastFilename = 'juanma-y-marcos';
-const siteTitle = 'Marcos Cobeña Morián';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 var episodes = [];
@@ -347,7 +346,7 @@ async function showEveryPostAsync(selector, tag) {
 }
 
 function showItem(item, markDown, isBlogPost) {
-    document.title = `${item.title} — ${siteTitle}`;
+    document.title = item.title;
     const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false);
     const bodyElement = document.getElementById('actualBody');
     bodyElement.innerHTML = body;
