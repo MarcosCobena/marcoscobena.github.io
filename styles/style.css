@@ -10,8 +10,8 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --a-color: #FF0;
-        --a-visited-color: #FF8;
+        --a-color: #0E0;
+        --a-visited-color: #8E8;
         --body-background-color: #111;
         --body-color: #EEE;
         --table-tr-background-color: #333;
