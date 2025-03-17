@@ -65,5 +65,4 @@ Cabría también la posibilidad de que la comunicación no ocurriese solo de la 
 De forma intrínseca a la propuesta, y en el contexto de una situación económica complicada en el país, la decisión de contemplar las ideas aquí expuestas, o la discusión que estas podrían generar, provocaría un revulsivo en la industria de la tauromaquia, tanto en la fabricación de los útiles, como en la digitalización de las plazas, pudiendo ser un punto de partida hacia el consenso que motivó este documento, pero también con ojos al emprendimiento y creación de puestos de trabajo.
 
 Marcos Cobeña Morián  
-[_hello@marcoscobena.com_](mailto:hello@marcoscobena.com)_  
-_Sevilla (Andalucía, España), 15 de agosto de 2016
+Sevilla (Andalucía, España), 15 de agosto de 2016

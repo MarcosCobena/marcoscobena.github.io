@@ -158,7 +158,7 @@ Two days ago I started writing a small interpreter —I really like to call it a
 
 To assure programs compiled into IL and run by .NET CLR have the same results as those interpreted by its own VM I made some small changes into the Unit Tests, where the same set passes —and actually pass in green— for both.
 
-You can now use [GoTo Studio](https://marcoscobena.com/goto-studio/) without worry on leaving it useless :-)
+You can now use [GoTo Studio](/goto-studio/) without worry on leaving it useless :-)
 
 #### Conclusions
 

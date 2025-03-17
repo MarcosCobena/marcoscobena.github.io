@@ -11,7 +11,7 @@ In order to close the circle of love, and promote the app, we'll send a beautifu
 	<li>English: <a href="http://tinyurl.com/GoodMorningValentinesDay" target="_blank">http://tinyurl.com/GoodMorningValentinesDay</a></li>
 	<li>Spanish: <a href="http://tinyurl.com/BuenosDiasSanValentin" target="_blank">http://tinyurl.com/BuenosDiasSanValentin</a></li>
 </ul>
-I went two weeks ago to watch <a href="http://www.imdb.com/title/tt2080374/">Steve Jobs</a>, and noticed what we all should know but maybe tend to forget easily: <em>love is the underlying engine in our lives</em>. Elisa is mine, and she deserves some credits here as, <a href="http://marcoscobena.com/2015/06/08/my-first-app-published-buenos-dias/" target="_blank">I stated with the other app</a>, she's the reason for being back again. I've made it to wish here "buenos días" (good morning) everyday.
+I went two weeks ago to watch <a href="http://www.imdb.com/title/tt2080374/">Steve Jobs</a>, and noticed what we all should know but maybe tend to forget easily: <em>love is the underlying engine in our lives</em>. Elisa is mine, and she deserves some credits here as, <a href="/2015/06/08/my-first-app-published-buenos-dias/" target="_blank">I stated with the other app</a>, she's the reason for being back again. I've made it to wish here "buenos días" (good morning) everyday.
 
 And, if you can't wait for Sunday to be here, can already go and <a href="https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro">grab the app from Play Store</a>.
 

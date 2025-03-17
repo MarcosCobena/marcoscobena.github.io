@@ -23,7 +23,7 @@ namespace RSS
         const string FullName = "Marcos Cobeña Morián";
         const string ItemFilenamePathFormat = "items/{0}.md";
         const string ItemsJavaScriptPath = "items/items.js";
-        const string Link = "https://marcoscobena.com";
+        const string Link = "https://marcoscobena.github.io";
 
         static void Main(string[] args)
         {

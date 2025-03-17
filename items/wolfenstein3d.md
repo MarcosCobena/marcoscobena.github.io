@@ -7,7 +7,7 @@ With the main help of Fabien's explanation of the ray-casting technique, I went 
 After a failed attempt, and a gap of 4 years, I finally got it!
 Thank you Fabien for such a wonderfull book.
 The room where you can move is our current storey at Plain Concepts Sevilla :-)
-Click [here](https://marcoscobena.com/wolfenstein3d) to play!
+Click [here](/wolfenstein3d) to play!
 
 |            |                                           |
 | ---------- | ----------------------------------------- |

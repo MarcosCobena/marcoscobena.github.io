@@ -23,7 +23,7 @@ It looks like Bait and Switch can’t be done from VS, so will go back to nuspec
 Bank holiday!
 
 **Thursday, 7th**  
-Bank holiday too, but have spent some time updating my [web](http://marcoscobena.com/#/home) and [Now](http://marcoscobena.com/#/now) page.
+Bank holiday too, but have spent some time updating my [web](/#/home) and [Now](/#/now) page.
 
 I’ve kept with my determination to make NuGetizer-3000 work for my little project, and decided to clone [ApiIntersect](https://github.com/xamarin/ApiInteresect) repo to debug the exception I got. Going through the code I’ve finally understood why Bait-and-switch doesn’t work in my scenario: it can’t work when the platform implementation inherits a class which’s out of the intersection with a .NET client profile. However, ApiIntersect wasn’t handling this fine –at least giving a hint on the issue–, so I’ll make a PR to improve this for others.
 

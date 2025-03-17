@@ -41,7 +41,7 @@ $(window).on('popstate', async function (event) {
             // User manually enters a different path
             await entryPointAsync();
         } else {
-            // User taps back to root (i.e. https://marcoscobena.com)
+            // User taps back to root (i.e. /)
             await pushHomeStateAndLoadItAsync();
         }
     }

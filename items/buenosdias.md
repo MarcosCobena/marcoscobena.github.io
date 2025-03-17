@@ -16,7 +16,7 @@
 
 <em>Abajo puedes encontrar la versión en español.</em>
 
-<strong>Update Feb. 2016:</strong> We've <a href="http://marcoscobena.com/2016/02/11/new-app-buenos-dias-aro/">rewritten the app from scratch</a>. :-)
+<strong>Update Feb. 2016:</strong> We've <a href="/2016/02/11/new-app-buenos-dias-aro/">rewritten the app from scratch</a>. :-)
 
 ¡Buenos días! is a <a href="http://www.aroideas.com/buenos-dias/">beautiful initiative</a>, where <a href="http://www.aroideas.com/contact/">Álvaro Reinoso</a> (ARO) takes a picture of the reality around him every day, and draws up to transform it into something very valuable.
 
@@ -29,8 +29,8 @@ Because, in the end, what we both pursue is to make you too happy every morning.
 I hope you enjoy it as much as me doing it!
 
 PS: Hey, are you a developer? Take a look at the <a href="https://github.com/MarcosCobena/BuenosDias" target="_blank">GitHub repo.</a> then! (Such corresponds to the initial Xamarin.Forms POC I made.)
-<p style="text-align:right;">-<a href="http://marcoscobena.com/contact/">Marcos Cobeña Morián</a></p>
-<em><strong>Actualización feb. 2016:</strong> Hemos <a href="http://marcoscobena.com/2016/02/11/new-app-buenos-dias-aro/">reescrito la app desde cero</a>. :-)</em>
+<p style="text-align:right;">-<a href="/contact/">Marcos Cobeña Morián</a></p>
+<em><strong>Actualización feb. 2016:</strong> Hemos <a href="/2016/02/11/new-app-buenos-dias-aro/">reescrito la app desde cero</a>. :-)</em>
 
 <em>¡Buenos días! es una <a href="http://www.aroideas.com/buenos-dias/">iniciativa preciosa</a>, donde <a href="http://www.aroideas.com/contact/">Álvaro Reinoso</a> (ARO) hace una fotografía de la realidad que le rodea cada día, y dibuja encima para transformarla en algo con mucho valor.</em>
 
@@ -43,4 +43,4 @@ PS: Hey, are you a developer? Take a look at the <a href="https://github.com/Mar
 <em>¡Espero que la disfrutes tanto como yo haciéndola!</em>
 
 <em>PD: Ey, ¿eres desarrollador? ¡Echa un vistazo al <a href="https://github.com/MarcosCobena/BuenosDias" target="_blank">repo. en GitHub</a> entonces! (Éste corresponde al POC inicial con Xamarin.Forms que hice.)</em>
-<p style="text-align:right;">-<a href="http://marcoscobena.com/contact/">Marcos Cobeña Morián</a></p>
+<p style="text-align:right;">-<a href="/contact/">Marcos Cobeña Morián</a></p>

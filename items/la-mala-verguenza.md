@@ -1,6 +1,6 @@
 *(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
 
-Con los años he descubierto un patrón curioso que es súper potente unido al "<a href="http://marcoscobena.com/2016/06/05/el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer/">ir al mínimo</a>" de la semana pasada: algunas personas que triunfan, que les va bien, habían perdido antes la vergüenza. No la vergüenza buena de la educación, sino la mala, la "freno de mano".
+Con los años he descubierto un patrón curioso que es súper potente unido al "<a href="/2016/06/05/el-valor-de-ir-al-minimo-con-aquello-que-suenas-sin-querer/">ir al mínimo</a>" de la semana pasada: algunas personas que triunfan, que les va bien, habían perdido antes la vergüenza. No la vergüenza buena de la educación, sino la mala, la "freno de mano".
 
 Desde chicos aprendemos que el sacrificio, en el tiempo, trae recompensa. Si estudias mucho tendrás buenas notas, si tienes buenas notas podrás elegir mejor qué hacer con 18 años (y las ideas claras, por supuesto), si decides ir a la Universidad y estudias mucho tendrás un buen trabajo, etc. Todo está ligado al sacrificio previo. Que no está mal ojo, pero falta algo. Conozco a personas, empezando por mí, que se sacrifican en exceso pero aún así les falta algo.
 

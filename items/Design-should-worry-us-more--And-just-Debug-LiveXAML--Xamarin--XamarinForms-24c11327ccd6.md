@@ -6,7 +6,7 @@ Past Tuesday I spent a talk at Madrid on the mindset change have experienced las
 
 I’m sorry because it’s in pure Spanish (with some Andalusian), but it may be easy to follow up:
 
-If you see the practice exercise where give out paper to everyone, it’s basically the template I made back in February and which nowadays use to implement apps. You can find it [here](http://marcoscobena.com/#/app-screen-creation-template).
+If you see the practice exercise where give out paper to everyone, it’s basically the template I made back in February and which nowadays use to implement apps. You can find it [here](/#/app-screen-creation-template).
 
 ![](https://cdn-images-1.medium.com/max/800/1*_Kh8TzABRb5lAqAz69Ftnw.jpeg)  
 Photo by [Alice Achterhof](https://unsplash.com/photos/FwF_fKj5tBo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)Taking advantage of going to Madrid I spent Tuesday and Wednesday mornings working at Google Campus. I thought there could be any issue –slow Wi-Fi, no free plug-ins, no empty space at all, etc.; however, everything went smooth and would definitely work there again for 1 or 2 days –no more because of my back, I thank any elaborated chair which cares of it.

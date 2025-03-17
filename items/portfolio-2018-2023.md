@@ -60,7 +60,7 @@ My friend, and boss, Javi Cantón invited me to talk a little bit about this pro
 Our first public product/experiment with Wave Engine Web was this glTF viewer.
 This time, I worked alone on it with close support from my mates focused on the engine's core.
 Its most difficult task was to decrease the model loading time, where textures were taking too much —order of minutes.
-I wrote about how we overcame that, among other things, [here](https://marcoscobena.com/?i=wave-engines-on-line-gltf-viewer).
+I wrote about how we overcame that, among other things, [here](/?i=wave-engines-on-line-gltf-viewer).
 
 |            |                                         |
 | ---------- | --------------------------------------- |

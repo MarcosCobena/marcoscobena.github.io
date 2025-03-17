@@ -1,6 +1,6 @@
 # A.m.e.d.i.o.
 
-*From <https://github.com/MarcosCobena/marcoscobena.github.io> to <https://marcoscobena.com>*
+*From <https://github.com/MarcosCobena/marcoscobena.github.io> to <https://marcoscobena.github.io>*
 
 This may be the number n blog engine I have written. It could start on around 2000 with PHP?, until I learned C# and all the rest were written in such. There is something magical in using your own stuff, maybe similar to wood-working. First versions were named Amelio, as a joke of the cartoon Marco whose mate was the monkey Amedio (it was years since I noticed Amelio was misspelled). I named this one Amedio as well by 2017 but, as soon as I noticed was not interested in distributing it for others, I removed that README and simply iterated it following my own joy.
 
