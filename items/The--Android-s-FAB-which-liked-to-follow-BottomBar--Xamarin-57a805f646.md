@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/#/contact) me if there's anything wrong with it. Thanks in advance)*
 
 ### The #Android’s FAB which liked to follow BottomBar #Xamarin
 

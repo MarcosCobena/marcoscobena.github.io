@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/#/contact) me if there's anything wrong with it. Thanks in advance)*
 
 ### Thu 5: Analysing an app written by others
 

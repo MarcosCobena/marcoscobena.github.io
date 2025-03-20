@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/#/contact) me if there's anything wrong with it. Thanks in advance)*
 
 ### XAML things, merging RESX and 10.0.2.2 #XamarinForms
 

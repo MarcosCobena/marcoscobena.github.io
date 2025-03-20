@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](#/contact) me if there's anything wrong with it. Thanks in advance)*
+*(This post was imported, please [contact](/#/contact) me if there's anything wrong with it. Thanks in advance)*
 
 ### Tue 3: Multiple instances of the same ViewModel
 
