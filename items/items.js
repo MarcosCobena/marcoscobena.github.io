@@ -35,6 +35,7 @@ addRedirection('portfolio-2023', '/?i=portfolio-2018-2023');
 
 // Posts —this' the order they'll appear listed
 
+addPost('PointNet', 'pointnet', '21/3/2025', ['portfolio']);
 addPost('Domain', 'domain', '19/3/2025');
 addPost('Flow', 'flow', '27/1/2025');
 addPost('Jint', 'jint', '24/12/2024');
