@@ -8,11 +8,9 @@
 // Items —it doesn't mind the order how they're added
 
 addItem('404 Not Found', '404', '29/8/2018');
-addItem('Audios', 'audios', '28/5/2018');
 addItem('Blog', 'blog', '5/2/2021');
 addItem('Blog', 'blog-es', '5/2/2021');
 addItem('Conferences', 'conferences', '19/12/2023');
-addItem('Git', 'git', '8/6/2020');
 addItem('Marcos Cobeña Morián', 'home', '14/12/2024');
 addItem('Portfolio', 'portfolio', '23/12/2024');
 //addItem('DEBUG', 'debug', '1/1/1970');
@@ -50,6 +48,7 @@ addPost('Por una git-arra con menos cuerdas', 'git-interactively-rebase', '23/9/
 addPost('Haz tests', 'haz-tests', '19/5/2021', ['es']);
 addPost('Design follows logic', 'design-follows-logic', '16/2/2021');
 addPost('Creativity, Inc.', 'creativity-inc', '8/10/2020');
+addPost('Git', 'git', '8/6/2020');
 addPost('La solución al reto: división en GOTO', 'la-solucion-al-reto-division-en-goto', '9/5/2020', ['es']);
 addPost('Introducción a la Programación para Niños', 'ipn', '9/5/2020', ['es']);
 addPost('Wave Engine Web performance', 'wave-engine-web-performance', '26/4/2020');
@@ -70,6 +69,7 @@ addPost('Xamarin.Forms XAML: Converters', 'xf-xaml-converters', '31/10/2018');
 addPost('Xamarin.Forms XAML: Control Templates', 'xf-xaml-control-templates', '18/10/2018');
 addPost('Xamarin.Forms XAML: Colors', 'xf-xaml-colors', '10/10/2018');
 addPost('Xamarin.Forms Design Framework', 'Xamarin-Forms-Design-Framework-b23a2f12cce5', '11/6/2018');
+addPost('Audios', 'audios', '28/5/2018');
 addPost('Fri 6: Sum up &amp; fuget.org', 'Fri-6--Sum-up---fuget-org-defecbf27385', '6/4/2018');
 addPost('Thu 5: Analysing an app written by others', 'Thu-5--Analysing-an-app-written-by-others-ab9c50246d5a', '5/4/2018');
 addPost('Wed 4: Meetings', 'Wed-4--Meetings-2556117737e8', '4/4/2018');
