@@ -166,6 +166,7 @@ addPost('Wave Engine: Create a Custom UI Control', 'wave-engine-create-a-custom-
 addPost('Wave Engine: Play Sound (Sound Effects & Themes)', 'wave-engine-play-sound-effects-and-themes', '13/10/2015');
 addPost('Colors in iOS: Same Value, Different Tonality', 'colors-in-ios-same-value-different-tonality', '5/10/2015');
 addPost('Missing Shadows on Lollipop\'s CardView', 'missing-shadows-on-lollipops-cardview', '21/9/2015');
+addPost('Password-O-Matic', 'password-o-matic', '25/8/2015', ['portfolio']);
 addPost('My First App Published: ¡Buenos días!', 'my-first-app-published-buenos-dias', '8/6/2015');
 addPost('¡Buenos días! aro', 'buenosdias', '4/6/2015', ['es']);
 addPost('Recipes for Wave Engine', 'recipes-for-wave-engine', '28/5/2015');
