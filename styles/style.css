@@ -1,37 +1,7 @@
-/* Light mode */
 :root {
-    --a-color: #00F;
-    --a-visited-color: #88F;
     --body-background-color: #FFF;
     --body-color: #333;
     --table-tr-background-color: #F5F5F5;
-}
- 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --a-color: #0E0;
-        --a-visited-color: #8E8;
-        --body-background-color: #111;
-        --body-color: #EEE;
-        --table-tr-background-color: #333;
-    }
-}
-
-a {
-    color: var(--a-color);
-}
-
-a:hover {
-    color: var(--a-color);
-}
-
-a:active {
-    color: var(--a-color);
-}
-
-a:visited {
-    color: var(--a-visited-color);
 }
 
 #actualBody {
