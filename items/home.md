@@ -1,4 +1,4 @@
-I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.com) for solving problems [to people](/?i=conferences).
+I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.com) for solving problems [to people](/?i=conferences). I do my best to make it long-lasting.
 
 **Blog**
 
