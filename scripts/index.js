@@ -65,7 +65,7 @@ function addItem(title, filename, date, tags = []) {
 }
 
 function addPost(title, filename, date, tags = []) {
-    tags.push('blog');
+    tags.push(blogTag);
     addItem(title, filename, date, tags);
 }
 
@@ -187,6 +187,30 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         html += totalHtml;
     }
     
+    $(selector).empty();
+    $(selector).append(html);
+}
+
+function listTags(selector) {
+    const tags = new Set();
+    items.forEach(item => {
+        item.tags.forEach(tag => {
+            tags.add(tag);
+        });
+    });
+    tags.delete(blogTag);
+    const sortedTags = Array
+        .from(tags)
+        .sort((a, b) => new String(a).toLowerCase().localeCompare(new String(b).toLowerCase()));
+    const currentQueryString = new URLSearchParams(window.location.search);
+    let html = '';
+
+    for (const item of sortedTags) {
+        currentQueryString.set('t', item);
+        html += `<a href="?${currentQueryString.toString()}">${item}</a> `;
+    }
+
+    html += `<a href="${queryUrlSeparator}blog">(none)</a>`;
     $(selector).empty();
     $(selector).append(html);
 }

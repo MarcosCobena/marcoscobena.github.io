@@ -1,6 +1,6 @@
 [RSS](feed.rss)
 
 Tags:
-[es](/?i=blog-es "Posts en español")
+<span id="tags"></span>
 
 <div id="posts"></div>
