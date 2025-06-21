@@ -22,17 +22,6 @@ addRedirection('abanico-a-few-hours-with-xamarin-forms-and-skiasharp', '/?i=aban
 addRedirection('portfolio-2023', '/?i=portfolio-2018-2023');
 addRedirection('blog-es', '/?i=blog&t=es');
 
-// addEpisode(
-//     title, <- idem
-//     audioFilename, <- The audio file played in HTML, expected to be placed at items/documents/
-//     documentFilename, <- idem as above items & posts' filename
-//     date <- idem
-// );
-
-// Episodes —this' the order they'll appear listed
-
-// Intentionally empty
-
 // Posts —this' the order they'll appear listed
 
 addPost('PointNet', 'pointnet', '21/3/2025', ['portfolio']);

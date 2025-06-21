@@ -4,10 +4,8 @@
 // WIP remove jQuery
 
 const blogTag = 'blog';
-const podcastFilename = 'juanma-y-marcos';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
-var episodes = [];
 var items = [];
 const redirections = [];
 var homeFilename = "home";
@@ -46,16 +44,6 @@ $(window).on('popstate', async function (event) {
         }
     }
 });
-
-function addEpisode(title, audioFilename, documentFilename, date) {
-    var item = {
-        title: title,
-        audioFilename: audioFilename,
-        filename: documentFilename,
-        date: date
-    };
-    episodes.push(item);
-}
 
 function addItem(title, filename, date, tags = []) {
     var tokens = date.split('/');
@@ -248,21 +236,6 @@ function removeAnchor(filename) {
     return result;
 }
 
-function renderEpisode(item, markDown) {
-    let src = `items/documents/${item.audioFilename}`;
-    const converter = new showdown.Converter({ strikethrough: true, tables: true });
-    let html = converter.makeHtml(markDown);
-    let body = `<h3>${item.title} - ${item.date}</h3>
-<audio controls loop>
-    <source src="${src}" type="audio/mpeg">
-    (Perdona, tu navegador no soporta empotrar audio. 
-    Pero puedes descargar el episodio directamente <a href="${src}">aquí</a>.)
-</audio>
-${html}`;
-
-    return body;
-}
-
 function renderItem(item, markDown, isBlogPost, hasItemsInside) {
     const styleClass = isBlogPost
         ? ''
@@ -341,10 +314,6 @@ function show(item, markDown, isBlogPost, anchor) {
 
     showItem(item, markDown, isBlogPost);
 
-    if (item.filename == podcastFilename) {
-        showPodcast();
-    }
-
     if (anchor != null) {
         location.hash = anchor;
     }
@@ -392,39 +361,6 @@ async function showLatestsPostsAsync(selector) {
     
     $(selector).empty();
     $(selector).append(html);
-}
-
-function showPodcast() {
-    let promises = [];
-
-    episodes.forEach(item => {
-        let actualPath = getMarkDownPath(item.filename);
-
-        promises.push(fetch(actualPath)
-            .then(response => {
-                if (!response.ok) {
-                    return Promise.reject();
-                }
-
-                let markDown = response.text();
-
-                return markDown;
-            })
-            .catch(_ => {
-                let markDown = `*Lo siento*, hubo un problema cargando el texto. 
-Creo que se puede arreglar recargando la página.`;
-
-                return markDown;
-            })
-            .then(markDown => renderEpisode(item, markDown)));
-    });
-
-    Promise
-        .all(promises)
-        .then(bodies => {
-            let body = bodies.join('\n');
-            $('#episodes').html(body);
-        });
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());
