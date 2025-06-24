@@ -1,7 +1,6 @@
 ﻿// WIP replace " with ' for strings
 // WIP replace "var" for "let" within functions
 // WIP replace "var" for "const" where appropiate
-// WIP remove jQuery
 
 const blogTag = 'blog';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
@@ -13,24 +12,29 @@ var resourceNotFoundFilename = "404";
 var hashtagUrlSeparator = "#/";
 var queryUrlSeparator = "/?i=";
 
-$(document).on('click', 'a', async function (event) {
-    var href = $(this).attr("href");
+document.addEventListener('click', async function(event) {
+    if (event.target.tagName !== 'A') {
+        return;
+    }
+    
+    const href = event.target.getAttribute("href");
 
-    if (href.startsWith("http") || href.startsWith("mailto:") ||
-        !href.startsWith(hashtagUrlSeparator) || !href.startsWith(queryUrlSeparator)) {
-        event.returnValue = false;
+    if (href.startsWith("http") 
+        || href.startsWith("mailto:") 
+        || !href.startsWith(hashtagUrlSeparator) 
+        || !href.startsWith(queryUrlSeparator)) {
         return;
     }
 
     event.preventDefault();
 
-    var filename = getJustFilename(href);
+    const filename = getJustFilename(href);
     pushState(filename);
     await loadItemAsync(filename);
-});
+}, /*useCapture:*/ true);
 
-$(window).on('popstate', async function (event) {
-    var state = event.originalEvent.state;
+window.addEventListener('popstate', async function(event) {
+    const state = event.state;
 
     if (state !== null) {
         await loadItemAsync(state.filename);
@@ -46,9 +50,9 @@ $(window).on('popstate', async function (event) {
 });
 
 function addItem(title, filename, date, tags = []) {
-    var tokens = date.split('/');
-    var parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
-    var item = { title: title, filename: filename, date: parsedDate, tags: tags };
+    const tokens = date.split('/');
+    const parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
+    const item = { title: title, filename: filename, date: parsedDate, tags: tags };
     items.push(item);
 }
 
@@ -175,8 +179,8 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         html += totalHtml;
     }
     
-    $(selector).empty();
-    $(selector).append(html);
+    const element = document.querySelector(selector);
+    element.innerHTML = html;
 }
 
 function listTags(selector) {
@@ -199,8 +203,8 @@ function listTags(selector) {
     }
 
     html += `<a href="${queryUrlSeparator}blog">(none)</a>`;
-    $(selector).empty();
-    $(selector).append(html);
+    const element = document.querySelector(selector);
+    element.innerHTML = html;
 }
 
 async function loadItemAsync(filename, anchor = null) {
@@ -305,11 +309,12 @@ function scrollBottom() {
 
 function show(item, markDown, isBlogPost, anchor) {
     let isHome = item.filename == homeFilename;
+    const homeReturnElement = document.getElementById('homeReturn');
 
     if (isHome) {
-        $('#homeReturn').hide(0);
+        homeReturnElement.style.display = 'none';
     } else {
-        $('#homeReturn').show(0);
+        homeReturnElement.style.display = 'block';
     }
 
     showItem(item, markDown, isBlogPost);
@@ -334,8 +339,8 @@ async function showEveryPostAsync(selector, tag) {
         html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
     }
     
-    $(selector).empty();
-    $(selector).append(html);
+    const element = document.querySelector(selector);
+    element.innerHTML = html;
 }
 
 function showItem(item, markDown, isBlogPost) {
@@ -359,8 +364,8 @@ async function showLatestsPostsAsync(selector) {
         html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
     }
     
-    $(selector).empty();
-    $(selector).append(html);
+    const element = document.querySelector(selector);
+    element.innerHTML = html;
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());
