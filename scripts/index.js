@@ -1,15 +1,12 @@
-﻿// WIP replace "var" for "let" within functions
-// WIP replace "var" for "const" where appropiate
-
-const blogTag = 'blog';
+﻿const blogTag = 'blog';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
-var items = [];
+const items = [];
 const redirections = [];
-var homeFilename = 'home';
-var resourceNotFoundFilename = '404';
-var hashtagUrlSeparator = '#/';
-var queryUrlSeparator = '/?i=';
+const homeFilename = 'home';
+const resourceNotFoundFilename = '404';
+const hashtagUrlSeparator = '#/';
+const queryUrlSeparator = '/?i=';
 
 document.addEventListener('click', async function(event) {
     if (event.target.tagName !== 'A') {
@@ -92,7 +89,7 @@ async function fetchTextAsync(filename) {
 }
 
 function findIn(filename, itemArray) {
-    let found = itemArray.find(function (item) {
+    const found = itemArray.find(function (item) {
         return item.filename == filename;
     });
 
@@ -114,16 +111,16 @@ function getJustFilename(path) {
     let filename;
 
     if (path.includes(queryUrlSeparator)) {
-        let index = path.lastIndexOf(queryUrlSeparator);
+        const index = path.lastIndexOf(queryUrlSeparator);
         filename = path.substring(index + queryUrlSeparator.length);
-        index = filename.indexOf('&')
+        const ampIndex = filename.indexOf('&')
 
-        if (index >= 0) {
-            filename = filename.substring(0, index);
+        if (ampIndex >= 0) {
+            filename = filename.substring(0, ampIndex);
         }
     } else {
         // Usually /#/foo or /#!/foo, which correspond to the old fashioned way to anchor items
-        let lastSlashIndex = path.lastIndexOf('/');
+        const lastSlashIndex = path.lastIndexOf('/');
         filename = path.substring(lastSlashIndex + 1);
     }
 
@@ -230,7 +227,7 @@ function pushState(filename) {
 
 function removeAnchor(filename) {
     let result = new String(filename);
-    let index = filename.lastIndexOf('#')
+    const index = filename.lastIndexOf('#')
 
     if (index >= 0) {
         result = filename.substring(0, index);
@@ -307,7 +304,7 @@ function scrollBottom() {
 }
 
 function show(item, markDown, isBlogPost, anchor) {
-    let isHome = item.filename == homeFilename;
+    const isHome = item.filename == homeFilename;
     const homeReturnElement = document.getElementById('homeReturn');
 
     if (isHome) {
@@ -357,7 +354,7 @@ async function showLatestsPostsAsync(selector) {
     const posts = items.filter(item => item.tags.some(tag => tag == blogTag));
     let html = '';
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 3 && i < posts.length; i++) {
         const post = posts[i];
         const markDown = await fetchTextAsync(post.filename);
         html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
