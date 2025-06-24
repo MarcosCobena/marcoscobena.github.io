@@ -1,5 +1,4 @@
-﻿// WIP replace " with ' for strings
-// WIP replace "var" for "let" within functions
+﻿// WIP replace "var" for "let" within functions
 // WIP replace "var" for "const" where appropiate
 
 const blogTag = 'blog';
@@ -7,20 +6,20 @@ const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !
 
 var items = [];
 const redirections = [];
-var homeFilename = "home";
-var resourceNotFoundFilename = "404";
-var hashtagUrlSeparator = "#/";
-var queryUrlSeparator = "/?i=";
+var homeFilename = 'home';
+var resourceNotFoundFilename = '404';
+var hashtagUrlSeparator = '#/';
+var queryUrlSeparator = '/?i=';
 
 document.addEventListener('click', async function(event) {
     if (event.target.tagName !== 'A') {
         return;
     }
     
-    const href = event.target.getAttribute("href");
+    const href = event.target.getAttribute('href');
 
-    if (href.startsWith("http") 
-        || href.startsWith("mailto:") 
+    if (href.startsWith('http') 
+        || href.startsWith('mailto:') 
         || !href.startsWith(hashtagUrlSeparator) 
         || !href.startsWith(queryUrlSeparator)) {
         return;
@@ -101,7 +100,7 @@ function findIn(filename, itemArray) {
 }
 
 function getAnchor(path) {
-    const index = path.lastIndexOf("#")
+    const index = path.lastIndexOf('#')
     let result = null;
 
     if (index >= 0) {
@@ -117,14 +116,14 @@ function getJustFilename(path) {
     if (path.includes(queryUrlSeparator)) {
         let index = path.lastIndexOf(queryUrlSeparator);
         filename = path.substring(index + queryUrlSeparator.length);
-        index = filename.indexOf("&")
+        index = filename.indexOf('&')
 
         if (index >= 0) {
             filename = filename.substring(0, index);
         }
     } else {
         // Usually /#/foo or /#!/foo, which correspond to the old fashioned way to anchor items
-        let lastSlashIndex = path.lastIndexOf("/");
+        let lastSlashIndex = path.lastIndexOf('/');
         filename = path.substring(lastSlashIndex + 1);
     }
 
@@ -226,12 +225,12 @@ async function pushHomeStateAndLoadItAsync() {
 }
 
 function pushState(filename) {
-    history.pushState({ filename: filename }, "", queryUrlSeparator + filename);
+    history.pushState({ filename: filename }, '', queryUrlSeparator + filename);
 }
 
 function removeAnchor(filename) {
     let result = new String(filename);
-    let index = filename.lastIndexOf("#")
+    let index = filename.lastIndexOf('#')
 
     if (index >= 0) {
         result = filename.substring(0, index);
@@ -350,7 +349,7 @@ function showItem(item, markDown, isBlogPost) {
     bodyElement.innerHTML = body;
     const itemScriptElement = document.createElement('script');
     itemScriptElement.src = `items/${item.filename}.js`;
-    itemScriptElement.type = "text/javascript";
+    itemScriptElement.type = 'text/javascript';
     bodyElement.appendChild(itemScriptElement);
 }
 
