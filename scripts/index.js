@@ -1,4 +1,7 @@
-﻿const blogTag = 'blog';
+﻿(function() {
+    'use strict';
+
+const blogTag = 'blog';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 const items = [];
@@ -365,3 +368,15 @@ async function showLatestsPostsAsync(selector) {
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());
+
+window.addItem = addItem;
+window.addPost = addPost;
+window.addRedirection = addRedirection;
+window.blogTag = blogTag;
+window.items = items;
+window.listItems = listItems;
+window.listTags = listTags;
+window.showEveryPostAsync = showEveryPostAsync;
+window.showLatestsPostsAsync = showLatestsPostsAsync;
+
+})();
