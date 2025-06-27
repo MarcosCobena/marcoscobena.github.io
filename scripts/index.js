@@ -300,12 +300,6 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
     return html;
 }
 
-function scrollBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-
-    return false;
-}
-
 function show(item, markDown, isBlogPost, anchor) {
     const isHome = item.filename == homeFilename;
     const homeReturnElement = document.getElementById('homeReturn');
@@ -353,20 +347,6 @@ function showItem(item, markDown, isBlogPost) {
     bodyElement.appendChild(itemScriptElement);
 }
 
-async function showLatestsPostsAsync(selector) {
-    const posts = items.filter(item => item.tags.some(tag => tag == blogTag));
-    let html = '';
-
-    for (let i = 0; i < 3 && i < posts.length; i++) {
-        const post = posts[i];
-        const markDown = await fetchTextAsync(post.filename);
-        html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
-    }
-    
-    const element = document.querySelector(selector);
-    element.innerHTML = html;
-}
-
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());
 
 window.addItem = addItem;
@@ -377,6 +357,5 @@ window.items = items;
 window.listItems = listItems;
 window.listTags = listTags;
 window.showEveryPostAsync = showEveryPostAsync;
-window.showLatestsPostsAsync = showLatestsPostsAsync;
 
 })();
