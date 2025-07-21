@@ -136,21 +136,17 @@ function getMarkDownPath(filename) {
     return `items/${filename}.md`;
 }
 
-function listItems(selector, items, moreFilename = null, amount = -1) {
-    let length = amount < 0 ?
-        items.length :
-        amount;
-    length = Math.min(length, items.length);
-    const itemsPerYearMap = new Map();
+function groupItemsByYearAndMonth(items) {
+    const result = new Map();
     items.map(value => {
         const year = value.date.getFullYear();
         const month = value.date.getMonth();
 
-        if (!itemsPerYearMap.has(year)) {
-            itemsPerYearMap.set(year, new Map());
+        if (!result.has(year)) {
+            result.set(year, new Map());
         }
 
-        const itemsPerMonthMap = itemsPerYearMap.get(year);
+        const itemsPerMonthMap = result.get(year);
 
         if (!itemsPerMonthMap.has(month)) {
             itemsPerMonthMap.set(month, []);
@@ -159,8 +155,18 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         const itemsArray = itemsPerMonthMap.get(month);
         itemsArray.push(value);
     });
+    
+    return result;
+}
+
+function listItems(selector, items, moreFilename = null, amount = -1) {
+    let length = amount < 0 ?
+        items.length :
+        amount;
+    length = Math.min(length, items.length);
+    const itemsGrouped = groupItemsByYearAndMonth(items);
     const isMoreRequested = moreFilename != null;
-    let html = renderListItems(itemsPerYearMap, isMoreRequested, length);
+    let html = renderListItems(itemsGrouped, isMoreRequested, length);
 
     if (isMoreRequested && items.length > length) {
         const listItemHtml = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
@@ -267,21 +273,15 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
 
     for (const [year, itemsPerMonthMap] of itemsPerYearMap) {
         if (!isMoreRequested) {
-            html += `<h2>${year}</h2>`;
+            html += `<em>${year}</em><br />`;
+            html += '<ul>';
         }
 
         for (const [month, itemsArray] of itemsPerMonthMap) {
-            if (!isMoreRequested) {
-                const date = new Date(year, month);
-                const monthAndYear = date.toLocaleString('en', { month: 'long', year: 'numeric' });
-                html += `<h3>${monthAndYear}</h3>`;
-                html += '<ul>';
-            }
-
             for (const item of itemsArray) {
                 const listItemHtml = '<li>'
                     + `<a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
-                    + ` (${item.date.toLocaleDateString()})`
+                    + ` ${item.date.toLocaleDateString()}`
                     + '</li>';
                 html += listItemHtml;
                 count++;
@@ -290,10 +290,10 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
                     return html;
                 }
             }
+        }
 
-            if (!isMoreRequested) {
-                html += '</ul>';
-            }
+        if (!isMoreRequested) {
+            html += '</ul>';
         }
     }
 

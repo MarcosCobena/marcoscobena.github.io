@@ -3,6 +3,6 @@
 Tags:
 <span id="tags"></span>
 
-<div id="tag-selected"></div>
+<p id="tag-selected"></p>
 
 <div id="posts"></div>
