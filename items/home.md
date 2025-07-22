@@ -1,3 +1,5 @@
+<img src="https://www.gravatar.com/avatar/3dcd83851674c859073c5452d5e41543e07b519a56ba3e553ed33ff970a530ac?s=128" alt="Marcos Cobeña Morián" style="border-radius: 50%;">
+
 I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.com) for solving problems [to people](/?i=conferences). I do my best to make it long-lasting.
 
 **Blog**
