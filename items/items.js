@@ -24,6 +24,7 @@ addRedirection('blog-es', '/?i=blog&t=es');
 
 // Posts —this' the order they'll appear listed
 
+addPost('Low-end smartphone', 'low-end-smartphone', '24/10/2025');
 addPost('PointNet', 'pointnet', '21/3/2025', ['portfolio']);
 addPost('Domain', 'domain', '19/3/2025');
 addPost('Flow', 'flow', '27/1/2025');
