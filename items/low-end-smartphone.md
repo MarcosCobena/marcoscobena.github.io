@@ -6,16 +6,16 @@ One year or more ago I also read Digital minimalism (Cal Newport), which made me
 
 On 10th June 2024, I wrote down in my agenda:
 
-Must-have smartphone:  
-Aprox. size: iPhone 6 (\~5'') 13.81x6.7x0.69 cm 129 g  
-Android  
-Jack 3.5 mm  
-Cameras \>= 8 Mp (rear), 1.2 Mp (front)  
-2 GB RAM  
-~~64~~32 GB ROM  
-~~Gyroscope~~
+> Must-have smartphone:  
+> Aprox. size: iPhone 6 (\~5'') 13.81x6.7x0.69 cm 129 g  
+> Android  
+> Jack 3.5 mm  
+> Cameras \>= 8 Mp (rear), 1.2 Mp (front)  
+> 2 GB RAM  
+> ~~64~~32 GB ROM  
+> ~~Gyroscope~~
 
-It is curious how I ended up rejecting the last two items :-D
+It is curious how I ended up acepting the loss of the last two items :-D
 
 Basically, I found two main choices:
 
@@ -24,45 +24,49 @@ Basically, I found two main choices:
 
 I was scared of losing my eyes with the first one so I went with the second. I bought an Alcatel B1 2022 for 50 €.
 
-## Cons
+# Cons
 
-### "Bad" performance
+## Performance
 
 When I started using it I noticed it was a bit slow. Given the specifications it was actually expected. However, I think I read it on XDA forums, one key aspect which makes Android devices feel that way is the virtual keyboard, and they recommended changing it for a lighter alternative. I found “Simple Keyboard” in the Play Store (which, by the way, is Free Software too :-) ) and the entire OS started to feel much better.
 
-### Pre-installed apps
+## Pre-installed apps
 
 Since I could not uninstall everything I wanted, I discovered one can disable most of the stock apps: Calendar (we rely on a paper calendar since a few years), Chrome (I installed Firefox Focus instead), Search (disabling too the always-in widget in the main screen), etc. I want to see just the apps that are useful for me.
 
-### No gyroscope
+## Gyroscope
 
 With all the kidding I had with my wife because a phone she had did not include a gyroscope, I thought I was going to miss it a lot. But no. Everytime we travel somewhere by car I use my phone as GPS with Google Maps and, I have not noticed the lack of a gyroscope. If I am using directions while walking, I may notice it at the very beginning, because once I start walking the app can calculate where I am heading giving my direction vector.
 
-### No NFC
+## NFC
 
 I used to pay with it on my previous smartphone but it was actually a commodity, nothing serious. I have even ended up liking the idea of sticking to the plastic cards because it means I must always carry them with me as well, mostly for the identification ones.
 
-### No fast charging
+## Fast charging
 
 I should say as well I do not see my-self charging it on a daily basis  but, it also takes a few hours to charge at 100%. We try to avoid leaving them charging during night so I plug it mostly while I am working at home.
 
-## Pros
+## Screen brightness
 
-### Smaller footprint
+I do not know exactly which type of screen it has but it is quite difficult to read anything on it under the sun. It neither has auto-levelling of brightness. In the very beginning I had some sort of script to decrease the brightness at night and the opposite in the morning. I ended up not using such, it failed from time to time (I guess being Android Go, background services are limited at some extent).
+
+# Pros
+
+## Footprint
 
 It is nice to carry a smaller device. Since I am not so worried about it, I removed the case I initially put, making it even smaller. It fits on every pocket I have and, you can not see from the outside anything of it. I have started carrying it on the back side, it feels more comfortable while walking.
 
-### Larger battery life
+## Battery life
 
 Actually, its capacity is smaller compared to the ones I used to have, given the smaller size of its body. However, since I use it less, and I guess the screen demands less energy due to its size, I use to have three (sometimes up to four) days between charges, which feels good.
 
-## Others
+# Others
 
-### "Broken" audio jack
+## Audio jack
 
 Although I can listen to music and podcasts, I can not attend a call with the headset: there is a non-ending noise which does not allow anyone to hear my voice. I noticed this a few months later after buying it, but I have never sent it for repair. I simply hold my phone next to the ear or, when it takes longer, I turn the speaker on. I could try Bluetooth too.
 
-### Quality pictures
+## Pictures
 
 One thing I like to say my-self when I want a new smartphone is having good cameras because this way I will take super-beautiful pictures of my children, travels, etc. Pictures which I will rarely watch again, in most of the cases.
 
