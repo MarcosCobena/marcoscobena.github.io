@@ -7,7 +7,7 @@ I may have been too much optimistic with my reading habilities once I age, I wil
 
 |            |                                                                     |
 | ---------- | ------------------------------------------------------------------- |
-| Language   | JavaScript                                                          |
+| Languages  | JavaScript                                                          |
 | Frameworks | Pebble SDK                                                          |
 | Platforms  | PebbleOS                                                            |
 | Date       | August 2015                                                         |

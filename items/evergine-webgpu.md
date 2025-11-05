@@ -9,7 +9,7 @@ I am super happy for contributing, again, to bring Evergine to the Web!
 
 |            |                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------- |
-| Language   | C# (.NET), C                                                                          |
+| Languages  | C# (.NET), C, JavaScript                                                              |
 | Frameworks | Evergine, Emscripten                                                                  |
 | Platforms  | Web (WebAssembly)                                                                     |
 | Date       | April-June 2025                                                                       |

@@ -12,7 +12,7 @@ We spent a [talk](?i=conferences) about this project at Monkey Conf 2023.
 
 |            |                              |
 | ---------- | ---------------------------- |
-| Language   | C# (.NET)                    |
+| Languages  | C# (.NET)                    |
 | Frameworks | Evergine, MAUI, ASP.NET Core |
 | Platforms  | Android, iOS                 |
 | Date       | May-September 2023           |
@@ -31,7 +31,7 @@ On 2022 I have been back on track, drawing static maps and exporting georeferenc
 
 |            |                                                 |
 | ---------- | ----------------------------------------------- |
-| Language   | C# (.NET), JavaScript                           |
+| Languages  | C# (.NET), JavaScript                           |
 | Frameworks | Wave Engine, Mono's WebAssembly Runtime, Blazor |
 | Platforms  | WebAssembly                                     |
 | Date       | October-November 2022                           |
@@ -47,7 +47,7 @@ My friend, and boss, Javi Cantón invited me to talk a little bit about this pro
 
 |            |                                                                   |
 | ---------- | ----------------------------------------------------------------- |
-| Language   | C# (.NET), JavaScript, HTML, CSS                                  |
+| Languages  | C# (.NET), JavaScript, HTML, CSS                                  |
 | Frameworks | Wave Engine, Mono's WebAssembly Runtime                           |
 | Platforms  | WebAssembly                                                       |
 | Date       | April-May 2020                                                    |
@@ -64,7 +64,7 @@ I wrote about how we overcame that, among other things, [here](/?i=wave-engines-
 
 |            |                                         |
 | ---------- | --------------------------------------- |
-| Language   | C# (.NET), JavaScript, HTML, CSS        |
+| Languages  | C# (.NET), JavaScript, HTML, CSS        |
 | Frameworks | Wave Engine, Mono's WebAssembly Runtime |
 | Platforms  | WebAssembly                             |
 | Date       | December 2019-January 2020              |
@@ -82,7 +82,7 @@ transpiler with ANTLR, which auto-generates the C# bindings from the official Kh
 
 |            |                                                                                    |
 | ---------- | ---------------------------------------------------------------------------------- |
-| Language   | C# (.NET)                                                                          |
+| Languages  | C# (.NET)                                                                          |
 | Frameworks | Mono's WebAssembly Runtime, ANTLR                                                  |
 | Platforms  | WebAssembly                                                                        |
 | Date       | June-October 2019                                                                  |
@@ -100,7 +100,7 @@ actual timeline control, which was made entirely through Android's drawing API.
 
 |            |                                                          |
 | ---------- | -------------------------------------------------------- |
-| Language   | C# (.NET)                                                |
+| Languages  | C# (.NET)                                                |
 | Frameworks | Xamarin.Android                                          |
 | Platforms  | Android                                                  |
 | Date       | February-May 2019                                        |
@@ -114,7 +114,7 @@ GoTo is my side project for learning about compilers and Virtual Machines. I wro
 
 |            |                                           |
 | ---------- | ----------------------------------------- |
-| Language   | C# (.NET)                                 |
+| Languages  | C# (.NET)                                 |
 | Frameworks | Xamarin.Forms, Ooui                       |
 | Platforms  | WebAssembly                               |
 | Date       | Late 2018                                 |
@@ -128,7 +128,7 @@ This year Microsoft Connect(); 2018 event presented Xamarin.Forms 4 cycle showca
 
 |            |                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------- |
-| Language   | C# (.NET)                                                                                                  |
+| Languages  | C# (.NET)                                                                                                  |
 | Frameworks | Xamarin.Forms                                                                                              |
 | Platforms  | Android, iOS                                                                                               |
 | Date       | December 2018                                                                                              |
@@ -142,7 +142,7 @@ For a new iteration over the existing app, I worked adding some more functionali
 
 |            |                                                                                                                                                        |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Language   | C# (.NET)                                                                                                                                              |
+| Languages  | C# (.NET)                                                                                                                                              |
 | Frameworks | Xamarin.Forms                                                                                                                                          |
 | Platforms  | Android, iOS                                                                                                                                           |
 | Date       | September 2018                                                                                                                                         |
@@ -156,7 +156,7 @@ Starting from [Microsoft Garage's original app](https://www.microsoft.com/en-us/
 
 |            |                                                                                                                                                                                                                       |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Language   | C# (.NET)                                                                                                                                                                                                             |
+| Languages  | C# (.NET)                                                                                                                                                                                                             |
 | Frameworks | Xamarin.Forms, Gtk#, Xamarin.Mac                                                                                                                                                                                      |
 | Platforms  | macOS, Linux                                                                                                                                                                                                          |
 | Date       | August 2018                                                                                                                                                                                                           |

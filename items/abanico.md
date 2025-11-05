@@ -6,7 +6,7 @@ I've always kept an eye into <a href="https://github.com/mono/SkiaSharp/">SkiaSh
 
 |            |                                           |
 | ---------- | ----------------------------------------- |
-| Language   | C# (.NET)                                 |
+| Languages  | C# (.NET)                                 |
 | Frameworks | Xamarin.Forms                             |
 | Platforms  | Mac OS                                    |
 | Date       | June 2017                                 |

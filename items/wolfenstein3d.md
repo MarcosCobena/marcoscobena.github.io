@@ -11,7 +11,7 @@ Click [here](/wolfenstein3d) to play!
 
 |            |                                           |
 | ---------- | ----------------------------------------- |
-| Language   | C# (.NET), JavaScript, HTML, CSS          |
+| Languages  | C# (.NET), JavaScript, HTML, CSS          |
 | Frameworks | Mono's WebAssembly Runtime                |
 | Platforms  | WebAssembly                               |
 | Date       | January-February 2024                     |

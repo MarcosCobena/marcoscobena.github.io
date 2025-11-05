@@ -8,7 +8,7 @@ Common to every stage, we have been trying to refactor the codebase into somethi
 
 |            |                                           |
 | ---------- | ----------------------------------------- |
-| Language   | C# (.NET), Python, C                      |
+| Languages  | C# (.NET), Python, C                      |
 | Frameworks | Evergine, ImGui                           |
 | Platforms  | Windows                                   |
 | Date       | January 2023-March 2025                   |
