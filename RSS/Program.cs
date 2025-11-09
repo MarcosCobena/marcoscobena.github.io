@@ -18,8 +18,8 @@ namespace RSS
         const int AmountOfItemsForRss = 10;
         const string DateParseFormat = "d/M/yyyy";
         const string Email = "marcoscobena@outlook.com";
-        const string FeedDescription = "Marcos' Blog";
         const string FeedPath = "feed.rss";
+        const string FeedTitle = "Marcos' Blog";
         const string FullName = "Marcos Cobeña Morián";
         const string ItemFilenamePathFormat = "items/{0}.md";
         const string ItemsJavaScriptPath = "items/items.js";
@@ -80,7 +80,7 @@ namespace RSS
         {
             Console.Write("Writting feed... ");
 
-            var feed = new SyndicationFeed(FullName, FeedDescription, new Uri(Link));
+            var feed = new SyndicationFeed(FeedTitle, description: string.Empty, new Uri(Link));
             var author = new SyndicationPerson($"{Email} ({FullName})", FullName, Link);
             feed.Authors.Add(author);
 
