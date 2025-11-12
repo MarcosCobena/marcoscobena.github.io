@@ -4,17 +4,17 @@ Este año me encargué de organizar el tradicional sorteo de amigo invisible par
 
 Buscando una solución, Gabriel me compartió un prompt para que pudiera apoyarme en la inteligencia artificial. Gracias a esto generé una asignación perfecta de los participantes: una cadena sin ciclos ni parejas recíprocas. La IA se encargó de crear el orden y asegurar que el sorteo fuera justo y más interesante que en años anteriores.
 
-Mi siguiente reto fue automatizar el envío de los correos informando a cada persona a quién le debía regalar, para preservar la confidencialidad habitual. Probé usar SendGrid, una plataforma muy útil en muchos contextos, pero me encontré con un obstáculo: los e-mails no llegaban al destinatario cuando los enviaba desde mi propia cuenta corporativa, por políticas internas de seguridad.
+Mi siguiente reto fue automatizar el envío de los correos, informando a cada persona a quién le debía regalar, para preservar la confidencialidad habitual. Probé a usar SendGrid, una plataforma muy útil en muchos contextos, pero me encontré con un obstáculo: los e-mails no llegaban al destinatario cuando los enviaba desde mi propia cuenta corporativa, por políticas internas de seguridad.
 
-Buscando otras formas, descubrí (preguntando aquí y trasteando en foros) que Microsoft Teams permite crear deep links directos a conversaciones personales. Es decir, puedes generar un enlace para abrir el chat exacto con una persona, lo que resulta perfectísimo para estos casos.
+Buscando otras formas, descubrí que Microsoft Teams permite crear deep links directos a conversaciones personales. Es decir, puedes generar un enlace para abrir el chat exacto con una persona, lo que resulta perfectísimo para estos casos.
 
-Finalmente, inspirándome en lo que compartieron y con ayuda de la IA, programé una pequeña aplicación de línea de comandos en C# que me permitió abrir automáticamente el chat de Teams con cada participante con su deep link, copiar al portapapeles el texto preparado para revelar el destinatario en el amigo invisible y sólo tuve que pegar el mensaje y pulsar "enviar", para completar el proceso de forma cómoda, rápida y sin margen de error.
+Finalmente, inspirándome en lo que compartieron y con ayuda de la IA, programé una pequeña aplicación de línea de comandos, en C#. Esta me permitió copiar al portapapeles el texto preparado para revelar el destinatario en el amigo invisible, abrir automáticamente el chat de Teams con cada participante (a través de su deep link) y sólo tuve que pegar el mensaje y pulsar "enviar", para completar el proceso de forma cómoda, rápida y sin margen de error.
 
-El proceso resultó eficiente, privado y evitó los ciclos del pasado. Además, ha sido divertido combinar IA y automatización para un evento social. Como contra, ahora yo soy el único que conoce a quién regala cada persona, perdiendo parte de la magia y el misterio tradicional para el organizador. No hay forma de automatizar el proceso sin que alguien tenga acceso a la lista completa.
+El proceso resultó eficiente, privado y evitó los ciclos del pasado. Además, ha sido divertido combinar IA y automatización para un evento social. Como contra, ahora yo soy el único que conoce a quién regala cada persona, perdiendo parte de la magia y el misterio tradicional para el organizador. No encontré otra forma rápida de automatizar el proceso sin que alguien tenga acceso a la lista completa.
 
 ---
 
-A continuación, incluyo el código utilizado para enviar los mensajes preparados por Teams de manera semiautomática. En esta versión, los nombres y correos han sido reemplazados por personajes de Pixar para proteger la privacidad de los participantes.
+A continuación, incluyo el código utilizado para enviar los mensajes preparados por Teams de manera semiautomática:
 
 ```csharp
 // Requires installing the TextCopy NuGet package: dotnet add package TextCopy
@@ -25,7 +25,6 @@ class Program
 {
     static void Main()
     {
-        // Pixar character participants list
         var drawing = new[]
         {
             ("Woody", "woody@pixar.com", "Buzz Lightyear"),
@@ -69,7 +68,6 @@ PD: Gracias a Gabriel, ha sido GPT-4.1 (GitHub Copilot) el que ha realizado el s
         }
     }
 
-    // Opens Teams conversation and copies the message to clipboard
     private static void ShareMessageInTeams(string toEmail, string message)
     {
         ClipboardService.SetText(message);
