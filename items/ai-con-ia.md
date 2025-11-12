@@ -1,6 +1,6 @@
 > Todo el texto de este post ha sido generado con ayuda de GitHub Copilot, concretamente con el modelo GPT-4.1. Mi objetivo final era experimentar más con la IA, incluso para escribir este post.
 
-Este año me encargué de organizar el tradicional sorteo de amigo invisible para nuestra cena de navidad, con el objetivo adicional de evitar ciclos en el reparto de regalos, esos típicos bucles en los que dos personas se regalan mutuamente y se pierde algo de magia y sorpresa.
+Este año me encargué de organizar el tradicional sorteo de amigo invisible para nuestra comida de Navidad, con el objetivo adicional de evitar ciclos en el reparto de regalos, esos típicos bucles en los que dos personas se regalan mutuamente y se pierde algo de magia y sorpresa.
 
 Buscando una solución, Gabriel me compartió un prompt para que pudiera apoyarme en la inteligencia artificial. Gracias a esto generé una asignación perfecta de los participantes: una cadena sin ciclos ni parejas recíprocas. La IA se encargó de crear el orden y asegurar que el sorteo fuera justo y más interesante que en años anteriores.
 
