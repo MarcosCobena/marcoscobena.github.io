@@ -1,3 +1,5 @@
+**Actualización 27/11:** el texto que hay a continuación lo he generado con IA. Después de publicarlo, no me sentí agusto con el resultado, creo porque no lo he escrito yo mismo. Me gusta mucho el hecho de escribir, desde una página en blanco, lo disfruto. Aún así, lo dejo tal cual para la posteridad.
+
 > Todo el texto de este post ha sido generado con ayuda de GitHub Copilot, concretamente con el modelo GPT-4.1. Mi objetivo final era experimentar más con la IA, incluso para escribir este post.
 
 Este año me encargué de organizar el tradicional sorteo de amigo invisible para nuestra comida de Navidad, con el objetivo adicional de evitar ciclos en el reparto de regalos, esos típicos bucles en los que dos personas se regalan mutuamente y se pierde algo de magia y sorpresa.
