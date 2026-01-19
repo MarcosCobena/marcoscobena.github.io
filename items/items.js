@@ -24,7 +24,6 @@ addRedirection('blog-es', '/?i=blog&t=es');
 
 // Posts —this' the order they'll appear listed
 
-addPost('Amigo Invisible con IA', 'ai-con-ia', '12/11/2025', ['es']);
 addPost('Evergine WebGPU', 'evergine-webgpu', '4/11/2025', ['portfolio']);
 addPost('Low-end smartphone', 'low-end-smartphone', '24/10/2025');
 addPost('PointNet', 'pointnet', '21/3/2025', ['portfolio']);
