@@ -14,6 +14,5 @@ I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.
 [GitHub](https://github.com/MarcosCobena)
 [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
 [Mastodon](https://mastodon.social/@MarcosCobena)
-[NuGet](https://www.nuget.org/profiles/MarcosCobena)
 
 *[<div class="right">The world just makes sense forward...</div>](https://joseantoniocobena.com)*
