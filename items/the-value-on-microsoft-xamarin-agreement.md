@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 It's close to 24:00 and I've just arrived to the hotel after spending a wonderful day at #dotNetSpain2016. However, I couldn't go to bed without writting down how much I value the acquisition of Xamarin from Microsoft.
 
 I grew up with my father sharing with me his love for Microsoft. Love in terms of excitement on how this company was changing our lifes in '90s. My dream during childhood was to work with them. It was to join Microsoft and push my pixel in empowering people. The dream came true in my early 20s.

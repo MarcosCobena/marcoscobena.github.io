@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <div>
 
 During my day-to-day job I’ve found out my-self again with a programming question I didn’t manage to answer the 1st time: which is a proper way to handle errors on a chain of async calls, and how to avoid the user to interact with the UI while the ops. are working. Well, actually those are 2 different questions, but let’s say I’ve always found both blended.

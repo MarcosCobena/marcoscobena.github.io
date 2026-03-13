@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 Have you ever tried to drop shadows from CardViews? Did those happen on pre-Lollipop but don't on newer ones? Did you look for "android cardview shadow issue lollipop" and find just a few answers and none of them worked? Do even the shadows margins are just there, you can see those?
 
 <img class="aligncenter size-full wp-image-98" src="items/images/googlenowcardviewsshadows.png" alt="Google Now CardViews' Shadows" width="356" height="486" />

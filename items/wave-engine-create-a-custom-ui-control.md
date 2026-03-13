@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <div class="gh-header">
 <div class="gh-header-show">
 <p class="gh-header-title instapaper_title">We're at the team finishing the first bunch of <a href="https://github.com/WaveEngine/Documentation/wiki/">recipes</a> synced with 2.0 version of the engine. Let me share with you <a href="https://github.com/WaveEngine/Documentation/wiki/Create-a-Custom-UI-Control">this one</a> where we explain quickly how to create your own UI controls. Enjoy it!</p>

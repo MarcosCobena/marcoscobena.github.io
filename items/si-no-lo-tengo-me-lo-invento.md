@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 Seguimos con más patrones. En este caso: ¿cómo respondemos ante las necesidades? Solemos tener dos opciones: compramos algo que la solucione o nos inventamos algo que haga lo mismo. No quiero entrar en el punto de vista del consumismo sino de la felicidad. Pero ¿se puede ser feliz resolviendo necesidades?
 
 Los términos necesidad y problema a veces están tan cerca en nuestro día a día que actuámos (al menos a mí me pasa) con la solución más rápida: comprar. Se me rompe X, me compro otro. El acto de comprar comienza por la búsqueda, que disfrutamos como cuando éramos niños y caía en nuestras manos el catálogo de juguetes de El Corte Inglés. Seleccionamos n opciones y vamos bajando hasta llegar a dos o tres que, ante nuestra falta de decisión, dejamos decidir a lo que yo llamo <i>los factores limitantes</i>: disponibilidad, precio, qué opina mi colega, etc. Compramos uno, disfrutamos el <i>efecto papel de regalo</i>, los primeros días de novedad y, vuelta a la normalidad.

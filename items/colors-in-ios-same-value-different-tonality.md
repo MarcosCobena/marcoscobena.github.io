@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <em>This entry was originally written at <a href="http://blogs.plainconcepts.com/xamarinteam/2015/10/05/colors-in-ios-same-value-different-tonality/">Plain Concepts' Xamarin Team Blog</a>.</em>
 
 While working on a native Xamarin.iOS app, I noticed a difference between the same color applied through source code to the navigation bar and through Interface Builder to the background of a scroll view. There was a small difference between both colors' tonality, although I had entered the same RGB values on both places. You can appreciate the difference on this small sample app, where pure red (<span style="color:#ff0000;">#ff0000</span>) is used on both views:

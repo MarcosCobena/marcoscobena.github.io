@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 Everyone looking forward to use Xamarin.Forms is asking the same question: <em>would we be able to match our Designer's layouts with Xamarin.Forms?</em> One week ago, I installed again the official Twitter app on my iPhone, and it recalled my attention the opening: it has a beautiful animation which goes from the Twitter's bird to your timeline.
 
 <a href="items/images/tumblr_inline_n6zoo1ve6a1qh9cw7.gif"><img class="aligncenter wp-image-27 size-full" src="items/images/tumblr_inline_n6zoo1ve6a1qh9cw7.gif" alt="tumblr_inline_n6zoo1ve6a1qh9cw7" width="500" height="362" /></a>

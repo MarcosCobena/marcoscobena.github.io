@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 Este fin de semana estuvimos mis amigos y yo hablando de la [conocida para algunos] ecuación de la felicidad:
 
 <img class=" size-full wp-image-440 aligncenter" src="items/images/gif-latex.gif" alt="gif.latex" width="171" height="64" />

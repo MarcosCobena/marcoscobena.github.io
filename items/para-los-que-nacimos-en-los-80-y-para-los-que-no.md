@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 Nací en 1984. Octubre. Hace 32 años. He entendido siempre la treintena como asentamiento, y me ha tocado -está tocando- seguir aprendiendo. Pero no en plan víctima eh; todo lo contrario, de buen rollo :-) Hemos escuchado que la vida es un aprendizaje continuo pero, aquí, me refiero a cosas básicas. Disfruto siempre leyendo frases de Mr. Wonderful, reflexionando sobre ellas, y escuchando a Elsa Punset sobre Inteligencia emocional, pero no ha sido tanto el impacto que esto tenía en mí como hacerme una pregunta.
 
 Una pauta que yo mismo he tenido, y también he visto mucho a mi alrededor, es el no tener tiempo ni de pensar. Es la versión mejorada de cuando tus padres te llamaban para comer y gritabas desde tu habitación ¡ahora voy! Solo que aquí, ahora, probablemente nadie te lo recuerde una segunda vez. Ir por la vida sin pensar hace que encajes en casi todo. Además, si te pasa como a mí, que me cuesta decir NO, la cosa empeora. Te vuelves líquido: fluyes bien, pero vas donde la marea va.

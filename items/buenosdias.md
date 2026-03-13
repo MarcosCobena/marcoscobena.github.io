@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <a href="https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img class="alignleft" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" alt="Get it on Google Play" width="250" height="74" /></a>
 
 (On Feb. 2016, this app was unpublished from Android, publishing instead an even better version created from scratch / <em>En feb. de 2016, se anuló la publicación de esta app en Android, publicando en su lugar una versión incluso mejor creada desde cero</em>: <a href="https://play.google.com/store/apps/details?id=com.marcoscobena.buenosdiasaro">¡Buenos días! aro</a>)

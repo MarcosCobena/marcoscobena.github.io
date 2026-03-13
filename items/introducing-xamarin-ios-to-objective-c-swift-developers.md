@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 A few months ago I had the chance to showcase <a href="https://www.xamarin.com/platform">Xamarin.iOS</a> to pure Objective-C/Swift developers, within a local group called <a href="http://nscoder-sev.tumblr.com/">NSCoder Sevilla</a>.
 
 Instead of making slides I thought it'd be more interesting to build a small app which'd do the same, as well as serving as a playground to showcase some topics: managed vs. native call stacks, <a href="https://www.xamarin.com/forms">Xamarin.Forms</a>, <a href="https://developer.xamarin.com/guides/cross-platform/workbooks/">Xamarin Workbooks</a> (<a href="https://developer.xamarin.com/guides/cross-platform/inspector/">Inspector mode</a>), etc. I think the most interesting piece for them was inspecting the app in real time with this last one.

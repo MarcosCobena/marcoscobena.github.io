@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <em>Below <a href="https://github.com/WaveEngine/Documentation/wiki/Frustum-Culling">recipe</a> belongs to <a href="https://github.com/WaveEngine/Documentation/wiki">Wave Engine's official Documentation wiki</a>.</em>
 
 <hr />

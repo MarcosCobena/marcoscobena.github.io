@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <p style="text-align:center;">👋🏼  Actualmente trabajo a tiempo completo como Senior Mobile Developer (desarrollando apps) en <a href="http://devsdna.com">DevsDNA</a>. Si crees que podemos ayudarte ¡escríbenos! <a href="mailto:marcos@devsdna.com">marcos@devsdna.com</a>
 /
 I'm currently working full-time as Senior Mobile Developer (developing apps) at <a href="http://devsdna.com">DevsDNA</a>. If you find we can help you write us! <a href="mailto:marcos@devsdna.com">marcos@devsdna.com</a></p>

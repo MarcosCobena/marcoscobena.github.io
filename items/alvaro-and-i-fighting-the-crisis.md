@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <img class=" size-full wp-image-322 aligncenter" src="items/images/aromarcos.jpg" alt="aro&amp;amp;marcos" width="590" height="441" />
 *Álvaro and my-self (carrying my C# t-shirt :-) )*
 

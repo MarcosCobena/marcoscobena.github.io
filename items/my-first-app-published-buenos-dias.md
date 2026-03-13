@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <em>Dedicado a Elisa, que siempre me ha empujado para que siguiera con ello, y no lo dejara. Gracias, mi amor. ¡Te quiero!</em>
 
 <em>¡Buenos días!</em> is the spanish translation for Good morning! What does this have in common with mobile apps or Xamarin?

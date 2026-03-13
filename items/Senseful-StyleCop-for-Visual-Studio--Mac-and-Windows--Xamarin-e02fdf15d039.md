@@ -1,4 +1,4 @@
-*(This post was imported, please [contact](/#/contact) me if there's anything wrong with it. Thanks in advance)*
+
 
 ### Senseful StyleCop for Visual Studio –Mac and Windows #Xamarin
 

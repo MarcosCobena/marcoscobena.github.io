@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 Current sprint, which ends just tomorrow, is being thrilling. Wonderful. We're crafting a beautiful app which goes beyond pixel respect, but content flow. I [think] can't say anything about it, our customer, but our skills developing apps are taking a level which I've always dreamed with, and that definitely makes me super happy. :-)
 
 Last week we eventually needed a wrap view for a few pieces of the design. Wrap view here means an UIView which horizontally adds some other views until the max width it's allowed, and then keeps stacking things in a new row just below. It's a well-known control in Windows world, but didn't find anything similar in iOS.

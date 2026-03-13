@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 It turns out we're lately at <a href="http://www.plainconcepts.com" target="_blank">Plain Concepts</a> working on a few iOS apps which involve Apple Watch. And we're using Xamarin. :-) The one I'm working on is quite simple, but I've learned a few things which can be interesting to any other one making a first landing into a similar project.
 
 I've noticed some differences with Storyboards on iPhone/iPad (iPod Touch keeps alive?) By default, the Watch App's UI lives inside an stack layout. You drop an element, it stacks at the bottom of the last one. It opens an small world of interesting effects, as you can hide/show elements to simulate different states of the app life-cycle.

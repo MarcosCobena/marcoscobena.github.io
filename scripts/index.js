@@ -3,7 +3,6 @@
 
 const blogTag = 'blog';
 const importedNotice = '*(This post was imported, please [contact](/?i=contact) me if there\'s anything wrong with it. Thanks in advance)*';
-const importedNoticeRegex = /^\*\(This post was imported.*?\)\*\n*/s;
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 const items = [];
@@ -57,9 +56,12 @@ function addItem(title, filename, date, tags = []) {
     items.push(item);
 }
 
-function addPost(title, filename, date, tags = []) {
+function addPost(title, filename, date, tags = [], isImported = false) {
     tags.push(blogTag);
-    addItem(title, filename, date, tags);
+    const tokens = date.split('/');
+    const parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
+    const item = { title: title, filename: filename, date: parsedDate, tags: tags, isImported: isImported };
+    items.push(item);
 }
 
 function addRedirection(fromFilename, toURL) {
@@ -223,15 +225,8 @@ async function loadItemAsync(filename, anchor = null) {
     }
     
     const data = await fetchTextAsync(filename);
-    const { text, isImported } = processMarkdown(data);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
-    show(item, text, isBlogPost, anchor, isImported);
-}
-
-function processMarkdown(text) {
-    const isImported = importedNoticeRegex.test(text);
-    const processedText = isImported ? text.replace(importedNoticeRegex, '') : text;
-    return { text: processedText, isImported };
+    show(item, data, isBlogPost, anchor);
 }
 
 async function pushHomeStateAndLoadItAsync() {
@@ -254,7 +249,7 @@ function removeAnchor(filename) {
     return result;
 }
 
-function renderItem(item, markDown, isBlogPost, hasItemsInside, isImported = false) {
+function renderItem(item, markDown, isBlogPost, hasItemsInside) {
     const styleClass = isBlogPost
         ? ''
         : 'hidden';
@@ -263,7 +258,7 @@ function renderItem(item, markDown, isBlogPost, hasItemsInside, isImported = fal
         : 1;
     const converter = new showdown.Converter(
         { strikethrough: true, tables: true, headerLevelStart: topHeaderLevel + 1 });
-    const importedNoticeHtml = isImported ? converter.makeHtml(importedNotice) : '';
+    const importedNoticeHtml = item.isImported ? converter.makeHtml(importedNotice) : '';
     let result = `<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
     
 ${importedNoticeHtml}
@@ -311,7 +306,7 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
     return html;
 }
 
-function show(item, markDown, isBlogPost, anchor, isImported = false) {
+function show(item, markDown, isBlogPost, anchor) {
     const isHome = item.filename == homeFilename;
     const homeReturnElement = document.getElementById('homeReturn');
 
@@ -321,7 +316,7 @@ function show(item, markDown, isBlogPost, anchor, isImported = false) {
         homeReturnElement.style.display = 'block';
     }
 
-    showItem(item, markDown, isBlogPost, isImported);
+    showItem(item, markDown, isBlogPost);
 
     if (anchor != null) {
         location.hash = anchor;
@@ -340,17 +335,16 @@ async function showEveryPostAsync(selector, tag) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
         const markDown = await fetchTextAsync(post.filename);
-        const { text, isImported } = processMarkdown(markDown);
-        html += renderItem(post, text, /* isBlogPost: */ true, /* hasItemsInside */ true, isImported);
+        html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
     }
     
     const element = document.querySelector(selector);
     element.innerHTML = html;
 }
 
-function showItem(item, markDown, isBlogPost, isImported = false) {
+function showItem(item, markDown, isBlogPost) {
     document.title = item.title;
-    const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false, isImported);
+    const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false);
     const bodyElement = document.getElementById('actualBody');
     bodyElement.innerHTML = body;
     const itemScriptElement = document.createElement('script');

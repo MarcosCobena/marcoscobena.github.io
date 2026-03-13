@@ -1,5 +1,3 @@
-*(This post was imported, please [contact](/?i=contact) me if there's anything wrong with it. Thanks in advance)*
-
 <a title="Ruler by Scott Akerman, on Flickr" href="https://www.flickr.com/photos/sterlic/4299631538"><img class=" aligncenter" src="https://farm3.staticflickr.com/2730/4299631538_220c9c9448_z.jpg" alt="Ruler" width="640" height="396" /></a>
 
 One aspect that Apple pushed to the limits is the union between Designers and Developers. Instead of understanding the product development process as a chain, it is done as a very close relationship walking in the same direction. Both of them speak different languages: they use different tools during their day-to-day job, they see different aspects of the product, their definition of done is different, etc.
