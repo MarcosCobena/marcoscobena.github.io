@@ -2,6 +2,8 @@
     'use strict';
 
 const blogTag = 'blog';
+const importedNotice = '*(This post was imported, please [contact](/?i=contact) me if there\'s anything wrong with it. Thanks in advance)*';
+const importedNoticeRegex = /^\*\(This post was imported.*?\)\*\n*/s;
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 const items = [];
@@ -221,8 +223,15 @@ async function loadItemAsync(filename, anchor = null) {
     }
     
     const data = await fetchTextAsync(filename);
+    const { text, isImported } = processMarkdown(data);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
-    show(item, data, isBlogPost, anchor);
+    show(item, text, isBlogPost, anchor, isImported);
+}
+
+function processMarkdown(text) {
+    const isImported = importedNoticeRegex.test(text);
+    const processedText = isImported ? text.replace(importedNoticeRegex, '') : text;
+    return { text: processedText, isImported };
 }
 
 async function pushHomeStateAndLoadItAsync() {
@@ -245,7 +254,7 @@ function removeAnchor(filename) {
     return result;
 }
 
-function renderItem(item, markDown, isBlogPost, hasItemsInside) {
+function renderItem(item, markDown, isBlogPost, hasItemsInside, isImported = false) {
     const styleClass = isBlogPost
         ? ''
         : 'hidden';
@@ -254,8 +263,10 @@ function renderItem(item, markDown, isBlogPost, hasItemsInside) {
         : 1;
     const converter = new showdown.Converter(
         { strikethrough: true, tables: true, headerLevelStart: topHeaderLevel + 1 });
+    const importedNoticeHtml = isImported ? converter.makeHtml(importedNotice) : '';
     let result = `<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
     
+${importedNoticeHtml}
 ${converter.makeHtml(markDown)}`;
 
     if (item.title != '') {
@@ -300,7 +311,7 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
     return html;
 }
 
-function show(item, markDown, isBlogPost, anchor) {
+function show(item, markDown, isBlogPost, anchor, isImported = false) {
     const isHome = item.filename == homeFilename;
     const homeReturnElement = document.getElementById('homeReturn');
 
@@ -310,7 +321,7 @@ function show(item, markDown, isBlogPost, anchor) {
         homeReturnElement.style.display = 'block';
     }
 
-    showItem(item, markDown, isBlogPost);
+    showItem(item, markDown, isBlogPost, isImported);
 
     if (anchor != null) {
         location.hash = anchor;
@@ -329,16 +340,17 @@ async function showEveryPostAsync(selector, tag) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
         const markDown = await fetchTextAsync(post.filename);
-        html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
+        const { text, isImported } = processMarkdown(markDown);
+        html += renderItem(post, text, /* isBlogPost: */ true, /* hasItemsInside */ true, isImported);
     }
     
     const element = document.querySelector(selector);
     element.innerHTML = html;
 }
 
-function showItem(item, markDown, isBlogPost) {
+function showItem(item, markDown, isBlogPost, isImported = false) {
     document.title = item.title;
-    const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false);
+    const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false, isImported);
     const bodyElement = document.getElementById('actualBody');
     bodyElement.innerHTML = body;
     const itemScriptElement = document.createElement('script');
