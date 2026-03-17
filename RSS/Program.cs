@@ -21,6 +21,7 @@ namespace RSS
         const string FeedPath = "feed.rss";
         const string FeedTitle = "Marcos' Blog";
         const string FullName = "Marcos Cobeña Morián";
+        const string ImportedNoticeHtml = $"<p><em>(This post was imported, please <a href=\"{Link}/?i=contact\">contact</a> me if there's anything wrong with it. Thanks in advance)</em></p>";
         const string ItemFilenamePathFormat = "items/{0}.md";
         const string ItemsJavaScriptPath = "items/items.js";
         const string Link = "https://marcoscobena.github.io";
@@ -53,13 +54,14 @@ namespace RSS
             Console.Write("Reading items... ");
             var items = new List<ItemModel>();
             var engine = new Engine()
-                .SetValue("addPost", (string title, string filename, string date, string[] tags) => 
+                .SetValue("addPost", (string title, string filename, string date, string[] tags, bool isImported) => 
                 {
                     var item = new ItemModel
                     {
                         Title = title,
                         MarkdownFilename = filename,
                         Date = ParseDate(date),
+                        IsImported = isImported,
                     };
                     items.Add(item);
                 })
@@ -91,9 +93,10 @@ namespace RSS
             {
                 var itemPath = string.Format(ItemFilenamePathFormat, item.MarkdownFilename);
                 var markdownText = File.ReadAllText(itemPath);
+                var importedNoticeHtmlOrEmpty = item.IsImported ? ImportedNoticeHtml : string.Empty;
                 var permalink = new Uri($"{Link}/?i={item.MarkdownFilename}");
 
-                var syndicationItem = new SyndicationItem(item.Title, markdown.Transform(markdownText), permalink)
+                var syndicationItem = new SyndicationItem(item.Title, importedNoticeHtmlOrEmpty + markdown.Transform(markdownText), permalink)
                 {
                     PublishDate = item.Date.ToUniversalTime()
                 };
@@ -116,6 +119,8 @@ namespace RSS
         public class ItemModel
         {
             public DateTime Date { get; set; }
+
+            public bool IsImported { get; set; }
 
             public string MarkdownFilename { get; set; }
 
