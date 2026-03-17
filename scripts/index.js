@@ -2,7 +2,7 @@
     'use strict';
 
 const blogTag = 'blog';
-const importedNotice = '*(This post was imported, please [contact](/?i=contact) me if there\'s anything wrong with it. Thanks in advance)*';
+const importedNoticeHtml = new showdown.Converter({ strikethrough: true }).makeHtml('*(This post was imported, please [contact](/?i=contact) me if there\'s anything wrong with it. Thanks in advance)*');
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 const items = [];
@@ -255,10 +255,10 @@ function renderItem(item, markDown, isBlogPost, hasItemsInside) {
         : 1;
     const converter = new showdown.Converter(
         { strikethrough: true, tables: true, headerLevelStart: topHeaderLevel + 1 });
-    const importedNoticeHtml = item.isImported ? converter.makeHtml(importedNotice) : '';
+    const importedNoticeHtmlOrEmpty = item.isImported ? importedNoticeHtml : '';
     let result = `<span id="date" class="${styleClass}">${item.date.toLocaleDateString()}</span>
     
-${importedNoticeHtml}
+${importedNoticeHtmlOrEmpty}
 ${converter.makeHtml(markDown)}`;
 
     if (item.title != '') {
