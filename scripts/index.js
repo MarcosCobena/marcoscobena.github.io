@@ -49,19 +49,16 @@ window.addEventListener('popstate', async function(event) {
     }
 });
 
-function addItem(title, filename, date, tags = []) {
+function addItem(title, filename, date, tags = [], isImported = false) {
     const tokens = date.split('/');
     const parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
-    const item = { title: title, filename: filename, date: parsedDate, tags: tags };
+    const item = { title: title, filename: filename, date: parsedDate, tags: tags, isImported: isImported };
     items.push(item);
 }
 
 function addPost(title, filename, date, tags = [], isImported = false) {
     tags.push(blogTag);
-    const tokens = date.split('/');
-    const parsedDate = new Date(tokens[2], tokens[1] - 1, tokens[0]);
-    const item = { title: title, filename: filename, date: parsedDate, tags: tags, isImported: isImported };
-    items.push(item);
+    addItem(title, filename, date, tags, isImported);
 }
 
 function addRedirection(fromFilename, toURL) {
