@@ -2,7 +2,7 @@
     'use strict';
 
 const blogTag = 'blog';
-const importedNoticeHtml = new showdown.Converter({ strikethrough: true }).makeHtml('*(This post was imported, please [contact](/?i=contact) me if there\'s anything wrong with it. Thanks in advance)*');
+const importedNoticeHtml = '<p><em>(This post was imported, please <a href="/?i=contact">contact</a> me if there\'s anything wrong with it. Thanks in advance)</em></p>';
 const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
 
 const items = [];
