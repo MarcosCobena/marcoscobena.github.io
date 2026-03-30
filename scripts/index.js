@@ -1,15 +1,19 @@
 ﻿(function() {
     'use strict';
 
-const blogTag = 'blog';
-const weAreAtInternet = location.hostname !== 'localhost' && location.hostname !== '127.0.0.1';
-
+// "DB"
 const items = [];
 const redirections = [];
+// Filenames
 const homeFilename = 'home';
 const resourceNotFoundFilename = '404';
+// Tags
+const blogTag = 'blog';
+// URL separators
 const hashtagUrlSeparator = '#/';
 const queryUrlSeparator = '/?i=';
+// Others
+const loadingHtml = '<div class="center">⌛</div>';
 
 document.addEventListener('click', async function(event) {
     if (event.target.tagName !== 'A') {
@@ -184,8 +188,7 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
         html += totalHtml;
     }
     
-    const element = document.querySelector(selector);
-    element.innerHTML = html;
+    setElementHtml(selector, html);
 }
 
 function listTags(selector) {
@@ -208,8 +211,7 @@ function listTags(selector) {
     }
 
     html += `<a href="${queryUrlSeparator}blog">(none)</a>`;
-    const element = document.querySelector(selector);
-    element.innerHTML = html;
+    setElementHtml(selector, html);
 }
 
 async function loadItemAsync(filename, anchor = null) {
@@ -220,6 +222,16 @@ async function loadItemAsync(filename, anchor = null) {
         return;
     }
     
+    const isHome = item.filename == homeFilename;
+    const homeReturnElement = document.getElementById('homeReturn');
+
+    if (isHome) {
+        homeReturnElement.style.display = 'none';
+    } else {
+        homeReturnElement.style.display = 'block';
+    }
+    
+    setElementHtml('#actualBody', loadingHtml);
     const data = await fetchTextAsync(filename);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
     show(item, data, isBlogPost, anchor);
@@ -300,24 +312,13 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
     return html;
 }
 
-function show(item, markDown, isBlogPost, anchor) {
-    const isHome = item.filename == homeFilename;
-    const homeReturnElement = document.getElementById('homeReturn');
-
-    if (isHome) {
-        homeReturnElement.style.display = 'none';
-    } else {
-        homeReturnElement.style.display = 'block';
-    }
-
-    showItem(item, markDown, isBlogPost);
-
-    if (anchor != null) {
-        location.hash = anchor;
-    }
+function setElementHtml(selector, html) {
+    const bodyElement = document.querySelector(selector);
+    bodyElement.innerHTML = html;
 }
 
 async function showEveryPostAsync(selector, tag) {
+    setElementHtml(selector, loadingHtml);
     let posts = items.filter(item => item.tags.some(itemTag => itemTag == blogTag));
 
     if (tag != undefined) {
@@ -332,19 +333,22 @@ async function showEveryPostAsync(selector, tag) {
         html += renderItem(post, markDown, /* isBlogPost: */ true, /* hasItemsInside */ true);
     }
     
-    const element = document.querySelector(selector);
-    element.innerHTML = html;
+    setElementHtml(selector, html);
 }
 
-function showItem(item, markDown, isBlogPost) {
+function show(item, markDown, isBlogPost, anchor) {
     document.title = item.title;
     const body = renderItem(item, markDown, isBlogPost, /* hasItemsInside */ false);
-    const bodyElement = document.getElementById('actualBody');
-    bodyElement.innerHTML = body;
+    setElementHtml('#actualBody', body);
     const itemScriptElement = document.createElement('script');
     itemScriptElement.src = `items/${item.filename}.js`;
     itemScriptElement.type = 'text/javascript';
+    const bodyElement = document.getElementById('actualBody');
     bodyElement.appendChild(itemScriptElement);
+
+    if (anchor != null) {
+        location.hash = anchor;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', async _ => await entryPointAsync());
