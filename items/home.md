@@ -8,6 +8,7 @@ I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.
 [Conferences](/?i=conferences)
 [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 [Portfolio](/?i=portfolio)
+[Subscriptions](/?i=subscriptions)
 
 **Contact**
 [E-mail](mailto:MarcosCobena@outlook.com)
