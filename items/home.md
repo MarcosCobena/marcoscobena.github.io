@@ -6,14 +6,14 @@ I write [software](/?i=portfolio) at [Plain Concepts](https://www.plainconcepts.
 
 **Pages**
 [Conferences](/?i=conferences)
-[Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
-[Portfolio](/?i=portfolio)
-[Subscriptions](/?i=subscriptions)
+, [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
+, [Portfolio](/?i=portfolio)
+, [Subscriptions](/?i=subscriptions)
 
 **Contact**
 [E-mail](mailto:MarcosCobena@outlook.com)
-[GitHub](https://github.com/MarcosCobena)
-[LinkedIn](https://www.linkedin.com/in/MarcosCobena)
-[Mastodon](https://mastodon.social/@MarcosCobena)
+, [GitHub](https://github.com/MarcosCobena)
+, [LinkedIn](https://www.linkedin.com/in/MarcosCobena)
+, [Mastodon](https://mastodon.social/@MarcosCobena)
 
 *[<div class="right">The world just makes sense forward...</div>](https://joseantoniocobena.com)*
