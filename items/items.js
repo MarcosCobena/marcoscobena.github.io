@@ -13,7 +13,7 @@ addItem('Conferences', 'conferences', '19/12/2023');
 addItem('Marcos Cobeña Morián', 'home', '14/12/2024');
 addItem('Plain Concepts', 'plain-concepts', '9/4/2026');
 addItem('Portfolio', 'portfolio', '23/12/2024');
-addItem('Subscriptions', 'subscriptions', '31/3/2026');
+addItem('Reading', 'reading', '14/4/2026');
 //addItem('DEBUG', 'debug', '1/1/1970');
 
 // addRedirection(fromFilename, toURL)
