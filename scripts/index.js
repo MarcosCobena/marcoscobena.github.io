@@ -222,15 +222,6 @@ async function loadItemAsync(filename, anchor = null) {
         return;
     }
     
-    const isHome = item.filename == homeFilename;
-    const homeReturnElement = document.getElementById('homeReturn');
-
-    if (isHome) {
-        homeReturnElement.style.display = 'none';
-    } else {
-        homeReturnElement.style.display = 'block';
-    }
-    
     setElementHtml('#actualBody', loadingHtml);
     const data = await fetchTextAsync(filename);
     const isBlogPost = item.tags.some(tag => tag == blogTag);
