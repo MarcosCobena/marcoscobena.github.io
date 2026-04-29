@@ -8,7 +8,7 @@
 // Items —it doesn't mind the order how they're added
 
 addItem('404 Not Found', '404', '29/8/2018');
-addItem('Blog', 'blog', '5/2/2021');
+addItem('Blog', 'blog', '29/4/2026');
 addItem('Conferences', 'conferences', '19/12/2023');
 addItem('¡Hola! I am Marcos Cobeña Morián', 'home', '29/4/2026');
 addItem('Plain Concepts', 'plain-concepts', '9/4/2026');

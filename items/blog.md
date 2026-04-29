@@ -1,5 +1,3 @@
-[RSS](feed.rss)
-
 Tags:
 <span id="tags"></span>
 
