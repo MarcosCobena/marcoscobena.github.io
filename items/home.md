@@ -8,7 +8,7 @@ I write [software](/?i=portfolio) at [Plain Concepts](/?i=plain-concepts) for so
 [Conferences](/?i=conferences)
 , [Podcast: Aporreando teclados](https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html)
 , [Portfolio](/?i=portfolio)
-, [Reading](/?i=reading)
+, [Subscriptions](/?i=subscriptions)
 
 **Contact**
 [E-mail](mailto:MarcosCobena@outlook.com)
