@@ -8,9 +8,9 @@
 // Items —it doesn't mind the order how they're added
 
 addItem('404 Not Found', '404', '29/8/2018');
-addItem('Blog', 'blog', '5/2/2021');
+addItem('Archive', 'archive', '1/6/2026');
 addItem('Conferences', 'conferences', '19/12/2023');
-addItem('Marcos Cobeña Morián', 'home', '14/12/2024');
+addItem('Marcos\' Blog', 'home', '1/6/2026');
 addItem('Plain Concepts', 'plain-concepts', '9/4/2026');
 addItem('Portfolio', 'portfolio', '23/12/2024');
 //addItem('DEBUG', 'debug', '1/1/1970');
@@ -21,7 +21,8 @@ addRedirection('contact', '/?i=home');
 addRedirection('juanma-y-marcos', 'https://www.ivoox.com/podcast-aporreando-teclados_sq_f11142253_1.html');
 addRedirection('abanico-a-few-hours-with-xamarin-forms-and-skiasharp', '/?i=abanico');
 addRedirection('portfolio-2023', '/?i=portfolio-2018-2023');
-addRedirection('blog-es', '/?i=blog&t=es');
+addRedirection('blog-es', '/?i=archive&t=es');
+addRedirection('blog', '/?i=archive');
 
 // Posts —this' the order they'll appear listed
 

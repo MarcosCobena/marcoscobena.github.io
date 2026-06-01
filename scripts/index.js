@@ -210,7 +210,8 @@ function listTags(selector) {
         html += `<a href="?${currentQueryString.toString()}">${item}</a> `;
     }
 
-    html += `<a href="${queryUrlSeparator}blog">(none)</a>`;
+    currentQueryString.delete('t');
+    html += `<a href="?${currentQueryString.toString()}">(none)</a>`;
     setElementHtml(selector, html);
 }
 
