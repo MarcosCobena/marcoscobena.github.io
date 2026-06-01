@@ -50,10 +50,6 @@ img {
     max-width: 100%;
 }
 
-#menu > a {
-    margin-right: 4pt;
-}
-
 pre {
     overflow-x: auto;
 }
