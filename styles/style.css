@@ -1,7 +1,21 @@
 :root {
     --body-background-color: #FFF;
     --body-color: #333;
+    --link-color: #005FCC;
+    --link-hover-color: #004799;
+    --link-visited-color: #6A1B9A;
     --table-tr-background-color: #F5F5F5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-background-color: #121212;
+        --body-color: #E0E0E0;
+        --link-color: #7AB4FF;
+        --link-hover-color: #A8CCFF;
+        --link-visited-color: #C79BFF;
+        --table-tr-background-color: #1E1E1E;
+    }
 }
 
 #actualBody {
@@ -15,6 +29,19 @@ body {
     margin-right: auto;
     max-width: 750px;
     padding: 0 16pt;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:active,
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a:visited {
+    color: var(--link-visited-color);
 }
 
 .center {
