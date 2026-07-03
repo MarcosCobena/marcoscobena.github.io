@@ -103,6 +103,14 @@ function findIn(filename, itemArray) {
     return found;
 }
 
+function formatListDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = String(date.getFullYear());
+
+    return `${day}/${month}/${year}`;
+}
+
 function getAnchor(path) {
     const index = path.lastIndexOf('#')
     let result = null;
@@ -173,12 +181,12 @@ function listItems(selector, items, moreFilename = null, amount = -1) {
     let html = renderListItems(itemsGrouped, isMoreRequested, length);
 
     if (isMoreRequested && items.length > length) {
-        const listItemHtml = `<li><a href="${queryUrlSeparator}${moreFilename}">More...</a></li>`;
+        const listItemHtml = `<div class="post-list-item"><a href="${queryUrlSeparator}${moreFilename}">More...</a></div>`;
         html += listItemHtml;
     }
 
     if (isMoreRequested) {
-        html = `<ul>${html}</ul>`;
+        html = `<div class="post-list">${html}</div>`;
     }
 
     if (!isMoreRequested) {
@@ -286,16 +294,15 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
 
     for (const [year, itemsPerMonthMap] of itemsPerYearMap) {
         if (!isMoreRequested) {
-            html += `<em>${year}</em><br />`;
-            html += '<ul>';
+            html += '<div class="post-list">';
         }
 
         for (const [month, itemsArray] of itemsPerMonthMap) {
             for (const item of itemsArray) {
-                const listItemHtml = '<li>'
-                    + `<a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
-                    + ` ${item.date.toLocaleDateString()}`
-                    + '</li>';
+                const listItemHtml = '<div class="post-list-item">'
+                    + `<span class="post-date">${formatListDate(item.date)}</span>`
+                    + ` <a href="${queryUrlSeparator}${item.filename}">${item.title}</a>`
+                    + '</div>';
                 html += listItemHtml;
                 count++;
 
@@ -306,7 +313,7 @@ function renderListItems(itemsPerYearMap, isMoreRequested, length) {
         }
 
         if (!isMoreRequested) {
-            html += '</ul>';
+            html += '</div>';
         }
     }
 
