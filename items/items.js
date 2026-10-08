@@ -26,6 +26,7 @@ addRedirection('blog', '/?i=archive');
 
 // Posts —this' the order they'll appear listed
 
+addPost('Evergine\'s low-level visual tests', 'evergine-lowlevel-visualtests', '8/10/2026', ['portfolio']);
 addPost('GTGlobal integration in CEINOR\'s Genes VNext', 'gtglobal-integration', '1/6/2026', ['portfolio']);
 addPost('SourceGit', 'sourcegit', '27/3/2026');
 addPost('Evergine WebGPU', 'evergine-webgpu', '4/11/2025', ['portfolio']);
