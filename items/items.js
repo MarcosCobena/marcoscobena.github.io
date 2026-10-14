@@ -10,7 +10,7 @@
 addItem('404 Not Found', '404', '29/8/2018');
 addItem('Archive', 'archive', '1/6/2026');
 addItem('Conferences', 'conferences', '19/12/2023');
-addItem('Marcos\' Blog', 'home', '1/6/2026');
+addItem('Marcos\' Blog', 'home', '14/10/2026');
 addItem('Plain Concepts', 'plain-concepts', '9/4/2026');
 addItem('Portfolio', 'portfolio', '23/12/2024');
 //addItem('DEBUG', 'debug', '1/1/1970');

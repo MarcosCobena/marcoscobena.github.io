@@ -1,4 +1,4 @@
-I write [software](/?i=portfolio) at [Plain Concepts](/?i=plain-concepts) for solving problems [to people](/?i=conferences). I do my best to make it long-lasting.
+I build [software](/?i=portfolio) at [Plain Concepts](/?i=plain-concepts) for solving problems [to people](/?i=conferences). I do my best to make it long-lasting.
 
 **Latest posts** ([RSS](feed.rss))
 
