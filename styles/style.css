@@ -41,7 +41,7 @@ h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active {
     display: none;
 }
 
-img {
+img, video {
     display: block;
     height: auto;
     margin-left: auto;
