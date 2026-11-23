@@ -44,10 +44,6 @@ a:visited {
     color: var(--link-visited-color);
 }
 
-.post-date {
-    font-family: monospace;
-}
-
 .center {
     text-align: center;
 }
